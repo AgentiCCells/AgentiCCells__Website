@@ -11,6 +11,7 @@ Times are Europe/London (assumed; change on Dinis's word). "Day" is 07:00 to 23:
 | `writer@AgentiCCells.dinis` | :19, day hourly, overnight 01/03/05 | fresh session |
 | `designer@AgentiCCells.dinis` | :25, day hourly, overnight 01/03/05 | fresh session |
 | `reporter@AgentiCCells.dinis` | :41, every 2 hours | fresh session |
+| `reviewer@AgentiCCells.dinis` | every 2 hours (odd hours, after the hourly builders) | fresh session, started by the conductor |
 | `console@AgentiCCells.dinis` | :53, every 3 hours | fresh session |
 | `researcher@AgentiCCells.dinis` | :47, every 4 hours | fresh session |
 | `security@AgentiCCells.dinis` | :35, every 4 hours | fresh session |
