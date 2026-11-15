@@ -22,6 +22,7 @@ Each role below has an **Agent Behaviour Policy** in three lines: what it may re
 | 14 | `factory@AgentiCCells.dinis` | 2026-11-15 (Dinis) | Build the site factory: request in a commit, plan on the pull request, apply on merge (ACC-027) | AgentiCCells__Site__Factory, __Site__Template, __Site__Website | hold broad credentials; give secrets to the plan job; create repositories or DNS by hand |
 | 15 | `site@AgentiCCells.dinis` | 2026-11-15 (Dinis) | First version of agenticcells.site (ACC-028) | AgentiCCells__Site__Website | change settings, DNS or access; name anyone but Dinis |
 | 16 | `hub@AgentiCCells.dinis` | 2026-11-15 (Dinis) | First version of hub.agenticcells.site from hub.json files (ACC-028) | AgentiCCells__Site__Hub | list a site without its owner's consent; copy vault keys |
+| 17 | `reviewer@AgentiCCells.dinis` | 2026-11-15 (Dinis) | Judge the live site as a buyer every two hours; queue specific fixes | the live sites (browser), board/reviews/, queue appends | edit content, assets or build itself; invent problems |
 
 Start 1 and 2 on day one. Start the others one at a time, each when its first board item is ready. Every role writes a debrief when its first piece of work is done.
 
