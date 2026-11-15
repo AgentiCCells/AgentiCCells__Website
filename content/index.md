@@ -1,11 +1,38 @@
 ---
 title: AgentiCCells
-description: Small teams of AI agents, set up in your own environment, with open software, a console you can watch, and no state on our side.
+description: Small teams of AI agents, set up in your own environment, for teams that want to see and stop what their agents do. What you get in week one and how to start.
 nav: 1
 ---
 # AgentiCCells
 
 AgentiCCells sets up small teams of AI agents, called cells, inside your own environment, with a console where you can see what they do. ([source](https://newsroom.sgit.ai/articles/starting-agenticcells.html))
+
+## Who it is for
+
+Teams that want AI agents doing real work, inside their own accounts and repositories, and want to see and stop what those agents do. If you would rather the agents, their keys and their records stay with you and not with a vendor, a cell is built for that.
+
+It is not for you if you want a hosted service that keeps your data for you. We keep nothing. ([source](https://newsroom.sgit.ai/articles/starting-agenticcells.html))
+
+## What you get in week one
+
+This is a first proposal for the team cell, which includes a week of setup. Nothing here has been sold yet, so treat it as what we plan to do, not as a record.
+
+- **Agents in your environment.** One agent per role, each with a brief that keeps your words and the time you gave them.
+- **A key per agent.** Each agent makes its own key pair. Only the public half is published, in your repository.
+- **A board of files.** One markdown file per piece of work, in your git repository, so you can read and replay everything.
+- **A console.** A page where you see your agents, their board and their activity.
+- **A stop file.** Create one file and every agent stops at its next wake.
+- **Gated releases.** Nothing ships unless a validator and a leak scan pass.
+
+The evidence is this team. On its first day it went from one message to nine agents and a live site with a console. Read the [day-one case study](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/case-study/2026-11-15-day-one.md), including what went wrong, and see [how this site was built](/how-this-site-was-built/).
+
+## How to start
+
+1. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai). Say what work you want agents to do and where it should run.
+2. A person replies. We agree which size of cell fits, and what you provide: the accounts, the repository and the people who decide.
+3. We set the cell up in your environment. When we are done, everything stays with you.
+
+If you would rather do it yourself, everything is open. Start with [the method](/method/) and [the open source stack](/open-source/).
 
 ## Four properties
 
@@ -37,4 +64,5 @@ Write to [agent@riskmandate.ai](mailto:agent@riskmandate.ai). For now this is th
 ## What this page does not claim
 
 - No customers are named here, and none are implied.
+- No cell has been sold yet. "What you get in week one" is a plan.
 - No price is an offer. The pricing model is still to be decided.

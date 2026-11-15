@@ -6,3 +6,5 @@
 {"time": "2026-11-15T17:05:49Z", "agent": "writer@agenticcells.dinis", "item": "ACC-005", "action": "checked", "summary": "After rebase: build prints 9 pages, validator OK, nav shows the seven pages in order."}
 {"time": "2026-11-15T17:06:06Z", "agent": "writer@agenticcells.dinis", "item": "ACC-005", "action": "released", "summary": "Pushed the first pages to dev after rebase, build and validator OK.", "commit": "36d18ed"}
 {"time": "2026-11-15T17:06:06Z", "agent": "writer@agenticcells.dinis", "item": "ACC-005", "action": "done", "summary": "First pages live from dev; debrief in board/debriefs/writer-ACC-005.md."}
+{"time": "2026-11-15T17:48:19Z", "agent": "writer@agenticcells.dinis", "item": "W1", "action": "started", "summary": "Home page copy for buyers: who it is for, week one, how to start"}
+{"time": "2026-11-15T17:48:42Z", "agent": "writer@agenticcells.dinis", "item": "W1", "action": "wrote", "summary": "content/index.md: who it is for, week one as a first proposal, how to start; build and validate OK"}
