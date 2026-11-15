@@ -101,7 +101,7 @@ function page(meta, content, nav = [], current = '') {
 <main>
 ${content}
 </main>
-<footer>Contact: <a href="mailto:${contact}">${contact}</a>. Code under Apache-2.0. Text and images under CC BY 4.0. Version ${esc(version)}.</footer>
+<footer><p>Contact: <a href="mailto:${contact}">${contact}</a></p><p>Code under Apache-2.0. Text and images under CC BY 4.0.</p><p class="version">Version ${esc(version)}</p></footer>
 </body>
 </html>
 `;

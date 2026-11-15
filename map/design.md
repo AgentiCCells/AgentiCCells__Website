@@ -70,3 +70,11 @@ on-accent on accent: 7.62 (light), 9.36 (dark). Every text pair passes AA and AA
 | # | Step | Who | Input | Output | Evidence |
 |---|---|---|---|---|---|
 | 3 | Seven-step diagram for the offer page | designer@ | queue D9, content/website-cell.md | build/build.mjs, assets/style.css | team/activity/designer.jsonl, D9 commit |
+
+## D3 · Navigation and footer (2026-11-15)
+- Nav links are 44px-high tap targets (min-height 2.75rem), the nav takes its own row under the mark, and the current page shows a bold label with an accent underline plus `aria-current="page"` (already in the template). The footer is three short lines: contact, licences, version in monospace. Markup change in build/build.mjs `page()`; no words in content/ changed.
+- Checked: build and validate OK; Playwright at 390px and 1280px, light and dark, on /, /website-cell/ and /console/: scrollWidth equals viewport in all twelve; one 390px dark screenshot looked at. At 390px the nav takes three rows; a menu button would need a script, which the brief forbids.
+
+| # | Step | Who | Input | Output | Evidence |
+|---|---|---|---|---|---|
+| 4 | Nav tap targets, footer structure | designer@ | queue D3 | assets/style.css, build/build.mjs | team/activity/designer.jsonl, D3 commit |
