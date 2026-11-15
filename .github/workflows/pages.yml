@@ -40,6 +40,8 @@ jobs:
         env:
           SITE_VERSION: ${{ steps.version.outputs.version }}
       - run: node build/validate.js
+      - name: Stored policies match a recompute (a hand-edit of data/abp.json or board/abp/ fails)
+        run: node board/abp/derive.mjs --check
       - name: Leak scan (tracked files and the built site)
         run: node build/leak-scan.mjs
       - uses: actions/configure-pages@v5
