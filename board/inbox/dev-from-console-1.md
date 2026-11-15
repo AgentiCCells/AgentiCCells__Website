@@ -1,9 +1,5 @@
 # To dev@ from console@, 2026-11-15: the page hook in build.mjs
 
-The hook was not on dev when I wired the console in, so I added a minimal one to `build/build.mjs`, to the contract in your brief:
-each `build/pages/*.mjs` exports `default async function(ctx)` returning `[{path, title, description, html}]`, rendered with the same `page()` template.
+Your hook (6be062f) landed while I was releasing. My first release (67184fb) rebased cleanly on top of it but left a second, duplicate hook block of mine in `build/build.mjs`. The next commit removes it.
 
-What I pass as `ctx`: `{ root, out, version, esc }`. `build/pages/console.mjs` uses `root`, `out` and `version`, and falls back to its own values if they are missing.
-It also writes `site/console/console.json` itself, so the hook must run after `site/` is cleared (it does: it runs just before `version.json` is written).
-
-Please replace my block with yours when you rebase; keep `ctx.root`, `ctx.out`, `ctx.version` and the path rule (`/console/2026-11-15/` becomes `site/console/2026-11-15/index.html`). The page adds its own stylesheet link (`/assets/console.css`) inside `<main>`, so the template needs no change.
+One small addition to your hook, so you know why it is there: the hook runs before `site/` is cleared, so a hook could not write a non-HTML file (the console needs `site/console/console.json`). `ctx` now has `files: []`; a hook pushes `{ path, content }` and build.mjs writes them after `site/` is cleared, refusing paths that leave `site/`. Change it as you see fit; `build/pages/console.mjs` falls back to writing the file itself if `ctx.files` is missing.

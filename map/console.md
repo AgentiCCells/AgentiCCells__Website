@@ -14,3 +14,4 @@ Status: first pass by console@agenticcells.dinis, 2026-11-15.
 
 Agent attribution for a commit: the `Agent:` trailer; if missing, an `Agent:` line in the body (older commits, see ACC-015); otherwise shown as "no Agent: trailer" with its subject.
 Read-only by design: no controls, no JavaScript, no third-party scripts (brief policy, 2026-11-15).
+| 8 | Follow-up: remove the duplicate hook left by the rebase; add `ctx.files` for non-HTML output | console@ | build/build.mjs at 6be062f | console.json written after site/ is cleared | team/activity/console.jsonl |

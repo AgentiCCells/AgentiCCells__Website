@@ -113,7 +113,7 @@ for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md
 // [{ path, title, description, html, nav? }]. `path` is a site path such as "/console/";
 // `html` is the inside of <main>. Each page gets the same template, nav and footer.
 const hookDir = join(root, 'build', 'pages');
-const ctx = { root, version, contact, esc, inline, markdown, frontMatter, pages: pages.map(({ path, title }) => ({ path, title })) };
+const ctx = { root, version, contact, esc, inline, markdown, frontMatter, pages: pages.map(({ path, title }) => ({ path, title })), files: [] };
 if (existsSync(hookDir)) {
   for (const f of readdirSync(hookDir).filter((f) => f.endsWith('.mjs')).sort()) {
     const mod = await import(pathToFileURL(join(hookDir, f)).href);
@@ -148,15 +148,12 @@ for (const p of pages) {
 }
 for (const f of readdirSync(join(root, 'assets'))) copyFileSync(join(root, 'assets', f), join(out, 'assets', f));
 if (existsSync(join(root, 'CNAME'))) copyFileSync(join(root, 'CNAME'), join(out, 'CNAME'));
-// Page hook: each build/pages/*.mjs exports default async function(ctx) returning [{path, title, description, html}].
-const pagesDir = join(root, 'build/pages');
-for (const f of existsSync(pagesDir) ? readdirSync(pagesDir).filter((f) => f.endsWith('.mjs')).sort() : []) {
-  const { default: make } = await import(new URL(`pages/${f}`, import.meta.url));
-  for (const p of await make({ root, out, version, esc })) {
-    const file = join(out, p.path.replace(/^\/+|\/+$/g, ''), 'index.html');
-    mkdirSync(dirname(file), { recursive: true });
-    writeFileSync(file, page({ title: p.title, description: p.description }, p.html));
-  }
+// Extra files from page hooks (ctx.files: [{ path, content }], path under site/), written after site/ is cleared.
+for (const { path, content } of ctx.files) {
+  const file = normalize(String(path).replace(/^\/+/, ''));
+  if (file.split(/[\\/]/).some((part) => part === '..' || part === '.')) throw new Error(`hook file leaves site/: ${path}`);
+  mkdirSync(dirname(join(out, file)), { recursive: true });
+  writeFileSync(join(out, file), content);
 }
 writeFileSync(join(out, 'version.json'), JSON.stringify({ version }) + '\n');
 console.log(`built site/ (${version}, ${pages.length} pages)`);

@@ -2,7 +2,7 @@
 // default async function(ctx) returning [{path, title, description, html}].
 // At build time it reads board/ACC-*.md, team/keys.json (and team/keys/*.json not yet
 // merged), team/activity/*.jsonl and git history, and renders /console/ plus one replay
-// page per day: /console/<date>/. It also writes site/console/console.json.
+// page per day: /console/<date>/. It also adds site/console/console.json (via ctx.files).
 // Shows only short fingerprints and short commit hashes, never public keys or full hashes.
 // No JavaScript on the page. Code under Apache-2.0.
 import { readFileSync, readdirSync, existsSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -175,8 +175,10 @@ export default async function consolePages(ctx = {}) {
     version, built_from_commit: head, hold: hold ? 'board/HOLD.md exists: the team is stopped' : 'absent',
     board, agents, events, days,
   };
-  mkdirSync(join(out, 'console'), { recursive: true });
-  writeFileSync(join(out, 'console', 'console.json'), JSON.stringify({ ...data, replays }, null, 1) + '\n');
+  const json = JSON.stringify({ ...data, replays }, null, 1) + '\n';
+  // build.mjs writes ctx.files after it clears site/; without it, write the file here.
+  if (Array.isArray(ctx.files)) ctx.files.push({ path: '/console/console.json', content: json });
+  else { mkdirSync(join(out, 'console'), { recursive: true }); writeFileSync(join(out, 'console', 'console.json'), json); }
 
   const nav = days.length ? `<ul class="days">${days.map((d) => `<li><a href="/console/${d}/">${d}</a></li>`).join('')}</ul>` : '<p>No days recorded yet.</p>';
   const holdLine = hold ? '<p class="hold"><strong>Stopped:</strong> board/HOLD.md exists. No agent works while it is there.</p>'
