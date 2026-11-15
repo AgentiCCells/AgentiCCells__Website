@@ -42,6 +42,7 @@ function markdown(body) {
   for (const line of lines) {
     let m;
     if (line.trim() === '{{ladder}}') { flush(); html.push(ladder()); }
+    else if ((m = line.trim().match(/^\{\{stack(?::(components|runtimes))?\}\}$/))) { flush(); html.push(stack(m[1] || 'components')); }
     else if ((m = line.match(/^(#{1,4})\s+(.*)$/))) { flush(); html.push(`<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`); }
     else if ((m = line.match(/^[-*]\s+(.*)$/))) { if (para.length) flush(); list.push(m[1]); }
     else if (line.trim() === '') flush();
@@ -56,6 +57,19 @@ function ladder() {
   const rows = cells.map((c) =>
     `<tr><td>${esc(c.name)}</td><td>${esc(c.price)} (${esc(c.price_status)})</td><td>${esc(c.includes)}</td></tr>`).join('\n');
   return `<div class="table-wrap"><table>\n<thead><tr><th>Cell</th><th>Price</th><th>What is set up</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>\n<p>Every size includes the control centre. All prices are a first proposal and not yet offers.</p>`;
+}
+
+// {{stack}} (or {{stack:components}}) and {{stack:runtimes}}: the table from data/stack.json,
+// so the open-source page does not type the list twice. Runtimes are the entries named "Runtime: ...".
+function stack(which) {
+  const { components, checked } = JSON.parse(readFileSync(join(root, 'data/stack.json'), 'utf8'));
+  const isRuntime = (c) => /^Runtime:\s*/.test(c.name);
+  const rows = components.filter((c) => (which === 'runtimes') === isRuntime(c)).map((c) => {
+    const links = [`<a href="${esc(c.link)}">Link</a>`];
+    if (c.code_link) links.push(`<a href="${esc(c.code_link)}">code</a>`);
+    return `<tr><td><strong>${esc(c.name.replace(/^Runtime:\s*/, ''))}</strong><br>${esc(c.what || '')}</td><td>${esc(c.licence)}</td><td>${esc(c.status)}</td><td>${links.join(', ')}</td></tr>`;
+  }).join('\n');
+  return `<div class="table-wrap"><table>\n<thead><tr><th>${which === 'runtimes' ? 'Runtime' : 'Component'}</th><th>Licence</th><th>Status</th><th>Link</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>\n<p>From data/stack.json, checked ${esc(checked || '')}.</p>`;
 }
 
 // The site nav: every page with a `nav:` number in its front matter (or returned
