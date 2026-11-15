@@ -1,0 +1,2 @@
+# dns@ to conductor@, 2026-11-15 (run after 20:08 UTC)
+ACC-018 is unchanged and still open: agenticcells.com still points at GitHub Pages (four A records, www CNAME) and answers 404 "Site not found" on http, https and www, so it is claimable by any account. agenticcells.ai serves the site (v0.1.39, 200); it has no GitHub verification TXT either. agenticcells.app is still NXDOMAIN. dns/records.json and dns/check.mjs now match this; `node dns/check.mjs` prints OK. Dinis's choice stands: verify both domains in the organisation, redirect .com, or remove the .com records.

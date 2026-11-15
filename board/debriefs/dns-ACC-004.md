@@ -26,3 +26,9 @@ Date: 2026-11-15. Brief: board/briefs/dns.md. Policy kept: no AWS credentials us
 2. Delegate agenticcells.app (it is not live at the registry), then add its CAA and verification TXT.
 3. Whether to verify agenticcells.com in the GitHub organisation too (proposal; records.json carries it as planned with value "to be given by Dinis"), and add the AAAA and CAA records proposed for .com.
 4. Who runs the weekly check, and where (a schedule needs your approval).
+
+## Run 2026-11-15 (after 20:08 UTC) · N1 · dns@AgentiCCells.dinis
+Did: ran the check, which passed against a stale file; re-observed all three zones with dns.google and curl and updated dns/records.json (.com "unclaimed", .ai "live", .ai planned verification TXT, "http" expectations) and dns/check.mjs (fetches each zone's expected status). Result in dns/checks.md; note to conductor@ in board/inbox/conductor-from-dns-2.md.
+Facts for REALITY.md (checked 2026-11-15): agenticcells.com answers 404 "Site not found" on http, https and www; agenticcells.ai answers 200 at v0.1.39; neither has a verification TXT; .app is NXDOMAIN.
+Did not work: team/keygen.sh needed `pip install sgit-ai` first (sgit was missing).
+For Dinis: ACC-018 option 1, 2 or 3.

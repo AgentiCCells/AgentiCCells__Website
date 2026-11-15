@@ -10,6 +10,7 @@
 //      observed record, live values differ  -> MISMATCH (fails)
 //      planned record, now live             -> note: mark it observed
 //      parked zone                          -> reported, never fails
+//    A zone with an "http" {url, expect} is also fetched; a different status fails.
 // 3. For every customer label in the agenticcells.app zone, fetches
 //    https://<label>.agenticcells.app/ and lists any that do not answer
 //    (the weekly dangling-record check, dns/CUSTOMER-SITES.md). None is OK.
@@ -136,6 +137,18 @@ if (offline) {
       say(`MISMATCH ${label}: recorded ${want.join(', ')}; live ${shown}`);
       problems.push(`${label}: recorded ${want.join(', ')}; live ${shown}`);
     }
+  }
+}
+
+// ---- 2b. what the zones answer over HTTP ----------------------------------
+if (!offline) {
+  for (const z of zones.values()) {
+    if (!z.http) continue;
+    try {
+      const res = await fetch(z.http.url, { redirect: 'follow', signal: AbortSignal.timeout(15000) });
+      if (res.status === z.http.expect) say(`ok       ${z.http.url} answers ${res.status} (${z.zone} is ${z.status})`);
+      else { say(`MISMATCH ${z.http.url}: expected ${z.http.expect}, got ${res.status}`); problems.push(`${z.http.url}: expected ${z.http.expect}, got ${res.status} (zone ${z.zone} is ${z.status})`); }
+    } catch (e) { problems.push(`${z.http.url}: ${(e.cause && (e.cause.code || e.cause.message)) || e.message}`); }
   }
 }
 

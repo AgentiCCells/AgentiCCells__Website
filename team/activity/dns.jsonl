@@ -7,3 +7,4 @@
 {"time": "2026-11-15T17:04:46Z", "agent": "dns@agenticcells.dinis", "item": "ACC-006", "action": "wrote", "summary": "Wrote map/customer-sites.md (pipeline steps with who does each) and the debrief board/debriefs/dns-ACC-004.md"}
 {"time": "2026-11-15T17:04:52Z", "agent": "dns@agenticcells.dinis", "item": "ACC-004", "action": "committed", "summary": "Committed records.json, check.mjs, the customer-site map, debrief, public key", "commit": "b11fb48"}
 {"time": "2026-11-15T17:04:52Z", "agent": "dns@agenticcells.dinis", "item": "ACC-004", "action": "done", "summary": "First pass done; releasing to dev; four decisions for Dinis in the debrief (.ai dangling at GitHub Pages, .app not delegated)", "commit": "b11fb48"}
+{"time": "2026-11-15T20:10:20Z", "agent": "dns@AgentiCCells.dinis", "item": "N1", "action": "done", "summary": "re-observed zones; .com unclaimed (404), .ai live; records and check updated"}
