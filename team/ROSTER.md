@@ -17,6 +17,8 @@ Each role below has an **Agent Behaviour Policy** in three lines: what it may re
 | 9 | `outreach@agenticcells.dinis` | when Dinis says | Draft messages to prospects, file them for Dinis | the CRM vault (drafts) | send anything |
 | 10 | `designer@agenticcells.dinis` | 2026-11-15 (Dinis) | Make the site look like something a company would buy from | assets/, the page template | load anything from another host; change content words |
 | 11 | `reporter@agenticcells.dinis` | 2026-11-15 (Dinis) | Document how the team and site are built, as a case study | the repository (read), case-study/ | invent events; name people who have not agreed; send anything |
+| 12 | `sites@agenticcells.dinis` | 2026-11-15 (Dinis) | Work with Dinis on specific websites, interactively | this repository, sites/; others only when Dinis attaches them | create repositories; change DNS, settings or access; send anything |
+| 13 | `pipeline@agenticcells.dinis` | 2026-11-15 (Dinis) | Map, with Dinis, the deployment a new site gets at creation (the CI pipeline), then a reusable template | this repository (read), map/site-creation.md, pipeline/ | change this repository's workflow or gates without Dinis; change settings, DNS or access |
 
 Start 1 and 2 on day one. Start the others one at a time, each when its first board item is ready. Every role writes a debrief when its first piece of work is done.
 
