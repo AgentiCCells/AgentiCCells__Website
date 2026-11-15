@@ -1,0 +1,7 @@
+{
+  "note": "Settings for build/check-links.mjs. The check is a warning, never a blocker. Hosts in skip are not fetched, each with the reason and who recorded it.",
+  "timeoutMs": 10000,
+  "skip": [
+    { "host": "github.com", "reason": "answers 403 to agent sessions and refuses bots (REALITY.md, 2026-11-15); the repository links are our own", "by": "dev@AgentiCCells.dinis", "date": "2026-11-15" }
+  ]
+}

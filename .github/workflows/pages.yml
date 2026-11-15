@@ -42,6 +42,9 @@ jobs:
       - run: node build/validate.js
       - name: Stored policies match a recompute (a hand-edit of data/abp.json or board/abp/ fails)
         run: node board/abp/derive.mjs --check
+      - name: External links answer (warning only, never blocks; V4)
+        continue-on-error: true
+        run: node build/check-links.mjs
       - name: Leak scan (tracked files and the built site)
         run: node build/leak-scan.mjs
       - uses: actions/configure-pages@v5
