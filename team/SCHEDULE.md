@@ -25,3 +25,18 @@ Fresh sessions also mean each run has its own container, which closes part of ga
 The scheduled tasks themselves are listed in claude.ai under the account's scheduled tasks; their IDs are recorded below by the conductor.
 
 ## Scheduled task IDs
+| Agent | Scheduled task | Cron (Europe/London) |
+|---|---|---|
+| conductor@ | trig_01CbV6xVJpqAavDovmK3AbRD (wakes the conductor session) | `7 1,3,5,7-23 * * *` |
+| dev@ | trig_0172Sot9BdxrBfe73hJVZ7Cx | `13 1,3,5,7-23 * * *` |
+| writer@ | trig_01WUQ53PYXnJYKdi4oaqTUQf | `19 1,3,5,7-23 * * *` |
+| designer@ | trig_016ypc3cvi7oVT2LFSPfJoxa | `25 1,3,5,7-23 * * *` |
+| reporter@ | trig_01E96bYuSFBLwg8JYztX2a3m | `41 */2 * * *` |
+| console@ | trig_01JQ9J7g6EEGduq1mMz5qv1o | `53 */3 * * *` |
+| researcher@ | trig_014j8yHyWcZpPWiBSdTpxdAy | `47 */4 * * *` |
+| security@ | trig_01Ee8vpCVDPBAGA8cmb6yc92 | `35 */4 * * *` |
+| abp@ | trig_01HqTQZKFzqQuQyPtRpMqfKR | `37 */6 * * *` |
+| dns@ | trig_01BUtuc6wSedVUfX8QRjNxuN | `11 8,20 * * *` |
+| outreach@ | trig_01RYoEorR9k3CZo5KcZUZ5CB | `17 9 * * *` |
+
+Measured when created (2026-11-15): scheduled sessions carry no connectors (no mail, Drive, Calendar or meetings tools) and start with no repository attached; they clone it over HTTPS. First test run: reporter@, fired by hand at 17:10 UTC.
