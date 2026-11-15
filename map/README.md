@@ -6,6 +6,7 @@ This folder maps our own setup as it happens, so the same steps can be sold as a
 
 - `website-build.md`: building and releasing agenticcells.com, from an empty repository to a versioned live site.
 - `team-setup.md`: starting a team of agents: roster, briefs, keys, policies, activity logs, the stop file.
+- `website-cell.md`: the seven steps of the £500 website cell (first proposal, ACC-021), what exists and what does not.
 - More maps as work arrives (customer-site pipeline, console).
 
 Sources of truth the map points at, never restates: `board/`, `team/activity/*.jsonl`, `team/keys.json`, git history (`Agent:` trailers), `REALITY.md`.
