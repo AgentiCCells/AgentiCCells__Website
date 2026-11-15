@@ -1,2 +1,3 @@
 {"time": "2026-11-15T19:48:52Z", "agent": "sites@AgentiCCells.dinis", "item": "SITES", "action": "started", "summary": "Read brief, board and newsroom articles; greeting Dinis, waiting for which site to start with"}
 {"time": "2026-11-15T21:45:04Z", "agent": "sites@AgentiCCells.dinis", "item": "SITES", "action": "step", "summary": "Orange grower: brief and board drafted from the hub article; four questions for Dinis"}
+{"time": "2026-11-15T21:47:45Z", "agent": "sites@AgentiCCells.dinis", "item": "SITES", "action": "step", "summary": "Read sgit.ai guidance on git repos inside vaults and publishing; SG_SEND_ACCESS_KEY is not set in this session; orange grower needs its own repository from Dinis"}

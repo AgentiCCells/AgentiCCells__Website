@@ -7,10 +7,12 @@
 | 4 | Page design: text-first, mobile first, "example" banner | sites@ | not started |
 | 5 | Order form and price calculation, no payments, no stored data | sites@ | not started |
 | 6 | Gates: build, validate, leak scan, wording check | sites@ | not started |
+| 8 | Own repository (Dinis creates and attaches it; I may not create repositories) | Dinis | waiting |
+| 9 | Vault: SG_SEND_ACCESS_KEY into this session; write key escrowed before anything is published; read key published; vault pushed with its .sg_vault data in the repository | sites@ | blocked on 8 and the key |
 | 7 | hub.json for the site (shape as in the repository's hub.json) | sites@ | not started |
 
 ## Questions for Dinis
-1. Where does it live? Options: a folder in this repository (sites/orange-grower/, no new repository, nothing to create) or its own repository (I may not create repositories; you would).
+1. (Answered by Dinis: its own repository; see 8.) Where does it live? Options: a folder in this repository (sites/orange-grower/, no new repository, nothing to create) or its own repository (I may not create repositories; you would).
 2. Language: English only, or English and Portuguese?
 3. How does the order request leave the page? Option A: a "mailto:" link that opens the buyer's own email with the order filled in. Option B: a printable or copyable order summary. Neither sends anything from our side.
 4. The farm's name and the invented prices: may I invent them (marked invented), or do you want to give them?

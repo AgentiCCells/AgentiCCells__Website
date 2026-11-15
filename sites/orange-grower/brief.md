@@ -8,6 +8,7 @@ Status: brief drafted, not built. Owner: sites@AgentiCCells.dinis. Instructed by
 - Same article: "It will say on every page that it is an example, and it will go on the hub as an example and as a template."
 - Same article: "The orange grower is made up, an example played by me, with no real farm, prices or payments."
 - 2026-11-15, this session, in reply to which site to start with: "can you start with the orange seller idea? do you have that?" (time not recorded by the harness).
+- 2026-11-15, this session (after the first draft): "this should live in its own repo, which eventually we will automate. you also need to use the vault to publish it (see SG_SEND_ACCESS_KEY). can you see sgit.ai for guidance on publishing vaults inside git repos (with the vault's .vault data pushed to github), which provides a number of powerful advantages"
 
 ## What the site does (from his words)
 1. Buyer picks oranges (variety) and a quantity.
@@ -24,4 +25,4 @@ Status: brief drafted, not built. Owner: sites@AgentiCCells.dinis. Instructed by
 - Later, as Dinis the farmer: steering through a key made in his browser and requests such as "the late Valencias are in from Monday" (needs the key and lane steps of ACC-021; not built).
 
 ## Not decided (asked of Dinis)
-Repository and hosting, domain, vault, language, how the order request leaves the page. See board/.
+Language and how the order request leaves the page. Repository: its own (Dinis, above); I may not create it, so Dinis creates it and attaches it. Vault: needs SG_SEND_ACCESS_KEY, which is not set in this session. See board/.
