@@ -13,3 +13,8 @@
 small{color:var(--muted)}
 .console-board td,.console-agents td{overflow-wrap:anywhere}
 .console-schedule td{overflow-wrap:anywhere}
+.console-queues td{overflow-wrap:anywhere}
+.queue{list-style:none;padding-left:0}
+.queue li{margin:.4rem 0;overflow-wrap:anywhere}
+details{margin:.5rem 0}
+summary{cursor:pointer}

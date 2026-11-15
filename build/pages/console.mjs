@@ -141,6 +141,27 @@ function scheduleWithRuns(rows, acts) {
   });
 }
 
+// board/queue/<role>.md: open and done items per role. An item is a line "- [ ] ID rest" or "- [x] ID rest".
+function queues(root) {
+  const dir = join(root, 'board/queue');
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir).filter((f) => f.endsWith('.md')).sort().map((f) => {
+    const role = f.replace(/\.md$/, '');
+    const items = [];
+    for (const line of readFileSync(join(dir, f), 'utf8').split('\n')) {
+      const m = line.match(/^- \[([ xX])\]\s+(\S+)\s*(.*)$/);
+      if (!m) continue;
+      let text = clean(m[3]).replace(/^(\([^)]*\)\s*)?·\s*/, '$1').trim();
+      if (text.length > 220) text = text.slice(0, 217).replace(/\s+\S*$/, '') + '...';
+      // Any price quoted in a queue line is a proposal, so say so (the site rule: prices are marked).
+      if (/[£$€]\s?\d/.test(text) && !/first proposal/i.test(text)) text += ' (price: first proposal)';
+      items.push({ id: clean(m[2]), done: m[1] !== ' ', text });
+    }
+    return { role, agent: `${role}@AgentiCCells.dinis`, open: items.filter((i) => !i.done).length,
+      done: items.filter((i) => i.done).length, items };
+  });
+}
+
 // --- rendering -------------------------------------------------------------
 
 const css = '<link rel="stylesheet" href="/assets/console.css">';
@@ -162,6 +183,14 @@ function scheduleTable(rows) {
   if (!rows.length) return '<p>No schedule found in team/SCHEDULE.md.</p>';
   const body = rows.map((r) => `<tr><td>${esc(r.agent)}<br><small>${esc(r.how)}</small></td><td>${esc(r.when)}</td><td>${r.last_run ? `${utc(r.last_run.time)}<br><small>${esc(r.last_run.item)}: ${esc(r.last_run.summary)}</small>` : '<small>no run logged</small>'}</td><td>${r.last_step ? `${utc(r.last_step.time)}<br><small>${esc(r.last_step.action)}, ${esc(r.last_step.item)}</small>` : '-'}</td></tr>`).join('\n');
   return `<div class="table-wrap"><table class="console-schedule">\n<thead><tr><th>Agent</th><th>When it wakes (Europe/London)</th><th>Last run started</th><th>Last step</th></tr></thead>\n<tbody>\n${body}\n</tbody></table></div>`;
+}
+
+function queueSection(qs) {
+  if (!qs.length) return '<p>No queues found in board/queue/.</p>';
+  const total = qs.reduce((n, q) => ({ open: n.open + q.open, done: n.done + q.done }), { open: 0, done: 0 });
+  const summary = `<div class="table-wrap"><table class="console-queues">\n<thead><tr><th>Role</th><th>Open</th><th>Done</th></tr></thead>\n<tbody>\n${qs.map((q) => `<tr><td>${esc(q.agent)}</td><td>${q.open}</td><td>${q.done}</td></tr>`).join('\n')}\n<tr><td><strong>All roles</strong></td><td>${total.open}</td><td>${total.done}</td></tr>\n</tbody></table></div>`;
+  const detail = qs.map((q) => `<details><summary>${esc(q.agent)}: ${q.open} open, ${q.done} done</summary>\n<ul class="queue">\n${q.items.map((i) => `<li><span class="st st-${i.done ? 'done' : 'idea'}">${i.done ? 'done' : 'open'}</span> <code>${esc(i.id)}</code> ${esc(i.text)}</li>`).join('\n')}\n</ul></details>`).join('\n');
+  return summary + '\n' + detail;
 }
 
 function timeline(events) {
@@ -195,6 +224,7 @@ export default async function consolePages(ctx = {}) {
   const days = [...new Set(events.map((e) => day(e.time)))].sort().reverse();
   const agents = agentsFrom(keys, acts, cms);
   const sched = scheduleWithRuns(schedule(root), acts);
+  const queueData = queues(root);
 
   // Replay: the board and keys as committed at the end of each day, with that day's events.
   const replays = days.map((d) => {
@@ -209,7 +239,7 @@ export default async function consolePages(ctx = {}) {
   const data = {
     about: 'The AgentiCCells team console, read-only. Built from files in the repository at build time. Short fingerprints and short commit hashes only.',
     version, built_from_commit: head, hold: hold ? 'board/HOLD.md exists: the team is stopped' : 'absent',
-    board, agents, schedule: sched, events, days,
+    board, agents, schedule: sched, queues: queueData, events, days,
   };
   const json = JSON.stringify({ ...data, replays }, null, 1) + '\n';
   // build.mjs writes ctx.files after it clears site/; without it, write the file here.
@@ -232,6 +262,9 @@ ${agentsTable(agents)}
 <h2>Schedule and last runs</h2>
 <p>When each agent wakes, from <code>team/SCHEDULE.md</code>, and its last run as logged in <code>team/activity/</code>. A run starts with a "started" step; the last step is the newest line in the agent's log.</p>
 ${scheduleTable(sched)}
+<h2>Work queues</h2>
+<p>Each role's queue from <code>board/queue/</code>: items ticked <code>[x]</code> are done, the rest are open. The top open item is what the role does next.</p>
+${queueSection(queueData)}
 <h2>Replay a day</h2>
 <p>Each day shows the board and keys as they were committed at the end of that day, and everything that happened in it.</p>
 ${nav}

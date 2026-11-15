@@ -16,3 +16,4 @@ Agent attribution for a commit: the `Agent:` trailer; if missing, an `Agent:` li
 Read-only by design: no controls, no JavaScript, no third-party scripts (brief policy, 2026-11-15).
 | 8 | Follow-up: remove the duplicate hook left by the rebase; add `ctx.files` for non-HTML output | console@ | build/build.mjs at 6be062f | console.json written after site/ is cleared | team/activity/console.jsonl |
 | 9 | C1: parse the first table of team/SCHEDULE.md; join each agent with its latest "started" and latest step | console@ | team/SCHEDULE.md, team/activity/*.jsonl | /console/ "Schedule and last runs", console.json `schedule` | team/activity/console.jsonl |
+| 10 | C2: read each board/queue/<role>.md; count open and done items; list them per role | console@ | board/queue/*.md | /console/ "Work queues", console.json `queues` | team/activity/console.jsonl |
