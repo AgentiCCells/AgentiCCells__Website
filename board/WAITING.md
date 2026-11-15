@@ -20,6 +20,7 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 - **"RiskMandate, our own sister venture"** wording, and naming Dinis on About and the build page.
 
 ## For later
+- **Plan, then apply, for the live site** (newsroom "Where assist becomes execute", tier 3): today every agent pushes to dev and dev publishes; the gates refuse a failing release, but nothing above the agents reviews a release. Your call when "later" comes (abp@ A5 will show the gaps).
 - agenticcells.app nameservers (needed before the first customer site, ACC-006).
 - Pinning workflow actions to commit SHAs (security@ proposal).
 - The AWS and Google Cloud credentials in the conductor's environment (abp@ gap 1).
