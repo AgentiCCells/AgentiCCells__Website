@@ -3,13 +3,13 @@
 The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest first within each group. Answer in chat or on the item; the conductor records the answer in board/decisions/ and REALITY.md.
 
 ## Urgent
-- **ACC-018 · agenticcells.com can be claimed by another GitHub account.** Since the site moved to agenticcells.ai, nothing claims .com but it still points at GitHub Pages. Fix: verify both domains in the AgentiCCells organisation (Settings, Pages, Add a domain, TXT record), or create a redirect repository for .com, or remove the .com records.
+- **ACC-018 · agenticcells.com (not used, Dinis 21:15) still points at GitHub Pages and can be claimed.** Simplest fix now: delete its A and www records. Since the site moved to agenticcells.ai, nothing claims .com but it still points at GitHub Pages. Fix: verify both domains in the AgentiCCells organisation (Settings, Pages, Add a domain, TXT record), or create a redirect repository for .com, or remove the .com records.
 
 ## Decisions
 - **ACC-026 · Pace against the usage limit.** The account hit its 5-hour limit at about 19:09 UTC with this schedule (hourly dev@, writer@, designer@, plus the others and the conductor). Keep the pace, or slow it (for example dev@, writer@, designer@ every two hours)?
 - **ACC-022 · May the site name the four first implementers and project manager** from "Atomic cells, end to end"?
 - **ACC-024 / ACC-025 · A team sgit vault:** who creates it, and where its write key lives, for release copies (hub) and agent lanes.
-- **ACC-027 · Site factory:** create AgentiCCells__Site__Factory, __Site__Template, __Site__Website (and __Site__Hub); then a Route 53 hosted zone for agenticcells.site and the nameserver switch (it is still on the registrar's defaults); later the GitHub App and the AWS OIDC role for that one zone.
+- **ACC-027 · Site factory:** create AgentiCCells__Site__Factory, __Site__Template, __Site__Website (and __Site__Hub); agenticcells.site is now on Route 53 (done by Dinis); next, in the factory@ session, the GitHub App and the AWS OIDC role for that one zone.
 - **ACC-019 · Key type:** the /key/ prototype uses ECDSA P-256 (every browser supports it); should customer keys match what sgit uses before it is more than a prototype? (dev@)
 - **ACC-019 · Commit signing:** does the `Agent:` line count as the release signature until per-agent signing exists? (designer@ asked too.)
 - **The four open decisions** in board/BRIEF.md: pricing model, referral commissions, who sells ABPs, where the console runs.

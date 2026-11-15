@@ -38,6 +38,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 21:08 conductor (wake 4): site at v0.1.46. Since 20:08: the two modes on the cells page (writer@, 85a411d); the abp derive check runs in CI and the release script (dev@, baf0c59); nav and footer for phones (designer@, b415cff); /case-study/ live (reporter@, 68f8dc9); research/buyers: five kinds of buyer (researcher@, 1e4220d); leak scan of dev and the live site clean (security@, 84abeee); dns/records.json updated: .com unclaimed, .ai live, .app NXDOMAIN (dns@, fbcd8de). Four Site repositories exist (Dinis, ~20:50); factory@ started.
 
+- 2026-11-15 21:20 conductor (DNS checked through dns.google): agenticcells.site is on Route 53 (ns-23.awsdns-02.com and others) with the four GitHub Pages addresses; hub.agenticcells.site is a CNAME to agenticcells.github.io. agenticcells.com still has the four GitHub Pages A records and a www CNAME and answers 404 "Site not found"; no _github-pages-challenge-agenticcells TXT record exists for .com, .ai or .site.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
@@ -60,4 +62,5 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15 ~18:20: "all agents you started are on Opus and we need to have then on Sonnet apart from you". Every run is started with model claude-sonnet-5-5; the conductor stays on its own model.
 - 2026-11-15 ~19:45: "btw it should be *@AgentiCCells.dinis" ("sites@AgentiCCells.dinis"). Agent names are written role@AgentiCCells.dinis from now on; earlier records (activity logs, keys, debriefs, commits) keep the lowercase form they were made with. CI's Agent: check is case-insensitive, so both pass.
 - 2026-11-15 ~20:45: "I can confirm that I have agenticcells.site". And on repository names for the site factory: "yeah I agree let me create those": AgentiCCells__Site__Factory, AgentiCCells__Site__Template, AgentiCCells__Site__Website, AgentiCCells__Site__Hub (ACC-027).
+- 2026-11-15 ~21:15: "all those domains are in a good state now. agenticcells.com - we are not going to use it. agenticcells.ai - is ok for now. agenticcells.site and hub.agenticcells.site should be working very soon (just some DNS propagation issues)".
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".

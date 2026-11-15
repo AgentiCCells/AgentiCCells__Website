@@ -19,3 +19,4 @@ One line per decision Dinis has made, in his words, with the time; copied from R
 15. Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".
 16. 2026-11-15 ~19:45: "btw it should be *@AgentiCCells.dinis" (and "sites@AgentiCCells.dinis"). Active files updated; history unchanged.
 17. 2026-11-15 ~20:45: "I can confirm that I have agenticcells.site"; site-factory repositories named AgentiCCells__Site__Factory, __Site__Template, __Site__Website, __Site__Hub ("yeah I agree let me create those").
+18. 2026-11-15 ~21:15: "agenticcells.com - we are not going to use it. agenticcells.ai - is ok for now. agenticcells.site and hub.agenticcells.site should be working very soon".
