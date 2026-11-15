@@ -5,3 +5,5 @@
 {"time": "2026-11-15T17:06:22Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "checked", "summary": "Re-checked licences and prices from research/01 and 02 against vendor pages and licence files; found n8n, Dify and Flowise licences differ from the brief, Claude Code is not open source"}
 {"time": "2026-11-15T17:06:22Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "wrote", "summary": "Wrote research/checked-claims.md and map/research.md"}
 {"time": "2026-11-15T17:06:34Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "wrote", "summary": "Wrote debrief board/debriefs/researcher-ACC-RESEARCH.md"}
+{"time": "2026-11-15T17:06:53Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "released", "summary": "Released checked-claims.md, map/research.md and debrief to dev", "commit": "8dc35f8"}
+{"time": "2026-11-15T17:06:53Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "done", "summary": "First piece done: stack-checked.json, checked-claims.md, map/research.md"}
