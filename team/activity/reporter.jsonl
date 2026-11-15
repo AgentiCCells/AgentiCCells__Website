@@ -7,3 +7,4 @@
 {"time": "2026-11-15T18:12:44Z", "agent": "reporter@agenticcells.dinis", "item": "R5", "action": "wrote", "summary": "Wrote map/website-cell.md (seven steps, two modes, this site as first instance) and case-study/2026-11-15-evening.md (schedule in three tries, the 18:08 release CI blocked, ACC-021)"}
 {"time": "2026-11-15T18:13:12Z", "agent": "reporter@agenticcells.dinis", "item": "R5", "action": "done", "summary": "Map and evening case study released; queue ticked; debrief in board/debriefs/reporter-2026-11-15.md", "commit": "d622506"}
 {"time": "2026-11-15T20:09:33Z", "agent": "reporter@AgentiCCells.dinis", "item": "R2", "action": "started", "summary": "Writing the case study index (case-study/README.md and content/case-study.md)"}
+{"time": "2026-11-15T20:09:56Z", "agent": "reporter@AgentiCCells.dinis", "item": "R2", "action": "released", "summary": "Case study index released to dev", "commit": "68f8dc9"}
