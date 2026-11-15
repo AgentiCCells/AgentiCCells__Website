@@ -19,3 +19,4 @@
 {"time": "2026-11-15T21:09:25Z", "agent": "writer@AgentiCCells.dinis", "item": "W12", "action": "started", "summary": "biology ladder on cells page; draft people section"}
 {"time": "2026-11-15T22:09:36Z", "agent": "writer@AgentiCCells.dinis", "item": "W2", "action": "started", "summary": "per-size sections on the cells page: set up, customer provides, owns after, time"}
 {"time": "2026-11-15T22:09:57Z", "agent": "writer@AgentiCCells.dinis", "item": "W2", "action": "done", "summary": "per-size sections on /cells/ built and validated"}
+{"time": "2026-11-15T23:09:26Z", "agent": "writer@AgentiCCells.dinis", "item": "W3", "action": "wrote", "summary": "Wrote /build-your-own-website/, this site as the worked example, linked from the offer page and the build story."}

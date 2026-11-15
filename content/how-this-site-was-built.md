@@ -28,7 +28,7 @@ The team's [console](/console/) shows the board, the agents, their keys and ever
 
 ## What a customer would get
 
-The same steps for their own site: a brief, a developer agent, a validator that must pass, CI that versions and deploys, and a board and a map that show every step. This is a proposal. The price would be one of the [cells](/cells/), as a first proposal.
+The same steps for their own site: a brief, a developer agent, a validator that must pass, CI that versions and deploys, and a board and a map that show every step. This is a proposal. [Build your own website with a cell](/build-your-own-website/) says what carries over. The price would be one of the [cells](/cells/), as a first proposal.
 
 ## What did not go smoothly
 

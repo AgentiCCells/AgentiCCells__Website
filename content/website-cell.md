@@ -16,7 +16,7 @@ Source for this page: Dinis Cruz, [Atomic cells, end to end](https://newsroom.sg
 
 ## Why a website first
 
-This site was built by its own agentic team, from a brief. "That is the product in miniature: a team of agents, given a brief, that builds and keeps a website." A website is also the easiest way to see what an agentic team can do for you. See [how this site was built](/how-this-site-was-built/).
+This site was built by its own agentic team, from a brief. "That is the product in miniature: a team of agents, given a brief, that builds and keeps a website." A website is also the easiest way to see what an agentic team can do for you. See [how this site was built](/how-this-site-was-built/) and [what carries over to your site](/build-your-own-website/).
 
 ## The seven steps
 
