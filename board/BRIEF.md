@@ -2,7 +2,7 @@
 
 **From:** Dinis Cruz (the human, the only one who instructs), written up by the newsroom.sgit.ai writer agent, 15 November 2026.
 **For:** the first Claude session on the AgentiCCells Claude account. You are `conductor@agenticcells.dinis`. Read this whole folder before you do anything.
-**Read in this order:** `BRIEF.md` (this) → `CLAUDE.md` (the rules) → `REALITY.md` (what exists) → `team/ROSTER.md` → `board/` → `dns/` → `website/` → `research/`.
+**Read in this order:** `BRIEF.md` (this) → `CLAUDE.md` (the rules) → `READING.md` (the eight sites to read, and ten questions to answer) → `REALITY.template.md` → `team/ROSTER.md` → `board/` → `dns/` → `website/` → `research/`.
 
 ---
 
@@ -45,15 +45,15 @@ Every size includes the control centre. The £500 cell opens doors; the business
 
 Brand: always plural. Logo: AgentiCCells. Running text: AgenticCells is acceptable. The singular agentcell.ai belongs to another company.
 
-DNS is moving to AWS Route 53; the GitHub repository for the website is being created by Dinis. Exact steps: `dns/ROUTE53.md`.
+DNS is moving to AWS Route 53. The website repository is **https://github.com/AgentiCCells/AgentiCCells__Website** (GitHub organisation `AgentiCCells`, so the Pages host is `agenticcells.github.io`). Exact steps: `dns/ROUTE53.md`.
 
 ## 3. Your first job: bootstrap the team, then the website
 
 Work in this order. Each step is a board item in `board/`. Stop and ask Dinis where a step says so.
 
-1. **Read and confirm.** Read everything here. Write `REALITY.md` in the new repository from the template, listing only what you have checked exists.
+1. **Read and confirm.** Read everything here, then work through `READING.md` (about half a day) and answer its ten questions in `board/reading-notes.md`. Write `REALITY.md` in the new repository from the template, listing only what you have checked exists.
 2. **Your key.** Make your own key pair in your session (`sgit pki keygen`), publish only the public half in `team/keys.json` of the repository, keep the private half in your session's vault. Every agent you start does the same. Never commit a private key.
-3. **The repository.** Dinis creates `agenticcells-website` (name may differ; check). Lay it out as in `website/STRUCTURE.md`. Pages in markdown, data in JSON, a build that turns them into a static site, a validator that must print OK before any release, GitHub Pages to serve it.
+3. **The repository.** `AgentiCCells/AgentiCCells__Website`, created by Dinis. Lay it out as in `website/STRUCTURE.md`. Pages in markdown, data in JSON, a build that turns them into a static site, a validator that must print OK before any release, GitHub Pages to serve it.
 4. **DNS.** Prepare the records in `dns/ROUTE53.md` as a file (`dns/records.json`) for Dinis to apply, or apply them yourself only if Dinis gives you scoped AWS credentials for those hosted zones. Never ask for broader access.
 5. **The first site.** One page that says what AgentiCCells is, the four properties, the ladder (marked "first proposal"), the open source stack, and a contact route that is a form or a mailto to a team address Dinis provides. No customer names, no testimonials, no claims we cannot point at.
 6. **The customer-site pipeline.** Document and test, with a dummy repo, how `test.agenticcells.app` gets created: CNAME record, custom domain on the repo, certificate, and the offboarding step that deletes the record. See `dns/CUSTOMER-SITES.md`.

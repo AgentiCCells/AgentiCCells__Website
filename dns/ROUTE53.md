@@ -29,9 +29,9 @@ Check: `dig NS agenticcells.ai +short` should list the four AWS names.
 | `agenticcells.ai` | A | `185.199.110.153` |
 | `agenticcells.ai` | A | `185.199.111.153` |
 | `agenticcells.ai` | AAAA | `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153` |
-| `www.agenticcells.ai` | CNAME | `<github-org-or-user>.github.io` |
+| `www.agenticcells.ai` | CNAME | `agenticcells.github.io` |
 | `agenticcells.ai` | CAA | `0 issue "letsencrypt.org"` (GitHub Pages certificates come from Let's Encrypt) |
-| `_github-pages-challenge-<org>.agenticcells.ai` | TXT | the value GitHub shows when you verify the domain (Organisation settings → Pages → Add a domain) |
+| `_github-pages-challenge-agenticcells.agenticcells.ai` | TXT | the value GitHub shows when you verify the domain (Organisation settings → Pages → Add a domain) |
 
 Then in the website repository: Settings → Pages → Custom domain `agenticcells.ai`, wait for the certificate, tick **Enforce HTTPS**. The repository also carries a `CNAME` file with `agenticcells.ai`.
 
@@ -53,7 +53,7 @@ No apex site at first. Records are created per customer: see `CUSTOMER-SITES.md`
 | Name | Type | Value |
 |---|---|---|
 | `agenticcells.app` | CAA | `0 issue "letsencrypt.org"` |
-| `_github-pages-challenge-<org>.agenticcells.app` | TXT | GitHub's verification value for this domain |
+| `_github-pages-challenge-agenticcells.agenticcells.app` | TXT | GitHub's verification value for this domain |
 
 Verifying the domain in the GitHub organisation stops anyone else's repository from claiming a subdomain of it.
 

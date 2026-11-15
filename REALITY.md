@@ -15,7 +15,7 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 ## Does not exist yet
 - The Pages workflow has never run (nothing merged to dev); no Pages site is served.
 - `content/` pages other than index, `data/stack.json`, `data/links.json`.
-- `sgit`: not installed in this session, so no agent key pairs exist. `team/keys.json` is empty.
+- Agent key pairs: none. `team/keys.json` is empty. sgit-ai v0.27.0 is installed in the conductor's session (2026-11-15), but keygen needs a passphrase and a vault for the private half (ACC-011).
 - Route 53 hosted zones, nameserver switch, `dns/records.json`, GitHub domain verification (unchecked: no AWS or org access seen).
 - The team contact address for the site's contact route.
 - Any agent other than the conductor. The dev role has finished its first piece (ACC-003, In review).
@@ -28,4 +28,5 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15: "ok, small change of plans for now the url is agenticcells.com". The site's custom domain (CNAME, validator, README, ACC-005) is now agenticcells.com. What agenticcells.ai does meanwhile is not decided.
 - 2026-11-15: "agenticcells.com is configured to use GitHub and agenticcells.ai is a bit of a mess at the moment so we are not going to use it (until the NS stabelise)". agenticcells.ai is not used until its nameservers settle.
 - 2026-11-15: "the version number, which should be v0.1.0, and then every push becomes v0.1.1, and then all the minor ones, is done by the CI pipeline, not by here." Implemented in .github/workflows/pages.yml: tags v0.1.N after each successful deploy.
+- 2026-11-15: Dinis sent an updated briefing pack ("can you also see this updated briefing pack for you"). Merged: READING.md (eight sites, ten questions), the repository name AgentiCCells/AgentiCCells__Website, the GitHub organisation `AgentiCCells` with Pages host agenticcells.github.io.
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".
