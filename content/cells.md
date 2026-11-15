@@ -24,6 +24,17 @@ What differs is whose accounts the work runs in. In the second mode we keep no s
 
 Neither mode has been sold yet. The end-to-end flow for the first is being built now.
 
+## The ladder as biology
+
+The newsroom reads the ladder as biology ([Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html), Dinis Cruz, newsroom.sgit.ai, 2026-11-15). Its words are quoted below. Every price is a first proposal, not an offer.
+
+- **Single cell.** "One site, one small team, a feedback lane and a handover." £500, first proposal. This is the no-touch mode above.
+- **Cell handed over.** "Set up with the customer in a couple of meetings and handed over into their own accounts." From £1,500, first proposal. This is the second mode above.
+- **Colony.** "Several cells integrated with the customer's work, with a conductor, a board and keys." £5,000, first proposal.
+- **Multi-cell organism.** "A custom network of cells, conductors of conductors, policies and observability." £20,000, first proposal. The article's caption calls this stage "a network".
+
+The article's rungs and the four sizes above are not a perfect match. Its £1,500 rung (first proposal) is a single cell handed over, while the £1,500 size above (first proposal) is a few sessions. We have not reconciled the two. Neither has been sold yet, and the biology is the newsroom's way of reading the ladder, not a measured result.
+
 ## The six setups of an agentic system
 
 The newsroom describes six setups, from the simplest up ([source](https://newsroom.sgit.ai/articles/six-setups-of-an-agentic-system.html)):
