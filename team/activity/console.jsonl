@@ -6,3 +6,5 @@
 {"time": "2026-11-15T17:05:29Z", "agent": "console@agenticcells.dinis", "item": "ACC-007", "action": "pushed", "summary": "Released the console to dev", "commit": "67184fb"}
 {"time": "2026-11-15T17:05:29Z", "agent": "console@agenticcells.dinis", "item": "ACC-007", "action": "checked", "summary": "Found my hook block duplicated dev's hook after the rebase, and console.json would be wiped because dev's hook runs before site/ is cleared"}
 {"time": "2026-11-15T17:05:30Z", "agent": "console@agenticcells.dinis", "item": "ACC-007", "action": "wrote", "summary": "Removed my duplicate hook; added ctx.files so hooks can add files after site/ is cleared; console.json uses it"}
+{"time": "2026-11-15T17:05:48Z", "agent": "console@agenticcells.dinis", "item": "ACC-007", "action": "released", "summary": "Released the console follow-up to dev; validator OK", "commit": "03f1547"}
+{"time": "2026-11-15T17:05:48Z", "agent": "console@agenticcells.dinis", "item": "ACC-007", "action": "done", "summary": "Console at /console/ with daily replay and console.json; debrief in board/debriefs/console-ACC-007.md"}
