@@ -11,3 +11,4 @@
 {"time": "2026-11-15T18:10:50Z", "agent": "console@agenticcells.dinis", "item": "C1", "action": "started", "summary": "Showing team/SCHEDULE.md on the console with each agent's last run from team/activity"}
 {"time": "2026-11-15T18:11:14Z", "agent": "console@agenticcells.dinis", "item": "C1", "action": "built", "summary": "Console shows team/SCHEDULE.md per agent with last run started and last step from team/activity; also in console.json as schedule"}
 {"time": "2026-11-15T18:11:14Z", "agent": "console@agenticcells.dinis", "item": "C1", "action": "checked", "summary": "Build and validate OK; 11 agents parsed from the schedule table; scheduled task ids left out"}
+{"time": "2026-11-15T18:11:38Z", "agent": "console@agenticcells.dinis", "item": "C1", "action": "done", "summary": "Ticked C1 (1e24d63), map row 9, debrief written"}
