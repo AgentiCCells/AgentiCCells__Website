@@ -171,6 +171,13 @@ function hero(html) {
 }
 for (const p of pages) if (p.path === '/') p.html = hero(p.html);
 
+// Seven-step diagram on the website cell page (D9): inline SVG, no external files.
+const FLOW = '<figure class="flow"><svg viewBox="0 0 360 324" role="img" aria-labelledby="flow-t flow-d"><title id="flow-t">The seven steps of the website cell</title><desc id="flow-d">Order, queue, build, preview, key, steer, handover, in that order, with who acts at each step. A proposal, not yet run end to end.</desc><line class="d-line" x1="22" y1="30" x2="22" y2="294"/><circle class="d-dot" cx="22" cy="30" r="14"/><text class="d-num" x="22" y="35" text-anchor="middle">1</text><text class="d-txt" x="50" y="35">Order</text><circle class="d-dot" cx="22" cy="74" r="14"/><text class="d-num" x="22" y="79" text-anchor="middle">2</text><text class="d-txt" x="50" y="79">Queue</text><circle class="d-dot" cx="22" cy="118" r="14"/><text class="d-num" x="22" y="123" text-anchor="middle">3</text><text class="d-txt" x="50" y="123">Build</text><circle class="d-dot" cx="22" cy="162" r="14"/><text class="d-num" x="22" y="167" text-anchor="middle">4</text><text class="d-txt" x="50" y="167">Preview</text><circle class="d-dot" cx="22" cy="206" r="14"/><text class="d-num" x="22" y="211" text-anchor="middle">5</text><text class="d-txt" x="50" y="211">Key</text><circle class="d-dot" cx="22" cy="250" r="14"/><text class="d-num" x="22" y="255" text-anchor="middle">6</text><text class="d-txt" x="50" y="255">Steer</text><circle class="d-dot" cx="22" cy="294" r="14"/><text class="d-num" x="22" y="299" text-anchor="middle">7</text><text class="d-txt" x="50" y="299">Handover</text><text class="d-who" x="346" y="35" text-anchor="end">you</text><text class="d-who" x="346" y="79" text-anchor="end">us</text><text class="d-who" x="346" y="123" text-anchor="end">our agents</text><text class="d-who" x="346" y="167" text-anchor="end">you look</text><text class="d-who" x="346" y="211" text-anchor="end">your browser</text><text class="d-who" x="346" y="255" text-anchor="end">you and our agents</text><text class="d-who" x="346" y="299" text-anchor="end">you</text></svg><figcaption>The seven steps, in order, and who acts at each. A proposal; the flow has not yet been run end to end.</figcaption></figure>';
+for (const p of pages) if (p.path === '/website-cell/') {
+  const i = p.html.indexOf('<ol class="steps">');
+  if (i >= 0) p.html = p.html.slice(0, i) + FLOW + '\n' + p.html.slice(i);
+}
+
 for (const p of pages) {
   mkdirSync(dirname(join(out, p.file)), { recursive: true });
   writeFileSync(join(out, p.file), page(p, p.html, nav, urlFor(p.file)));

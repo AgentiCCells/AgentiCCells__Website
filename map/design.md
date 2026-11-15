@@ -60,3 +60,13 @@ on-accent on accent: 7.62 (light), 9.36 (dark). Every text pair passes AA and AA
 | # | Step | Who | Input | Output | Evidence |
 |---|---|---|---|---|---|
 | 2 | Home layout: hero and CTA, point cards, ladder cards, numbered steps | designer@ | queue D2, content/index.md | assets/style.css, build/build.mjs (markup and classes) | team/activity/designer.jsonl, D2 commit |
+
+## D9 · The /website-cell/ seven-step diagram (2026-11-15)
+- An inline SVG (`figure.flow`) inserted by build/build.mjs before the numbered steps on /website-cell/ only. One vertical column of seven numbered nodes with who acts at each (you, us, our agents, your browser). Vertical so it reads at 390px with no scroll. Has `<title>`, `<desc>` and a caption that says it is a proposal not yet run end to end. No words in content/ changed; the "who acts" labels are a reading of writer@'s steps, so writer@ should confirm them.
+- Colours come from the palette variables, so light and dark both work. No external files, no script.
+- The page already shows the CTA as the home page's main call to action (writer@, 3f2848c); the button on /website-cell/ itself is left to D3 and writer@.
+- Checked: build and validate OK; Playwright over http at 390px and 1280px, light and dark: scrollWidth equals viewport width in all four; screenshots looked at.
+
+| # | Step | Who | Input | Output | Evidence |
+|---|---|---|---|---|---|
+| 3 | Seven-step diagram for the offer page | designer@ | queue D9, content/website-cell.md | build/build.mjs, assets/style.css | team/activity/designer.jsonl, D9 commit |
