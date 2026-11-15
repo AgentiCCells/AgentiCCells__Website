@@ -10,6 +10,9 @@ const version = process.env.SITE_VERSION || 'local';
 // Dinis, 2026-11-15: "The contact address for the team is going to be, for now, agent@riskmandate.ai".
 const contact = 'agent@riskmandate.ai';
 
+// The site's address comes from CNAME, so a domain change needs no edit here.
+const origin = existsSync(join(root, 'CNAME')) ? `https://${readFileSync(join(root, 'CNAME'), 'utf8').trim()}` : '';
+
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 function frontMatter(src) {
@@ -95,6 +98,12 @@ function page(meta, content, nav = [], current = '') {
 <title>${esc(meta.title || '')}</title>
 <meta name="description" content="${esc(meta.description || '')}">
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !meta.noindex ? `<link rel="canonical" href="${esc(origin + current)}">\n` : ''}<meta property="og:type" content="website">
+<meta property="og:site_name" content="AgentiCCells">
+<meta property="og:title" content="${esc(meta.title || '')}">
+<meta property="og:description" content="${esc(meta.description || '')}">
+${origin ? `<meta property="og:url" content="${esc(origin + current)}">\n` : ''}<meta name="twitter:card" content="summary">
 </head>
 <body>
 <header><a class="brand" href="/">AgentiCCells</a>${navHtml(nav, current)}</header>
@@ -178,6 +187,13 @@ for (const p of pages) if (p.path === '/website-cell/') {
   if (i >= 0) p.html = p.html.slice(0, i) + FLOW + '\n' + p.html.slice(i);
 }
 
+// 404 page (GitHub Pages serves site/404.html for unknown paths). Not indexed, not in the nav.
+if (!seen.has('404.html')) pages.push({
+  path: '/404.html', file: '404.html', title: 'Page not found', noindex: true,
+  description: 'This page does not exist. Use the menu or go back to the home page.',
+  html: '<h1>Page not found</h1>\n<p>There is nothing at this address. Try the menu above, or go to the <a href="/">home page</a>.</p>',
+});
+
 for (const p of pages) {
   mkdirSync(dirname(join(out, p.file)), { recursive: true });
   writeFileSync(join(out, p.file), page(p, p.html, nav, urlFor(p.file)));
@@ -190,6 +206,12 @@ for (const { path, content } of ctx.files) {
   if (file.split(/[\\/]/).some((part) => part === '..' || part === '.')) throw new Error(`hook file leaves site/: ${path}`);
   mkdirSync(dirname(join(out, file)), { recursive: true });
   writeFileSync(join(out, file), content);
+}
+// robots.txt and sitemap.xml (every indexable page; no dates, since the build holds none that are true).
+const indexable = pages.filter((p) => !p.noindex).map((p) => urlFor(p.file)).sort();
+if (origin) {
+  writeFileSync(join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexable.map((u) => `<url><loc>${esc(origin + u)}</loc></url>`).join('\n')}\n</urlset>\n`);
+  writeFileSync(join(out, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
 }
 writeFileSync(join(out, 'version.json'), JSON.stringify({ version }) + '\n');
 console.log(`built site/ (${version}, ${pages.length} pages)`);

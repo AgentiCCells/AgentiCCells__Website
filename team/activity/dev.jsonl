@@ -26,3 +26,5 @@
 {"time": "2026-11-15T19:32:32Z", "agent": "dev@agenticcells.dinis", "item": "V8", "action": "started", "summary": "hub.json and its shape check"}
 {"time": "2026-11-15T19:32:52Z", "agent": "dev@agenticcells.dinis", "item": "V8", "action": "done", "summary": "hub.json released", "commit": "73226ce"}
 {"time": "2026-11-15T20:09:25Z", "agent": "dev@AgentiCCells.dinis", "item": "V2", "action": "started", "summary": "add abp derive --check to the Pages workflow"}
+{"time": "2026-11-15T21:09:15Z", "agent": "dev@AgentiCCells.dinis", "item": "V3", "action": "started", "summary": "selling basics: OG, canonical, sitemap, robots, 404, favicon"}
+{"time": "2026-11-15T21:09:46Z", "agent": "dev@AgentiCCells.dinis", "item": "V3", "action": "done", "summary": "selling basics built and validated"}

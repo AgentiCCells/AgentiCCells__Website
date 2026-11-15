@@ -121,5 +121,21 @@ try {
   for (const k of Object.keys(h)) if (/vault/i.test(k)) fail(`hub.json: vault field "${k}" not allowed until the vault exists`);
 } catch (e) { fail(`hub.json: ${e.message}`); }
 
+// Selling basics (V3): canonical and Open Graph on every indexable page, sitemap, robots, 404, favicon.
+{
+  const cname = readFileSync(join(root, 'CNAME'), 'utf8').trim();
+  for (const f of ['site/404.html', 'site/robots.txt', 'site/sitemap.xml', 'site/assets/favicon.svg']) if (!existsSync(join(root, f))) fail(`${f} missing`);
+  const sitemap = existsSync(join(root, 'site/sitemap.xml')) ? readFileSync(join(root, 'site/sitemap.xml'), 'utf8') : '';
+  if (existsSync(join(root, 'site/robots.txt')) && !readFileSync(join(root, 'site/robots.txt'), 'utf8').includes(`Sitemap: https://${cname}/sitemap.xml`)) fail('site/robots.txt: Sitemap line missing or wrong host');
+  for (const f of walk(join(root, 'site'), ['.html'])) {
+    const t = readFileSync(f, 'utf8');
+    for (const k of ['og:title', 'og:description']) if (!t.includes(`property="${k}"`)) fail(`${rel(f)}: no ${k}`);
+    if (/<meta name="robots" content="noindex">/.test(t)) continue;
+    const url = '/' + rel(f).slice('site/'.length).replace(/(^|\/)index\.html$/, '$1');
+    if (!t.includes(`<link rel="canonical" href="https://${cname}${url}">`)) fail(`${rel(f)}: canonical missing or wrong (want https://${cname}${url})`);
+    if (!sitemap.includes(`<loc>https://${cname}${url}</loc>`)) fail(`${rel(f)}: not in sitemap.xml`);
+  }
+}
+
 if (errors.length) { console.error(errors.join('\n')); console.error(`FAILED (${errors.length})`); process.exit(1); }
 console.log('OK');
