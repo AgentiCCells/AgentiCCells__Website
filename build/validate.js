@@ -19,7 +19,7 @@ const text = ['.md', '.json', '.html', '.css', '.js', '.mjs', '.yml'];
 const scanned = [...walk(join(root, 'content'), text), ...walk(join(root, 'data'), text), ...walk(join(root, 'site'), text), ...walk(join(root, 'assets'), text)];
 
 if (!existsSync(join(root, 'site/index.html'))) fail('site/index.html missing: run the build first');
-if (!existsSync(join(root, 'CNAME')) || readFileSync(join(root, 'CNAME'), 'utf8').trim() !== 'agenticcells.com') fail('CNAME must contain agenticcells.com');
+if (!existsSync(join(root, 'CNAME')) || readFileSync(join(root, 'CNAME'), 'utf8').trim() !== 'agenticcells.ai') fail('CNAME must contain agenticcells.ai');
 
 const keyShapes = [
   /-----BEGIN [A-Z ]*PRIVATE KEY-----/,
@@ -66,7 +66,7 @@ for (const f of walk(join(root, 'site'), ['.html'])) {
   }
 }
 // No page loads a script or stylesheet from another host: everything is served from this site.
-const ownHosts = new Set(['agenticcells.com', 'www.agenticcells.com']);
+const ownHosts = new Set(['agenticcells.ai', 'www.agenticcells.ai', 'agenticcells.com', 'www.agenticcells.com']);
 const foreign = (u) => {
   const m = u.trim().match(/^(?:[a-z][a-z0-9+.-]*:)?\/\/([^/?#:]+)/i);
   if (m) return !ownHosts.has(m[1].toLowerCase());

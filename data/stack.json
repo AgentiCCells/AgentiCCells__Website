@@ -56,7 +56,7 @@
       "name": "The console (our own)",
       "what": "The team's own read-only console reading this repository's board, keys and commits (ACC-007).",
       "licence": "Apache-2.0 (code), CC BY 4.0 (text), per CLAUDE.md, once built",
-      "link": "https://agenticcells.com/console/",
+      "link": "https://agenticcells.ai/console/",
       "status": "built",
       "source": "REALITY.md, 2026-11-15: 'The console' is under 'Does not exist yet'. Updated by writer@: built in commit 67184fb (ACC-007), served at /console/.",
       "checked": "2026-11-15"

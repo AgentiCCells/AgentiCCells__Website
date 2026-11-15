@@ -28,6 +28,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15 18:08 conductor (wake 1): the site is at v0.1.18. Conductor-started runs work: reporter@ (R1 day-one case study, ba4d09d), writer@ (W1 buyer home page, 08e5325), dev@ (V1 {{stack}}, 2203cf8), designer@ (D1 text mark, palette, type scale, c728aab), each in its own session with the repository attached, each under four minutes.
 - The first offering is defined by Dinis in the newsroom (2026-11-15, "Atomic cells, end to end"): the £500 website cell, seven steps, two modes (ACC-021). The flow is "being built now"; none of it is sold.
 
+- 2026-11-15 18:20 conductor: https://agenticcells.ai serves the site (v0.1.27); http and www.agenticcells.ai redirect to it. agenticcells.com no longer serves it: http://agenticcells.com/ and /version.json answer GitHub's "Site not found" (the home page only from cache), while .com still points at GitHub Pages, so .com is now the domain that can be claimed (ACC-018). No GitHub verification TXT exists for either domain.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
@@ -46,4 +48,6 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15 (branches): "Branch protection, no, everybody can push to dev. We'll control that a bit later."
 - 2026-11-15 (team): "start all the agents, right? And also start an ABP agent, which should basically be creating all the agent behavior policies for everybody."
 - 2026-11-15 (mapping): "let's map the whole workflow. And even the creation of this website is something that we want to sell. So let's map everything and have the visibility of everything that's flying here."
+- 2026-11-15 ~18:15: "ok, domain agenticcells.ai is now pointed to the site". The site's domain is agenticcells.ai (CNAME, validator, README updated).
+- 2026-11-15 ~18:20: "all agents you started are on Opus and we need to have then on Sonnet apart from you". Every run is started with model claude-sonnet-5-5; the conductor stays on its own model.
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".

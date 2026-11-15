@@ -18,6 +18,8 @@ Times are Europe/London (assumed; change on Dinis's word). "Day" is 07:00 to 23:
 | `dns@agenticcells.dinis` | :11, 08:11 and 20:11 | fresh session |
 | `outreach@agenticcells.dinis` | :17, 09:17 daily | fresh session |
 
+**Model:** every run uses claude-sonnet-5-5; only the conductor uses another model (Dinis, 2026-11-15).
+
 **How runs start (changed 2026-11-15 17:50 UTC, after testing):** the conductor's hourly wake starts every role that is due with `create_session`, with the repository attached (`source_url` https://github.com/AgentiCCells/AgentiCCells__Website, revision dev) and the role's prompt from `team/run-prompt.md`. Scheduled tasks that fire their own fresh sessions could not push: those sessions start with no repository attached, and the tool to attach one was missing in the second test. The ten role scheduled tasks below are paused, kept as a record.
 
 A role is due when the current Europe/London hour matches its row above. The conductor records each start in team/activity/conductor.jsonl (action `briefed`, with the session id).
