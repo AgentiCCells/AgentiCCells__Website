@@ -9,3 +9,6 @@
 {"time": "2026-11-15T17:06:46Z", "agent": "abp@agenticcells.dinis", "item": "ACC-008", "action": "wrote", "summary": "Wrote board/abp/README.md (three biggest gaps with the narrowest change for each), a map row and inbox note conductor-from-abp-1"}
 {"time": "2026-11-15T17:07:28Z", "agent": "abp@agenticcells.dinis", "item": "ACC-008", "action": "released", "summary": "Released policies to dev", "commit": "c2e8c3e"}
 {"time": "2026-11-15T17:07:28Z", "agent": "abp@agenticcells.dinis", "item": "ACC-008", "action": "done", "summary": "Nine policies, data/abp.json, README with three gaps, debrief written", "commit": "c2e8c3e"}
+{"time": "2026-11-15T18:10:52Z", "agent": "abp@agenticcells.dinis", "item": "A1", "action": "started", "summary": "Add designer and reporter policies; record scheduled runs (own container per run) as a change of reach; re-derive"}
+{"time": "2026-11-15T18:12:48Z", "agent": "abp@agenticcells.dinis", "item": "A1", "action": "wrote", "summary": "Two deployments in inputs.json (shared, run); designer and reporter policies; derive.mjs v2 derives each role against its own deployment"}
+{"time": "2026-11-15T18:12:48Z", "agent": "abp@agenticcells.dinis", "item": "A1", "action": "checked", "summary": "Run container holds one clone and only abp's key folder; credential-name check refused by the permission classifier, rows left derived"}

@@ -5,7 +5,7 @@ Written by abp@agenticcells.dinis, 2026-11-15 (ACC-008). Licence CC BY 4.0.
 ## What is here
 - `inputs.json`: the two authored inputs. The **grant** is what an agent here can do, measured from inside abp@'s session on 2026-11-15. The **mandate** of each role comes from its brief (conductor@'s from team/ROSTER.md, as it has no brief file).
 - `derive.mjs`: computes the gap from those two lists, in the grammar of https://abp.sgit.ai/model/capabilities/index.md (`verb.object.reach`, 23 primitives). Run `node board/abp/derive.mjs` after changing an input; `--check` recomputes and fails if a stored policy was edited by hand.
-- `<role>.md` for the nine roles, and `data/abp.json` (the same as data, for console@). Both are derived; do not edit them.
+- `<role>.md` for the eleven roles, and `data/abp.json` (the same as data, for console@). Both are derived; do not edit them.
 
 ## What the numbers say (source: data/abp.json, derived 2026-11-15)
 All nine agents run as root in one container, so they share one grant: 20 of 23 primitives, widest reach `world`. Mandates are 8 to 11 primitives. Every role has 9 to 12 primitives of excess, and **all of that excess is unbounded**: no boundary stands behind any of it. Every "May not" line in the roster and the briefs is an expectation (a rule in prose). That is the record, not a verdict.
@@ -27,6 +27,13 @@ Every agent runs as root, so the 700 mode on `~/.agents/<role>/` binds nothing; 
 `send.message.world`, `read.message.tenant`, `create.schedule.tenant`, `send.endpoint.world`, and `create.record.world` (mandated, but its gate is a setting).
 Mail, drive, calendar, meetings and GitHub connectors are listed in agent sessions (listed in abp@'s, not called), including tools that send mail and create repositories. CLAUDE.md's "Never send an email" and outreach@'s "use no mail connector" are expectations. Separately, every push to dev publishes agenticcells.com, and the validator that gates it runs from `.github/workflows/pages.yml`, which the same push can change.
 **Narrowest change (proposal):** turn the mail, drive, calendar and meetings connectors off for the sessions that run agents (they are configured on the account, outside the session). For the site, a branch rule on dev that requires the Pages build check to pass, with the workflow file under a CODEOWNERS review by Dinis, would make the gate a boundary; Dinis has said "We'll control that a bit later", so this waits for him.
+
+## Change of reach: one container per run (added 2026-11-15 18:15 UTC, abp@, A1)
+Since 17:50 UTC (team/SCHEDULE.md) every role except conductor@ runs as a fresh session per run, started by conductor@ with `create_session`, in its own container. `inputs.json` now holds two deployments, `shared` (conductor@) and `run` (the other ten roles, including the new designer@ and reporter@), and `derive.mjs` derives each role against the grant of the deployment it runs in.
+- Measured in abp@'s run: the container holds one clone and only `~/.agents/abp/`. No other agent's key, passphrase or worktree is reachable. The cross-agent part of gap 2 is now behind a boundary (the container wall, enforced by the platform) for every role but conductor@.
+- The counts did not move: every run role still shows 12 primitives of excess, all unbounded, because the same primitives are granted. What changed is what they reach (the "What it reaches here" column), not whether they are granted. Gaps 1 and 3 are unchanged.
+- New measurement that contradicts an earlier one: sessions started with `create_session` list the mail, Drive, Calendar and meetings connectors and the tools to create sessions and scheduled tasks and to attach repositories (listed in abp@'s run, not called). team/SCHEDULE.md found no connectors in sessions fired by scheduled tasks; that finding does not hold for the way runs start now. Gap 3 applies to every run.
+- Not measured: the variable names in a run's environment and whether the run's git config holds the shared signing key. abp@'s check was refused by the harness permission classifier, so those rows are derived (A2 is the item for this).
 
 ## What this does not cover
 - Interaction between agents: two roles each within mandate can together do what neither was asked (https://abp.sgit.ai/what-is-an-abp/index.md, question 3). With one shared host, any role can already act as any other.
