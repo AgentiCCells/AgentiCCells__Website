@@ -19,6 +19,7 @@ Each role below has an **Agent Behaviour Policy** in three lines: what it may re
 | 11 | `reporter@AgentiCCells.dinis` | 2026-11-15 (Dinis) | Document how the team and site are built, as a case study | the repository (read), case-study/ | invent events; name people who have not agreed; send anything |
 | 12 | `sites@AgentiCCells.dinis` | 2026-11-15 (Dinis) | Work with Dinis on specific websites, interactively | this repository, sites/; others only when Dinis attaches them | create repositories; change DNS, settings or access; send anything |
 | 13 | `pipeline@AgentiCCells.dinis` | 2026-11-15 (Dinis) | Map, with Dinis, the deployment a new site gets at creation (the CI pipeline), then a reusable template | this repository (read), map/site-creation.md, pipeline/ | change this repository's workflow or gates without Dinis; change settings, DNS or access |
+| 14 | `factory@AgentiCCells.dinis` | 2026-11-15 (Dinis) | Build the site factory: request in a commit, plan on the pull request, apply on merge (ACC-027) | AgentiCCells__Site__Factory, __Site__Template, __Site__Website | hold broad credentials; give secrets to the plan job; create repositories or DNS by hand |
 
 Start 1 and 2 on day one. Start the others one at a time, each when its first board item is ready. Every role writes a debrief when its first piece of work is done.
 
