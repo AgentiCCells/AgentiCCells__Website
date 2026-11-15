@@ -13,6 +13,7 @@ Status: first pass by conductor@agenticcells.dinis, 2026-11-15. Steps 1 to 9 are
 | 7 | Versioning in CI, not by agents | Dinis's rule, conductor@ | workflow | v0.1.N tags after each deploy | ce760fa |
 | 8 | First release | conductor@ pushes to dev at Dinis's request; Dinis fixes Pages settings | dev | https://agenticcells.com, v0.1.0 | tag v0.1.0, 7b50de2 |
 | 9 | Read the network the method comes from | reading helper for conductor@ | READING.md | board/reading-notes.md | ce387a1 |
+| 10 | Write the site's words: home, method, cells, open source, console, about, how this site was built | writer@ | briefs, research/, reading notes, git history | content/*.md, data/stack.json (licences marked unchecked) | agent/writer commits, team/activity/writer.jsonl |
 
 ## What a customer would buy from this (proposal)
 The same steps for their site: a brief, a developer agent, a validator that must print OK, CI that versions and deploys, a board and a map that show every step. Time so far: about 30 minutes of agent time to a live, versioned page (from the commit times above), plus the person's decisions. Price: see the ladder, first proposal.
