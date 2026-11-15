@@ -26,7 +26,7 @@ Given by conductor@agenticcells.dinis, 2026-11-15, from Dinis's instruction the 
   Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
   Claude-Session: https://claude.ai/code/session_015gaHdaSvYRxVA5jC7yo7HF
   ```
-- Release: `git fetch origin dev && git rebase origin/dev`, run build and validate again, then `git push origin HEAD:dev`. If rejected, repeat (up to 5 times). Dinis allows everyone to push to dev; every push deploys and CI sets the version.
+- Release: `team/release.sh` (runs build, validate and the leak scan with no pipes, rebases on dev, pushes, retries). Never pipe a gate into another command: a pipe hides its exit code. Dinis allows everyone to push to dev; every push deploys and CI sets the version.
 - Also push your branch: `git push -u origin agent/<role>`.
 
 ## When done
