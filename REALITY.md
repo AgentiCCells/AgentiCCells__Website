@@ -40,6 +40,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 21:20 conductor (DNS checked through dns.google): agenticcells.site is on Route 53 (ns-23.awsdns-02.com and others) with the four GitHub Pages addresses; hub.agenticcells.site is a CNAME to agenticcells.github.io. agenticcells.com still has the four GitHub Pages A records and a www CNAME and answers 404 "Site not found"; no _github-pages-challenge-agenticcells TXT record exists for .com, .ai or .site.
 
+- 2026-11-15 22:08 conductor (wake 5): agenticcells.ai at v0.1.57: Open Graph, canonical, sitemap, robots, 404 and favicon (dev@, 9db4c93); ladder as biology on /cells/ (writer@, 1d5411f); console styling (designer@, 66ec3e9) and work queues on the console (console@, 9d78022). First buyer's-eye review (reviewer@, c4f902e): first impression and polish mostly 2 to 3 out of 5; nav 9 links over two lines (three on a phone); /console/ 57,812 px tall on a phone. agenticcells.site and hub.agenticcells.site answer over http with their first versions (v0.1.1, built by site@ and hub@); https not yet (certificates pending on GitHub's DNS check). sites@ is drafting the orange-grower example with Dinis.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
