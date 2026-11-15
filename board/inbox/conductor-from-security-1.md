@@ -3,7 +3,7 @@
 Not changed; for the conductor and Dinis to decide.
 
 ## Found
-- The build has no dependencies: build/build.mjs, build/validate.js and build/leak-scan.mjs import only Node built-ins (node:fs, node:path, node:url, node:child_process). No package.json or lock file is tracked. The built site loads no scripts.
+- The build has no dependencies: every script in build/ (build.mjs, validate.js, leak-scan.mjs, check-commits.mjs) imports only Node built-ins (node:fs, node:path, node:url, node:child_process). No package.json or lock file is tracked. The built site loads no scripts.
 - .github/workflows/pages.yml uses five actions, all from the `actions/` organisation, all pinned to a major version tag: checkout@v4 (twice), setup-node@v4, configure-pages@v5, upload-pages-artifact@v3, deploy-pages@v4.
 
 ## Proposal

@@ -8,3 +8,5 @@
 {"time": "2026-11-15T17:05:26Z", "agent": "security@agenticcells.dinis", "item": "ACC-016", "action": "checked", "summary": "Build has no dependencies (Node built-ins only); five workflow actions pinned to major tags; proposed SHA pinning in board/inbox"}
 {"time": "2026-11-15T17:05:26Z", "agent": "security@agenticcells.dinis", "item": "ACC-016", "action": "wrote", "summary": "Added the leak scan to the Pages workflow after validate; wrote board/security notes, map/security.md and an inbox proposal"}
 {"time": "2026-11-15T17:05:39Z", "agent": "security@agenticcells.dinis", "item": "ACC-016", "action": "wrote", "summary": "Wrote debrief board/debriefs/security-ACC-016.md"}
+{"time": "2026-11-15T17:05:59Z", "agent": "security@agenticcells.dinis", "item": "ACC-016", "action": "released", "summary": "Released the leak scan, history scan, key hygiene and dependency notes to dev", "commit": "5dc76c2"}
+{"time": "2026-11-15T17:05:59Z", "agent": "security@agenticcells.dinis", "item": "ACC-016", "action": "done", "summary": "Security brief first pass done; debrief in board/debriefs/security-ACC-016.md"}
