@@ -93,7 +93,7 @@ function page(meta, content, nav = [], current = '') {
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-<header><a href="/">AgentiCCells</a>${navHtml(nav, current)}</header>
+<header><a class="brand" href="/">AgentiCCells</a>${navHtml(nav, current)}</header>
 <main>
 ${content}
 </main>

@@ -1,18 +1,55 @@
-:root{--bg:#fff;--fg:#1a1a1a;--muted:#555;--accent:#0b5cad;--line:#ddd}
-@media (prefers-color-scheme:dark){:root{--bg:#111418;--fg:#e8e8e8;--muted:#aaa;--accent:#7ab7ff;--line:#333}}
+/* agenticcells.com styles. Visual identity (D1) by designer@agenticcells.dinis, 2026-11-15.
+   Choices and contrast measurements: map/design.md. System fonts only: nothing is loaded from another host. */
+
+/* Palette. Every text colour is at least 4.5:1 on --bg and --surface (measured, map/design.md). */
+:root{
+  color-scheme:light dark;
+  --bg:#ffffff;--surface:#f4f6f6;--fg:#16191d;--muted:#4f5861;--accent:#0a5c6b;--on-accent:#ffffff;--line:#d5dbdf;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  /* Type scale: ratio 1.25 from a 1rem body. */
+  --step-0:1rem;--step-1:1.25rem;--step-2:1.5625rem;--step-3:1.953rem;--step-4:2.441rem;
+  --measure:42rem;--radius:.375rem;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#111518;--surface:#1a2025;--fg:#e7eaed;--muted:#a7b0b8;--accent:#6ec6d6;--on-accent:#111518;--line:#2e373e;
+}}
+
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:1rem/1.6 system-ui,sans-serif}
-main,header,footer{max-width:42rem;margin:0 auto;padding:1rem}
-a{color:var(--accent)}
-h1,h2{line-height:1.2}
+body{margin:0;background:var(--bg);color:var(--fg);font:var(--step-0)/1.6 var(--font)}
+@media (min-width:48rem){body{font-size:1.0625rem}}
+main,header,footer{max-width:var(--measure);margin:0 auto;padding:1rem}
+main{padding-top:1.5rem;padding-bottom:2.5rem}
+
+a{color:var(--accent);text-underline-offset:.15em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+h1,h2,h3,h4{line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:2rem 0 .75rem}
+h1{font-size:clamp(var(--step-3),6vw,var(--step-4));margin-top:.5rem;letter-spacing:-.02em}
+h2{font-size:var(--step-2)}
+h3{font-size:var(--step-1)}
+h4{font-size:var(--step-0)}
+p,ul,ol{margin:0 0 1rem}
+
 table{border-collapse:collapse;width:100%}
 th,td{border-bottom:1px solid var(--line);padding:.5rem;text-align:left;vertical-align:top}
+th{font-size:.875rem;color:var(--muted);font-weight:600}
 .table-wrap{overflow-x:auto}
-code,pre{font-family:ui-monospace,monospace;overflow-wrap:anywhere;white-space:pre-wrap}
+code,pre{font-family:var(--mono);font-size:.9em;overflow-wrap:anywhere;white-space:pre-wrap}
+code{background:var(--surface);padding:.05em .3em;border-radius:.25rem}
 img{max-width:100%;height:auto}
-footer{color:var(--muted);font-size:.9rem}
-header{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:baseline}
-header>a{font-weight:600;text-decoration:none}
+
+/* Header and the text mark. A plain wordmark: no special styling of the letters
+   until the Creative Commons trademark question (researcher@ S4, designer@ D7) is answered. */
+header{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:baseline;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;font-size:var(--step-1);letter-spacing:-.01em;color:var(--fg);text-decoration:none}
+.brand::before{content:"";width:.8em;height:.8em;border:.17em solid var(--accent);border-radius:.22em;flex:none}
 nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1rem}
-nav a[aria-current="page"]{color:var(--fg);text-decoration:none}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline}
+nav a[aria-current="page"]{color:var(--fg);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.35em}
+
+footer{color:var(--muted);font-size:.875rem;border-top:1px solid var(--line);padding-top:1.25rem;padding-bottom:2rem}
+small{color:var(--muted)}
