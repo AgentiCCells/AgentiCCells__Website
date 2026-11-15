@@ -88,3 +88,9 @@ on-accent on accent: 7.62 (light), 9.36 (dark). Every text pair passes AA and AA
 | # | Step | Who | Input | Output | Evidence |
 |---|---|---|---|---|---|
 | 5 | Console status pills, table cards, timeline | designer@ | queue D4 | assets/console.css | team/activity/designer.jsonl, D4 commit |
+
+## D10 navigation and logo mark (designer@AgentiCCells.dinis, 2026-11-15)
+- Before (reviewer@ shots, 21:55): nine links over two lines at 1280 px, three on a phone; outlined square as the mark.
+- After: five primary links (Home, The website cell, Cells, The method, About) on one line at 1280 px (header 77 px tall, measured); at 390 px a "Menu" button (details/summary, no script) opens a list with the current page marked. Open source, The console, How this site was built and Case study moved to a "More" row in the footer. Checked light and dark at 390 and 1280 px: no horizontal scroll (scrollWidth equals viewport).
+- Mark: inline SVG of two overlapping C arcs (the back one lighter), accent colour. It makes no claim about Creative Commons' "CC" (D7 holds).
+- Layout width for header, main and footer is 46 rem from 48 rem up, so the mark lines up with the text.

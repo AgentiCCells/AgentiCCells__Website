@@ -81,12 +81,26 @@ function stack(which) {
 
 // The site nav: every page with a `nav:` number in its front matter (or returned
 // by a page hook), in that number's order. Pages without one stay out of the nav.
+// Primary links (in this order); every other nav page goes to the footer "More" group.
+const PRIMARY = ['/', '/website-cell/', '/cells/', '/method/', '/about/'];
+const MARK = '<svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><path d="M17 6.5A10.5 10.5 0 1 0 17 25.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" opacity=".45"/><path d="M25 9.5A10.5 10.5 0 1 0 25 22.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg>';
+function primaryNav(nav) {
+  return PRIMARY.map((u) => nav.find((n) => n.url === u)).filter(Boolean);
+}
+function navList(items, current) {
+  return items.map((n) => n.url === current
+    ? `<li><a href="${esc(n.url)}" aria-current="page">${esc(n.url==='/'?'Home':n.title)}</a></li>`
+    : `<li><a href="${esc(n.url)}">${esc(n.url==='/'?'Home':n.title)}</a></li>`).join('');
+}
 function navHtml(nav, current) {
   if (!nav.length) return '';
-  const items = nav.map((n) => n.url === current
-    ? `<li><a href="${esc(n.url)}" aria-current="page">${esc(n.title)}</a></li>`
-    : `<li><a href="${esc(n.url)}">${esc(n.title)}</a></li>`).join('');
-  return `<nav aria-label="Site"><ul>${items}</ul></nav>`;
+  const items = navList(primaryNav(nav), current);
+  return `<nav class="wide" aria-label="Site"><ul>${items}</ul></nav><details class="menu"><summary>Menu</summary><nav aria-label="Site (menu)"><ul>${items}</ul></nav></details>`;
+}
+function moreHtml(nav, current) {
+  const rest = nav.filter((n) => !PRIMARY.includes(n.url));
+  if (!rest.length) return '';
+  return `<nav class="more" aria-label="More"><ul>${navList(rest, current)}</ul></nav>`;
 }
 
 function page(meta, content, nav = [], current = '') {
@@ -106,11 +120,11 @@ ${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !me
 ${origin ? `<meta property="og:url" content="${esc(origin + current)}">\n` : ''}<meta name="twitter:card" content="summary">
 </head>
 <body>
-<header><a class="brand" href="/">AgentiCCells</a>${navHtml(nav, current)}</header>
+<header><a class="brand" href="/">${MARK}<span>AgentiCCells</span></a>${navHtml(nav, current)}</header>
 <main>
 ${content}
 </main>
-<footer><p>Contact: <a href="mailto:${contact}">${contact}</a></p><p>Code under Apache-2.0. Text and images under CC BY 4.0.</p><p class="version">Version ${esc(version)}</p></footer>
+<footer>${moreHtml(nav, current)}<p>Contact: <a href="mailto:${contact}">${contact}</a></p><p>Code under Apache-2.0. Text and images under CC BY 4.0.</p><p class="version">Version ${esc(version)}</p></footer>
 </body>
 </html>
 `;
