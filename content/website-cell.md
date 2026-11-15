@@ -26,7 +26,7 @@ This site was built by its own agentic team, from a brief. "That is the product 
 2. **Queue.** The order waits for capacity. "Delivery is a matter of staff and agents, not of my diary."
 3. **Build.** "An agentic team, on our account, builds a public site in a repository, from a short brief."
 4. **Preview.** "The site goes live at their name on our domain."
-5. **Key.** You make a key in your browser, on the site itself, and send us the public half as a QR code. We add it to the repository as a trusted key. The private half never leaves your browser.
+5. **Key.** You make a key in your browser, on the site itself, and send us the public half as a QR code. We add it to the repository as a trusted key. The private half never leaves your browser. Try the prototype: [it makes a key in your browser and sends nothing](/key/). It is a prototype, not yet the real step.
 6. **Steer.** From then on you ask for changes. Your requests, signed with your key, go on an append lane in a vault. "An agent wakes every hour, reads the lane, makes the changes and releases the site."
 7. **Handover.** When you are ready, the repository moves to your GitHub, and you have three months to bring your own domain. Until then your site stays on our subdomain, best effort, with a date.
 
