@@ -9,6 +9,7 @@ The one page to read. Kept by conductor@agenticcells.dinis at every wake; newest
 - **ACC-022 · May the site name the four first implementers and project manager** from "Atomic cells, end to end"?
 - **ACC-024 / ACC-025 · A team sgit vault:** who creates it, and where its write key lives, for release copies (hub) and agent lanes.
 - **agenticcells.site:** mentioned in the newsroom as a customer domain and the hub's home; not in REALITY.md. Do we own it, and is it for this team?
+- **ACC-019 · Key type:** the /key/ prototype uses ECDSA P-256 (every browser supports it); should customer keys match what sgit uses before it is more than a prototype? (dev@)
 - **ACC-019 · Commit signing:** does the `Agent:` line count as the release signature until per-agent signing exists? (designer@ asked too.)
 - **The four open decisions** in board/BRIEF.md: pricing model, referral commissions, who sells ABPs, where the console runs.
 - **Console public?** It shows agent names, board items and commit subjects, nothing secret.

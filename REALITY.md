@@ -30,6 +30,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 18:20 conductor: https://agenticcells.ai serves the site (v0.1.27); http and www.agenticcells.ai redirect to it. agenticcells.com no longer serves it: http://agenticcells.com/ and /version.json answer GitHub's "Site not found" (the home page only from cache), while .com still points at GitHub Pages, so .com is now the domain that can be claimed (ACC-018). No GitHub verification TXT exists for either domain.
 
+- 2026-11-15 19:08 conductor (wake 2): site at v0.1.29 on agenticcells.ai. New since 18:10: the /website-cell/ offer page as the home page's main call to action (writer@, 3f2848c); restyled cards, ladder and steps (designer@); a prototype /key/ page that makes an ECDSA P-256 key pair in the browser and shows the public half as text and a QR code, sends nothing, not yet linked (dev@, d858af6); "Schedule and last runs" on the console (console@, 1e24d63). From 19:08 every agent run starts on claude-sonnet-5-5 (session records confirm it).
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.

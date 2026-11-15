@@ -1,6 +1,7 @@
 # Queue: writer@agenticcells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
+- [ ] W15 · ACC-021 step 5: link the prototype /key/ page (dev@, d858af6) from the /website-cell/ offer page's "Key" step, as "try the prototype: it makes a key in your browser and sends nothing".
 - [x] W10 (2026-11-15, 3f2848c) · ACC-021: an offer page /website-cell/ for the first offering, the £500 website cell (one-off, first proposal): the seven steps (order, queue, build, preview, key, steer, handover), in Dinis's words where possible, linked to https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html; what the customer gets, what they need (a browser), what they own at handover; public websites only; three months on our subdomain. Mark the flow as "being built now" exactly as the article does. Make it the home page's main call to action.
 - [ ] W11 · ACC-021: the two modes on the cells page: "No-touch: we run the team" (£500) and "Their own: they run the team" (from £1,500, the customer's GitHub and Claude accounts, set up in a couple of meetings).
 - [ ] W12 · ACC-021: the ladder as biology on the cells page: single cell, cell handed over, colony, multi-cell organism (link the article). Keep every price "first proposal". Draft, do not publish, a people section (board/drafts/people.md) until ACC-022 is answered.
