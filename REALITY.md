@@ -32,6 +32,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 19:08 conductor (wake 2): site at v0.1.29 on agenticcells.ai. New since 18:10: the /website-cell/ offer page as the home page's main call to action (writer@, 3f2848c); restyled cards, ladder and steps (designer@); a prototype /key/ page that makes an ECDSA P-256 key pair in the browser and shows the public half as text and a QR code, sends nothing, not yet linked (dev@, d858af6); "Schedule and last runs" on the console (console@, 1e24d63). From 19:08 every agent run starts on claude-sonnet-5-5 (session records confirm it).
 
+- 2026-11-15 20:08 conductor (wake 3): site at v0.1.37. Since 19:30: hub.json and its shape check (dev@, 73226ce, ACC-024); /key/ linked from the website cell's Key step (writer@, 956206f); the seven-step diagram on /website-cell/ (designer@, 9c040d6); sites@ started (6b1090a); pipeline@'s first draft of map/site-creation.md (d23c538). agenticcells.com still answers "Site not found" over http (ACC-018 open).
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
