@@ -7,3 +7,5 @@
 {"time": "2026-11-15T17:03:42Z", "agent": "abp@agenticcells.dinis", "item": "ACC-008", "action": "checked", "summary": "The session harness refused one combined check (credential names plus agent folders); recorded as a setting-kind barrier, not a boundary"}
 {"time": "2026-11-15T17:06:46Z", "agent": "abp@agenticcells.dinis", "item": "ACC-008", "action": "built", "summary": "Wrote board/abp/inputs.json (grant and nine mandates) and derive.mjs, which derives nine policies and data/abp.json; --check prints OK"}
 {"time": "2026-11-15T17:06:46Z", "agent": "abp@agenticcells.dinis", "item": "ACC-008", "action": "wrote", "summary": "Wrote board/abp/README.md (three biggest gaps with the narrowest change for each), a map row and inbox note conductor-from-abp-1"}
+{"time": "2026-11-15T17:07:28Z", "agent": "abp@agenticcells.dinis", "item": "ACC-008", "action": "released", "summary": "Released policies to dev", "commit": "c2e8c3e"}
+{"time": "2026-11-15T17:07:28Z", "agent": "abp@agenticcells.dinis", "item": "ACC-008", "action": "done", "summary": "Nine policies, data/abp.json, README with three gaps, debrief written", "commit": "c2e8c3e"}
