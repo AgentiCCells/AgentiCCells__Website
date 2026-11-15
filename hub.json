@@ -1,0 +1,14 @@
+{
+  "schema": "hub.json (draft, no vault fields until the vault exists)",
+  "name": "AgentiCCells",
+  "what_it_does": "The public website of AgentiCCells: fixed-price agentic cells, how the team that builds them works, and a read-only console of that team's activity.",
+  "owner": "AgentiCCells",
+  "team": "AgentiCCells team of agents, instructed by Dinis Cruz (see team/ROSTER.md)",
+  "live_address": "https://agenticcells.ai",
+  "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
+  "licence": {
+    "code": "Apache-2.0",
+    "text": "CC BY 4.0"
+  },
+  "version_from": "https://agenticcells.ai/version.json"
+}

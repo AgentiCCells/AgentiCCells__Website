@@ -106,5 +106,20 @@ try {
   for (const c of cells || []) if (c.price_status !== 'first proposal') fail(`data/cells.json: ${c.name} price not marked first proposal`);
 } catch (e) { fail(`data/cells.json: ${e.message}`); }
 
+// hub.json (ACC-024): the site's entry for the hub of agentic sites. Shape only; no vault fields yet.
+try {
+  const h = JSON.parse(readFileSync(join(root, 'hub.json'), 'utf8'));
+  for (const k of ['name', 'what_it_does', 'owner', 'team', 'live_address', 'repository', 'version_from']) {
+    if (typeof h[k] !== 'string' || !h[k].trim()) fail(`hub.json: ${k} must be a non-empty string`);
+  }
+  if (h.owner !== 'AgentiCCells') fail('hub.json: owner must be AgentiCCells');
+  const cname = readFileSync(join(root, 'CNAME'), 'utf8').trim();
+  if (h.live_address !== `https://${cname}`) fail(`hub.json: live_address must be https://${cname}`);
+  if (!/^https:\/\/github\.com\/AgentiCCells\/[\w.-]+$/.test(h.repository || '')) fail('hub.json: repository must be a github.com/AgentiCCells URL');
+  if (h.version_from !== `https://${cname}/version.json`) fail(`hub.json: version_from must be https://${cname}/version.json`);
+  if (!h.licence || h.licence.code !== 'Apache-2.0' || h.licence.text !== 'CC BY 4.0') fail('hub.json: licence must be code Apache-2.0, text CC BY 4.0');
+  for (const k of Object.keys(h)) if (/vault/i.test(k)) fail(`hub.json: vault field "${k}" not allowed until the vault exists`);
+} catch (e) { fail(`hub.json: ${e.message}`); }
+
 if (errors.length) { console.error(errors.join('\n')); console.error(`FAILED (${errors.length})`); process.exit(1); }
 console.log('OK');
