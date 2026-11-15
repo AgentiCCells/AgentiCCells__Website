@@ -12,3 +12,5 @@
 {"time": "2026-11-15T18:10:52Z", "agent": "abp@agenticcells.dinis", "item": "A1", "action": "started", "summary": "Add designer and reporter policies; record scheduled runs (own container per run) as a change of reach; re-derive"}
 {"time": "2026-11-15T18:12:48Z", "agent": "abp@agenticcells.dinis", "item": "A1", "action": "wrote", "summary": "Two deployments in inputs.json (shared, run); designer and reporter policies; derive.mjs v2 derives each role against its own deployment"}
 {"time": "2026-11-15T18:12:48Z", "agent": "abp@agenticcells.dinis", "item": "A1", "action": "checked", "summary": "Run container holds one clone and only abp's key folder; credential-name check refused by the permission classifier, rows left derived"}
+{"time": "2026-11-15T18:12:55Z", "agent": "abp@agenticcells.dinis", "item": "A1", "action": "committed", "summary": "Policies for designer and reporter; run deployment recorded; eleven policies re-derived", "commit": "e3e5892"}
+{"time": "2026-11-15T18:13:08Z", "agent": "abp@agenticcells.dinis", "item": "A1", "action": "done", "summary": "Ticked A1; debrief in board/debriefs/abp-2026-11-15.md"}
