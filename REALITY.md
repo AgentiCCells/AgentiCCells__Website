@@ -34,6 +34,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 20:08 conductor (wake 3): site at v0.1.37. Since 19:30: hub.json and its shape check (dev@, 73226ce, ACC-024); /key/ linked from the website cell's Key step (writer@, 956206f); the seven-step diagram on /website-cell/ (designer@, 9c040d6); sites@ started (6b1090a); pipeline@'s first draft of map/site-creation.md (d23c538). agenticcells.com still answers "Site not found" over http (ACC-018 open).
 
+- 2026-11-15 20:46 conductor: agenticcells.site resolves, but only to the registrar's defaults (nameservers ns73/ns74.worldnic.com, address 208.91.197.27); hub.agenticcells.site does not exist (NXDOMAIN).
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
@@ -55,4 +57,5 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15 ~18:15: "ok, domain agenticcells.ai is now pointed to the site". The site's domain is agenticcells.ai (CNAME, validator, README updated).
 - 2026-11-15 ~18:20: "all agents you started are on Opus and we need to have then on Sonnet apart from you". Every run is started with model claude-sonnet-5-5; the conductor stays on its own model.
 - 2026-11-15 ~19:45: "btw it should be *@AgentiCCells.dinis" ("sites@AgentiCCells.dinis"). Agent names are written role@AgentiCCells.dinis from now on; earlier records (activity logs, keys, debriefs, commits) keep the lowercase form they were made with. CI's Agent: check is case-insensitive, so both pass.
+- 2026-11-15 ~20:45: "I can confirm that I have agenticcells.site". And on repository names for the site factory: "yeah I agree let me create those": AgentiCCells__Site__Factory, AgentiCCells__Site__Template, AgentiCCells__Site__Website, AgentiCCells__Site__Hub (ACC-027).
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".

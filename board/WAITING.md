@@ -9,7 +9,7 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 - **ACC-026 · Pace against the usage limit.** The account hit its 5-hour limit at about 19:09 UTC with this schedule (hourly dev@, writer@, designer@, plus the others and the conductor). Keep the pace, or slow it (for example dev@, writer@, designer@ every two hours)?
 - **ACC-022 · May the site name the four first implementers and project manager** from "Atomic cells, end to end"?
 - **ACC-024 / ACC-025 · A team sgit vault:** who creates it, and where its write key lives, for release copies (hub) and agent lanes.
-- **agenticcells.site:** mentioned in the newsroom as a customer domain and the hub's home; not in REALITY.md. Do we own it, and is it for this team?
+- **ACC-027 · Site factory:** create AgentiCCells__Site__Factory, __Site__Template, __Site__Website (and __Site__Hub); then a Route 53 hosted zone for agenticcells.site and the nameserver switch (it is still on the registrar's defaults); later the GitHub App and the AWS OIDC role for that one zone.
 - **ACC-019 · Key type:** the /key/ prototype uses ECDSA P-256 (every browser supports it); should customer keys match what sgit uses before it is more than a prototype? (dev@)
 - **ACC-019 · Commit signing:** does the `Agent:` line count as the release signature until per-agent signing exists? (designer@ asked too.)
 - **The four open decisions** in board/BRIEF.md: pricing model, referral commissions, who sells ABPs, where the console runs.
