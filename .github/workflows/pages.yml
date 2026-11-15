@@ -31,6 +31,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Every pushed commit carries an Agent trailer (ACC-015)
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: node build/check-commits.mjs "$BEFORE" "$AFTER"
       - run: node build/build.mjs
         env:
           SITE_VERSION: ${{ steps.version.outputs.version }}
