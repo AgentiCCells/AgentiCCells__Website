@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(root, 'site');
+// Set by CI only (see .github/workflows/pages.yml); local builds say 'local'.
+const version = process.env.SITE_VERSION || 'local';
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -69,7 +71,7 @@ function page(meta, content) {
 <main>
 ${content}
 </main>
-<footer>Code under Apache-2.0. Text and images under CC BY 4.0.</footer>
+<footer>Code under Apache-2.0. Text and images under CC BY 4.0. Version ${esc(version)}.</footer>
 </body>
 </html>
 `;
@@ -85,4 +87,5 @@ for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md
 }
 for (const f of readdirSync(join(root, 'assets'))) copyFileSync(join(root, 'assets', f), join(out, 'assets', f));
 if (existsSync(join(root, 'CNAME'))) copyFileSync(join(root, 'CNAME'), join(out, 'CNAME'));
-console.log('built site/');
+writeFileSync(join(out, 'version.json'), JSON.stringify({ version }) + '\n');
+console.log(`built site/ (${version})`);

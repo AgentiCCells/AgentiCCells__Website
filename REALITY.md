@@ -25,4 +25,5 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15: "here is your first brief, and agentic team to spin up here" (the bootstrap zip).
 - 2026-11-15: Dinis asked to clone `AgentiCCells/AgentiCCells__Website`, then said "I also changed the default branch to dev". Taken as: this is the repository, and `dev` is the release branch the Pages workflow deploys from.
 - 2026-11-15: "ok, small change of plans for now the url is agenticcells.com". The site's custom domain (CNAME, validator, README, ACC-005) is now agenticcells.com. What agenticcells.ai does meanwhile is not decided.
+- 2026-11-15: "the version number, which should be v0.1.0, and then every push becomes v0.1.1, and then all the minor ones, is done by the CI pipeline, not by here." Implemented in .github/workflows/pages.yml: tags v0.1.N after each successful deploy.
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".
