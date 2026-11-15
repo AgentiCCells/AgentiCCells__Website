@@ -101,6 +101,10 @@ function fileFor(path) {
 }
 const urlFor = (file) => '/' + file.replace(/(^|\/)index\.html$/, '$1');
 
+// site/ is cleared first, so page hooks may also write their own files under ctx.out.
+rmSync(out, { recursive: true, force: true });
+mkdirSync(join(out, 'assets'), { recursive: true });
+
 // Pages from content/*.md.
 const pages = [];
 for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md')).sort()) {
@@ -112,8 +116,9 @@ for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md
 // Page hooks: build/pages/*.mjs, each `export default async function (ctx)` returning
 // [{ path, title, description, html, nav? }]. `path` is a site path such as "/console/";
 // `html` is the inside of <main>. Each page gets the same template, nav and footer.
+// ctx.out is site/, already cleared; a hook may also return extra files through ctx.files.
 const hookDir = join(root, 'build', 'pages');
-const ctx = { root, version, contact, esc, inline, markdown, frontMatter, pages: pages.map(({ path, title }) => ({ path, title })), files: [] };
+const ctx = { root, out, version, contact, esc, inline, markdown, frontMatter, pages: pages.map(({ path, title }) => ({ path, title })), files: [] };
 if (existsSync(hookDir)) {
   for (const f of readdirSync(hookDir).filter((f) => f.endsWith('.mjs')).sort()) {
     const mod = await import(pathToFileURL(join(hookDir, f)).href);
@@ -140,8 +145,6 @@ const nav = pages
   .sort((a, b) => Number(a.nav) - Number(b.nav) || String(a.title).localeCompare(String(b.title)))
   .map((p) => ({ url: urlFor(p.file), title: p.title }));
 
-rmSync(out, { recursive: true, force: true });
-mkdirSync(join(out, 'assets'), { recursive: true });
 for (const p of pages) {
   mkdirSync(dirname(join(out, p.file)), { recursive: true });
   writeFileSync(join(out, p.file), page(p, p.html, nav, urlFor(p.file)));
