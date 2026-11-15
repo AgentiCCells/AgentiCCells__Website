@@ -30,7 +30,7 @@ function inline(s) {
   return esc(s)
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, t, u) => /^(source|link|code)$/i.test(t) ? `<a class="cite" href="${u}">${t}</a>` : `<a href="${u}">${t}</a>`);
 }
 
 function markdown(body) {
@@ -72,8 +72,8 @@ function stack(which) {
   const { components, checked } = JSON.parse(readFileSync(join(root, 'data/stack.json'), 'utf8'));
   const isRuntime = (c) => /^Runtime:\s*/.test(c.name);
   const rows = components.filter((c) => (which === 'runtimes') === isRuntime(c)).map((c) => {
-    const links = [`<a href="${esc(c.link)}">Link</a>`];
-    if (c.code_link) links.push(`<a href="${esc(c.code_link)}">code</a>`);
+    const links = [`<a class="cite" href="${esc(c.link)}">Link</a>`];
+    if (c.code_link) links.push(`<a class="cite" href="${esc(c.code_link)}">code</a>`);
     return `<tr><td><strong>${esc(c.name.replace(/^Runtime:\s*/, ''))}</strong><br>${esc(c.what || '')}</td><td>${esc(c.licence)}</td><td>${esc(c.status)}</td><td>${links.join(', ')}</td></tr>`;
   }).join('\n');
   return `<div class="table-wrap"><table>\n<thead><tr><th>${which === 'runtimes' ? 'Runtime' : 'Component'}</th><th>Licence</th><th>Status</th><th>Link</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>\n<p>From data/stack.json, checked ${esc(checked || '')}.</p>`;

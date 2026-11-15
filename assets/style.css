@@ -22,11 +22,13 @@ body{margin:0;background:var(--bg);color:var(--fg);font:var(--step-0)/1.6 var(--
 main,header,footer{max-width:var(--measure);margin:0 auto;padding:1rem}
 main{padding-top:1.5rem;padding-bottom:2.5rem}
 
-a{color:var(--accent);text-underline-offset:.15em}
-a:hover{text-decoration-thickness:2px}
+a{color:var(--accent);text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:color-mix(in srgb,var(--accent) 55%,transparent)}
+a:hover{text-decoration-thickness:2px;text-decoration-color:currentColor}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
 
 h1,h2,h3,h4{line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:2rem 0 .75rem}
+h2{margin-top:3rem}
+h2+h3,h1+h2{margin-top:1rem}
 h1{font-size:clamp(var(--step-3),6vw,var(--step-4));margin-top:.5rem;letter-spacing:-.02em}
 h2{font-size:var(--step-2)}
 h3{font-size:var(--step-1)}
@@ -85,7 +87,7 @@ small{color:var(--muted)}
 
 /* Lists of bold-led points (week one, the four properties): cards in a grid. */
 ul.points{list-style:none;padding:0;display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr))}
-ul.points li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.9rem 1rem;margin:0}
+ul.points li{height:100%;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.9rem 1rem;margin:0}
 ul.points li strong:first-child{display:block;color:var(--fg);margin-bottom:.2rem}
 
 /* The ladder: a table on wide screens, one card per cell on small ones. */
@@ -122,3 +124,12 @@ button:hover{filter:brightness(1.1)}
 .flow .d-txt{fill:var(--fg);font:600 16px var(--font)}
 .flow .d-who{fill:var(--muted);font:13px var(--font)}
 .flow figcaption{font-size:.875rem;color:var(--muted);margin-top:.5rem;text-align:center}
+
+/* D11 · Link styling and rhythm (designer@, 2026-11-15). Thin offset underlines (above); a bare "source" link
+   is a small citation with a 32px tap area; the .button keeps its own treatment. */
+a.button,nav a,.brand,details.menu summary{text-decoration:none}
+p a[href^="http"]:not(.button){overflow-wrap:anywhere}
+.cite{font-size:.8em;position:relative;text-decoration-thickness:1px}
+.cite::after{content:"";position:absolute;left:-.4rem;right:-.4rem;top:50%;height:2rem;transform:translateY(-50%)}
+.ladder tr,ul.points li{break-inside:avoid}
+section+section{margin-top:3rem}

@@ -1,7 +1,7 @@
 # Queue: designer@AgentiCCells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
-- [ ] D11 · Link styling and rhythm: lighter underlines (thinner, offset), more space between sections, consistent card heights; compare before and after screenshots in map/design.md.
+- [x] D11 (done 2026-11-15, see map/design.md and debrief) · Link styling and rhythm: lighter underlines (thinner, offset), more space between sections, consistent card heights; compare before and after screenshots in map/design.md.
 - [x] D10 (done 2026-11-15, see debrief) · Professional polish, Dinis 2026-11-15: "we need to make this look really good and professional". Navigation: at most five primary links (Home, The website cell, Cells, The method, About); the rest (Open source, The console, How this site was built, Case study) in the footer or a "More" group; one line at 1280 px, a compact menu at 390 px. Then a proper logo mark (inline SVG, the double C visible) instead of the outlined square, pending S4 on Creative Commons' trademark policy for "CC".
 - [x] D9 · ACC-021: design the /website-cell/ offer page and its diagram of the seven steps (inline SVG), with writer@'s copy; it is now the main call to action. Done 2026-11-15 (see map/design.md).
 - [x] D1 · Visual identity: a text logo for "AgentiCCells" (the double C visible), a small colour palette (light and dark), type scale with one self-hosted font or the system stack; write map/design.md with the choices and why. Done 2026-11-15, c728aab (plain text mark; see map/design.md).
