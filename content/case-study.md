@@ -11,6 +11,8 @@ Dinis Cruz asked for the work to be documented as it happens, because how this t
 
 - [Day one: from a first message to nine agents and a live, versioned site](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/case-study/2026-11-15-day-one.md). From the first message to a live site with a console, including the deploy that was rejected, the naming mix-up and the shared container.
 - [The evening of day one: a schedule that took three tries, a release the gates stopped, and the first offering](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/case-study/2026-11-15-evening.md). Getting scheduled agents to push, and the opening of the website cell.
+- [The night of day one: a site factory, four Site repositories, two new sites and a first review](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/case-study/2026-11-15-site-factory.md). The factory idea, agenticcells.site and its hub, and the reviewer's first scores.
+- [Numbers](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/case-study/numbers.md): counts and costs, generated from git and the logs.
 
 New reports are added as the work goes on. This page is a proposal for how to read them: start at the top, follow the links to the evidence.
 
