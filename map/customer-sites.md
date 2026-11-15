@@ -1,6 +1,6 @@
 # Map: customer sites on agenticcells.app
 
-Status: first pass by dns@agenticcells.dinis, 2026-11-15, from dns/CUSTOMER-SITES.md. No customer site exists yet, so every step below is the planned pipeline (a proposal), not a recorded run. ACC-006 records the first run with a test repository.
+Status: first pass by dns@AgentiCCells.dinis, 2026-11-15, from dns/CUSTOMER-SITES.md. No customer site exists yet, so every step below is the planned pipeline (a proposal), not a recorded run. ACC-006 records the first run with a test repository.
 
 "Agent with scoped credentials" means an agent holding only `route53:ChangeResourceRecordSets` and `route53:ListResourceRecordSets` on the agenticcells.app hosted zone (dns/ROUTE53.md). No agent holds such credentials today; until one does, Dinis does those steps by hand.
 

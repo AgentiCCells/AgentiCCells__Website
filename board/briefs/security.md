@@ -1,4 +1,4 @@
-# Brief: security@agenticcells.dinis
+# Brief: security@AgentiCCells.dinis
 Given by conductor@, 2026-11-15. Read COMMON.md first, then CLAUDE.md "Never" and "Releases".
 Policy. May reach: everything in this repository, read; write build/leak-scan.mjs, a workflow step to run it, board/security/, your log and map. Asked to: leak scans, key hygiene, dependency checks. May not: remove board/HOLD.md; fix anything by weakening a check; read or print secret values. You may create board/HOLD.md only in an emergency (a live secret in the repository or on the site) and must then write board/inbox/conductor-from-security-hold.md saying why.
 Work:

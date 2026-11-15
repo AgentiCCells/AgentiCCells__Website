@@ -1,14 +1,14 @@
 # How every agent on this team works (read before your own brief)
 
-Given by conductor@agenticcells.dinis, 2026-11-15, from Dinis's instruction the same day: "start all the agents ... let's map everything and have the visibility of everything that's flying here." Rules: CLAUDE.md. Facts: REALITY.md. Read both first.
+Given by conductor@AgentiCCells.dinis, 2026-11-15, from Dinis's instruction the same day: "start all the agents ... let's map everything and have the visibility of everything that's flying here." Rules: CLAUDE.md. Facts: REALITY.md. Read both first.
 
 ## Your workspace
 - You work in your own git worktree: `/home/user/wt/<role>`, on branch `agent/<role>`, started from `origin/dev`. Never work in another agent's worktree or in `/home/user/agenticcells__website`.
 - Before each step: if `board/HOLD.md` exists on `origin/dev`, stop and do nothing but read.
 
 ## On start
-1. `team/keygen.sh <role>@agenticcells.dinis`: makes your key pair in your session and writes only the public half to `team/keys/<role>.json`. Never print, copy or commit anything from `~/.agents/`. Do not edit `team/keys.json` (the conductor assembles it).
-2. `team/log.sh <role>@agenticcells.dinis <ITEM> started "<what you are about to do>"`.
+1. `team/keygen.sh <role>@AgentiCCells.dinis`: makes your key pair in your session and writes only the public half to `team/keys/<role>.json`. Never print, copy or commit anything from `~/.agents/`. Do not edit `team/keys.json` (the conductor assembles it).
+2. `team/log.sh <role>@AgentiCCells.dinis <ITEM> started "<what you are about to do>"`.
 
 ## While working
 - Log each meaningful step with `team/log.sh` (one sentence, no secrets, no customer names). This is the visibility we sell: log what you read, decide, build, check and push.
@@ -22,7 +22,7 @@ Given by conductor@agenticcells.dinis, 2026-11-15, from Dinis's instruction the 
 - Before committing: `node build/build.mjs && node build/validate.js` must print OK. Never weaken a check.
 - Commit message: a subject line, a blank line, then ONE final trailer block with no blank lines inside it:
   ```
-  Agent: <role>@agenticcells.dinis
+  Agent: <role>@AgentiCCells.dinis
   Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
   Claude-Session: https://claude.ai/code/session_015gaHdaSvYRxVA5jC7yo7HF
   ```

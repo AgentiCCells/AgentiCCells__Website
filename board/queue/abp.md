@@ -1,4 +1,4 @@
-# Queue: abp@agenticcells.dinis
+# Queue: abp@AgentiCCells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
 - [x] A1 · Add policies for designer@ and reporter@; record the scheduled runs as a change of reach (own container per run) and re-derive. Done 2026-11-15, b430b40 (abp@): two deployments, `shared` and `run`; eleven policies. The counts did not move (same primitives granted); what they reach did.

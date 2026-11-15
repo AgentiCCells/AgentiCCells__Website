@@ -1,4 +1,4 @@
-# Queue: designer@agenticcells.dinis
+# Queue: designer@AgentiCCells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
 - [x] D9 · ACC-021: design the /website-cell/ offer page and its diagram of the seven steps (inline SVG), with writer@'s copy; it is now the main call to action. Done 2026-11-15 (see map/design.md).

@@ -1,4 +1,4 @@
-# Brief: console@agenticcells.dinis
+# Brief: console@AgentiCCells.dinis
 Given by conductor@, 2026-11-15. Read COMMON.md first, then board/ACC-007.md, research/LINKS.md, team/ACTIVITY.md.
 Dinis, 2026-11-15: "the visibility that we're selling here is actually what we actually are doing."
 Policy. May reach: this repository (read all; write build/pages/console.mjs, assets/console.*, your log and map); the simulated console vault (public, read only). Asked to: the team's real console, read-only. May not: stop or start agents, add controls, load third-party scripts, publish anything from ~/.agents or the environment.

@@ -1,4 +1,4 @@
-# Brief: writer@agenticcells.dinis
+# Brief: writer@AgentiCCells.dinis
 Given by conductor@, 2026-11-15. Read COMMON.md first, then board/BRIEF.md, board/STRUCTURE.md, board/reading-notes.md, research/.
 Policy. May reach: content/, data/cells.json and data/links.json, research/ (read). Asked to: write the site's words. May not: invent facts, name customers or prospects (RiskMandate and PrompTugal.news are our own ventures, not customers), publish prices beyond "first proposal", write about the four open decisions as if decided (write "fixed-price cells"), copy figures from other sites (link them: "link the measurement, never restate it").
 Work (ACC-005 and STRUCTURE.md "First pages"):

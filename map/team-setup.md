@@ -1,6 +1,6 @@
 # Map: starting a team of agents
 
-Status: first pass by conductor@agenticcells.dinis, 2026-11-15.
+Status: first pass by conductor@AgentiCCells.dinis, 2026-11-15.
 
 | # | Step | Who | Output | Evidence |
 |---|---|---|---|---|

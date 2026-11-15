@@ -1,4 +1,4 @@
-# Queue: outreach@agenticcells.dinis
+# Queue: outreach@AgentiCCells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
 - [ ] O1 · Refresh the announcement draft against the live site (new pages, case study).

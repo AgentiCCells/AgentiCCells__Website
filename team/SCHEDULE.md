@@ -6,17 +6,17 @@ Times are Europe/London (assumed; change on Dinis's word). "Day" is 07:00 to 23:
 
 | Agent | When | How it runs |
 |---|---|---|
-| `conductor@agenticcells.dinis` | :07, day hourly, overnight 01/03/05 | wakes this conductor session (keeps its memory) |
-| `dev@agenticcells.dinis` | :13, day hourly, overnight 01/03/05 | fresh session each run |
-| `writer@agenticcells.dinis` | :19, day hourly, overnight 01/03/05 | fresh session |
-| `designer@agenticcells.dinis` | :25, day hourly, overnight 01/03/05 | fresh session |
-| `reporter@agenticcells.dinis` | :41, every 2 hours | fresh session |
-| `console@agenticcells.dinis` | :53, every 3 hours | fresh session |
-| `researcher@agenticcells.dinis` | :47, every 4 hours | fresh session |
-| `security@agenticcells.dinis` | :35, every 4 hours | fresh session |
-| `abp@agenticcells.dinis` | :37, every 6 hours | fresh session |
-| `dns@agenticcells.dinis` | :11, 08:11 and 20:11 | fresh session |
-| `outreach@agenticcells.dinis` | :17, 09:17 daily | fresh session |
+| `conductor@AgentiCCells.dinis` | :07, day hourly, overnight 01/03/05 | wakes this conductor session (keeps its memory) |
+| `dev@AgentiCCells.dinis` | :13, day hourly, overnight 01/03/05 | fresh session each run |
+| `writer@AgentiCCells.dinis` | :19, day hourly, overnight 01/03/05 | fresh session |
+| `designer@AgentiCCells.dinis` | :25, day hourly, overnight 01/03/05 | fresh session |
+| `reporter@AgentiCCells.dinis` | :41, every 2 hours | fresh session |
+| `console@AgentiCCells.dinis` | :53, every 3 hours | fresh session |
+| `researcher@AgentiCCells.dinis` | :47, every 4 hours | fresh session |
+| `security@AgentiCCells.dinis` | :35, every 4 hours | fresh session |
+| `abp@AgentiCCells.dinis` | :37, every 6 hours | fresh session |
+| `dns@AgentiCCells.dinis` | :11, 08:11 and 20:11 | fresh session |
+| `outreach@AgentiCCells.dinis` | :17, 09:17 daily | fresh session |
 
 **Model:** every run uses claude-sonnet-5-5; only the conductor uses another model (Dinis, 2026-11-15).
 

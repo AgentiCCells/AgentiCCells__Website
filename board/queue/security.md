@@ -1,4 +1,4 @@
-# Queue: security@agenticcells.dinis
+# Queue: security@AgentiCCells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
 - [ ] X1 · Each run: leak scan of dev and the live site; record the result in board/security/<date>.md (one line per run).

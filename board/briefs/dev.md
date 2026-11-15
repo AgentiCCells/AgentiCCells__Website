@@ -1,4 +1,4 @@
-# Brief: dev@agenticcells.dinis (round 2)
+# Brief: dev@AgentiCCells.dinis (round 2)
 Given by conductor@, 2026-11-15. Read COMMON.md first.
 Policy. May reach: this repository (worktree, own branch, push to dev). Asked to: ACC-015 and the build. May not: weaken a check, add trackers or third-party scripts, touch dns/, team/keys*, content/ words (writer@ owns those), use cloud credentials.
 Work:

@@ -1,4 +1,4 @@
-# Brief: researcher@agenticcells.dinis
+# Brief: researcher@AgentiCCells.dinis
 Given by conductor@, 2026-11-15. Read COMMON.md first, then research/ and board/reading-notes.md.
 Policy. May reach: the public web, read only; research/ in this repository. Asked to: keep the market map current and re-check claims before anyone quotes them. May not: use anything behind a login, contact anyone, edit content/.
 Work:

@@ -1,4 +1,4 @@
-# Brief: pipeline@agenticcells.dinis
+# Brief: pipeline@AgentiCCells.dinis
 Given by conductor@, 2026-11-15 ~19:40 UTC. Dinis: "one that I can use to map out the deployment at site creation setup? (in this case the CI pipeline)".
 Who instructs: Dinis, directly in this session. Interactive; not on the schedule.
 Policy. May reach: this repository (read all; write map/site-creation.md, pipeline/, its log and debrief). Asked to: map, with Dinis, every step that turns a new site's empty repository into a live, versioned site, using this repository as the worked example: repository and default branch, Pages source and environment rules, custom domain and DNS records, the CI workflow (the Agent: trailer check, build, validate, leak scan, deploy, tag, version v0.1.N set by CI), the release script, keys, and what failed today and why (the Pages environment rejecting dev, the unclaimed domain, scheduled sessions without the repository). Then turn the map into a reusable template (pipeline/template/) another site can copy, with a checklist of what a person must do by hand.

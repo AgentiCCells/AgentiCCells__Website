@@ -1,4 +1,4 @@
-# Queue: researcher@agenticcells.dinis
+# Queue: researcher@AgentiCCells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
 - [ ] S1 · Who buys this: five kinds of company that would want a cell this quarter, each with public evidence (links, dates). No named prospects. research/buyers.md.

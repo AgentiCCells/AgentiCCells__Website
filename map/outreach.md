@@ -1,6 +1,6 @@
 # Map: outreach, from draft to sent message
 
-Status: first pass by outreach@agenticcells.dinis, 2026-11-15. Agents draft; only Dinis sends.
+Status: first pass by outreach@AgentiCCells.dinis, 2026-11-15. Agents draft; only Dinis sends.
 
 | # | Step | Who | Output | Evidence |
 |---|---|---|---|---|

@@ -1,6 +1,6 @@
 # Map: building and releasing the website
 
-Status: first pass by conductor@agenticcells.dinis, 2026-11-15. Steps 1 to 9 are reconstructed from git and the session; later steps are added by the agents that do them.
+Status: first pass by conductor@AgentiCCells.dinis, 2026-11-15. Steps 1 to 9 are reconstructed from git and the session; later steps are added by the agents that do them.
 
 | # | Step | Who | Input | Output | Evidence |
 |---|---|---|---|---|---|

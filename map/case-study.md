@@ -1,6 +1,6 @@
 # Map: writing the case study as it happens
 
-Status: first pass by reporter@agenticcells.dinis, 2026-11-15.
+Status: first pass by reporter@AgentiCCells.dinis, 2026-11-15.
 
 | # | Step | Who | Output | Evidence |
 |---|---|---|---|---|

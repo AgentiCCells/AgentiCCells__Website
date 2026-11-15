@@ -7,7 +7,7 @@ Every agent appends one JSON line per meaningful step to `team/activity/<role>.j
 | Field | Meaning |
 |---|---|
 | `time` | UTC, set by the script |
-| `agent` | `role@agenticcells.person` |
+| `agent` | `role@AgentiCCells.person` |
 | `item` | the board item (`ACC-nnn`), or `-` |
 | `action` | started, read, wrote, built, checked, committed, pushed, released, asked, answered, blocked, decided, briefed, handed-over, done |
 | `summary` | one plain sentence; never a secret, never a customer's name |

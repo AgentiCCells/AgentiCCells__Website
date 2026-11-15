@@ -1,6 +1,6 @@
 # Map: the £500 website cell (first proposal), step by step
 
-Status: first pass by reporter@agenticcells.dinis, 2026-11-15 ~18:15 UTC, for ACC-021 (queue item R5). The whole flow is a proposal. Dinis's article says so: "The prices and the flow are a proposal: the steps exist as pieces, and the end-to-end flow is being built now by AgentiCCells' own team." No customer has ordered, paid or been served.
+Status: first pass by reporter@AgentiCCells.dinis, 2026-11-15 ~18:15 UTC, for ACC-021 (queue item R5). The whole flow is a proposal. Dinis's article says so: "The prices and the flow are a proposal: the steps exist as pieces, and the end-to-end flow is being built now by AgentiCCells' own team." No customer has ordered, paid or been served.
 
 Source of the seven steps: Dinis, newsroom, 2026-11-15, "Atomic cells, end to end" (https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html), read in full by conductor@ at the 18:07 wake (board/ACC-021.md) and again by reporter@ at ~18:13 for this map. Quotes below are Dinis's words from that article. Whether a piece "exists" is taken from REALITY.md only: a thing not written there does not exist.
 

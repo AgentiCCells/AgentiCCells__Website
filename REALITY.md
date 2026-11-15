@@ -3,16 +3,16 @@
 A thing that is not in this file does not exist, whatever a brief says. Kept current by whoever ships.
 
 ## Exists (checked, with date and who checked)
-- 2026-11-15 conductor@agenticcells.dinis: the website repository is `AgentiCCells/AgentiCCells__Website` (plural), default branch `dev`. The old singular URL `AgentiCCell/AgentiCCell__Website` now leads to this same repository, and the earlier commits are here unchanged.
+- 2026-11-15 conductor@AgentiCCells.dinis: the website repository is `AgentiCCells/AgentiCCells__Website` (plural), default branch `dev`. The old singular URL `AgentiCCell/AgentiCCell__Website` now leads to this same repository, and the earlier commits are here unchanged.
 - 2026-11-15 conductor: I push to `claude/confident-davinci-fiu43e`, and to `dev` only when Dinis asks (he asked once, for the first release). Every push to `dev` deploys and takes the next version.
 - 2026-11-15 16:40 conductor: agenticcells.com and www.agenticcells.com resolve to the four GitHub Pages addresses (185.199.108-111.153); http redirects to https. Checked with `getent` and `curl`.
 - 2026-11-15 conductor: https://agenticcells.com answers 200 with the placeholder page; /version.json says v0.1.0; tag v0.1.0 is on commit ce760fa (set by CI). http://agenticcells.com and https://www.agenticcells.com redirect (301) to https://agenticcells.com/. Dinis: "site is live". (The first run's deploy was rejected by the github-pages environment; it went through after Dinis changed the settings.)
 - 2026-11-15 conductor: Node v22.23.4 is available in this session.
 - 2026-11-15 conductor: the bootstrap folder is copied into this repository: CLAUDE.md, board/ (ACC-001 to ACC-009, BRIEF.md), team/ROSTER.md, dns/, research/.
 
-- 2026-11-15 conductor (checked by running them): `node build/build.mjs` prints "built site/" and `node build/validate.js` prints OK, on branch commit 2a9c54c. Built by dev@agenticcells.dinis: placeholder `content/index.md`, `data/cells.json`, `assets/style.css`, `CNAME`, `.github/workflows/pages.yml`.
+- 2026-11-15 conductor (checked by running them): `node build/build.mjs` prints "built site/" and `node build/validate.js` prints OK, on branch commit 2a9c54c. Built by dev@AgentiCCells.dinis: placeholder `content/index.md`, `data/cells.json`, `assets/style.css`, `CNAME`, `.github/workflows/pages.yml`.
 
-- 2026-11-15 conductor: key pair for conductor@agenticcells.dinis, made in its session with sgit-ai v0.27.0 (`team/keygen.sh`); public half in team/keys/conductor.json and team/keys.json. Private half and passphrase only in the session (~/.agents/conductor/).
+- 2026-11-15 conductor: key pair for conductor@AgentiCCells.dinis, made in its session with sgit-ai v0.27.0 (`team/keygen.sh`); public half in team/keys/conductor.json and team/keys.json. Private half and passphrase only in the session (~/.agents/conductor/).
 - 2026-11-15 conductor: this session's environment holds AWS access keys, GitHub tokens (GH_TOKEN, GITHUB_TOKEN) and a Google Cloud token (names checked, values not read). Every agent in this container can reach them. No agent is to use the AWS or Google Cloud credentials (ACC-016).
 - 2026-11-15 conductor: activity logs (team/activity/, team/log.sh), the workflow map (map/), work queues (board/queue/) and the schedule (team/SCHEDULE.md).
 
@@ -38,7 +38,7 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - `board/HOLD.md` (absent, so work may proceed).
 
 ## Decided by Dinis (with his words and the date)
-- 2026-11-15: "you are going to be the agent called conductor@AgentiCCell.dinis". Settled the same day by Dinis: "all should be agenticcells" and "agenticcell was a mistake on my part". Every agent name, repository and domain uses `agenticcells`; this agent is `conductor@agenticcells.dinis`.
+- 2026-11-15: "you are going to be the agent called conductor@AgentiCCell.dinis". Settled the same day by Dinis: "all should be agenticcells" and "agenticcell was a mistake on my part". Every agent name, repository and domain uses `agenticcells`; this agent is `conductor@AgentiCCells.dinis`.
 - 2026-11-15: "here is your first brief, and agentic team to spin up here" (the bootstrap zip).
 - 2026-11-15: Dinis asked to clone `AgentiCCells/AgentiCCells__Website`, then said "I also changed the default branch to dev". Taken as: this is the repository, and `dev` is the release branch the Pages workflow deploys from.
 - 2026-11-15: "ok, small change of plans for now the url is agenticcells.com". The site's custom domain (CNAME, validator, README, ACC-005) is now agenticcells.com. What agenticcells.ai does meanwhile is not decided.
@@ -52,4 +52,5 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15 (mapping): "let's map the whole workflow. And even the creation of this website is something that we want to sell. So let's map everything and have the visibility of everything that's flying here."
 - 2026-11-15 ~18:15: "ok, domain agenticcells.ai is now pointed to the site". The site's domain is agenticcells.ai (CNAME, validator, README updated).
 - 2026-11-15 ~18:20: "all agents you started are on Opus and we need to have then on Sonnet apart from you". Every run is started with model claude-sonnet-5-5; the conductor stays on its own model.
+- 2026-11-15 ~19:45: "btw it should be *@AgentiCCells.dinis" ("sites@AgentiCCells.dinis"). Agent names are written role@AgentiCCells.dinis from now on; earlier records (activity logs, keys, debriefs, commits) keep the lowercase form they were made with. CI's Agent: check is case-insensitive, so both pass.
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".

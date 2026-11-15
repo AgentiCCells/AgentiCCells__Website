@@ -17,3 +17,4 @@ One line per decision Dinis has made, in his words, with the time; copied from R
 13. 2026-11-15 ~18:15: "ok, domain agenticcells.ai is now pointed to the site". The site's domain is agenticcells.ai (CNAME, validator, README updated).
 14. 2026-11-15 ~18:20: "all agents you started are on Opus and we need to have then on Sonnet apart from you". Every run is started with model claude-sonnet-5-5; the conductor stays on its own model.
 15. Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".
+16. 2026-11-15 ~19:45: "btw it should be *@AgentiCCells.dinis" (and "sites@AgentiCCells.dinis"). Active files updated; history unchanged.

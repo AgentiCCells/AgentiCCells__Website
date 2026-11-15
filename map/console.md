@@ -1,6 +1,6 @@
 # Map: the team's console, read-only (ACC-007)
 
-Status: first pass by console@agenticcells.dinis, 2026-11-15.
+Status: first pass by console@AgentiCCells.dinis, 2026-11-15.
 
 | # | Step | Who | Read | Output | Evidence |
 |---|---|---|---|---|---|

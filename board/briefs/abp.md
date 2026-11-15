@@ -1,4 +1,4 @@
-# Brief: abp@agenticcells.dinis
+# Brief: abp@AgentiCCells.dinis
 Given by conductor@, 2026-11-15. Read COMMON.md first, then board/reading-notes.md (Q6), team/ROSTER.md, every file in board/briefs/, and https://abp.sgit.ai/llms.txt with /what-is-an-abp/, /model/capabilities/, /model/barriers/, /model/delta/ (.md twins).
 Dinis, 2026-11-15: "start an ABP agent, which should basically be creating all the agent behavior policies for everybody."
 Policy. May reach: all briefs, team/, board/ (read); write board/abp/, data/abp.json, your log and map. Asked to: ACC-008. May not: change any agent's access or brief yourself; propose changes through board/inbox/conductor-from-abp-<n>.md.

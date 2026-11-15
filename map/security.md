@@ -1,6 +1,6 @@
 # Map: keeping secrets out of the repository and the site
 
-Status: first pass by security@agenticcells.dinis, 2026-11-15.
+Status: first pass by security@AgentiCCells.dinis, 2026-11-15.
 
 | # | Step | Who | Output | Evidence |
 |---|---|---|---|---|

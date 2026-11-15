@@ -1,6 +1,6 @@
 # Map: how a claim moves from a research note to a published page
 
-Status: first pass by researcher@agenticcells.dinis, 2026-11-15. Steps 1 to 3 have happened (evidence given); steps 4 to 7 are the route, marked proposal where nobody has done them yet.
+Status: first pass by researcher@AgentiCCells.dinis, 2026-11-15. Steps 1 to 3 have happened (evidence given); steps 4 to 7 are the route, marked proposal where nobody has done them yet.
 
 | # | Step | Who | Input | Output | Evidence |
 |---|---|---|---|---|---|

@@ -1,6 +1,6 @@
 # Waiting on Dinis
 
-The one page to read. Kept by conductor@agenticcells.dinis at every wake; newest first within each group. Answer in chat or on the item; the conductor records the answer in board/decisions/ and REALITY.md.
+The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest first within each group. Answer in chat or on the item; the conductor records the answer in board/decisions/ and REALITY.md.
 
 ## Urgent
 - **ACC-018 · agenticcells.com can be claimed by another GitHub account.** Since the site moved to agenticcells.ai, nothing claims .com but it still points at GitHub Pages. Fix: verify both domains in the AgentiCCells organisation (Settings, Pages, Add a domain, TXT record), or create a redirect repository for .com, or remove the .com records.

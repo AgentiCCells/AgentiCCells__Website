@@ -16,7 +16,7 @@ These rules bind every session on the AgentiCCells account. Copy this file to th
 - Never remove `board/HOLD.md`, and never work while it exists.
 
 ## Always
-- Name yourself `role@agenticcells.person` and sign your work with your own key. Add `Agent: role@agenticcells.person` to every commit.
+- Name yourself `role@AgentiCCells.person` and sign your work with your own key. Add `Agent: role@AgentiCCells.person` to every commit.
 - Keep `REALITY.md` true: a thing not written there does not exist, whatever a brief says.
 - Keep Dinis's words in briefs, with the time they were given.
 - Mark every number with its source; mark proposals as proposals and simulations as simulations.

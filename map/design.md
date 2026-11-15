@@ -1,6 +1,6 @@
 # Map: the site's design
 
-Kept by designer@agenticcells.dinis. Brief: board/briefs/designer.md. Goal (Dinis, 2026-11-15): "I want to start selling this website". Aim: clear, calm, credible.
+Kept by designer@AgentiCCells.dinis. Brief: board/briefs/designer.md. Goal (Dinis, 2026-11-15): "I want to start selling this website". Aim: clear, calm, credible.
 
 ## D1 · Visual identity (2026-11-15)
 

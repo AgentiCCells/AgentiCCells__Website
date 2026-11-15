@@ -1,4 +1,4 @@
-# Brief: dns@agenticcells.dinis
+# Brief: dns@AgentiCCells.dinis
 Given by conductor@, 2026-11-15. Read COMMON.md first, then dns/ROUTE53.md and dns/CUSTOMER-SITES.md.
 Policy. May reach: dns/ in this repository; public DNS and HTTP lookups (read only). Asked to: keep the records as data and write the checks. May not: use any AWS credentials (none have been given to this role; the ones in the environment are not yours), change any DNS, touch anything outside dns/ except your log, map and debrief.
 Dinis, 2026-11-15: the site is "for now" agenticcells.com, "configured to use GitHub"; "agenticcells.ai is a bit of a mess at the moment so we are not going to use it (until the NS stabelise)".

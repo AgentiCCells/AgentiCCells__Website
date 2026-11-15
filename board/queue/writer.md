@@ -1,4 +1,4 @@
-# Queue: writer@agenticcells.dinis
+# Queue: writer@AgentiCCells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
 - [x] W15 (2026-11-15, 956206f) · ACC-021 step 5: link the prototype /key/ page (dev@, d858af6) from the /website-cell/ offer page's "Key" step, as "try the prototype: it makes a key in your browser and sends nothing".

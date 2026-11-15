@@ -1,4 +1,4 @@
-# Queue: dev@agenticcells.dinis
+# Queue: dev@AgentiCCells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
 - [x] V8 · (2026-11-15, dev@: hub.json and shape check in validate.js; commit in debrief) ACC-024: a hub.json at the repository root describing this site for the hub (name, what it does, owner AgentiCCells, team, live address https://agenticcells.ai, repository, licence code Apache-2.0 and text CC BY 4.0, version from CI); validate its shape in build/validate.js. No vault fields until the vault exists.
