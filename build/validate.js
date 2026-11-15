@@ -65,6 +65,40 @@ for (const f of walk(join(root, 'site'), ['.html'])) {
     if (!existsSync(target)) fail(`${rel(f)}: broken link ${u}`);
   }
 }
+// No page loads a script or stylesheet from another host: everything is served from this site.
+const ownHosts = new Set(['agenticcells.com', 'www.agenticcells.com']);
+const foreign = (u) => {
+  const m = u.trim().match(/^(?:[a-z][a-z0-9+.-]*:)?\/\/([^/?#:]+)/i);
+  if (m) return !ownHosts.has(m[1].toLowerCase());
+  return /^[a-z][a-z0-9+.-]*:/i.test(u.trim()); // data:, javascript: and the like
+};
+for (const f of walk(join(root, 'site'), ['.html'])) {
+  const t = readFileSync(f, 'utf8');
+  for (const m of t.matchAll(/<script\b[^>]*>/gi)) {
+    const src = m[0].match(/\ssrc\s*=\s*["']?([^"'\s>]+)/i);
+    if (src && foreign(src[1])) fail(`${rel(f)}: script from another host: ${src[1]}`);
+  }
+  for (const m of t.matchAll(/<link\b[^>]*>/gi)) {
+    const relAttr = (m[0].match(/\srel\s*=\s*["']?([^"'>]+)/i) || [])[1] || '';
+    if (!/\b(stylesheet|preload|modulepreload)\b/i.test(relAttr)) continue;
+    const href = m[0].match(/\shref\s*=\s*["']?([^"'\s>]+)/i);
+    if (href && foreign(href[1])) fail(`${rel(f)}: ${relAttr.trim()} from another host: ${href[1]}`);
+  }
+  for (const m of t.matchAll(/@import\s+(?:url\()?\s*["']?([^"')\s;]+)/gi)) if (foreign(m[1])) fail(`${rel(f)}: @import from another host: ${m[1]}`);
+}
+for (const f of walk(join(root, 'site'), ['.css'])) {
+  const t = readFileSync(f, 'utf8');
+  for (const m of t.matchAll(/@import\s+(?:url\()?\s*["']?([^"')\s;]+)/gi)) if (foreign(m[1])) fail(`${rel(f)}: @import from another host: ${m[1]}`);
+}
+
+// Wording: no hype words in content/ or in the built pages (page hooks included).
+const hype = /\b(revolutionary|cutting[- ]edge|seamless(?:ly)?|world[- ]class|game[- ]changing)\b/gi;
+for (const f of [...walk(join(root, 'content'), ['.md']), ...walk(join(root, 'site'), ['.html'])]) {
+  readFileSync(f, 'utf8').split('\n').forEach((line, i) => {
+    for (const m of line.matchAll(hype)) fail(`${rel(f)}:${i + 1}: hype word "${m[1]}"`);
+  });
+}
+
 // Cells data: every price marked.
 try {
   const { cells } = JSON.parse(readFileSync(join(root, 'data/cells.json'), 'utf8'));

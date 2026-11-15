@@ -31,10 +31,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Every pushed commit carries an Agent trailer (ACC-015)
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: node build/check-commits.mjs "$BEFORE" "$AFTER"
       - run: node build/build.mjs
         env:
           SITE_VERSION: ${{ steps.version.outputs.version }}
       - run: node build/validate.js
+      - name: Leak scan (tracked files and the built site)
+        run: node build/leak-scan.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

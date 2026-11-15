@@ -1,0 +1,99 @@
+{
+  "note": "The open components AgentiCCells assembles, each with its licence and official link, checked by researcher@agenticcells.dinis on 2026-11-15 by reading the public page or file named in each 'source' with curl. writer@ copies this into data/stack.json. 'status' is one of: confirmed (the licence file or registry entry says so), not open (the licence is not an open-source licence), not stated (no licence found on the official page), not built (the thing does not exist yet, per REALITY.md). Version numbers are as read on the date checked and will change. Copied into data/stack.json by writer@agenticcells.dinis on 2026-11-15; one change: 'The console (our own)' moved from 'not built' to 'built' after commit 67184fb put it at /console/ (status changed by writer@, not re-checked by researcher@).",
+  "checked": "2026-11-15",
+  "checked_by": "researcher@agenticcells.dinis",
+  "list_source": "The list of components: https://newsroom.sgit.ai/articles/selling-mini-agentic-teams.html ('our workflow, Ruflo, sgit vaults, files in git instead of databases, and Claude, Codex or Cloudflare to run them') and board/STRUCTURE.md.",
+  "components": [
+    {
+      "name": "The workflow",
+      "what": "Briefs, a board made of files, conductors, hand-overs and releases, as the SGit newsroom runs it. A method written up in articles, not a package.",
+      "licence": "CC BY 4.0 (text); Apache-2.0 (code)",
+      "link": "https://newsroom.sgit.ai/articles/selling-mini-agentic-teams.html",
+      "status": "confirmed",
+      "source": "https://newsroom.sgit.ai/llms.txt: 'Content CC BY 4.0 unless a page states otherwise; code Apache 2.0.' The article states no other licence.",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Ruflo",
+      "what": "rUv's open-source agent orchestration for Claude Code and Codex. Published on npm as 'ruflo'; the package was earlier named claude-flow.",
+      "licence": "MIT",
+      "link": "https://github.com/ruvnet/ruflo",
+      "version_seen": "3.77.1 (npm 'ruflo' latest, 2026-11-15)",
+      "status": "confirmed",
+      "source": "https://raw.githubusercontent.com/ruvnet/ruflo/main/LICENSE ('MIT License, Copyright (c) 2024-2026 ruvnet'); https://registry.npmjs.org/ruflo/latest (license: MIT).",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "sgit (encrypted vaults)",
+      "what": "Git for encrypted vaults: clone, commit, branch and merge files that the server stores only as ciphertext. Python package sgit-ai. In beta, by its own account.",
+      "licence": "Apache-2.0",
+      "link": "https://sgit.ai/",
+      "code_link": "https://github.com/SGit-AI/SGit-AI__CLI",
+      "version_seen": "0.27.0 (PyPI sgit-ai, 2026-11-15)",
+      "status": "confirmed",
+      "source": "https://raw.githubusercontent.com/SGit-AI/SGit-AI__CLI/main/LICENSE (Apache License 2.0); https://pypi.org/pypi/sgit-ai/json (license: Apache-2.0); 'beta': https://sgit.ai/llms.txt.",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Files in git instead of databases",
+      "what": "The team's state lives as markdown and JSON in git repositories and sgit vaults. A practice, not a package.",
+      "licence": "CC BY 4.0 (the article)",
+      "link": "https://newsroom.sgit.ai/articles/the-new-data-lake.html",
+      "status": "confirmed",
+      "source": "https://newsroom.sgit.ai/llms.txt (site licence line, as above).",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "The console (simulated)",
+      "what": "A simulated control room for a team of agents, in a public vault. Its runs, messages, commit counts, boards, models and key fingerprints are made up.",
+      "licence": "Not stated on the vault. The article that links it falls under the newsroom's default (content CC BY 4.0, code Apache-2.0).",
+      "link": "https://newsroom.sgit.ai/articles/an-agentic-console.html",
+      "status": "not stated",
+      "source": "https://newsroom.sgit.ai/articles/an-agentic-console.md ('The console is a simulation: ... the runs, messages, commit counts, boards, models and key fingerprints are made up'); https://newsroom.sgit.ai/llms.txt (default licence). The vault itself was not opened: it renders in the browser.",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "The console (our own)",
+      "what": "The team's own read-only console reading this repository's board, keys and commits (ACC-007).",
+      "licence": "Apache-2.0 (code), CC BY 4.0 (text), per CLAUDE.md, once built",
+      "link": "https://agenticcells.com/console/",
+      "status": "built",
+      "source": "REALITY.md, 2026-11-15: 'The console' is under 'Does not exist yet'. Updated by writer@: built in commit 67184fb (ACC-007), served at /console/.",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Runtime: Claude Code",
+      "what": "Anthropic's command-line agent, one of the runtimes a customer may choose. The models it calls are a paid service.",
+      "licence": "Not open source: 'All rights reserved. Use is subject to Anthropic's Commercial Terms of Service.'",
+      "link": "https://github.com/anthropics/claude-code",
+      "version_seen": "2.1.325 (npm @anthropic-ai/claude-code latest, 2026-11-15)",
+      "status": "not open",
+      "source": "https://raw.githubusercontent.com/anthropics/claude-code/main/LICENSE.md; https://registry.npmjs.org/@anthropic-ai/claude-code/latest (license: 'SEE LICENSE IN README.md').",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Runtime: Codex CLI",
+      "what": "OpenAI's command-line coding agent, one of the runtimes a customer may choose. The models it calls are a paid service.",
+      "licence": "Apache-2.0",
+      "link": "https://github.com/openai/codex",
+      "version_seen": "0.169.0 (npm @openai/codex latest, 2026-11-15)",
+      "status": "confirmed",
+      "source": "https://raw.githubusercontent.com/openai/codex/main/LICENSE (Apache License 2.0); https://registry.npmjs.org/@openai/codex/latest (license: Apache-2.0).",
+      "checked": "2026-11-15"
+    },
+    {
+      "name": "Runtime: Cloudflare Workers (workerd)",
+      "what": "Cloudflare's JavaScript runtime. The workerd runtime is open source; running it on Cloudflare's network is a hosted service with its own terms.",
+      "licence": "Apache-2.0 (workerd)",
+      "link": "https://github.com/cloudflare/workerd",
+      "status": "confirmed",
+      "source": "https://raw.githubusercontent.com/cloudflare/workerd/main/LICENSE (Apache License 2.0).",
+      "checked": "2026-11-15"
+    }
+  ],
+  "cautions": [
+    "Claude Code is not open source. A page that says 'the open source stack' should list it as a runtime the customer chooses, not as one of our open components.",
+    "research/02-positioning-brief.md says Ruflo 'v3.77.0 released Nov 12, 2026', citing third-party sites. On 2026-11-15 npm showed 3.77.1. Do not quote a version on the site; link the repository.",
+    "The Ruflo README carries an animated download counter labelled 'illustrative'. Do not quote download or star counts from it."
+  ]
+}

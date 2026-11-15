@@ -1,12 +1,14 @@
 // Turns content/ and data/ into site/. Node only, no dependencies.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, copyFileSync, existsSync } from 'node:fs';
-import { join, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join, dirname, normalize } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(root, 'site');
 // Set by CI only (see .github/workflows/pages.yml); local builds say 'local'.
 const version = process.env.SITE_VERSION || 'local';
+// Dinis, 2026-11-15: "The contact address for the team is going to be, for now, agent@riskmandate.ai".
+const contact = 'agent@riskmandate.ai';
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -56,7 +58,17 @@ function ladder() {
   return `<div class="table-wrap"><table>\n<thead><tr><th>Cell</th><th>Price</th><th>What is set up</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>\n<p>Every size includes the control centre. All prices are a first proposal and not yet offers.</p>`;
 }
 
-function page(meta, content) {
+// The site nav: every page with a `nav:` number in its front matter (or returned
+// by a page hook), in that number's order. Pages without one stay out of the nav.
+function navHtml(nav, current) {
+  if (!nav.length) return '';
+  const items = nav.map((n) => n.url === current
+    ? `<li><a href="${esc(n.url)}" aria-current="page">${esc(n.title)}</a></li>`
+    : `<li><a href="${esc(n.url)}">${esc(n.title)}</a></li>`).join('');
+  return `<nav aria-label="Site"><ul>${items}</ul></nav>`;
+}
+
+function page(meta, content, nav = [], current = '') {
   return `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -67,25 +79,84 @@ function page(meta, content) {
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-<header><a href="/">AgentiCCells</a></header>
+<header><a href="/">AgentiCCells</a>${navHtml(nav, current)}</header>
 <main>
 ${content}
 </main>
-<footer>Code under Apache-2.0. Text and images under CC BY 4.0. Version ${esc(version)}.</footer>
+<footer>Contact: <a href="mailto:${contact}">${contact}</a>. Code under Apache-2.0. Text and images under CC BY 4.0. Version ${esc(version)}.</footer>
 </body>
 </html>
 `;
 }
 
+// A site path such as "/", "/console/" or "/console/2026-11-15/" (or "/x.html")
+// becomes a file under site/. A path that would leave site/ is refused.
+function fileFor(path) {
+  if (typeof path !== 'string' || !path.startsWith('/')) throw new Error(`page path must start with "/": ${path}`);
+  let f = path.slice(1);
+  if (f === '' || f.endsWith('/')) f += 'index.html';
+  else if (!f.endsWith('.html')) f += '/index.html';
+  if (f.split(/[\\/]/).some((part) => part === '..' || part === '.')) throw new Error(`page path leaves site/: ${path}`);
+  return normalize(f);
+}
+const urlFor = (file) => '/' + file.replace(/(^|\/)index\.html$/, '$1');
+
+// site/ is cleared first, so page hooks may also write their own files under ctx.out.
 rmSync(out, { recursive: true, force: true });
 mkdirSync(join(out, 'assets'), { recursive: true });
-for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md'))) {
+
+// Pages from content/*.md.
+const pages = [];
+for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md')).sort()) {
   const { meta, body } = frontMatter(readFileSync(join(root, 'content', f), 'utf8'));
-  const name = f === 'index.md' ? 'index.html' : join(f.replace(/\.md$/, ''), 'index.html');
-  mkdirSync(dirname(join(out, name)), { recursive: true });
-  writeFileSync(join(out, name), page(meta, markdown(body)));
+  const path = f === 'index.md' ? '/' : `/${f.replace(/\.md$/, '')}/`;
+  pages.push({ path, title: meta.title, description: meta.description, nav: meta.nav, html: markdown(body), source: `content/${f}` });
+}
+
+// Page hooks: build/pages/*.mjs, each `export default async function (ctx)` returning
+// [{ path, title, description, html, nav? }]. `path` is a site path such as "/console/";
+// `html` is the inside of <main>. Each page gets the same template, nav and footer.
+// ctx.out is site/, already cleared; a hook may also return extra files through ctx.files.
+const hookDir = join(root, 'build', 'pages');
+const ctx = { root, out, version, contact, esc, inline, markdown, frontMatter, pages: pages.map(({ path, title }) => ({ path, title })), files: [] };
+if (existsSync(hookDir)) {
+  for (const f of readdirSync(hookDir).filter((f) => f.endsWith('.mjs')).sort()) {
+    const mod = await import(pathToFileURL(join(hookDir, f)).href);
+    if (typeof mod.default !== 'function') throw new Error(`build/pages/${f}: no default export function`);
+    const got = await mod.default(ctx);
+    if (!Array.isArray(got)) throw new Error(`build/pages/${f}: must return an array of pages`);
+    for (const p of got) {
+      for (const k of ['path', 'title', 'description', 'html']) {
+        if (typeof p?.[k] !== 'string') throw new Error(`build/pages/${f}: page ${p?.path ?? '?'} has no ${k}`);
+      }
+      pages.push({ ...p, source: `build/pages/${f}` });
+    }
+  }
+}
+
+const seen = new Map();
+for (const p of pages) {
+  p.file = fileFor(p.path);
+  if (seen.has(p.file)) throw new Error(`${p.source} and ${seen.get(p.file)} both write ${p.path}`);
+  seen.set(p.file, p.source);
+}
+const nav = pages
+  .filter((p) => p.nav !== undefined && p.nav !== '' && Number.isFinite(Number(p.nav)))
+  .sort((a, b) => Number(a.nav) - Number(b.nav) || String(a.title).localeCompare(String(b.title)))
+  .map((p) => ({ url: urlFor(p.file), title: p.title }));
+
+for (const p of pages) {
+  mkdirSync(dirname(join(out, p.file)), { recursive: true });
+  writeFileSync(join(out, p.file), page(p, p.html, nav, urlFor(p.file)));
 }
 for (const f of readdirSync(join(root, 'assets'))) copyFileSync(join(root, 'assets', f), join(out, 'assets', f));
 if (existsSync(join(root, 'CNAME'))) copyFileSync(join(root, 'CNAME'), join(out, 'CNAME'));
+// Extra files from page hooks (ctx.files: [{ path, content }], path under site/), written after site/ is cleared.
+for (const { path, content } of ctx.files) {
+  const file = normalize(String(path).replace(/^\/+/, ''));
+  if (file.split(/[\\/]/).some((part) => part === '..' || part === '.')) throw new Error(`hook file leaves site/: ${path}`);
+  mkdirSync(dirname(join(out, file)), { recursive: true });
+  writeFileSync(join(out, file), content);
+}
 writeFileSync(join(out, 'version.json'), JSON.stringify({ version }) + '\n');
-console.log(`built site/ (${version})`);
+console.log(`built site/ (${version}, ${pages.length} pages)`);
