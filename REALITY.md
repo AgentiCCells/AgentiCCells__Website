@@ -14,13 +14,21 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 conductor: key pair for conductor@agenticcells.dinis, made in its session with sgit-ai v0.27.0 (`team/keygen.sh`); public half in team/keys/conductor.json and team/keys.json. Private half and passphrase only in the session (~/.agents/conductor/).
 - 2026-11-15 conductor: this session's environment holds AWS access keys, GitHub tokens (GH_TOKEN, GITHUB_TOKEN) and a Google Cloud token (names checked, values not read). Every agent in this container can reach them. No agent is to use the AWS or Google Cloud credentials (ACC-016).
-- 2026-11-15 conductor: activity logs (team/activity/, team/log.sh) and the workflow map (map/).
+- 2026-11-15 conductor: activity logs (team/activity/, team/log.sh), the workflow map (map/), work queues (board/queue/) and the schedule (team/SCHEDULE.md).
+
+- 2026-11-15 ~17:30 conductor (checked on dev at 0890c36 and later, and on the live site): https://agenticcells.com serves v0.1.7 with seven content pages (home, method, cells, open source, the console, about, how this site was built), a nav, a footer contact link to agent@riskmandate.ai, and the read-only console at /console/ with a daily replay and /console/console.json.
+- CI on every push to dev runs, in order: the Agent: trailer check (build/check-commits.mjs), build, validate (links, titles, em dashes, key shapes, prices marked, CNAME, no third-party scripts, no hype words), the leak scan (build/leak-scan.mjs), deploy, tag. Full git history scan by security@: clean.
+- dns/records.json and dns/check.mjs (dns@). Observed: agenticcells.com and agenticcells.ai on Route 53; agenticcells.app not delegated (NXDOMAIN). agenticcells.ai points at GitHub Pages with no site and no verification (ACC-018).
+- research/stack-checked.json, research/checked-claims.md (researcher@); data/stack.json (writer@). From agent sessions github.com and api.github.com answer 403; raw.githubusercontent.com, npm and PyPI answer.
+- board/abp/ (nine policies, derived by board/abp/derive.mjs), data/abp.json (abp@). Measured: every agent here shares one reach, 20 of 23 capabilities; every "may not" is prose only.
+- board/drafts/outreach/ (three drafts, none sent).
+- team/keys.json: nine public keys (conductor, dev, dns, writer, researcher, console, abp, security, outreach), each made in-session.
+- Mail, Drive, Calendar, meetings and GitHub tools are available to agent sessions; no agent has used them.
 
 ## Does not exist yet
-- `content/` pages other than index, `data/stack.json`, `data/links.json`.
-- Route 53 hosted zones, nameserver switch, `dns/records.json`, GitHub domain verification (unchecked: no AWS or org access seen).
-- Any agent other than the conductor. The dev role has finished its first piece (ACC-003, In review).
-- The console, `board/HOLD.md` (absent, so work may proceed).
+- `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
+- GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
+- `board/HOLD.md` (absent, so work may proceed).
 
 ## Decided by Dinis (with his words and the date)
 - 2026-11-15: "you are going to be the agent called conductor@AgentiCCell.dinis". Settled the same day by Dinis: "all should be agenticcells" and "agenticcell was a mistake on my part". Every agent name, repository and domain uses `agenticcells`; this agent is `conductor@agenticcells.dinis`.

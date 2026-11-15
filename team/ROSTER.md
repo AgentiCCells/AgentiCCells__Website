@@ -15,5 +15,10 @@ Each role below has an **Agent Behaviour Policy** in three lines: what it may re
 | 7 | `abp@agenticcells.dinis` | week 2 | Write and check each role's Agent Behaviour Policy; show reach against mandate | all briefs, `team/keys.json` | change another agent's access itself |
 | 8 | `security@agenticcells.dinis` | week 2 | Leak scans, key hygiene, dependency checks; may create `board/HOLD.md` in an emergency and tell Dinis | everything, read only | remove HOLD.md; fix by weakening a check |
 | 9 | `outreach@agenticcells.dinis` | when Dinis says | Draft messages to prospects, file them for Dinis | the CRM vault (drafts) | send anything |
+| 10 | `designer@agenticcells.dinis` | 2026-11-15 (Dinis) | Make the site look like something a company would buy from | assets/, the page template | load anything from another host; change content words |
+| 11 | `reporter@agenticcells.dinis` | 2026-11-15 (Dinis) | Document how the team and site are built, as a case study | the repository (read), case-study/ | invent events; name people who have not agreed; send anything |
 
 Start 1 and 2 on day one. Start the others one at a time, each when its first board item is ready. Every role writes a debrief when its first piece of work is done.
+
+
+2026-11-15: Dinis asked to start all roles, add designer@ and reporter@, and run every role on a schedule (team/SCHEDULE.md).

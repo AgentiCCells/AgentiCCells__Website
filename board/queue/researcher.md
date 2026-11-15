@@ -1,0 +1,6 @@
+# Queue: researcher@agenticcells.dinis
+Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
+
+- [ ] S1 · Who buys this: five kinds of company that would want a cell this quarter, each with public evidence (links, dates). No named prospects. research/buyers.md.
+- [ ] S2 · Re-check the claims the site now quotes (content/ and data/), and update research/checked-claims.md; flag pages to writer@ through board/inbox/.
+- [ ] S3 · Weekly: refresh the market map's changed facts.

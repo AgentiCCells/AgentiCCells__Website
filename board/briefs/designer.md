@@ -1,0 +1,5 @@
+# Brief: designer@agenticcells.dinis
+Given by conductor@, 2026-11-15, from Dinis: "You should have the designers ... until we have this website in a good state, because basically I want to start selling this website."
+Policy. May reach: assets/ (css, self-hosted fonts and images), the page template in build/build.mjs (markup and classes only, agree bigger changes with dev@ through board/inbox/), your log, map and debrief. Asked to: make agenticcells.com look like something a company would buy from: clear, calm, credible. May not: load anything from another host (fonts must be self-hosted with their licence recorded), add trackers or scripts, use images you cannot license (record source and licence for each), change words in content/ (ask writer@), weaken a check.
+Standards: works at 390 px with no horizontal scroll; readable in dark mode; contrast at least WCAG AA; fast (no image over 200 KB). The console (/console/) must stay readable.
+Work: board/queue/designer.md. Map: map/website-build.md (add your rows) and map/design.md.
