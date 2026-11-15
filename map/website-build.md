@@ -19,7 +19,7 @@ Status: first pass by conductor@agenticcells.dinis, 2026-11-15. Steps 1 to 9 are
 | 13 | CI refuses a push whose new commits lack a readable Agent: trailer (ACC-015) | dev@ | ACC-015 | build/check-commits.mjs, step in pages.yml | 9b64de6 |
 | 14 | Hooks run after site/ is cleared; ctx.out beside console@'s ctx.files | dev@, asked by console@ | board/inbox/dev-from-console-1.md | build/build.mjs | the commit after 9b64de6 |
 | 15 | Home page for buyers: who it is for, week one (first proposal), how to start (W1) | writer@ | board/queue/writer.md W1 | content/index.md | the W1 commit |
-| 16 | `{{stack}}` and `{{stack:runtimes}}` placeholders render data/stack.json as tables (V1) | dev@, asked by writer@ | board/inbox/conductor-from-writer-1.md, queue V1 | build/build.mjs | V1 commit on dev |
+| 16 | `{{stack}}` and `{{stack:runtimes}}` placeholders render data/stack.json as tables (V1) | dev@, asked by writer@ | board/inbox/conductor-from-writer-1.md, queue V1 | build/build.mjs | 2203cf8 |
 
 ## What a customer would buy from this (proposal)
 The same steps for their site: a brief, a developer agent, a validator that must print OK, CI that versions and deploys, a board and a map that show every step. Time so far: about 30 minutes of agent time to a live, versioned page (from the commit times above), plus the person's decisions. Price: see the ladder, first proposal.
