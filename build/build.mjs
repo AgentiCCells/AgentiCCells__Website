@@ -33,20 +33,24 @@ function inline(s) {
 function markdown(body) {
   const lines = body.split('\n');
   const html = [];
-  let para = [], list = [];
+  let para = [], list = [], olist = [];
   const flush = () => {
     if (para.length) html.push(`<p>${inline(para.join(' '))}</p>`);
-    if (list.length) html.push(`<ul>${list.map((l) => `<li>${inline(l)}</li>`).join('')}</ul>`);
-    para = []; list = [];
+    if (olist.length) html.push(`<ol class="steps">${olist.map((l) => `<li>${inline(l)}</li>`).join('')}</ol>`);
+    // A list whose every item starts with a **bold lead** is a set of points: shown as cards (D2).
+    if (list.length) html.push(`<ul${list.every((l) => /^\*\*[^*]+\*\*/.test(l)) ? ' class="points"' : ''}>${list.map((l) => `<li>${inline(l)}</li>`).join('')}</ul>`);
+    para = []; list = []; olist = [];
   };
   for (const line of lines) {
     let m;
     if (line.trim() === '{{ladder}}') { flush(); html.push(ladder()); }
     else if ((m = line.trim().match(/^\{\{stack(?::(components|runtimes))?\}\}$/))) { flush(); html.push(stack(m[1] || 'components')); }
     else if ((m = line.match(/^(#{1,4})\s+(.*)$/))) { flush(); html.push(`<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`); }
-    else if ((m = line.match(/^[-*]\s+(.*)$/))) { if (para.length) flush(); list.push(m[1]); }
+    else if ((m = line.match(/^[-*]\s+(.*)$/))) { if (para.length || olist.length) flush(); list.push(m[1]); }
+    // Numbered steps ("1. ...") become an ordered list (D2).
+    else if ((m = line.match(/^\d+\.\s+(.*)$/))) { if (para.length || list.length) flush(); olist.push(m[1]); }
     else if (line.trim() === '') flush();
-    else { if (list.length) flush(); para.push(line.trim()); }
+    else { if (list.length || olist.length) flush(); para.push(line.trim()); }
   }
   flush();
   return html.join('\n');
@@ -55,8 +59,8 @@ function markdown(body) {
 function ladder() {
   const { cells } = JSON.parse(readFileSync(join(root, 'data/cells.json'), 'utf8'));
   const rows = cells.map((c) =>
-    `<tr><td>${esc(c.name)}</td><td>${esc(c.price)} (${esc(c.price_status)})</td><td>${esc(c.includes)}</td></tr>`).join('\n');
-  return `<div class="table-wrap"><table>\n<thead><tr><th>Cell</th><th>Price</th><th>What is set up</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>\n<p>Every size includes the control centre. All prices are a first proposal and not yet offers.</p>`;
+    `<tr><td data-label="Cell">${esc(c.name)}</td><td data-label="Price">${esc(c.price)} (${esc(c.price_status)})</td><td data-label="What is set up">${esc(c.includes)}</td></tr>`).join('\n');
+  return `<div class="table-wrap ladder"><table>\n<thead><tr><th>Cell</th><th>Price</th><th>What is set up</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>\n<p>Every size includes the control centre. All prices are a first proposal and not yet offers.</p>`;
 }
 
 // {{stack}} (or {{stack:components}}) and {{stack:runtimes}}: the table from data/stack.json,
@@ -158,6 +162,14 @@ const nav = pages
   .filter((p) => p.nav !== undefined && p.nav !== '' && Number.isFinite(Number(p.nav)))
   .sort((a, b) => Number(a.nav) - Number(b.nav) || String(a.title).localeCompare(String(b.title)))
   .map((p) => ({ url: urlFor(p.file), title: p.title }));
+
+// Home page first screen (D2): the h1 and the opening paragraph become a hero with one call to action.
+function hero(html) {
+  const i = html.indexOf('<h2');
+  if (i < 0) return html;
+  return `<section class="hero">\n${html.slice(0, i)}\n<p class="cta"><a class="button" href="mailto:${contact}">Email ${contact}</a></p>\n</section>\n${html.slice(i)}`;
+}
+for (const p of pages) if (p.path === '/') p.html = hero(p.html);
 
 for (const p of pages) {
   mkdirSync(dirname(join(out, p.file)), { recursive: true });

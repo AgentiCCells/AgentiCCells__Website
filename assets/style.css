@@ -53,3 +53,37 @@ nav a[aria-current="page"]{color:var(--fg);text-decoration:underline;text-decora
 
 footer{color:var(--muted);font-size:.875rem;border-top:1px solid var(--line);padding-top:1.25rem;padding-bottom:2rem}
 small{color:var(--muted)}
+
+/* D2 · Home page layout (designer@, 2026-11-15). */
+/* First screen: what we do, and one call to action. */
+.hero{padding:1.5rem 0 2rem;border-bottom:1px solid var(--line);margin-bottom:.5rem}
+.hero h1{margin-bottom:1rem}
+.hero p{font-size:var(--step-1);line-height:1.5;color:var(--fg)}
+.hero p a{font-size:.8em}
+.cta{margin:1.5rem 0 0}
+.button{display:inline-block;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--step-0);
+  padding:.7rem 1.15rem;border-radius:var(--radius);text-decoration:none;overflow-wrap:anywhere;max-width:100%}
+.button:hover{text-decoration:underline;text-decoration-thickness:1px}
+.hero .cta a.button{font-size:var(--step-0)}
+
+/* Lists of bold-led points (week one, the four properties): cards in a grid. */
+ul.points{list-style:none;padding:0;display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr))}
+ul.points li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.9rem 1rem;margin:0}
+ul.points li strong:first-child{display:block;color:var(--fg);margin-bottom:.2rem}
+
+/* The ladder: a table on wide screens, one card per cell on small ones. */
+@media (max-width:40rem){
+  .ladder table,.ladder tbody,.ladder tr,.ladder td{display:block;width:100%}
+  .ladder thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .ladder tr{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.5rem .9rem;margin-bottom:.75rem}
+  .ladder td{border:0;padding:.3rem 0}
+  .ladder td::before{content:attr(data-label);display:block;font-size:.8125rem;font-weight:600;color:var(--muted)}
+  .ladder td:first-child{font-weight:700;font-size:var(--step-1)}
+  .ladder td:first-child::before{display:none}
+}
+
+/* Numbered steps (how to start): a numbered badge per step. */
+ol.steps{list-style:none;padding:0;counter-reset:step}
+ol.steps li{counter-increment:step;position:relative;padding-left:2.5rem;margin-bottom:.9rem;min-height:1.75rem}
+ol.steps li::before{content:counter(step);position:absolute;left:0;top:0;width:1.75rem;height:1.75rem;border-radius:50%;
+  background:var(--accent);color:var(--on-accent);font-weight:700;font-size:.9rem;display:grid;place-items:center}

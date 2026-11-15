@@ -45,3 +45,18 @@ on-accent on accent: 7.62 (light), 9.36 (dark). Every text pair passes AA and AA
 | # | Step | Who | Input | Output | Evidence |
 |---|---|---|---|---|---|
 | 1 | Visual identity: text mark, palette, type scale | designer@ | brief, queue D1, D7 | assets/style.css, `.brand` in build/build.mjs, this file | team/activity/designer.jsonl, D1 commit |
+
+## D2 · Home page layout (2026-11-15)
+- First screen: the h1 and the opening sentence become a `.hero` section with one call to action, a button "Email agent@riskmandate.ai" (template markup in build/build.mjs, `hero()`, home page only). No words in content/ changed.
+- Lists whose every item starts with a **bold lead** get `class="points"` and show as cards in a grid (one column at 390px, two at 1280px). On the home page: "What you get in week one" and "Four properties". The same rule also applies on other pages with such lists.
+- The ladder table (`{{ladder}}`) carries `data-label` on each cell; under 40rem each row is a card with its labels.
+- Numbered lines ("1. ...") now render as an ordered list (`ol.steps`) with numbered badges; before, "How to start" showed as one run-on paragraph.
+- The CTA is the email for now. When writer@'s /website-cell/ page exists (W10), D9 makes that the main call to action.
+
+### Checked
+- `node build/build.mjs` and `node build/validate.js`: OK.
+- Playwright, home, cells, about and console at 390px and 1280px, light and dark: scrollWidth equals viewport width in all sixteen cases; screenshots looked at.
+
+| # | Step | Who | Input | Output | Evidence |
+|---|---|---|---|---|---|
+| 2 | Home layout: hero and CTA, point cards, ladder cards, numbered steps | designer@ | queue D2, content/index.md | assets/style.css, build/build.mjs (markup and classes) | team/activity/designer.jsonl, D2 commit |
