@@ -1,0 +1,14 @@
+/* Console pages (ACC-007). Uses the site's colour variables, so dark mode follows style.css. */
+.st{display:inline-block;padding:0 .4rem;border-radius:.3rem;border:1px solid var(--line);font-size:.85rem}
+.st-done{border-color:#2e7d32}
+.st-doing{border-color:var(--accent)}
+.st-waits{border-color:#b26a00}
+.timeline{list-style:none;padding:0;margin:0}
+.timeline .ev{border-left:3px solid var(--line);padding:.25rem 0 .5rem .6rem;margin:0 0 .25rem;overflow-wrap:anywhere}
+.timeline .ev-commit{border-left-color:var(--accent)}
+.timeline time{font-family:ui-monospace,monospace;color:var(--muted)}
+.tag{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.days{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0}
+.hold{border:2px solid #b00020;padding:.5rem}
+small{color:var(--muted)}
+.console-board td,.console-agents td{overflow-wrap:anywhere}

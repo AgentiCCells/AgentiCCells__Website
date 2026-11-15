@@ -148,5 +148,15 @@ for (const p of pages) {
 }
 for (const f of readdirSync(join(root, 'assets'))) copyFileSync(join(root, 'assets', f), join(out, 'assets', f));
 if (existsSync(join(root, 'CNAME'))) copyFileSync(join(root, 'CNAME'), join(out, 'CNAME'));
+// Page hook: each build/pages/*.mjs exports default async function(ctx) returning [{path, title, description, html}].
+const pagesDir = join(root, 'build/pages');
+for (const f of existsSync(pagesDir) ? readdirSync(pagesDir).filter((f) => f.endsWith('.mjs')).sort() : []) {
+  const { default: make } = await import(new URL(`pages/${f}`, import.meta.url));
+  for (const p of await make({ root, out, version, esc })) {
+    const file = join(out, p.path.replace(/^\/+|\/+$/g, ''), 'index.html');
+    mkdirSync(dirname(file), { recursive: true });
+    writeFileSync(file, page({ title: p.title, description: p.description }, p.html));
+  }
+}
 writeFileSync(join(out, 'version.json'), JSON.stringify({ version }) + '\n');
 console.log(`built site/ (${version}, ${pages.length} pages)`);
