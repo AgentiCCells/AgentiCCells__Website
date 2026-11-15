@@ -12,3 +12,4 @@
 .hold{border:2px solid #b00020;padding:.5rem}
 small{color:var(--muted)}
 .console-board td,.console-agents td{overflow-wrap:anywhere}
+.console-schedule td{overflow-wrap:anywhere}

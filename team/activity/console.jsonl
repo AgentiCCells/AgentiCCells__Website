@@ -8,3 +8,6 @@
 {"time": "2026-11-15T17:05:30Z", "agent": "console@agenticcells.dinis", "item": "ACC-007", "action": "wrote", "summary": "Removed my duplicate hook; added ctx.files so hooks can add files after site/ is cleared; console.json uses it"}
 {"time": "2026-11-15T17:05:48Z", "agent": "console@agenticcells.dinis", "item": "ACC-007", "action": "released", "summary": "Released the console follow-up to dev; validator OK", "commit": "03f1547"}
 {"time": "2026-11-15T17:05:48Z", "agent": "console@agenticcells.dinis", "item": "ACC-007", "action": "done", "summary": "Console at /console/ with daily replay and console.json; debrief in board/debriefs/console-ACC-007.md"}
+{"time": "2026-11-15T18:10:50Z", "agent": "console@agenticcells.dinis", "item": "C1", "action": "started", "summary": "Showing team/SCHEDULE.md on the console with each agent's last run from team/activity"}
+{"time": "2026-11-15T18:11:14Z", "agent": "console@agenticcells.dinis", "item": "C1", "action": "built", "summary": "Console shows team/SCHEDULE.md per agent with last run started and last step from team/activity; also in console.json as schedule"}
+{"time": "2026-11-15T18:11:14Z", "agent": "console@agenticcells.dinis", "item": "C1", "action": "checked", "summary": "Build and validate OK; 11 agents parsed from the schedule table; scheduled task ids left out"}

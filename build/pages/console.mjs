@@ -113,6 +113,34 @@ function commits(root) {
   });
 }
 
+// team/SCHEDULE.md: the first table (Agent | When | How it runs). Scheduled task ids are not shown.
+function schedule(root) {
+  const f = join(root, 'team/SCHEDULE.md');
+  if (!existsSync(f)) return [];
+  const rows = [];
+  let inTable = false;
+  for (const line of readFileSync(f, 'utf8').split('\n')) {
+    if (/^\|\s*Agent\s*\|\s*When\s*\|/.test(line)) { inTable = true; continue; }
+    if (!inTable) continue;
+    if (!line.startsWith('|')) { if (rows.length) break; continue; }
+    if (/^\|[\s:-]+\|/.test(line)) continue;
+    const cells = line.split('|').slice(1, -1).map((c) => clean(c.replace(/`/g, '')));
+    if (cells.length >= 3 && /@/.test(cells[0])) rows.push({ agent: cells[0], when: cells[1], how: cells[2] });
+  }
+  return rows;
+}
+// Each scheduled agent with its last run (latest "started" step) and last step, from team/activity.
+function scheduleWithRuns(rows, acts) {
+  return rows.map((r) => {
+    const mine = acts.filter((a) => a.agent === r.agent).sort((a, b) => (a.time < b.time ? 1 : -1));
+    const run = mine.find((a) => a.action === 'started');
+    const last = mine[0];
+    return { ...r,
+      last_run: run ? { time: run.time, item: run.item, summary: run.summary } : null,
+      last_step: last ? { time: last.time, item: last.item, action: last.action, summary: last.summary } : null };
+  });
+}
+
 // --- rendering -------------------------------------------------------------
 
 const css = '<link rel="stylesheet" href="/assets/console.css">';
@@ -127,6 +155,13 @@ function agentsTable(agents) {
   if (!agents.length) return '<p>No agents seen.</p>';
   const rows = agents.map((a) => `<tr><td>${esc(a.agent)}</td><td>${a.fingerprint ? `<code>${esc(a.fingerprint)}</code>${a.in_keys_json ? '' : '<br><small>published, not yet in team/keys.json</small>'}` : '<small>no key published</small>'}</td><td>${a.steps}</td><td>${a.commits}</td><td>${a.last ? esc(a.last.replace('T', ' ').replace('Z', ' UTC')) : '-'}</td></tr>`).join('\n');
   return `<div class="table-wrap"><table class="console-agents">\n<thead><tr><th>Agent</th><th>Key (short fingerprint)</th><th>Steps</th><th>Commits</th><th>Last seen</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>`;
+}
+
+const utc = (t) => esc(String(t).replace('T', ' ').replace('Z', ' UTC'));
+function scheduleTable(rows) {
+  if (!rows.length) return '<p>No schedule found in team/SCHEDULE.md.</p>';
+  const body = rows.map((r) => `<tr><td>${esc(r.agent)}<br><small>${esc(r.how)}</small></td><td>${esc(r.when)}</td><td>${r.last_run ? `${utc(r.last_run.time)}<br><small>${esc(r.last_run.item)}: ${esc(r.last_run.summary)}</small>` : '<small>no run logged</small>'}</td><td>${r.last_step ? `${utc(r.last_step.time)}<br><small>${esc(r.last_step.action)}, ${esc(r.last_step.item)}</small>` : '-'}</td></tr>`).join('\n');
+  return `<div class="table-wrap"><table class="console-schedule">\n<thead><tr><th>Agent</th><th>When it wakes (Europe/London)</th><th>Last run started</th><th>Last step</th></tr></thead>\n<tbody>\n${body}\n</tbody></table></div>`;
 }
 
 function timeline(events) {
@@ -159,6 +194,7 @@ export default async function consolePages(ctx = {}) {
   const events = [...acts, ...cms].sort((a, b) => (a.time < b.time ? 1 : a.time > b.time ? -1 : a.kind === 'commit' ? -1 : 1));
   const days = [...new Set(events.map((e) => day(e.time)))].sort().reverse();
   const agents = agentsFrom(keys, acts, cms);
+  const sched = scheduleWithRuns(schedule(root), acts);
 
   // Replay: the board and keys as committed at the end of each day, with that day's events.
   const replays = days.map((d) => {
@@ -173,7 +209,7 @@ export default async function consolePages(ctx = {}) {
   const data = {
     about: 'The AgentiCCells team console, read-only. Built from files in the repository at build time. Short fingerprints and short commit hashes only.',
     version, built_from_commit: head, hold: hold ? 'board/HOLD.md exists: the team is stopped' : 'absent',
-    board, agents, events, days,
+    board, agents, schedule: sched, events, days,
   };
   const json = JSON.stringify({ ...data, replays }, null, 1) + '\n';
   // build.mjs writes ctx.files after it clears site/; without it, write the file here.
@@ -193,6 +229,9 @@ ${boardTable(board)}
 <h2>Agents and their keys</h2>
 <p>Each agent makes its own key pair; only the public half is in the repository. Shown here by short fingerprint.</p>
 ${agentsTable(agents)}
+<h2>Schedule and last runs</h2>
+<p>When each agent wakes, from <code>team/SCHEDULE.md</code>, and its last run as logged in <code>team/activity/</code>. A run starts with a "started" step; the last step is the newest line in the agent's log.</p>
+${scheduleTable(sched)}
 <h2>Replay a day</h2>
 <p>Each day shows the board and keys as they were committed at the end of that day, and everything that happened in it.</p>
 ${nav}
