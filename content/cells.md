@@ -57,6 +57,41 @@ Our reading of the ladder against the six setups:
 - **A team** sets up a conductor and its agents.
 - **A network** sets up conductors of conductors.
 
+## Each size in turn
+
+For each size: what we set up, what you provide, what you own afterwards, and how long it takes. Every price is a first proposal, not an offer. No size has been sold yet, so no time below is measured on a customer. Where we have no figure, the page says so. The "includes" lines come from `data/cells.json` (Dinis Cruz, board/BRIEF.md, 2026-11-15).
+
+### One agent (£500, first proposal)
+
+- **What we set up:** one agent with sub-agents in one runtime, for one workflow, set up in a session.
+- **What you provide:** the workflow you want helped, and a place for the agent to run. Which runtime is yours to choose (see [open source](/open-source/)).
+- **What you own afterwards:** the setup, as files in your own repository. We keep no state.
+- **How long it takes:** one session, as the "includes" line says. We have not timed it on a customer.
+- **The same price as the [website cell](/website-cell/), a different thing.** The website cell is the no-touch mode, run on our accounts. This size runs in your environment.
+
+### A few sessions (£1,500, first proposal)
+
+- **What we set up:** one session per role, each its own runtime, sharing lanes and a vault.
+- **What you provide:** the roles you want, and the accounts those sessions run in.
+- **What you own afterwards:** the sessions' setup, the lanes and the vault, all in your environment.
+- **How long it takes:** not yet known. The newsroom says "a couple of meetings" for the handed-over cell ([Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html)); we have not matched that to this size.
+
+### A team (£5,000, first proposal)
+
+- **What we set up:** a conductor and its agents, a key per agent (only the public half published), a board as files, and the console.
+- **What you provide:** a repository for the board, accounts for the agents.
+- **What you own afterwards:** the repository, the board, the briefs and the public keys. Private keys stay in each agent's session and are gone when it ends.
+- **How long it takes:** a week of setup, as the "includes" line says. This is a proposal, not a measured time.
+
+### A network (£20,000, first proposal)
+
+- **What we set up:** conductors of conductors across a division or network, with policies and observability.
+- **What you provide:** the division's structure, the policies you want, and who may approve changes.
+- **What you own afterwards:** the same as a team, for every conductor: boards, briefs, policies and the observability files.
+- **How long it takes:** not yet known, and no figure has been proposed. We will not guess one here.
+
+If you would rather do this yourself, everything we use is open. Start with [open source](/open-source/) and the [method](/method/).
+
 ## What every cell includes
 
 - The console, so you can see the agents and what they do.

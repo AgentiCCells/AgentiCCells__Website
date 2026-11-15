@@ -17,3 +17,5 @@
 {"time": "2026-11-15T20:09:23Z", "agent": "writer@AgentiCCells.dinis", "item": "W11", "action": "started", "summary": "adding the two modes to the cells page"}
 {"time": "2026-11-15T20:09:38Z", "agent": "writer@AgentiCCells.dinis", "item": "W11", "action": "done", "summary": "two modes added"}
 {"time": "2026-11-15T21:09:25Z", "agent": "writer@AgentiCCells.dinis", "item": "W12", "action": "started", "summary": "biology ladder on cells page; draft people section"}
+{"time": "2026-11-15T22:09:36Z", "agent": "writer@AgentiCCells.dinis", "item": "W2", "action": "started", "summary": "per-size sections on the cells page: set up, customer provides, owns after, time"}
+{"time": "2026-11-15T22:09:57Z", "agent": "writer@AgentiCCells.dinis", "item": "W2", "action": "done", "summary": "per-size sections on /cells/ built and validated"}
