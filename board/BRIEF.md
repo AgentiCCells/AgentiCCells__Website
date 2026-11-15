@@ -1,0 +1,79 @@
+# AgentiCCells: bootstrap brief for the first agentic team
+
+**From:** Dinis Cruz (the human, the only one who instructs), written up by the newsroom.sgit.ai writer agent, 15 November 2026.
+**For:** the first Claude session on the AgentiCCells Claude account. You are `conductor@agenticcells.dinis`. Read this whole folder before you do anything.
+**Read in this order:** `BRIEF.md` (this) → `CLAUDE.md` (the rules) → `REALITY.md` (what exists) → `team/ROSTER.md` → `board/` → `dns/` → `website/` → `research/`.
+
+---
+
+## 1. What AgentiCCells is
+
+AgentiCCells (agenticcells.ai) sets up small agentic teams, "cells", for companies, installed in the customer's own environment, with a control centre (the agentic console) so the customer can see their agents, see what they say to each other, and start and stop them.
+
+- **The software is free and open:** code under MIT or Apache-2.0, everything else under Creative Commons. That is the "CC" in the name.
+- **What we sell is the setup, the guidance and the trust.** Anyone could do it themselves; we make it cheaper, faster and safer.
+- **No state on our side.** We hold no customer data, sessions or infrastructure. Everything runs in the customer's accounts, git, vaults and devices.
+- **Every cell is atomic:** self-contained, valuable on its own, removable without breaking the rest.
+
+The full research and positioning are in `research/` (compiled with Perplexity on 15 November 2026; treat vendor facts as claims to re-check before quoting them publicly).
+
+### The ladder (first proposal, not yet published as offers)
+
+| Cell | Price | What is set up |
+|---|---:|---|
+| One agent | £500 | One agent with sub-agents in one runtime, for one workflow, set up in a session |
+| A few sessions | £1,500 | One session per role, each its own runtime, sharing lanes and a vault |
+| A team | £5,000 | A conductor and its agents, a key per agent, a board as files, a week of setup |
+| A network | £20,000 | Conductors of conductors across a division or network, with policies and observability |
+
+Every size includes the control centre. The £500 cell opens doors; the business is the team and network tiers, and the Agent Behaviour Policy layer.
+
+### Open decisions (Dinis decides; do not decide them, do not publish around them)
+
+1. **Pricing model:** fixed-price cells plus optional support packs ("finite packs, never rent"), or something metered. The positioning brief says "pay per consumption", which conflicts with "no state on our side". Until Dinis decides, write "fixed-price cells".
+2. **Referral commissions** across runtimes and model hosts: dropped, or published on every recommendation. Until decided: none, and none implied.
+3. **RiskMandate and AgentiCCells:** who sells Agent Behaviour Policies. Working assumption: RiskMandate owns ABPs; AgentiCCells installs them as a partner.
+4. **Where the console runs** in a customer setup (their account and vault, or their device) and how support access works (a key the customer seals to us and can revoke). Working assumption: both, by customer choice.
+
+## 2. The domains (bought 15 November 2026)
+
+| Domain | Purpose |
+|---|---|
+| **agenticcells.ai** | The company site (canonical). |
+| **agenticcells.com** | Redirects to agenticcells.ai. |
+| **agenticcells.app** | Customers' sites while they get their own domain: `company-x.agenticcells.app`. HTTPS-only by design (.app is HSTS-preloaded). Kept separate from the brand so a customer's content can never affect agenticcells.ai's cookies or reputation. |
+
+Brand: always plural. Logo: AgentiCCells. Running text: AgenticCells is acceptable. The singular agentcell.ai belongs to another company.
+
+DNS is moving to AWS Route 53; the GitHub repository for the website is being created by Dinis. Exact steps: `dns/ROUTE53.md`.
+
+## 3. Your first job: bootstrap the team, then the website
+
+Work in this order. Each step is a board item in `board/`. Stop and ask Dinis where a step says so.
+
+1. **Read and confirm.** Read everything here. Write `REALITY.md` in the new repository from the template, listing only what you have checked exists.
+2. **Your key.** Make your own key pair in your session (`sgit pki keygen`), publish only the public half in `team/keys.json` of the repository, keep the private half in your session's vault. Every agent you start does the same. Never commit a private key.
+3. **The repository.** Dinis creates `agenticcells-website` (name may differ; check). Lay it out as in `website/STRUCTURE.md`. Pages in markdown, data in JSON, a build that turns them into a static site, a validator that must print OK before any release, GitHub Pages to serve it.
+4. **DNS.** Prepare the records in `dns/ROUTE53.md` as a file (`dns/records.json`) for Dinis to apply, or apply them yourself only if Dinis gives you scoped AWS credentials for those hosted zones. Never ask for broader access.
+5. **The first site.** One page that says what AgentiCCells is, the four properties, the ladder (marked "first proposal"), the open source stack, and a contact route that is a form or a mailto to a team address Dinis provides. No customer names, no testimonials, no claims we cannot point at.
+6. **The customer-site pipeline.** Document and test, with a dummy repo, how `test.agenticcells.app` gets created: CNAME record, custom domain on the repo, certificate, and the offboarding step that deletes the record. See `dns/CUSTOMER-SITES.md`.
+7. **The team.** Start the roles in `team/ROSTER.md` only as their work arrives, one at a time, each with a brief. Do not start everything on day one.
+8. **The console.** Adapt the simulated console (public vault, linked in `research/LINKS.md`) into the team's own console, reading the team's real files: board, keys, commits, lanes. Read-only first; stop controls second.
+
+## 4. How this team works (the method, from newsroom.sgit.ai and Web Summit)
+
+- **Files, not databases.** The board is a folder of markdown files, one per item. The team's state is the repository. Everything can be replayed from history.
+- **One agent, one name, one key:** `role@agenticcells.person`. Every commit says which agent made it (`Agent:` trailer).
+- **Briefs close to the words.** When Dinis gives an instruction, keep his words in the brief, with the time.
+- **Three ways to talk:** files in the repository (briefs, inbox notes, hand-overs), commit messages, and append lanes in sgit vaults. Sign what you send.
+- **Hand over, do not hoard.** When a session gets long, write `HANDOVER.md` for the next session and stop. Starting again is cheaper than remembering.
+- **Releases are gated.** Validator OK, leak scan clean, then push. No release with a failing check.
+- **The stop file.** If `board/HOLD.md` exists, every agent stops at its next wake and does nothing but read. Only Dinis removes it.
+
+## 5. What success looks like at the end of week one
+
+- agenticcells.ai serves the one-page site over HTTPS; agenticcells.com redirects to it.
+- `test.agenticcells.app` has been created and deleted through the documented pipeline.
+- `REALITY.md`, `team/keys.json` and the board are current.
+- The console shows the team's real board and commits, read-only.
+- A short debrief in `board/debriefs/` says what worked, what did not, and what Dinis needs to decide.
