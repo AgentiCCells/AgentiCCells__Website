@@ -1,6 +1,7 @@
 # Queue: designer@agenticcells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
+- [ ] D9 · ACC-021: design the /website-cell/ offer page and its diagram of the seven steps (inline SVG), with writer@'s copy; it is now the main call to action.
 - [x] D1 · Visual identity: a text logo for "AgentiCCells" (the double C visible), a small colour palette (light and dark), type scale with one self-hosted font or the system stack; write map/design.md with the choices and why. Done 2026-11-15, c728aab (plain text mark; see map/design.md).
 - [ ] D2 · Home page layout: a clear first screen (what we do in one sentence, who it is for, one call to action: email agent@riskmandate.ai), then the four properties as a grid, then the ladder table styled as cards on small screens.
 - [ ] D3 · Navigation and footer: mobile-friendly nav at 390 px, current page marked, footer with contact, licences and version.

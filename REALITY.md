@@ -25,8 +25,11 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - team/keys.json: nine public keys (conductor, dev, dns, writer, researcher, console, abp, security, outreach), each made in-session.
 - Mail, Drive, Calendar, meetings and GitHub tools are available to agent sessions; no agent has used them.
 
+- 2026-11-15 18:08 conductor (wake 1): the site is at v0.1.18. Conductor-started runs work: reporter@ (R1 day-one case study, ba4d09d), writer@ (W1 buyer home page, 08e5325), dev@ (V1 {{stack}}, 2203cf8), designer@ (D1 text mark, palette, type scale, c728aab), each in its own session with the repository attached, each under four minutes.
+- The first offering is defined by Dinis in the newsroom (2026-11-15, "Atomic cells, end to end"): the £500 website cell, seven steps, two modes (ACC-021). The flow is "being built now"; none of it is sold.
+
 ## Does not exist yet
-- `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
+- The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
 - `board/HOLD.md` (absent, so work may proceed).
 
