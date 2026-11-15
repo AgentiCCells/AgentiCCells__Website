@@ -1,0 +1,1266 @@
+{
+  "about": "Agent behaviour policies for the AgentiCCells team: what each role can reach (grant, measured), what it was asked to do (mandate, from its brief), and the derived gap with the barrier on each capability. Derived by board/abp/derive.mjs from board/abp/inputs.json; never edit by hand. No score and no verdict.",
+  "licence": "CC BY 4.0",
+  "as_at": "2026-11-15",
+  "deployment": {
+    "shape": "Every agent is a Claude Code session started by conductor@ inside one shared cloud container on the AgentiCCells claude.ai account, each in its own git worktree /home/user/wt/<role>.",
+    "reach_names": {
+      "self": "the agent's own session and turn",
+      "project": "its worktree of AgentiCCells/AgentiCCells__Website",
+      "host": "the one shared container, where every agent runs as root",
+      "tenant": "the accounts the container's credentials and the session's connectors reach: GitHub (tokens), AWS (access keys), Google Cloud (token), the claude.ai account (sessions, scheduled tasks, artifacts) and its mail, drive and calendar connectors",
+      "world": "any host on the internet, and agenticcells.com, which every push to dev publishes"
+    },
+    "as_at": "2026-11-15",
+    "measured_by": "abp@agenticcells.dinis, from inside its own session; other roles share the same container, so their grant is the same object (derived, not measured in their sessions)"
+  },
+  "barrier_kinds": {
+    "none": "nothing in the way",
+    "expectation": "a rule in prose (CLAUDE.md, a brief), enforced by nobody",
+    "setting": "a switch the agent's own account could change",
+    "boundary": "enforced above the grant, out of the agent's reach"
+  },
+  "grant": [
+    {
+      "primitive": "read.file.project",
+      "reach": "project",
+      "undo": "yes",
+      "granted": true,
+      "tier": "measured",
+      "instance": "the agent's worktree",
+      "barrier": "none",
+      "evidence": "abp read its worktree, 2026-11-15"
+    },
+    {
+      "primitive": "write.file.project",
+      "reach": "project",
+      "undo": "with-effort",
+      "granted": true,
+      "tier": "measured",
+      "instance": "the agent's worktree, including board/HOLD.md and .github/workflows/",
+      "barrier": "none",
+      "evidence": "abp wrote board/abp/ in its worktree, 2026-11-15"
+    },
+    {
+      "primitive": "read.file.host",
+      "reach": "host",
+      "undo": "no",
+      "granted": true,
+      "tier": "measured",
+      "instance": "every file in the container, including other agents' worktrees and every ~/.agents/<role>/ folder holding private keys and passphrases",
+      "barrier": "setting",
+      "barrier_note": "All processes run as root, so the 700 mode on ~/.agents/<role>/ does not bound anything (~/.agents itself is 755). COMMON.md says not to read them (expectation). In abp's session the harness's permission classifier refused one command that listed other agents' folders; that classifier is configured by settings files the root account can write, so it is a setting at most, and it is probabilistic.",
+      "evidence": "id -un is root; stat of ~/.agents and ~/.agents/abp; ps shows 80 root processes; harness refusal at 2026-11-15"
+    },
+    {
+      "primitive": "write.file.host",
+      "reach": "host",
+      "undo": "with-effort",
+      "granted": true,
+      "tier": "measured",
+      "instance": "any file in the container, including other agents' worktrees, keys and the shared ~/.gitconfig",
+      "barrier": "expectation",
+      "barrier_note": "COMMON.md: never work in another agent's worktree.",
+      "evidence": "team/keygen.sh wrote ~/.agents/abp/ as root, outside the worktree"
+    },
+    {
+      "primitive": "delete.file.host",
+      "reach": "host",
+      "undo": "no",
+      "granted": true,
+      "tier": "derived",
+      "instance": "any file in the container",
+      "barrier": "expectation",
+      "evidence": "derived from running as root; not tested"
+    },
+    {
+      "primitive": "read.record.history",
+      "reach": "host",
+      "undo": "no",
+      "granted": true,
+      "tier": "measured",
+      "instance": "session transcripts and tool outputs under /root/.claude/projects/, for every agent in the container",
+      "barrier": "expectation",
+      "evidence": "the harness saved one of abp's tool outputs under /root/.claude/projects/ (seen in abp's session); contents of other sessions not opened"
+    },
+    {
+      "primitive": "execute.process.host",
+      "reach": "host",
+      "undo": "with-effort",
+      "granted": true,
+      "tier": "measured",
+      "instance": "any program as root: node, python3, git, gh, gcloud, gsutil, bq, sgit, systemctl, curl",
+      "barrier": "setting",
+      "barrier_note": "The harness permission mode and classifier, configured by settings the account can write.",
+      "evidence": "command -v for each tool, 2026-11-15; aws, crontab and ssh are not installed"
+    },
+    {
+      "primitive": "execute.process.self",
+      "reach": "self",
+      "undo": "yes",
+      "granted": false,
+      "tier": "measured",
+      "instance": "no per-agent sandbox exists; every program runs at host reach",
+      "barrier": "none",
+      "evidence": "same as execute.process.host"
+    },
+    {
+      "primitive": "send.endpoint.allowed",
+      "reach": "tenant",
+      "undo": "no",
+      "granted": false,
+      "tier": "measured",
+      "instance": "there is an outbound proxy, but it is not an allow list for agents: arbitrary hosts answered",
+      "barrier": "none",
+      "evidence": "curl https://example.com and https://pypi.org/simple/ answered 200, 2026-11-15"
+    },
+    {
+      "primitive": "send.endpoint.world",
+      "reach": "world",
+      "undo": "no",
+      "granted": true,
+      "tier": "measured",
+      "instance": "any HTTPS host through the container's proxy",
+      "barrier": "none",
+      "evidence": "curl https://example.com answered 200, 2026-11-15"
+    },
+    {
+      "primitive": "read.credential.host",
+      "reach": "host",
+      "undo": "no",
+      "granted": true,
+      "tier": "measured",
+      "instance": "environment variables AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, GH_TOKEN, GITHUB_TOKEN, CLOUDSDK_AUTH_ACCESS_TOKEN; every agent's sgit private key and passphrase in ~/.agents/; the git signing key set in /root/.gitconfig",
+      "barrier": "expectation",
+      "barrier_note": "ACC-016 and COMMON.md say not to use them. Names checked with compgen -e; values not read.",
+      "evidence": "compgen -e, 2026-11-15; REALITY.md (conductor, same day)"
+    },
+    {
+      "primitive": "authenticate-as.credential.tenant",
+      "reach": "tenant",
+      "undo": "no",
+      "granted": true,
+      "tier": "derived",
+      "instance": "AWS (access keys), Google Cloud (token; gcloud, gsutil, bq installed), GitHub (tokens and the GitHub connector, which offers create_repository, merge_pull_request, create_or_update_file), Google Drive, Calendar and mail connectors",
+      "barrier": "expectation",
+      "barrier_note": "ACC-016: no agent is to use the AWS or Google Cloud credentials. COMMON.md: GitHub tokens only for git push and fetch of this repository.",
+      "evidence": "credential names present; connector tools listed in abp's session (not called). What each credential's scope is was not tested."
+    },
+    {
+      "primitive": "grant.credential.self",
+      "reach": "self",
+      "undo": "yes",
+      "granted": true,
+      "tier": "derived",
+      "instance": "the harness settings files under /root/.claude/ and the worktree's .claude/, writable by root; the session offers a skill to edit them",
+      "barrier": "expectation",
+      "barrier_note": "CLAUDE.md: never widen your own access.",
+      "evidence": "derived from running as root and the update-config skill listed in abp's session; not tested"
+    },
+    {
+      "primitive": "send.message.world",
+      "reach": "world",
+      "undo": "no",
+      "granted": true,
+      "tier": "measured",
+      "instance": "the mail connector's send_message, reply and forward tools, listed in abp's session; any HTTP endpoint",
+      "barrier": "expectation",
+      "barrier_note": "CLAUDE.md: never send an email or contact a person or company.",
+      "evidence": "tool list of abp's session, 2026-11-15 (listed, not called)"
+    },
+    {
+      "primitive": "read.message.tenant",
+      "reach": "tenant",
+      "undo": "no",
+      "granted": true,
+      "tier": "measured",
+      "instance": "the mail connector's search and read tools, and the meetings connector, listed in abp's session",
+      "barrier": "expectation",
+      "evidence": "tool list of abp's session, 2026-11-15 (listed, not called)"
+    },
+    {
+      "primitive": "write.repository.project",
+      "reach": "project",
+      "undo": "with-effort",
+      "granted": true,
+      "tier": "measured",
+      "instance": "commits on the agent's branch",
+      "barrier": "none",
+      "evidence": "abp's commits on agent/abp"
+    },
+    {
+      "primitive": "write.repository.tenant",
+      "reach": "tenant",
+      "undo": "with-effort",
+      "granted": true,
+      "tier": "measured",
+      "instance": "push to dev and to any branch of AgentiCCells/AgentiCCells__Website; other repositories the GitHub token reaches (not tested)",
+      "barrier": "none",
+      "barrier_note": "Dinis, 2026-11-15: \"Branch protection, no, everybody can push to dev. We'll control that a bit later.\"",
+      "evidence": "pushes by conductor@ and outreach@ on dev; REALITY.md"
+    },
+    {
+      "primitive": "authenticate-as.credential.signing",
+      "reach": "tenant",
+      "undo": "no",
+      "granted": true,
+      "tier": "measured",
+      "instance": "one SSH signing key set in /root/.gitconfig signs every agent's commits; each agent also holds its own sgit key pair, which does not sign git commits",
+      "barrier": "none",
+      "barrier_note": "The Agent: trailer and the commit author are typed by the agent, so neither tells agents apart.",
+      "evidence": "all 14 checked commits on dev carry an SSH signature; signing key and gpgsign set in /root/.gitconfig, 2026-11-15"
+    },
+    {
+      "primitive": "create.record.world",
+      "reach": "world",
+      "undo": "no",
+      "granted": true,
+      "tier": "measured",
+      "instance": "every push to dev deploys agenticcells.com; the session also offers artifact publishing",
+      "barrier": "setting",
+      "barrier_note": "The validator runs in .github/workflows/pages.yml, which the same push can change, so the gate is a setting inside the grant.",
+      "evidence": "REALITY.md (v0.1.0 deployed from dev); .github/workflows/pages.yml on dev"
+    },
+    {
+      "primitive": "write.budget.tenant",
+      "reach": "tenant",
+      "undo": "no",
+      "granted": true,
+      "tier": "derived",
+      "instance": "AWS and Google Cloud credentials can create billable resources; new sessions and scheduled tasks spend the account's usage",
+      "barrier": "expectation",
+      "barrier_note": "CLAUDE.md: never move money or sign up for paid services; ACC-016.",
+      "evidence": "derived from the credentials present and the session tools listed; not tested"
+    },
+    {
+      "primitive": "create.schedule.host",
+      "reach": "host",
+      "undo": "yes",
+      "granted": true,
+      "tier": "derived",
+      "instance": "background processes and systemd units as root (systemctl present, crontab absent)",
+      "barrier": "expectation",
+      "evidence": "command -v, 2026-11-15; not tested"
+    },
+    {
+      "primitive": "create.schedule.tenant",
+      "reach": "tenant",
+      "undo": "yes",
+      "granted": true,
+      "tier": "measured",
+      "instance": "the session's tools to create new sessions, scheduled tasks and messages to other sessions, listed in abp's session",
+      "barrier": "expectation",
+      "evidence": "tool list of abp's session, 2026-11-15 (listed, not called)"
+    },
+    {
+      "primitive": "read.record.browsing",
+      "reach": "host",
+      "undo": "no",
+      "granted": false,
+      "tier": "measured",
+      "instance": "no browser profile in the container",
+      "barrier": "none",
+      "evidence": "none observed; not searched beyond the tool list"
+    }
+  ],
+  "roles": [
+    {
+      "role": "conductor",
+      "agent": "conductor@agenticcells.dinis",
+      "asked": "Keep the board, brief and start the other roles, keep REALITY.md, report to Dinis.",
+      "mandate_source": "team/ROSTER.md row 1 and REALITY.md (no brief file of its own)",
+      "may_not": [
+        {
+          "text": "send anything outside",
+          "barrier": "expectation"
+        },
+        {
+          "text": "hold AWS credentials beyond DNS",
+          "barrier": "expectation"
+        },
+        {
+          "text": "remove HOLD.md",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        },
+        {
+          "primitive": "create.schedule.tenant",
+          "instance": "start the other agents"
+        },
+        {
+          "primitive": "send.endpoint.world",
+          "instance": "read-only DNS and HTTP checks of agenticcells.com"
+        },
+        {
+          "primitive": "read.file.host",
+          "instance": "names of environment variables and file modes (ACC-016), never values"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:a1b8d5bb894f",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host"
+        ],
+        "unbounded_excess": [
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world",
+          "create.schedule.tenant",
+          "send.endpoint.world",
+          "read.file.host"
+        ],
+        "irreversible_excess": [
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    },
+    {
+      "role": "dev",
+      "agent": "dev@agenticcells.dinis",
+      "asked": "ACC-015 and the build: commit check, validator checks, nav, footer, page hook.",
+      "mandate_source": "board/briefs/dev.md",
+      "may_not": [
+        {
+          "text": "weaken a check",
+          "barrier": "expectation"
+        },
+        {
+          "text": "add trackers or third-party scripts",
+          "barrier": "expectation"
+        },
+        {
+          "text": "touch dns/, team/keys*, content/ words",
+          "barrier": "expectation"
+        },
+        {
+          "text": "use cloud credentials",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:c6a4e6a1ba9b",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "unbounded_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world"
+        ],
+        "irreversible_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    },
+    {
+      "role": "dns",
+      "agent": "dns@agenticcells.dinis",
+      "asked": "ACC-004 and ACC-006: dns/records.json as data and dns/check.mjs.",
+      "mandate_source": "board/briefs/dns.md",
+      "may_not": [
+        {
+          "text": "use any AWS credentials",
+          "barrier": "expectation"
+        },
+        {
+          "text": "change any DNS",
+          "barrier": "expectation"
+        },
+        {
+          "text": "touch anything outside dns/ except log, map and debrief",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        },
+        {
+          "primitive": "send.endpoint.world",
+          "instance": "public DNS and HTTP lookups, read only"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:4bb762fdba83",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "unbounded_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world",
+          "send.endpoint.world"
+        ],
+        "irreversible_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    },
+    {
+      "role": "writer",
+      "agent": "writer@agenticcells.dinis",
+      "asked": "ACC-005: the site's words in content/.",
+      "mandate_source": "board/briefs/writer.md",
+      "may_not": [
+        {
+          "text": "invent facts",
+          "barrier": "expectation"
+        },
+        {
+          "text": "name customers or prospects",
+          "barrier": "expectation"
+        },
+        {
+          "text": "publish prices beyond \"first proposal\"",
+          "barrier": "expectation"
+        },
+        {
+          "text": "write the open decisions as decided",
+          "barrier": "expectation"
+        },
+        {
+          "text": "copy figures from other sites",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:c6a4e6a1ba9b",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "unbounded_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world"
+        ],
+        "irreversible_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    },
+    {
+      "role": "researcher",
+      "agent": "researcher@agenticcells.dinis",
+      "asked": "Keep the market map current and re-check claims before anyone quotes them.",
+      "mandate_source": "board/briefs/researcher.md",
+      "may_not": [
+        {
+          "text": "use anything behind a login",
+          "barrier": "expectation"
+        },
+        {
+          "text": "contact anyone",
+          "barrier": "expectation"
+        },
+        {
+          "text": "edit content/",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        },
+        {
+          "primitive": "send.endpoint.world",
+          "instance": "the public web, read only"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:acba7a5ddff3",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "unbounded_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world",
+          "send.endpoint.world"
+        ],
+        "irreversible_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    },
+    {
+      "role": "console",
+      "agent": "console@agenticcells.dinis",
+      "asked": "ACC-007: the team's real console, read-only.",
+      "mandate_source": "board/briefs/console.md",
+      "may_not": [
+        {
+          "text": "stop or start agents",
+          "barrier": "expectation"
+        },
+        {
+          "text": "add controls",
+          "barrier": "expectation"
+        },
+        {
+          "text": "load third-party scripts",
+          "barrier": "expectation"
+        },
+        {
+          "text": "publish anything from ~/.agents or the environment",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        },
+        {
+          "primitive": "send.endpoint.world",
+          "instance": "the simulated console vault (public, read only)"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:4dcb879cc28c",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "unbounded_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world",
+          "send.endpoint.world"
+        ],
+        "irreversible_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    },
+    {
+      "role": "abp",
+      "agent": "abp@agenticcells.dinis",
+      "asked": "ACC-008: a policy per role, reach measured against mandate.",
+      "mandate_source": "board/briefs/abp.md",
+      "may_not": [
+        {
+          "text": "change any agent's access or brief itself",
+          "barrier": "expectation"
+        },
+        {
+          "text": "print environment values or anything under ~/.agents",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        },
+        {
+          "primitive": "send.endpoint.world",
+          "instance": "fetch abp.sgit.ai pages"
+        },
+        {
+          "primitive": "read.file.host",
+          "instance": "names of environment variables and file modes, never values"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:54426c6b41a6",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "unbounded_excess": [
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world",
+          "send.endpoint.world",
+          "read.file.host"
+        ],
+        "irreversible_excess": [
+          "delete.file.host",
+          "read.record.history",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    },
+    {
+      "role": "security",
+      "agent": "security@agenticcells.dinis",
+      "asked": "Leak scans, key hygiene, dependency checks; may create board/HOLD.md in an emergency.",
+      "mandate_source": "board/briefs/security.md",
+      "may_not": [
+        {
+          "text": "remove board/HOLD.md",
+          "barrier": "expectation"
+        },
+        {
+          "text": "fix anything by weakening a check",
+          "barrier": "expectation"
+        },
+        {
+          "text": "read or print secret values",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        },
+        {
+          "primitive": "read.file.host",
+          "instance": "modes of ~/.agents/*/ (key hygiene), never contents"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:96a23f76c83b",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "unbounded_excess": [
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world",
+          "read.file.host"
+        ],
+        "irreversible_excess": [
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    },
+    {
+      "role": "outreach",
+      "agent": "outreach@agenticcells.dinis",
+      "asked": "Draft messages for Dinis in board/drafts/outreach/.",
+      "mandate_source": "board/briefs/outreach.md",
+      "may_not": [
+        {
+          "text": "send, post, email or contact anyone",
+          "barrier": "expectation"
+        },
+        {
+          "text": "name a prospect or customer",
+          "barrier": "expectation"
+        },
+        {
+          "text": "use any mail or social connector",
+          "barrier": "expectation"
+        },
+        {
+          "text": "write prices beyond \"first proposal\"",
+          "barrier": "expectation"
+        }
+      ],
+      "mandate": [
+        {
+          "primitive": "read.file.project",
+          "instance": "own worktree"
+        },
+        {
+          "primitive": "write.file.project",
+          "instance": "own worktree, inside the paths the brief names"
+        },
+        {
+          "primitive": "execute.process.host",
+          "instance": "node build/build.mjs, node build/validate.js, git, team/log.sh, team/keygen.sh"
+        },
+        {
+          "primitive": "write.file.host",
+          "instance": "~/.agents/<role>/ only, through team/keygen.sh"
+        },
+        {
+          "primitive": "write.repository.project",
+          "instance": "own branch agent/<role>"
+        },
+        {
+          "primitive": "write.repository.tenant",
+          "instance": "push to dev and agent/<role> of this one repository"
+        },
+        {
+          "primitive": "authenticate-as.credential.signing",
+          "instance": "sign with the agent's own key (CLAUDE.md)"
+        },
+        {
+          "primitive": "create.record.world",
+          "instance": "a release to dev deploys agenticcells.com"
+        }
+      ],
+      "delta": {
+        "grant_version": "sha256:1bd1efcb6f76",
+        "mandate_version": "sha256:c6a4e6a1ba9b",
+        "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
+        "computed_by": "board/abp/derive.mjs v1",
+        "excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "unbounded_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "grant.credential.self",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant",
+          "create.schedule.host",
+          "create.schedule.tenant"
+        ],
+        "shortfall": [],
+        "wider_than_asked": [
+          "execute.process.host",
+          "write.file.host",
+          "write.repository.tenant",
+          "authenticate-as.credential.signing",
+          "create.record.world"
+        ],
+        "irreversible_excess": [
+          "read.file.host",
+          "delete.file.host",
+          "read.record.history",
+          "send.endpoint.world",
+          "read.credential.host",
+          "authenticate-as.credential.tenant",
+          "send.message.world",
+          "read.message.tenant",
+          "write.budget.tenant"
+        ]
+      }
+    }
+  ]
+}
