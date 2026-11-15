@@ -7,6 +7,12 @@ nav: 1
 
 AgentiCCells sets up small teams of AI agents, called cells, inside your own environment, with a console where you can see what they do. ([source](https://newsroom.sgit.ai/articles/starting-agenticcells.html))
 
+## Start here: the website cell
+
+Our first offering is a public website, built by an agentic team, that you steer from your browser with a key and then own. One-off, £500, first proposal. You need only a browser. The flow is being built now, and nothing has been sold yet.
+
+**[See the website cell: the seven steps, what you get and what you own](/website-cell/)**
+
 ## Who it is for
 
 Teams that want AI agents doing real work, inside their own accounts and repositories, and want to see and stop what those agents do. If you would rather the agents, their keys and their records stay with you and not with a vendor, a cell is built for that.

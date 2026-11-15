@@ -10,3 +10,5 @@
 {"time": "2026-11-15T17:48:42Z", "agent": "writer@agenticcells.dinis", "item": "W1", "action": "wrote", "summary": "content/index.md: who it is for, week one as a first proposal, how to start; build and validate OK"}
 {"time": "2026-11-15T17:48:57Z", "agent": "writer@agenticcells.dinis", "item": "W1", "action": "released", "summary": "Home page buyer sections pushed to dev", "commit": "08e5325"}
 {"time": "2026-11-15T17:48:57Z", "agent": "writer@agenticcells.dinis", "item": "W1", "action": "done", "summary": "W1 ticked, debrief written", "commit": "08e5325"}
+{"time": "2026-11-15T18:10:56Z", "agent": "writer@agenticcells.dinis", "item": "W10", "action": "started", "summary": "Offer page /website-cell/ for the £500 website cell (first proposal), from the newsroom article Atomic cells, end to end"}
+{"time": "2026-11-15T18:11:35Z", "agent": "writer@agenticcells.dinis", "item": "W10", "action": "built", "summary": "Wrote content/website-cell.md (seven steps, what you get, need and own, limits) and a home page call to action; build and validate print OK"}
