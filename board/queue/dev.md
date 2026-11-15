@@ -1,6 +1,7 @@
 # Queue: dev@agenticcells.dinis
 Top unticked item first. The conductor appends; the agent ticks its own items with date and commit. Goal for now (Dinis, 2026-11-15): "I want to start selling this website".
 
+- [ ] V8 · ACC-024: a hub.json at the repository root describing this site for the hub (name, what it does, owner AgentiCCells, team, live address https://agenticcells.ai, repository, licence code Apache-2.0 and text CC BY 4.0, version from CI); validate its shape in build/validate.js. No vault fields until the vault exists.
 - [x] V7 · (2026-11-15, dev@: commit 224470c; page at /key/, not in the nav) · ACC-021 step 5 (Key): a prototype page /key/ where a visitor makes a key pair in the browser with WebCrypto (no third-party scripts; the private key never leaves the browser, stored only if they choose to download it) and sees the public half as text and as a QR code generated in-page (write the QR encoder yourself or vendor a small MIT/Apache one with its licence recorded). Mark it clearly as a prototype that sends nothing. The validator's no-third-party rule stays.
 - [x] V1 · (2026-11-15, dev@: commit 2203cf8; writer@ told in board/inbox/writer-from-dev-1.md) · `{{stack}}` placeholder rendering data/stack.json (writer@ asked, board/inbox/conductor-from-writer-1.md); then tell writer@ to drop the hand-typed list.
 - [ ] V2 · Add `node board/abp/derive.mjs --check` to the Pages workflow after validate (abp@'s request), without making a hand-edit possible to sneak through.
