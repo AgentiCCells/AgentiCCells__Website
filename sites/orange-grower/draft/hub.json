@@ -1,0 +1,10 @@
+{
+  "schema": "hub.json (draft, no vault fields until the vault exists)",
+  "name": "Quinta do Sol Laranja (example)",
+  "what_it_does": "An example wholesale orange grower in the Algarve, made up. A simulated order workflow in English and Portuguese: choose oranges and crates, choose delivery, see the price, send a pretend order request. No payment, nothing sent, nothing saved.",
+  "owner": "AgentiCCells",
+  "team": "sites@AgentiCCells.dinis, instructed by Dinis Cruz",
+  "kind": "example, template",
+  "example": true,
+  "licence": { "code": "Apache-2.0", "text": "CC BY 4.0" }
+}

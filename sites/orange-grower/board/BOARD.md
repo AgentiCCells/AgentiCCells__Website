@@ -3,10 +3,11 @@
 |---|------|-------|--------|
 | 1 | Brief from Dinis's words | sites@ | done (draft) |
 | 2 | Decisions needed from Dinis (below) | Dinis | waiting |
-| 3 | Product and price data (invented), data/products.json | sites@ | not started |
-| 4 | Page design: text-first, mobile first, "example" banner | sites@ | not started |
-| 5 | Order form and price calculation, no payments, no stored data | sites@ | not started |
-| 6 | Gates: build, validate, leak scan, wording check | sites@ | not started |
+| 3 | Product and price data (invented), data.js | sites@ | done (draft) |
+| 4 | Page design: mobile first, example banner, English and Portuguese | sites@ | done (draft, in draft/) |
+| 5 | Simulated order flow, no payment, nothing sent or saved | sites@ | done (draft; tested in Chromium: flow, prices, both languages, no requests) |
+| 6 | Gates in the site's own repository | sites@ | waits on 8 |
+| 10 | Images from OpenRouter: OPENROUTER_API_KEY is not set in this session; the draft uses hand-drawn SVG | Dinis | waiting |
 | 8 | Own repository (Dinis creates and attaches it; I may not create repositories) | Dinis | waiting |
 | 9 | Vault: SG_SEND_ACCESS_KEY into this session; write key escrowed before anything is published; read key published; vault pushed with its .sg_vault data in the repository | sites@ | blocked on 8 and the key |
 | 7 | hub.json for the site (shape as in the repository's hub.json) | sites@ | not started |

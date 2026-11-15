@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quinta do Sol Laranja (example site)</title>
+<meta name="description" content="An example wholesale orange grower in the Algarve, made up. A simulated order that goes nowhere.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='55' r='38' fill='%23e8820c'/%3E%3Cpath d='M50 18c8-12 22-12 28-6-8 8-20 10-28 6z' fill='%232f6b3a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="banner" role="note">
+  <span lang="en"><strong>EXAMPLE SITE.</strong> The farm, the prices and the orders are invented. No payment, nothing is sent, nothing is saved.</span>
+  <span lang="pt"><strong>SITE DE EXEMPLO.</strong> A quinta, os preços e as encomendas são inventados. Sem pagamento, nada é enviado, nada é guardado.</span>
+</div>
+<header>
+  <div class="brand">🍊 Quinta do Sol Laranja</div>
+  <div class="lang" role="group" aria-label="Language / Idioma">
+    <button type="button" data-set="en" aria-pressed="true">English</button><button type="button" data-set="pt" aria-pressed="false">Português</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div>
+      <h1><span lang="en">Algarve oranges, by the crate, to your door.</span><span lang="pt">Laranjas do Algarve, à caixa, até à sua porta.</span></h1>
+      <p class="lead"><span lang="en">Wholesale oranges for shops and juice bars, picked in the hills above Silves, where the sun does most of the work and the farmer takes the credit. Choose your oranges, choose where they go, see the price, and send a (pretend) order request.</span>
+      <span lang="pt">Laranjas por grosso para lojas e bares de sumos, colhidas nas colinas acima de Silves, onde o sol faz quase todo o trabalho e o agricultor fica com os louros. Escolha as laranjas, escolha o destino, veja o preço e envie um pedido de encomenda (a fingir).</span></p>
+      <p><a class="btn" href="#order"><span lang="en">Start an order</span><span lang="pt">Começar uma encomenda</span></a></p>
+    </div>
+    <svg viewBox="0 0 300 240" role="img" aria-label="Three oranges on a branch with leaves" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 60 Q150 20 290 70" stroke="#6b4a2a" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <g fill="#2f6b3a"><ellipse cx="60" cy="50" rx="26" ry="11" transform="rotate(-25 60 50)"/><ellipse cx="150" cy="38" rx="28" ry="11" transform="rotate(15 150 38)"/><ellipse cx="240" cy="62" rx="26" ry="11" transform="rotate(-10 240 62)"/></g>
+      <g><circle cx="90" cy="140" r="52" fill="#f28c1b"/><circle cx="90" cy="140" r="52" fill="url(#g)"/><circle cx="195" cy="150" r="58" fill="#e8820c"/><circle cx="195" cy="150" r="58" fill="url(#g)"/><circle cx="145" cy="190" r="40" fill="#f6a03c"/></g>
+      <defs><radialGradient id="g" cx=".35" cy=".3"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+      <g stroke="#6b4a2a" stroke-width="4" stroke-linecap="round"><path d="M90 90V68"/><path d="M195 92V70"/><path d="M145 150v-20" stroke="none"/></g>
+      <g fill="#fff"><circle cx="82" cy="125" r="3.5"/><circle cx="106" cy="150" r="2.5"/><circle cx="182" cy="135" r="3.5"/><circle cx="212" cy="165" r="2.5"/></g>
+    </svg>
+  </section>
+
+  <div class="notice" id="notice" role="status"></div>
+
+  <section class="card" aria-labelledby="h-var">
+    <h2 id="h-var"><span lang="en">This week's oranges</span><span lang="pt">As laranjas desta semana</span></h2>
+    <p class="muted"><span lang="en">Sold in 15 kg crates. Prices are per kilogram, before VAT, and invented.</span><span lang="pt">Vendidas em caixas de 15 kg. Os preços são por quilograma, sem IVA, e inventados.</span></p>
+    <div class="grid" id="varieties"></div>
+  </section>
+
+  <section class="card" id="order" aria-labelledby="h-order">
+    <h2 id="h-order"><span lang="en">Your order (simulation)</span><span lang="pt">A sua encomenda (simulação)</span></h2>
+    <ol class="steps" id="steps">
+      <li class="on"><span lang="en">Oranges</span><span lang="pt">Laranjas</span></li>
+      <li><span lang="en">Delivery</span><span lang="pt">Entrega</span></li>
+      <li><span lang="en">Price</span><span lang="pt">Preço</span></li>
+      <li><span lang="en">Send</span><span lang="pt">Enviar</span></li>
+    </ol>
+
+    <form id="form" novalidate>
+      <div data-step="1">
+        <div id="lines"></div>
+        <p class="muted"><span lang="en">Enter the number of crates for each orange you want. Leave the others at 0.</span><span lang="pt">Indique o número de caixas de cada laranja. Deixe as outras a 0.</span></p>
+        <button type="button" class="btn" id="to2" disabled><span lang="en">Next: delivery</span><span lang="pt">Seguinte: entrega</span></button>
+      </div>
+
+      <div data-step="2" class="hidden">
+        <label for="zone"><span lang="en">Where should it go?</span><span lang="pt">Para onde vai?</span></label>
+        <select id="zone"></select>
+        <label for="day"><span lang="en">Delivery day (Tuesdays and Fridays)</span><span lang="pt">Dia de entrega (terças e sextas)</span></label>
+        <select id="day"></select>
+        <label for="biz"><span lang="en">Business name (invent one, it goes nowhere)</span><span lang="pt">Nome do negócio (invente um, não vai para lado nenhum)</span></label>
+        <input id="biz" autocomplete="off" maxlength="60" placeholder="Sumos da Praia">
+        <p>
+          <button type="button" class="btn alt" data-back="1"><span lang="en">Back</span><span lang="pt">Voltar</span></button>
+          <button type="button" class="btn" id="to3"><span lang="en">Next: see the price</span><span lang="pt">Seguinte: ver o preço</span></button>
+        </p>
+      </div>
+
+      <div data-step="3" class="hidden">
+        <table id="quote"></table>
+        <p class="muted"><span lang="en">Payment: none on this site. In the pretend world you pay the farmer on delivery.</span><span lang="pt">Pagamento: nenhum neste site. No mundo de faz de conta paga ao agricultor na entrega.</span></p>
+        <label><input type="checkbox" id="ok"><span lang="en">I understand this is a simulation: nothing will be sent, saved or paid.</span><span lang="pt">Entendo que isto é uma simulação: nada será enviado, guardado ou pago.</span></label>
+        <p>
+          <button type="button" class="btn alt" data-back="2"><span lang="en">Back</span><span lang="pt">Voltar</span></button>
+          <button type="button" class="btn" id="send" disabled><span lang="en">Send order request (pretend)</span><span lang="pt">Enviar pedido de encomenda (a fingir)</span></button>
+        </p>
+      </div>
+
+      <div data-step="4" class="hidden" id="done" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2><span lang="en">What would happen next</span><span lang="pt">O que aconteceria a seguir</span></h2>
+    <p><span lang="en">In a real shop the farmer would read your request and confirm by reply. Here there is no farmer, no email and no server: the whole page runs in your browser and forgets everything when you close it.</span>
+    <span lang="pt">Numa loja a sério o agricultor leria o seu pedido e confirmaria por resposta. Aqui não há agricultor, nem email, nem servidor: a página corre toda no seu navegador e esquece tudo quando a fecha.</span></p>
+  </section>
+</main>
+<footer>
+  <p><span lang="en">This is an example site made by an agentic team at AgentiCCells to show what a small wholesale order site can look like. It is also a template. Every farm detail, price and delivery rate is invented. Code: Apache-2.0. Text and images: CC BY 4.0.</span>
+  <span lang="pt">Este é um site de exemplo feito por uma equipa agêntica da AgentiCCells para mostrar como pode ser um pequeno site de encomendas por grosso. Também serve de modelo. Todos os dados da quinta, preços e tarifas de entrega são inventados. Código: Apache-2.0. Texto e imagens: CC BY 4.0.</span></p>
+  <p class="muted">v<span id="ver"></span></p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
