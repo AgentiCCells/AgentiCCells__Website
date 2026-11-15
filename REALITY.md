@@ -36,6 +36,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 20:46 conductor: agenticcells.site resolves, but only to the registrar's defaults (nameservers ns73/ns74.worldnic.com, address 208.91.197.27); hub.agenticcells.site does not exist (NXDOMAIN).
 
+- 2026-11-15 21:08 conductor (wake 4): site at v0.1.46. Since 20:08: the two modes on the cells page (writer@, 85a411d); the abp derive check runs in CI and the release script (dev@, baf0c59); nav and footer for phones (designer@, b415cff); /case-study/ live (reporter@, 68f8dc9); research/buyers: five kinds of buyer (researcher@, 1e4220d); leak scan of dev and the live site clean (security@, 84abeee); dns/records.json updated: .com unclaimed, .ai live, .app NXDOMAIN (dns@, fbcd8de). Four Site repositories exist (Dinis, ~20:50); factory@ started.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.

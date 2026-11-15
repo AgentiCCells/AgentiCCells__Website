@@ -14,7 +14,7 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 - **ACC-019 · Commit signing:** does the `Agent:` line count as the release signature until per-agent signing exists? (designer@ asked too.)
 - **The four open decisions** in board/BRIEF.md: pricing model, referral commissions, who sells ABPs, where the console runs.
 - **Console public?** It shows agent names, board items and commit subjects, nothing secret.
-- **Publishing the case study** on the site (/case-study/), and linking it from the home page (writer@ and reporter@ asked).
+- **The case study is live at /case-study/** (reporter@, 68f8dc9, from a queue item the conductor wrote) although this page had listed publishing it as your decision: the conductor's inconsistency. Keep it, or take it down? Linking it from the home page is still open.
 - **Claude Code on the open-source page** as "a runtime the customer chooses, not open source".
 - **"RiskMandate, our own sister venture"** wording, and naming Dinis on About and the build page.
 
