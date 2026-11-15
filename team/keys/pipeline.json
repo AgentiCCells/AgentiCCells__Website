@@ -1,0 +1,16 @@
+{
+  "id": "sha256:e271f51c9dd8b829",
+  "label": "pipeline@AgentiCCells.dinis",
+  "fingerprint": "sha256:e271f51c9dd8b829",
+  "signing_fingerprint": "sha256:a843fb935dd3652f",
+  "public_key": {
+    "v": 1,
+    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAjAIXQuHP3ZqIknqvNoS+\nyvQfcw06azrcDFSOxHStlEg6QzoU3UgCbpX00lXPXdRHtrLeezHC2e7gNLuB44Ds\ndaRfiYpdL7r0mCLP+C1WXTitatpoSdSXRO2dJaXyGgW6sEdnXekebV2ijguTBGlz\n0K4lVrGdqKMikgEQEoi+GWYBRvl+tvU3jgsuVTRJFlwVrWVncXNY+XxP5PCFIrIS\n0Abw3zXCXdX9jDfj7/TnjOn0GElNHT9XsxI+EbP2Y5f/C5eHM4WqIWMx9OJLivmo\nMSFgzAaevO3uNJ+eI1rwX4y4ns+nSr2rNR/8WFbgPtihTVAtLatLxzqo26wGs09Q\npMYXSg+/XVUPuL/NuH5uMFDggCJcUnF2H/dsYIP3EA7wOofUyZbPmbwIti/pZYli\nt7NFG9BY5WRYT4qGJEDml3tu0u1YUUN5q3uF1DEBcRB+N6duBPx+pMHb8o8VK2O+\nem1VTmHRxca78s3nQsYSGDVVxH2VIY4IRwtllF3DK/nEiAYqQZ+TZM1iDJw1BzVY\nPenwtUCOwWM1G2ScZ7/sKhBEnSa8O9tfeXI2XswXiWRtL+U5kHcKCbcUa2GIHEiu\nv08xqrwPdnN8UED1LiMKdEG2cXZvraDCDrP9zbbuDgPvhZrMu61zwt7jZdETe7li\npZVzyALJGJBuq/Upvuqc6dUCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+    "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEkncBoEMGe31J3dSmlNfRNwX3JhJ\noPwbnto6NJMcszcNbo/mLxbSpij590mvdnXonTQkS1dxlRMy5cvna7Ywvw==\n-----END PUBLIC KEY-----\n",
+    "label": "pipeline@AgentiCCells.dinis",
+    "fingerprint": "sha256:e271f51c9dd8b829",
+    "signing_fingerprint": "sha256:a843fb935dd3652f"
+  },
+  "created": "2026-11-15",
+  "lifetime": "ephemeral: valid while this agent's session exists"
+}
