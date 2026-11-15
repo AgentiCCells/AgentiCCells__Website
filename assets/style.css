@@ -12,3 +12,7 @@ th,td{border-bottom:1px solid var(--line);padding:.5rem;text-align:left;vertical
 code,pre{font-family:ui-monospace,monospace;overflow-wrap:anywhere;white-space:pre-wrap}
 img{max-width:100%;height:auto}
 footer{color:var(--muted);font-size:.9rem}
+header{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:baseline}
+header>a{font-weight:600;text-decoration:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1rem}
+nav a[aria-current="page"]{color:var(--fg);text-decoration:none}
