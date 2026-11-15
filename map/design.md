@@ -78,3 +78,13 @@ on-accent on accent: 7.62 (light), 9.36 (dark). Every text pair passes AA and AA
 | # | Step | Who | Input | Output | Evidence |
 |---|---|---|---|---|---|
 | 4 | Nav tap targets, footer structure | designer@ | queue D3 | assets/style.css, build/build.mjs | team/activity/designer.jsonl, D3 commit |
+
+## D4 · Console styling (2026-11-15)
+- assets/console.css only; no change to build/pages/console.mjs or any words. Status shows as a pill with a symbol (tick, play, pause, circle) and colour, so it is not colour alone; done is green, doing is the accent, waits is amber, each with light and dark values. Status text from the board can be long, so the pill wraps instead of clipping.
+- Under 40rem the board, agents and schedule tables become labelled cards (labels come from CSS, matching the column headings in console.mjs; if console@ changes the columns, update the labels). From 40rem: zebra rows.
+- Timeline: monospace time, tag as a small outlined label, commits marked with an accent rule and tint. Day links are 44px tap targets.
+- Checked: build and validate OK; Playwright on /console/ and /console/2026-11-15/ at 390px and 1280px, light and dark: scrollWidth equals viewport in all eight; board and timeline screenshots looked at. Contrast of the new status colours was not measured numerically (D6 will).
+
+| # | Step | Who | Input | Output | Evidence |
+|---|---|---|---|---|---|
+| 5 | Console status pills, table cards, timeline | designer@ | queue D4 | assets/console.css | team/activity/designer.jsonl, D4 commit |

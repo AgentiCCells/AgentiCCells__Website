@@ -1,20 +1,43 @@
-/* Console pages (ACC-007). Uses the site's colour variables, so dark mode follows style.css. */
-.st{display:inline-block;padding:0 .4rem;border-radius:.3rem;border:1px solid var(--line);font-size:.85rem}
-.st-done{border-color:#2e7d32}
-.st-doing{border-color:var(--accent)}
-.st-waits{border-color:#b26a00}
+/* Console pages (ACC-007, styled by designer@ D4). Uses the site's colour variables, so dark mode follows style.css. */
+:root{--ok:#1b6b2f;--warn:#8a5200;--ok-bg:#e6f3e9;--warn-bg:#fbefd9;--do-bg:#e1f0f3}
+@media (prefers-color-scheme:dark){:root{--ok:#7fd48f;--warn:#f0b45a;--ok-bg:#16301d;--warn-bg:#3a2b10;--do-bg:#12313a}}
+/* Status pills: colour plus a symbol, so status is not carried by colour alone */
+.st{display:inline-block;padding:.05rem .55rem;border-radius:.9rem;border:1px solid var(--line);font-size:.8125rem;font-weight:600;max-width:100%;line-height:1.4}
+.st::before{content:"\25CB\00a0"}
+.st-done{border-color:var(--ok);color:var(--ok);background:var(--ok-bg)}
+.st-done::before{content:"\2713\00a0"}
+.st-doing{border-color:var(--accent);color:var(--accent);background:var(--do-bg)}
+.st-doing::before{content:"\25B6\00a0"}
+.st-waits{border-color:var(--warn);color:var(--warn);background:var(--warn-bg)}
+.st-waits::before{content:"\23F8\00a0"}
+/* Timeline */
 .timeline{list-style:none;padding:0;margin:0}
-.timeline .ev{border-left:3px solid var(--line);padding:.25rem 0 .5rem .6rem;margin:0 0 .25rem;overflow-wrap:anywhere}
-.timeline .ev-commit{border-left-color:var(--accent)}
-.timeline time{font-family:ui-monospace,monospace;color:var(--muted)}
-.tag{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.timeline .ev{border-left:3px solid var(--line);padding:.35rem 0 .55rem .75rem;margin:0 0 .15rem;overflow-wrap:anywhere}
+.timeline .ev-commit{border-left-color:var(--accent);background:linear-gradient(90deg,var(--surface),transparent 70%)}
+.timeline time{font-family:var(--mono);font-size:.875rem;color:var(--muted);margin-right:.35rem}
+.tag{display:inline-block;font-size:.7rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border:1px solid var(--line);border-radius:.25rem;padding:0 .35rem;margin-right:.25rem}
+.ev-commit .tag{color:var(--accent);border-color:var(--accent)}
 .days{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0}
+.days a{display:inline-block;min-height:2.75rem;line-height:2.75rem;padding:0 .9rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
 .hold{border:2px solid #b00020;padding:.5rem}
 small{color:var(--muted)}
-.console-board td,.console-agents td{overflow-wrap:anywhere}
-.console-schedule td{overflow-wrap:anywhere}
+.console-board td,.console-agents td,.console-schedule td{overflow-wrap:anywhere}
+.console-board tbody tr:nth-child(even),.console-agents tbody tr:nth-child(even),.console-schedule tbody tr:nth-child(even){background:var(--surface)}
+.console-board code{white-space:nowrap}
+/* Small screens: each row becomes a card, labelled from the column heading */
+@media (max-width:40rem){
+  .console-board,.console-agents,.console-schedule{border:0}
+  .console-board thead,.console-agents thead,.console-schedule thead{position:absolute;left:-9999px}
+  .console-board tr,.console-agents tr,.console-schedule tr{display:block;background:var(--surface)!important;border:1px solid var(--line);border-radius:var(--radius);padding:.5rem .9rem;margin-bottom:.75rem}
+  .console-board td,.console-agents td,.console-schedule td{display:block;border:0;padding:.2rem 0}
+  .console-board td::before,.console-agents td::before,.console-schedule td::before{display:block;font-size:.75rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+  .console-board td:nth-child(1)::before{content:"Item"}.console-board td:nth-child(2)::before{content:"What and who"}.console-board td:nth-child(3)::before{content:"Status"}
+  .console-agents td:nth-child(1)::before{content:"Agent"}.console-agents td:nth-child(2)::before{content:"Key (short fingerprint)"}.console-agents td:nth-child(3)::before{content:"Steps"}.console-agents td:nth-child(4)::before{content:"Commits"}.console-agents td:nth-child(5)::before{content:"Last seen"}
+  .console-schedule td:nth-child(1)::before{content:"Agent"}.console-schedule td:nth-child(2)::before{content:"Wakes (Europe/London)"}.console-schedule td:nth-child(3)::before{content:"Last run started"}.console-schedule td:nth-child(4)::before{content:"Last step"}
+  .console-agents td:nth-child(1),.console-schedule td:nth-child(1){font-weight:700}
+}
 .console-queues td{overflow-wrap:anywhere}
 .queue{list-style:none;padding-left:0}
 .queue li{margin:.4rem 0;overflow-wrap:anywhere}
 details{margin:.5rem 0}
-summary{cursor:pointer}
+summary{cursor:pointer;min-height:2.75rem;display:list-item}
