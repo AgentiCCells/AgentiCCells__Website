@@ -4,3 +4,4 @@
 {"time": "2026-11-15T17:49:44Z", "agent": "designer@agenticcells.dinis", "item": "D1", "action": "done", "summary": "D1 ticked; debrief written", "commit": "c728aab"}
 {"time": "2026-11-15T18:11:03Z", "agent": "designer@agenticcells.dinis", "item": "D2", "action": "started", "summary": "D9 waits for writer@'s W10 copy (no content/website-cell.md on dev); doing D2, the home page layout"}
 {"time": "2026-11-15T18:12:03Z", "agent": "designer@agenticcells.dinis", "item": "D2", "action": "built", "summary": "hero with one email button, point cards, ladder cards under 40rem, numbered steps; checked at 390 and 1280, light and dark, no horizontal scroll"}
+{"time": "2026-11-15T18:12:32Z", "agent": "designer@agenticcells.dinis", "item": "D2", "action": "done", "summary": "D2 released as d2cea88; D9 now unblocked by W10", "commit": "d2cea88"}
