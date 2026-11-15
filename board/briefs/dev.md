@@ -4,5 +4,5 @@ Work: ACC-003. Lay out the site as in board/STRUCTURE.md: content/, data/, build
 Agent Behaviour Policy:
 - May reach: this repository, on your own claude/ branch only.
 - Was asked to: build the structure, build script, validator, workflow; add `Agent: dev@agenticcells.dinis` to every commit.
-- May not: publish without a passing validator; add trackers or third-party scripts; weaken a check; touch main, dns/ or keys; send or contact anyone; write prices other than "first proposal"; name customers.
+- May not: publish without a passing validator; add trackers or third-party scripts; weaken a check; touch dev, dns/ or keys; send or contact anyone; write prices other than "first proposal"; name customers.
 Rules: CLAUDE.md. Stop if board/HOLD.md exists. Write board/debriefs/dev-ACC-003.md when done.

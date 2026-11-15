@@ -15,6 +15,6 @@ Open `site/index.html` to look at it.
 ## Release
 1. Work on a `claude/` branch; run build and validate; both must pass. Never weaken a check.
 2. Commit with an `Agent: role@agenticcells.person` trailer.
-3. Dinis merges to `main`. The workflow builds, validates and deploys to GitHub Pages. In the repository settings, Pages source must be "GitHub Actions" and the custom domain agenticcells.ai.
+3. Dinis merges to `dev` (the default branch). The workflow builds, validates and deploys to GitHub Pages. In the repository settings, Pages source must be "GitHub Actions" and the custom domain agenticcells.ai.
 
 Licences: code Apache-2.0, text and images CC BY 4.0.
