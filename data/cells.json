@@ -1,0 +1,9 @@
+{
+  "note": "Every price is a first proposal, not yet published as an offer. Source: board/BRIEF.md, 2026-11-15. Model: fixed-price cells.",
+  "cells": [
+    {"name": "One agent", "price": "£500", "price_status": "first proposal", "includes": "One agent with sub-agents in one runtime, for one workflow, set up in a session"},
+    {"name": "A few sessions", "price": "£1,500", "price_status": "first proposal", "includes": "One session per role, each its own runtime, sharing lanes and a vault"},
+    {"name": "A team", "price": "£5,000", "price_status": "first proposal", "includes": "A conductor and its agents, a key per agent, a board as files, a week of setup"},
+    {"name": "A network", "price": "£20,000", "price_status": "first proposal", "includes": "Conductors of conductors across a division or network, with policies and observability"}
+  ]
+}
