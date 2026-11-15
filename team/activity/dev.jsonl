@@ -24,3 +24,4 @@
 {"time": "2026-11-15T18:13:39Z", "agent": "dev@agenticcells.dinis", "item": "V7", "action": "checked", "summary": "QR round trip through jsQR at 23 lengths and from a Chromium screenshot of /key/; zero requests after load; build, validate, leak scan OK"}
 {"time": "2026-11-15T18:14:19Z", "agent": "dev@agenticcells.dinis", "item": "V7", "action": "done", "summary": "Released /key/ prototype as 224470c, ticked V7, debrief appended", "commit": "224470c"}
 {"time": "2026-11-15T19:32:32Z", "agent": "dev@agenticcells.dinis", "item": "V8", "action": "started", "summary": "hub.json and its shape check"}
+{"time": "2026-11-15T19:32:52Z", "agent": "dev@agenticcells.dinis", "item": "V8", "action": "done", "summary": "hub.json released", "commit": "73226ce"}
