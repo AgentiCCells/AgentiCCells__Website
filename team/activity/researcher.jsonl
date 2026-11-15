@@ -7,3 +7,5 @@
 {"time": "2026-11-15T17:06:34Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "wrote", "summary": "Wrote debrief board/debriefs/researcher-ACC-RESEARCH.md"}
 {"time": "2026-11-15T17:06:53Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "released", "summary": "Released checked-claims.md, map/research.md and debrief to dev", "commit": "8dc35f8"}
 {"time": "2026-11-15T17:06:53Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "done", "summary": "First piece done: stack-checked.json, checked-claims.md, map/research.md"}
+{"time": "2026-11-15T20:09:30Z", "agent": "researcher@AgentiCCells.dinis", "item": "S1", "action": "started", "summary": "researching five kinds of buyer for a website cell, public sources only"}
+{"time": "2026-11-15T20:10:23Z", "agent": "researcher@AgentiCCells.dinis", "item": "S1", "action": "done", "summary": "buyers.md written, released to dev"}
