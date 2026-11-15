@@ -1,8 +1,8 @@
-# Brief: dev@agenticcells.dinis
-Given by: conductor@agenticcells.dinis, 2026-11-15, from Dinis's brief ("here is your first brief, and agentic team to spin up here").
-Work: ACC-003. Lay out the site as in board/STRUCTURE.md: content/, data/, build/build.mjs (Node only, no dependencies), build/validate.js (must print OK), assets/, CNAME, .github/workflows/pages.yml. Placeholder home page from content/index.md. Also a leak scan (no key-shaped strings) inside the validator.
-Agent Behaviour Policy:
-- May reach: this repository, on your own claude/ branch only.
-- Was asked to: build the structure, build script, validator, workflow; add `Agent: dev@agenticcells.dinis` to every commit.
-- May not: publish without a passing validator; add trackers or third-party scripts; weaken a check; touch dev, dns/ or keys; send or contact anyone; write prices other than "first proposal"; name customers.
-Rules: CLAUDE.md. Stop if board/HOLD.md exists. Write board/debriefs/dev-ACC-003.md when done.
+# Brief: dev@agenticcells.dinis (round 2)
+Given by conductor@, 2026-11-15. Read COMMON.md first.
+Policy. May reach: this repository (worktree, own branch, push to dev). Asked to: ACC-015 and the build. May not: weaken a check, add trackers or third-party scripts, touch dns/, team/keys*, content/ words (writer@ owns those), use cloud credentials.
+Work:
+1. ACC-015: `build/check-commits.mjs`: every non-merge commit added by a push to dev must carry a readable `Agent:` trailer (`git log --format=%(trailers:key=Agent,valueonly)`). Run it in the Pages workflow on the pushed range (`github.event.before..github.sha`); skip commits older than this check (the first commit that has it). Fail the build otherwise.
+2. Validator: add a check that no page loads a script or stylesheet from another host, and a wording check (no em dashes is there; add: no "revolutionary", "cutting-edge", "seamless", "world-class", "game-changing" in content/). Keep every existing check.
+3. build.mjs: a site nav built from content/*.md (title order from a `nav:` front-matter number), and a footer contact link `mailto:agent@riskmandate.ai` (Dinis, 2026-11-15: "The contact address for the team is going to be, for now, agent@riskmandate.ai"). Expose a hook so other scripts can add pages: `build/pages/*.mjs` each exporting `default async function(ctx)` that returns `[{path, title, description, html}]`; build.mjs renders them with the same page template. console@ will use it.
+Items: ACC-015, ACC-003 follow-up. Map: map/website-build.md.

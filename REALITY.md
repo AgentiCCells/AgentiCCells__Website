@@ -12,11 +12,13 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 conductor (checked by running them): `node build/build.mjs` prints "built site/" and `node build/validate.js` prints OK, on branch commit 2a9c54c. Built by dev@agenticcells.dinis: placeholder `content/index.md`, `data/cells.json`, `assets/style.css`, `CNAME`, `.github/workflows/pages.yml`.
 
+- 2026-11-15 conductor: key pair for conductor@agenticcells.dinis, made in its session with sgit-ai v0.27.0 (`team/keygen.sh`); public half in team/keys/conductor.json and team/keys.json. Private half and passphrase only in the session (~/.agents/conductor/).
+- 2026-11-15 conductor: this session's environment holds AWS access keys, GitHub tokens (GH_TOKEN, GITHUB_TOKEN) and a Google Cloud token (names checked, values not read). Every agent in this container can reach them. No agent is to use the AWS or Google Cloud credentials (ACC-016).
+- 2026-11-15 conductor: activity logs (team/activity/, team/log.sh) and the workflow map (map/).
+
 ## Does not exist yet
 - `content/` pages other than index, `data/stack.json`, `data/links.json`.
-- Agent key pairs: none. `team/keys.json` is empty. sgit-ai v0.27.0 is installed in the conductor's session (2026-11-15), but keygen needs a passphrase and a vault for the private half (ACC-011).
 - Route 53 hosted zones, nameserver switch, `dns/records.json`, GitHub domain verification (unchecked: no AWS or org access seen).
-- The team contact address for the site's contact route.
 - Any agent other than the conductor. The dev role has finished its first piece (ACC-003, In review).
 - The console, `board/HOLD.md` (absent, so work may proceed).
 
@@ -28,4 +30,9 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15: "agenticcells.com is configured to use GitHub and agenticcells.ai is a bit of a mess at the moment so we are not going to use it (until the NS stabelise)". agenticcells.ai is not used until its nameservers settle.
 - 2026-11-15: "the version number, which should be v0.1.0, and then every push becomes v0.1.1, and then all the minor ones, is done by the CI pipeline, not by here." Implemented in .github/workflows/pages.yml: tags v0.1.N after each successful deploy.
 - 2026-11-15: Dinis sent an updated briefing pack ("can you also see this updated briefing pack for you"). Merged: READING.md (eight sites, ten questions), the repository name AgentiCCells/AgentiCCells__Website, the GitHub organisation `AgentiCCells` with Pages host agenticcells.github.io.
+- 2026-11-15 (keys): "every agent always keeps a private key in their environment. The private keys are, in a way, ephemeral. They only exist while the agent exists, and they push the public key to the repo, and the logic is that the permission and the authorization happens because they have right access to the repo."
+- 2026-11-15 (contact): "The contact address for the team is going to be, for now, agent@riskmandate.ai, because that's the mailbox that's been there."
+- 2026-11-15 (branches): "Branch protection, no, everybody can push to dev. We'll control that a bit later."
+- 2026-11-15 (team): "start all the agents, right? And also start an ABP agent, which should basically be creating all the agent behavior policies for everybody."
+- 2026-11-15 (mapping): "let's map the whole workflow. And even the creation of this website is something that we want to sell. So let's map everything and have the visibility of everything that's flying here."
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".
