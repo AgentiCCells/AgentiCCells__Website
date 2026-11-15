@@ -1,5 +1,7 @@
 # DNS on AWS Route 53
 
+> **2026-11-15 change from Dinis:** "ok, small change of plans for now the url is agenticcells.com". The site is served at agenticcells.com for now. Read step 3 below as applying to the `.com` zone, and step 4 (the redirect) as on hold until Dinis says what .ai does.
+
 Three domains, bought 15 November 2026 at a registrar whose default nameservers are `NS79.WORLDNIC.COM` and `NS80.WORLDNIC.COM`. DNS moves to Route 53. Each hosted zone costs about 0.50 USD a month.
 
 ## Step 1: create the hosted zones (Dinis)

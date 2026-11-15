@@ -19,7 +19,7 @@ const text = ['.md', '.json', '.html', '.css', '.js', '.mjs', '.yml'];
 const scanned = [...walk(join(root, 'content'), text), ...walk(join(root, 'data'), text), ...walk(join(root, 'site'), text), ...walk(join(root, 'assets'), text)];
 
 if (!existsSync(join(root, 'site/index.html'))) fail('site/index.html missing: run the build first');
-if (!existsSync(join(root, 'CNAME')) || readFileSync(join(root, 'CNAME'), 'utf8').trim() !== 'agenticcells.ai') fail('CNAME must contain agenticcells.ai');
+if (!existsSync(join(root, 'CNAME')) || readFileSync(join(root, 'CNAME'), 'utf8').trim() !== 'agenticcells.com') fail('CNAME must contain agenticcells.com');
 
 const keyShapes = [
   /-----BEGIN [A-Z ]*PRIVATE KEY-----/,

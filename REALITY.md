@@ -16,7 +16,6 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - `content/` pages other than index, `data/stack.json`, `data/links.json`.
 - `sgit`: not installed in this session, so no agent key pairs exist. `team/keys.json` is empty.
 - Route 53 hosted zones, nameserver switch, `dns/records.json`, GitHub domain verification (unchecked: no AWS or org access seen).
-- `agenticcells.com` redirect repository.
 - The team contact address for the site's contact route.
 - Any agent other than the conductor. The dev role has finished its first piece (ACC-003, In review).
 - The console, `board/HOLD.md` (absent, so work may proceed).
@@ -25,4 +24,5 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15: "you are going to be the agent called conductor@AgentiCCell.dinis". Note the spelling: the brief uses `agenticcells`; Dinis's message uses `AgentiCCell`. To confirm with him (see ACC-010); until answered, commits use `conductor@agenticcells.dinis`.
 - 2026-11-15: "here is your first brief, and agentic team to spin up here" (the bootstrap zip).
 - 2026-11-15: Dinis asked to clone `AgentiCCells/AgentiCCells__Website`, then said "I also changed the default branch to dev". Taken as: this is the repository, and `dev` is the release branch the Pages workflow deploys from.
+- 2026-11-15: "ok, small change of plans for now the url is agenticcells.com". The site's custom domain (CNAME, validator, README, ACC-005) is now agenticcells.com. What agenticcells.ai does meanwhile is not decided.
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".
