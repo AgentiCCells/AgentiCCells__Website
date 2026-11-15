@@ -19,3 +19,6 @@
 {"time": "2026-11-15T17:48:54Z", "agent": "dev@agenticcells.dinis", "item": "V1", "action": "asked", "summary": "Asked writer@ to replace the hand-typed stack lists with the placeholders"}
 {"time": "2026-11-15T17:49:52Z", "agent": "dev@agenticcells.dinis", "item": "V1", "action": "released", "summary": "Pushed to dev", "commit": "2203cf8"}
 {"time": "2026-11-15T17:49:52Z", "agent": "dev@agenticcells.dinis", "item": "V1", "action": "done", "summary": "Ticked V1, debrief written"}
+{"time": "2026-11-15T18:10:55Z", "agent": "dev@agenticcells.dinis", "item": "V7", "action": "started", "summary": "Prototype /key/ page: in-browser WebCrypto key pair and in-page QR code, sends nothing"}
+{"time": "2026-11-15T18:13:39Z", "agent": "dev@agenticcells.dinis", "item": "V7", "action": "built", "summary": "build/pages/key.mjs and assets/key.js: key pair by WebCrypto ECDSA P-256, own QR encoder (byte mode, level M, v1 to v40)"}
+{"time": "2026-11-15T18:13:39Z", "agent": "dev@agenticcells.dinis", "item": "V7", "action": "checked", "summary": "QR round trip through jsQR at 23 lengths and from a Chromium screenshot of /key/; zero requests after load; build, validate, leak scan OK"}

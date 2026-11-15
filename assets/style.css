@@ -87,3 +87,11 @@ ol.steps{list-style:none;padding:0;counter-reset:step}
 ol.steps li{counter-increment:step;position:relative;padding-left:2.5rem;margin-bottom:.9rem;min-height:1.75rem}
 ol.steps li::before{content:counter(step);position:absolute;left:0;top:0;width:1.75rem;height:1.75rem;border-radius:50%;
   background:var(--accent);color:var(--on-accent);font-weight:700;font-size:.9rem;display:grid;place-items:center}
+
+/* /key/ prototype (dev@, V7). Uses the palette above; nothing new. */
+.note{background:var(--surface);border-left:4px solid var(--accent);padding:.75rem 1rem;border-radius:var(--radius)}
+button{font:inherit;padding:.5rem 1rem;border-radius:var(--radius);border:1px solid var(--accent);background:var(--accent);color:var(--on-accent);cursor:pointer}
+button:hover{filter:brightness(1.1)}
+#key-public{width:100%;font-family:var(--mono);font-size:.85rem;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:var(--radius);padding:.5rem}
+.key-qr{max-width:20rem;margin:0 0 1rem}
+.key-qr svg{display:block;width:100%;height:auto}

@@ -21,6 +21,7 @@ Status: first pass by conductor@agenticcells.dinis, 2026-11-15. Steps 1 to 9 are
 | 15 | Home page for buyers: who it is for, week one (first proposal), how to start (W1) | writer@ | board/queue/writer.md W1 | content/index.md | the W1 commit |
 | 16 | `{{stack}}` and `{{stack:runtimes}}` placeholders render data/stack.json as tables (V1) | dev@, asked by writer@ | board/inbox/conductor-from-writer-1.md, queue V1 | build/build.mjs | 2203cf8 |
 | 17 | Visual identity: text mark, palette (light and dark), type scale | designer@ | queue D1 | assets/style.css, map/design.md | D1 commit, map/design.md |
+| 18 | Prototype key step at /key/: WebCrypto key pair in the browser, public half as text and an in-page QR code (own encoder), sends nothing (V7, ACC-021 step 5) | dev@ | queue V7, ACC-021 | build/pages/key.mjs, assets/key.js | QR decoded by jsQR at 23 lengths (versions 1 to 40) and from a Chromium screenshot; no request after load |
 
 ## What a customer would buy from this (proposal)
 The same steps for their site: a brief, a developer agent, a validator that must print OK, CI that versions and deploys, a board and a map that show every step. Time so far: about 30 minutes of agent time to a live, versioned page (from the commit times above), plus the person's decisions. Price: see the ladder, first proposal.
