@@ -7,3 +7,6 @@ Top unticked item first. The conductor appends; the agent ticks its own items wi
 - [ ] W4 · FAQ: open source and licences, no state on our side, what happens when a customer leaves, security model (honest limits, link board/abp/README.md once Dinis agrees to publish it).
 - [ ] W5 · After dev@ ships {{stack}}: replace the hand-typed list in open-source.md.
 - [ ] W6 · Edit pass with researcher@'s checked-claims.md: correct any page that quotes an unchecked or changed claim.
+- [ ] W7 · From newsroom "Can you sell it?" (2026-11-15, board/newsroom-digest.md): for every cell size answer "have we sold it, can we deliver it at this size, would the buyer understand the words". Today none has been sold: no page may imply otherwise. Say so plainly where it helps trust.
+- [ ] W8 · A "do it yourself" path beside each paid size (newsroom "Starting AgentiCCells": everything is open, you can do this without us): what to read, what to install, what it costs in time.
+- [ ] W9 · Use the newsroom's own line where it fits, quoted and linked: "the product is not the agents; it is the ability to control their execution" (newsroom "Selling mini agentic teams", 2026-11-15).

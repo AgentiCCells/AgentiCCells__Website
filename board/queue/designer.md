@@ -7,3 +7,5 @@ Top unticked item first. The conductor appends; the agent ticks its own items wi
 - [ ] D4 · Console styling: board columns by status, agent cards, timeline readable at 390 px and in dark mode.
 - [ ] D5 · A simple diagram (inline SVG, no external files) of "a cell": conductor, agents, board, keys, console; for the home and method pages (ask writer@ for the caption).
 - [ ] D6 · Accessibility pass: contrast AA, focus styles, headings in order, alt text; record results in map/design.md.
+- [ ] D7 · Hold the logo's "CC" styling until researcher@'s S4 answers whether Creative Commons' trademark policy allows it; until then a plain text mark.
+- [ ] D8 · Synthetic-user test (newsroom "Synthetic users for your website"): with Playwright, play three buyers (a CTO, an ops lead, a solo founder) through the site at 390 px and 1280 px; record where each got stuck in map/design.md and as inbox notes to writer@.
