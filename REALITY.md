@@ -9,13 +9,16 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15 conductor: Node v22.23.4 is available in this session.
 - 2026-11-15 conductor: the bootstrap folder is copied into this repository: CLAUDE.md, board/ (ACC-001 to ACC-009, BRIEF.md), team/ROSTER.md, dns/, research/.
 
+- 2026-11-15 conductor (checked by running them): `node build/build.mjs` prints "built site/" and `node build/validate.js` prints OK, on branch commit 2a9c54c. Built by dev@agenticcells.dinis: placeholder `content/index.md`, `data/cells.json`, `assets/style.css`, `CNAME`, `.github/workflows/pages.yml`.
+
 ## Does not exist yet
+- The Pages workflow has never run (nothing on main); no Pages site is served.
+- `content/` pages other than index, `data/stack.json`, `data/links.json`.
 - `sgit`: not installed in this session, so no agent key pairs exist. `team/keys.json` is empty.
 - Route 53 hosted zones, nameserver switch, `dns/records.json`, GitHub domain verification (unchecked: no AWS or org access seen).
-- The website build, validator, content, CNAME file, Pages workflow, Pages site.
 - `agenticcells.com` redirect repository.
 - The team contact address for the site's contact route.
-- Any agent other than the conductor. The dev role is not yet started.
+- Any agent other than the conductor. The dev role has finished its first piece (ACC-003, In review).
 - The console, `board/HOLD.md` (absent, so work may proceed).
 
 ## Decided by Dinis (with his words and the date)
