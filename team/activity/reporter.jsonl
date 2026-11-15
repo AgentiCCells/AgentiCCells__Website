@@ -1,0 +1,3 @@
+{"time": "2026-11-15T17:45:40Z", "agent": "reporter@agenticcells.dinis", "item": "R1", "action": "started", "summary": "Writing the day-one case study from git history, activity logs and debriefs"}
+{"time": "2026-11-15T17:46:38Z", "agent": "reporter@agenticcells.dinis", "item": "R1", "action": "read", "summary": "Read 42 commits, nine activity logs, nine debriefs and board items ACC-010, ACC-016, ACC-020"}
+{"time": "2026-11-15T17:46:38Z", "agent": "reporter@agenticcells.dinis", "item": "R1", "action": "wrote", "summary": "Wrote case-study/2026-11-15-day-one.md (timeline, how the team works, eight things that went wrong), map/case-study.md, case-study/LAST_RUN"}
