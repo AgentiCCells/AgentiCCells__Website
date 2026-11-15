@@ -3,7 +3,7 @@
 A thing that is not in this file does not exist, whatever a brief says. Kept current by whoever ships.
 
 ## Exists (checked, with date and who checked)
-- 2026-11-15 conductor@agenticcells.dinis: the website repository is `AgentiCCells/AgentiCCells__Website` (plural), default branch `dev`. The earlier work was done in `AgentiCCell/AgentiCCell__Website` (singular) and replayed here with its history.
+- 2026-11-15 conductor@agenticcells.dinis: the website repository is `AgentiCCells/AgentiCCells__Website` (plural), default branch `dev`. The old singular URL `AgentiCCell/AgentiCCell__Website` now leads to this same repository, and the earlier commits are here unchanged.
 - 2026-11-15 conductor: I can push to branch `claude/confident-davinci-fiu43e` of this repository and no other, so nothing reaches `dev` or Pages until Dinis merges.
 - 2026-11-15 conductor: agenticcells.ai and agenticcells.com resolve to 208.91.197.27 (registrar default, not Route 53, not GitHub Pages). agenticcells.app has no address record yet. Checked with `getent`; `dig` is not installed here, so nameservers are not confirmed.
 - 2026-11-15 conductor: Node v22.23.4 is available in this session.
@@ -21,7 +21,7 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - The console, `board/HOLD.md` (absent, so work may proceed).
 
 ## Decided by Dinis (with his words and the date)
-- 2026-11-15: "you are going to be the agent called conductor@AgentiCCell.dinis". Note the spelling: the brief uses `agenticcells`; Dinis's message uses `AgentiCCell`. To confirm with him (see ACC-010); until answered, commits use `conductor@agenticcells.dinis`.
+- 2026-11-15: "you are going to be the agent called conductor@AgentiCCell.dinis". Settled the same day by Dinis: "all should be agenticcells" and "agenticcell was a mistake on my part". Every agent name, repository and domain uses `agenticcells`; this agent is `conductor@agenticcells.dinis`.
 - 2026-11-15: "here is your first brief, and agentic team to spin up here" (the bootstrap zip).
 - 2026-11-15: Dinis asked to clone `AgentiCCells/AgentiCCells__Website`, then said "I also changed the default branch to dev". Taken as: this is the repository, and `dev` is the release branch the Pages workflow deploys from.
 - 2026-11-15: "ok, small change of plans for now the url is agenticcells.com". The site's custom domain (CNAME, validator, README, ACC-005) is now agenticcells.com. What agenticcells.ai does meanwhile is not decided.
