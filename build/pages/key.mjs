@@ -30,8 +30,9 @@ export default async function key() {
 <script src="/assets/key.js" defer></script>`;
   return [{
     path: '/key/',
-    title: 'Your key (prototype): AgentiCCells',
-    description: 'A prototype of the key step: make a key pair in your browser and see the public half as text and a QR code. Nothing is sent.',
+    title: 'Make a key pair in your browser (prototype): AgentiCCells',
+    noindex: true, // reviewer@ V-RV2: linked from one page only and a prototype, so kept out of the sitemap until it is ready
+    description: 'A prototype of step 5 of the website cell: make a key pair in your browser and see the public half as text and a QR code. Nothing is sent.',
     html,
   }];
 }
