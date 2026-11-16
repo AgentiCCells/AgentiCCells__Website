@@ -120,8 +120,9 @@ ${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !me
 ${origin ? `<meta property="og:url" content="${esc(origin + current)}">\n` : ''}<meta name="twitter:card" content="summary">
 </head>
 <body${current === '/' ? ' class="home"' : ''}>
+<a class="skip" href="#main">Skip to the content</a>
 <header><a class="brand" href="/">${MARK}<span>AgentiCCells</span></a>${navHtml(nav, current)}</header>
-<main>
+<main id="main" tabindex="-1">
 ${content}
 </main>
 <footer>${moreHtml(nav, current)}<p>Contact: <a href="mailto:${contact}">${contact}</a></p><p>Code under Apache-2.0. Text and images under CC BY 4.0.</p><p class="version">Version ${esc(version)}</p></footer>

@@ -14,3 +14,5 @@
 {"time": "2026-11-15T23:10:01Z", "agent": "designer@AgentiCCells.dinis", "item": "D11", "action": "done", "summary": "link styling and rhythm built and checked"}
 {"time": "2026-11-16T01:09:48Z", "agent": "designer@AgentiCCells.dinis", "item": "D5", "action": "started", "summary": "cell diagram and home hero (D5, D-RV2)"}
 {"time": "2026-11-16T01:10:42Z", "agent": "designer@AgentiCCells.dinis", "item": "D5", "action": "done", "summary": "cell diagram and home hero built and checked"}
+{"time": "2026-11-16T08:13:10Z", "agent": "designer@AgentiCCells.dinis", "item": "D6", "action": "started", "summary": "accessibility pass with axe-core and Chromium"}
+{"time": "2026-11-16T08:15:58Z", "agent": "designer@AgentiCCells.dinis", "item": "D6", "action": "done", "summary": "axe 0 violations, skip link added"}

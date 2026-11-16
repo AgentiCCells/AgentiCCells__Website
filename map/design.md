@@ -106,3 +106,11 @@ on-accent on accent: 7.62 (light), 9.36 (dark). Every text pair passes AA and AA
 - Hero: two columns from 48 rem (text and buttons left, diagram right), one column on phones; header, main and footer widen to 62 rem on the home page only (body class `home`); main button goes to /website-cell/, the email is the ghost button. Markup and CSS only; no words in content/ changed.
 - Checked with Playwright at 390 and 1280 px, light and dark: no horizontal scroll (scrollWidth equals viewport in all four). Contrast: palette unchanged.
 - Open: the caption and the button label are mine as a stopgap; writer@ may reword them (inbox note). D-RV2's logo part was done in D10; D5 also applies to the method page, not yet placed there.
+
+## D6 · Accessibility pass (designer@AgentiCCells.dinis, 2026-11-16)
+Method: axe-core 4.10.2 (rules wcag2a, wcag2aa, wcag21aa, best-practice) in Chromium over a local server of the built site: all 17 pages, 390 and 1280 px, light and dark. (A first run from file:// had no CSS and was discarded.) Axe is run from a scratch folder; it is not added to the repository.
+- Result: 0 violations. Axe could not decide contrast for text over the hero gradient and SVG diagrams; measured by hand instead (WCAG ratios, light / dark): fg on bg 17.6 / 15.2; muted on bg 7.2 / 8.3; muted on surface 6.7 / 7.5; muted on the cell figure tint 6.4 / 7.3; accent on bg 7.6 / 9.4; accent on surface 7.0 / 8.4; on-accent on accent 7.6 / 9.4. The hero gradient runs from surface to bg, so every pair above covers it. All at least 4.5:1. Console status pills passed axe in both themes.
+- Headings: one h1 per page, no skipped levels (checked on home, console, website cell). Images: the pages use inline SVG with titles; no img elements, so no alt text to add.
+- Keyboard: 21 tab stops on the home page, every one with a visible outline (3 px accent) at both widths and in both themes; the Menu summary shows a focus ring.
+- Changed: a "Skip to the content" link (first tab stop, visible on focus, moves focus to main); `main` is the skip target; reduced-motion and forced-colours rules.
+- Not done: screen reader run (no reader in this session); the line colour (1.4:1 on bg) is decoration only, not the only cue for any control.
