@@ -112,15 +112,16 @@ function page(meta, content, nav = [], current = '') {
 <title>${esc(meta.title || '')}</title>
 <meta name="description" content="${esc(meta.description || '')}">
 <link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+${meta.design ? '<link rel="stylesheet" href="/assets/designs.css">\n' : ''}<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 ${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !meta.noindex ? `<link rel="canonical" href="${esc(origin + current)}">\n` : ''}<meta property="og:type" content="website">
 <meta property="og:site_name" content="AgentiCCells">
 <meta property="og:title" content="${esc(meta.title || '')}">
 <meta property="og:description" content="${esc(meta.description || '')}">
 ${origin ? `<meta property="og:url" content="${esc(origin + current)}">\n` : ''}<meta name="twitter:card" content="summary">
 </head>
-<body${current === '/' ? ' class="home wide"' : meta.wide ? ' class="wide"' : ''}>
+<body${current === '/' || meta.design ? ` class="home wide${meta.design ? ' design-' + meta.design : ''}"` : meta.wide ? ' class="wide"' : ''}>
 <a class="skip" href="#main">Skip to the content</a>
+${current === '/' || meta.design ? designBar(meta.design || 'calm') : ''}
 <header><a class="brand" href="/">${MARK}<span>AgentiCCells</span></a>${navHtml(nav, current)}</header>
 <main id="main" tabindex="-1">
 ${content}
@@ -247,6 +248,39 @@ const FLOW = '<figure class="flow"><svg viewBox="0 0 360 324" role="img" aria-la
 for (const p of pages) if (p.path === '/website-cell/') {
   const i = p.html.indexOf('<ol class="steps">');
   if (i >= 0) p.html = p.html.slice(0, i) + FLOW + '\n' + p.html.slice(i);
+}
+
+// D-FIVE · Design switcher (designer@, 2026-11-16, after Dinis's liking for the five designs of one site's data).
+// The home page exists in several designs with the same words: / (Calm), /d/editorial/ and /d/console/. The bar is plain
+// links, so it needs no script; the choice is the address. Other designs are noindex and are not in the sitemap.
+const DESIGNS = [
+  ['calm', 'Calm', '/', 'Plain and quiet. The default.'],
+  ['editorial', 'Editorial', '/d/editorial/', 'Paper, serif headings, numbered sections.'],
+  ['console', 'Console', '/d/console/', 'Dark and technical, in cards.'],
+];
+function designBar(now) {
+  const items = DESIGNS.map(([id, name, path, tip]) => `<li><a href="${path}"${id === now ? ' aria-current="true"' : ''} title="${esc(tip)}">${name}</a></li>`).join('');
+  return `<div class="design-bar"><nav aria-label="Design of this page"><span class="db-label">Design</span><ul>${items}</ul><span class="db-note">Same words, three designs</span></nav></div>`;
+}
+// Wrap each h2 and what follows it in a section, so a design can lay sections out as it likes (CSS only).
+function sectioned(html) {
+  const cut = html.search(/\n<h2>|\n<section class="examples"/);
+  if (cut < 0) return html;
+  const parts = html.slice(cut + 1).split(/\n(?=<h2>|<section class="examples")/);
+  let n = 0;
+  return html.slice(0, cut + 1) + parts.map((b) => {
+    const id = slug((/^<h2[^>]*>([\s\S]*?)<\/h2>/.exec(b) || [0, 'examples'])[1]);
+    if (b.startsWith('<section class="examples"')) { const num = String(++n).padStart(2, '0'); return b.replace('<section class="examples"', '<section class="blk examples"').replace(/<h2 id="([^"]*)">/, `<h2 id="$1" data-n="${num}">`); }
+    const num = String(++n).padStart(2, '0');
+    return `<section class="blk" id="${id}">\n${b.replace(/^<h2>/, `<h2 data-n="${num}">`)}\n</section>`;
+  }).join('\n');
+}
+{
+  const home = pages.find((p) => p.path === '/');
+  for (const [id, name, path] of DESIGNS.slice(1)) pages.push({
+    path, title: `AgentiCCells (${name} design)`, description: home.description, noindex: true, design: id,
+    html: sectioned(home.html), source: 'build/build.mjs', file: fileFor(path),
+  });
 }
 
 // 404 page (GitHub Pages serves site/404.html for unknown paths). Not indexed, not in the nav.

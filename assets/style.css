@@ -274,3 +274,14 @@ ul.example-cards{list-style:none;padding:0;margin:1rem 0;display:grid;gap:1rem;g
 @media (min-width:44rem){ul.example-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:43.99rem){.example-cards img{aspect-ratio:1100/360}.ex-body{padding:.6rem .8rem .8rem}.ex-body>span:last-child{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
 .wide.home main>.offer-strip:not(.hero):not(.page-head):not(.closing),.wide.home main>.examples:not(.hero):not(.page-head):not(.closing){max-width:none}
+
+/* D-FIVE · Design switcher bar (designer@, 2026-11-16): plain links above the header on the home page and its other designs. */
+.design-bar{background:var(--surface);border-bottom:1px solid var(--line);font-size:.8125rem}
+.design-bar nav{display:flex;flex-wrap:wrap;align-items:center;gap:.15rem .75rem;max-width:62rem;margin:0 auto;padding:.3rem 1rem}
+.design-bar ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem}
+.design-bar a{display:inline-flex;align-items:center;min-height:2rem;padding:0 .8rem;border:1px solid var(--line);border-radius:99px;color:var(--fg);text-decoration:none;font-weight:600;background:var(--bg)}
+.design-bar a:hover{border-color:var(--accent)}
+.design-bar a[aria-current="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.db-label{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.6875rem;color:var(--muted)}
+.db-note{color:var(--muted);margin-left:auto}
+@media (max-width:35.99rem){.db-note{display:none}.design-bar nav{justify-content:space-between}}
