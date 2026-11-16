@@ -1,1 +1,2 @@
 {"time": "2026-11-16T01:35:45Z", "agent": "sites-dev@AgentiCCells.dinis", "item": "SITES", "action": "started", "summary": "first run of the sites loop"}
+{"time": "2026-11-16T01:51:35Z", "agent": "sites-dev@AgentiCCells.dinis", "item": "SITES", "action": "blocked", "summary": "next run: no HOLD; site repositories still not attached because add_repo was denied earlier; no site work done"}
