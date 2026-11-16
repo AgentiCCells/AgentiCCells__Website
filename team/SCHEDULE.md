@@ -39,6 +39,7 @@ The scheduled tasks themselves are listed in claude.ai under the account's sched
 | Agent | Scheduled task (role tasks PAUSED 2026-11-15 17:45 UTC) | Cron (Europe/London) |
 |---|---|---|
 | conductor@ | trig_01MKTKVET86ucSVeTuiBjFh4 (wakes the new conductor session …QeVLMD7ANkt1akJeD; created on Dinis's word 2026-11-16 ~17:58 UTC: "Yes create it") | `CRON_TZ=Europe/London 7 7-23 * * *` |
+| conductor.riskmandate (RiskMandate team, session …MRwwwJNPFW4sLUHfE) | trig_01Px3z4ArnjyjFcMcaWc19Gg (created by conductor@ on Dinis's word 2026-11-16 ~23:20 UTC, brief board/briefs/two-sites-2026-11-16.md) | `CRON_TZ=Europe/London 37 7-23 * * *` |
 | conductor@ (first session) | trig_01CbV6xVJpqAavDovmK3AbRD (wakes the first conductor session …SvYRxVA5jC7yo7HF; asked to stand down; Dinis asked to disable it) | `7 1,3,5,7-23 * * *` |
 | dev@ | trig_0172Sot9BdxrBfe73hJVZ7Cx | `13 1,3,5,7-23 * * *` |
 | writer@ | trig_01WUQ53PYXnJYKdi4oaqTUQf | `19 1,3,5,7-23 * * *` |
