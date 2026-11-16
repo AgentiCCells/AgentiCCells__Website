@@ -44,6 +44,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-15 23:08 conductor (wake 6): agenticcells.ai at v0.1.62: five-link navigation with a script-free mobile menu, a footer "More" row and an SVG logo mark (designer@, aeb5d6d); per-size sections on /cells/ (writer@, a66c522); data/links.json and a warning-only external link check in CI (dev@, 6f2ab68); case-study/count.mjs and numbers.md (reporter@, 1b14843). sites@ built a draft orange-grower site (simulated order, English and Portuguese, 611c8f9). agenticcells.site and hub.agenticcells.site: https still not answering (certificates pending).
 
+- 2026-11-16 01:08 conductor (wake 7, overnight): agenticcells.ai at v0.1.70: an articles section with an index and RSS feed (dev@, 2a6c1f7); a build-your-own-website page with this site as the worked example (writer@, eb53eff); lighter links and section rhythm (designer@, 18913cd). Second review (reviewer@, d5c9abd): navigation fixed; biggest problems now the console's length on a phone and stale ".com" text, and the home page's lack of a hero. agenticcells.site and hub.agenticcells.site now answer over https. With Dinis, sites@ set up three more site repositories he created (Site__Algarve-Orange-Grower, Site__Gabriel-DaCruz, Site__Algarve-Evolution queued) with vaults and CI pipelines; vault write keys handed to Dinis outside chat.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
