@@ -9,6 +9,8 @@ Dinis Cruz, 16 November 2026: "what we are going to do here is exactly what we w
 
 In [The cell is the unit](https://newsroom.sgit.ai/articles/the-cell-is-the-unit.html) (newsroom.sgit.ai, 2026-11-16), Dinis argues that the cell is the unit of what we sell: one focused job, with an objective, a deliverable and a behaviour policy, and as many parts as the job needs. He also says we should live in cells ourselves first. This page does that for the team that keeps this site. Every fact below comes from the repository or from `REALITY.md`. Anything else is marked as a proposal.
 
+You can buy the same thing. Our own team is the evidence for the cell described on [the website cell page](/website-cell/): what you would buy, and what has not been sold yet. How to get a team like this one is [further down](#how-a-customer-gets-the-same), in the same order as before.
+
 ## The objective, the deliverable and the policy
 
 - **Objective.** Build and keep the AgentiCCells website, and show every step while doing it. Dinis, 15 November 2026: "even the creation of this website is something that we want to sell." Source: [REALITY.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/REALITY.md).

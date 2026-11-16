@@ -5,13 +5,7 @@ nav: 3
 ---
 # Cells
 
-A cell is a small agentic team set up in your environment. It is useful on its own, and you can remove it without breaking anything else. There are four sizes.
-
-## Examples live on the hub
-
-We do not list every cell we have made on this page. [The hub](https://hub.agenticcells.site/) does that, with one page per cell, so you can find one, open it and copy it. This site sells; the hub lists. Every cell we host publicly is a demo, made to show how the work goes, and it says so. None is a customer's site, and none has been sold.
-
-Examples by kind: [the site factory](https://hub.agenticcells.site/cells/site-factory/), [the site template](https://hub.agenticcells.site/cells/site-template/), [an email cell](https://hub.agenticcells.site/cells/cell-email/) and [a specialist agent](https://hub.agenticcells.site/cells/specialist-design/). A proposed example, not yet built, is the [job-seeker cell](/job-seeker-cell/). Each page on the hub has a fork link; the five ways to make a cell yours are [below](#five-ways-to-make-a-cell-yours).
+A cell is a small agentic team set up in your environment. It is useful on its own, and you can remove it without breaking anything else. There are four sizes, from one agent to a network. Every price is a first proposal, and nothing has been sold. [Examples we have made](#examples-live-on-the-hub) are on the hub.
 
 ## The four sizes
 
@@ -58,21 +52,13 @@ The newsroom describes six setups, from the simplest up, in [Six setups of an ag
 
 The lower three are a prompt. The upper three are a setup, with keys, lanes, boards and policies.
 
-## Which cell matches which setup
-
-Our reading of the ladder against the six setups:
-
-- **One agent** sets up an agent with sub-agents in one runtime.
-- **A few sessions** sets up several sessions, one per role.
-- **A team** sets up a conductor and its agents.
-- **A network** sets up conductors of conductors.
-
-## Each size in turn
+## The four sizes in detail
 
 For each size: what we set up, what you provide, what you own afterwards, and how long it takes. Every price is a first proposal, not an offer. No size has been sold yet, so no time below is measured on a customer. Where we have no figure, the page says so. The "includes" lines come from `data/cells.json` (Dinis Cruz, board/BRIEF.md, 2026-11-15).
 
 ### One agent (£500, first proposal)
 
+- **Matches the setup:** an agent with sub-agents in one runtime ([six setups](#the-six-setups-of-an-agentic-system)).
 - **What we set up:** one agent with sub-agents in one runtime, for one workflow, set up in a session.
 - **What you provide:** the workflow you want helped, and a place for the agent to run. Which runtime is yours to choose (see [open source](/open-source/)).
 - **What you own afterwards:** the setup, as files in your own repository. We keep no state.
@@ -81,6 +67,7 @@ For each size: what we set up, what you provide, what you own afterwards, and ho
 
 ### A few sessions (£1,500, first proposal)
 
+- **Matches the setup:** several sessions, one per role ([six setups](#the-six-setups-of-an-agentic-system)).
 - **What we set up:** one session per role, each its own runtime, sharing lanes and a vault.
 - **What you provide:** the roles you want, and the accounts those sessions run in.
 - **What you own afterwards:** the sessions' setup, the lanes and the vault, all in your environment.
@@ -88,6 +75,7 @@ For each size: what we set up, what you provide, what you own afterwards, and ho
 
 ### A team (£5,000, first proposal)
 
+- **Matches the setup:** a conductor and its agents ([six setups](#the-six-setups-of-an-agentic-system)).
 - **What we set up:** a conductor and its agents, a key per agent (only the public half published), a board as files, and the console.
 - **What you provide:** a repository for the board, accounts for the agents.
 - **What you own afterwards:** the repository, the board, the briefs and the public keys. Private keys stay in each agent's session and are gone when it ends.
@@ -95,6 +83,7 @@ For each size: what we set up, what you provide, what you own afterwards, and ho
 
 ### A network (£20,000, first proposal)
 
+- **Matches the setup:** conductors of conductors ([six setups](#the-six-setups-of-an-agentic-system)).
 - **What we set up:** conductors of conductors across a division or network, with policies and observability.
 - **What you provide:** the division's structure, the policies you want, and who may approve changes.
 - **What you own afterwards:** the same as a team, for every conductor: boards, briefs, policies and the observability files.
@@ -120,6 +109,12 @@ From Dinis Cruz, [Fork it](https://newsroom.sgit.ai/articles/fork-it.html) (news
 5. **Ask us.** Works today, by email to [agent@riskmandate.ai](mailto:agent@riskmandate.ai), on the paid ladder. First proposal prices, nothing sold yet.
 
 The first four are meant to be free. That is the article's plan, not something we offer yet.
+
+## Examples live on the hub
+
+We do not list every cell we have made on this page. [The hub](https://hub.agenticcells.site/) does that, with one page per cell, so you can find one, open it and copy it. This site sells; the hub lists. Every cell we host publicly is a demo, made to show how the work goes, and it says so. None is a customer's site, and none has been sold.
+
+Examples by kind: [the site factory](https://hub.agenticcells.site/cells/site-factory/), [the site template](https://hub.agenticcells.site/cells/site-template/), [an email cell](https://hub.agenticcells.site/cells/cell-email/) and [a specialist agent](https://hub.agenticcells.site/cells/specialist-design/). A proposed example, not yet built, is the [job-seeker cell](/job-seeker-cell/). Each page on the hub has a fork link; the five ways to make a cell yours are [below](#five-ways-to-make-a-cell-yours).
 
 ## What this page does not claim
 

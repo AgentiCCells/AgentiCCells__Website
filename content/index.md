@@ -13,6 +13,16 @@ Our first offering is a public website, built by an agentic team, that you steer
 
 **[See the website cell: the seven steps, what you get and what you own](/website-cell/)**
 
+## See what we have made
+
+[The hub](https://hub.agenticcells.site/) lists every cell we have made, one page each. Three examples, each a demo, as the hub marks them:
+
+- **Demo: [RiskMandate at Web Summit](https://hub.agenticcells.site/cells/riskmandate-at-websummit/).** The first site made by the site factory from a request file.
+- **Demo: [the orange grower](https://hub.agenticcells.site/cells/algarve-orange-grower/) (made up).** A made-up orange grower's site with a zone map and an order flow, with invented prices and nothing sent.
+- **Demo: [Gabriel DaCruz's site](https://hub.agenticcells.site/cells/gabriel-dacruz/).** A personal site made with sites@.
+
+None is a customer's site, and none has been sold.
+
 ## Who it is for
 
 Teams that want AI agents doing real work, inside their own accounts and repositories, and want to see and stop what those agents do. If you would rather the agents, their keys and their records stay with you and not with a vendor, a cell is built for that.
