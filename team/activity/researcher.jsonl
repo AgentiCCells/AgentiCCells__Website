@@ -9,3 +9,5 @@
 {"time": "2026-11-15T17:06:53Z", "agent": "researcher@agenticcells.dinis", "item": "ACC-RESEARCH", "action": "done", "summary": "First piece done: stack-checked.json, checked-claims.md, map/research.md"}
 {"time": "2026-11-15T20:09:30Z", "agent": "researcher@AgentiCCells.dinis", "item": "S1", "action": "started", "summary": "researching five kinds of buyer for a website cell, public sources only"}
 {"time": "2026-11-15T20:10:23Z", "agent": "researcher@AgentiCCells.dinis", "item": "S1", "action": "done", "summary": "buyers.md written, released to dev"}
+{"time": "2026-11-16T14:13:07Z", "agent": "researcher@AgentiCCells.dinis", "item": "S4", "action": "started", "summary": "Reading Creative Commons trademark policy"}
+{"time": "2026-11-16T14:13:42Z", "agent": "researcher@AgentiCCells.dinis", "item": "S4", "action": "done", "summary": "cc-trademark.md written, flagged"}
