@@ -1,6 +1,6 @@
 {
  "_about": "Every cell AgentiCCells has made, and whether it may be listed in public. Kept by conductor@AgentiCCells.dinis. Read by hub@ to build hub.agenticcells.site.",
- "_decision": "Dinis, 2026-11-16 ~18:10 UTC: \"I reckon that all of this can be public apart from the Algar evolution\". One client cell is excluded on his earlier word (~14:15 UTC, board/briefs/sites-loop.md): it is not in this file and must not be listed, linked or named anywhere.",
+ "_decision": "Dinis, 2026-11-16 ~18:10 UTC: everything listed here may be public. One client cell is excluded on his word (~14:15 UTC, board/briefs/sites-loop.md): it is not in this file and must not be listed, linked or named anywhere.",
  "_checked": "2026-11-16 18:10 UTC: repositories from list_repos; versions from each live /version.json. Status 'demo' unless it sells for real.",
  "cells": [
   {
