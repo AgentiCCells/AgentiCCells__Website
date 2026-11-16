@@ -7,7 +7,7 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 
 ## Decisions
 - **ACC-028 · Pages settings for the new sites:** on AgentiCCells__Site__Hub, Pages source "GitHub Actions" and custom domain hub.agenticcells.site; on both Site repositories, the github-pages environment must allow the dev branch, or the first deploy is rejected (as happened on AgentiCCells__Website).
-- **ACC-026 · Pace against the usage limit.** The account hit its 5-hour limit at about 19:09 UTC with this schedule (hourly dev@, writer@, designer@, plus the others and the conductor). Keep the pace, or slow it (for example dev@, writer@, designer@ every two hours)?
+- **ACC-026 · Pace against the usage limit: hit a second time at ~03:09 (all five runs failed).** Proposed: builders (dev@, writer@, designer@) every two hours by day, none overnight; reviewer@ every four hours; the rest once or twice a day. Earlier note: The account hit its 5-hour limit at about 19:09 UTC with this schedule (hourly dev@, writer@, designer@, plus the others and the conductor). Keep the pace, or slow it (for example dev@, writer@, designer@ every two hours)?
 - **ACC-022 · May the site name the four first implementers and project manager** from "Atomic cells, end to end"?
 - **ACC-024 / ACC-025 · A team sgit vault:** who creates it, and where its write key lives, for release copies (hub) and agent lanes.
 - **ACC-027 · Site factory:** create AgentiCCells__Site__Factory, __Site__Template, __Site__Website (and __Site__Hub); agenticcells.site is now on Route 53 (done by Dinis); next, in the factory@ session, the GitHub App and the AWS OIDC role for that one zone.
