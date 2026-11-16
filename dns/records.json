@@ -1,13 +1,17 @@
 {
   "about": "Every DNS record of the three AgentiCCells zones, as data. One object per record set. \"observed\" is the date the record was seen live with public lookups (DNS-over-HTTPS); \"planned\" means not live yet. Zone status \"parked\" means not in use: checked for information only. Checked by dns/check.mjs. Kept by dns@agenticcells.dinis; applied only by Dinis, or by an agent with credentials scoped to these zones.",
-  "source": "dns/ROUTE53.md; observed 2026-11-15 by dns@agenticcells.dinis with dns.google and cloudflare-dns.com; re-observed 2026-11-15 (after 20:08 UTC) by dns@AgentiCCells.dinis, same lookups plus curl",
+  "source": "dns/ROUTE53.md; observed 2026-11-15 by dns@agenticcells.dinis with dns.google and cloudflare-dns.com; re-observed 2026-11-15 (after 20:08 UTC) by dns@AgentiCCells.dinis, same lookups plus curl; re-observed 2026-11-16 by dns@AgentiCCells.dinis with dns.google and curl (adds agenticcells.site)",
   "zones": [
     {
       "zone": "agenticcells.com",
-      "status": "unclaimed",
-      "use": "Served the company site until about 18:15 UTC on 2026-11-15, when the site moved to agenticcells.ai (Dinis: \"ok, domain agenticcells.ai is now pointed to the site\"). Still points at GitHub Pages, but no repository claims it: https and http answer 404 \"Site not found\", so any GitHub account could claim it (board/ACC-018.md). Nothing is changed until Dinis decides.",
-      "observed": "2026-11-15",
-      "http": {"url": "http://agenticcells.com/", "expect": 404, "note": "GitHub Pages \"Site not found\" while unclaimed"}
+      "status": "unused",
+      "use": "Not used. Dinis, 2026-11-15 ~21:15: \"agenticcells.com - we are not going to use it\". Still points at GitHub Pages, but no repository claims it: http, https and www answer 404 \"Site not found\", so any GitHub account could claim it (board/ACC-018.md). Nothing is changed until Dinis decides; observed unchanged 2026-11-16.",
+      "observed": "2026-11-16",
+      "http": {
+        "url": "http://agenticcells.com/",
+        "expect": 404,
+        "note": "GitHub Pages \"Site not found\" while unclaimed"
+      }
     },
     {
       "zone": "agenticcells.app",
@@ -16,27 +20,232 @@
       "note": "On 2026-11-15 the .app registry answered NXDOMAIN for agenticcells.app: the domain is not delegated to any nameservers yet."
     },
     {
+      "zone": "agenticcells.site",
+      "status": "live",
+      "use": "Customer and example sites, one label per site, plus the hub at hub.agenticcells.site. Zone on Route 53. Dinis, 2026-11-15 ~20:45: \"I can confirm that I have agenticcells.site\".",
+      "observed": "2026-11-16",
+      "http": {
+        "url": "https://agenticcells.site/version.json",
+        "expect": 200
+      }
+    },
+    {
       "zone": "agenticcells.ai",
       "status": "live",
       "use": "The company site, served by GitHub Pages from AgentiCCells/AgentiCCells__Website. Dinis, 2026-11-15 ~18:15: \"ok, domain agenticcells.ai is now pointed to the site\". Earlier (\"not going to use it until the NS stabelise\") is superseded.",
       "observed": "2026-11-15",
-      "http": {"url": "https://agenticcells.ai/version.json", "expect": 200}
+      "http": {
+        "url": "https://agenticcells.ai/version.json",
+        "expect": 200
+      }
     }
   ],
   "records": [
-    {"zone": "agenticcells.com", "name": "agenticcells.com", "type": "NS", "ttl": 172800, "values": ["ns-1184.awsdns-20.org", "ns-1728.awsdns-24.co.uk", "ns-25.awsdns-03.com", "ns-566.awsdns-06.net"], "observed": "2026-11-15", "note": "Route 53 hosted zone; the delegation is set at the registrar."},
-    {"zone": "agenticcells.com", "name": "agenticcells.com", "type": "A", "ttl": 300, "values": ["185.199.108.153", "185.199.109.153", "185.199.110.153", "185.199.111.153"], "observed": "2026-11-15", "note": "GitHub Pages apex addresses."},
-    {"zone": "agenticcells.com", "name": "www.agenticcells.com", "type": "CNAME", "ttl": 300, "values": ["agenticcells.github.io"], "observed": "2026-11-15", "note": "GitHub redirects www to the apex while a repository claims the domain; unclaimed now, so https://www.agenticcells.com/ answers 404."},
-    {"zone": "agenticcells.com", "name": "agenticcells.com", "type": "AAAA", "ttl": 300, "values": ["2606:50c0:8000::153", "2606:50c0:8001::153", "2606:50c0:8002::153", "2606:50c0:8003::153"], "planned": true, "note": "Proposal: IPv6 for the apex, as in dns/ROUTE53.md step 3. Re-check the addresses against GitHub's documentation before applying."},
-    {"zone": "agenticcells.com", "name": "agenticcells.com", "type": "CAA", "ttl": 3600, "values": ["0 issue \"letsencrypt.org\""], "planned": true, "note": "Proposal: GitHub Pages certificates come from Let's Encrypt (dns/ROUTE53.md step 3)."},
-    {"zone": "agenticcells.com", "name": "_github-pages-challenge-agenticcells.agenticcells.com", "type": "TXT", "ttl": 3600, "values": ["to be given by Dinis"], "planned": true, "note": "Proposal: verify agenticcells.com in the AgentiCCells GitHub organisation, now that .com carries the site. The value is shown by GitHub (Organisation settings, Pages, Add a domain)."},
-
-    {"zone": "agenticcells.app", "name": "agenticcells.app", "type": "CAA", "ttl": 3600, "values": ["0 issue \"letsencrypt.org\""], "planned": true, "note": "dns/ROUTE53.md step 5."},
-    {"zone": "agenticcells.app", "name": "_github-pages-challenge-agenticcells.agenticcells.app", "type": "TXT", "ttl": 3600, "values": ["to be given by Dinis"], "planned": true, "note": "Verifying the domain in the GitHub organisation stops another account's repository from claiming a subdomain of it."},
-
-    {"zone": "agenticcells.ai", "name": "agenticcells.ai", "type": "NS", "ttl": 172800, "values": ["ns-1167.awsdns-17.org", "ns-1569.awsdns-04.co.uk", "ns-354.awsdns-44.com", "ns-603.awsdns-11.net"], "observed": "2026-11-15"},
-    {"zone": "agenticcells.ai", "name": "agenticcells.ai", "type": "A", "ttl": 300, "values": ["185.199.108.153", "185.199.109.153", "185.199.110.153", "185.199.111.153"], "observed": "2026-11-15", "note": "GitHub Pages apex addresses; the repository's CNAME is agenticcells.ai since about 18:15 UTC."},
-    {"zone": "agenticcells.ai", "name": "www.agenticcells.ai", "type": "CNAME", "ttl": 300, "values": ["agenticcells.github.io"], "observed": "2026-11-15"},
-    {"zone": "agenticcells.ai", "name": "_github-pages-challenge-agenticcells.agenticcells.ai", "type": "TXT", "ttl": 3600, "values": ["to be given by Dinis"], "planned": true, "note": "Proposal: verify agenticcells.ai in the AgentiCCells GitHub organisation (ACC-018). Observed 2026-11-15: NXDOMAIN, no verification TXT."}
+    {
+      "zone": "agenticcells.com",
+      "name": "agenticcells.com",
+      "type": "NS",
+      "ttl": 172800,
+      "values": [
+        "ns-1184.awsdns-20.org",
+        "ns-1728.awsdns-24.co.uk",
+        "ns-25.awsdns-03.com",
+        "ns-566.awsdns-06.net"
+      ],
+      "observed": "2026-11-15",
+      "note": "Route 53 hosted zone; the delegation is set at the registrar."
+    },
+    {
+      "zone": "agenticcells.com",
+      "name": "agenticcells.com",
+      "type": "A",
+      "ttl": 300,
+      "values": [
+        "185.199.108.153",
+        "185.199.109.153",
+        "185.199.110.153",
+        "185.199.111.153"
+      ],
+      "observed": "2026-11-15",
+      "note": "GitHub Pages apex addresses."
+    },
+    {
+      "zone": "agenticcells.com",
+      "name": "www.agenticcells.com",
+      "type": "CNAME",
+      "ttl": 300,
+      "values": [
+        "agenticcells.github.io"
+      ],
+      "observed": "2026-11-15",
+      "note": "GitHub redirects www to the apex while a repository claims the domain; unclaimed now, so https://www.agenticcells.com/ answers 404."
+    },
+    {
+      "zone": "agenticcells.com",
+      "name": "agenticcells.com",
+      "type": "AAAA",
+      "ttl": 300,
+      "values": [
+        "2606:50c0:8000::153",
+        "2606:50c0:8001::153",
+        "2606:50c0:8002::153",
+        "2606:50c0:8003::153"
+      ],
+      "planned": true,
+      "note": "Proposal: IPv6 for the apex, as in dns/ROUTE53.md step 3. Re-check the addresses against GitHub's documentation before applying."
+    },
+    {
+      "zone": "agenticcells.com",
+      "name": "agenticcells.com",
+      "type": "CAA",
+      "ttl": 3600,
+      "values": [
+        "0 issue \"letsencrypt.org\""
+      ],
+      "planned": true,
+      "note": "Proposal: GitHub Pages certificates come from Let's Encrypt (dns/ROUTE53.md step 3)."
+    },
+    {
+      "zone": "agenticcells.com",
+      "name": "_github-pages-challenge-agenticcells.agenticcells.com",
+      "type": "TXT",
+      "ttl": 3600,
+      "values": [
+        "to be given by Dinis"
+      ],
+      "planned": true,
+      "note": "Proposal: verify agenticcells.com in the AgentiCCells GitHub organisation, now that .com carries the site. The value is shown by GitHub (Organisation settings, Pages, Add a domain)."
+    },
+    {
+      "zone": "agenticcells.app",
+      "name": "agenticcells.app",
+      "type": "CAA",
+      "ttl": 3600,
+      "values": [
+        "0 issue \"letsencrypt.org\""
+      ],
+      "planned": true,
+      "note": "dns/ROUTE53.md step 5."
+    },
+    {
+      "zone": "agenticcells.app",
+      "name": "_github-pages-challenge-agenticcells.agenticcells.app",
+      "type": "TXT",
+      "ttl": 3600,
+      "values": [
+        "to be given by Dinis"
+      ],
+      "planned": true,
+      "note": "Verifying the domain in the GitHub organisation stops another account's repository from claiming a subdomain of it."
+    },
+    {
+      "zone": "agenticcells.site",
+      "name": "agenticcells.site",
+      "type": "NS",
+      "ttl": 21600,
+      "values": [
+        "ns-1471.awsdns-55.org",
+        "ns-1553.awsdns-02.co.uk",
+        "ns-23.awsdns-02.com",
+        "ns-614.awsdns-12.net"
+      ],
+      "observed": "2026-11-16",
+      "note": "Route 53 hosted zone."
+    },
+    {
+      "zone": "agenticcells.site",
+      "name": "agenticcells.site",
+      "type": "A",
+      "ttl": 300,
+      "values": [
+        "185.199.108.153",
+        "185.199.109.153",
+        "185.199.110.153",
+        "185.199.111.153"
+      ],
+      "observed": "2026-11-16",
+      "note": "GitHub Pages apex addresses; serves https://agenticcells.site/ (v0.1.2)."
+    },
+    {
+      "zone": "agenticcells.site",
+      "name": "hub.agenticcells.site",
+      "type": "CNAME",
+      "ttl": 300,
+      "values": [
+        "agenticcells.github.io"
+      ],
+      "observed": "2026-11-16",
+      "note": "The hub, served by GitHub Pages; https://hub.agenticcells.site/version.json answers 200 (v0.1.2)."
+    },
+    {
+      "zone": "agenticcells.site",
+      "name": "www.agenticcells.site",
+      "type": "CNAME",
+      "ttl": 300,
+      "values": [
+        "agenticcells.github.io"
+      ],
+      "observed": "2026-11-16",
+      "note": "Seen live; not mentioned in the brief."
+    },
+    {
+      "zone": "agenticcells.site",
+      "name": "_github-pages-challenge-agenticcells.agenticcells.site",
+      "type": "TXT",
+      "ttl": 3600,
+      "values": [
+        "to be given by Dinis"
+      ],
+      "planned": true,
+      "note": "Proposal: verify agenticcells.site in the AgentiCCells GitHub organisation (ACC-018). Observed 2026-11-16: NXDOMAIN, no verification TXT."
+    },
+    {
+      "zone": "agenticcells.ai",
+      "name": "agenticcells.ai",
+      "type": "NS",
+      "ttl": 172800,
+      "values": [
+        "ns-1167.awsdns-17.org",
+        "ns-1569.awsdns-04.co.uk",
+        "ns-354.awsdns-44.com",
+        "ns-603.awsdns-11.net"
+      ],
+      "observed": "2026-11-15"
+    },
+    {
+      "zone": "agenticcells.ai",
+      "name": "agenticcells.ai",
+      "type": "A",
+      "ttl": 300,
+      "values": [
+        "185.199.108.153",
+        "185.199.109.153",
+        "185.199.110.153",
+        "185.199.111.153"
+      ],
+      "observed": "2026-11-15",
+      "note": "GitHub Pages apex addresses; the repository's CNAME is agenticcells.ai since about 18:15 UTC."
+    },
+    {
+      "zone": "agenticcells.ai",
+      "name": "www.agenticcells.ai",
+      "type": "CNAME",
+      "ttl": 300,
+      "values": [
+        "agenticcells.github.io"
+      ],
+      "observed": "2026-11-15"
+    },
+    {
+      "zone": "agenticcells.ai",
+      "name": "_github-pages-challenge-agenticcells.agenticcells.ai",
+      "type": "TXT",
+      "ttl": 3600,
+      "values": [
+        "to be given by Dinis"
+      ],
+      "planned": true,
+      "note": "Proposal: verify agenticcells.ai in the AgentiCCells GitHub organisation (ACC-018). Observed 2026-11-15: NXDOMAIN, no verification TXT."
+    }
   ]
 }
