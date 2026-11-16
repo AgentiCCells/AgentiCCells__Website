@@ -3,15 +3,15 @@
   "url": "https://newsroom.sgit.ai/articles/reading-your-way-into-an-agentic-team.html",
   "title": "Reading your way into an agentic team: eight public sites a new team should read before it builds anything, how an agent should read them, and ten questions to answer first, because our websites are its memory",
   "date": "2026-11-15",
-  "read": "full",
-  "seen": "2026-11-15"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/starting-agenticcells.html",
   "title": "Starting AgentiCCells: a company that sets up small agentic teams, cells, in the customer's own environment, with a control centre, everything open and no state on our side; how it was named, researched, reviewed and set up in a day",
   "date": "2026-11-15",
-  "read": "full",
-  "seen": "2026-11-15"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/an-agentic-console.html",
@@ -24,8 +24,8 @@
   "url": "https://newsroom.sgit.ai/articles/six-setups-of-an-agentic-system.html",
   "title": "Six setups of an agentic system: from a single task to one agent, sub-agents, several sessions, a conductor and its team, and conductors of conductors, with the altitudes of a run inside each and command and control growing at every step",
   "date": "2026-11-15",
-  "read": "full",
-  "seen": "2026-11-15"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/selling-mini-agentic-teams.html",
@@ -248,8 +248,8 @@
   "url": "https://newsroom.sgit.ai/articles/how-a-vault-works.html",
   "title": "How a vault works: an encrypted store that acts like a database, where a server that is fully compromised leaks nothing, one mutable file lets every other object be cached for ever, and a web page can open a file in four requests or run a whole app in a sandbox",
   "date": "2026-11-03",
-  "read": "skimmed",
-  "seen": "2026-11-15"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/who-owns-the-stop-button.html",
@@ -1417,8 +1417,8 @@
   "url": "https://newsroom.sgit.ai/articles/can-you-sell-it.html",
   "title": "Can you sell it? Start selling what you have, however rough it is, because the point is not to sell, it is to learn",
   "date": "2026-10-19",
-  "read": "full",
-  "seen": "2026-11-15"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/a-pull-request-by-another-name.html",
@@ -2866,29 +2866,29 @@
   "url": "https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html",
   "title": "Atomic cells, end to end: the £500 website as AgentiCCells' first offering",
   "date": "2026-11-15",
-  "read": "full",
-  "seen": "2026-11-15T18:08Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/spend-fewer-tokens.html",
   "title": "Spend fewer tokens",
   "date": "2026-11-15",
-  "read": "full",
-  "seen": "2026-11-15T18:3xZ"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/a-hub-for-agentic-sites.html",
   "title": "A hub for agentic sites",
   "date": "2026-11-15",
-  "read": "full",
-  "seen": "2026-11-15T18:3xZ"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/stop-copying-and-pasting-between-your-agents.html",
   "title": "Stop copying and pasting between your agents",
   "date": "2026-11-15",
-  "read": "full",
-  "seen": "2026-11-15T18:3xZ"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/dont-micromanage-your-agents.html",
@@ -2908,8 +2908,8 @@
   "url": "https://newsroom.sgit.ai/articles/from-a-commit-to-a-live-website.html",
   "title": "From a commit to a live website: a site factory",
   "date": "2026-11-15",
-  "read": "full (as draft, given by Dinis in the conductor session)",
-  "seen": "2026-11-15T21:08Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/selling-capabilities-not-content.html",
@@ -2929,8 +2929,8 @@
   "url": "https://newsroom.sgit.ai/articles/where-assist-becomes-execute.html",
   "title": "Where assist becomes execute",
   "date": "2026-11-15",
-  "read": "full",
-  "seen": "2026-11-15T23:08Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/identity-for-agents-layer-by-layer.html",
@@ -2957,36 +2957,36 @@
   "url": "https://newsroom.sgit.ai/articles/the-intersection.html",
   "title": "The intersection",
   "date": "2026-11-16",
-  "read": "full summary and AgentiCCells sections",
-  "seen": "2026-11-16T12:12Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/the-site-factory-works.html",
   "title": "The site factory works",
   "date": "2026-11-16",
-  "read": "full summary and AgentiCCells sections",
-  "seen": "2026-11-16T12:12Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/ci-behaviour-policies.html",
   "title": "CI behaviour policies",
   "date": "2026-11-16",
-  "read": "full summary and AgentiCCells sections",
-  "seen": "2026-11-16T12:12Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/odoo-and-our-stack.html",
   "title": "Odoo's agents can now write to the system of record",
   "date": "2026-11-16",
-  "read": "summary",
-  "seen": "2026-11-16T13:13Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/integrate-with-whatever-is-on-the-other-side.html",
   "title": "Integrate with whatever is on the other side",
   "date": "2026-11-16",
-  "read": "summary",
-  "seen": "2026-11-16T14:12Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/voicedebrief-relaunch.html",
@@ -2999,42 +2999,42 @@
   "url": "https://newsroom.sgit.ai/articles/the-email-agentic-cell.html",
   "title": "The email agentic cell",
   "date": "2026-11-16",
-  "read": "summary",
-  "seen": "2026-11-16T15:13Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/our-workflow-on-odoo-20.html",
   "title": "Our workflow on Odoo 20, built and measured",
   "date": "2026-11-16",
-  "read": "summary",
-  "seen": "2026-11-16T15:13Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/specialist-agents-for-every-team.html",
   "title": "Specialist agents for every team",
   "date": "2026-11-16",
-  "read": "summary",
-  "seen": "2026-11-16T15:13Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/promptugal-news-the-next-phase.html",
   "title": "PrompTugal.news, the next phase",
   "date": "2026-11-16",
-  "read": "summary",
-  "seen": "2026-11-16T15:13Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/a-crm-for-us-and-our-agents.html",
   "title": "A CRM for us and for our agents",
   "date": "2026-11-16",
-  "read": "summary",
-  "seen": "2026-11-16T15:13Z"
+  "read": "full (.md twin, S-CELL 2026-11-16)",
+  "seen": "2026-11-16"
  },
  {
   "url": "https://newsroom.sgit.ai/articles/the-cell-is-the-unit.html",
   "title": "The cell is the unit",
   "date": "2026-11-16",
-  "read": "full",
+  "read": "full (.md twin, S-CELL 2026-11-16)",
   "seen": "2026-11-16"
  }
 ]
