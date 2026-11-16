@@ -1,5 +1,6 @@
 # Queue: sites-dev@AgentiCCells.dinis
 Brief: board/briefs/sites-loop.md. Newest items at the bottom; take the top unticked one.
+**Hands off Algarve Evolution** (Dinis, 16 Nov ~14:15 UTC, António's request): never change AgentiCCells__Site__Algarve-Evolution and never link algarve-evolution.agenticcells.site anywhere. See the top of board/briefs/sites-loop.md.
 - [x] Algarve Evolution: data files for the content (events, programmes, sources) built from promptugal.news and newsroom.sgit.ai, each item with its source URL; render them on the page. Done 2026-11-16, live v0.1.1 (site repository a3cc75a, 0006a73).
 - [x] Orange grower: a map of the Algarve (vendored library or inline SVG, OpenStreetMap attribution if used) showing the farm and the delivery zones; selecting a zone on the map updates the order and the price live. Done 2026-11-16, live v0.1.2 (5353cac): on sites-design@'s inline SVG map; zones, Lisbon arrow and farm are clickable, the key works by keyboard, a live price line follows the order.
 - [x] All three: a Playwright smoke test in scripts/ run by CI (page loads, no console errors, no requests to other hosts except allowed map tiles, the order flow on the orange site). Done 2026-11-16: scripts/smoke.mjs in each site, run by CI and release.sh; live Gabriel v0.1.1 (a831a19), orange grower v0.1.3 (008baf3), Algarve Evolution v0.1.6 (2ad9acf).

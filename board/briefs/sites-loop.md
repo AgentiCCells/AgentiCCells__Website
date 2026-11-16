@@ -2,6 +2,11 @@
 
 Given by sites@AgentiCCells.dinis, 2026-11-16 ~01:45 UTC, on Dinis Cruz's instruction in the sites@ session. Rules: CLAUDE.md. Facts: REALITY.md. Read both first. Who instructs: Dinis only; sites@ briefs you on his behalf.
 
+## HANDS OFF: Algarve Evolution (Dinis Cruz, 16 November 2026, ~14:15 UTC)
+Dinis, relaying António Guerreiro's request: "tell the sites not to touch this guy. In fact, this should not be linked anywhere. That's one request I had from Antonio. So this link should not exist in any other pages right now."
+- sites-dev@, sites-design@ and every other agent: do not change AgentiCCells/AgentiCCells__Site__Algarve-Evolution (no commits, no releases, no queue items). It is now V2, the AE Innovation Hub on Odoo, owned by the session "algarve-evolution.agenticcells.site" (sites@AgentiCCells.dinis), working directly with Dinis.
+- Do not link or list https://algarve-evolution.agenticcells.site anywhere: not on the hub, agenticcells.site, agenticcells.ai (pages, console, articles, case study, sitemap), the other sites, READMEs or hub.json registries that are published. Mentions in internal board files are fine; links on published pages are not.
+
 ## Dinis's words (2026-11-16, ~01:40 UTC, sites@ session)
 "You start a design agent in parallel to this ... and a dev agent for sites. So maybe sites.design and sites.agent, and they should be literally on the loop, just making these sites better, because these sites look, at least that one looks very non-professional, quite amateur, which is fine for the first pass, right? But like the oranges, it should be like maybe put in one page. You should have a map. It should be quite dynamic. It should kind of look very professional, right? So can you kind of do this on the loop so that especially the ... Algarve Evolution that needs to be very professional ... you have a lot of materials on the main website. So there's a lot of materials and a lot of news stories ... if you look at the [PrompTugal] website, there's already a lot of materials in there. And there's also a lot of materials about it on newsroom.sgit.ai. So make sure you follow them."
 Sites he named as material: promptugal.news (and its repository, PrompTugal/PrompTugal__News__Website, branch dev) and newsroom.sgit.ai.
@@ -18,7 +23,7 @@ Dinis, 2026-11-16 ~01:50 UTC: "okay to use Opus for now because ... our [limit] 
 | Site | Repository | Live | State |
 |---|---|---|---|
 | Algarve orange grower (made-up example, Dinis plays the farmer) | AgentiCCells/AgentiCCells__Site__Algarve-Orange-Grower | https://algarve-orange-grower.agenticcells.site | first pass, works, looks amateur |
-| Algarve Evolution | AgentiCCells/AgentiCCells__Site__Algarve-Evolution | https://algarve-evolution.agenticcells.site | placeholder; TOP PRIORITY: "needs to be very professional" |
+| Algarve Evolution | AgentiCCells/AgentiCCells__Site__Algarve-Evolution | (not to be linked) | HANDS OFF (see the top of this brief): owned by the algarve-evolution session; never link it |
 | Gabriel DaCruz (composer; Dinis says Gabriel agreed to be named) | AgentiCCells/AgentiCCells__Site__Gabriel-DaCruz | https://gabriel-dacruz.agenticcells.site | placeholder |
 Each site's brief and board: `sites/orange-grower/`, `sites/algarve-evolution/`, `sites/gabriel-dacruz/` in this repository.
 

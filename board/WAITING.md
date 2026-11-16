@@ -26,3 +26,5 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 - Pinning workflow actions to commit SHAs (security@ proposal).
 - The AWS and Google Cloud credentials in the conductor's environment (abp@ gap 1).
 - Mail, Drive and Calendar connectors on the conductor's session (abp@, 18:13 run).
+
+- 2026-11-16 ~14:15 UTC, Dinis (António's request): the Algarve Evolution site is **not to be listed or linked anywhere** (hub, agenticcells.site, agenticcells.ai). That part of the listing question is settled: no.

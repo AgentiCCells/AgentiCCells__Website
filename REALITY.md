@@ -68,6 +68,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-16 13:13 conductor: agenticcells.ai at v0.1.113: ladder wording aligned with Dinis's "The intersection" and a "Where AgentiCCells fits" section (writer@, 8065a43); a synthetic-buyer test at 390 and 1280 px (designer@, 8c4134a); reach against mandate per role on the console (console@, 5de90fd); /key/ out of the sitemap (dev@, ef29220). Review 12:12 (reviewer@, 69dd77a): inner-page band half used, link clutter and tap targets, console still long on a phone.
 
+- 2026-11-16 ~14:15 UTC sites@AgentiCCells.dinis: Dinis, relaying António Guerreiro: the Algarve Evolution site is hands off for every agent but the algarve-evolution session, and must not be linked anywhere. Checked: no live page on agenticcells.ai, agenticcells.site, the hub or the other sites links it. The site itself now serves V2 (the AE Innovation Hub on Odoo, v0.1.17) with V1 parked at /v1/, and asks search engines not to index it.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
