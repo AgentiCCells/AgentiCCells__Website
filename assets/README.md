@@ -27,3 +27,6 @@ Prices are first proposals; say so in the item. Mark a way that does not exist y
 
 ## For dev@ (not done: outside this item's files)
 A wrapper in `build/build.mjs` (`<aside class="cell-side">` around the heading and list) would replace the 3rem offset and the `:has()` selector with a plain two-column grid.
+
+## Example screenshots on the home page (D-RV13)
+`assets/example-*.webp` (1100 x 480, 24 to 70 KB) are the hub's own thumbnails (hub.agenticcells.site/assets/shots/), taken by our team of three sites we made and the registry lists (`listed: true`); our own work, CC BY 4.0. The cards are built in `build/build.mjs` (`EXAMPLES`), words from the registry's "what" field. The personal site is shown without a name in the text; its screenshot shows the owner's name as the registry lists it.

@@ -251,3 +251,26 @@ ul.points li{box-shadow:0 1px 0 color-mix(in srgb,var(--fg) 4%,transparent)}
 .page-head .lede{color:var(--fg)}
 h2{padding-top:.25rem}
 @media (min-width:48rem){main{padding-top:2rem;padding-bottom:3.5rem}h2{margin-top:3.5rem}}
+
+/* D-RV13 · Offer strip under the hero and example cards on the home page (designer@, 2026-11-16). */
+.offer-strip{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem 1rem;margin:0 0 1.5rem;padding:.7rem 1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);font-size:var(--step-0)}
+.offer-strip span{color:var(--muted)}
+.offer-strip span+span::before{content:"·";margin-right:1rem;color:var(--line)}
+.offer-strip a{margin-left:auto;font-weight:600;display:inline-flex;align-items:center;min-height:2.25rem}
+ul.example-cards{list-style:none;padding:0;margin:1rem 0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr))}
+.example-cards li{margin:0}
+.example-cards a{display:flex;flex-direction:column;height:100%;color:var(--fg);text-decoration:none;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.example-cards a:hover{border-color:var(--accent)}
+.example-cards img{display:block;width:100%;height:auto;aspect-ratio:1100/480;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.ex-body{display:grid;gap:.3rem;padding:.8rem 1rem 1rem;font-size:.95rem;color:var(--muted)}
+.ex-body strong{color:var(--fg);font-size:1.05rem}
+.ex-tag{justify-self:start;font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:.05rem .55rem}
+@media (max-width:43.99rem){ul.example-cards{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem}.example-cards li{scroll-snap-align:start}}
+.home .offer-strip,.home .examples{max-width:none}
+.offer-strip span+span::before{color:var(--muted)}
+.offer-strip span+span::before{content:none}
+.offer-strip span:nth-of-type(2){border:1px solid var(--line);border-radius:99px;padding:0 .6rem;font-size:.9rem}
+.wide.home main>.offer-strip,.wide.home main>.examples{max-width:none}
+@media (min-width:44rem){ul.example-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:43.99rem){.example-cards img{aspect-ratio:1100/360}.ex-body{padding:.6rem .8rem .8rem}.ex-body>span:last-child{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
+.wide.home main>.offer-strip:not(.hero):not(.page-head):not(.closing),.wide.home main>.examples:not(.hero):not(.page-head):not(.closing){max-width:none}

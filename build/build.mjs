@@ -200,6 +200,24 @@ function hero(html) {
 }
 for (const p of pages) if (p.path === '/') p.html = hero(p.html);
 
+// D-RV13: a one-line strip of the offer under the hero, and a row of example cards (the hub's own screenshots,
+// self-hosted in assets/) before "How to start". Words come from the registry's "what" field (W-RV9); the personal
+// site is not named, so no person is named without their say-so.
+const OFFER = '<p class="offer-strip"><strong>The website cell</strong> <span>£500, first proposal</span> <span>not yet sold</span> <a href="/website-cell/">See the seven steps</a></p>';
+const EXAMPLES = [
+  ['example-riskmandate-at-websummit.webp', 'RiskMandate at Web Summit', 'The first site made by the site factory from a request file.', 'riskmandate-at-websummit'],
+  ['example-algarve-orange-grower.webp', 'An orange grower (made up)', 'A made-up orange grower\'s site with a zone map and an order flow. Invented prices, nothing sent.', 'algarve-orange-grower'],
+  ['example-gabriel-dacruz.webp', 'A personal site', 'A personal site made with our site agent.', 'gabriel-dacruz'],
+];
+const EXAMPLE_ROW = '<section class="examples" aria-labelledby="see-what-we-have-made">\n<h2 id="see-what-we-have-made">See what we have made</h2>\n<ul class="example-cards">\n' + EXAMPLES.map(([img, name, what, slug]) =>
+  `<li><a href="https://hub.agenticcells.site/cells/${slug}/"><img src="/assets/${img}" width="1100" height="480" loading="lazy" alt="Top of the ${name} site, as the hub shows it"><span class="ex-body"><span class="ex-tag">Demo</span><strong>${name}</strong><span>${what}</span></span></a></li>`).join('\n') +
+  '\n</ul>\n<p><a href="https://hub.agenticcells.site/">All cells on the hub</a>. The hub lists; it does not sell. Screenshots are the hub\'s own.</p>\n</section>\n';
+for (const p of pages) if (p.path === '/') {
+  p.html = p.html.replace('</section>\n', '</section>\n' + OFFER + '\n');
+  const k = p.html.indexOf('<h2>How to start</h2>');
+  if (k > 0) p.html = p.html.slice(0, k) + EXAMPLE_ROW + p.html.slice(k);
+}
+
 // Inner pages (D-RV5, D-RV6): the same soft band as the hero around the title and the lede, a wider grid,
 // and a one-line call to action at the end (not on the offer page itself).
 const slug = (t) => t.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
