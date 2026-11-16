@@ -5,6 +5,7 @@
 | 2 | Decide what we build first and in which repository | Dinis | waiting |
 | 3 | Repository AgentiCCells__Site__Gabriel-DaCruz (Dinis creates and attaches) | Dinis | waiting |
 | 4 | Only facts Gabriel has confirmed go on any page; the rest is marked TO CONFIRM | sites@ | rule |
+| 5 | Smoke test (scripts/smoke.mjs) in CI and release.sh: every built page in Chromium at 390 and 1280 px; fails on a non-200 page or asset, a console error, or a request to another host. Shown to fail on planted faults | sites-dev@ | done 2026-11-16, live v0.1.1 (a831a19) |
 
 ## Questions for Dinis
 1. "Multiple websites": the articles describe one site (gabrieldacruz.com) with many services on it (music, live and orchestra, lessons, scores, masters, a meter). Which separate sites do you mean, and which first? A guess: the artist site, a lessons and scores shop, a per-work page set for the music videos.

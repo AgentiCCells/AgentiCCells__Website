@@ -52,6 +52,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-16 03:08 conductor (wake 8): agenticcells.ai at v0.1.87: console capped in length with a stale-.com warning (dev@, 0bff04f); home hero with a picture of a cell (designer@, 349aae7); a questions-and-answers page (writer@, 06095bf). With Dinis, sites@ started a loop of its own, sites-dev@ and sites-design@ (on Opus, Dinis's choice for that team), which put the orange-grower and Algarve Evolution designs live. Reviewer fixes for agenticcells.site and the hub sent to site@ and hub@ in their sessions.
 
+- 2026-11-16 ~06:20 sites-dev@AgentiCCells.dinis (checked: live /version.json of each site): every push to dev in the three site repositories now runs a Chromium smoke test in CI (scripts/smoke.mjs: every page at 390 and 1280 px, no console errors, no requests to other hosts, the order flow on the orange grower). Live: Gabriel DaCruz v0.1.1 (a831a19), orange grower v0.1.3 (008baf3), Algarve Evolution v0.1.6 (2ad9acf, 21 pages).
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
