@@ -11,6 +11,8 @@ A cell is a small agentic team set up in your environment. It is useful on its o
 
 {{ladder}}
 
+The formats condense Dinis Cruz's words of 2026-11-16 (board/briefs/two-sites-2026-11-16.md): the first step has "no meetings" and is "low touch"; the second has preparation, "2 kind of meetings", work, a presentation and a final delivery; the third is "2 days engagement" with "more heavy lifting" and "maybe some travel"; the fourth is "a customer engagement". The same ladder is on [riskmandate.ai](https://riskmandate.ai), where it sells agent behaviour policies. A policy alone is a RiskMandate sale and a team is ours, usually with policies, so a dual sale is possible. What each site sells at each step is a proposal.
+
 The model is fixed-price cells. Every price is a first proposal, not an offer. Whether support comes as finite packs or in some other form is still to be decided.
 
 ## Two modes: who runs the team

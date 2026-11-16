@@ -1,9 +1,21 @@
 {
-  "note": "Every price is a first proposal, not yet published as an offer. Source: board/BRIEF.md, 2026-11-15. Model: fixed-price cells.",
+  "note": "Every price is a first proposal, not yet published as an offer. Prices and formats: Dinis Cruz, board/briefs/two-sites-2026-11-16.md (2026-11-16 ~23:20 UTC); the format column condenses his words. The two 'sells' columns are proposals. Model: fixed-price cells.",
   "cells": [
-    {"name": "One agent", "price": "£500", "price_status": "first proposal", "includes": "One agent with sub-agents in one runtime, for one workflow, set up in a session"},
-    {"name": "A few sessions", "price": "£1,500", "price_status": "first proposal", "includes": "One session per role, each its own runtime, sharing lanes and a vault"},
-    {"name": "A team", "price": "£5,000", "price_status": "first proposal", "includes": "A conductor and its agents, a key per agent, a board as files, a week of setup"},
-    {"name": "A network", "price": "£20,000", "price_status": "first proposal", "includes": "Conductors of conductors across a division or network, with policies and observability"}
+    {"name": "One agent", "price": "£500", "price_status": "first proposal", "includes": "One agent with sub-agents in one runtime, for one workflow, set up in a session",
+     "format": "An agentic flow we run ourselves with agents. No meetings, low touch, almost fully automated.",
+     "sells_acc": "A cell we run for you, such as a website cell.",
+     "sells_rm": "A behaviour policy."},
+    {"name": "A few sessions", "price": "£1,500", "price_status": "first proposal", "includes": "One session per role, each its own runtime, sharing lanes and a vault",
+     "format": "Preparation before, two meetings, work in between, a presentation, then final delivery.",
+     "sells_acc": "A small cell set up with you and handed over to your accounts.",
+     "sells_rm": "A policy written with you, tested on your agents and handed over."},
+    {"name": "A team", "price": "£5,000", "price_status": "first proposal", "includes": "A conductor and its agents, a key per agent, a board as files, a week of setup",
+     "format": "About two days of engagement, one meeting or a couple, heavier lifting, maybe some travel and more time with you.",
+     "sells_acc": "A team of cells with a conductor, a board and keys, working on your own work.",
+     "sells_rm": "Policies for a team of agents, with the evidence of what they do."},
+    {"name": "A network", "price": "£20,000", "price_status": "first proposal", "includes": "Conductors of conductors across a division or network, with policies and observability",
+     "format": "A customer engagement. We come in, spend time with you, map the work and deliver a whole set of things.",
+     "sells_acc": "A custom network of cells and conductors across a division.",
+     "sells_rm": "Policies and observability across all the agents you run, from one to hundreds."}
   ]
 }

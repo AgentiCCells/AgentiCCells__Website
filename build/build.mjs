@@ -62,8 +62,8 @@ function markdown(body) {
 function ladder() {
   const { cells } = JSON.parse(readFileSync(join(root, 'data/cells.json'), 'utf8'));
   const rows = cells.map((c) =>
-    `<tr><td data-label="Cell">${esc(c.name)}</td><td data-label="Price">${esc(c.price)} (${esc(c.price_status)})</td><td data-label="What is set up">${esc(c.includes)}</td></tr>`).join('\n');
-  return `<div class="table-wrap ladder"><table>\n<thead><tr><th>Cell</th><th>Price</th><th>What is set up</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>\n<p>Every size includes the control centre. All prices are a first proposal and not yet offers.</p>`;
+    `<tr><td data-label="Price">${esc(c.price)} (${esc(c.price_status)})</td><td data-label="Format">${esc(c.format || c.includes)}</td><td data-label="agenticcells.ai sells (proposal)">${esc(c.sells_acc || c.includes)}</td><td data-label="riskmandate.ai sells (proposal)">${esc(c.sells_rm || '')}</td></tr>`).join('\n');
+  return `<div class="table-wrap ladder"><table>\n<thead><tr><th>Price</th><th>Format</th><th>agenticcells.ai sells (proposal)</th><th>riskmandate.ai sells (proposal)</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>\n<p>The same ladder on both sites, with the prices and formats as Dinis Cruz gave them. All prices are a first proposal and not yet offers. What each site sells at each step is a proposal too. A policy alone is a RiskMandate sale, a team is an AgentiCCells sale, and a dual sale is possible: a team with its policies.</p>`;
 }
 
 // {{stack}} (or {{stack:components}}) and {{stack:runtimes}}: the table from data/stack.json,

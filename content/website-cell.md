@@ -10,6 +10,7 @@ A public website, built by a small team of AI agents, that you steer from your b
 - **Price:** £500, one-off, first proposal, not an offer. No subscription.
 - **What you need:** a browser. No accounts of your own.
 - **What you own at the end:** the site's git repository, moved to your GitHub.
+- **Where it sits:** the first step of one ladder, the £500 agentic flow we run ourselves, with no meetings and low touch (Dinis Cruz, 2026-11-16, board/briefs/two-sites-2026-11-16.md). The steps above it are £1,500, £5,000 and £20,000, all first proposals, on the [cells page](/cells/). [riskmandate.ai](https://riskmandate.ai) sells behaviour policies on the same ladder, so a website cell with its policies is a possible dual sale.
 - **Status:** the flow is a proposal, and the end-to-end flow is being built now by AgentiCCells' own team. Nothing has been sold yet.
 
 Source for this page: Dinis Cruz, [Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html), newsroom.sgit.ai, 2026-11-15. Quotes below are his words from that article.
