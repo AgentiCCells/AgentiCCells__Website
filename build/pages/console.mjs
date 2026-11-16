@@ -27,11 +27,13 @@ function parseItem(src, file) {
   const lines = src.split('\n');
   const head = (lines[0] || '').match(/^#\s+(ACC-\d+)\s*·\s*(.*)$/);
   const meta = (lines[1] || '').match(/^Owner:\s*(.*?)\s*·\s*Status:\s*(.*)$/);
+  // A line "Console status: ..." (if the item has one) is shown on the console in place of the Status text.
+  const cs = lines.slice(2, 12).map((l) => l.match(/^Console status:\s*(.*)$/)).find(Boolean);
   return {
     id: head ? head[1] : file.replace(/\.md$/, ''),
     title: clean(head ? head[2] : lines[0].replace(/^#\s*/, '')),
     owner: clean(meta ? meta[1] : ''),
-    status: clean(meta ? meta[2] : ''),
+    status: clean(cs ? cs[1] : meta ? meta[2] : ''),
   };
 }
 function statusClass(s) {
@@ -166,6 +168,15 @@ function queues(root) {
 
 const css = '<link rel="stylesheet" href="/assets/console.css">';
 
+const DONE_SHOWN = 10;
+// The main page lists open items and the newest DONE_SHOWN done ones; the rest are in console.json and the day replays.
+function boardCapped(items) {
+  const done = items.filter((i) => statusClass(i.status) === 'done');
+  const hide = new Set(done.slice(0, Math.max(0, done.length - DONE_SHOWN)));
+  const shown = items.filter((i) => !hide.has(i));
+  const note = hide.size ? `<p><small>${hide.size} older done items are not listed here; they are in <a href="/console/console.json">console.json</a>.</small></p>` : '';
+  return boardTable(shown) + note;
+}
 function boardTable(items) {
   if (!items.length) return '<p>No board items.</p>';
   const rows = items.map((i) => `<tr><td><code>${esc(i.id)}</code></td><td>${esc(i.title)}<br><small>${esc(i.owner)}</small></td><td><span class="st st-${statusClass(i.status)}">${esc(i.status)}</span></td></tr>`).join('\n');
@@ -255,7 +266,7 @@ export default async function consolePages(ctx = {}) {
 <p>What the AgentiCCells agents are doing, read from the files they keep: the board, their public keys, their activity logs and the git history. Read-only: there are no controls here. Built from commit <code>${esc(head)}</code>, site version ${esc(version)}. Times are UTC. The same data is in <a href="/console/console.json">console.json</a>.</p>
 ${holdLine}
 <h2>Board</h2>
-${boardTable(board)}
+${boardCapped(board)}
 <h2>Agents and their keys</h2>
 <p>Each agent makes its own key pair; only the public half is in the repository. Shown here by short fingerprint.</p>
 ${agentsTable(agents)}
@@ -269,7 +280,8 @@ ${queueSection(queueData)}
 <p>Each day shows the board and keys as they were committed at the end of that day, and everything that happened in it.</p>
 ${nav}
 <h2>Timeline</h2>
-${days.map((d) => `<h3><a href="/console/${d}/">${d}</a></h3>\n${timeline(events.filter((e) => day(e.time) === d))}`).join('\n')}
+<p>The newest day only; earlier days are in the replays above.</p>
+${days.slice(0, 1).map((d) => `<h3><a href="/console/${d}/">${d}</a></h3>\n${timeline(events.filter((e) => day(e.time) === d).slice(0, 40))}${events.filter((e) => day(e.time) === d).length > 40 ? `<p><a href="/console/${d}/">All ${events.filter((e) => day(e.time) === d).length} events on ${d}</a></p>` : ''}`).join('\n')}
 <p><small>Started from the simulated console described in <a href="https://newsroom.sgit.ai/articles/an-agentic-console.html">An agentic console</a>. Steps marked "reconstructed" were logged after the fact.</small></p>`;
 
   const pages = [{ path: '/console/', title: 'Console: the AgentiCCells team, read-only',

@@ -137,5 +137,12 @@ try {
   }
 }
 
+// Warning only (V-RV1): agenticcells.com is not the site's domain; allowed on history pages and the console replays/board data.
+for (const f of walk(join(root, 'site'), ['.html'])) {
+  const r = rel(f);
+  if (/history|case-study|how-this-site-was-built|console\/\d{4}/.test(r)) continue;
+  const n = (readFileSync(f, 'utf8').match(/agenticcells\.com/g) || []).length;
+  if (n) console.warn(`WARNING ${r}: mentions agenticcells.com ${n} time(s); the site is on agenticcells.ai`);
+}
 if (errors.length) { console.error(errors.join('\n')); console.error(`FAILED (${errors.length})`); process.exit(1); }
 console.log('OK');
