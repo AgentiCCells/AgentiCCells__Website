@@ -91,3 +91,6 @@ Recorded in board/decisions/2026-11-16-three-roles-cells-hub-ai.md; briefs for h
 ## 2026-11-16 ~18:10 UTC, Dinis: start the hub; everything public but one
 "I don't think we have a hub here so can you create one? Because I don't think we've actually started. So can you start the hub? And basically I reckon that all of this can be public apart apart from the Algar evolution . So let's map that."
 Acted on: data/cells-registry.json and map/cells.md (the map); listing consent recorded; hub@ session started on AgentiCCells__Site__Hub.
+
+## 2026-11-16 ~22:55 UTC, Dinis: consent to name three people
+On Yiheng Wang, Silvio Switha and José Bota being named on the hub: "Yes they have agreed". Recorded in data/cells-registry.json (consent field).
