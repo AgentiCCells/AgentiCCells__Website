@@ -214,9 +214,13 @@ for (const p of pages) {
     heads.push({ id, t });
     return `<h2 id="${id}">${t}</h2>`;
   });
-  const toc = heads.length >= 3 ? `<nav class="toc" aria-label="On this page"><p>On this page</p><ol>${heads.map((h) => `<li><a href="#${h.id}">${h.t}</a></li>`).join('')}</ol></nav>\n` : '';
+  // D-RV10, D-RV11: the contents list is a "Jump to" disclosure on a phone (closed, no script) and a list on wide screens.
+  // On a page with a "Four ways to start" side panel it stays in the band; elsewhere it is a sticky side column.
+  const items = heads.map((h) => `<li><a href="#${h.id}">${h.t}</a></li>`).join('');
+  const inBand = heads.some((h) => h.id === 'four-ways-to-start');
+  const toc = heads.length >= 3 ? `<div class="toc${inBand ? '' : ' side'}"><nav class="toc-wide" aria-label="On this page"><p>On this page</p><ol>${items}</ol></nav><details class="toc-narrow"><summary>Jump to</summary><nav aria-label="On this page (menu)"><ol>${items}</ol></nav></details></div>\n` : '';
   const m = /^(<h1[^>]*>[\s\S]*?<\/h1>)\s*(<p(?: class="note")?>[\s\S]*?<\/p>)?/.exec(p.html);
-  if (m) p.html = `<section class="page-head${toc ? ' has-toc' : ''}">\n<div class="head-main">\n${m[1]}\n${m[2] ? m[2].replace(/^<p( class="note")?>/, (x, n) => `<p class="lede${n ? ' note' : ''}">`) + '\n' : ''}</div>\n${toc}</section>` + p.html.slice(m[0].length);
+  if (m) p.html = `<section class="page-head${toc && inBand ? ' has-toc' : ''}">\n<div class="head-main">\n${m[1]}\n${m[2] ? m[2].replace(/^<p( class="note")?>/, (x, n) => `<p class="lede${n ? ' note' : ''}">`) + '\n' : ''}</div>\n${inBand ? toc : ''}</section>` + (inBand ? '' : toc) + p.html.slice(m[0].length);
   if (p.path !== '/website-cell/') p.html += `\n<aside class="closing"><p>Want a website built this way? <a class="button" href="/website-cell/">See the website cell</a></p></aside>`;
 }
 

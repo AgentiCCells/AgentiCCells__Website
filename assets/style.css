@@ -183,17 +183,38 @@ summary:focus-visible,details>summary:focus-visible{outline:3px solid var(--acce
 /* D-RV7, D-RV8 · The band uses its width: lede left, "On this page" right (designer@, 2026-11-16). */
 .page-head .head-main>:last-child{margin-bottom:0}
 .page-head .lede.note{background:none;border-left:0;padding:0;border-radius:0}
-.toc{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line)}
 .toc p{margin:0 0 .4rem;font-size:.875rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .toc ol{margin:0;padding:0;list-style:none;display:grid;gap:.1rem}
 .toc a{display:block;padding:.35rem 0;min-height:2rem;font-size:.95rem}
 h2[id]{scroll-margin-top:1rem}
+/* D-RV10 · On a phone the contents list is a closed "Jump to" disclosure (no script), so the page starts on the first screen. */
+.toc-wide{display:none}
+.toc-narrow{margin-top:1rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg)}
+.toc-narrow summary{list-style:none;cursor:pointer;min-height:2.75rem;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;font-weight:600}
+.toc-narrow summary::-webkit-details-marker{display:none}
+.toc-narrow summary::after{content:"";width:.45em;height:.45em;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px)}
+.toc-narrow[open] summary::after{transform:rotate(-135deg)}
+.toc-narrow nav{padding:0 1rem .5rem;border-top:1px solid var(--line)}
+.toc-narrow a{min-height:2.75rem;display:flex;align-items:center}
+.page-head.has-toc .head-main{margin-bottom:0}
 @media (min-width:48rem){
+  .toc-narrow{display:none}
+  .toc-wide{display:block}
   .page-head.has-toc{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:2.5rem;align-items:start}
   .page-head.has-toc .lede{max-width:none}
-  .toc{margin:0;padding:0 0 0 2rem;border-top:0;border-left:1px solid var(--line)}
+  .page-head .toc-wide{padding:0 0 0 2rem;border-left:1px solid var(--line)}
   .wide main>.page-head,.wide main>.closing{max-width:none}
 }
+/* D-RV11 · Pages without a side panel: the band is only the title block, and the contents list sits in a sticky second column. */
+@media (min-width:64rem){
+  .wide main:has(>.toc.side){display:grid;grid-template-columns:minmax(0,44rem) minmax(12rem,1fr);column-gap:3rem;align-items:start}
+  .wide main:has(>.toc.side)>*{grid-column:1;max-width:none}
+  .wide main:has(>.toc.side)>.page-head,.wide main:has(>.toc.side)>.closing{grid-column:1/-1}
+  .wide main:has(>.toc.side)>.toc.side{grid-column:2;grid-row:2/span 99;position:sticky;top:1.5rem;margin:0;padding:0 0 0 1.5rem;border-left:1px solid var(--line)}
+}
+/* D-RV12 · Four cards sit 2 x 2 (4 across on wide screens), never 3 + 1. */
+@media (min-width:36rem){ul.points:has(li:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:64rem){.home ul.points:has(li:nth-child(4):last-child){grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 /* D-CELL · The cell page (designer@, 2026-11-16). A page that ends with a "Four ways to start" section gets a side panel
    from 64rem up; below that the panel stacks under the page as a card list. Convention: assets/README.md.
@@ -219,3 +240,11 @@ h2#behaviour-policy+p+ul li:last-child{margin:0}
 }
 /* On a cell page the band's contents list runs in two columns, so the band stays short and the panel starts near the top. */
 @media (min-width:64rem){.page-head:has(~ #four-ways-to-start) .toc ol{grid-template-columns:1fr 1fr;column-gap:1.5rem}}
+
+/* D-PRO · Professional polish (designer@, 2026-11-16). Calmer rhythm, quieter cards, one clear call to action per page. */
+.closing{display:flex}
+.closing p{width:100%;justify-content:space-between}
+ul.points li{box-shadow:0 1px 0 color-mix(in srgb,var(--fg) 4%,transparent)}
+.page-head .lede{color:var(--fg)}
+h2{padding-top:.25rem}
+@media (min-width:48rem){main{padding-top:2rem;padding-bottom:3.5rem}h2{margin-top:3.5rem}}
