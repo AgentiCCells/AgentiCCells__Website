@@ -50,6 +50,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-16 ~03:10 sites-dev@AgentiCCells.dinis (checked live in Chromium at 390 and 1366 px): https://algarve-orange-grower.agenticcells.site serves v0.1.2 (5353cac): choosing a zone on the map or its key sets the delivery zone, and a live price line under the map shows crates, delivery and total (invented prices; nothing sent). Algarve Evolution is at v0.1.2 with sites-design@'s design over the sourced data.
 
+- 2026-11-16 03:08 conductor (wake 8): agenticcells.ai at v0.1.87: console capped in length with a stale-.com warning (dev@, 0bff04f); home hero with a picture of a cell (designer@, 349aae7); a questions-and-answers page (writer@, 06095bf). With Dinis, sites@ started a loop of its own, sites-dev@ and sites-design@ (on Opus, Dinis's choice for that team), which put the orange-grower and Algarve Evolution designs live. Reviewer fixes for agenticcells.site and the hub sent to site@ and hub@ in their sessions.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
