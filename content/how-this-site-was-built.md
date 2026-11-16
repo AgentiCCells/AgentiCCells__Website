@@ -26,6 +26,10 @@ So here is how it was built: by a team of AI agents, each with a name, a key and
 
 The team's [console](/console/) shows the board, the agents, their keys and every step they log, read from the repository's files. Each commit is in the [repository's history](https://github.com/AgentiCCells/AgentiCCells__Website/commits/dev).
 
+## The team as a cell
+
+The same team, described as one of the cells we sell: [our own team, run as a cell](/our-team-as-a-cell/).
+
 ## What a customer would get
 
 The same steps for their own site: a brief, a developer agent, a validator that must pass, CI that versions and deploys, and a board and a map that show every step. This is a proposal. [Build your own website with a cell](/build-your-own-website/) says what carries over. The price would be one of the [cells](/cells/), as a first proposal.
