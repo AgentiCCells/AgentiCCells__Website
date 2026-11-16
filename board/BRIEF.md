@@ -97,3 +97,6 @@ On Yiheng Wang, Silvio Switha and José Bota being named on the hub: "Yes they h
 
 ## 2026-11-16 ~23:20 UTC, Dinis: the brief for agenticcells.ai and riskmandate.ai together
 In full in board/briefs/two-sites-2026-11-16.md (verbatim, with the conductor's reading). Acted on: new roles sherpa@, synthetic-users@, ambassador@ (briefs and queues); S-PROOF, W-LADDER, W-START, W-ARCHIVE, W-BOOK, D-FIVE, V-ARCHIVE queued; builders hourly by day from 17 November (team/SCHEDULE.md); the RiskMandate session restarted with the same brief.
+
+## 2026-11-16 ~23:40 UTC, Dinis: answers for both sites
+"Yes, to merge. Yes, to the homepage draft. Retire the 10 and 50 quid pack we didn't sell them, so that was signal. You can use Web Summit photos that are on Silvio and Vicky, and I will share with them more with you. Actually, we have a website. I'll share more photos with you. In a second. Yeah, move to an archive folder. You can, well, you can actually download this. So the book is already on the website. I'll give you the website for the book, so you can just grab it from there. And also link to the pub. Yes, show the book in there." Book: https://the-ultimate-insider.book.sgit.ai/ ; see also https://riskmandate-at-websummit.agenticcells.site/ . He shared five files (three photos, two Live Photo motions), now in assets/media/websummit-2026/.
