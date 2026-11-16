@@ -60,6 +60,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-16 09:09 conductor (wake, interim pace): agenticcells.ai at v0.1.101. The 08:12 runs all released: accessibility pass with a skip link and motion and forced-colour rules (designer@, c59f913); open-source tables from data/stack.json (writer@, 32c3d29); persist-credentials false on the build checkout (dev@, 3a52abb); review 08:12 (reviewer@, 7087930): home now strong, inner pages look plain, dated console pages too long, tap targets unchanged. agenticcells.site and hub.agenticcells.site at v0.1.2.
 
+- 2026-11-16 10:09 conductor: agenticcells.ai at v0.1.105; the announcement draft refreshed for agenticcells.ai (outreach@, cc6fd58, nothing sent); dns/records.json now includes agenticcells.site and hub.agenticcells.site as observed, .com recorded as unused (dns@, 2cb5fa6). Sister-site fixes sent to site@ and hub@; listing the orange grower, Algarve Evolution and Gabriel DaCruz sites held for Dinis's consent.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
