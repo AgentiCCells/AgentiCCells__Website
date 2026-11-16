@@ -35,7 +35,7 @@ During the build the team runs on our accounts. In the article's words, the "no 
 
 ## Examples
 
-- **More on the hub.** Every site we have made is listed on [the hub](https://hub.agenticcells.site/), one page each. They are all demos: we host them to show the work, and none is a customer's. This page does not list them.
+- **On the hub.** Each example has a page there, with its fork link: [this company site](https://hub.agenticcells.site/cells/agenticcells-ai/), [a made-up orange grower](https://hub.agenticcells.site/cells/algarve-orange-grower/), [the first site made by the site factory](https://hub.agenticcells.site/cells/riskmandate-at-websummit/), and [every other cell](https://hub.agenticcells.site/). They are all demos: we host them to show the work, and none is a customer's.
 - **This site.** It was built by its own agentic team, from a brief: "That is the product in miniature." See [how this site was built](/how-this-site-was-built/) and [what carries over to your site](/build-your-own-website/).
 - **The key step, as a prototype.** [It makes a key in your browser and sends nothing](/key/). It is a prototype, not yet the real step.
 
@@ -98,3 +98,15 @@ More answers, including what happens when you leave, are on the [questions and a
 2. **Our agent helps you.** A specialist agent reviews your setup and tells you what to fix. Proposal: not yet running.
 3. **We help you: £1,500.** Two sessions with a person, then you run the team in your own GitHub and Claude accounts. First proposal, not an offer. See [the cells page](/cells/).
 4. **We set it up for you: from £500.** The seven steps above, on our accounts, handed over to you. First proposal, not an offer. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. The first orders will be run by hand, and we will say so.
+
+## Five ways to make a cell yours
+
+From Dinis Cruz, [Fork it](https://newsroom.sgit.ai/articles/fork-it.html) (newsroom.sgit.ai, 2026-11-16). The article calls this a plan. Each example's page on [the hub](https://hub.agenticcells.site/) says which of the five it offers today; we checked the hub on 2026-11-16 and two of five were working.
+
+1. **Fork it on GitHub.** Works today, as the standard GitHub fork link on each hub page, for a public repository. The cells are not yet built to be forked by a stranger: expect to change our team's settings and rules after you fork.
+2. **Deploy it in one click.** Planned. Not built: no cell has a deploy button yet.
+3. **Run it in your assistant.** Planned. Not built.
+4. **Take it as a vault.** Planned. Not built: no cell has a vault download yet.
+5. **Ask us.** Works today, by email to [agent@riskmandate.ai](mailto:agent@riskmandate.ai), on the paid ladder. First proposal prices, nothing sold yet.
+
+The first four are meant to be free. That is the article's plan, not something we offer yet.

@@ -11,6 +11,8 @@ A cell is a small agentic team set up in your environment. It is useful on its o
 
 We do not list every cell we have made on this page. [The hub](https://hub.agenticcells.site/) does that, with one page per cell, so you can find one, open it and copy it. This site sells; the hub lists. Every cell we host publicly is a demo, made to show how the work goes, and it says so. None is a customer's site, and none has been sold.
 
+Examples by kind: [the site factory](https://hub.agenticcells.site/cells/site-factory/), [the site template](https://hub.agenticcells.site/cells/site-template/), [an email cell](https://hub.agenticcells.site/cells/cell-email/) and [a specialist agent](https://hub.agenticcells.site/cells/specialist-design/). Each page there has a fork link; the five ways to make a cell yours are [below](#five-ways-to-make-a-cell-yours).
+
 ## The four sizes
 
 {{ladder}}
@@ -106,6 +108,18 @@ If you would rather do this yourself, everything we use is open. Start with [ope
 - A key per agent, with only the public half published.
 - A board of files in your own repository.
 - No state on our side. When the work is done, everything stays with you.
+
+## Five ways to make a cell yours
+
+From Dinis Cruz, [Fork it](https://newsroom.sgit.ai/articles/fork-it.html) (newsroom.sgit.ai, 2026-11-16). The article calls this a plan. Each example's page on [the hub](https://hub.agenticcells.site/) says which of the five it offers today; we checked the hub on 2026-11-16 and two of five were working.
+
+1. **Fork it on GitHub.** Works today, as the standard GitHub fork link on each hub page, for a public repository. The cells are not yet built to be forked by a stranger: expect to change our team's settings and rules after you fork.
+2. **Deploy it in one click.** Planned. Not built: no cell has a deploy button yet.
+3. **Run it in your assistant.** Planned. Not built.
+4. **Take it as a vault.** Planned. Not built: no cell has a vault download yet.
+5. **Ask us.** Works today, by email to [agent@riskmandate.ai](mailto:agent@riskmandate.ai), on the paid ladder. First proposal prices, nothing sold yet.
+
+The first four are meant to be free. That is the article's plan, not something we offer yet.
 
 ## What this page does not claim
 
