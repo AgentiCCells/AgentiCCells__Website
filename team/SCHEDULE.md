@@ -6,7 +6,7 @@ Times are Europe/London (assumed; change on Dinis's word). "Day" is 07:00 to 23:
 
 | Agent | When | How it runs |
 |---|---|---|
-| `conductor@AgentiCCells.dinis` | :07, day hourly, overnight 01/03/05 | wakes this conductor session (keeps its memory) |
+| `conductor@AgentiCCells.dinis` | :07, 07:07 to 23:07 hourly, none overnight (from 2026-11-16 18:07) | wakes the new conductor session (keeps its memory) |
 | `dev@AgentiCCells.dinis` | :13, day hourly, overnight 01/03/05 | fresh session each run |
 | `writer@AgentiCCells.dinis` | :19, day hourly, overnight 01/03/05 | fresh session |
 | `designer@AgentiCCells.dinis` | :25, day hourly, overnight 01/03/05 | fresh session |
@@ -36,7 +36,8 @@ The scheduled tasks themselves are listed in claude.ai under the account's sched
 ## Scheduled task IDs
 | Agent | Scheduled task (role tasks PAUSED 2026-11-15 17:45 UTC) | Cron (Europe/London) |
 |---|---|---|
-| conductor@ | trig_01CbV6xVJpqAavDovmK3AbRD (wakes the conductor session) | `7 1,3,5,7-23 * * *` |
+| conductor@ | trig_01MKTKVET86ucSVeTuiBjFh4 (wakes the new conductor session …QeVLMD7ANkt1akJeD; created on Dinis's word 2026-11-16 ~17:58 UTC: "Yes create it") | `CRON_TZ=Europe/London 7 7-23 * * *` |
+| conductor@ (first session) | trig_01CbV6xVJpqAavDovmK3AbRD (wakes the first conductor session …SvYRxVA5jC7yo7HF; asked to stand down; Dinis asked to disable it) | `7 1,3,5,7-23 * * *` |
 | dev@ | trig_0172Sot9BdxrBfe73hJVZ7Cx | `13 1,3,5,7-23 * * *` |
 | writer@ | trig_01WUQ53PYXnJYKdi4oaqTUQf | `19 1,3,5,7-23 * * *` |
 | designer@ | trig_016ypc3cvi7oVT2LFSPfJoxa | `25 1,3,5,7-23 * * *` |
