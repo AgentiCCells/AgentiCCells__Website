@@ -290,18 +290,22 @@ ${days.slice(0, 1).map((d) => `<h3><a href="/console/${d}/">${d}</a></h3>\n${tim
   for (const r of replays) {
     const i = days.indexOf(r.date);
     const prev = days[i + 1], next = days[i - 1];
+    // Only items new or with a different status or title since the earlier day (V-RV4, V-RV5).
+    const before = new Map((replays[i + 1] ? replays[i + 1].board : []).map((b) => [b.id, b]));
+    const changed = r.board.filter((b) => { const o = before.get(b.id); return !o || o.status !== b.status || o.title !== b.title; });
+    const html0 = JSON.stringify([changed, r.events]);
     const html = `${css}
 <p><a href="/console/">Console</a>${prev ? ` · <a href="/console/${prev}/">${prev}</a>` : ''}${next ? ` · <a href="/console/${next}/">${next}</a>` : ''}</p>
 <h1>Replay: ${esc(r.date)}</h1>
-<p>The board and keys as committed at the end of ${esc(r.date)} (UTC)${r.as_of_commit ? `, at commit <code>${esc(r.as_of_commit)}</code>` : ''}, and every step and commit that day: ${r.events.length} in all.</p>
-<h2>Board at the end of the day</h2>
-${boardTable(r.board)}
+<p>The board changes and keys as committed at the end of ${esc(r.date)} (UTC)${r.as_of_commit ? `, at commit <code>${esc(r.as_of_commit)}</code>` : ''}, and every step and commit that day: ${r.events.length} in all.</p>
+<h2>Board items that changed that day</h2>
+${changed.length ? boardTable(changed) + `<p><small>${r.board.length - changed.length} other items did not change that day. The whole board is on <a href="/console/">the console</a>.</small></p>` : '<p>No board item changed that day.</p>'}
 <h2>Agents that day</h2>
 ${agentsTable(r.agents)}
 <h2>What happened</h2>
-${timeline(r.events)}`;
+${timeline(r.events.slice(0, 60))}${r.events.length > 60 ? `<details><summary>${r.events.length - 60} earlier events that day</summary>\n${timeline(r.events.slice(60))}</details>` : ''}${/agenticcells\.com/.test(html0) ? '<p><small>This is the record as written on the day: where it says agenticcells.com, the site has since moved to agenticcells.ai.</small></p>' : ''}`;
     pages.push({ path: `/console/${r.date}/`, title: `Console replay: ${r.date}`,
-      description: `The AgentiCCells board, keys and activity as they were on ${r.date}.`, html });
+      description: `The AgentiCCells board changes, keys and activity as they were on ${r.date}.`, noindex: true, html });
   }
   return pages;
 }
