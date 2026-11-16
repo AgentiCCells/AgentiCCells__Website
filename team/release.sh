@@ -3,6 +3,14 @@
 # Written by conductor@ 2026-11-15 after a release where `leak-scan | tail` hid a failure.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+# V-REG: refresh data/cells-registry.json versions (warning only); commit just that file, so the rebase below stays clean.
+node build/refresh-registry.mjs || true
+if ! git diff --quiet -- data/cells-registry.json; then
+  git add data/cells-registry.json
+  git commit -q -m "Refresh cell versions in the registry" -m "Agent: ${AGENT:-dev@AgentiCCells.dinis}
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_018yvwtLvRgVLjNavjcZNDbv"
+fi
 node build/build.mjs
 node build/validate.js
 node board/abp/derive.mjs --check
