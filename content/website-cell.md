@@ -65,3 +65,5 @@ There is a second mode, "Their own: they run the team", where we set the agentic
 ## How to start
 
 Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. A person reads and answers it. Because the flow is still being built, the first orders will be run by hand, step by step, and we will say so.
+
+More answers, including what happens when you leave, are on the [questions and answers page](/faq/).
