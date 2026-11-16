@@ -119,7 +119,7 @@ ${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !me
 <meta property="og:description" content="${esc(meta.description || '')}">
 ${origin ? `<meta property="og:url" content="${esc(origin + current)}">\n` : ''}<meta name="twitter:card" content="summary">
 </head>
-<body>
+<body${current === '/' ? ' class="home"' : ''}>
 <header><a class="brand" href="/">${MARK}<span>AgentiCCells</span></a>${navHtml(nav, current)}</header>
 <main>
 ${content}
@@ -186,11 +186,16 @@ const nav = pages
   .sort((a, b) => Number(a.nav) - Number(b.nav) || String(a.title).localeCompare(String(b.title)))
   .map((p) => ({ url: urlFor(p.file), title: p.title }));
 
-// Home page first screen (D2): the h1 and the opening paragraph become a hero with one call to action.
+// A cell (D5): inline SVG, no external files. Membrane, conductor, agents, board, keys, console, stop file.
+const CELL = '<svg viewBox="0 0 400 410" role="img" aria-labelledby="cell-t cell-d"><title id="cell-t">A cell: a small team of agents inside your environment</title><desc id="cell-d">A circle marks your environment. Inside it a conductor directs three agents. The agents read and write a board of files, each signs with its own key, and a console shows you all of it. A stop file halts every agent. You stand outside the circle and can see and stop the cell.</desc><g transform="translate(0 30)"><circle class="c-mem" cx="200" cy="190" r="170"/><g class="c-link"><line x1="200" y1="112" x2="130" y2="190"/><line x1="200" y1="112" x2="200" y2="190"/><line x1="200" y1="112" x2="270" y2="190"/><line x1="130" y1="190" x2="130" y2="262"/><line x1="270" y1="190" x2="270" y2="262"/></g><circle class="c-node c-lead" cx="200" cy="112" r="24"/><text class="c-txt c-on" x="200" y="117" text-anchor="middle">C</text><text class="c-lbl" x="200" y="84" text-anchor="middle">Conductor</text><circle class="c-node" cx="130" cy="190" r="16"/><circle class="c-node" cx="200" cy="190" r="16"/><circle class="c-node" cx="270" cy="190" r="16"/><text class="c-lbl" x="200" y="226" text-anchor="middle">Agents, each with its own key</text><rect class="c-box" x="84" y="262" width="92" height="40" rx="6"/><text class="c-txt" x="130" y="287" text-anchor="middle">Board</text><rect class="c-box" x="224" y="262" width="92" height="40" rx="6"/><text class="c-txt" x="270" y="287" text-anchor="middle">Console</text><text class="c-lbl" x="200" y="334" text-anchor="middle">Your environment</text></g><g class="c-you"><circle cx="150" cy="14" r="7"/></g><text class="c-lbl c-out" x="164" y="19">You: see it, stop it</text></svg>';
+const CELL_CAPTION = 'A cell, as we propose it: one conductor, a few agents, a board of files, a console, all inside your own environment.';
+
+// Home page first screen (D2, D5, D-RV2): headline and opening paragraph on the left, a picture of a cell on the right;
+// the main call to action goes to the website cell, the email is the second action.
 function hero(html) {
   const i = html.indexOf('<h2');
   if (i < 0) return html;
-  return `<section class="hero">\n${html.slice(0, i)}\n<p class="cta"><a class="button" href="mailto:${contact}">Email ${contact}</a></p>\n</section>\n${html.slice(i)}`;
+  return `<section class="hero">\n<div class="hero-text">\n${html.slice(0, i)}\n<p class="cta"><a class="button" href="/website-cell/">See the website cell</a> <a class="button ghost" href="mailto:${contact}">Email ${contact}</a></p>\n</div>\n<figure class="cell-fig">${CELL}<figcaption>${CELL_CAPTION}</figcaption></figure>\n</section>\n${html.slice(i)}`;
 }
 for (const p of pages) if (p.path === '/') p.html = hero(p.html);
 
