@@ -164,6 +164,31 @@ function queues(root) {
   });
 }
 
+// data/abp.json: per role, what it may reach against what it was asked to do. Counts come from the derived delta; nothing is scored.
+function abpNow(root) {
+  const f = join(root, 'data/abp.json');
+  if (!existsSync(f)) return null;
+  let d; try { d = JSON.parse(readFileSync(f, 'utf8')); } catch { return null; }
+  let total = 0;
+  try { total = JSON.parse(readFileSync(join(root, 'board/abp/inputs.json'), 'utf8')).grant.length; } catch { /* leave 0 */ }
+  const roles = (d.roles || []).map((r) => {
+    const dl = r.delta || {};
+    const mandate = new Set((r.mandate || []).map((m) => m.primitive)).size;
+    const excess = (dl.excess || []).length, short = (dl.shortfall || []).length;
+    return { role: r.role, agent: String(r.agent || '').replace(/@agenticcells\./i, '@AgentiCCells.'), runs_in: r.runs_in,
+      granted: mandate - short + excess, mandate, excess, unbounded_excess: (dl.unbounded_excess || []).length,
+      irreversible_excess: (dl.irreversible_excess || []).length, shortfall: short, wider_than_asked: (dl.wider_than_asked || []).length,
+      policy: existsSync(join(root, `board/abp/${r.role}.md`)) ? `board/abp/${r.role}.md` : '' };
+  });
+  return { as_at: d.as_at, total_primitives: total, roles };
+}
+function abpSection(a) {
+  if (!a || !a.roles.length) return '<p>No data/abp.json found.</p>';
+  const gh = 'https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/';
+  const rows = a.roles.map((r) => `<tr><td>${esc(r.agent)}<br><small>${esc(r.runs_in)}</small></td><td>${r.granted}${a.total_primitives ? ` of ${a.total_primitives}` : ''}</td><td>${r.mandate}</td><td>${r.excess}</td><td>${r.unbounded_excess}</td><td>${r.irreversible_excess}</td><td>${r.wider_than_asked}</td><td>${r.policy ? `<a href="${gh}${esc(r.policy)}">${esc(r.policy)}</a>` : '-'}</td></tr>`).join('\n');
+  return `<div class="table-wrap"><table class="console-abp">\n<thead><tr><th>Role</th><th>Can reach (grant)</th><th>Asked to do (mandate)</th><th>Gap: excess</th><th>No boundary</th><th>Cannot undo</th><th>Wider than asked</th><th>Policy</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>`;
+}
+
 // --- rendering -------------------------------------------------------------
 
 const css = '<link rel="stylesheet" href="/assets/console.css">';
@@ -236,6 +261,7 @@ export default async function consolePages(ctx = {}) {
   const agents = agentsFrom(keys, acts, cms);
   const sched = scheduleWithRuns(schedule(root), acts);
   const queueData = queues(root);
+  const abpData = abpNow(root);
 
   // Replay: the board and keys as committed at the end of each day, with that day's events.
   const replays = days.map((d) => {
@@ -250,7 +276,7 @@ export default async function consolePages(ctx = {}) {
   const data = {
     about: 'The AgentiCCells team console, read-only. Built from files in the repository at build time. Short fingerprints and short commit hashes only.',
     version, built_from_commit: head, hold: hold ? 'board/HOLD.md exists: the team is stopped' : 'absent',
-    board, agents, schedule: sched, queues: queueData, events, days,
+    board, agents, schedule: sched, queues: queueData, abp: abpData, events, days,
   };
   const json = JSON.stringify({ ...data, replays }, null, 1) + '\n';
   // build.mjs writes ctx.files after it clears site/; without it, write the file here.
@@ -276,6 +302,9 @@ ${scheduleTable(sched)}
 <h2>Work queues</h2>
 <p>Each role's queue from <code>board/queue/</code>: items ticked <code>[x]</code> are done, the rest are open. The top open item is what the role does next.</p>
 ${queueSection(queueData)}
+<h2>Reach against mandate</h2>
+<p>From <code>data/abp.json</code>, as at ${esc(abpData ? abpData.as_at : '')}: what each role can reach, what it was asked to do, and the gap. "Excess" is reach the role was not asked to use; "no boundary" means nothing outside the agent's own reach stops it, so the barrier is a rule in prose or a setting. These are counts, not a score. The grant was measured once inside a run; the other roles' grants are derived to be the same.</p>
+${abpSection(abpData)}
 <h2>Replay a day</h2>
 <p>Each day shows the board and keys as they were committed at the end of that day, and everything that happened in it.</p>
 ${nav}

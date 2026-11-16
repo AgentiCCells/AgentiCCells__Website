@@ -1,16 +1,16 @@
 {
-  "id": "sha256:f4c8f0cbf760fa3d",
+  "id": "sha256:895b56d87dd7f226",
   "label": "console@AgentiCCells.dinis",
-  "fingerprint": "sha256:f4c8f0cbf760fa3d",
-  "signing_fingerprint": "sha256:939fa59779f5f217",
+  "fingerprint": "sha256:895b56d87dd7f226",
+  "signing_fingerprint": "sha256:a4cdf1270c90d165",
   "public_key": {
     "v": 1,
-    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEApSngumNexzpWzbkHiUgT\n3W0hBFjvmVhuvzR9nW5kP3Z2GT4sJA0z803v9Xn6Py/RWiPEJQ0M/EBgD7nUesfX\nYUqFObHNv20R0RlmsH1FWS6BOlBPDGHtZndPT8uhrH/z5cYPoSl5n5cVml1WTUOS\n9PXJCKZ4aufWxKbwHibamE1zA/H4S0g0qORoXx9TFGlWxnipOCydnhrizdduNkyz\nPQElXtYZpPImBChMFtgO5yCJ1XfH8MG9dDuAkOVMszNswnxTw8N3+aw/eXRHGi4O\nf3+Xk1+UNunpXt8bh9j+ptxs+ptZAlq3s6zNm+dubtMsmFMD1WUBpIkt3HqEmwgn\nQj4lKWuJAcjHCRnLzfH+ug6y5MmV5ODA250ZnYmaiZGbDXRrVyAwPCH6lXPCXb3M\nuEH2YLHZ4ws2SmLO3lQt+uOjZIDUYM5g3F/DcFIKsMXmiTYNFuDXX5eRa1uu/i3O\naoD/RZBRqeAaNswNAVgaGqgsUkL7fq1nY/kQ867iNNnz3nt5/hW1PxtM04ffRG9o\nDtO+dl+l6GG5qZWd8HAM+ZNuKiAbw424MJTFVrBOrugp6P8Kspd143uRTTg5HBW5\nUy4xziiohq15dlZ0REI+gmACD6vNnTsqrUvwuHbpda3N/FFUkuv575OEuP1yA16T\nB0P4wjphcfSbjCN4VEepptECAwEAAQ==\n-----END PUBLIC KEY-----\n",
-    "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeMRFJxLnpcITiTirkm54UrMBnN0Z\nIyedXLnR25gDuEYcYU41qAjZlmAQQiJamIZrFe5wDeguHNFiDvvQtofd8w==\n-----END PUBLIC KEY-----\n",
+    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAk7bOUvua8uGcvMJlYy7I\nf940cDhh47CwcjznhEb9TNzJK+g8yT1f588eGhB4L1fBJHPH3JlNhYIrdgh4zH81\nCc2SnPPRCpz8uRKmNJmynYHjw74SomZEVcISyKLG//6kKdpD18LJ0LzhwIRsSfsz\n3Fv8xWoScaHKuLkKodzCMIzJNz5ieSEp6QfencsFWUMGfGjRtMLtr4lmD5a5xsJy\n+Gt880o7CGLdEcdNgUDBfR+aEQ3W5j9jN6FzbrwTWBAfZfGopigJ+LtqGaRrUPSe\nUGVbHcz2Pd+Sv6FixbjN7GstI7TPIzFv2N++H2/la/N8xHBoaaGaHL14Y48Q3gCi\nKQ43pkQgSabObh402vAdTeY51pwhfWLEc164DqY4q2MS06gR53TgcL8NwpvyG2jD\nVac2gcPTjNZ4D8bd/92Z1Ammz8vTXNGbpu7u2Wnfk8c0E1ZvFeC4925PnSbV/AE8\npqIjBhX78ZA1ahSXtBoFXvcyGx/x61oVTWyEZSPQRg07d8y5wecuDDjsCK1xGJrq\nr2xH4ZbCXftcKJUggdrEEV+YOQhziyuVpoPrpHlZXPlwr6wssale7JbgcyxRFgLP\n3tfgjhCRzlNn4BV3hCDOK9SiKB+tNVoEWfnZDEO3nYZPbSNkQmWuuS9Ns/aYItgX\nMrtAYbmJhqK/qPjQQgcXqpcCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+    "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEc64kVHL8y76p3aveXL6cAv+EhHFs\nduQT/6z94RCgQaszSh9BJcsocU7/obqViN3L+908c8bUWlPPxzNYhrb7pg==\n-----END PUBLIC KEY-----\n",
     "label": "console@AgentiCCells.dinis",
-    "fingerprint": "sha256:f4c8f0cbf760fa3d",
-    "signing_fingerprint": "sha256:939fa59779f5f217"
+    "fingerprint": "sha256:895b56d87dd7f226",
+    "signing_fingerprint": "sha256:a4cdf1270c90d165"
   },
-  "created": "2026-11-15",
+  "created": "2026-11-16",
   "lifetime": "ephemeral: valid while this agent's session exists"
 }

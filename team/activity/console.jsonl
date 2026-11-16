@@ -14,3 +14,4 @@
 {"time": "2026-11-15T18:11:38Z", "agent": "console@agenticcells.dinis", "item": "C1", "action": "done", "summary": "Ticked C1 (1e24d63), map row 9, debrief written"}
 {"time": "2026-11-15T21:09:16Z", "agent": "console@AgentiCCells.dinis", "item": "C2", "action": "started", "summary": "Showing board/queue/*.md on the console: open and done items per role."}
 {"time": "2026-11-15T21:09:44Z", "agent": "console@AgentiCCells.dinis", "item": "C2", "action": "done", "summary": "Work queues on the console; released to dev.", "commit": "9d78022"}
+{"time": "2026-11-16T12:13:08Z", "agent": "console@AgentiCCells.dinis", "item": "C3", "action": "done", "summary": "Console shows reach against mandate per role from data/abp.json"}
