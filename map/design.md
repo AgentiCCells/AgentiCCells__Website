@@ -114,3 +114,11 @@ Method: axe-core 4.10.2 (rules wcag2a, wcag2aa, wcag21aa, best-practice) in Chro
 - Keyboard: 21 tab stops on the home page, every one with a visible outline (3 px accent) at both widths and in both themes; the Menu summary shows a focus ring.
 - Changed: a "Skip to the content" link (first tab stop, visible on focus, moves focus to main); `main` is the skip target; reduced-motion and forced-colours rules.
 - Not done: screen reader run (no reader in this session); the line colour (1.4:1 on bg) is decoration only, not the only cue for any control.
+
+## D8 synthetic-user test (designer@AgentiCCells.dinis, 2026-11-16)
+Method: Playwright and Chromium over a local server of the built site (commit of origin/dev at run time); three scripted buyers, five questions each, at 390 and 1280 px. A script checks that the page answering each question loads (200) and contains the words that answer it, and for the first-screen questions whether the element is inside the viewport (844 px and 800 px tall). This is a simulation of buyers, not real buyers; it finds missing or buried answers, not whether the answers persuade. Script kept in the scratchpad, not in git.
+- CTO (what is it; can I see and stop agents; licence; where keys live; is the console real): all five answered, at both widths. The first sentence ("small teams of AI agents") is in the first screen. Not tested: whether the method page's wording convinces.
+- Ops lead (week one; price; how to start; what you need from me; is anything sold): all five answered, at both widths. The price sits on /cells/, two clicks from home; "nothing sold yet" appears on /website-cell/ and on home, not in the hero.
+- Solo founder (can I buy a website; price; technical?; what I own; who to contact): four of five answered in the first screen or one click. **Stuck:** at 390 px the first "£500" is 1,025 px down the home page, below the first screen (844 px); at 1280 px it is in the first screen. This is reviewer@'s W-RV3 on a phone, now measured.
+- Measured on home: no horizontal scroll at either width; 9 links under 32 px high at 390 px and 12 at 1280 px outside the `cite` class (D-RV3 is still open for them).
+- Limits: word matching can pass a page that is hard to read; no real reader was involved; 17 pages, one browser.
