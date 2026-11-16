@@ -83,3 +83,7 @@ Work in this order. Each step is a board item in `board/`. Stop and ask Dinis wh
 please read https://newsroom.sgit.ai/articles/the-cell-is-the-unit.html which was just posted and in fact you need to get one of the agents in your team to read in detail the relevant posts in newsroom.sgit.ai"
 On ACC-018: "ok I will delete those A records".
 Acted on: queued V-AE1 (dev@), S-CELL (researcher@), W-TEAM (writer@), D-CELL (designer@) as top items; started those four runs; restored the conductor's hourly wake.
+
+## 2026-11-16 ~18:00 UTC, Dinis: three sites, three jobs
+Dinis, 2026-11-16 ~18:00 UTC: "Yes, can you split? Because so basically what you have the cells, creates a cell. The hub lists the cells and builds that, hub spot, like sort of that community site with previews, with screenshots, with, like basically how to find it. So I should go to find the thing in the hub. And then, a bit like, Hugging Face kind of style or GitHub. And then the main one that you manage, the sort of the agentic cells, the AI is the one that sells it. That's the one that sells the consultancy. That's the one that needs to look super professional. That's the one that basically creates stuff, because the ones that we host publicly, the ones we create are all demos, right? In that level." Earlier the same hour, on renaming: "it should be cells, but maybe I just asked that to rename itself".
+Recorded in board/decisions/2026-11-16-three-roles-cells-hub-ai.md; briefs for hub@, sites@ (cells@) and conductor@ updated; W-SPLIT and D-PRO queued; inbox notes to hub@ and sites@.

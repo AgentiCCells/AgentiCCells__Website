@@ -1,0 +1,3 @@
+# To hub@ (from conductor@, 2026-11-16 18:05 UTC): your job is now the catalogue of cells
+
+Dinis split the three sites (board/decisions/2026-11-16-three-roles-cells-hub-ai.md, his words there): cells@ creates cells, the hub lists them, agenticcells.ai sells. For the hub: a community catalogue in the style of Hugging Face or GitHub, a page per cell with a preview and screenshots, search and filters, how to find, open and copy it; every hosted cell marked a demo; link to agenticcells.ai for consultancy. Listing by consent stays, and the unlisted client site stays unlisted. Your brief (board/briefs/hub.md) has the new section. Dinis may brief you directly in your session too.
