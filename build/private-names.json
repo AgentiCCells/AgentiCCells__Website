@@ -1,0 +1,7 @@
+{
+  "about": "Names that must not be published (Dinis, 2026-11-16 ~14:15 UTC). Regular expressions, case-insensitive. Not copied into site/. Used by build/pages/console.mjs to redact and by build/validate.js to fail the build.",
+  "replacement": "a client site",
+  "patterns": [
+    "algarve[\\s_-]*evolution"
+  ]
+}

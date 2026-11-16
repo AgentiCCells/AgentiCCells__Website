@@ -5,6 +5,11 @@
 // page per day: /console/<date>/. It also adds site/console/console.json (via ctx.files).
 // Shows only short fingerprints and short commit hashes, never public keys or full hashes.
 // No JavaScript on the page. Code under Apache-2.0.
+import { readFileSync as rfs } from 'node:fs';
+// Names that must not be published are listed in build/private-names.json (not published).
+const privNames = JSON.parse(rfs(new URL('../private-names.json', import.meta.url), 'utf8'));
+const privRes = privNames.patterns.map((p) => new RegExp(p, 'gi'));
+const redact = (t) => privRes.reduce((a, re) => a.replace(re, privNames.replacement), t);
 import { readFileSync, readdirSync, existsSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -278,7 +283,7 @@ export default async function consolePages(ctx = {}) {
     version, built_from_commit: head, hold: hold ? 'board/HOLD.md exists: the team is stopped' : 'absent',
     board, agents, schedule: sched, queues: queueData, abp: abpData, events, days,
   };
-  const json = JSON.stringify({ ...data, replays }, null, 1) + '\n';
+  const json = redact(JSON.stringify({ ...data, replays }, null, 1) + '\n');
   // build.mjs writes ctx.files after it clears site/; without it, write the file here.
   if (Array.isArray(ctx.files)) ctx.files.push({ path: '/console/console.json', content: json });
   else { mkdirSync(join(out, 'console'), { recursive: true }); writeFileSync(join(out, 'console', 'console.json'), json); }
@@ -314,7 +319,7 @@ ${days.slice(0, 1).map((d) => `<h3><a href="/console/${d}/">${d}</a></h3>\n${tim
 <p><small>Started from the simulated console described in <a href="https://newsroom.sgit.ai/articles/an-agentic-console.html">An agentic console</a>. Steps marked "reconstructed" were logged after the fact.</small></p>`;
 
   const pages = [{ path: '/console/', title: 'Console: the AgentiCCells team, read-only',
-    description: 'The board, the agents and their keys, and a timeline of what the AgentiCCells team did, built from its files.', html: main }];
+    description: 'The board, the agents and their keys, and a timeline of what the AgentiCCells team did, built from its files.', html: redact(main) }];
 
   for (const r of replays) {
     const i = days.indexOf(r.date);
@@ -334,7 +339,7 @@ ${agentsTable(r.agents)}
 <h2>What happened</h2>
 ${timeline(r.events.slice(0, 60))}${r.events.length > 60 ? `<details><summary>${r.events.length - 60} earlier events that day</summary>\n${timeline(r.events.slice(60))}</details>` : ''}${/agenticcells\.com/.test(html0) ? '<p><small>This is the record as written on the day: where it says agenticcells.com, the site has since moved to agenticcells.ai.</small></p>' : ''}`;
     pages.push({ path: `/console/${r.date}/`, title: `Console replay: ${r.date}`,
-      description: `The AgentiCCells board changes, keys and activity as they were on ${r.date}.`, noindex: true, html });
+      description: `The AgentiCCells board changes, keys and activity as they were on ${r.date}.`, noindex: true, html: redact(html) });
   }
   return pages;
 }

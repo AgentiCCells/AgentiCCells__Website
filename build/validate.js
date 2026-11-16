@@ -18,6 +18,14 @@ const rel = (p) => p.slice(root.length + 1);
 const text = ['.md', '.json', '.html', '.css', '.js', '.mjs', '.yml'];
 const scanned = [...walk(join(root, 'content'), text), ...walk(join(root, 'data'), text), ...walk(join(root, 'site'), text), ...walk(join(root, 'assets'), text)];
 
+{
+  const pn = JSON.parse(readFileSync(join(root, 'build/private-names.json'), 'utf8'));
+  const res = pn.patterns.map((p) => new RegExp(p, 'i'));
+  for (const f of walk(join(root, 'site'))) {
+    const t = readFileSync(f, 'utf8');
+    if (res.some((re) => re.test(t) || re.test(rel(f)))) fail(`${rel(f)}: contains a name that must not be published`);
+  }
+}
 if (!existsSync(join(root, 'site/index.html'))) fail('site/index.html missing: run the build first');
 if (!existsSync(join(root, 'CNAME')) || readFileSync(join(root, 'CNAME'), 'utf8').trim() !== 'agenticcells.ai') fail('CNAME must contain agenticcells.ai');
 
