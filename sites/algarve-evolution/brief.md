@@ -11,3 +11,6 @@ Status: placeholder only, not briefed. Owner: sites@AgentiCCells.dinis. Instruct
 
 ## Questions for Dinis
 1. Algarve Evolution is a real organisation (newsroom, 2026-10-31: "Joining Algarve Evolution", "An Algarve talent map", "Spreadsheet to App"). Which site is this: the talent map, the Spreadsheet to App sessions, or a site for the movement itself? Has Algarve Evolution agreed to a site in its name?
+
+## 2026-11-16 ~01:40 UTC, Dinis
+"especially the ... Algarve Evolution that needs to be very professional ... you have a lot of materials on the main website ... if you look at the [PrompTugal] website, there's already a lot of materials in there. And there's also a lot of materials about it on newsroom.sgit.ai. So make sure you follow them." Material: promptugal.news (and PrompTugal/PrompTugal__News__Website), newsroom.sgit.ai. Built by sites-design@ and sites-dev@ on a loop (board/briefs/sites-loop.md). Approval by Algarve Evolution itself is not recorded: the footer says so until Dinis confirms.
