@@ -1,0 +1,177 @@
+{
+ "_about": "Every cell AgentiCCells has made, and whether it may be listed in public. Kept by conductor@AgentiCCells.dinis. Read by hub@ to build hub.agenticcells.site.",
+ "_decision": "Dinis, 2026-11-16 ~18:10 UTC: \"I reckon that all of this can be public apart from the Algar evolution\". One client cell is excluded on his earlier word (~14:15 UTC, board/briefs/sites-loop.md): it is not in this file and must not be listed, linked or named anywhere.",
+ "_checked": "2026-11-16 18:10 UTC: repositories from list_repos; versions from each live /version.json. Status 'demo' unless it sells for real.",
+ "cells": [
+  {
+   "id": "agenticcells-ai",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
+   "live": "https://agenticcells.ai",
+   "version_seen": "v0.1.131",
+   "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
+   "status": "live",
+   "listed": true
+  },
+  {
+   "id": "agenticcells-site",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Website",
+   "live": "https://agenticcells.site",
+   "version_seen": "v0.1.4",
+   "what": "The home of the sites we make, on agenticcells.site.",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "hub",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Hub",
+   "live": "https://hub.agenticcells.site",
+   "version_seen": "v0.1.4",
+   "what": "The hub: lists every cell we have made, with previews and how to copy one.",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "riskmandate-at-websummit",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__RiskMandate-At-WebSummit",
+   "live": "https://riskmandate-at-websummit.agenticcells.site",
+   "version_seen": "v0.1.5",
+   "what": "The first site made by the site factory from a request file (newsroom, \"The site factory works\").",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "algarve-orange-grower",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Algarve-Orange-Grower",
+   "live": "https://algarve-orange-grower.agenticcells.site",
+   "version_seen": "v0.1.4",
+   "what": "A made-up orange grower's site with a zone map and an order flow (invented prices, nothing sent).",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "gabriel-dacruz",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Gabriel-DaCruz",
+   "live": "https://gabriel-dacruz.agenticcells.site",
+   "version_seen": "v0.1.3",
+   "what": "A personal site made with sites@.",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "site-factory",
+   "kind": "factory",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Factory",
+   "live": null,
+   "version_seen": null,
+   "what": "Makes a new site cell from a request file in a pull request: repository, DNS, Pages, first version.",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "site-template",
+   "kind": "template",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Template",
+   "live": null,
+   "version_seen": null,
+   "what": "The template every factory-made site starts from.",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "factory-qa-1",
+   "kind": "factory-test",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Factory__Pipeline__QA-1",
+   "live": null,
+   "version_seen": null,
+   "what": "A factory pipeline test run.",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "factory-qa-2",
+   "kind": "factory-test",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Factory__Pipeline__QA-2",
+   "live": null,
+   "version_seen": null,
+   "what": "A factory pipeline test run.",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "cell-email",
+   "kind": "cell",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Cell__Email",
+   "live": null,
+   "version_seen": null,
+   "what": "A cell for email (repository started 2026-11-16).",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "specialist-agent-behaviour-policies",
+   "kind": "specialist",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Agent-Behaviour-Policies",
+   "live": null,
+   "version_seen": null,
+   "what": "Specialist agent for agent behaviour policies (newsroom, \"Specialist agents for every team\").",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "specialist-design",
+   "kind": "specialist",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Design",
+   "live": null,
+   "version_seen": null,
+   "what": "Specialist agent for design (newsroom, \"Specialist agents for every team\").",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "specialist-writing",
+   "kind": "specialist",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Writing",
+   "live": null,
+   "version_seen": null,
+   "what": "Specialist agent for writing (newsroom, \"Specialist agents for every team\").",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "specialist-security",
+   "kind": "specialist",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Security",
+   "live": null,
+   "version_seen": null,
+   "what": "Specialist agent for security (newsroom, \"Specialist agents for every team\").",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "specialist-code",
+   "kind": "specialist",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Code",
+   "live": null,
+   "version_seen": null,
+   "what": "Specialist agent for code (newsroom, \"Specialist agents for every team\").",
+   "status": "demo",
+   "listed": true
+  },
+  {
+   "id": "specialist-ux",
+   "kind": "specialist",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__UX",
+   "live": null,
+   "version_seen": null,
+   "what": "Specialist agent for ux (newsroom, \"Specialist agents for every team\").",
+   "status": "demo",
+   "listed": true
+  }
+ ]
+}

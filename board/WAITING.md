@@ -7,7 +7,6 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 
 ## Decisions
 - **The "CC" in AgentiCCells** (researcher@ S4, research/cc-trademark.md): "CC" alone is a Creative Commons mark; whether it counts inside a longer word is unclear and only Creative Commons can settle it. Suggested: keep the name, add a "not affiliated with or endorsed by Creative Commons" line, and avoid CC-styled logo elements. Agree?
-- **Listing your other sites on the hub and on agenticcells.site:** the orange-grower example and Gabriel DaCruz are live drafts made with sites@ (Algarve Evolution: never, your rule of ~14:15). The hub lists "by consent". May they be listed, and has Gabriel agreed to be named there? Until you say, they stay unlisted.
 - **ACC-028 · Pages settings for the new sites:** on AgentiCCells__Site__Hub, Pages source "GitHub Actions" and custom domain hub.agenticcells.site; on both Site repositories, the github-pages environment must allow the dev branch, or the first deploy is rejected (as happened on AgentiCCells__Website).
 - **ACC-026 · Pace against the usage limit: hit a second time at ~03:09 (all five runs failed).** Hit three times by 08:00 on 16 November. Running now, as an interim default until you choose: builders every two hours by day, none overnight; reviewer@ every four hours; the rest once a day (team/SCHEDULE.md). Say "keep the old pace", "slower is fine" or "pause". Earlier note: The account hit its 5-hour limit at about 19:09 UTC with this schedule (hourly dev@, writer@, designer@, plus the others and the conductor). Keep the pace, or slow it (for example dev@, writer@, designer@ every two hours)?
 - **ACC-022 · May the site name the four first implementers and project manager** from "Atomic cells, end to end"?
@@ -20,6 +19,9 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 - **The case study is live at /case-study/** (reporter@, 68f8dc9, from a queue item the conductor wrote) although this page had listed publishing it as your decision: the conductor's inconsistency. Keep it, or take it down? Linking it from the home page is still open.
 - **Claude Code on the open-source page** as "a runtime the customer chooses, not open source".
 - **"RiskMandate, our own sister venture"** wording, and naming Dinis on About and the build page.
+
+## Answered today
+- **Listing:** Dinis, 2026-11-16 ~18:10 UTC: "all of this can be public apart from the Algar evolution". Recorded in data/cells-registry.json.
 
 ## For later
 - **Plan, then apply, for the live site** (newsroom "Where assist becomes execute", tier 3): today every agent pushes to dev and dev publishes; the gates refuse a failing release, but nothing above the agents reviews a release. Your call when "later" comes (abp@ A5 will show the gaps).

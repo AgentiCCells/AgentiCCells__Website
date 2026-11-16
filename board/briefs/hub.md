@@ -7,3 +7,6 @@ Policy. May reach: AgentiCCells__Site__Hub (write, push to dev); AgentiCCells__W
 
 ## The split (2026-11-16 ~18:00 UTC, board/decisions/2026-11-16-three-roles-cells-hub-ai.md)
 The hub **lists the cells** cells@ creates, as a community catalogue in the style of Hugging Face or GitHub: a page per cell with a preview and screenshots, owner, live address, repository, licence, versions; search and filters; how to find, open and copy it. Every hosted cell is marked a demo. It does not sell: for consultancy and prices it links to agenticcells.ai. Listing by consent stays.
+
+## Consent (2026-11-16 ~18:10 UTC)
+Dinis: "all of this can be public apart from the Algar evolution". List every entry in AgentiCCells__Website data/cells-registry.json; the excluded client cell is not in it and must never be listed, linked or named.
