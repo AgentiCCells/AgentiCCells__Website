@@ -8,7 +8,7 @@
 | 5 | Simulated order flow, no payment, nothing sent or saved | sites@ | done (draft; tested in Chromium: flow, prices, both languages, no requests) |
 | 6 | Gates in the site's own repository | sites@ | waits on 8 |
 | 10 | Images from OpenRouter: OPENROUTER_API_KEY is not set in this session; the draft uses hand-drawn SVG | Dinis | waiting |
-| 8 | Own repository (Dinis creates and attaches it; I may not create repositories) | Dinis | waiting |
+| 8 | Own repository AgentiCCells/AgentiCCells__Site__Algarve-Orange-Grower (Dinis, 2026-11-16, agreeing to the name; he creates and attaches it, I may not create repositories) | Dinis | waiting |
 | 9 | Vault: SG_SEND_ACCESS_KEY into this session; write key escrowed before anything is published; read key published; vault pushed with its .sg_vault data in the repository | sites@ | blocked on 8 and the key |
 | 7 | hub.json for the site (shape as in the repository's hub.json) | sites@ | not started |
 
@@ -17,3 +17,7 @@
 2. Language: English only, or English and Portuguese?
 3. How does the order request leave the page? Option A: a "mailto:" link that opens the buyer's own email with the order filled in. Option B: a printable or copyable order summary. Neither sends anything from our side.
 4. The farm's name and the invented prices: may I invent them (marked invented), or do you want to give them?
+
+## Next sites queued (Dinis, 2026-11-16)
+- AgentiCCells__Site__Algarve-Evolution (to be briefed).
+- A personal site for one person (to be briefed). Not named here until Dinis confirms that person has agreed to be named (CLAUDE.md).
