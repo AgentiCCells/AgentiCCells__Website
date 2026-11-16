@@ -70,33 +70,34 @@
         },
         "read.credential.host": {
           "instance": "the variables of the claude.ai environment the run inherits from the conductor (create_session uses the caller's environment unless told otherwise, so the same AWS, GitHub and Google Cloud names are expected); this run's own sgit key pair only",
-          "tier": "derived",
-          "barrier_note": "ACC-016 and COMMON.md say not to use them. Other agents' sgit keys are no longer reachable (see read.file.host).",
-          "evidence": "abp's check of variable names was refused by the harness permission classifier, 18:11 UTC, abp@'s conductor-started run; create_session's own description of its environment default"
+          "tier": "measured",
+          "barrier_note": "ACC-016 and COMMON.md say not to use them. Other agents' sgit keys are no longer reachable (see read.file.host). Variable names present in this run (values not read): AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, GH_TOKEN, GITHUB_TOKEN, CLOUDSDK_AUTH_ACCESS_TOKEN, OPENROUTER_API_KEY, OPEN_ROUTER_KEY, PT_PILOT_ACCESS_KEY, SG_SEND_ACCESS_TOKEN, plus session tokens (CLAUDE_SESSION_INGRESS_TOKEN_FILE, CLAUDE_CODE_MESSAGING_TOKEN). Three are new to the record: OPENROUTER_API_KEY, OPEN_ROUTER_KEY, PT_PILOT_ACCESS_KEY.",
+          "evidence": "env names listed with cut -d= -f1 (no values), 2026-11-16 18:09 UTC, abp@'s conductor-started run (A2)"
         },
         "authenticate-as.credential.signing": {
           "instance": "each run makes a fresh sgit key pair (team/keygen.sh) that does not sign git commits; whether the run container's global git config holds the same SSH signing key as the shared container was not checked",
-          "tier": "derived",
-          "evidence": "not checked in a run container; 18:11 UTC, abp@'s conductor-started run"
+          "tier": "measured",
+          "barrier_note": "The run container's global git config (/root/.gitconfig) sets commit.gpgsign true, gpg.format ssh, gpg.ssh.program /tmp/code-sign and a user.signingkey (value masked); user.name is Claude. So commits are signed by a platform-provided key, not by the run's own sgit key. Whether that key is the same across runs and agents was not measured: it needs a comparison of two runs' public halves.",
+          "evidence": "git config --show-origin, signing key value masked, 2026-11-16 18:09 UTC, abp@'s conductor-started run (A2)"
         },
         "send.message.world": {
-          "instance": "the mail connector's send_message, reply, forward and create_draft tools, listed in abp's run; any HTTP endpoint",
+          "instance": "in this run: Drive create_file, update_file, copy_file and share_file; GitHub MCP write tools (issues, comments, pull requests, releases, create_repository, though scope is limited to this repository); send_message to other sessions; the proxy-injected host dev.send.sgraph.ai; any HTTP endpoint the proxy allows. No mail connector tool is listed in this run.",
           "tier": "measured",
-          "evidence": "tool list of 18:11 UTC, abp@'s conductor-started run (listed, not called). team/SCHEDULE.md found no connectors in sessions fired by scheduled tasks; sessions started with create_session do carry them."
+          "evidence": "tool list of 2026-11-16 18:09 UTC, abp@'s conductor-started run (listed, not called). Differs from the 18:11 UTC run of 2026-11-15, which listed mail tools: the connector set varies by run or by account state."
         },
         "read.message.tenant": {
-          "instance": "the mail, Drive, Calendar and meetings connectors' read and search tools, listed in abp's run",
+          "instance": "in this run: Drive search_files, read_file_content, download_file_content, list_recent_files and share permissions reads; no mail, Calendar or meetings tools are listed",
           "tier": "measured",
-          "evidence": "tool list of 18:11 UTC, abp@'s conductor-started run (listed, not called)"
+          "evidence": "tool list of 2026-11-16 18:09 UTC, abp@'s conductor-started run (listed, not called)"
         },
         "create.schedule.host": {
           "instance": "background processes in this run's container, which end with the session",
           "evidence": "derived; not tested"
         },
         "create.schedule.tenant": {
-          "instance": "create_session, archive_session, send_message to other sessions, create_trigger, update_trigger, delete_trigger, fire_trigger and add_repo, listed in abp's run",
+          "instance": "create_session, archive_session, interrupt_session, send_message, create_trigger, update_trigger, delete_trigger, fire_trigger, send_later, add_repo, create_environment, update_environment and switch_environment, listed in this run; the last three change environment settings and each shows an approval prompt to the user",
           "tier": "measured",
-          "evidence": "tool list of 18:11 UTC, abp@'s conductor-started run (listed, not called)"
+          "evidence": "tool list of 2026-11-16 18:09 UTC, abp@'s conductor-started run (listed, not called). This run's own instruction forbids creating, changing or deleting scheduled tasks or sessions and changing settings: an expectation, because the tools are present."
         },
         "write.repository.tenant": {
           "evidence": "abp's release to dev from its run, 2026-11-15; pushes from writer@, dev@, designer@ and reporter@ runs (REALITY.md)"

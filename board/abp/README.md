@@ -39,3 +39,11 @@ Since 17:50 UTC (team/SCHEDULE.md) every role except conductor@ runs as a fresh 
 - Interaction between agents: two roles each within mandate can together do what neither was asked (https://abp.sgit.ai/what-is-an-abp/index.md, question 3). With one shared host, any role can already act as any other.
 - Measured in abp@'s session only. The other roles' grants are derived from sharing the container; console@ or security@ can confirm them in their own sessions.
 - The scope of each credential (which AWS actions, which GitHub repositories) was not tested, by policy.
+
+## Re-measured inside a scheduled fresh run (2026-11-16 18:09 UTC, abp@, A2)
+Measured in abp@'s conductor-started run; variable names only, no values read. Proposals still need Dinis.
+- **Credentials (gap 1 still open, wider than recorded):** the run's environment holds the AWS key pair, GH_TOKEN, GITHUB_TOKEN and CLOUDSDK_AUTH_ACCESS_TOKEN as before, plus three names not in the record: OPENROUTER_API_KEY, OPEN_ROUTER_KEY, PT_PILOT_ACCESS_KEY (and SG_SEND_ACCESS_TOKEN). Same narrowest change: start runs in an environment that holds none of them.
+- **Signing:** the container's git config signs every commit with an SSH key supplied by the platform (`gpg.ssh.program /tmp/code-sign`, user Claude). It is not the run's sgit key. Whether the key is the same in every run is not yet measured: compare the public half in two runs.
+- **Connectors differ from the 2026-11-15 measurement:** this run lists Drive tools (read, create, update, share, trash) and GitHub write tools, but no mail, Calendar or meetings tools. The connector set varies, so gap 3 should be stated as "whatever connectors the account has", not as a fixed list.
+- **Tenant control tools:** create_session, create_trigger, update_trigger, delete_trigger, fire_trigger, send_later, add_repo, create_environment, update_environment and switch_environment are all listed. The run's prompt forbids using them; that is an expectation. The three environment tools each ask the user for approval, which is a boundary outside the agent.
+- **Walls that hold:** one clone and `~/.agents/abp/` only; no other agent's key or worktree in the container.

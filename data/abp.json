@@ -279,7 +279,7 @@
       "as_at": "2026-11-15",
       "since": "2026-11-15 17:50 UTC, per team/SCHEDULE.md",
       "measured_by": "abp@agenticcells.dinis, inside its own run (18:11 UTC, abp@'s conductor-started run); other roles' runs are started the same way, so their grant is derived to be the same object",
-      "grant_version": "sha256:d6902641937d",
+      "grant_version": "sha256:ad99a133205e",
       "grant": [
         {
           "primitive": "read.file.project",
@@ -389,11 +389,11 @@
           "reach": "host",
           "undo": "no",
           "granted": true,
-          "tier": "derived",
+          "tier": "measured",
           "instance": "the variables of the claude.ai environment the run inherits from the conductor (create_session uses the caller's environment unless told otherwise, so the same AWS, GitHub and Google Cloud names are expected); this run's own sgit key pair only",
           "barrier": "expectation",
-          "barrier_note": "ACC-016 and COMMON.md say not to use them. Other agents' sgit keys are no longer reachable (see read.file.host).",
-          "evidence": "abp's check of variable names was refused by the harness permission classifier, 18:11 UTC, abp@'s conductor-started run; create_session's own description of its environment default"
+          "barrier_note": "ACC-016 and COMMON.md say not to use them. Other agents' sgit keys are no longer reachable (see read.file.host). Variable names present in this run (values not read): AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, GH_TOKEN, GITHUB_TOKEN, CLOUDSDK_AUTH_ACCESS_TOKEN, OPENROUTER_API_KEY, OPEN_ROUTER_KEY, PT_PILOT_ACCESS_KEY, SG_SEND_ACCESS_TOKEN, plus session tokens (CLAUDE_SESSION_INGRESS_TOKEN_FILE, CLAUDE_CODE_MESSAGING_TOKEN). Three are new to the record: OPENROUTER_API_KEY, OPEN_ROUTER_KEY, PT_PILOT_ACCESS_KEY.",
+          "evidence": "env names listed with cut -d= -f1 (no values), 2026-11-16 18:09 UTC, abp@'s conductor-started run (A2)"
         },
         {
           "primitive": "authenticate-as.credential.tenant",
@@ -423,10 +423,10 @@
           "undo": "no",
           "granted": true,
           "tier": "measured",
-          "instance": "the mail connector's send_message, reply, forward and create_draft tools, listed in abp's run; any HTTP endpoint",
+          "instance": "in this run: Drive create_file, update_file, copy_file and share_file; GitHub MCP write tools (issues, comments, pull requests, releases, create_repository, though scope is limited to this repository); send_message to other sessions; the proxy-injected host dev.send.sgraph.ai; any HTTP endpoint the proxy allows. No mail connector tool is listed in this run.",
           "barrier": "expectation",
           "barrier_note": "CLAUDE.md: never send an email or contact a person or company.",
-          "evidence": "tool list of 18:11 UTC, abp@'s conductor-started run (listed, not called). team/SCHEDULE.md found no connectors in sessions fired by scheduled tasks; sessions started with create_session do carry them."
+          "evidence": "tool list of 2026-11-16 18:09 UTC, abp@'s conductor-started run (listed, not called). Differs from the 18:11 UTC run of 2026-11-15, which listed mail tools: the connector set varies by run or by account state."
         },
         {
           "primitive": "read.message.tenant",
@@ -434,9 +434,9 @@
           "undo": "no",
           "granted": true,
           "tier": "measured",
-          "instance": "the mail, Drive, Calendar and meetings connectors' read and search tools, listed in abp's run",
+          "instance": "in this run: Drive search_files, read_file_content, download_file_content, list_recent_files and share permissions reads; no mail, Calendar or meetings tools are listed",
           "barrier": "expectation",
-          "evidence": "tool list of 18:11 UTC, abp@'s conductor-started run (listed, not called)"
+          "evidence": "tool list of 2026-11-16 18:09 UTC, abp@'s conductor-started run (listed, not called)"
         },
         {
           "primitive": "write.repository.project",
@@ -464,11 +464,11 @@
           "reach": "tenant",
           "undo": "no",
           "granted": true,
-          "tier": "derived",
+          "tier": "measured",
           "instance": "each run makes a fresh sgit key pair (team/keygen.sh) that does not sign git commits; whether the run container's global git config holds the same SSH signing key as the shared container was not checked",
           "barrier": "none",
-          "barrier_note": "The Agent: trailer and the commit author are typed by the agent, so neither tells agents apart.",
-          "evidence": "not checked in a run container; 18:11 UTC, abp@'s conductor-started run"
+          "barrier_note": "The run container's global git config (/root/.gitconfig) sets commit.gpgsign true, gpg.format ssh, gpg.ssh.program /tmp/code-sign and a user.signingkey (value masked); user.name is Claude. So commits are signed by a platform-provided key, not by the run's own sgit key. Whether that key is the same across runs and agents was not measured: it needs a comparison of two runs' public halves.",
+          "evidence": "git config --show-origin, signing key value masked, 2026-11-16 18:09 UTC, abp@'s conductor-started run (A2)"
         },
         {
           "primitive": "create.record.world",
@@ -508,9 +508,9 @@
           "undo": "yes",
           "granted": true,
           "tier": "measured",
-          "instance": "create_session, archive_session, send_message to other sessions, create_trigger, update_trigger, delete_trigger, fire_trigger and add_repo, listed in abp's run",
+          "instance": "create_session, archive_session, interrupt_session, send_message, create_trigger, update_trigger, delete_trigger, fire_trigger, send_later, add_repo, create_environment, update_environment and switch_environment, listed in this run; the last three change environment settings and each shows an approval prompt to the user",
           "barrier": "expectation",
-          "evidence": "tool list of 18:11 UTC, abp@'s conductor-started run (listed, not called)"
+          "evidence": "tool list of 2026-11-16 18:09 UTC, abp@'s conductor-started run (listed, not called). This run's own instruction forbids creating, changing or deleting scheduled tasks or sessions and changing settings: an expectation, because the tools are present."
         },
         {
           "primitive": "read.record.browsing",
@@ -700,7 +700,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:c6a4e6a1ba9b",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -812,7 +812,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:4bb762fdba83",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -926,7 +926,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:c6a4e6a1ba9b",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -1038,7 +1038,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:acba7a5ddff3",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -1152,7 +1152,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:4dcb879cc28c",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -1262,7 +1262,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:54426c6b41a6",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -1370,7 +1370,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:96a23f76c83b",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -1480,7 +1480,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:c6a4e6a1ba9b",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -1596,7 +1596,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:c6a4e6a1ba9b",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
@@ -1712,7 +1712,7 @@
         }
       ],
       "delta": {
-        "grant_version": "sha256:d6902641937d",
+        "grant_version": "sha256:ad99a133205e",
         "mandate_version": "sha256:c6a4e6a1ba9b",
         "pack_version": "abp.sgit.ai site v0.12.1, fetched 2026-11-15",
         "computed_by": "board/abp/derive.mjs v2",
