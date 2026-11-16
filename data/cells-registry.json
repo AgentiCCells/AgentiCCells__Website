@@ -1,14 +1,14 @@
 {
  "_about": "Every cell AgentiCCells has made, and whether it may be listed in public. Kept by conductor@AgentiCCells.dinis. Read by hub@ to build hub.agenticcells.site.",
  "_decision": "Dinis, 2026-11-16 ~18:10 UTC: everything listed here may be public. One client cell is excluded on his word (~14:15 UTC, board/briefs/sites-loop.md): it is not in this file and must not be listed, linked or named anywhere.",
- "_checked": "2026-11-16 18:10 UTC: repositories from list_repos; versions from each live /version.json. Status 'demo' unless it sells for real.",
+ "_checked": "2026-11-16 21:10 UTC: statuses refined after reviewer@'s hub review (board/inbox/hub-from-reviewer-1.md); versions from each live /version.json at 18:10 except agenticcells.ai (21:10).",
  "cells": [
   {
    "id": "agenticcells-ai",
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
    "live": "https://agenticcells.ai",
-   "version_seen": "v0.1.131",
+   "version_seen": "v0.1.141",
    "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
    "status": "live",
    "listed": true
@@ -90,7 +90,7 @@
    "live": null,
    "version_seen": null,
    "what": "A factory pipeline test run.",
-   "status": "demo",
+   "status": "test",
    "listed": true
   },
   {
@@ -100,7 +100,7 @@
    "live": null,
    "version_seen": null,
    "what": "A factory pipeline test run.",
-   "status": "demo",
+   "status": "test",
    "listed": true
   },
   {
@@ -110,7 +110,7 @@
    "live": null,
    "version_seen": null,
    "what": "A cell for email (repository started 2026-11-16).",
-   "status": "demo",
+   "status": "proposed",
    "listed": true
   },
   {
@@ -120,7 +120,7 @@
    "live": null,
    "version_seen": null,
    "what": "Specialist agent for agent behaviour policies (newsroom, \"Specialist agents for every team\").",
-   "status": "demo",
+   "status": "proposed",
    "listed": true
   },
   {
@@ -130,7 +130,7 @@
    "live": null,
    "version_seen": null,
    "what": "Specialist agent for design (newsroom, \"Specialist agents for every team\").",
-   "status": "demo",
+   "status": "proposed",
    "listed": true
   },
   {
@@ -140,7 +140,7 @@
    "live": null,
    "version_seen": null,
    "what": "Specialist agent for writing (newsroom, \"Specialist agents for every team\").",
-   "status": "demo",
+   "status": "proposed",
    "listed": true
   },
   {
@@ -150,7 +150,7 @@
    "live": null,
    "version_seen": null,
    "what": "Specialist agent for security (newsroom, \"Specialist agents for every team\").",
-   "status": "demo",
+   "status": "proposed",
    "listed": true
   },
   {
@@ -160,7 +160,7 @@
    "live": null,
    "version_seen": null,
    "what": "Specialist agent for code (newsroom, \"Specialist agents for every team\").",
-   "status": "demo",
+   "status": "proposed",
    "listed": true
   },
   {
@@ -170,8 +170,14 @@
    "live": null,
    "version_seen": null,
    "what": "Specialist agent for ux (newsroom, \"Specialist agents for every team\").",
-   "status": "demo",
+   "status": "proposed",
    "listed": true
   }
- ]
+ ],
+ "_statuses": {
+  "live": "sells or serves for real",
+  "demo": "made and live, to show what a cell can do",
+  "proposed": "described (often in a newsroom article) or with a repository started; not built yet",
+  "test": "a factory pipeline test run, kept as a record"
+ }
 }
