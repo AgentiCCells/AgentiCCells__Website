@@ -62,6 +62,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-16 10:09 conductor: agenticcells.ai at v0.1.105; the announcement draft refreshed for agenticcells.ai (outreach@, cc6fd58, nothing sent); dns/records.json now includes agenticcells.site and hub.agenticcells.site as observed, .com recorded as unused (dns@, 2cb5fa6). Sister-site fixes sent to site@ and hub@; listing the orange grower, Algarve Evolution and Gabriel DaCruz sites held for Dinis's consent.
 
+- 2026-11-16 11:10 conductor: agenticcells.ai at v0.1.108: inner pages with a header band, a 62rem grid and a closing call to action (designer@, ab69a00); dated console pages show only that day's changes and are noindex (dev@, b4fa0a2); every source link named (writer@, 79ce91e). agenticcells.site and hub.agenticcells.site at v0.1.3 (site@ and hub@ fixes).
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
