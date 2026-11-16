@@ -11,7 +11,7 @@ const privNames = JSON.parse(rfs(new URL('../private-names.json', import.meta.ur
 const privRes = privNames.patterns.map((p) => new RegExp(p, 'gi'));
 // V-RV6: every mention of the old domain on a console page says in place that it is history.
 const OLD_DOMAIN_NOTE = '(then the site\'s address; moved to agenticcells.ai on 2026-11-15)';
-const noteOldDomain = (h) => h.replace(/(?<![\w./@-])((?:www\.)?agenticcells\.com)(?![\w-])(?!\/[\w])(?! \(then the site)/g, `$1 ${OLD_DOMAIN_NOTE}`);
+const noteOldDomain = (h) => h.replace(/(?<![\w.@-])((?:www\.)?agenticcells\.com)(?![\w-])(?!\/[\w])(?! \(then the site)/g, `$1 ${OLD_DOMAIN_NOTE}`);
 const redact = (t) => privRes.reduce((a, re) => a.replace(re, privNames.replacement), t);
 import { readFileSync, readdirSync, existsSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
