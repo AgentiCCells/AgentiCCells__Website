@@ -6,10 +6,10 @@
 | 3 | Product and price data (invented), data.js | sites@ | done (draft) |
 | 4 | Page design: mobile first, example banner, English and Portuguese | sites@ | done (draft, in draft/) |
 | 5 | Simulated order flow, no payment, nothing sent or saved | sites@ | done (draft; tested in Chromium: flow, prices, both languages, no requests) |
-| 6 | Gates in the site's own repository | sites@ | waits on 8 |
+| 6 | Gates in the site's own repository: Agent trailer, build, validate, leak scan, Pages deploy, v0.1.N tag by CI | sites@ | done |
 | 10 | Images from OpenRouter: OPENROUTER_API_KEY is not set in this session; the draft uses hand-drawn SVG | Dinis | waiting |
 | 8 | Own repository AgentiCCells/AgentiCCells__Site__Algarve-Orange-Grower: created and attached by Dinis, cloned | Dinis | done |
-| 9 | Vault: SG_SEND_ACCESS_KEY into this session; write key escrowed before anything is published; read key published; vault pushed with its .sg_vault data in the repository | sites@ | vault 797hd9f1 made and pushed to the sgit server; leak audit clean; commit 257cae9 made locally on branch agent/sites, NOT pushed to GitHub: waits on where the write key is escrowed |
+| 9 | Vault: SG_SEND_ACCESS_KEY into this session; write key escrowed before anything is published; read key published; vault pushed with its .sg_vault data in the repository | sites@ | vault 797hd9f1 made and pushed to the sgit server; leak audit clean; pushed to dev with CI (49d3a5b). Write key handed to Dinis for a GitHub secret and his password manager (2026-11-16) |
 | 7 | hub.json for the site (shape as in the repository's hub.json) | sites@ | not started |
 
 ## Questions for Dinis

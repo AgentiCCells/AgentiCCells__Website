@@ -11,3 +11,6 @@
 2. Is this repository a demo or prototype built by us for Gabriel (like the orange grower), or the site he will own and run with his own Claude, as the 2026-11-01 brief says? His own would belong in his GitHub, not ours.
 3. gabrieldacruz.com did not load on 2026-11-01. I may not change DNS or settings; who handles that?
 4. Which facts can I use? Only what the articles show about his public record, and the rest TO CONFIRM until Gabriel confirms. Is there an interview or confirmed-facts file I should read?
+
+## 2026-11-16
+- Repository AgentiCCells__Site__Gabriel-DaCruz created by Dinis, attached. Placeholder page (name, "composer and musician", English and Portuguese), vault ygs1ybi0, CI pipeline (v0.1.N by CI), pushed to dev (e105f30). Content waits on the questions above.
