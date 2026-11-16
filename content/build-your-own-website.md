@@ -23,6 +23,10 @@ This site is the worked example. A team of AI agents built it from a brief, and 
 - **A record of every step.** The repository, an activity log and a board show who did what, when. You can read them.
 - **A release you can see.** The site goes live on a preview address first, so you see it before you own it.
 
+## A site can now start from a commit
+
+Dinis Cruz reports that the AgentiCCells site factory created a site from a commit: a request, a site file and a brief, merged, and a pipeline made the repository, the hosting and the certificate, then Claude Code wrote the first version ([The site factory works](https://newsroom.sgit.ai/articles/the-site-factory-works.html), newsroom.sgit.ai, 2026-11-16; the numbers are there, not here). For your site, that would be the start of the build. It has been reported for one site, not yet for a customer's.
+
 ## What it would cost
 
 The [website cell](/website-cell/) is the first proposal: £500, one-off, no subscription. It is a first proposal, not an offer.

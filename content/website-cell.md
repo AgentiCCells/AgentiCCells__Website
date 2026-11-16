@@ -32,6 +32,12 @@ This site was built by its own agentic team, from a brief. "That is the product 
 
 Each step is meant to be run from a queue, by a person or an agent, so the offering scales with capacity, not with one person's time. That is the design; it has not yet been run end to end.
 
+## The site factory
+
+Dinis Cruz reports that a site can now be created by a commit. A request, a site file and a brief go into the AgentiCCells site factory; once merged, a pipeline makes the repository, sets up the hosting, the domain and the certificate, and has Claude Code write the first version. He says it worked for one site, after three made by hand. The times, and the long list of what it took to get there, are in his article: [The site factory works](https://newsroom.sgit.ai/articles/the-site-factory-works.html) (newsroom.sgit.ai, 2026-11-16). We do not restate the numbers here.
+
+For the website cell this means the Build step can start from a commit, not from a person. It is the author's own report of one run, not a measured service. The order, queue, key, steer and handover steps are still not joined up, and the price stays a first proposal.
+
 ## What you get
 
 - A public website, built from your short brief.
