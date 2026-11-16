@@ -9,3 +9,4 @@
 {"time": "2026-11-16T01:12:33Z", "agent": "sites@AgentiCCells.dinis", "item": "SITES", "action": "step", "summary": "Sealed the three vault write keys to the DC Vault Registry (QR to Dinis), shredded plaintext; published read keys on the three sites"}
 {"time": "2026-11-16T01:35:01Z", "agent": "sites@AgentiCCells.dinis", "item": "SITES", "action": "step", "summary": "Briefed sites-design@ and sites-dev@ for the sites loop (board/briefs/sites-loop.md, queues); three sites live at v0.1.0"}
 {"time": "2026-11-16T01:35:55Z", "agent": "sites@AgentiCCells.dinis", "item": "SITES", "action": "step", "summary": "Started sites-design@ and sites-dev@ (persistent sessions, hourly scheduled wakes at :21 and :51)"}
+{"time": "2026-11-16T01:55:17Z", "agent": "sites@AgentiCCells.dinis", "item": "SITES", "action": "step", "summary": "Dinis: run the sites loop agents on Opus for now; restarting both on claude-opus-5-5"}

@@ -6,6 +6,9 @@ Given by sites@AgentiCCells.dinis, 2026-11-16 ~01:45 UTC, on Dinis Cruz's instru
 "You start a design agent in parallel to this ... and a dev agent for sites. So maybe sites.design and sites.agent, and they should be literally on the loop, just making these sites better, because these sites look, at least that one looks very non-professional, quite amateur, which is fine for the first pass, right? But like the oranges, it should be like maybe put in one page. You should have a map. It should be quite dynamic. It should kind of look very professional, right? So can you kind of do this on the loop so that especially the ... Algarve Evolution that needs to be very professional ... you have a lot of materials on the main website. So there's a lot of materials and a lot of news stories ... if you look at the [PrompTugal] website, there's already a lot of materials in there. And there's also a lot of materials about it on newsroom.sgit.ai. So make sure you follow them."
 Sites he named as material: promptugal.news (and its repository, PrompTugal/PrompTugal__News__Website, branch dev) and newsroom.sgit.ai.
 
+## Model
+Dinis, 2026-11-16 ~01:50 UTC: "okay to use Opus for now because ... our [limit] is going to reset at 5 a.m. ... for these more advanced ones like the design and things like this, yeah, run Opus now." Both loop agents run on claude-opus-5-5 until Dinis says otherwise.
+
 ## Who you are
 - `sites-design@AgentiCCells.dinis`: look and feel. Layout, type, colour, imagery (you may generate images with OPENROUTER_API_KEY and a Gemini image model on openrouter.ai: a few per run at most, generic prompts, no personal data, save them in the site repository with their prompt and model recorded, CC BY 4.0), accessibility, mobile, both themes. You own `src/*.css`, images and the page structure.
 - `sites-dev@AgentiCCells.dinis`: function. Interactivity, maps, data files, performance, tests, the pipeline and gates in each site repository. You own `src/*.js`, `src/data*`, `scripts/` and `.github/`.
@@ -29,7 +32,7 @@ Each site's brief and board: `sites/orange-grower/`, `sites/algarve-evolution/`,
 2. `git pull` this repository and each site repository (clones in /home/user/agenticcells__site__<name>; if missing, attach with add_repo, access push, and clone).
 3. Read your queue `board/queue/<your role>.md` and the site boards. Take the top open item, or if none, the most visible improvement on the top-priority site. Check the live page in Chromium (Playwright is installed) at phone and desktop widths before and after.
 4. Build, `node scripts/validate.mjs`, `node scripts/leak-scan.mjs`; release with `scripts/release.sh` in the site repository; wait for CI and confirm the live `/version.json` shows the new version. Never weaken a check; if a check is wrong, change it in its own commit with the reason.
-5. Commit trailer: `Agent: <your role>@AgentiCCells.dinis`, then `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>`.
+5. Commit trailer: `Agent: <your role>@AgentiCCells.dinis`, then `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
 6. Log with `team/log.sh <role>@AgentiCCells.dinis SITES <action> "<one sentence>"`, tick the queue item, add to the site board, and release this repository with `team/release.sh`. Then stop.
 
 ## Never
