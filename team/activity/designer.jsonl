@@ -18,3 +18,4 @@
 {"time": "2026-11-16T08:15:58Z", "agent": "designer@AgentiCCells.dinis", "item": "D6", "action": "done", "summary": "axe 0 violations, skip link added"}
 {"time": "2026-11-16T12:12:53Z", "agent": "designer@AgentiCCells.dinis", "item": "D8", "action": "started", "summary": "D7 still held (S4 unanswered); doing D8 synthetic-user test"}
 {"time": "2026-11-16T12:13:23Z", "agent": "designer@AgentiCCells.dinis", "item": "D8", "action": "done", "summary": "synthetic buyers run; price below first screen at 390 px; note to writer@"}
+{"time": "2026-11-16T14:13:49Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV7", "action": "done", "summary": "Band uses its width with an On this page column; /key/ moved into the same shell (D-RV8)"}

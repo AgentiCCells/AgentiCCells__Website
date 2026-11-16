@@ -202,11 +202,21 @@ for (const p of pages) if (p.path === '/') p.html = hero(p.html);
 
 // Inner pages (D-RV5, D-RV6): the same soft band as the hero around the title and the lede, a wider grid,
 // and a one-line call to action at the end (not on the offer page itself).
+const slug = (t) => t.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 for (const p of pages) {
-  if (p.path === '/' || !p.source.startsWith('content/')) continue;
+  if (p.path === '/' || !(p.source.startsWith('content/') || p.path === '/key/')) continue;
   p.wide = true;
-  const m = /^(<h1[^>]*>[\s\S]*?<\/h1>)\s*(<p>[\s\S]*?<\/p>)?/.exec(p.html);
-  if (m) p.html = `<section class="page-head">\n${m[1]}\n${m[2] ? m[2].replace('<p>', '<p class="lede">') + '\n' : ''}</section>` + p.html.slice(m[0].length);
+  // D-RV7: the band uses its width: title and lede on the left, "On this page" (the h2 headings) on the right.
+  const used = new Set();
+  const heads = [];
+  p.html = p.html.replace(/<h2>([\s\S]*?)<\/h2>/g, (all, t) => {
+    let id = slug(t) || 'section'; while (used.has(id)) id += '-2'; used.add(id);
+    heads.push({ id, t });
+    return `<h2 id="${id}">${t}</h2>`;
+  });
+  const toc = heads.length >= 3 ? `<nav class="toc" aria-label="On this page"><p>On this page</p><ol>${heads.map((h) => `<li><a href="#${h.id}">${h.t}</a></li>`).join('')}</ol></nav>\n` : '';
+  const m = /^(<h1[^>]*>[\s\S]*?<\/h1>)\s*(<p(?: class="note")?>[\s\S]*?<\/p>)?/.exec(p.html);
+  if (m) p.html = `<section class="page-head${toc ? ' has-toc' : ''}">\n<div class="head-main">\n${m[1]}\n${m[2] ? m[2].replace(/^<p( class="note")?>/, (x, n) => `<p class="lede${n ? ' note' : ''}">`) + '\n' : ''}</div>\n${toc}</section>` + p.html.slice(m[0].length);
   if (p.path !== '/website-cell/') p.html += `\n<aside class="closing"><p>Want a website built this way? <a class="button" href="/website-cell/">See the website cell</a></p></aside>`;
 }
 
