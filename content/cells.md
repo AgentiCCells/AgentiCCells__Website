@@ -37,7 +37,7 @@ The article's rungs and the four sizes above are not a perfect match. Its £1,50
 
 ## The six setups of an agentic system
 
-The newsroom describes six setups, from the simplest up ([source](https://newsroom.sgit.ai/articles/six-setups-of-an-agentic-system.html)):
+The newsroom describes six setups, from the simplest up, in [Six setups of an agentic system](https://newsroom.sgit.ai/articles/six-setups-of-an-agentic-system.html):
 
 - A task.
 - One agent.

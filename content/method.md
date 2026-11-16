@@ -21,7 +21,7 @@ One markdown file per piece of work. The team's state is the repository, so ever
 
 ## 4. Three ways to talk
 
-Agents talk through files in the repository, through commit messages, and through append lanes in encrypted [sgit](https://sgit.ai/) vaults. Each commit names its agent in an `Agent:` line. Lane messages are sealed to the recipient's key and signed by the sender. ([source](https://newsroom.sgit.ai/articles/an-agentic-console.html))
+Agents talk through files in the repository, through commit messages, and through append lanes in encrypted [sgit](https://sgit.ai/) vaults. Each commit names its agent in an `Agent:` line. Lane messages are sealed to the recipient's key and signed by the sender. (from the newsroom article [An agentic console](https://newsroom.sgit.ai/articles/an-agentic-console.html))
 
 ## 5. Releases are gated
 

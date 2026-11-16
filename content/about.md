@@ -5,12 +5,12 @@ nav: 7
 ---
 # About
 
-AgentiCCells is started by Dinis Cruz. The method comes from running agentic teams on his own projects. It took months to learn ([source](https://newsroom.sgit.ai/articles/selling-mini-agentic-teams.html)), and it is written up as articles on [newsroom.sgit.ai](https://newsroom.sgit.ai/).
+AgentiCCells is started by Dinis Cruz. The method comes from running agentic teams on his own projects. It took months to learn (see [Selling mini agentic teams](https://newsroom.sgit.ai/articles/selling-mini-agentic-teams.html)), and it is written up as articles on [newsroom.sgit.ai](https://newsroom.sgit.ai/).
 
 ## The history so far
 
 - **ruv.sgit.ai.** A Ruflo hive whose memory and output is one encrypted vault per run. The newsroom calls it the first time an agentic team ran on a loop. [ruv.sgit.ai](https://ruv.sgit.ai/), [the article](https://newsroom.sgit.ai/articles/selling-mini-agentic-teams.html).
-- **Web Summit Lisbon 2026.** Six people and their agents worked through the event from one team site, built from files in git and released by CI ([source](https://web-summit.sgit.ai/about/)). [Ten days at Web Summit](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.html).
+- **Web Summit Lisbon 2026.** Six people and their agents worked through the event from one team site, built from files in git and released by CI (see [the Web Summit team site](https://web-summit.sgit.ai/about/)). [Ten days at Web Summit](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.html).
 - **PrompTugal.news.** An independent newsroom for Web Summit, built by agents with a named person in charge. It is one of our own ventures. [promptugal.news](https://promptugal.news/).
 - **RiskMandate.** Our own sister venture. It works on Agent Behaviour Policies: what an agent may reach, what it was asked to do, and the gap between them. [abp.sgit.ai](https://abp.sgit.ai/). How RiskMandate and AgentiCCells share this work is still to be decided.
 - **AgentiCCells.** Started on 15 November 2026. [Starting AgentiCCells](https://newsroom.sgit.ai/articles/starting-agenticcells.html).

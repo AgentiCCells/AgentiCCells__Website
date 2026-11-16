@@ -5,7 +5,7 @@ nav: 1
 ---
 # AgentiCCells
 
-AgentiCCells sets up small teams of AI agents, called cells, inside your own environment, with a console where you can see what they do. ([source](https://newsroom.sgit.ai/articles/starting-agenticcells.html))
+AgentiCCells sets up small teams of AI agents, called cells, inside your own environment, with a console where you can see what they do.
 
 ## Start here: the website cell
 
@@ -17,7 +17,7 @@ Our first offering is a public website, built by an agentic team, that you steer
 
 Teams that want AI agents doing real work, inside their own accounts and repositories, and want to see and stop what those agents do. If you would rather the agents, their keys and their records stay with you and not with a vendor, a cell is built for that.
 
-It is not for you if you want a hosted service that keeps your data for you. We keep nothing. ([source](https://newsroom.sgit.ai/articles/starting-agenticcells.html))
+It is not for you if you want a hosted service that keeps your data for you. We keep nothing, as the newsroom article [Starting AgentiCCells](https://newsroom.sgit.ai/articles/starting-agenticcells.html) says.
 
 ## What you get in week one
 
@@ -47,7 +47,7 @@ If you would rather do it yourself, everything is open. Start with [the method](
 - **No state on our side.** We hold no customer data, no sessions and no infrastructure.
 - **Atomic cells.** Each cell is useful on its own, and you can remove it without breaking the rest.
 
-Source for all four: [Starting AgentiCCells](https://newsroom.sgit.ai/articles/starting-agenticcells.html), newsroom.sgit.ai.
+What this page says about AgentiCCells, its four properties and who it is for comes from [Starting AgentiCCells](https://newsroom.sgit.ai/articles/starting-agenticcells.html), on newsroom.sgit.ai.
 
 ## The ladder
 
