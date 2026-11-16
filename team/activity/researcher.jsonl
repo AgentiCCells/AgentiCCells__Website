@@ -13,3 +13,5 @@
 {"time": "2026-11-16T14:13:42Z", "agent": "researcher@AgentiCCells.dinis", "item": "S4", "action": "done", "summary": "cc-trademark.md written, flagged"}
 {"time": "2026-11-16T15:50:47Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-CELL", "action": "started", "summary": "Reading the newsroom articles in full from their .md twins to write research/newsroom-cells.md"}
 {"time": "2026-11-16T15:52:50Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-CELL", "action": "wrote", "summary": "research/newsroom-cells.md, seen file, three inbox notes, queue ticked"}
+{"time": "2026-11-16T23:26:01Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-PROOF", "action": "started", "summary": "reading the brief; building the proof catalogue"}
+{"time": "2026-11-16T23:38:17Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-PROOF", "action": "built", "summary": "research/proof/README.md and 42 screenshots written"}

@@ -13,3 +13,14 @@
 - Found: agenticcells.ai/llms.txt and /cells/index.md both answer 404 (checked 2026-11-16 with curl).
 - For REALITY.md: researcher@ checked on 2026-11-16 that every article above has a working .md twin; agenticcells.ai has no llms.txt or .md twins.
 - Dinis to decide: accept, change or drop the proposed cell folder format; whether a mailto link with a prefilled subject is enough as a request step for now.
+
+## S-PROOF (run 2026-11-16 late evening)
+By researcher@AgentiCCells.dinis.
+- **Done:** `research/proof/README.md`, a catalogue of ten groups of proof (Web Summit team, universe, PrompTugal and by place, factory sites, apps, Storm, Lisbon Tech Fringe, newsroom and book, the two sites as they stand) with links, what each proves, figures marked with their source, which site each fits, faces and consent notes; 42 screenshots in `research/proof/shots/` (Playwright, Chromium, 1280 by 800, no login).
+- **White stripes not reproduced.** Command-centre universe at five widths and in full-screen and stand mode, and the Fringe universe at two widths, had dark edges. The bright bands are the iMac bezel and room in `universe-demo.mp4` on a team member's portfolio site. Fringe universe full-screen and stand modes, light theme and Safari are untested.
+- **The universe is not 3D** in the page I measured (47 SVG, no canvas or WebGL).
+- **Not found:** an Android public page; any public source for "256 agents" and "120,000" (public figure: around 250 named agents); the book's free PDF link; infographics set; consent records for named people.
+- **Cautions found:** Lisbon Tech Fringe's header shows zeros (event over); the PrompTugal iOS app is a TestFlight beta, 8 of 13 planned features; the Storm site was last updated 3 days ago.
+- **Facts for REALITY.md** (checked 2026-11-16, Chromium): the universe is at https://web-summit.sgit.ai/people/dinis/app/index.html#stand and, via Gravity, at https://lisbontechfringe.com/universe/; the live view read 115 agents, 204 messages, 21 agents with no policy at 23:31 UTC.
+- **Dinis must decide:** who may be named and shown (the catalogue says "a team member" until then); which file is the white stripe; which PDF may be offered.
+- **Left (not done in this run):** recordings of animations; a screenshot at phone width of each site; re-check of GAMMA-Ray and Swarm beyond their home pages.
