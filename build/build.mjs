@@ -119,7 +119,7 @@ ${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !me
 <meta property="og:description" content="${esc(meta.description || '')}">
 ${origin ? `<meta property="og:url" content="${esc(origin + current)}">\n` : ''}<meta name="twitter:card" content="summary">
 </head>
-<body${current === '/' ? ' class="home"' : ''}>
+<body${current === '/' ? ' class="home wide"' : meta.wide ? ' class="wide"' : ''}>
 <a class="skip" href="#main">Skip to the content</a>
 <header><a class="brand" href="/">${MARK}<span>AgentiCCells</span></a>${navHtml(nav, current)}</header>
 <main id="main" tabindex="-1">
@@ -199,6 +199,16 @@ function hero(html) {
   return `<section class="hero">\n<div class="hero-text">\n${html.slice(0, i)}\n<p class="cta"><a class="button" href="/website-cell/">See the website cell</a> <a class="button ghost" href="mailto:${contact}">Email ${contact}</a></p>\n</div>\n<figure class="cell-fig">${CELL}<figcaption>${CELL_CAPTION}</figcaption></figure>\n</section>\n${html.slice(i)}`;
 }
 for (const p of pages) if (p.path === '/') p.html = hero(p.html);
+
+// Inner pages (D-RV5, D-RV6): the same soft band as the hero around the title and the lede, a wider grid,
+// and a one-line call to action at the end (not on the offer page itself).
+for (const p of pages) {
+  if (p.path === '/' || !p.source.startsWith('content/')) continue;
+  p.wide = true;
+  const m = /^(<h1[^>]*>[\s\S]*?<\/h1>)\s*(<p>[\s\S]*?<\/p>)?/.exec(p.html);
+  if (m) p.html = `<section class="page-head">\n${m[1]}\n${m[2] ? m[2].replace('<p>', '<p class="lede">') + '\n' : ''}</section>` + p.html.slice(m[0].length);
+  if (p.path !== '/website-cell/') p.html += `\n<aside class="closing"><p>Want a website built this way? <a class="button" href="/website-cell/">See the website cell</a></p></aside>`;
+}
 
 // Seven-step diagram on the website cell page (D9): inline SVG, no external files.
 const FLOW = '<figure class="flow"><svg viewBox="0 0 360 324" role="img" aria-labelledby="flow-t flow-d"><title id="flow-t">The seven steps of the website cell</title><desc id="flow-d">Order, queue, build, preview, key, steer, handover, in that order, with who acts at each step. A proposal, not yet run end to end.</desc><line class="d-line" x1="22" y1="30" x2="22" y2="294"/><circle class="d-dot" cx="22" cy="30" r="14"/><text class="d-num" x="22" y="35" text-anchor="middle">1</text><text class="d-txt" x="50" y="35">Order</text><circle class="d-dot" cx="22" cy="74" r="14"/><text class="d-num" x="22" y="79" text-anchor="middle">2</text><text class="d-txt" x="50" y="79">Queue</text><circle class="d-dot" cx="22" cy="118" r="14"/><text class="d-num" x="22" y="123" text-anchor="middle">3</text><text class="d-txt" x="50" y="123">Build</text><circle class="d-dot" cx="22" cy="162" r="14"/><text class="d-num" x="22" y="167" text-anchor="middle">4</text><text class="d-txt" x="50" y="167">Preview</text><circle class="d-dot" cx="22" cy="206" r="14"/><text class="d-num" x="22" y="211" text-anchor="middle">5</text><text class="d-txt" x="50" y="211">Key</text><circle class="d-dot" cx="22" cy="250" r="14"/><text class="d-num" x="22" y="255" text-anchor="middle">6</text><text class="d-txt" x="50" y="255">Steer</text><circle class="d-dot" cx="22" cy="294" r="14"/><text class="d-num" x="22" y="299" text-anchor="middle">7</text><text class="d-txt" x="50" y="299">Handover</text><text class="d-who" x="346" y="35" text-anchor="end">you</text><text class="d-who" x="346" y="79" text-anchor="end">us</text><text class="d-who" x="346" y="123" text-anchor="end">our agents</text><text class="d-who" x="346" y="167" text-anchor="end">you look</text><text class="d-who" x="346" y="211" text-anchor="end">your browser</text><text class="d-who" x="346" y="255" text-anchor="end">you and our agents</text><text class="d-who" x="346" y="299" text-anchor="end">you</text></svg><figcaption>The seven steps, in order, and who acts at each. A proposal; the flow has not yet been run end to end.</figcaption></figure>';
