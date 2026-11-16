@@ -67,6 +67,8 @@ function keyRows(list, merged) {
     fingerprint: shortFp(k.fingerprint || k.id),
     signing_fingerprint: shortFp(k.signing_fingerprint),
     created: clean(k.created),
+    status: k.status === 'superseded' ? 'superseded' : 'active',
+    superseded_at: clean(k.superseded_at || ''),
     in_keys_json: merged,
   }));
 }
@@ -215,8 +217,8 @@ function boardTable(items) {
 
 function agentsTable(agents) {
   if (!agents.length) return '<p>No agents seen.</p>';
-  const rows = agents.map((a) => `<tr><td>${esc(a.agent)}</td><td>${a.fingerprint ? `<code>${esc(a.fingerprint)}</code>${a.in_keys_json ? '' : '<br><small>published, not yet in team/keys.json</small>'}` : '<small>no key published</small>'}</td><td>${a.steps}</td><td>${a.commits}</td><td>${a.last ? esc(a.last.replace('T', ' ').replace('Z', ' UTC')) : '-'}</td></tr>`).join('\n');
-  return `<div class="table-wrap"><table class="console-agents">\n<thead><tr><th>Agent</th><th>Key (short fingerprint)</th><th>Steps</th><th>Commits</th><th>Last seen</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>`;
+  const rows = agents.map((a) => `<tr><td>${esc(a.agent)}</td><td>${a.fingerprint ? `<code>${esc(a.fingerprint)}</code>${a.in_keys_json ? '' : '<br><small>published, not yet in team/keys.json</small>'}` : '<small>no key published</small>'}</td><td>${a.active} active, ${a.superseded} superseded</td><td>${a.steps}</td><td>${a.commits}</td><td>${a.last ? esc(a.last.replace('T', ' ').replace('Z', ' UTC')) : '-'}</td></tr>`).join('\n');
+  return `<div class="table-wrap"><table class="console-agents">\n<thead><tr><th>Agent</th><th>Key (short fingerprint)</th><th>Keys kept</th><th>Steps</th><th>Commits</th><th>Last seen</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>`;
 }
 
 const utc = (t) => esc(String(t).replace('T', ' ').replace('Z', ' UTC'));
@@ -243,8 +245,13 @@ function timeline(events) {
 
 function agentsFrom(keys, acts, cms) {
   const map = new Map();
-  const get = (name) => { if (!map.has(name)) map.set(name, { agent: name, fingerprint: '', signing_fingerprint: '', in_keys_json: false, steps: 0, commits: 0, last: '' }); return map.get(name); };
-  for (const k of keys) Object.assign(get(k.agent), { fingerprint: k.fingerprint, signing_fingerprint: k.signing_fingerprint, in_keys_json: k.in_keys_json });
+  const get = (name) => { if (!map.has(name)) map.set(name, { agent: name, fingerprint: '', signing_fingerprint: '', in_keys_json: false, active: 0, superseded: 0, steps: 0, commits: 0, last: '' }); return map.get(name); };
+  for (const k of keys) {
+    const x = get(k.agent);
+    if (k.status === 'superseded') { x.superseded++; continue; }
+    x.active++;
+    Object.assign(x, { fingerprint: k.fingerprint, signing_fingerprint: k.signing_fingerprint, in_keys_json: k.in_keys_json });
+  }
   for (const a of acts) if (a.agent) { const x = get(a.agent); x.steps++; if (a.time > x.last) x.last = a.time; }
   for (const c of cms) if (c.agent) for (const name of c.agent.split(',').map((s) => s.trim()).filter(Boolean)) { const x = get(name); x.commits++; if (c.time > x.last) x.last = c.time; }
   return [...map.values()].sort((a, b) => a.agent.localeCompare(b.agent));

@@ -29,10 +29,28 @@ path, agent, fp, sfp, bundle = sys.argv[1:]
 pub = json.loads(bundle)
 if any(k in json.dumps(pub).lower() for k in ("private", "passphrase")):
     sys.exit("refusing: export bundle mentions a private part")
-key = ({"id": fp, "label": agent, "fingerprint": fp, "signing_fingerprint": sfp,
-             "public_key": pub, "created": datetime.date.today().isoformat(),
-             "lifetime": "ephemeral: valid while this agent's session exists"})
-json.dump(key, open(path, "w"), indent=2)
+import os
+now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+new = {"id": fp, "label": agent, "fingerprint": fp, "signing_fingerprint": sfp,
+       "public_key": pub, "created": datetime.date.today().isoformat(), "created_at": now,
+       "status": "active",
+       "lifetime": "ephemeral: valid while this agent's session exists"}
+# Registry with history: the file is a list, every key kept, newest active, earlier ones superseded.
+hist = []
+if os.path.exists(path):
+    old = json.load(open(path))
+    hist = old if isinstance(old, list) else [old]
+if any(k.get("fingerprint") == fp for k in hist):
+    for k in hist:
+        k["status"] = "active" if k.get("fingerprint") == fp else "superseded"
+        if k["status"] == "active": k.pop("superseded_at", None)
+        elif not k.get("superseded_at"): k["superseded_at"] = now
+else:
+    for k in hist:
+        if k.get("status") != "superseded":
+            k["status"] = "superseded"; k["superseded_at"] = now
+    hist.append(new)
+json.dump(hist, open(path, "w"), indent=2)
 open(path, "a").write("\n")
 print(f"published public key for {agent}: {fp}")
 PY
