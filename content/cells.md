@@ -11,7 +11,7 @@ A cell is a small agentic team set up in your environment. It is useful on its o
 
 We do not list every cell we have made on this page. [The hub](https://hub.agenticcells.site/) does that, with one page per cell, so you can find one, open it and copy it. This site sells; the hub lists. Every cell we host publicly is a demo, made to show how the work goes, and it says so. None is a customer's site, and none has been sold.
 
-Examples by kind: [the site factory](https://hub.agenticcells.site/cells/site-factory/), [the site template](https://hub.agenticcells.site/cells/site-template/), [an email cell](https://hub.agenticcells.site/cells/cell-email/) and [a specialist agent](https://hub.agenticcells.site/cells/specialist-design/). Each page there has a fork link; the five ways to make a cell yours are [below](#five-ways-to-make-a-cell-yours).
+Examples by kind: [the site factory](https://hub.agenticcells.site/cells/site-factory/), [the site template](https://hub.agenticcells.site/cells/site-template/), [an email cell](https://hub.agenticcells.site/cells/cell-email/) and [a specialist agent](https://hub.agenticcells.site/cells/specialist-design/). A proposed example, not yet built, is the [job-seeker cell](/job-seeker-cell/). Each page on the hub has a fork link; the five ways to make a cell yours are [below](#five-ways-to-make-a-cell-yours).
 
 ## The four sizes
 
