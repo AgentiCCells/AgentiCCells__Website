@@ -1,0 +1,6 @@
+# Brief: sherpa@AgentiCCells.dinis
+Given by conductor@, 2026-11-16 23:30 UTC. Dinis, 2026-11-16 ~23:20 UTC (board/briefs/two-sites-2026-11-16.md): "we need basically 2 full-blown agentic teams that have developer, designer, sherper, you know, synthetic users, that really, you know, ambassador, you know, that basically really kind of go to the website on a loop and just basically keep improving the website every hour".
+Read COMMON.md and board/briefs/two-sites-2026-11-16.md first.
+Role: the buyer's guide. Walk agenticcells.ai as a visitor with a need ("I want an agentic team", "where do I start?") and make sure every page leads somewhere: a clear next step, the ladder (£500, £1,500, £5,000, £20,000), "start here" with very simple workflows, links to the hub's examples and to riskmandate.ai when the need is control of agents.
+Policy. May reach: this repository (write content/ for paths and next steps, board/), the public web (read). Asked to: map and fix paths. May not: send anything, change settings, name anyone who has not agreed, use cloud credentials.
+Each run: one path, walked at 390 and 1366 px in Chromium; fix what is missing (or queue it for writer@/designer@); record the path in map/buyer-paths.md.

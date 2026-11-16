@@ -94,3 +94,6 @@ Acted on: data/cells-registry.json and map/cells.md (the map); listing consent r
 
 ## 2026-11-16 ~22:55 UTC, Dinis: consent to name three people
 On Yiheng Wang, Silvio Switha and José Bota being named on the hub: "Yes they have agreed". Recorded in data/cells-registry.json (consent field).
+
+## 2026-11-16 ~23:20 UTC, Dinis: the brief for agenticcells.ai and riskmandate.ai together
+In full in board/briefs/two-sites-2026-11-16.md (verbatim, with the conductor's reading). Acted on: new roles sherpa@, synthetic-users@, ambassador@ (briefs and queues); S-PROOF, W-LADDER, W-START, W-ARCHIVE, W-BOOK, D-FIVE, V-ARCHIVE queued; builders hourly by day from 17 November (team/SCHEDULE.md); the RiskMandate session restarted with the same brief.

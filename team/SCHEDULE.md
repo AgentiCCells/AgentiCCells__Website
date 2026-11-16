@@ -19,7 +19,9 @@ Times are Europe/London (assumed; change on Dinis's word). "Day" is 07:00 to 23:
 | `dns@AgentiCCells.dinis` | :11, 08:11 and 20:11 | fresh session |
 | `outreach@AgentiCCells.dinis` | :17, 09:17 daily | fresh session |
 
-**Interim pace (from 2026-11-16 08:12 UTC, until Dinis chooses; ACC-026):** the usage limit was hit three times between 19:09 and about 08:00, and each time the runs then starting failed. Until Dinis answers: dev@, writer@, designer@ every two hours from 08:00 to 22:00 (even hours), none overnight; reviewer@ at 08, 12, 16, 20; console@, researcher@, security@, abp@, reporter@ once a day (at 12, 14, 16, 18, 20 respectively); dns@ and outreach@ as before. The conductor's wake stays hourly (it starts little and keeps the board).
+**Hourly by day (from 2026-11-17, Dinis 2026-11-16 ~23:20 UTC: "keep improving the website every hour", board/briefs/two-sites-2026-11-16.md):** writer@, designer@, dev@ every hour 08:00 to 22:00; sherpa@, synthetic-users@, ambassador@ and researcher@ every two hours (sherpa and researcher even hours, synthetic-users and ambassador odd hours); reviewer@ every four hours; the rest once a day. A role with an empty queue is skipped. The account's seven-day usage limit showed a warning on 16 November: if a run fails on the limit, the conductor halves the pace and tells Dinis.
+
+**Earlier interim pace (from 2026-11-16 08:12 UTC, until Dinis chooses; ACC-026):** the usage limit was hit three times between 19:09 and about 08:00, and each time the runs then starting failed. Until Dinis answers: dev@, writer@, designer@ every two hours from 08:00 to 22:00 (even hours), none overnight; reviewer@ at 08, 12, 16, 20; console@, researcher@, security@, abp@, reporter@ once a day (at 12, 14, 16, 18, 20 respectively); dns@ and outreach@ as before. The conductor's wake stays hourly (it starts little and keeps the board).
 
 **Model:** every run uses claude-sonnet-5-5; only the conductor uses another model (Dinis, 2026-11-15).
 

@@ -1,0 +1,5 @@
+# Brief: ambassador@AgentiCCells.dinis
+Given by conductor@, 2026-11-16 23:30 UTC. Dinis, 2026-11-16 ~23:20 UTC (board/briefs/two-sites-2026-11-16.md): "we need basically 2 full-blown agentic teams that have developer, designer, sherper, you know, synthetic users, that really, you know, ambassador, you know, that basically really kind of go to the website on a loop and just basically keep improving the website every hour".
+Read COMMON.md, board/briefs/two-sites-2026-11-16.md and "The intersection" first.
+Role: the site's face to the outside, and its links to the rest of the stack. Make sure agenticcells.ai links up and down the stack (SGit, SHarness, ABP, riskmandate.ai, the newsroom, the hub) and that the dual sale with RiskMandate is clear; keep a list of the proof the outreach Dinis is starting (the summit, Portugal) can point at; draft (never send) the short texts and link packs a person would use, in board/drafts/outreach/.
+Policy. May reach: this repository (write content/ for cross-links, board/drafts/outreach/), the public web (read). May not: send, post, email or contact anyone; name a prospect; use mail or social connectors.
