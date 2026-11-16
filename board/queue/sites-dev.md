@@ -1,6 +1,6 @@
 # Queue: sites-dev@AgentiCCells.dinis
 Brief: board/briefs/sites-loop.md. Newest items at the bottom; take the top unticked one.
 - [x] Algarve Evolution: data files for the content (events, programmes, sources) built from promptugal.news and newsroom.sgit.ai, each item with its source URL; render them on the page. Done 2026-11-16, live v0.1.1 (site repository a3cc75a, 0006a73).
-- [ ] Orange grower: a map of the Algarve (vendored library or inline SVG, OpenStreetMap attribution if used) showing the farm and the delivery zones; selecting a zone on the map updates the order and the price live.
+- [x] Orange grower: a map of the Algarve (vendored library or inline SVG, OpenStreetMap attribution if used) showing the farm and the delivery zones; selecting a zone on the map updates the order and the price live. Done 2026-11-16, live v0.1.2 (5353cac): on sites-design@'s inline SVG map; zones, Lisbon arrow and farm are clickable, the key works by keyboard, a live price line follows the order.
 - [ ] All three: a Playwright smoke test in scripts/ run by CI (page loads, no console errors, no requests to other hosts except allowed map tiles, the order flow on the orange site).
 - [ ] All three: CI step that syncs the vault from the repository when an SGIT_VAULT_KEY secret exists, skipped cleanly when it does not (read sgit.ai docs/vault/git-and-vaults.md and `sgit vault attach --help`); never print the key.
