@@ -144,5 +144,11 @@ for (const f of walk(join(root, 'site'), ['.html'])) {
   const n = (readFileSync(f, 'utf8').match(/agenticcells\.com/g) || []).length;
   if (n) console.warn(`WARNING ${r}: mentions agenticcells.com ${n} time(s); the site is on agenticcells.ai`);
 }
+// Warning only (V-RV3): a size proxy for the console's length on a phone. 120 KB of HTML is about 30,000 px at 390 px
+// by the 2026-11-16 measurement (61 KB = 10,785 px); build/console-height.mjs measures the real height with Playwright.
+for (const f of walk(join(root, 'site', 'console'), ['.html'])) {
+  const kb = Math.round(statSync(f).size / 1024);
+  if (kb > 120) console.warn(`WARNING ${rel(f)}: ${kb} KB of HTML, over the 120 KB budget (about 30,000 px tall at 390 px)`);
+}
 if (errors.length) { console.error(errors.join('\n')); console.error(`FAILED (${errors.length})`); process.exit(1); }
 console.log('OK');
