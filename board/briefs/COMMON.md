@@ -18,6 +18,9 @@ Given by conductor@AgentiCCells.dinis, 2026-11-15, from Dinis's instruction the 
 - Do not use the AWS or Google Cloud credentials in the environment, and do not use GitHub tokens for anything but git push/fetch of this repository. Do not change settings, permissions or any other repository.
 - Do not edit REALITY.md, CLAUDE.md, another role's brief, or another agent's activity log. Report facts for REALITY.md in your debrief; the conductor records them.
 
+## Standing rules from Dinis
+- Algarve Evolution (2026-11-16 ~14:15 UTC, relayed by sites@): "tell the sites not to touch this guy. In fact, this should not be linked anywhere... So this link should not exist in any other pages right now." No agent but its own session touches its repository, and no page, console view, sitemap or article links or lists its address.
+
 ## Committing and releasing
 - Before committing: `node build/build.mjs && node build/validate.js` must print OK. Never weaken a check.
 - Commit message: a subject line, a blank line, then ONE final trailer block with no blank lines inside it:

@@ -70,6 +70,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-16 ~14:15 UTC sites@AgentiCCells.dinis: Dinis, relaying António Guerreiro: the Algarve Evolution site is hands off for every agent but the algarve-evolution session, and must not be linked anywhere. Checked: no live page on agenticcells.ai, agenticcells.site, the hub or the other sites links it. The site itself now serves V2 (the AE Innovation Hub on Odoo, v0.1.17) with V1 parked at /v1/, and asks search engines not to index it.
 
+- 2026-11-16 15:12 conductor: agenticcells.ai at v0.1.120: the inner-page band uses its width and /key/ sits in the same shell (designer@, 1a6a3d3); a console height budget with a Playwright measure (dev@, 593ecdc); site-factory passages on the website cell pages (writer@, ce754d9); research/cc-trademark.md (researcher@, 1e2e7d8).
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
@@ -93,4 +95,5 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 - 2026-11-15 ~19:45: "btw it should be *@AgentiCCells.dinis" ("sites@AgentiCCells.dinis"). Agent names are written role@AgentiCCells.dinis from now on; earlier records (activity logs, keys, debriefs, commits) keep the lowercase form they were made with. CI's Agent: check is case-insensitive, so both pass.
 - 2026-11-15 ~20:45: "I can confirm that I have agenticcells.site". And on repository names for the site factory: "yeah I agree let me create those": AgentiCCells__Site__Factory, AgentiCCells__Site__Template, AgentiCCells__Site__Website, AgentiCCells__Site__Hub (ACC-027).
 - 2026-11-15 ~21:15: "all those domains are in a good state now. agenticcells.com - we are not going to use it. agenticcells.ai - is ok for now. agenticcells.site and hub.agenticcells.site should be working very soon (just some DNS propagation issues)".
+- 2026-11-16 ~14:15 (relayed by sites@): on the Algarve Evolution site, "tell the sites not to touch this guy. In fact, this should not be linked anywhere... So this link should not exist in any other pages right now." Checked by the conductor 15:11 UTC: no page on agenticcells.ai, agenticcells.site or the hub links or lists its address; the console shows only its repository name as text, from activity logs. Rule added to board/briefs/COMMON.md and sent to site@ and hub@.
 - Open decisions 1 to 4 in board/BRIEF.md remain open. Wording until decided: "fixed-price cells".
