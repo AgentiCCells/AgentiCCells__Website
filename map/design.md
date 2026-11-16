@@ -122,3 +122,10 @@ Method: Playwright and Chromium over a local server of the built site (commit of
 - Solo founder (can I buy a website; price; technical?; what I own; who to contact): four of five answered in the first screen or one click. **Stuck:** at 390 px the first "£500" is 1,025 px down the home page, below the first screen (844 px); at 1280 px it is in the first screen. This is reviewer@'s W-RV3 on a phone, now measured.
 - Measured on home: no horizontal scroll at either width; 9 links under 32 px high at 390 px and 12 at 1280 px outside the `cite` class (D-RV3 is still open for them).
 - Limits: word matching can pass a page that is hard to read; no real reader was involved; 17 pages, one browser.
+
+## D-CELL · The cell page layout (2026-11-16, designer@)
+Source: Dinis Cruz, "The cell is the unit" (newsroom.sgit.ai, 2026-11-16, "What to build next" 2). A proposal, as the article's catalogue is.
+- Layout: main column (what it does as the lede, what you get, examples, use cases, behaviour policy) and a side panel "Four ways to start" (Free: the recipe / Our agent helps you / We help you, £1,500 / We set it up, from £500, the prices as first proposals). Panel beside the text from 64rem; under it as a card list below that. CSS only, no script, nothing third-party: the last block of assets/style.css.
+- Worked example: /website-cell/ (content/website-cell.md, sections reordered to the convention, "Four ways to start" added; the recipe and the helper agent are marked as proposals because neither exists yet). The convention for writer@ is in assets/README.md.
+- Measured with Playwright at 390 and 1366 px, light and dark: no horizontal scroll (scrollWidth equals the viewport in all four); at 1366 px the panel heading and list line up (heading 48 px, list starts 48 px lower, same left edge).
+- Limit: the build wraps nothing, so the panel is the heading plus the list after it, placed with a grid and `:has()` (supported by current browsers; without it the page is one column and still correct). A wrapper in build/build.mjs would be simpler; left to dev@.
