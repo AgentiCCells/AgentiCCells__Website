@@ -24,6 +24,10 @@ What differs is whose accounts the work runs in. In the second mode we keep no s
 
 Neither mode has been sold yet. The end-to-end flow for the first is being built now.
 
+## The ladder in Dinis's words
+
+Dinis Cruz gives the same ladder for every company on the sgit.ai sites ([The intersection](https://newsroom.sgit.ai/articles/the-intersection.html), newsroom.sgit.ai, 2026-11-16): "£500 for one workflow, done in a session; £1,500 for two sessions and a handover; £5,000 for a few days and a team; £20,000 for a bespoke engagement." For us, "one agent or a website" sits at £500. Every price here is a first proposal, as the article says of ours. The article notes that only AgentiCCells and RiskMandate show prices today, and that the rest of the ladder is a proposal.
+
 ## The ladder as biology
 
 The newsroom reads the ladder as biology ([Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html), Dinis Cruz, newsroom.sgit.ai, 2026-11-15). Its words are quoted below. Every price is a first proposal, not an offer.
@@ -33,7 +37,7 @@ The newsroom reads the ladder as biology ([Atomic cells, end to end](https://new
 - **Colony.** "Several cells integrated with the customer's work, with a conductor, a board and keys." £5,000, first proposal.
 - **Multi-cell organism.** "A custom network of cells, conductors of conductors, policies and observability." £20,000, first proposal. The article's caption calls this stage "a network".
 
-The article's rungs and the four sizes above are not a perfect match. Its £1,500 rung (first proposal) is a single cell handed over, while the £1,500 size above (first proposal) is a few sessions. We have not reconciled the two. Neither has been sold yet, and the biology is the newsroom's way of reading the ladder, not a measured result.
+The article's rungs and the four sizes above are not a perfect match. Its £1,500 rung (first proposal) is a single cell handed over, while the £1,500 size above (first proposal) is a few sessions. Dinis's newer wording, "two sessions and a handover", fits both readings, so we have kept both and not reconciled them. Neither has been sold yet, and the biology is the newsroom's way of reading the ladder, not a measured result.
 
 ## The six setups of an agentic system
 

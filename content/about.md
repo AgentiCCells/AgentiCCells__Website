@@ -15,6 +15,17 @@ AgentiCCells is started by Dinis Cruz. The method comes from running agentic tea
 - **RiskMandate.** Our own sister venture. It works on Agent Behaviour Policies: what an agent may reach, what it was asked to do, and the gap between them. [abp.sgit.ai](https://abp.sgit.ai/). How RiskMandate and AgentiCCells share this work is still to be decided.
 - **AgentiCCells.** Started on 15 November 2026. [Starting AgentiCCells](https://newsroom.sgit.ai/articles/starting-agenticcells.html).
 
+## Where AgentiCCells fits
+
+Dinis Cruz writes that RiskMandate "had a strong idea and a hard first step", and that "a £500 cell is a way to start" (first proposal; [The intersection](https://newsroom.sgit.ai/articles/the-intersection.html), 2026-11-16). In our words, AgentiCCells is the missing first step: a small, fixed-price way in. The article names the stack under it, each part with its own home:
+
+- **SGit:** "git for encrypted vaults." [sgit.ai](https://sgit.ai/).
+- **SHarness:** "a Process Behaviour Policy for every process an AI agent starts." [sharness.ai](https://sharness.ai/).
+- **Keys:** "a key for every person and every agent." [A key for every person](https://newsroom.sgit.ai/articles/a-key-for-every-person.html).
+- **Agent Behaviour Policies:** "the underpinning of all of this." The standard is housed at RiskMandate for now. [abp.sgit.ai](https://abp.sgit.ai/).
+- **RiskMandate:** a separate company, which "sells Agent Behaviour Policies for real agents." [riskmandate.ai](https://riskmandate.ai/).
+- **AgentiCCells:** sells small fixed-price agent teams, using those policies and vaults. Prices are first proposals, and nothing has been sold yet.
+
 ## Further reading
 
 - [Selling mini agentic teams](https://newsroom.sgit.ai/articles/selling-mini-agentic-teams.html)
