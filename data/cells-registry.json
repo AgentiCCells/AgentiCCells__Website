@@ -8,7 +8,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
    "live": "https://agenticcells.ai",
-   "version_seen": "v0.1.145",
+   "version_seen": "v0.1.147",
    "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
    "status": "live",
    "listed": true
@@ -28,7 +28,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Hub",
    "live": "https://hub.agenticcells.site",
-   "version_seen": "v0.1.10",
+   "version_seen": "v0.1.12",
    "what": "The hub: lists every cell we have made, with previews and how to copy one.",
    "status": "demo",
    "listed": true
@@ -213,5 +213,5 @@
   "proposed": "described (often in a newsroom article) or with a repository started; not built yet",
   "test": "a factory pipeline test run, kept as a record"
  },
- "version_checked": "2026-11-16 22:13 UTC"
+ "version_checked": "2026-11-16 22:48 UTC"
 }
