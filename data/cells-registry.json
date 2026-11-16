@@ -1,7 +1,7 @@
 {
  "_about": "Every cell AgentiCCells has made, and whether it may be listed in public. Kept by conductor@AgentiCCells.dinis. Read by hub@ to build hub.agenticcells.site.",
  "_decision": "Dinis, 2026-11-16 ~18:10 UTC: everything listed here may be public. One client cell is excluded on his word (~14:15 UTC, board/briefs/sites-loop.md): it is not in this file and must not be listed, linked or named anywhere.",
- "_checked": "2026-11-16 21:10 UTC: statuses refined after reviewer@'s hub review (board/inbox/hub-from-reviewer-1.md); versions from each live /version.json at 18:10 except agenticcells.ai (21:10).",
+ "_checked": "2026-11-16 22:50 UTC: three factory-made personal sites added and specialists marked demo with live addresses, at cells@'s request; versions from each live /version.json.",
  "cells": [
   {
    "id": "agenticcells-ai",
@@ -58,10 +58,43 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Gabriel-DaCruz",
    "live": "https://gabriel-dacruz.agenticcells.site",
-   "version_seen": "v0.1.3",
-   "what": "A personal site made with sites@.",
+   "version_seen": "v0.1.6",
+   "what": "Gabriel DaCruz: a personal site, made with sites@ and since given a full design pass.",
    "status": "demo",
    "listed": true
+  },
+  {
+   "id": "jose-bota",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Jose-Bota",
+   "live": "https://jose-bota.agenticcells.site",
+   "version_seen": "v0.1.3",
+   "what": "José Bota, AI automation expert: a portfolio, made by the site factory.",
+   "status": "demo",
+   "listed": true,
+   "consent": "agreed to be named (Dinis, relayed by cells@AgentiCCells.dinis on 2026-11-16 ~22:45 UTC); request 2026-11-16__jose-bota"
+  },
+  {
+   "id": "silvio-switha",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Silvio-Switha",
+   "live": "https://silvio-switha.agenticcells.site",
+   "version_seen": "v0.1.4",
+   "what": "Silvio Switha, AI entrepreneur, musician and producer: a portfolio, made by the site factory.",
+   "status": "demo",
+   "listed": true,
+   "consent": "agreed to be named (Dinis, relayed by cells@AgentiCCells.dinis on 2026-11-16 ~22:45 UTC); request 2026-11-16__silvio-switha"
+  },
+  {
+   "id": "yiheng-wang",
+   "kind": "site",
+   "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Yiheng-Wang",
+   "live": "https://yiheng-wang.agenticcells.site",
+   "version_seen": "v0.1.8",
+   "what": "Yiheng Wang, project and operations manager: a personal site and presentation, made by the site factory.",
+   "status": "demo",
+   "listed": true,
+   "consent": "agreed to be named (Dinis, relayed by cells@AgentiCCells.dinis on 2026-11-16 ~22:45 UTC); request 2026-11-16__yiheng-wang"
   },
   {
    "id": "site-factory",
@@ -117,60 +150,60 @@
    "id": "specialist-agent-behaviour-policies",
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Agent-Behaviour-Policies",
-   "live": null,
-   "version_seen": null,
+   "live": "https://specialist-abp.agenticcells.site",
+   "version_seen": "v0.1.6",
    "what": "Specialist agent for agent behaviour policies (newsroom, \"Specialist agents for every team\").",
-   "status": "proposed",
+   "status": "demo",
    "listed": true
   },
   {
    "id": "specialist-design",
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Design",
-   "live": null,
-   "version_seen": null,
+   "live": "https://specialist-design.agenticcells.site",
+   "version_seen": "v0.1.7",
    "what": "Specialist agent for design (newsroom, \"Specialist agents for every team\").",
-   "status": "proposed",
+   "status": "demo",
    "listed": true
   },
   {
    "id": "specialist-writing",
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Writing",
-   "live": null,
-   "version_seen": null,
+   "live": "https://specialist-writing.agenticcells.site",
+   "version_seen": "v0.1.8",
    "what": "Specialist agent for writing (newsroom, \"Specialist agents for every team\").",
-   "status": "proposed",
+   "status": "demo",
    "listed": true
   },
   {
    "id": "specialist-security",
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Security",
-   "live": null,
-   "version_seen": null,
+   "live": "https://specialist-security.agenticcells.site",
+   "version_seen": "v0.1.2",
    "what": "Specialist agent for security (newsroom, \"Specialist agents for every team\").",
-   "status": "proposed",
+   "status": "demo",
    "listed": true
   },
   {
    "id": "specialist-code",
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Code",
-   "live": null,
-   "version_seen": null,
+   "live": "https://specialist-code.agenticcells.site",
+   "version_seen": "v0.1.7",
    "what": "Specialist agent for code (newsroom, \"Specialist agents for every team\").",
-   "status": "proposed",
+   "status": "demo",
    "listed": true
   },
   {
    "id": "specialist-ux",
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__UX",
-   "live": null,
-   "version_seen": null,
+   "live": "https://specialist-ux.agenticcells.site",
+   "version_seen": "v0.1.5",
    "what": "Specialist agent for ux (newsroom, \"Specialist agents for every team\").",
-   "status": "proposed",
+   "status": "demo",
    "listed": true
   }
  ],
