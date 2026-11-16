@@ -9,6 +9,9 @@ import { readFileSync as rfs } from 'node:fs';
 // Names that must not be published are listed in build/private-names.json (not published).
 const privNames = JSON.parse(rfs(new URL('../private-names.json', import.meta.url), 'utf8'));
 const privRes = privNames.patterns.map((p) => new RegExp(p, 'gi'));
+// V-RV6: every mention of the old domain on a console page says in place that it is history.
+const OLD_DOMAIN_NOTE = '(then the site\'s address; moved to agenticcells.ai on 2026-11-15)';
+const noteOldDomain = (h) => h.replace(/(?<![\w./@-])((?:www\.)?agenticcells\.com)(?![\w-])(?!\/[\w])(?! \(then the site)/g, `$1 ${OLD_DOMAIN_NOTE}`);
 const redact = (t) => privRes.reduce((a, re) => a.replace(re, privNames.replacement), t);
 import { readFileSync, readdirSync, existsSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -326,7 +329,7 @@ ${days.slice(0, 1).map((d) => `<h3><a href="/console/${d}/">${d}</a></h3>\n${tim
 <p><small>Started from the simulated console described in <a href="https://newsroom.sgit.ai/articles/an-agentic-console.html">An agentic console</a>. Steps marked "reconstructed" were logged after the fact.</small></p>`;
 
   const pages = [{ path: '/console/', title: 'Console: the AgentiCCells team, read-only',
-    description: 'The board, the agents and their keys, and a timeline of what the AgentiCCells team did, built from its files.', html: redact(main) }];
+    description: 'The board, the agents and their keys, and a timeline of what the AgentiCCells team did, built from its files.', html: noteOldDomain(redact(main)) }];
 
   for (const r of replays) {
     const i = days.indexOf(r.date);
@@ -346,7 +349,7 @@ ${agentsTable(r.agents)}
 <h2>What happened</h2>
 ${timeline(r.events.slice(0, 60))}${r.events.length > 60 ? `<details><summary>${r.events.length - 60} earlier events that day</summary>\n${timeline(r.events.slice(60))}</details>` : ''}${/agenticcells\.com/.test(html0) ? '<p><small>This is the record as written on the day: where it says agenticcells.com, the site has since moved to agenticcells.ai.</small></p>' : ''}`;
     pages.push({ path: `/console/${r.date}/`, title: `Console replay: ${r.date}`,
-      description: `The AgentiCCells board changes, keys and activity as they were on ${r.date}.`, noindex: true, html: redact(html) });
+      description: `The AgentiCCells board changes, keys and activity as they were on ${r.date}.`, noindex: true, html: noteOldDomain(redact(html)) });
   }
   return pages;
 }

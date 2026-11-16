@@ -148,9 +148,16 @@ try {
 // Warning only (V-RV1): agenticcells.com is not the site's domain; allowed on history pages and the console replays/board data.
 for (const f of walk(join(root, 'site'), ['.html'])) {
   const r = rel(f);
-  if (/history|case-study|how-this-site-was-built|console\/\d{4}/.test(r)) continue;
-  const n = (readFileSync(f, 'utf8').match(/agenticcells\.com/g) || []).length;
-  if (n) console.warn(`WARNING ${r}: mentions agenticcells.com ${n} time(s); the site is on agenticcells.ai`);
+  if (/history|case-study|how-this-site-was-built/.test(r)) continue;
+  const lines = readFileSync(f, 'utf8').split('\n');
+  let n = 0;
+  lines.forEach((ln, i) => {
+    // A mention followed in place by the "moved to agenticcells.ai" note is history said as history (V-RV6).
+    const bare = ln.replace(/agenticcells\.com \(then the site's address; moved to agenticcells\.ai on 2026-11-15\)/g, '');
+    const c = (bare.match(/agenticcells\.com/g) || []).length;
+    if (c) { n += c; console.warn(`WARNING ${r}:${i + 1}: ${c} mention(s) of agenticcells.com without a history note: ${bare.replace(/<[^>]+>/g, '').trim().slice(0, 100)}`); }
+  });
+  if (n) console.warn(`WARNING ${r}: mentions agenticcells.com ${n} time(s) without a history note; the site is on agenticcells.ai`);
 }
 // Warning only (V-RV3): a size proxy for the console's length on a phone. 120 KB of HTML is about 30,000 px at 390 px
 // by the 2026-11-16 measurement (61 KB = 10,785 px); build/console-height.mjs measures the real height with Playwright.
