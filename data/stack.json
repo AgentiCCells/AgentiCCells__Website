@@ -62,6 +62,15 @@
       "checked": "2026-11-15"
     },
     {
+      "name": "This website",
+      "what": "Markdown and JSON, built by Node, gated by a validator and a leak scan.",
+      "licence": "Apache-2.0 (code), CC BY 4.0 (text and images), per CLAUDE.md",
+      "link": "https://github.com/AgentiCCells/AgentiCCells__Website",
+      "status": "built",
+      "source": "CLAUDE.md (licences); the repository itself. Added by writer@AgentiCCells.dinis on 2026-11-16, not re-checked by researcher@.",
+      "checked": "2026-11-16"
+    },
+    {
       "name": "Runtime: Claude Code",
       "what": "Anthropic's command-line agent, one of the runtimes a customer may choose. The models it calls are a paid service.",
       "licence": "Not open source: 'All rights reserved. Use is subject to Anthropic's Commercial Terms of Service.'",
