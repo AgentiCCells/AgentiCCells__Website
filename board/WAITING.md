@@ -3,7 +3,6 @@
 The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest first within each group. Answer in chat or on the item; the conductor records the answer in board/decisions/ and REALITY.md.
 
 ## Urgent
-- **ACC-018 · agenticcells.com:** Dinis, 2026-11-16 ~15:45 UTC: "ok I will delete those A records". The conductor checks DNS at the next wake and closes this when they are gone. Also suggested: verify agenticcells.ai and agenticcells.site in the organisation's Pages settings (a TXT record each), so no other GitHub account can claim them or their subdomains. Earlier note: agenticcells.com (not used, Dinis 21:15) still points at GitHub Pages and can be claimed. Simplest fix now: delete its A and www records. Since the site moved to agenticcells.ai, nothing claims .com but it still points at GitHub Pages. Fix: verify both domains in the AgentiCCells organisation (Settings, Pages, Add a domain, TXT record), or create a redirect repository for .com, or remove the .com records.
 
 ## Decisions
 - **A GitHub organisation for templates** (newsroom "Fork it", 2026-11-16, brief item 1: "separate from the team's own repositories, so forks and stars measure the templates alone"). Creating an organisation is yours to do; say its name and the conductor briefs cells@ and hub@ to use it.
@@ -23,6 +22,7 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 - **"RiskMandate, our own sister venture"** wording, and naming Dinis on About and the build page.
 
 ## Answered today
+- **ACC-018 closed** (checked 2026-11-16 20:10 UTC through dns.google): agenticcells.com has no A records and www no CNAME; Dinis deleted them. Verifying agenticcells.ai and agenticcells.site in the organisation's Pages settings is still recommended.
 - **Listing:** Dinis, 2026-11-16 ~18:10 UTC: "all of this can be public apart from the Algar evolution". Recorded in data/cells-registry.json.
 
 ## For later
