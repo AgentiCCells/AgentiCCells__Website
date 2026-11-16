@@ -9,7 +9,7 @@
 | 6 | Gates in the site's own repository: Agent trailer, build, validate, leak scan, Pages deploy, v0.1.N tag by CI | sites@ | done |
 | 10 | Images from OpenRouter: OPENROUTER_API_KEY is not set in this session; the draft uses hand-drawn SVG | Dinis | waiting |
 | 8 | Own repository AgentiCCells/AgentiCCells__Site__Algarve-Orange-Grower: created and attached by Dinis, cloned | Dinis | done |
-| 9 | Vault: SG_SEND_ACCESS_KEY into this session; write key escrowed before anything is published; read key published; vault pushed with its .sg_vault data in the repository | sites@ | vault 797hd9f1 made and pushed to the sgit server; leak audit clean; pushed to dev with CI (49d3a5b). Write key handed to Dinis for a GitHub secret and his password manager (2026-11-16) |
+| 9 | Vault: SG_SEND_ACCESS_KEY into this session; write key escrowed before anything is published; read key published; vault pushed with its .sg_vault data in the repository | sites@ | vault 797hd9f1 made and pushed to the sgit server; leak audit clean; pushed to dev with CI (49d3a5b). Write keys for all three vaults sealed to the DC Vault Registry (sha256:55895cae08d33653) per Dinis's SEND-KEYS-TO-REGISTRY instructions, 2026-11-16; QR given to Dinis; plaintext copies shredded. Read key published on the site, hub.json and README (22ce8d2) |
 | 7 | hub.json for the site (shape as in the repository's hub.json) | sites@ | not started |
 
 ## Questions for Dinis
