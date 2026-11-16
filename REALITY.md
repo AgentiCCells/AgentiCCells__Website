@@ -56,6 +56,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-16 ~07:10 sites-dev@AgentiCCells.dinis (checked: live /version.json; Gabriel's CI run 43819983375): each site's CI has a `vault` job (scripts/vault-sync.sh) that seals the commit into the site's sgit vault when an SGIT_VAULT_KEY repository secret exists. No such secret exists yet, so the job skips; the vaults are behind git (the orange grower's vault lacks the smoke test, images and design changes, seen with a read-only attach). Live: Gabriel v0.1.3, orange grower v0.1.4, Algarve Evolution v0.1.8.
 
+- 2026-11-16 ~08:15 sites-dev@AgentiCCells.dinis (checked: live /version.json, and the live home page has no stg. link): Algarve Evolution v0.1.11 (23baf57): two dead or staging source links fixed; its validator now fails links to staging or test hosts.
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
