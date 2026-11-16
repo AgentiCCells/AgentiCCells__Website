@@ -31,3 +31,4 @@
 {"time": "2026-11-15T22:09:34Z", "agent": "dev@AgentiCCells.dinis", "item": "V4", "action": "started", "summary": "links.json and external link check, warning only"}
 {"time": "2026-11-15T23:09:24Z", "agent": "dev@AgentiCCells.dinis", "item": "V5", "action": "started", "summary": "articles section: content/articles, index, RSS feed"}
 {"time": "2026-11-15T23:09:43Z", "agent": "dev@AgentiCCells.dinis", "item": "V5", "action": "done", "summary": "released articles hook"}
+{"time": "2026-11-16T08:13:03Z", "agent": "dev@AgentiCCells.dinis", "item": "V6", "action": "started", "summary": "persist-credentials false on the build checkout"}
