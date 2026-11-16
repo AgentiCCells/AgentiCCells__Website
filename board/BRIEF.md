@@ -77,3 +77,9 @@ Work in this order. Each step is a board item in `board/`. Stop and ask Dinis wh
 - `REALITY.md`, `team/keys.json` and the board are current.
 - The console shows the team's real board and commits, read-only.
 - A short debrief in `board/debriefs/` says what worked, what did not, and what Dinis needs to decide.
+
+## 2026-11-16 ~15:45 UTC, Dinis (to conductor@, new conductor session for agenticcells.ai)
+"please fire up the AgenticCells team (which we need to document how and what it does, since what we are going to do here is exactly what we want to sell)
+please read https://newsroom.sgit.ai/articles/the-cell-is-the-unit.html which was just posted and in fact you need to get one of the agents in your team to read in detail the relevant posts in newsroom.sgit.ai"
+On ACC-018: "ok I will delete those A records".
+Acted on: queued V-AE1 (dev@), S-CELL (researcher@), W-TEAM (writer@), D-CELL (designer@) as top items; started those four runs; restored the conductor's hourly wake.
