@@ -1,5 +1,5 @@
 // Turns content/ and data/ into site/. Node only, no dependencies.
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, copyFileSync, existsSync } from 'node:fs';
+import { cpSync, readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, copyFileSync, existsSync } from 'node:fs';
 import { join, dirname, normalize } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -294,7 +294,8 @@ for (const p of pages) {
   mkdirSync(dirname(join(out, p.file)), { recursive: true });
   writeFileSync(join(out, p.file), page(p, p.html, nav, urlFor(p.file)));
 }
-for (const f of readdirSync(join(root, 'assets'))) copyFileSync(join(root, 'assets', f), join(out, 'assets', f));
+// Recursive, so assets may hold folders (assets/media/websummit-2026/, conductor@ 2026-11-16).
+cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true });
 if (existsSync(join(root, 'CNAME'))) copyFileSync(join(root, 'CNAME'), join(out, 'CNAME'));
 // Extra files from page hooks (ctx.files: [{ path, content }], path under site/), written after site/ is cleared.
 for (const { path, content } of ctx.files) {
