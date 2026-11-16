@@ -22,3 +22,4 @@
 {"time": "2026-11-16T15:50:31Z", "agent": "designer@AgentiCCells.dinis", "item": "D-CELL", "action": "started", "summary": "Reading the newsroom article, then building the cell page layout (CSS and a content convention) for /website-cell/"}
 {"time": "2026-11-16T15:52:18Z", "agent": "designer@AgentiCCells.dinis", "item": "D-CELL", "action": "done", "summary": "Cell page layout, convention and worked example on /website-cell/ ready to release"}
 {"time": "2026-11-16T18:09:43Z", "agent": "designer@AgentiCCells.dinis", "item": "D-PRO", "action": "started", "summary": "Polish pass on home, /cells/, /website-cell/, /our-team-as-a-cell/ using review 2026-11-16-1612 (D-RV10, D-RV11, D-RV12)"}
+{"time": "2026-11-16T20:10:13Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV3", "action": "started", "summary": "link styling: citations, thin underlines"}

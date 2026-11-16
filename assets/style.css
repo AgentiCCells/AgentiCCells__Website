@@ -129,8 +129,11 @@ button:hover{filter:brightness(1.1)}
    is a small citation with a 32px tap area; the .button keeps its own treatment. */
 a.button,nav a,.brand,details.menu summary{text-decoration:none}
 p a[href^="http"]:not(.button){overflow-wrap:anywhere}
-.cite{font-size:.8em;position:relative;text-decoration-thickness:1px}
-.cite::after{content:"";position:absolute;left:-.4rem;right:-.4rem;top:50%;height:2rem;transform:translateY(-50%)}
+/* D-RV3: citations read as small bracketed superscripts, normal weight, thin underline, tap area 32px high and wide */
+.cite{font-size:.75em;font-weight:400;vertical-align:super;line-height:0;padding:.7rem .4rem;margin:0 -.1rem;text-decoration-thickness:1px;text-underline-offset:.2em;white-space:nowrap}
+.cite::before{content:"[";color:var(--muted)}
+.cite::after{content:"]";color:var(--muted)}
+.cite:hover::before,.cite:hover::after{color:inherit}
 .ladder tr,ul.points li{break-inside:avoid}
 section+section{margin-top:3rem}
 
