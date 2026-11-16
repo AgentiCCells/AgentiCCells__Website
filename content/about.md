@@ -35,6 +35,10 @@ Dinis Cruz writes that RiskMandate "had a strong idea and a hard first step", an
 - [The team's operating system](https://newsroom.sgit.ai/articles/the-teams-operating-system.html)
 - [The new data lake](https://newsroom.sgit.ai/articles/the-new-data-lake.html)
 
+## The hub
+
+Find every cell we have made on [the hub](https://hub.agenticcells.site/). This site sells cells and the consultancy. The hub lists the cells, with a page for each. The cells we host publicly are demos.
+
 ## The name
 
 AgentiCCells is always plural. The "CC" stands for Creative Commons: everything we release is open. The singular agentcell.ai belongs to another company.

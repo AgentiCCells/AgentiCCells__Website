@@ -35,6 +35,7 @@ During the build the team runs on our accounts. In the article's words, the "no 
 
 ## Examples
 
+- **More on the hub.** Every site we have made is listed on [the hub](https://hub.agenticcells.site/), one page each. They are all demos: we host them to show the work, and none is a customer's. This page does not list them.
 - **This site.** It was built by its own agentic team, from a brief: "That is the product in miniature." See [how this site was built](/how-this-site-was-built/) and [what carries over to your site](/build-your-own-website/).
 - **The key step, as a prototype.** [It makes a key in your browser and sends nothing](/key/). It is a prototype, not yet the real step.
 

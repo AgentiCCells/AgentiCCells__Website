@@ -7,6 +7,10 @@ nav: 3
 
 A cell is a small agentic team set up in your environment. It is useful on its own, and you can remove it without breaking anything else. There are four sizes.
 
+## Examples live on the hub
+
+We do not list every cell we have made on this page. [The hub](https://hub.agenticcells.site/) does that, with one page per cell, so you can find one, open it and copy it. This site sells; the hub lists. Every cell we host publicly is a demo, made to show how the work goes, and it says so. None is a customer's site, and none has been sold.
+
 ## The four sizes
 
 {{ladder}}
