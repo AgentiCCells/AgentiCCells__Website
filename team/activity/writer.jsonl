@@ -45,3 +45,4 @@
 {"time": "2026-11-17T12:10:40Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EX", "action": "started", "summary": "adding the two factory-made sites as lead examples"}
 {"time": "2026-11-17T15:09:25Z", "agent": "writer@AgentiCCells.dinis", "item": "W-LIMITS", "action": "started", "summary": "adding stated limits to /trust/"}
 {"time": "2026-11-17T15:09:56Z", "agent": "writer@AgentiCCells.dinis", "item": "W-LIMITS", "action": "done", "summary": "released 8067107 to dev"}
+{"time": "2026-11-17T16:09:13Z", "agent": "writer@AgentiCCells.dinis", "item": "W6", "action": "done", "summary": "compared pages with checked-claims.md; no corrections needed"}
