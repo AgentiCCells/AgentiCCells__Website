@@ -332,3 +332,17 @@ ul.example-cards{list-style:none;padding:0;margin:1rem 0;display:grid;gap:1rem;g
 .hero ul.points li{overflow-wrap:anywhere}
 .home .hero{align-items:start}
 .calm-photo img{max-height:15rem}
+
+/* D-SELL: example wall lede and price block (home) */
+.wall-lede{color:var(--muted);margin:.25rem 0 0}
+.price-block{display:grid;gap:1rem 2rem;grid-template-columns:minmax(0,1fr);margin:1.5rem 0;padding:1.25rem 1.25rem 1.1rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius)}
+.price-block p{margin:0}
+.pb-label{font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.pb-amount{display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .6rem}
+.pb-amount strong{font-size:2.25rem;line-height:1.15}
+.pb-amount span,.pb-note{color:var(--muted)}
+.pb-give{display:grid;gap:.5rem}
+.pb-cta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.25rem}
+.pb-cta a:not(.button){display:inline-flex;align-items:center;min-height:2.5rem}
+@media (min-width:56rem){.price-block{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);align-items:start}.pb-cta{grid-column:1/-1}}
+.wide.home main>.price-block{max-width:none}

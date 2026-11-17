@@ -251,17 +251,22 @@ for (const p of pages) if (p.path === '/') p.html = hero(p.html);
 // site is not named, so no person is named without their say-so.
 const OFFER = `<p class="offer-strip"><strong>The website cell</strong> <span>${PRICE}, first proposal</span> <span>not yet sold</span> <a href="/website-cell/">See the seven steps</a></p>`;
 const EXAMPLES = [
-  ['example-riskmandate-at-websummit.webp', 'RiskMandate at Web Summit', 'The first site made by the site factory from a request file.', 'riskmandate-at-websummit'],
-  ['example-algarve-orange-grower.webp', 'An orange grower (made up)', 'A made-up orange grower\'s site with a zone map and an order flow. Invented prices, nothing sent.', 'algarve-orange-grower'],
-  ['example-gabriel-dacruz.webp', 'A personal site', 'A personal site made with our site agent.', 'gabriel-dacruz'],
+  // D-SELL: the three people who agreed to be named (data/cells-registry.json, "consent") first, then the demos. Screenshots: the live site's first screen at 1100 x 480, taken 2026-11-17.
+  ['example-silvio-switha.webp', 'Silvio Switha', 'An AI entrepreneur, musician and producer: a film first, then photos and a way to hire.', 'silvio-switha', 'Made for Silvio'],
+  ['example-jose-bota.webp', 'José Bota', 'An AI automation expert: a portfolio with a short way to email or find them.', 'jose-bota', 'Made for José'],
+  ['example-yiheng-wang.webp', 'Yiheng Wang', 'A project manager and AI operations lead: method, experience and a CV to download.', 'yiheng-wang', 'Made for Yiheng'],
+  ['example-gabriel-dacruz.webp', 'A personal site', 'A personal site made with our site agent.', 'gabriel-dacruz', 'Demo'],
+  ['example-riskmandate-at-websummit.webp', 'RiskMandate at Web Summit', 'The first site made by the site factory from a request file.', 'riskmandate-at-websummit', 'Demo'],
+  ['example-algarve-orange-grower.webp', 'An orange grower (made up)', 'A made-up orange grower\'s site with a zone map and an order flow. Invented prices, nothing sent.', 'algarve-orange-grower', 'Demo'],
 ];
-const EXAMPLE_ROW = '<section class="examples" aria-labelledby="see-what-we-have-made">\n<h2 id="see-what-we-have-made">See what we have made</h2>\n<ul class="example-cards">\n' + EXAMPLES.map(([img, name, what, slug]) =>
-  `<li><a href="https://hub.agenticcells.site/cells/${slug}/"><img src="/assets/${img}" srcset="/assets/${img.replace('.webp', '-half.webp')} 550w, /assets/${img} 1100w" sizes="(max-width: 40rem) 100vw, 22rem" width="1100" height="480" loading="lazy" decoding="async" alt="Top of the ${name} site, as the hub shows it"><span class="ex-body"><span class="ex-tag">Demo</span><strong>${name}</strong><span>${what}</span></span></a></li>`).join('\n') +
-  '\n<li><a href="/the-book/"><span class="ex-body"><span class="ex-tag">Draft</span><strong>The book: One Human, Nine Agents, Nineteen Hours</strong><span>By Dinis Cruz. Read the PDF draft here, the <a href="https://leanpub.com/one-human-nine-agents-nineteen-hours">Leanpub page</a> or <a href="https://the-ultimate-insider.book.sgit.ai/">the book\'s site</a>.</span></span></a></li>\n</ul>\n<p><a href="https://hub.agenticcells.site/">All cells on the hub</a>. The hub lists; it does not sell. Screenshots are the hub\'s own.</p>\n</section>\n';
+const EXAMPLE_ROW = '<section class="examples" aria-labelledby="see-what-we-have-made">\n<h2 id="see-what-we-have-made">Sites made by agents, live now</h2>\n<p class="wall-lede">Each card is the first screen of a real site. Select one to see it on the hub, with a link to the live address.</p>\n<ul class="example-cards">\n' + EXAMPLES.map(([img, name, what, slug, tag]) =>
+  `<li><a href="https://hub.agenticcells.site/cells/${slug}/"><img src="/assets/${img}" srcset="/assets/${img.replace('.webp', '-half.webp')} 550w, /assets/${img} 1100w" sizes="(max-width: 40rem) 100vw, 22rem" width="1100" height="480" loading="lazy" decoding="async" alt="Top of the ${name} site, as the hub shows it"><span class="ex-body"><span class="ex-tag">${tag}</span><strong>${name}</strong><span>${what}</span></span></a></li>`).join('\n') +
+  '\n</ul>\n<p><a href="https://hub.agenticcells.site/">All cells on the hub</a>. The hub lists; it does not sell. Screenshots are the first screen of each live site, taken on 17 November 2026.</p>\n</section>\n';
+// D-SELL: the selling first screen. After the offer strip: the example wall, then the price block with one call to action.
+// The launch price is shown struck-through only once data/offer.json carries one (V-OFFER); until then the block states the anchor only.
+const PRICE = `<aside class="price-block" aria-label="Price"><div class="pb-price"><p class="pb-label">The website cell</p><p class="pb-amount"><strong>£500</strong> <span>one-off, first proposal</span></p><p class="pb-note">Not yet sold. No subscription, and no support contract, from us.</p></div><div class="pb-give"><p><strong>You give us</strong> photos, videos and a description. Some can already be public.</p><p><strong>You get</strong> a finished static site in a GitHub repository you own, which you can keep changing with Claude or deploy anywhere that serves static sites.</p></div><p class="pb-cta"><a class="button" href="mailto:${contact}?subject=I%20would%20like%20a%20website%20cell">Ask for a site like these</a> <a href="/website-cell/">How it works, in seven steps</a></p></aside>\n`;
 for (const p of pages) if (p.path === '/') {
-  p.html = p.html.replace('</section>\n', '</section>\n' + OFFER + '\n');
-  const k = p.html.indexOf('<h2>How to start</h2>');
-  if (k > 0) p.html = p.html.slice(0, k) + EXAMPLE_ROW + p.html.slice(k);
+  p.html = p.html.replace('</section>\n', '</section>\n' + OFFER + '\n' + EXAMPLE_ROW + PRICE);
 }
 
 // Inner pages (D-RV5, D-RV6): the same soft band as the hero around the title and the lede, a wider grid,
