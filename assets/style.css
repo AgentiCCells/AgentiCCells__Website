@@ -289,3 +289,23 @@ ul.example-cards{list-style:none;padding:0;margin:1rem 0;display:grid;gap:1rem;g
 .team-photo{margin:1.5rem 0;max-width:26rem}
 .team-photo video,.team-photo img{display:block;width:100%;height:auto;border-radius:.5rem}
 .team-photo figcaption{font-size:.875rem;color:var(--muted);margin-top:.5rem}
+
+/* SU1 · Phones (designer@, 2026-11-17, from the synthetic users' third stopping point; SYNTHETIC evidence in board/synthetic-users/):
+   the design switcher moves below the content so the logo is first, the cell diagram gives way to the offer strip,
+   and the ladder cards get tighter. Wide screens are unchanged. */
+@media (max-width:43.99rem){
+  body.home{display:flex;flex-direction:column;min-height:100vh}
+  body.home>.design-bar{order:8;border-top:1px solid var(--line);border-bottom:0;margin-top:2rem}
+  body.home>footer{order:9}
+  body.home>main{flex:1 0 auto;width:100%}
+  .design-bar nav{padding:.5rem 1rem}
+  .hero{padding-bottom:1rem;margin-bottom:.5rem}
+  .hero .cell-fig{display:none}
+  section+section{margin-top:2rem}
+  h2{margin-top:2rem}
+  .ladder td{padding:.15rem 0;font-size:.9375rem}
+  .ladder td::before{font-size:.75rem}
+  .home ul.points:has(li:nth-child(6)){grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem}
+  .home ul.points:has(li:nth-child(6)) li{scroll-snap-align:start}
+  .ladder tr{margin-bottom:.5rem;padding:.4rem .8rem}
+}
