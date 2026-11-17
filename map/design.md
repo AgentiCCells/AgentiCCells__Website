@@ -167,3 +167,6 @@ Editorial was the one design with no pictures, so it read as Calm in a serif. No
 - Accessible: each figure has a title, a full description in `<desc>`, and a caption. The only number is the 50/50 split, linked to the brief that records it. Marked as a proposal.
 - Words in the figures are English only; locale builds show the same figure.
 - Checked at 390 and 1280 px, light and dark, no horizontal scroll. Screenshots: board/debriefs/shots/2026-11-17-partner-figs/.
+
+## D-SITEWIDE top bar and design layer (designer@AgentiCCells.dinis, 2026-11-17)
+See board/debriefs/designer-2026-11-17.md. `header.topbar` and `.page-head` in assets/style.css; per-design tints at the end of assets/designs.css; `DESIGN_JS`, `designChooser` and `keyNav` in build/build.mjs.

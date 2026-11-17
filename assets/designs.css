@@ -197,3 +197,17 @@ body.design-console.home .hero ul.points,body.design-console.home .hero ul.point
 .ed-figs a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .ed-note{margin:.75rem 0 0;font:.8125rem/1.4 var(--serif);color:var(--muted)}
 body.design-editorial.wide.home main>.ed-figs,body.design-editorial.wide.home main>.ed-dateline{max-width:none}
+
+/* ---------- D-SITEWIDE: each design tints the top bar (the bar is dark in every design) ---------- */
+body.design-gallery{--tb-bg:#1a1015;--tb-acc:#f2a9c2}
+body.design-calm{--tb-bg:#0f1b1e;--tb-acc:#7fd3e0}
+body.design-editorial{--tb-bg:#1d1913;--tb-acc:#eba283;--tb-line:#4a4235}
+body.design-console{--tb-bg:#070d10;--tb-acc:#5fdcea;--tb-line:#1f343b}
+body.design-proof{--tb-bg:#0c1220;--tb-acc:#9db9ff;--tb-line:#273352}
+.design-editorial .topbar .brand{font-family:var(--serif)}
+.design-console .topbar .brand span{font-family:var(--mono)}
+.design-console .topbar .brand span{font-size:.9375rem}
+/* The paper design keeps a light band. */
+.design-editorial .page-head{--ph-bg:var(--surface);--ph-fg:var(--fg);--ph-mute:var(--muted);--ph-acc:var(--accent);--ph-on:var(--on-accent);border-radius:var(--radius);border-bottom:1px solid var(--fg)}
+.design-editorial .page-head{background:var(--surface)}
+.design-editorial .page-head h1{font-family:var(--serif)}

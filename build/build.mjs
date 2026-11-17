@@ -144,8 +144,14 @@ function navList(items, current, U) {
 }
 function navHtml(nav, current, U) {
   if (!nav.length) return '';
-  const items = navList(primaryNav(nav), current, U);
-  return `<nav class="wide" aria-label="${esc(U.navSite)}"><ul>${items}</ul></nav><details class="menu"><summary>${esc(U.menu)}</summary><nav aria-label="${esc(U.navMenu)}"><ul>${items}</ul></nav></details>`;
+  const items = navList(primaryNav(nav), current, U) + navList(nav.filter((n) => !PRIMARY.includes(n.base)), current, U);
+  return `<details class="menu"><summary>${esc(U.menu)}</summary><nav aria-label="${esc(U.navMenu)}"><ul>${items}</ul></nav></details>`;
+}
+// D-SITEWIDE: three key links in the top bar on wide screens (the whole list is in Menu).
+const KEY = [['/website-cell/', 'The website cell'], ['/partners/', 'Partners'], ['/start-here/', 'Start here']];
+function keyNav(L, nav, U) {
+  const items = KEY.map(([u, t]) => { const n = nav.find((x) => x.base === u); return n ? `<li><a href="${esc(n.url)}">${esc(L === EN ? t : n.title)}</a></li>` : ''; }).join('');
+  return `<nav class="tb-key" aria-label="${esc(U.navSite)}"><ul>${items}</ul></nav>`;
 }
 function moreHtml(nav, current, U) {
   const rest = nav.filter((n) => !PRIMARY.includes(n.base));
@@ -168,7 +174,7 @@ function switcher(meta, L, U) {
     return `<li><a href="${esc(href)}" lang="${l.code}" hreflang="${l.code}"${l === L ? ' aria-current="true"' : ''}>${esc(l.name)}</a></li>`;
   }).join('');
   const ask = `mailto:${contact}?subject=${encodeURIComponent(I18N['en-GB'].askSubject)}`;
-  return `<details class="lang"><summary><span class="sr-only">${esc(U.langLabel)}: </span>${esc(L.name)}</summary><ul>${items}<li class="lang-ask"><a href="${esc(ask)}">${esc(U.askLang)}</a></li></ul></details>`;
+  return `<details class="lang"><summary><span class="sr-only">${esc(U.langLabel)}: </span><span class="lang-name">${esc(L.name)}</span></summary><ul>${items}<li class="lang-ask"><a href="${esc(ask)}">${esc(U.askLang)}</a></li></ul></details>`;
 }
 const pageByPath = new Map();
 
@@ -188,7 +194,8 @@ function page(meta, content, nav = [], current = '') {
 <title>${esc(meta.title || '')}</title>
 <meta name="description" content="${esc(meta.description || '')}">
 <link rel="stylesheet" href="/assets/style.css">
-${meta.design ? '<link rel="stylesheet" href="/assets/designs.css">\n' : ''}<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/assets/designs.css">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 ${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !meta.noindex ? `<link rel="canonical" href="${esc(origin + current)}">\n` : (origin && meta.fallback ? `<link rel="canonical" href="${esc(origin + base)}">\n` : '')}${hreflang}<meta property="og:type" content="website">
 <meta property="og:site_name" content="AgentiCCells">
 <meta property="og:locale" content="${L.og}">
@@ -203,10 +210,10 @@ ${origin ? `<meta property="og:url" content="${esc(origin + current)}">
 <meta name="twitter:image" content="${esc(origin + SHARE_CARD)}">
 ` : ''}<meta name="twitter:card" content="summary_large_image">
 </head>
-<body${base === '/' || meta.design ? ` class="home wide${meta.design ? ' design-' + meta.design : ''}"` : meta.wide ? ' class="wide"' : ''}>
+<body class="${base === '/' || meta.design ? 'home wide' : meta.wide ? 'wide' : ''} design-${meta.design || 'gallery'}"${base === '/' || meta.design ? ' data-home="1"' : ''}>
 <a class="skip" href="#main">${esc(U.skip)}</a>
-${(current === '/' || meta.design) && L === EN ? designBar(meta.design || 'calm') : ''}
-<header><a class="brand" href="${L.prefix || ''}/">${MARK}<span>AgentiCCells</span></a>${navHtml(nav, current, U)}${switcher(meta, L, U)}</header>
+<header class="topbar"><div class="tb-in"><a class="brand" href="${L.prefix || ''}/">${MARK}<span>AgentiCCells</span></a>${keyNav(L, nav, U)}${designChooser(meta, current, L)}${navHtml(nav, current, U)}${switcher(meta, L, U)}</div></header>
+<script>${DESIGN_JS}</script>
 <main id="main" tabindex="-1">
 ${content}
 </main>
@@ -352,7 +359,7 @@ for (const p of pages) {
   const inBand = heads.some((h) => h.id === 'four-ways-to-start');
   const toc = heads.length >= 3 ? `<div class="toc${inBand ? '' : ' side'}"><nav class="toc-wide" aria-label="${esc(U.onThisPage)}"><p>${esc(U.onThisPage)}</p><ol>${items}</ol></nav><details class="toc-narrow"><summary>${esc(U.jumpTo)}</summary><nav aria-label="${esc(U.onThisPage)} (menu)"><ol>${items}</ol></nav></details></div>\n` : '';
   const m = /^(<h1[^>]*>[\s\S]*?<\/h1>)\s*(<p(?: class="note")?>[\s\S]*?<\/p>)?/.exec(p.html);
-  if (m) p.html = `<section class="page-head${toc && inBand ? ' has-toc' : ''}">\n<div class="head-main">\n${m[1]}\n${m[2] ? m[2].replace(/^<p( class="note")?>/, (x, n) => `<p class="lede${n ? ' note' : ''}">`) + '\n' : ''}</div>\n${inBand ? toc : ''}</section>` + (inBand ? '' : toc) + p.html.slice(m[0].length);
+  if (m) p.html = `<section class="page-head${toc && inBand ? ' has-toc' : ''}">\n<div class="head-main">\n${m[1]}\n${m[2] ? m[2].replace(/^<p( class="note")?>/, (x, n) => `<p class="lede${n ? ' note' : ''}">`) + '\n' : ''}${p.base === '/website-cell/' ? `<p class="cta"><a class="button" href="mailto:${contact}?subject=I%20would%20like%20a%20website%20cell">Ask for a site like these</a></p>\n` : `<p class="cta"><a class="button" href="/website-cell/">${esc(U.closingBtn)}</a></p>\n`}</div>\n${inBand ? toc : ''}</section>` + (inBand ? '' : toc) + p.html.slice(m[0].length);
   if (p.base !== '/website-cell/') p.html += `\n<aside class="closing"><p>${esc(U.closing)} <a class="button" href="/website-cell/">${esc(U.closingBtn)}</a></p></aside>`;
 }
 
@@ -424,9 +431,16 @@ function designHtml(id, home) {
   if (id === 'proof') return h.replace(strip, (m) => m + '\n' + PROOF_WALL);
   return h;
 }
-function designBar(now) {
-  const items = DESIGNS.map(([id, name, path, tip]) => `<li><a href="${path}"${id === now ? ' aria-current="true"' : ''} title="${esc(tip)}">${name}</a></li>`).join('');
-  return `<div class="design-bar"><nav aria-label="Design of this page"><span class="db-label">Design</span><ul>${items}</ul><span class="db-note">Same words, five designs</span></nav></div>`;
+// D-SITEWIDE: the top bar's "Choose a design" list. On the home page and its variants each design is its own page (/ or /d/<id>/);
+// on every other page the design is a layer of CSS over the same markup, chosen with ?design=<id>, kept in localStorage and
+// applied by DESIGN_JS (wrapped in try/catch). With no script the default design (Gallery) shows and nothing breaks.
+const DESIGN_IDS = DESIGNS.map((d) => d[0]);
+const DESIGN_JS = `(function(){try{var D=${JSON.stringify(DESIGN_IDS)},b=document.body,m=/[?&]design=([a-z]+)/.exec(location.search),id=m&&D.indexOf(m[1])>=0?m[1]:null;if(id){try{localStorage.setItem('acc-design',id)}catch(e){}}else{try{id=localStorage.getItem('acc-design')}catch(e){}}if(D.indexOf(id)<0)return;if(b.getAttribute('data-home')){if(location.pathname==='/'&&id!=='gallery')location.replace('/d/'+id+'/');}else{b.className=b.className.replace(/design-[a-z]+/,'design-'+id);}var l=document.querySelectorAll('.design-list a[data-design]');for(var i=0;i<l.length;i++){if(l[i].getAttribute('data-design')===id)l[i].setAttribute('aria-current','true');else l[i].removeAttribute('aria-current');}}catch(e){}})();`;
+function designChooser(meta, current, L) {
+  const home = current === '/' || !!meta.design;
+  const now = meta.design || 'gallery';
+  const items = DESIGNS.map(([id, name, path, tip]) => `<li><a data-design="${id}" href="${home ? path : current}?design=${id}"${id === now ? ' aria-current="true"' : ''}><strong>${name}</strong><span>${esc(tip)}</span></a></li>`).join('');
+  return `<details class="designs"><summary><span class="tb-long">${esc(ui(L).chooseDesign || 'Choose a design')}</span><span class="tb-short">Design</span></summary><div class="design-list"><p>Same words and data in every design. Your choice is kept on this device.</p><ul>${items}</ul></div></details>`;
 }
 // Wrap each h2 and what follows it in a section, so a design can lay sections out as it likes (CSS only).
 function sectioned(html) {

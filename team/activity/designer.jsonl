@@ -51,3 +51,5 @@
 {"time": "2026-11-17T22:36:24Z", "agent": "designer@AgentiCCells.dinis", "item": "D-VIZ", "action": "started", "summary": "redo home cell diagram"}
 {"time": "2026-11-17T22:37:59Z", "agent": "designer@AgentiCCells.dinis", "item": "D-VIZ", "action": "done", "summary": "cell diagram redone, shots in debrief"}
 {"time": "2026-11-17T23:01:08Z", "agent": "designer@AgentiCCells.dinis", "item": "D-PARTNER-INFO", "action": "done", "summary": "twelve partner figures as partner-fig tokens; pages not yet on dev"}
+{"time": "2026-11-17T23:19:55Z", "agent": "designer@AgentiCCells.dinis", "item": "D-SITEWIDE", "action": "started", "summary": "top bar, design chooser and design layer on every page"}
+{"time": "2026-11-17T23:20:08Z", "agent": "designer@AgentiCCells.dinis", "item": "D-SITEWIDE", "action": "done", "summary": "partial: top bar, chooser, design layer on every page"}

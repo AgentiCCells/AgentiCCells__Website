@@ -417,3 +417,61 @@ details.lang .lang-ask{border-top:1px solid var(--line)}
 .pfig text.p-big-on{fill:var(--pa-on)}
 .pfig .p-on{fill:var(--pa-on);font:600 15px var(--font)}
 .pfig .p-split-txt{fill:var(--fg);font:600 15px var(--font)}
+
+/* D-SITEWIDE · The top bar (designer@, 2026-11-17): a dark bar on every page with the brand, three key links, "Choose a design" and Menu.
+   Pattern from silvio-switha.agenticcells.site and yiheng-wang.agenticcells.site. The bar is dark in light and dark mode; each design tints it (--tb-bg). */
+body{--tb-bg:#14101a;--tb-fg:#f2eef4;--tb-mute:#c9c0d0;--tb-line:#3a3142;--tb-acc:#f0a7c4}
+header.topbar{max-width:none;margin:0;padding:0;display:block;background:var(--tb-bg);color:var(--tb-fg);border-bottom:0;position:relative;z-index:20}
+.tb-in{max-width:62rem;margin:0 auto;padding:.4rem 1rem;display:flex;flex-wrap:nowrap;align-items:center;gap:.5rem .75rem;min-height:3.5rem}
+.topbar .brand{color:var(--tb-fg);min-height:2.75rem;font-size:1.0625rem;margin-right:auto}
+.topbar .mark{color:var(--tb-acc)}
+.tb-key{display:none}
+.tb-key a,.topbar nav a{color:var(--tb-fg);border-bottom:2px solid transparent;text-decoration:none;min-height:2.75rem}
+.tb-key a:hover,.topbar nav a:hover{border-bottom-color:var(--tb-acc)}
+.topbar nav a[aria-current="page"]{border-bottom-color:var(--tb-acc);font-weight:700}
+.topbar details>summary{list-style:none;cursor:pointer;min-height:2.5rem;display:inline-flex;align-items:center;padding:0 .85rem;border:1px solid var(--tb-line);border-radius:999px;color:var(--tb-fg);font-weight:600;font-size:.9375rem;white-space:nowrap;background:transparent}
+.topbar details>summary::-webkit-details-marker{display:none}
+.topbar details>summary:hover,.topbar details[open]>summary{border-color:var(--tb-acc)}
+.topbar details>summary:focus-visible,.topbar a:focus-visible{outline:3px solid var(--tb-acc);outline-offset:2px}
+.topbar details.designs>summary{background:var(--tb-acc);border-color:var(--tb-acc);color:#16101a}
+.topbar details.designs>summary::before{content:"";width:.7em;height:.7em;margin-right:.5rem;border-radius:50%;background:conic-gradient(#16101a 0 25%,transparent 0 50%,#16101a 0 75%,transparent 0);border:1.5px solid #16101a}
+.topbar details.menu{display:block}
+.topbar details.menu summary::after{content:"";width:.4em;height:.4em;margin-left:.5rem;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px)}
+.topbar details.menu[open] summary::after{transform:rotate(-135deg)}
+.topbar details.menu nav,.topbar .design-list{position:absolute;left:0;right:0;top:100%;background:var(--tb-bg);border-top:1px solid var(--tb-line);border-bottom:1px solid var(--tb-line);padding:.5rem max(1rem,calc((100% - 62rem)/2 + 1rem)) 1rem;z-index:25;box-shadow:0 18px 30px rgba(0,0,0,.35)}
+.topbar details.menu nav ul{flex-direction:row;flex-wrap:wrap;gap:0 1rem}
+.topbar details.menu nav li{flex:1 1 14rem}
+.topbar details.menu nav a{width:100%;border-bottom:1px solid var(--tb-line)}
+.design-list>p{margin:.25rem 0 .75rem;color:var(--tb-mute);font-size:.875rem}
+.design-list ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr))}
+.design-list a{display:flex;flex-direction:column;gap:.15rem;padding:.6rem .8rem;border:1px solid var(--tb-line);border-radius:.75rem;color:var(--tb-fg);text-decoration:none;min-height:0;height:100%}
+.design-list a:hover{border-color:var(--tb-acc)}
+.design-list a[aria-current="true"]{border-color:var(--tb-acc);background:color-mix(in srgb,var(--tb-acc) 14%,transparent)}
+.design-list a[aria-current="true"] strong::after{content:" (now)";font-weight:400;color:var(--tb-mute)}
+.design-list span{font-size:.8125rem;color:var(--tb-mute);line-height:1.35}
+.topbar details.lang{position:static}
+.topbar details.lang summary{border-radius:999px;min-height:2.5rem;padding:0 .7rem;color:var(--tb-fg);border-color:var(--tb-line);font-size:.875rem}
+.topbar details.lang ul{background:var(--tb-bg);border-color:var(--tb-line);right:1rem;left:auto;top:100%}
+.topbar details.lang li a{color:var(--tb-fg)}
+.topbar details.lang{position:relative}
+@media (max-width:43.99rem){.topbar details.lang summary{padding:0 .55rem;font-size:.8125rem}.tb-in{gap:.35rem}.topbar details>summary{padding:0 .65rem;font-size:.875rem}.topbar .brand span{font-size:1rem}}
+@media (min-width:44rem){.tb-key{display:block}.tb-key ul{gap:0 .5rem}.tb-key a{padding:0 .5rem}}
+.tb-short{display:none}
+.topbar details.lang summary::before{content:"";width:1em;height:1em;margin-right:.4rem;border:1.5px solid currentColor;border-radius:50%;background:radial-gradient(ellipse at center,transparent 38%,currentColor 40% 46%,transparent 48%),linear-gradient(currentColor,currentColor) center/100% 1.5px no-repeat}
+@media (max-width:43.99rem){.tb-long{display:none}.tb-short{display:inline}.topbar details.lang .lang-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.topbar details.lang summary::before{margin-right:0}.topbar details.lang summary{padding:0 .6rem}}
+
+/* D-SITEWIDE · A strong band on every page: dark, large type, one primary button (designer@, 2026-11-17). Each design may retint it with --ph-*. */
+.page-head{--ph-bg:var(--tb-bg);--ph-fg:var(--tb-fg);--ph-mute:var(--tb-mute);--ph-acc:var(--tb-acc);--ph-on:#16101a;
+  background:radial-gradient(120% 140% at 100% 0%,color-mix(in srgb,var(--ph-acc) 22%,var(--ph-bg)),var(--ph-bg) 62%);color:var(--ph-fg);border-radius:calc(var(--radius)*3)}
+.page-head h1{font-size:clamp(2.1rem,7.5vw,3.5rem);letter-spacing:-.03em;line-height:1.05;color:var(--ph-fg)}
+.page-head .lede{color:var(--ph-mute);font-size:clamp(1.05rem,2.2vw,1.3rem)}
+.page-head a:not(.button){color:var(--ph-acc)}
+.page-head .button{background:var(--ph-acc);color:var(--ph-on);border-radius:999px;font-weight:700}
+.page-head .cta{margin:1.5rem 0 0}
+.page-head .toc p{color:var(--ph-mute)}
+.page-head .toc-narrow{background:transparent;border-color:color-mix(in srgb,var(--ph-fg) 30%,transparent)}
+.page-head .toc-narrow summary{color:var(--ph-fg)}
+.page-head .toc-narrow nav{border-top-color:color-mix(in srgb,var(--ph-fg) 25%,transparent)}
+.page-head .toc-wide,.page-head.has-toc .toc-wide{border-left-color:color-mix(in srgb,var(--ph-fg) 25%,transparent)}
+.page-head .lede.note{color:var(--ph-mute)}
+.page-head{background-color:var(--ph-bg)}
