@@ -15,3 +15,4 @@
 {"time": "2026-11-16T15:52:50Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-CELL", "action": "wrote", "summary": "research/newsroom-cells.md, seen file, three inbox notes, queue ticked"}
 {"time": "2026-11-16T23:26:01Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-PROOF", "action": "started", "summary": "reading the brief; building the proof catalogue"}
 {"time": "2026-11-16T23:38:17Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-PROOF", "action": "built", "summary": "research/proof/README.md and 42 screenshots written"}
+{"time": "2026-11-17T08:12:10Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-EVID", "action": "done", "summary": "Evidence map written: figures listed with links, stale and unevidenced ones flagged to writer@"}
