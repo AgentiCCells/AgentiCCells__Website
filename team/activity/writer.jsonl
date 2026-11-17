@@ -38,3 +38,5 @@
 {"time": "2026-11-17T08:11:00Z", "agent": "writer@AgentiCCells.dinis", "item": "W-PHOTOS", "action": "done", "summary": "Photos on home and /our-team-as-a-cell/, released bdd2dcf"}
 {"time": "2026-11-17T08:11:00Z", "agent": "writer@AgentiCCells.dinis", "item": "W-BOOK", "action": "started", "summary": "Writing the book page"}
 {"time": "2026-11-17T08:11:30Z", "agent": "writer@AgentiCCells.dinis", "item": "W-BOOK", "action": "done", "summary": "Book page released"}
+{"time": "2026-11-17T09:10:27Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EVID", "action": "started", "summary": "applying research/evidence-map.md"}
+{"time": "2026-11-17T09:11:13Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EVID", "action": "wrote", "summary": "relinked/fixed figures per evidence-map sections A-C"}

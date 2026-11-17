@@ -73,7 +73,7 @@ What this page says about AgentiCCells, its four properties and who it is for co
 
 ## The ladder
 
-One ladder in four steps, from a flow we run ourselves with no meetings to a customer engagement. [riskmandate.ai](https://riskmandate.ai) sells policies on the same ladder, so a team with its policies is a dual sale. The model is fixed-price cells. Every price below is a first proposal, not an offer, and so is what each site sells at each step. More on the [cells page](/cells/).
+One ladder in four steps, from a flow we run ourselves with no meetings to a customer engagement. [riskmandate.ai](https://riskmandate.ai) sells policies on the same ladder, so a team with its policies is a dual sale. The model is fixed-price cells. Every price below is a first proposal, not an offer, and so is what each site sells at each step. Dinis Cruz sets the four prices in [The intersection](https://newsroom.sgit.ai/articles/the-intersection.html) (newsroom.sgit.ai, 2026-11-16). More on the [cells page](/cells/).
 
 {{ladder}}
 

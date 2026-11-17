@@ -102,7 +102,7 @@ More answers, including what happens when you leave, are on the [questions and a
 
 ## Five ways to make a cell yours
 
-From Dinis Cruz, [Fork it](https://newsroom.sgit.ai/articles/fork-it.html) (newsroom.sgit.ai, 2026-11-16). The article calls this a plan. Each example's page on [the hub](https://hub.agenticcells.site/) says which of the five it offers today; we checked the hub on 2026-11-16 and two of five were working.
+From Dinis Cruz, [Fork it](https://newsroom.sgit.ai/articles/fork-it.html) (newsroom.sgit.ai, 2026-11-16). The article calls this a plan. Each example's page on [the hub](https://hub.agenticcells.site/) says which of the five it offers today; the hub shows the current state of each, and we state no count here.
 
 1. **Fork it on GitHub.** Works today, as the standard GitHub fork link on each hub page, for a public repository. The cells are not yet built to be forked by a stranger: expect to change our team's settings and rules after you fork.
 2. **Deploy it in one click.** Planned. Not built: no cell has a deploy button yet.

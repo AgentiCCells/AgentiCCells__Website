@@ -11,15 +11,15 @@ So here is how it was built: by a team of AI agents, each with a name, a key and
 
 ## The steps
 
-- **16:20. A brief for the conductor.** Dinis gave the first agent, `conductor@agenticcells.dinis`, a bootstrap pack: the rules, a board of work items, a roster of roles and the research.
-- **16:23. Read, then write down what exists.** The conductor copied the pack into the repository and wrote `REALITY.md`: a list of what has been checked to exist. Anything not in it does not exist, whatever a brief says. Commit 4b251d2.
-- **16:24. A developer builds the skeleton.** `dev@agenticcells.dinis` wrote the build script (Node only, no dependencies), the validator and the deploy workflow. Commit 2a9c54c.
-- **16:24. A second agent checks the work.** The conductor ran the build and the validator itself before recording them as working. Commit 8d582be.
-- **16:30 to 16:37. The person settles the names.** Dinis decided the repository, the domain (agenticcells.com for now) and that every name is `agenticcells`. Commits 35837e9, 8e7db41, 657952a.
-- **16:38. Versions come from CI, not from agents.** Dinis's rule. Each push to the release branch that deploys gets the next version number. Commit ce760fa.
-- **16:42. First release.** The first deploy was refused by the repository's settings. No agent had the access to change them, so Dinis did. The site went live as v0.1.0. Commit 7b50de2.
-- **16:48. Reading the network the method comes from.** Notes on eight sites and answers to ten questions, checked by the conductor. Commit ce387a1.
-- **17:01. The whole team starts.** Briefs for eight roles, one key pair per agent, an activity log per agent, and the map. Commit 0d0f508.
+- **16:20. A brief for the conductor.** Dinis gave the first agent, `conductor@agenticcells.dinis`, a bootstrap pack: the rules, a board of work items, a roster of roles and the research ([first line of the conductor's log](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/team/activity/conductor.jsonl)).
+- **16:23. Read, then write down what exists.** The conductor copied the pack into the repository and wrote `REALITY.md`: a list of what has been checked to exist. Anything not in it does not exist, whatever a brief says. Commit [4b251d2](https://github.com/AgentiCCells/AgentiCCells__Website/commit/4b251d2).
+- **16:24. A developer builds the skeleton.** `dev@agenticcells.dinis` wrote the build script (Node only, no dependencies), the validator and the deploy workflow. Commit [2a9c54c](https://github.com/AgentiCCells/AgentiCCells__Website/commit/2a9c54c).
+- **16:24. A second agent checks the work.** The conductor ran the build and the validator itself before recording them as working. Commit [8d582be](https://github.com/AgentiCCells/AgentiCCells__Website/commit/8d582be).
+- **16:30 to 16:37. The person settles the names.** Dinis decided the repository, the domain (agenticcells.com for now) and that every name is `agenticcells`. Commits [35837e9](https://github.com/AgentiCCells/AgentiCCells__Website/commit/35837e9), [8e7db41](https://github.com/AgentiCCells/AgentiCCells__Website/commit/8e7db41), [657952a](https://github.com/AgentiCCells/AgentiCCells__Website/commit/657952a).
+- **16:38. Versions come from CI, not from agents.** Dinis's rule. Each push to the release branch that deploys gets the next version number. Commit [ce760fa](https://github.com/AgentiCCells/AgentiCCells__Website/commit/ce760fa).
+- **16:42. First release.** The first deploy was refused by the repository's settings. No agent had the access to change them, so Dinis did. The site went live as v0.1.0. Commit [7b50de2](https://github.com/AgentiCCells/AgentiCCells__Website/commit/7b50de2).
+- **16:48. Reading the network the method comes from.** Notes on eight sites and answers to ten questions, checked by the conductor. Commit [ce387a1](https://github.com/AgentiCCells/AgentiCCells__Website/commit/ce387a1).
+- **17:01. The whole team starts.** Briefs for eight roles, one key pair per agent, an activity log per agent, and the map. Commit [0d0f508](https://github.com/AgentiCCells/AgentiCCells__Website/commit/0d0f508).
 - **After 17:01. The words.** `writer@agenticcells.dinis` wrote these pages from the briefs and the research, with a source for every claim. Other agents worked in parallel on the navigation, the console and the research checks. Their own steps are in the [activity logs](https://github.com/AgentiCCells/AgentiCCells__Website/tree/dev/team/activity).
 
 ## See it live

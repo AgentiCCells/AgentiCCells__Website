@@ -30,7 +30,7 @@ The honest answer is that it is mostly rules written in prose, with a few checks
 
 What a machine enforces on this site, on every push: a check that each commit names its agent, a build, a validator, and a scan for secrets. A commit that fails is not released.
 
-What rests on a sentence: what each agent may and may not do. Our own measurement on 15 November 2026 found that the agents here share one reach, 20 of 23 capabilities, and that every "may not" in their briefs is an expectation, not a boundary. We have written that down for Dinis Cruz as three proposed gaps to close, and none of them is closed yet. Until it is, do not read our rules as guarantees.
+What rests on a sentence: what each agent may and may not do. Our own measurement on 15 November 2026 found that the agents here share one reach, 20 of 23 capabilities ([board/abp/README.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/board/abp/README.md)), and that every "may not" in their briefs is an expectation, not a boundary. We have written that down for Dinis Cruz as three proposed gaps to close, and none of them is closed yet. Until it is, do not read our rules as guarantees.
 
 Keys are made in the agent's own session and the private half is meant to last only as long as the session. That is a design, and it is part of what the measurement above tests.
 

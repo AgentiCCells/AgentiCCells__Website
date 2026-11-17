@@ -56,7 +56,7 @@ The lower three are a prompt. The upper three are a setup, with keys, lanes, boa
 
 ## The four sizes in detail
 
-For each size: what we set up, what you provide, what you own afterwards, and how long it takes. Every price is a first proposal, not an offer. No size has been sold yet, so no time below is measured on a customer. Where we have no figure, the page says so. The "includes" lines come from `data/cells.json` (Dinis Cruz, board/BRIEF.md, 2026-11-15).
+For each size: what we set up, what you provide, what you own afterwards, and how long it takes. Every price is a first proposal, not an offer. No size has been sold yet, so no time below is measured on a customer. Where we have no figure, the page says so. The "includes" lines come from `data/cells.json` (Dinis Cruz, [board/BRIEF.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/board/BRIEF.md), 2026-11-15).
 
 ### One agent (£500, first proposal)
 
@@ -81,7 +81,7 @@ For each size: what we set up, what you provide, what you own afterwards, and ho
 - **What we set up:** a conductor and its agents, a key per agent (only the public half published), a board as files, and the console.
 - **What you provide:** a repository for the board, accounts for the agents.
 - **What you own afterwards:** the repository, the board, the briefs and the public keys. Private keys stay in each agent's session and are gone when it ends.
-- **How long it takes:** a week of setup, as the "includes" line says. This is a proposal, not a measured time.
+- **How long it takes:** a week of setup, as the "includes" line says ([board/BRIEF.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/board/BRIEF.md)). This is a proposal, not a measured time.
 
 ### A network (£20,000, first proposal)
 
@@ -102,7 +102,7 @@ If you would rather do this yourself, everything we use is open. Start with [ope
 
 ## Five ways to make a cell yours
 
-From Dinis Cruz, [Fork it](https://newsroom.sgit.ai/articles/fork-it.html) (newsroom.sgit.ai, 2026-11-16). The article calls this a plan. Each example's page on [the hub](https://hub.agenticcells.site/) says which of the five it offers today; we checked the hub on 2026-11-16 and two of five were working.
+From Dinis Cruz, [Fork it](https://newsroom.sgit.ai/articles/fork-it.html) (newsroom.sgit.ai, 2026-11-16). The article calls this a plan. Each example's page on [the hub](https://hub.agenticcells.site/) says which of the five it offers today; the hub shows the current state of each, and we state no count here.
 
 1. **Fork it on GitHub.** Works today, as the standard GitHub fork link on each hub page, for a public repository. The cells are not yet built to be forked by a stranger: expect to change our team's settings and rules after you fork.
 2. **Deploy it in one click.** Planned. Not built: no cell has a deploy button yet.

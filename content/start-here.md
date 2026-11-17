@@ -25,7 +25,7 @@ These are suggestions for where to begin, not products we have sold.
 
 ## Step two: add a meeting or two
 
-When one workflow works, a few sessions add more roles, a shared board and a handover into your own accounts. We would prepare, meet you twice, do the work, present it and hand it over. From £1,500, first proposal.
+When one workflow works, a few sessions add more roles, a shared board and a handover into your own accounts. We would prepare, meet you twice, do the work, present it and hand it over. From £1,500, first proposal (prices: [The intersection](https://newsroom.sgit.ai/articles/the-intersection.html), 2026-11-16).
 
 ## Step three: a team
 

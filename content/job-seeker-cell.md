@@ -14,7 +14,7 @@ Source for this page: Dinis Cruz, [Show me the evidence](https://newsroom.sgit.a
 
 ## What it does
 
-Dinis's reason: anyone can now generate a polished CV, so hiring managers trust CVs less. The article cites two surveys. In [Robert Half's survey](https://press.roberthalf.com/2026-03-10-Robert-Half-survey-67-of-HR-leaders-report-AI-generated-applications-are-slowing-hiring) of more than 2,000 US hiring managers (March 2026), 65% said AI-generated applications make skills harder to verify and 67% said they slow hiring down. In [Greenhouse's survey](https://www.greenhouse.com/newsroom/an-ai-trust-crisis-70-of-hiring-managers-trust-ai-to-make-faster-and-better-hiring-decisions-only-8-of-job-seekers-call-it-fair), 91% of recruiters had spotted candidate deception. We have not checked these figures ourselves.
+Dinis's reason: anyone can now generate a polished CV, so hiring managers trust CVs less. The article cites two surveys. In [Robert Half's survey](https://press.roberthalf.com/2026-03-10-Robert-Half-survey-67-of-HR-leaders-report-AI-generated-applications-are-slowing-hiring) (March 2026), 65% said AI-generated applications make skills harder to verify and 67% said they slow hiring down. In [Greenhouse's survey](https://www.greenhouse.com/newsroom/an-ai-trust-crisis-70-of-hiring-managers-trust-ai-to-make-faster-and-better-hiring-decisions-only-8-of-job-seekers-call-it-fair), 91% of recruiters had spotted candidate deception. We checked the 65% and 91% figures against the two releases on 17 November 2026 (research/evidence-map.md); the 67% appears in the Robert Half release too.
 
 His answer: "show me the evidence". The cell builds a site of seven pages, each answering a question a hiring manager asks:
 
