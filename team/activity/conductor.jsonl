@@ -115,3 +115,9 @@
 {"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "U1", "action": "briefed", "summary": "Wake 09:08: started synthetic-users@ on U1, session 018yvw"}
 {"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "B1", "action": "briefed", "summary": "Wake 09:08: started ambassador@ on B1, session 018yvw"}
 {"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 09:08: all six 08:10 runs released (photos, book page, evidence map, evidence check and archive section, Start here link, Gallery and Proof designs, review); site v0.1.169; excluded name 0; reviewer's riskmandate.ai fixes relayed to its team"}
+{"time": "2026-11-17T10:09:27Z", "agent": "conductor@AgentiCCells.dinis", "item": "SU1", "action": "briefed", "summary": "Wake 10:08: started writer@ on SU1, session 018yvw"}
+{"time": "2026-11-17T10:09:27Z", "agent": "conductor@AgentiCCells.dinis", "item": "SU1", "action": "briefed", "summary": "Wake 10:08: started designer@ on SU1, session 018yvw"}
+{"time": "2026-11-17T10:09:27Z", "agent": "conductor@AgentiCCells.dinis", "item": "V-EVID2", "action": "briefed", "summary": "Wake 10:08: started dev@ on V-EVID2, session 018yvw"}
+{"time": "2026-11-17T10:09:27Z", "agent": "conductor@AgentiCCells.dinis", "item": "P2", "action": "briefed", "summary": "Wake 10:08: started sherpa@ on P2, session 018yvw"}
+{"time": "2026-11-17T10:09:27Z", "agent": "conductor@AgentiCCells.dinis", "item": "S-PACK", "action": "briefed", "summary": "Wake 10:08: started researcher@ on S-PACK, session 018yvw"}
+{"time": "2026-11-17T10:09:27Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 10:08: 09:10 runs released (W-EVID figures linked, V-IMG, Start here in nav, /stack/ page and proof pack, five synthetic personas); site v0.1.175; excluded name 0"}
