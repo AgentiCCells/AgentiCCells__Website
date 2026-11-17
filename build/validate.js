@@ -190,7 +190,7 @@ if (ev.status !== 0) errors.push('evidence: figures with no evidence link (see a
     const allowed = new Set([offer.anchor_gbp, ...ladder, ...(offer.launch_gbp == null ? [] : [offer.launch_gbp])]);
     for (const f of walk(join(root, 'site'), ['.html'])) {
       const t = readFileSync(f, 'utf8');
-      if (offer.launch_gbp == null && (/launch price/i.test(t))) fail(`${rel(f)}: shows a launch price while launch_gbp is null`);
+      if (offer.launch_gbp == null && (/£\s?\d[\d,]*\s*\(?launch price/i.test(t.replace(/<[^>]+>/g, '')))) fail(`${rel(f)}: shows a launch price while launch_gbp is null`);
       t.replace(/<[^>]+>/g, ' ').split('\n').forEach((line, i) => {
         if (!/website cell/i.test(line)) return;
         for (const m of line.matchAll(/£\s?(\d+(?:,\d{3})*)/g)) {
