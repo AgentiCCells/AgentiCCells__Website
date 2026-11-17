@@ -68,31 +68,34 @@ In plain words, as we propose it. The signed-request flow has not yet been run e
 - It keeps no state of yours on our side once the repository has moved to your GitHub.
 - A stop file halts it: while the file exists, no agent works.
 
-## The seven steps
+## How it works: the plan
 
-"The flow has seven steps, and none of them needs me on a given day."
+This is Dinis Cruz's plan, not a service that runs today. He writes: "This is a plan, for me to decide and for the factory's agents to build; none of it exists end to end yet." Source: [Your own agentic cell, end to end](https://newsroom.sgit.ai/articles/your-own-agentic-cell.html) (newsroom.sgit.ai, 2026-11-17). It replaces the seven-step outline this page showed before, which came from the earlier article [Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html). The product is the workflow around the site, because the article says each site is cheap in tokens and the workflow is what costs.
 
-1. **Order.** You pay the one-off price and choose a name for your site on one of our domains. Which domains is still being set up.
-2. **Queue.** The order waits for capacity. "Delivery is a matter of staff and agents, not of my diary."
-3. **Build.** "An agentic team, on our account, builds a public site in a repository, from a short brief."
-4. **Preview.** "The site goes live at their name on our domain."
-5. **Key.** You make a key in your browser, on the site itself, and send us the public half as a QR code. We add it to the repository as a trusted key. The private half never leaves your browser. Try the prototype: [it makes a key in your browser and sends nothing](/key/). It is a prototype, not yet the real step.
-6. **Steer.** From then on you ask for changes. Your requests, signed with your key, go on an append lane in a vault. "An agent wakes every hour, reads the lane, makes the changes and releases the site."
-7. **Handover.** When you are ready, the repository moves to your GitHub, and you have three months to bring your own domain. Until then your site stays on our subdomain, best effort, with a date.
+1. **A start page and a key.** You arrive at a start page that says what a cell is, shows examples and says what happens to your data. Your browser makes a key pair, keeps the private halves and never exports them. Today: [a prototype makes a key in your browser and sends nothing](/key/). The real start page is planned.
+2. **A signed request.** One button asks for a cell. The request carries your public key, a short signed note and a way to reach you, with no secrets. Planned.
+3. **Gate one: Dinis approves.** Nothing that costs tokens or storage happens before he approves the request. One of three human gates in the plan. Planned.
+4. **A welcome pack, sealed to your key.** It holds a template vault with no secrets, your own lane to the factory and a key scoped to creating one vault. Planned. The article calls the scoped key a pilot until per-person keys exist.
+5. **Your vault, filled by you.** Over days you add photos, your own words, links, style notes and a signed consent saying what may be public. When ready, you seal the vault's read key, not its write key, to the factory. Planned.
+6. **Gate two: Dinis merges the request.** An intake agent checks the vault is complete and writes the factory request. Planned.
+7. **The site factory.** A merged commit makes the repository, the address and the site. This runs today, as [one reported run](https://newsroom.sgit.ai/articles/the-site-factory-works.html).
+8. **Five designs, back in your vault.** The factory runs a first round of five designs from your material, each with a screenshot and a preview link. You choose and comment. The same was done by hand for [Yiheng Wang](https://newsroom.sgit.ai/articles/a-website-that-is-her.html) and [Silvio Switha](https://newsroom.sgit.ai/articles/a-portfolio-with-a-film-first.html). Doing it per person from a vault is planned.
+9. **Gate three: the GitHub invitation.** Dinis approves an invitation to the site's repository. The article says the GitHub hand-over needs checking with the first person before it is promised. Planned.
+10. **Your own Claude.** The repository carries a CLAUDE.md written for you, and from then on you work in your own Claude session on your own repository. Planned.
 
-Each step is meant to be run from a queue, by a person or an agent, so the offering scales with capacity, not with one person's time. That is the design; it has not yet been run end to end.
+The article's security notes: keys travel only sealed to a public key; the factory reads only what you seal to it; consent is a signed file in your vault; a security specialist agent is to review the start page before the first outside person. It also proposes that the first ten cells are free, to learn the workflow before any price. That is the article's plan, not an offer here: the £500 on this page stays a first proposal.
 
 ## The site factory
 
 Dinis Cruz reports that a site can now be created by a commit. A request, a site file and a brief go into the AgentiCCells site factory; once merged, a pipeline makes the repository, sets up the hosting, the domain and the certificate, and has Claude Code write the first version. He says it worked for one site, after three made by hand. The times, and the long list of what it took to get there, are in his article: [The site factory works](https://newsroom.sgit.ai/articles/the-site-factory-works.html) (newsroom.sgit.ai, 2026-11-16). We do not restate the numbers here.
 
-For the website cell this means the Build step can start from a commit, not from a person. It is the author's own report of one run, not a measured service. The order, queue, key, steer and handover steps are still not joined up, and the price stays a first proposal.
+For the website cell this means the Build step can start from a commit, not from a person. It is the author's own report of one run, not a measured service. The other steps of the plan above are not joined up, and the price stays a first proposal.
 
 ## Limits
 
 - Public websites only, for now. This keeps publishing simple.
 - The price and the flow are a first proposal, not an offer.
-- The end-to-end flow is being built now. The pieces exist: the agentic team that built this site, person keys and vault lanes. The order, queue, key, steer and handover steps are not yet joined up.
+- The end-to-end flow is being built now. The pieces exist: the agentic team that built this site, person keys and vault lanes. The steps of the plan above are not yet joined up.
 - No website cell has been sold yet.
 
 More answers, including what happens when you leave, are on the [questions and answers page](/faq/).
@@ -102,7 +105,7 @@ More answers, including what happens when you leave, are on the [questions and a
 1. **Free: the recipe.** The brief, the policy and the steps to run it yourself, with your own Claude. Proposal: the recipe for this cell is not yet published. The nearest pieces today are [how this site was built](/how-this-site-was-built/).
 2. **Our agent helps you.** A specialist agent reviews your setup and tells you what to fix. Proposal: not yet running.
 3. **We help you: £1,500.** Two sessions with a person, then you run the team in your own GitHub and Claude accounts. First proposal, not an offer. See [the cells page](/cells/).
-4. **We set it up for you: from £500.** The seven steps above, on our accounts, handed over to you. First proposal, not an offer. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. The first orders will be run by hand, and we will say so.
+4. **We set it up for you: from £500.** The steps above, on our accounts, handed over to you. First proposal, not an offer. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. The first orders will be run by hand, and we will say so.
 
 ## Five ways to make a cell yours
 
