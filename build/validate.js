@@ -175,5 +175,8 @@ for (const f of walk(join(root, 'site', 'console'), ['.html'])) {
 // V-EVID2: figures on published pages with no evidence link in their sentence fail the build, unless listed in build/evidence-exceptions.json.
 const ev = spawnSync(process.execPath, [join(root, 'build/check-evidence.mjs')], { stdio: 'inherit' });
 if (ev.status !== 0) errors.push('evidence: figures with no evidence link (see above)');
+// V-ARCH2: every internal link, src and srcset in site/ must resolve.
+const il = spawnSync(process.execPath, [join(root, 'build/check-internal-links.mjs')], { stdio: 'inherit' });
+if (il.status !== 0) errors.push('internal links: broken links (see above)');
 if (errors.length) { console.error(errors.join('\n')); console.error(`FAILED (${errors.length})`); process.exit(1); }
 console.log('OK');

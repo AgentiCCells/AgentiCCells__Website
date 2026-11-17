@@ -48,3 +48,4 @@
 {"time": "2026-11-17T09:10:27Z", "agent": "dev@AgentiCCells.dinis", "item": "V-IMG", "action": "started", "summary": "measuring home page transfer at 390 px, then responsive WebP, posters, lazy loading"}
 {"time": "2026-11-17T09:12:26Z", "agent": "dev@AgentiCCells.dinis", "item": "V-IMG", "action": "done", "summary": "home page 942 KB to 296 KB at 390 px"}
 {"time": "2026-11-17T10:09:38Z", "agent": "dev@AgentiCCells.dinis", "item": "V-EVID2", "action": "started", "summary": "make the unlinked-figure check fail the build, with reviewed exceptions file"}
+{"time": "2026-11-17T11:09:12Z", "agent": "dev@AgentiCCells.dinis", "item": "V-ARCH2", "action": "started", "summary": "writer archive list absent; running internal link check over site/"}
