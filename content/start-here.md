@@ -7,7 +7,7 @@ nav: 1.2
 
 You want an agentic team. Many people talk about doing this. We do it, and this page says where to start. You do not need the big version first.
 
-Dinis Cruz's brief of 2026-11-16 (board/briefs/two-sites-2026-11-16.md) asks for exactly this: "very simple workflows", then "very complex ones". Everything we write here is open source, with no lock-in.
+Begin with a very simple workflow and grow only when it earns it. Everything we write here is open source, with no lock-in.
 
 **Already run agents and need to control them?** Go to [riskmandate.ai](https://riskmandate.ai), which writes the behaviour policy and sells on the same ladder. Come back here when you want a team set up with its policies.
 
@@ -37,11 +37,20 @@ Two days of engagement, with more of our time and maybe some travel: a conductor
 
 ## Step four: a network
 
-A customer engagement, where we map your work and deliver a whole set of things: conductors of conductors, policies and observability. £20,000, first proposal.
+A customer engagement, where we map your work and deliver a whole set of things: several teams of agents, each with its own lead agent, plus policies and a record you can read. £20,000, first proposal.
 
-The [cells page](/cells/) has the same four steps with the formats in Dinis's words, and what each site sells at each step. [riskmandate.ai](https://riskmandate.ai) sells agent behaviour policies on the same ladder. If your first need is to control agents you already run, start there.
+The [cells page](/cells/) has the same four steps, and what each site sells at each step. [riskmandate.ai](https://riskmandate.ai) sells agent behaviour policies on the same ladder. If your first need is to control agents you already run, start there.
 
 **Ready to talk?** The [contact](#talk-to-us) is at the foot of this page.
+
+## What it looks like at scale
+
+Our own team ran many agents at Web Summit in Lisbon. The counts below come from one public article, [Ten days at Web Summit](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.md), which counted them from git history and the session list. It says the counts depend on how you count, and that an "agent" means a distinct name in commits.
+
+- Around 250 named agents, across about 20,000 commits in 15 repositories ([the article](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.md)).
+- 224 Claude Code sessions, more than 60 of them at once at the peak ([the article](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.md)).
+
+This is our own team's work, not a customer's, and it is a measure of activity, not of quality.
 
 ## See it working
 

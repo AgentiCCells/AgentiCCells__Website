@@ -34,7 +34,7 @@ Already run agents and need to control them? **[riskmandate.ai](https://riskmand
 
 {{photo:stand}}
 
-The team was at the RiskMandate stand, our sister venture's, at Web Summit in Lisbon. The site made for the stand has a page on the [hub](https://hub.agenticcells.site/cells/riskmandate-at-websummit/).
+The team was at the RiskMandate stand, our sister venture's, at Web Summit in Lisbon. The site made for the stand has a page on the [hub](https://hub.agenticcells.site/cells/riskmandate-at-websummit/). Our own team's agents there numbered around 250 by name, in about 20,000 commits, counted from git history ([Ten days at Web Summit](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.md); the article says the count depends on how you count).
 
 ## The book
 
