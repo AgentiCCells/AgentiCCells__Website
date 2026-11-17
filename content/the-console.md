@@ -1,7 +1,8 @@
 ---
 title: The console
 description: What the console shows you about your agents, what it does not do yet, and where to see our own team's console.
-nav: 5
+archive: 2026-11-17
+archive_why: Reviewers found the console pages look the same to a buyer. The live console is at /console/ and our team as a cell explains it.
 ---
 # The console
 

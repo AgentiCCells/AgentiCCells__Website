@@ -72,7 +72,7 @@ Cells we have made are listed on [the hub](https://hub.agenticcells.site/), and 
 
 Beside those four ways to start there are five ways to make a cell yours, from Dinis's [Fork it](https://newsroom.sgit.ai/articles/fork-it.html): fork on GitHub and ask us work today; one-click deploy, run in your assistant and take it as a vault are planned and not built. The detail is on the [cells page](/cells/#five-ways-to-make-a-cell-yours).
 
-The other pages that cover this ground are [how this site was built](/how-this-site-was-built/), [build your own website with a cell](/build-your-own-website/) and [the cells and their sizes](/cells/).
+The other pages that cover this ground are [how this site was built](/how-this-site-was-built/), [the website cell](/website-cell/) and [the cells and their sizes](/cells/).
 
 ## What this page does not claim
 

@@ -50,3 +50,4 @@
 {"time": "2026-11-17T10:09:38Z", "agent": "dev@AgentiCCells.dinis", "item": "V-EVID2", "action": "started", "summary": "make the unlinked-figure check fail the build, with reviewed exceptions file"}
 {"time": "2026-11-17T11:09:12Z", "agent": "dev@AgentiCCells.dinis", "item": "V-ARCH2", "action": "started", "summary": "writer archive list absent; running internal link check over site/"}
 {"time": "2026-11-17T11:09:58Z", "agent": "dev@AgentiCCells.dinis", "item": "V-ARCH2", "action": "done", "summary": "internal link check added and released; archive list still absent"}
+{"time": "2026-11-17T12:10:29Z", "agent": "dev@AgentiCCells.dinis", "item": "V-ARCH3", "action": "started", "summary": "archive /build-your-own-website/ and /the-console/"}

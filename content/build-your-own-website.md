@@ -1,6 +1,8 @@
 ---
 title: Build your own website with a cell
 description: This site is the worked example. How an agentic team built it, what the same steps would be for your site, and what is not yet running. A first proposal.
+archive: 2026-11-17
+archive_why: The website cell page now says what this page said, with the site factory and live examples added, and how this site was built covers the history. The replacing pages are the website cell and how this site was built.
 ---
 # Build your own website with a cell
 

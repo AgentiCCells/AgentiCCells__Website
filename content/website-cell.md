@@ -41,14 +41,14 @@ During the build the team runs on our accounts. In the article's words, the "no 
   - **Silvio Switha**, an AI entrepreneur, musician and producer: [the live site](https://silvio-switha.agenticcells.site/) and [its hub page](https://hub.agenticcells.site/cells/silvio-switha/). The article says the factory took the request to HTTPS in 55 seconds, and that the portfolio leads with his film: [A portfolio with a film first](https://newsroom.sgit.ai/articles/a-portfolio-with-a-film-first.html) (Dinis Cruz, newsroom.sgit.ai, 2026-11-16).
   - Those times are the articles' own measurements, not a promise of what an order will take.
 - **On the hub.** Each other example has a page there, with its fork link: [this company site](https://hub.agenticcells.site/cells/agenticcells-ai/), [a made-up orange grower](https://hub.agenticcells.site/cells/algarve-orange-grower/), [the first site made by the site factory](https://hub.agenticcells.site/cells/riskmandate-at-websummit/), and [every other cell](https://hub.agenticcells.site/). They are all demos: we host them to show the work, and none is a customer's.
-- **This site.** It was built by its own agentic team, from a brief: "That is the product in miniature." See [how this site was built](/how-this-site-was-built/) and [what carries over to your site](/build-your-own-website/).
+- **This site.** It was built by its own agentic team, from a brief: "That is the product in miniature." See [how this site was built](/how-this-site-was-built/).
 - **The key step, as a prototype.** [It makes a key in your browser and sends nothing](/key/). It is a prototype, not yet the real step.
 
 No customer's website is shown here: none has been sold yet.
 
 ### Why a website first
 
-This site was built by its own agentic team, from a brief. "That is the product in miniature: a team of agents, given a brief, that builds and keeps a website." A website is also the easiest way to see what an agentic team can do for you. See [how this site was built](/how-this-site-was-built/) and [what carries over to your site](/build-your-own-website/).
+This site was built by its own agentic team, from a brief. "That is the product in miniature: a team of agents, given a brief, that builds and keeps a website." A website is also the easiest way to see what an agentic team can do for you. See [how this site was built](/how-this-site-was-built/).
 
 ## Use cases
 
@@ -99,7 +99,7 @@ More answers, including what happens when you leave, are on the [questions and a
 
 ## Four ways to start
 
-1. **Free: the recipe.** The brief, the policy and the steps to run it yourself, with your own Claude. Proposal: the recipe for this cell is not yet published. The nearest pieces today are [how this site was built](/how-this-site-was-built/) and [what carries over to your site](/build-your-own-website/).
+1. **Free: the recipe.** The brief, the policy and the steps to run it yourself, with your own Claude. Proposal: the recipe for this cell is not yet published. The nearest pieces today are [how this site was built](/how-this-site-was-built/).
 2. **Our agent helps you.** A specialist agent reviews your setup and tells you what to fix. Proposal: not yet running.
 3. **We help you: £1,500.** Two sessions with a person, then you run the team in your own GitHub and Claude accounts. First proposal, not an offer. See [the cells page](/cells/).
 4. **We set it up for you: from £500.** The seven steps above, on our accounts, handed over to you. First proposal, not an offer. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. The first orders will be run by hand, and we will say so.
