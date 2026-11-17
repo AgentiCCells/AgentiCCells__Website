@@ -4,7 +4,7 @@ import { createRequire } from 'node:module';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-const budget = Number(process.argv[2] || 30000);
+const budget = Number(process.argv[2] || 15000);
 let chromium;
 try { ({ chromium } = createRequire(import.meta.url)('playwright')); }
 catch { console.log('console-height: Playwright not available, skipped'); process.exit(0); }

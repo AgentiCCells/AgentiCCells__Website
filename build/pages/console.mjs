@@ -298,7 +298,8 @@ export default async function consolePages(ctx = {}) {
   if (Array.isArray(ctx.files)) ctx.files.push({ path: '/console/console.json', content: json });
   else { mkdirSync(join(out, 'console'), { recursive: true }); writeFileSync(join(out, 'console', 'console.json'), json); }
 
-  const nav = days.length ? `<ul class="days">${days.map((d) => `<li><a href="/console/${d}/">${d}</a></li>`).join('')}</ul>` : '<p>No days recorded yet.</p>';
+  const dayLi = (d) => `<li><a href="/console/${d}/">${d}</a></li>`;
+  const nav = days.length ? `<ul class="days">${dayLi(days[0])}</ul>${days.length > 1 ? `<details><summary>${days.length - 1} earlier day${days.length > 2 ? 's' : ''}</summary>\n<ul class="days">${days.slice(1).map(dayLi).join('')}</ul></details>` : ''}` : '<p>No days recorded yet.</p>';
   const holdLine = hold ? '<p class="hold"><strong>Stopped:</strong> board/HOLD.md exists. No agent works while it is there.</p>'
     : '<p class="hold-ok">Stop file <code>board/HOLD.md</code>: absent, so work may go on.</p>';
 
@@ -324,8 +325,8 @@ ${abpSection(abpData)}
 <p>Each day shows the board and keys as they were committed at the end of that day, and everything that happened in it.</p>
 ${nav}
 <h2>Timeline</h2>
-<p>The newest day only; earlier days are in the replays above.</p>
-${days.slice(0, 1).map((d) => `<h3><a href="/console/${d}/">${d}</a></h3>\n${timeline(events.filter((e) => day(e.time) === d).slice(0, 40))}${events.filter((e) => day(e.time) === d).length > 40 ? `<p><a href="/console/${d}/">All ${events.filter((e) => day(e.time) === d).length} events on ${d}</a></p>` : ''}`).join('\n')}
+<p>The newest day in full (the first 15 events open, the rest one tap away); earlier days are collapsed under Replay a day, each on its own page.</p>
+${days.slice(0, 1).map((d) => { const ev = events.filter((e) => day(e.time) === d); return `<h3><a href="/console/${d}/">${d}</a></h3>\n${timeline(ev.slice(0, 15))}${ev.length > 15 ? `<details><summary>${ev.length - 15} more events on ${d}</summary>\n${timeline(ev.slice(15))}</details>\n<p><a href="/console/${d}/">The whole day on its own page</a></p>` : ''}`; }).join('\n')}
 <p><small>Started from the simulated console described in <a href="https://newsroom.sgit.ai/articles/an-agentic-console.html">An agentic console</a>. Steps marked "reconstructed" were logged after the fact.</small></p>`;
 
   const pages = [{ path: '/console/', title: 'Console: the AgentiCCells team, read-only',
