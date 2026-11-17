@@ -8,7 +8,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
    "live": "https://agenticcells.ai",
-   "version_seen": "v0.1.216",
+   "version_seen": "v0.1.218",
    "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
    "status": "live",
    "listed": true
@@ -38,7 +38,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__RiskMandate-At-WebSummit",
    "live": "https://riskmandate-at-websummit.agenticcells.site",
-   "version_seen": "v0.1.5",
+   "version_seen": "v0.1.6",
    "what": "The first site made by the site factory from a request file (newsroom, \"The site factory works\").",
    "status": "demo",
    "listed": true
@@ -68,7 +68,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Jose-Bota",
    "live": "https://jose-bota.agenticcells.site",
-   "version_seen": "v0.1.23",
+   "version_seen": "v0.1.24",
    "what": "José Bota, AI automation expert: a portfolio, made by the site factory.",
    "status": "demo",
    "listed": true,
@@ -90,7 +90,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Yiheng-Wang",
    "live": "https://yiheng-wang.agenticcells.site",
-   "version_seen": "v0.1.10",
+   "version_seen": "v0.1.11",
    "what": "Yiheng Wang, project and operations manager: a personal site and presentation, made by the site factory.",
    "status": "demo",
    "listed": true,
@@ -213,5 +213,5 @@
   "proposed": "described (often in a newsroom article) or with a repository started; not built yet",
   "test": "a factory pipeline test run, kept as a record"
  },
- "version_checked": "2026-11-17 18:11 UTC"
+ "version_checked": "2026-11-17 18:24 UTC"
 }
