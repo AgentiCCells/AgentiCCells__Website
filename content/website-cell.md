@@ -1,63 +1,83 @@
 ---
 title: The website cell
-description: Our first offering, a first proposal: a public website built by an agentic team, steered from your browser with a key, then handed over. One price.
+description: A website like these, built for you by an agent team, in a GitHub repository you own, then handed over. One price, no subscription, no support contract from us.
 nav: 1.5
 ---
-# The website cell
+# A website like these, for you
 
-A public website, built by a small team of AI agents, that you steer from your browser and then own. It is our first offering.
+A public website, built by a small team of AI agents from your photos, videos and a short description. At the end it is in a GitHub repository you own. We keep nothing of yours, and our job ends at hand-over.
 
-- **Want one?** [Five short steps from "I want one" to a person reading your request](/start-here/#i-want-a-website-the-first-workflow): what to send, how, and what happens next.
-- **Price:** {{price}}, one-off, first proposal, not an offer. No subscription.
-- **What you need:** a browser. No accounts of your own.
-- **What you own at the end:** the site's git repository, moved to your GitHub.
-- **Where it sits:** the first step of one ladder, the £500 agentic flow we run ourselves, with no meetings and low touch (Dinis Cruz, 2026-11-16, board/briefs/two-sites-2026-11-16.md). The steps above it are £1,500, £5,000 and £20,000, all first proposals, on the [cells page](/cells/). [riskmandate.ai](https://riskmandate.ai) sells behaviour policies on the same ladder, so a website cell with its policies is a possible dual sale.
-- **Status:** the flow is a proposal, and the end-to-end flow is being built now by AgentiCCells' own team. Nothing has been sold yet.
+{{offer}}
 
-Source for this page: Dinis Cruz, [Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html), newsroom.sgit.ai, 2026-11-15. Quotes below are his words from that article.
+- **Price:** {{price}}, one-off, first proposal, not yet an offer. No subscription. The launch price is not decided; the number comes from one data file, [data/offer.json](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/offer.json).
+- **Want one?** [Email agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=I%20would%20like%20a%20website%20cell) with a line about the site you want. A person reads it. Or see the [five short steps](/start-here/#i-want-a-website-the-first-workflow).
+- **Status:** nothing has been sold yet. Every example below is a demo we host to show the work, and none is a customer's. The first orders will be run by hand, and we will say so.
 
-## What you get
+## Who it is for
 
-- A public website, built from your short brief.
-- A preview of it, live on our subdomain, from the build onwards.
-- A key of your own, made in your browser, that lets you steer the site.
-- Changes on request: signed requests that an agent reads every hour and releases.
-- The site's repository, moved to your GitHub at handover, with its full history.
-- Three months on our subdomain after handover, to bring your own domain.
+Each example is made by the same agent team. Pick the one nearest to you. Names appear only where the person agreed ([the registry records each consent](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/cells-registry.json)).
 
-### What you need
+### Artists
 
-A browser, to make your key and send requests. "The customer needs no accounts at all, only a browser to make a key." At handover you need a GitHub account to receive the repository.
+For a painter, a photographer, a maker or a designer: your work first, large, with a short statement and a way to reach you. We have no artist's site to show yet, so we say so rather than dress up another. The [hub](https://hub.agenticcells.site/) lists every site we have made, and an artist's site will be added there when one exists.
 
-### What you own at handover
+### Musicians
 
-The repository: the site's content, its code and its history, in your GitHub. "There is no subscription; we keep no state; and when it is done, it is theirs."
+Your music, your film or your gigs, on a page that is yours. Examples: [Gabriel DaCruz](https://gabriel-dacruz.agenticcells.site) ([hub page](https://hub.agenticcells.site/cells/gabriel-dacruz/)), a personal site given a full design pass, and [Silvio Switha](https://silvio-switha.agenticcells.site) ([hub page](https://hub.agenticcells.site/cells/silvio-switha/)), a portfolio that leads with his film: [A portfolio with a film first](https://newsroom.sgit.ai/articles/a-portfolio-with-a-film-first.html) (Dinis Cruz, newsroom.sgit.ai, 2026-11-16).
 
-During the build the team runs on our accounts. In the article's words, the "no state on our side" promise "holds after the handover".
+### AI people and technologists
 
-## Examples
+A portfolio that shows what you build, in your own words. Examples: [José Bota](https://jose-bota.agenticcells.site), an AI automation expert ([hub page](https://hub.agenticcells.site/cells/jose-bota/)), and [Silvio Switha](https://silvio-switha.agenticcells.site), an AI entrepreneur.
 
-- **Two personal sites, made by the site factory.** Both people agreed to be named (Dinis Cruz, 2026-11-16, recorded in [the cells registry](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/cells-registry.json)). Both are demos, not sales.
-  - **Yiheng Wang**, a project and operations manager: [the live site](https://yiheng-wang.agenticcells.site/) and [its hub page](https://hub.agenticcells.site/cells/yiheng-wang/). The article says the factory took the request to HTTPS in 72 seconds, then five design agents built five designs of the same facts: [A website that is her](https://newsroom.sgit.ai/articles/a-website-that-is-her.html) (Dinis Cruz, newsroom.sgit.ai, 2026-11-16).
-  - **Silvio Switha**, an AI entrepreneur, musician and producer: [the live site](https://silvio-switha.agenticcells.site/) and [its hub page](https://hub.agenticcells.site/cells/silvio-switha/). The article says the factory took the request to HTTPS in 55 seconds, and that the portfolio leads with his film: [A portfolio with a film first](https://newsroom.sgit.ai/articles/a-portfolio-with-a-film-first.html) (Dinis Cruz, newsroom.sgit.ai, 2026-11-16).
-  - Those times are the articles' own measurements, not a promise of what an order will take.
-- **On the hub.** Each other example has a page there, with its fork link: [this company site](https://hub.agenticcells.site/cells/agenticcells-ai/), [a made-up orange grower](https://hub.agenticcells.site/cells/algarve-orange-grower/), [the first site made by the site factory](https://hub.agenticcells.site/cells/riskmandate-at-websummit/), and [every other cell](https://hub.agenticcells.site/). They are all demos: we host them to show the work, and none is a customer's.
+### Consultants
+
+A site for a personal practice: who you help, how you work, how to get in touch. Example: [Yiheng Wang](https://yiheng-wang.agenticcells.site), a project and operations manager ([hub page](https://hub.agenticcells.site/cells/yiheng-wang/)). Five designs of the same facts were made for her: [A website that is her](https://newsroom.sgit.ai/articles/a-website-that-is-her.html) (Dinis Cruz, newsroom.sgit.ai, 2026-11-16).
+
+### Companies
+
+A first-grade pass for a product, an event or a team site, to put something credible online quickly and refine it later. Examples: [this company's own site](https://hub.agenticcells.site/cells/agenticcells-ai/), [an event site made by the site factory](https://riskmandate-at-websummit.agenticcells.site), and [a made-up orange grower](https://algarve-orange-grower.agenticcells.site) with a zone map and an order flow (invented prices, nothing sent). Whether a company would want more than a first pass is a question for the first orders.
+
+All of these are on [the hub](https://hub.agenticcells.site/), with a fork link on each page.
+
+## What we need from you
+
+- **Photos and videos.** The ones you want on the site. Some can already be public, for example from a profile you have.
+- **A description.** In your own words: who you are, what you do, what you want visitors to do. A few paragraphs is enough to start.
+- **A way to reach you.** An email address.
+- **Your say on what is public.** We publish only what you say may be public.
+
+Nothing else is needed to start. You do not need to know what a repository is. The only account you need is a GitHub account to receive the site; guidance on making one is coming on a page of its own.
+
+## What happens next
+
+1. **You write to us** at [agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=I%20would%20like%20a%20website%20cell) with a line about the site you want. A person reads and answers it.
+2. **You send your material:** the photos, videos and description.
+3. **The agent team builds the site.** Today the first part of this runs from a commit: the site factory makes the repository, the address and a first version. It is Dinis Cruz's report of one run, with the times in his article: [The site factory works](https://newsroom.sgit.ai/articles/the-site-factory-works.html) (newsroom.sgit.ai, 2026-11-16). We do not restate the numbers.
+4. **You see a preview** on an address of ours and say what to change.
+5. **Hand-over.** The repository moves to your GitHub, with its full history.
+
+How long this takes for an order is not measured, because no order has been run. We will give you an honest estimate when we reply, and we will say that the first orders are run by hand.
+
+## Yours after hand-over
+
+The site is static files in a GitHub repository. It is yours, and you choose how to run it.
+
+- **Managed by you on Claude.** The repository carries a CLAUDE.md written for you, so you can keep changing the site in your own Claude session. This is part of the plan below and is not yet running end to end.
+- **Deployed anywhere.** A static site in GitHub runs on GitHub Pages, Netlify, Cloudflare Pages, Vercel, GitLab Pages or any plain web host. A page with guidance for each host is coming. We endorse no host.
+
+## No subscription, no support from us
+
+We sell no subscription and give no support. Our job ends when the site is handed over. If you want someone to look after it, make changes, install it or guide you, partners may offer that (a page on the partner terms is coming), at prices they set. The terms with partners are a first draft.
+
+## Under agent behaviour policies
+
+Every website cell is built by agents that run under agent behaviour policies. [RiskMandate](https://riskmandate.ai) writes behaviour policies, and a website cell with its policies is a possible dual sale. The policies are written but not yet agreed for publication, so we do not link them here; see [the questions and answers](/faq/). The plain-words policy for this cell is below.
+
+## Examples, in more detail
+
+- **Two personal sites made by the site factory.** Both people agreed to be named (Dinis Cruz, 2026-11-16, recorded in the registry). Both are demos, not sales. [Yiheng Wang](https://yiheng-wang.agenticcells.site/): the article says the factory took the request to HTTPS in 72 seconds. [Silvio Switha](https://silvio-switha.agenticcells.site/): 55 seconds. Those times are the articles' own measurements, not a promise of what an order will take.
 - **This site.** It was built by its own agentic team, from a brief: "That is the product in miniature." See [how this site was built](/how-this-site-was-built/).
 - **The key step, as a prototype.** [It makes a key in your browser and sends nothing](/key/). It is a prototype, not yet the real step.
-
-No customer's website is shown here: none has been sold yet.
-
-### Why a website first
-
-This site was built by its own agentic team, from a brief. "That is the product in miniature: a team of agents, given a brief, that builds and keeps a website." A website is also the easiest way to see what an agentic team can do for you. See [how this site was built](/how-this-site-was-built/).
-
-## Use cases
-
-These are the situations we think it fits. They are proposals, not a record of customers.
-
-- You need a public site, such as a small business, a project or a club, and you have no accounts of your own to set up.
-- You want to own the site's repository at the end, not rent a platform.
-- You would rather ask for changes in writing, signed with your key, than learn a content system.
 
 ## Behaviour policy
 
@@ -69,7 +89,7 @@ In plain words, as we propose it. The signed-request flow has not yet been run e
 - It keeps no state of yours on our side once the repository has moved to your GitHub.
 - A stop file halts it: while the file exists, no agent works.
 
-## How it works: the plan
+## How the full flow is planned
 
 This is Dinis Cruz's plan, not a service that runs today. He writes: "This is a plan, for me to decide and for the factory's agents to build; none of it exists end to end yet." Source: [Your own agentic cell, end to end](https://newsroom.sgit.ai/articles/your-own-agentic-cell.html) (newsroom.sgit.ai, 2026-11-17). It replaces the seven-step outline this page showed before, which came from the earlier article [Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html). The product is the workflow around the site, because the article says each site is cheap in tokens and the workflow is what costs.
 
@@ -85,12 +105,6 @@ This is Dinis Cruz's plan, not a service that runs today. He writes: "This is a 
 10. **Your own Claude.** The repository carries a CLAUDE.md written for you, and from then on you work in your own Claude session on your own repository. Planned.
 
 The article's security notes: keys travel only sealed to a public key; the factory reads only what you seal to it; consent is a signed file in your vault; a security specialist agent is to review the start page before the first outside person. It also proposes that the first ten cells are free, to learn the workflow before any price. That is the article's plan, not an offer here: the £500 on this page stays a first proposal.
-
-## The site factory
-
-Dinis Cruz reports that a site can now be created by a commit. A request, a site file and a brief go into the AgentiCCells site factory; once merged, a pipeline makes the repository, sets up the hosting, the domain and the certificate, and has Claude Code write the first version. He says it worked for one site, after three made by hand. The times, and the long list of what it took to get there, are in his article: [The site factory works](https://newsroom.sgit.ai/articles/the-site-factory-works.html) (newsroom.sgit.ai, 2026-11-16). We do not restate the numbers here.
-
-For the website cell this means the Build step can start from a commit, not from a person. It is the author's own report of one run, not a measured service. The other steps of the plan above are not joined up, and the price stays a first proposal.
 
 ## Limits
 
