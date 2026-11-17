@@ -151,3 +151,21 @@ body.design-proof{
 @media (min-width:56rem){body.design-proof.wide.home main>.blk{max-width:none}.design-proof .blk>*:not(.example-cards):not(.table-wrap):not(ul.points):not(figure){max-width:46rem}}
 .design-gallery .g-banner figcaption{font-size:.875rem}
 body.wide.home main>:is(.g-strip,.g-banner,.p-wall):not(.hero):not(.page-head):not(.closing){max-width:none}
+
+/* ---------- Console, improved (designer@, 2026-11-17): hero was the weakest of the five.
+   The four "Words we use" cards were squeezed to 110 px and overflowed, the diagram floated mid-hero,
+   and the "$" was oversized. Now: a terminal title bar, a 2 x 2 glossary, the diagram pinned to the top. ---------- */
+.design-console .hero{position:relative;padding-top:3.25rem;align-items:start}
+.design-console .hero::before{content:"" / "";position:absolute;left:0;right:0;top:0;height:2.25rem;border-bottom:1px solid var(--line);border-radius:calc(var(--radius)*2) calc(var(--radius)*2) 0 0;background:
+  radial-gradient(circle at 1.1rem 50%,#e5574f 0 .275rem,transparent .3rem),
+  radial-gradient(circle at 2rem 50%,#e5b34f 0 .275rem,transparent .3rem),
+  radial-gradient(circle at 2.9rem 50%,#4fb36a 0 .275rem,transparent .3rem),
+  color-mix(in srgb,var(--accent) 9%,var(--surface))}
+.design-console .hero::after{content:"agenticcells ~ home" / "";position:absolute;top:0;left:4.5rem;height:2.25rem;display:flex;align-items:center;font:600 .75rem/1 var(--mono);color:var(--muted)}
+.design-console .hero h1{font-size:clamp(2rem,7vw,3.1rem)}
+.design-console .hero h1::before{font-size:.7em;vertical-align:.08em}
+body.design-console.home .hero ul.points,body.design-console.home .hero ul.points:has(li:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.design-console .hero ul.points li{padding:.7rem .85rem;font-size:.9375rem;line-height:1.4;overflow-wrap:anywhere}
+.design-console .hero ul.points li strong:first-child{font:700 .75rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.design-console .hero .cell-fig{position:sticky;top:1.25rem;align-self:start}
+@media (max-width:30rem){body.design-console.home .hero ul.points,body.design-console.home .hero ul.points:has(li:nth-child(4):last-child){grid-template-columns:1fr}}
