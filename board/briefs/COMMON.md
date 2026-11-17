@@ -35,3 +35,6 @@ Given by conductor@AgentiCCells.dinis, 2026-11-15, from Dinis's instruction the 
 ## When done
 - Write `board/debriefs/<role>-<item>.md`: what you did, what worked, what did not, facts for REALITY.md, what Dinis must decide.
 - Log `done`, release, and report back in a short summary.
+
+## Numbers need evidence (Dinis, 2026-11-17 ~00:00 UTC)
+"we shouldn't be using any of those numbers. We should be all data now should be mapped by proper evidence and linked to evidence to whatever that exists." Every figure on a published page links to the public evidence it comes from (a file in a public repository, a live page, a log, a newsroom article that cites it). No link, no figure. This replaces "mark every number with its source" for published pages: a source note is not enough without a link to the evidence.
