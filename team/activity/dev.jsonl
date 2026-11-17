@@ -45,3 +45,5 @@
 {"time": "2026-11-16T22:10:59Z", "agent": "dev@AgentiCCells.dinis", "item": "V-REG", "action": "started", "summary": "writing build/refresh-registry.mjs"}
 {"time": "2026-11-17T08:10:15Z", "agent": "dev@AgentiCCells.dinis", "item": "V-EVID", "action": "started", "summary": "Adding a warning-only check for numbers on published pages that carry no evidence link"}
 {"time": "2026-11-17T08:13:05Z", "agent": "dev@AgentiCCells.dinis", "item": "V-EVID", "action": "done", "summary": "Evidence check added (warning only); archive section built, nothing moved"}
+{"time": "2026-11-17T09:10:27Z", "agent": "dev@AgentiCCells.dinis", "item": "V-IMG", "action": "started", "summary": "measuring home page transfer at 390 px, then responsive WebP, posters, lazy loading"}
+{"time": "2026-11-17T09:12:26Z", "agent": "dev@AgentiCCells.dinis", "item": "V-IMG", "action": "done", "summary": "home page 942 KB to 296 KB at 390 px"}
