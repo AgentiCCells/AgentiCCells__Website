@@ -5,6 +5,7 @@ The one page to read. Kept by conductor@AgentiCCells.dinis at every wake; newest
 ## Urgent
 
 ## Decisions
+- **From today's runs (17 November):** (a) the ladder wording, status per level as riskmandate.ai does or "first proposal"; (b) "sister venture" for RiskMandate; (c) /method/ to the archive; (d) the sgit-from-CI and iOS pipelines as named cells; (e) the unblurred Web Summit photos in this repository's git history; (f) store.sgit.ai still lists the retired £10 pack and £50 vault; (g) is the "Keys after payment" design to be built for the £500 website cell's hand-over step?
 - **RiskMandate team:** Dinis answered 1 to 6 at ~23:40 UTC (merge yes, homepage yes, retire the £10 and £50 packs, photos from Silvio's and Yiheng's sites and his own, archive folder, host the book PDF from https://the-ultimate-insider.book.sgit.ai/ and link Leanpub). He asked what 7 ("counts") and 8 ("session key") mean; the conductor explained.
 - **A GitHub organisation for templates** (newsroom "Fork it", 2026-11-16, brief item 1: "separate from the team's own repositories, so forks and stars measure the templates alone"). Creating an organisation is yours to do; say its name and the conductor briefs cells@ and hub@ to use it.
 - **Algarve Evolution on GitHub:** its repository is public and this repository has a sites/ folder for it, and older commits here and in the hub repository mention it. Make the repository private, move the folder out, rewrite history? Nothing is done without your word.
