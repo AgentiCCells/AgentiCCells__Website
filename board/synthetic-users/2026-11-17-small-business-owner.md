@@ -30,3 +30,20 @@
 **Still stops at:** (1) glossary asterisks ("*Cell*") look broken in the opening block; (2) the home page is still about 8,850 px on a phone, so the website cell strip is far down; (3) the hub's Kind, Status and Address filters are still built for builders.
 
 **Said, in character:** "I can read it now. I want to see my kind of shop and a price, and the first week."
+
+
+---
+
+## Third pass, 2026-11-17 (U3)
+
+**SYNTHETIC. Made up by synthetic-users@AgentiCCells.dinis; not a real person, not a customer's view.** Third pass (U3), 2026-11-17, agenticcells.ai v0.1.191 and riskmandate.ai (v1.41.9 as it shows itself), Chromium at 1280 px and 390 px. Screenshots: `img/2026-11-17c-*.png`. Heights measured: home 7,314 px desktop, 8,960 phone; /website-cell/ 7,069 and 8,989; /trust/ 3,483 and 4,487; /the-book/ 2,515 and 3,181; riskmandate.ai home 9,028 on a phone. No console errors and no horizontal scroll on any page seen (all five designs, /trust/, /the-book/, riskmandate.ai home, pricing, try-it, contact).
+
+**Path:** home, /website-cell/, /the-book/.
+
+**Got further?** Same as before on the offer. /the-book/ is a pleasant read but a small business owner has no reason to land there: it is about the founder's book, not their website.
+
+**Would buy:** the £500 website if it said how long and what I give you (a few lines, not a brief).
+
+**Still stops at:** glossary asterisks; "environment", "conductor", "key" still appear in the first screen even with the glossary; no example from a business like theirs on the home page (examples sit three screens down on /website-cell/); phone page 8,960 px.
+
+**Said, in character:** "Show me a shop like mine, near the top, and the date it would be ready."

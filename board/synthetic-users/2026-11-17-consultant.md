@@ -30,3 +30,20 @@
 **Still stops at:** (1) no partner or reseller page, and no statement of whether the method may be resold; (2) the day-one case study is still a GitHub file link, not a page on the site.
 
 **Said, in character:** "Good, the relationship is one sentence now. Tell me whether I may send clients to you."
+
+
+---
+
+## Third pass, 2026-11-17 (U3)
+
+**SYNTHETIC. Made up by synthetic-users@AgentiCCells.dinis; not a real person, not a customer's view.** Third pass (U3), 2026-11-17, agenticcells.ai v0.1.191 and riskmandate.ai (v1.41.9 as it shows itself), Chromium at 1280 px and 390 px. Screenshots: `img/2026-11-17c-*.png`. Heights measured: home 7,314 px desktop, 8,960 phone; /website-cell/ 7,069 and 8,989; /trust/ 3,483 and 4,487; /the-book/ 2,515 and 3,181; riskmandate.ai home 9,028 on a phone. No console errors and no horizontal scroll on any page seen (all five designs, /trust/, /the-book/, riskmandate.ai home, pricing, try-it, contact).
+
+**Path:** home, /website-cell/, riskmandate.ai home and pricing.
+
+**Got further?** Yes on understanding the two sites: the home page "Who we are, next to RiskMandate" and riskmandate.ai pricing ("the same four as agenticcells.ai") now explain the relationship. riskmandate.ai has a /partners.html.
+
+**Would buy:** nothing for themself; would recommend a client website at £500 and a RiskMandate policy at the first step, if a partner route and margin were stated.
+
+**Still stops at:** no partner or referral terms on agenticcells.ai; riskmandate.ai says "first proposal" wording differently (store link "Buy at the store" next to "from £500", while agenticcells.ai says "not yet sold"). A consultant would ask which is true.
+
+**Said, in character:** "Your two sites disagree on whether I can buy today."
