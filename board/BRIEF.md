@@ -120,3 +120,8 @@ Conductor's reading: "the visualization on the right" is the cell diagram beside
 
 ## Dinis, 2026-11-17 ~22:55 UTC: one page per kind of partner
 > Great. Do you also have the partners page on the pipeline? Because that's one of the most important ones, because I really want to start reaching out to people. And it's very important that you also reach out and have that difference between the single freelancer to the small company to the bigger company, right? And they should be pointing to different pages in itself, because I should be able to point, like, for example, the freelancer to the specific people I want to do, or the bigger company to them, and that should have very rich and infographics, and even explain the flow, and put with nice infographic structure of who does what, how does it work, and how everything fits together.
+
+## Dinis, 2026-11-17 ~23:20 UTC: the site's design like Yiheng's and Silvio's, on every page
+> Also, can you make the design UI look like, the same thing that we did on the actual pages, like for example what we did with Vicky and Silvio, and also that design has to affect all pages, right? Because we have to be consistent here, right? And again, make it quite professional.
+
+Conductor's reading (from screenshots of both sites at 1366 px, 23:20 UTC): both have a dark top bar with the person's name, a "Choose a design" button and a few key links; a strong full-width hero (Silvio: cinematic photo background, very large type, a bold primary button; Yiheng: editorial serif, framed photo with a caption card, outlined buttons, stat cards); generous spacing and confident type. On agenticcells.ai today the five designs change only the home page, and inner pages share a plainer style.
