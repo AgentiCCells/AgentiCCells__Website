@@ -50,6 +50,10 @@ The [cells page](/cells/) has the same four steps with the formats in Dinis's wo
 - **Examples you can open.** [The hub](https://hub.agenticcells.site/) lists every cell we have made, one page each, such as [the site factory](https://hub.agenticcells.site/cells/site-factory/) and [an email cell](https://hub.agenticcells.site/cells/cell-email/). The cells we host are demos.
 - **Do it yourself.** [Fork a cell on GitHub](/cells/#five-ways-to-make-a-cell-yours) is the free way in. Other ways are planned, and that section says which exist today.
 
+## Is it safe?
+
+The [trust and security page](/trust/) says what our agents can reach, where your data goes, how releases are checked, how keys work and how to stop everything. It also lists what we cannot yet show.
+
 ## Talk to us
 
 Write to [agent@riskmandate.ai](mailto:agent@riskmandate.ai). A person reads and answers it. All prices on this page are a first proposal, and nothing has been sold.
