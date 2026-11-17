@@ -46,6 +46,26 @@ A file named `board/HOLD.md`. While it exists, every agent must do nothing but r
 
 Send email, post, publish to social media, contact a person or company, move money, sign up for paid services or accept terms. The rule is in [CLAUDE.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/CLAUDE.md): a person sends, the agent drafts. This is a rule (see the first section), not yet a boundary.
 
+## Limits we state in public
+
+Two of Dinis Cruz's newsroom articles of 17 November 2026 draw lines we work to. We quote them, and we say which parts are his position and not a product we sell.
+
+**Money stays in plain code.** In [The payment desk](https://newsroom.sgit.ai/articles/the-payment-desk.html) he writes: "For mission-critical things like this, you want code that is reliable, auditable, that we can check and verify. You should not be using AI for that." On this team the rule is stricter still: [no agent moves money](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/CLAUDE.md), and no agent has a wallet or a payment power of any kind. The article also says that giving agents wallets, with a small budget, is "my position, not a product we run". We do not offer it.
+
+**Keys, regions and erasure, in plain words.** [Patient vaults, answered](https://newsroom.sgit.ai/articles/patient-vaults-answered.html) answers seven questions from a health team about the vaults we build on. Three of its answers matter to any security reviewer:
+- Region: you choose it, once you run your own server in your own cloud account. The host holds ciphertext only.
+- Erasure: a deleted vault is removed from the server and its id cannot be uploaded again. In the article's words, "deletion stops future access, not copies someone already made."
+- Key loss: if the clinic's key is lost, "the vaults it protects are lost". That is the zero-knowledge deal, so the article advises sealing the key to two or more custodians and keeping an offline copy.
+
+What we do not claim: we do not sell patient vaults, a doctor console or an erasure service, and neither article says we do. The article says there is no live date for the doctor console.
+
+## What a cell asks of you (proposal)
+
+This section is a proposal. Where nothing is written down yet, it says so.
+- **Access.** The website cell asks for nothing from your systems: the site is public by design, and it has not been run for a customer ([FAQ](/faq/)). For a team in your own environment, the rule for our agents is to ask for the narrowest permission and never widen their own access ([CLAUDE.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/CLAUDE.md)). A written list of access per role for a customer is not written yet.
+- **Whose keys.** Which keys a cell uses in your environment is not written yet.
+- **Stop.** In your environment you would hold your own stop file. That has not been tested.
+
 ## What we cannot yet show
 
 - A third-party review or penetration test. None has been done.
