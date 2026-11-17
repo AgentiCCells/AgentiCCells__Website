@@ -195,3 +195,5 @@
 {"time": "2026-11-17T22:36:14Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Extra run on Dinis's 22:50 ask: started writer@, session 018yvw"}
 {"time": "2026-11-17T22:47:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-NEWS-SELL", "action": "briefed", "summary": "Newsroom articles the-website-cell and partners-sell-we-build live (by Dinis); W-NEWS-SELL queued; GBP 250 launch price confirmed live"}
 {"time": "2026-11-17T22:59:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-PARTNER-TYPES", "action": "briefed", "summary": "Dinis 22:55: three standalone partner pages with infographics; W-PARTNER-TYPES and D-PARTNER-INFO queued first"}
+{"time": "2026-11-17T22:58:31Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-PARTNER-TYPES", "action": "briefed", "summary": "Extra run on Dinis's 22:55 partner ask: started writer@, session 018yvw"}
+{"time": "2026-11-17T22:58:31Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-PARTNER-TYPES", "action": "briefed", "summary": "Extra run on Dinis's 22:55 partner ask: started designer@, session 018yvw"}
