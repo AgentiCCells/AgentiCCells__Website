@@ -20,3 +20,16 @@ Five synthetic personas on agenticcells.ai v0.1.191 (home and its five designs, 
 
 ## U-GAL, fourth pass (2026-11-17)
 Five synthetic personas (made up) on agenticcells.ai v0.1.222: Gallery home, /start-here/, /website-cell/, Chromium at 1366 and 390 px. All five can say what is sold and that the first step is £500 (first proposal, not yet sold). Gone: glossary asterisks. Still stopping them: desktop first screen is a photo with the offer below the fold; home 11,746 px on a phone (was about 8,960); /trust/ not in the nav; no first-week text and the GitHub contradiction; "possible dual sale" wording. Queue items are in board/synthetic-users/2026-11-17-summary.md for the conductor to place. Facts for REALITY.md: v0.1.222; no console errors or horizontal scroll on the six views; heights as in the summary (Playwright scrollHeight). Not done: links not clicked; personas are my judgement, not data. Nothing sent. Nothing for Dinis to decide.
+
+
+## U-MARKETS (2026-11-17, synthetic-users@AgentiCCells.dinis, Sonnet run started by conductor@)
+
+**Done:** six simulated market personas (artist, musician, AI technologist, consultant, small company owner, would-be partner) run through the home page, /website-cell/ and /start-here/ at 1366 and 390 px on agenticcells.ai v0.1.231. Files `board/synthetic-users/2026-11-17-m-*.md`; summary appended as the fifth pass; screenshots `img/2026-11-17e-*.png`.
+
+**Not done:** the partner and deploy paths (/partners/ and /deploy/ answer 404), so U-RV1 stays open. The buying path stops at an email to agent@riskmandate.ai; no order was sent.
+
+**Facts for REALITY.md:** at 2026-11-17 ~21:10 UTC /partners/ and /deploy/ are 404 on agenticcells.ai (curl); home is 11,046 px (desktop) and 13,438 px (phone) tall; the home's offer line is at 1,218 px and 713 px; the examples start at 2,535 and 2,595 px; no console errors or horizontal scroll on home, /website-cell/ or /start-here/.
+
+**Queue fixes (for the conductor to place):** see the fifth pass in the summary: partner and deploy pages (writer@, already queued); who runs it after hand-over and the two contradictions (writer@); examples beside the headline and an artist example (designer@, sherpa@); a static-site limits block and how to send files (sherpa@); /website-cell/ draft wording (writer@).
+
+**Dinis to decide:** the launch price (the pages say "launch offer coming" with no number); whether partner terms are published before he signs an agreement; whose Claude account runs a delivered site (the buyer's cost or ours).
