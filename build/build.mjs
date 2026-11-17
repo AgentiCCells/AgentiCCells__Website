@@ -60,7 +60,16 @@ function markdown(body, L = EN) {
   const lines = body.split('\n');
   const html = [];
   let para = [], list = [], olist = [];
+  let rows = [];
+  const flushTable = () => {
+    if (!rows.length) return;
+    const cells = (r) => r.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
+    const head = cells(rows[0]); const body = rows.slice(2).map(cells);
+    html.push(`<div class="table-wrap"><table><thead><tr>${head.map((c) => `<th>${inline(c)}</th>`).join('')}</tr></thead><tbody>${body.map((r) => `<tr>${r.map((c, i) => `<td data-label="${esc(head[i] || '')}">${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+    rows = [];
+  };
   const flush = () => {
+    flushTable();
     if (para.length) html.push(`<p>${inline(para.join(' '))}</p>`);
     if (olist.length) html.push(`<ol class="steps">${olist.map((l) => `<li>${inline(l)}</li>`).join('')}</ol>`);
     // A list whose every item starts with a **bold lead** is a set of points: shown as cards (D2).
@@ -78,6 +87,7 @@ function markdown(body, L = EN) {
     // Numbered steps ("1. ...") become an ordered list (D2).
     else if ((m = line.match(/^\d+\.\s+(.*)$/))) { if (para.length || list.length) flush(); olist.push(m[1]); }
     else if (line.trim() === '') flush();
+    else if (/^\|.*\|\s*$/.test(line.trim())) { if (para.length || list.length || olist.length) flush(); rows.push(line); }
     else { if (list.length || olist.length) flush(); para.push(line.trim()); }
   }
   flush();
@@ -223,7 +233,8 @@ mkdirSync(join(out, 'assets'), { recursive: true });
 const pages = [];
 for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md')).sort()) {
   const { meta, body } = frontMatter(readFileSync(join(root, 'content', f), 'utf8'));
-  const path = f === 'index.md' ? '/' : `/${f.replace(/\.md$/, '')}/`;
+  // `path:` in the front matter sets a nested address (W-PARTNER-TYPES: /partners/freelancer/).
+  const path = meta.path || (f === 'index.md' ? '/' : `/${f.replace(/\.md$/, '')}/`);
   // V-ARCHIVE: `archive: YYYY-MM-DD` and `archive_why: ...` in the front matter archive a page. It keeps its address and its
   // words, gets a dated note on top, leaves the nav and is listed at /archive/ (build/pages/archive.mjs).
   const archived = meta.archive ? { date: meta.archive, why: meta.archive_why } : null;

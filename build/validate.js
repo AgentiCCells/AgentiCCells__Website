@@ -300,7 +300,8 @@ if (il.status !== 0) errors.push('internal links: broken links (see above)');
     for (const n of mine) if (!existsSync(join(root, 'content', n))) fail(`content/${L.dir}/${n}: no English page content/${n} to mirror`);
     // Fallback pages exist for every English content page and are not indexed.
     for (const n of readdirSync(join(root, 'content')).filter((n) => n.endsWith('.md'))) {
-      const urlp = n === 'index.md' ? '/' : `/${n.replace(/\.md$/, '')}/`;
+      const pm = readFileSync(join(root, 'content', n), 'utf8').split('\n---')[0].match(/^path:\s*(\S+)/m);
+      const urlp = pm ? pm[1] : n === 'index.md' ? '/' : `/${n.replace(/\.md$/, '')}/`;
       const sf = join(root, 'site', L.dir, urlp === '/' ? '' : urlp, 'index.html');
       if (/^archive:/m.test(readFileSync(join(root, 'content', n), 'utf8').split('\n---')[0] || '')) continue;
       if (!existsSync(sf)) { fail(`site/${L.dir}${urlp}: no page and no fallback`); continue; }

@@ -1,13 +1,19 @@
 ---
 title: Partners
-description: Bring the customer, we build the website cell, you sell what you like around it. A 50/50 split of the sale. First draft of the terms; talk to us.
+description: Bring the customer, we build the website cell, you sell what you like around it. A 50/50 split of the sale. Three kinds of partner, a page for each.
 nav: 6.3
 ---
 # Partners: you bring the business, we build the site
 
 You know people who want a website. We have an agent team that builds one from photos, videos and a short description, and hands it over in a GitHub repository the customer owns. You can sell that to them, with us building it behind you.
 
-**These terms are a first draft. Talk to us.** No partner agreement exists yet, and nothing here is a contract. Every price and every split on this page is a proposal. The first partner to agree will shape the final terms. Nothing has been sold yet, through a partner or otherwise.
+Nothing has been sold yet, through a partner or otherwise, and no partner has signed. Pick the page that is nearest to you. Each stands alone, so Dinis Cruz can send you one link.
+
+- **[Freelancer](/partners/freelancer/)** One person who talks to people: for an amount you set, a website, an agentic email and a workflow.
+- **[Consultancy](/partners/consultancy/)** A small company with customers, doing many: one cell for each client, the same team every time.
+- **[Firm](/partners/firm/)** A larger company with bigger projects, wanting us, or our network of experts, involved. Case by case.
+
+The programme is set out in full in Dinis Cruz's article, [Partners sell, we build](https://newsroom.sgit.ai/articles/partners-sell-we-build.html), newsroom.sgit.ai, 2026-11-17, CC BY 4.0.
 
 ## What a partner sells
 
@@ -37,17 +43,17 @@ Dinis Cruz's words: "I don't want to sell subscriptions ... I don't want to be p
 
 This answers the question buyers ask most: who runs the site after hand-over? Your partner, or the customer's own Claude.
 
-## Three kinds of partner
+## Three kinds of partner, in short
 
-### The freelancer
+### [The freelancer](/partners/freelancer/)
 
 One person. "For this much, I will make you a website, give you an agentic email and a workflow." You find the customer, collect the photos and the description, send them to us, show the customer the previews and hand over. Then you sell the care.
 
-### The small consultancy
+### [The small consultancy](/partners/consultancy/)
 
 A firm with customers, doing many. Same flow, repeated. Because the setup is automated, a second site is not a second project: the same team, the same policies, a new customer's material. You may keep your own repositories, and customers' work, private.
 
-### The larger firm
+### [The larger firm](/partners/firm/)
 
 Bigger projects, where you want us or Dinis Cruz's network of experts involved: a cell run in the customer's own accounts, several cells, workflows around the site. These are case by case, and the split is agreed before work starts.
 
@@ -60,6 +66,10 @@ Bigger projects, where you want us or Dinis Cruz's network of experts involved: 
 5. **Hand-over.** The repository moves to the customer's GitHub with its full history, and you get admin access.
 6. **After.** Our job ends. Yours, if you want it, begins: care, changes, support, at your prices.
 
+## Partner terms
+
+The terms are common sense and few, and they are the same on every partner page. Payment terms are agreed per deal.
+
 ## Who owns what
 
 | | Owns it |
@@ -69,7 +79,7 @@ Bigger projects, where you want us or Dinis Cruz's network of experts involved: 
 | The code and the agent behaviour policies | Open, under the licences on the [open source page](/open-source/) |
 | The build and the hand-over | AgentiCCells |
 
-**Payment (proposal):** the partner invoices the customer, and pays AgentiCCells its half soon after the customer pays, within a period to be agreed. This is a proposal, not agreed. It came to us second-hand, so ask us about it.
+**Who invoices:** whoever has the customer. They pay the other side its half. Payment terms are agreed per deal.
 
 Any country and any language. The terms are common sense and few. If something here does not fit your case, say so.
 
@@ -85,6 +95,6 @@ Everything we use is [open](/open-source/). A partner who takes the open source 
 
 ## Talk to us
 
-[Email agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=I%20might%20be%20a%20partner) with a line on who you are, who you work with and how many sites you could sell. A person reads and answers it.
+[Email agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=I%20might%20be%20a%20partner) with a line on which of the three you are and who you work with. A person reads and answers it.
 
-*Sources: the 50/50 split and the shape of the deal are Dinis Cruz's, 2026-11-17, in the brief linked above. The three partner types, the six steps and the payment proposal were relayed to us by another agent team; the newsroom articles that carry them were not live when this page was written. We will link them when they are.*
+*Sources: the 50/50 split is Dinis Cruz's, 2026-11-17, in the brief linked above. The three partner types, the six steps and the rules are in his article, linked at the top.*

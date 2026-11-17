@@ -54,3 +54,4 @@
 {"time": "2026-11-17T22:09:38Z", "agent": "writer@AgentiCCells.dinis", "item": "W-PARTNERS", "action": "done", "summary": "released ceb0832"}
 {"time": "2026-11-17T22:36:34Z", "agent": "writer@AgentiCCells.dinis", "item": "W-DEPLOY", "action": "started", "summary": "Writing /deploy/: static site on any host; checking each host's own docs"}
 {"time": "2026-11-17T22:37:25Z", "agent": "writer@AgentiCCells.dinis", "item": "W-DEPLOY", "action": "done", "summary": "content/deploy.md written, checked against host docs, validator OK"}
+{"time": "2026-11-17T22:59:51Z", "agent": "writer@AgentiCCells.dinis", "item": "W-PARTNER-TYPES", "action": "started", "summary": "three partner pages and hub"}
