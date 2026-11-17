@@ -323,3 +323,12 @@ ul.example-cards{list-style:none;padding:0;margin:1rem 0;display:grid;gap:1rem;g
 .ladder-fig .l-t{fill:var(--fg);font:600 13px var(--font)}
 .ladder-fig .l-3~*{}
 .ladder-fig .l-3+.l-num,.ladder-fig .l-3+.l-num+.l-t,.ladder-fig .l-3+.l-num+.l-t+.l-t{fill:var(--on-accent)}
+
+/* D-RV20 (designer@, 2026-11-17): a team photo above the glossary, and the glossary two by two in the hero column. */
+.calm-photo{margin:0 0 1.25rem}
+.calm-photo img{display:block;width:100%;height:auto;max-height:22rem;object-fit:cover;object-position:50% 40%;border-radius:calc(var(--radius)*1.5);background:var(--surface)}
+.calm-photo figcaption{margin-top:.4rem;font-size:.875rem;line-height:1.4;color:var(--muted)}
+@media (min-width:64rem){.home .hero ul.points:has(li:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}}
+.hero ul.points li{overflow-wrap:anywhere}
+.home .hero{align-items:start}
+.calm-photo img{max-height:15rem}

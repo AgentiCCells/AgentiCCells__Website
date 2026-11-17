@@ -350,6 +350,16 @@ function sectioned(html) {
   });
 }
 
+// D-RV20 (designer@, 2026-11-17): the default design opened on definitions with no photo. Calm now puts one team photo
+// above "Words we use", inside the hero text column. Added after the other designs are made, so only / gets it.
+{
+  const home = pages.find((p) => p.path === '/');
+  const CALM_PHOTO = `<figure class="calm-photo"><img src="${WS}team-riskmandate-stand.webp" srcset="${WS}team-riskmandate-stand-half.webp 450w, ${WS}team-riskmandate-stand.webp 900w" sizes="(max-width: 48rem) 100vw, 34rem" width="900" height="638" fetchpriority="high" decoding="async" alt="Six people in coloured shirts at an exhibition stand, with the RiskMandate stand sign above them"><figcaption>The team at the RiskMandate stand, Web Summit, Lisbon, November 2026.</figcaption></figure>\n`;
+  const m = home.html.indexOf('<p><strong>Words we use</strong></p>');
+  if (m < 0) throw new Error('home: "Words we use" marker not found (D-RV20)');
+  home.html = home.html.slice(0, m) + CALM_PHOTO + home.html.slice(m);
+}
+
 // 404 page (GitHub Pages serves site/404.html for unknown paths). Not indexed, not in the nav.
 if (!seen.has('404.html')) pages.push({
   path: '/404.html', file: '404.html', title: 'Page not found', noindex: true,
