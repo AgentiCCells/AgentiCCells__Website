@@ -120,7 +120,7 @@ More answers, including what happens when you leave, are on the [questions and a
 1. **Free: the recipe.** The brief, the policy and the steps to run it yourself, with your own Claude. Proposal: the recipe for this cell is not yet published. The nearest pieces today are [how this site was built](/how-this-site-was-built/).
 2. **Our agent helps you.** A specialist agent reviews your setup and tells you what to fix. Proposal: not yet running.
 3. **We help you: £1,500.** Two sessions with a person, then you run the team in your own GitHub and Claude accounts. First proposal, not an offer. See [the cells page](/cells/).
-4. **We set it up for you: from £500.** The steps above, on our accounts, handed over to you. First proposal, not an offer. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. The first orders will be run by hand, and we will say so.
+4. **We set it up for you: {{price}}.** The steps above, on our accounts, handed over to you. First proposal, not an offer. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. The first orders will be run by hand, and we will say so.
 
 ## Five ways to make a cell yours
 
