@@ -3,3 +3,4 @@
 {"time": "2026-11-17T10:09:38Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P2", "action": "started", "summary": "walk the control-your-agents path to riskmandate.ai"}
 {"time": "2026-11-17T10:10:36Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P2", "action": "done", "summary": "released a74e908 to dev"}
 {"time": "2026-11-17T12:11:07Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P-RV1", "action": "done", "summary": "walked start-here and riskmandate paths; home link moved up"}
+{"time": "2026-11-17T14:10:57Z", "agent": "sherpa@AgentiCCells.dinis", "item": "SU1", "action": "wrote", "summary": "proposal drafted: security-review section and hub route"}
