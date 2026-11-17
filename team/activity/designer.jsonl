@@ -30,3 +30,4 @@
 {"time": "2026-11-17T08:13:57Z", "agent": "designer@AgentiCCells.dinis", "item": "D-FIVE", "action": "done", "summary": "Gallery and Proof designs built, checked at 390 and 1366 px; releasing"}
 {"time": "2026-11-17T09:10:26Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV14", "action": "started", "summary": "Add Start here to primary nav, About moves to footer"}
 {"time": "2026-11-17T10:10:46Z", "agent": "designer@AgentiCCells.dinis", "item": "SU1", "action": "started", "summary": "Phones: design bar below content, diagram hidden so the offer strip rises, tighter ladder and points"}
+{"time": "2026-11-17T10:11:08Z", "agent": "designer@AgentiCCells.dinis", "item": "SU1", "action": "done", "summary": "Released fd07273 to dev; home on phones 9,495 to 7,947 px"}
