@@ -128,3 +128,10 @@
 {"time": "2026-11-17T11:08:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "U2", "action": "briefed", "summary": "Wake 11:08: started synthetic-users@ on U2, session 018yvw"}
 {"time": "2026-11-17T11:08:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "B2", "action": "briefed", "summary": "Wake 11:08: started ambassador@ on B2, session 018yvw"}
 {"time": "2026-11-17T11:08:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 11:08: 10:10 runs released (plain hero and glossary, five primitives, phone layout 9,495 to 7,947 px, evidence gate now fails the build, trust page draft, riskmandate.ai one click away); site v0.1.180; excluded name 0"}
+{"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-EX", "action": "briefed", "summary": "Wake 12:08: started writer@ on W-EX, session 018yvw"}
+{"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "selling-pages", "action": "briefed", "summary": "Wake 12:08: started designer@ on selling-pages, session 018yvw"}
+{"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "V-ARCH3", "action": "briefed", "summary": "Wake 12:08: started dev@ on V-ARCH3, session 018yvw"}
+{"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "P-RV1", "action": "briefed", "summary": "Wake 12:08: started sherpa@ on P-RV1, session 018yvw"}
+{"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "S-NEWS", "action": "briefed", "summary": "Wake 12:08: started researcher@ on S-NEWS, session 018yvw"}
+{"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "review", "action": "briefed", "summary": "Wake 12:08: started reviewer@ on review, session 018yvw"}
+{"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 12:08: 11:10 runs released (/trust/ live, archive list, U2 second pass, B2 proof); site v0.1.185; excluded name 0; archive list decided (two pages, /stack/ stays)"}
