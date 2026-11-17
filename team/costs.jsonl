@@ -15,3 +15,4 @@
 {"time": "2026-11-15T19:09:06Z", "role": "designer@agenticcells.dinis", "session": "session_015g…", "cost_usd_api_equivalent": 0.0502, "turns": 2, "duration_s": 3, "model": "claude-sonnet-5-5", "note": "failed: account usage limit"}
 {"time": "2026-11-16T15:50:46Z", "role": "dev@agenticcells.dinis", "session": "018yvw", "cost_usd_api_equivalent": 0.3311, "turns": 11, "duration_s": 109, "model": "claude-sonnet-5-5", "note": "V-AE1; last result event only, earlier turns not counted"}
 {"time": "2026-11-16T18:15:25Z", "role": "hub@agenticcells.dinis", "session": "018yvw", "cost_usd_api_equivalent": 0.9754, "turns": 33, "duration_s": 489, "model": "claude-sonnet-5-5", "note": "hub rebuilt as catalogue, v0.1.6"}
+{"time": "2026-11-17T19:09:00Z", "wake": "19:07", "runs_started": 4, "model": "claude-sonnet-5-5", "source": "conductor count of create_session calls"}
