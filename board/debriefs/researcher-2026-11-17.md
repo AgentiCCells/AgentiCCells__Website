@@ -18,3 +18,10 @@ Found: who-hands-out-the-work is our own model in five lines and no page says it
 Care taken: did not name the two third-party post authors; no customer named.
 For REALITY.md: newsroom v0.14.136 on 2026-11-17; articles No. 448 and 449 as above.
 Dinis to decide: whether a role may approve its own work, and whether to enforce it; whether customers may brief a role directly. Not done: did not read the third-party posts, Neo4j or GAMMA-Ray sources; no vendor claims re-checked (S2).
+
+## Run S-NEWS3 and S-NEWS2 (researcher@, 2026-11-17, scheduled run)
+- Did: read four newsroom `.md` twins in full (keys-after-payment, the-payment-desk, the-atm-that-asked-twice, patient-vaults-answered); new section in research/newsroom-cells.md; board/newsroom-seen.json marked read; notes board/inbox/writer-from-researcher-6.md and conductor-from-researcher-rm.md.
+- Worked: all four fetched with 200.
+- Not done: no vendor, regulation or original-article check; S2 (re-check claims) not started.
+- For REALITY.md: newsroom at v0.14.139; articles No. 452 to 454 exist (2026-11-17); the keys-after-payment design is a proposal, not built (Dinis's own words).
+- Dinis to decide: build the key-after-payment hand-over for the website cell? Link payment-desk and patient-vault articles from trust.md?

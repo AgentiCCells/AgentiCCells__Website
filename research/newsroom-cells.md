@@ -391,3 +391,64 @@ Read in full by researcher@AgentiCCells.dinis on 2026-11-17 from the `.md` twins
 - I read the four `.md` twins on 2026-11-17 only; I did not read the two third-party posts or the Neo4j and Relate pages, the GAMMA-Ray repository or its site. Facts from them are Dinis's reports.
 - "What our team does today" is from content/ and CLAUDE.md on origin/dev at this run, not a fresh audit.
 - The proposals are mine; none is built or agreed.
+
+## Update 2026-11-17 (S-NEWS3 and S-NEWS2): payment, keys and patient vaults
+Read in full by researcher@ on 2026-11-17 from the `.md` twins at newsroom.sgit.ai (newsroom v0.14.136 to v0.14.139). Four articles; all by Dinis Cruz, 2026-11-17, all v1.0.0. Provider facts inside them are Dinis's reading of vendor documentation that day; I did not re-check any vendor page.
+
+### 1. Keys after payment (No. 454)
+- Link: https://newsroom.sgit.ai/articles/keys-after-payment.html
+- Key sentences:
+  - "What they are buying, in the end, is a key."
+  - "Our Stripe integration is a payment link, a payment, and a redirect."
+  - "Not one of them seals a key to the buyer's own public key."
+  - "Stripe never sees a key; the key never travels in clear."
+  - "Give the provider claim codes, not keys." (keys as stock: the count is the inventory)
+  - "The design is mine and not built yet; the pieces, the pki.sgit.ai module, vaults and lanes, exist." (What this does not claim.)
+- The design, five steps: (1) the buyer's browser makes a key pair before checkout; (2) Stripe takes the money, the key fingerprint travels as `client_reference_id`; (3) the signed webhook reaches one serverless function that confirms payment and records the session id once; (4) one key from stock is sealed to the buyer's public key and signed; (5) the redirect shows a link and QR code only the buyer's private key can open.
+- What it asks of agenticcells.ai:
+  1. Our own offer is the same shape: the £500 website cell ends in a key (/key/ prototype, "Key" step on /website-cell/). The article is the design for the missing hand-over step. It is a proposal and not built; no page may say that a cell is delivered by sealed key yet. REALITY.md already lists the order, key and handover steps as "does not exist yet" (ACC-021).
+  2. /key/ (dev@'s prototype, "sends nothing") is exactly step 1. If it is ever linked, say it is the first half of a design not yet built.
+  3. "Claim codes, not keys" is a possible part for resellers or events; record only, do not list.
+  4. Vendor claims (Stripe has no stock and no key generation; FastSpring sells from a list; Paddle Classic did; Lemon Squeezy, Polar, Gumroad generate keys; Square none) are a snapshot. Do not repeat on our pages without a re-check at the vendor's page (S2/S3).
+
+### 2. The payment desk that could not take payment (No. 453)
+- Link: https://newsroom.sgit.ai/articles/the-payment-desk.html
+- Key sentences:
+  - "The payment itself, read the invoice number and take the money, is the one job that must keep working with everything else on fire."
+  - "For mission-critical things like this, you want code that is reliable, auditable... You should not be using AI for that."
+  - "Where AI belongs is everything around it: noticing that a desk fails every week, mapping who has to agree to fix it, what it costs and what it breaks, and following it up until it is done."
+  - "We will give agents money, and wallets, as soon as we trust them... a single-use card... a behaviour policy that says what it may spend and on what."
+  - "Agents with wallets is my position, not a product we run."
+- What it asks of agenticcells.ai: a clean line for the cell format's behaviour policy: money moves in plain code, agents work around it. It matches our own CLAUDE.md ("never move money, sign up for paid services, or accept terms on anyone's behalf"), so one sentence on content/trust.md can honestly link both. Do not claim any agent holds a wallet; none does. The company at the desk is deliberately unnamed in the article; keep it so.
+
+### 3. The ATM that asked twice (No. 452)
+- Link: https://newsroom.sgit.ai/articles/the-atm-that-asked-twice.html
+- Key sentences:
+  - "Evidence used to be expensive to gather, so practices like this survived on the fact that challenging them was not worth anyone's time. Now a consumer can gather it, and a regulator can act on it."
+  - "I did not photograph every screen, so I cannot say none showed it."
+  - "This is not legal advice; whether a display breaches Article 3a is for a regulator."
+- Figures are one withdrawal of 17 November (200 euros; 189.68 pounds offered; 167.12 charged; 13.6% above the ECB rate of 16 November), with Dinis's photographs and the original on promptugal.news. Not ours to repeat.
+- What it asks of agenticcells.ai: nothing to sell. It is a worked example of our own evidence rule (COMMON.md, "numbers need evidence"): photographs, rates, law and sources side by side, with a "does not claim" list. It could be cited on a proof page as the newsroom's own method; promptugal.news is the original, so cite it, not copy it. No consumer-advice claim from us.
+
+### 4. Patient vaults, answered (S-NEWS2, No. 451 area)
+- Link: https://newsroom.sgit.ai/articles/patient-vaults-answered.html
+- Key sentences:
+  - "Nothing real has been used: everything so far is design work with invented data."
+  - "Test on dev with invented data, and when real data is close, run your own server... Then your live date is yours."
+  - "Deletion stops future access, not past copies." (anyone who cloned keeps their copy)
+  - "If the clinic's key is lost, the vaults it protects are lost. That is the zero-knowledge deal."
+  - "The only token the server checks is the one that authorises uploads... It cannot read anything."
+  - "Append lane routes were on the development service when last documented; check your deployment."
+  - "This is not legal advice: a data protection impact assessment is the organisation's own."
+- What it asks of agenticcells.ai: this is the best statement of the customer-environment rule ("we keep no state") for a regulated buyer: the region is the customer's own AWS account; erasure and key-loss limits are stated plainly. content/trust.md (draft in research/trust-draft.md) could link it as an example of an honest "what this does not claim". Do not say a doctor console, patient vaults or erasure are things we offer: the article says no live date and that the host is the customer's. The healthcare team is unnamed; keep it so. Lane routes on dev only: do not describe lanes as available on a production service.
+
+### What to sell or show because of these four (researcher's reading; proposals)
+1. A "from payment to key" step description for the website cell, written as the design it is, once Dinis and conductor@ decide it. Owner: writer@ after a decision; riskmandate.ai side routed to conductor@ (board/inbox/conductor-from-researcher-rm.md).
+2. One line on trust.md: money moves in plain code; agents may not move it (CLAUDE.md), linking the payment-desk article.
+3. Regulated-buyer evidence: link patient-vaults-answered as the stated limits (region, erasure, key loss), with its "not legal advice" line.
+4. Not now: any payment-provider comparison, any agent wallet, any ATM or consumer-advice claim, any healthcare offer.
+
+### What this update does not claim
+- I read the four `.md` twins only; I did not open the vendor pages, the regulation, the promptugal.news originals, or the pki.sgit.ai module.
+- All figures in these articles are Dinis's reports of single events or vendor documentation read on 17 November.
+- The proposals are mine; none is built or agreed.

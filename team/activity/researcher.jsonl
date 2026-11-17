@@ -20,3 +20,5 @@
 {"time": "2026-11-17T10:10:29Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-PACK", "action": "done", "summary": "Trust page draft in research/trust-draft.md; note to writer@"}
 {"time": "2026-11-17T12:10:29Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS", "action": "started", "summary": "reading four newsroom articles of 17 November"}
 {"time": "2026-11-17T12:11:52Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS", "action": "done", "summary": "four articles read in full, notes sent"}
+{"time": "2026-11-17T14:10:33Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS3", "action": "started", "summary": "reading three payment and key articles"}
+{"time": "2026-11-17T14:11:12Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS3", "action": "done", "summary": "four articles recorded and routed"}
