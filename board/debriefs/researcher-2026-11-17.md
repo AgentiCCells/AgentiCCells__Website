@@ -11,3 +11,10 @@ Deviation: the queue said content/trust.md, but researcher@'s brief says it may 
 Found: the page can only say that limits are rules, not walls (abp README: 20 of 23 capabilities, three gaps open). It lists what we cannot show: third-party review, threat model, incident handling, audit export and retention, a named responsible person.
 For REALITY.md: nothing new; the figures are as at 2026-11-15 and will go stale if board/abp/ is refreshed.
 Dinis to decide: whether to give a named security contact; whether to close the three abp gaps, so the page can say more. Not tested: that HOLD.md stops an agent that ignores it.
+
+## S-NEWS (2026-11-17, later run)
+Did: read in full the .md twins of agents-rating-agents, who-hands-out-the-work, relate-debriefed, memory-is-a-lifecycle. Added a dated section to research/newsroom-cells.md with Dinis's key sentences, what each asks of the site, and a table mapping the "memory lifecycle" questions to what our team does. Marked the four entries read: full in board/newsroom-seen.json. Notes: board/inbox/writer-from-researcher-5.md, ambassador-from-researcher-1.md, conductor-from-researcher-3.md.
+Found: who-hands-out-the-work is our own model in five lines and no page says it. Gaps in our own team: REALITY.md is edited in place (no "closed" marking); no check or brief enforces "no role approves its own work" (searched build/, team scripts, .github/, CLAUDE.md, reviewer brief). Relate and GAMMA-Ray are not things to sell now.
+Care taken: did not name the two third-party post authors; no customer named.
+For REALITY.md: newsroom v0.14.136 on 2026-11-17; articles No. 448 and 449 as above.
+Dinis to decide: whether a role may approve its own work, and whether to enforce it; whether customers may brief a role directly. Not done: did not read the third-party posts, Neo4j or GAMMA-Ray sources; no vendor claims re-checked (S2).

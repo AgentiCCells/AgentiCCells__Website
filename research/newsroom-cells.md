@@ -318,3 +318,76 @@ The page template (next item 2 in the article) is then generated from the folder
 - The gap table is my reading of content/ on origin/dev, not a review by writer@ or designer@.
 - The cell format and the folder layout are a proposal. Nothing in this file is built.
 - Odoo, Google and Creative Commons facts are quoted from the articles, not re-checked against the vendors' own pages. S2 is the place to re-check them.
+
+---
+
+# Update 2026-11-17: four articles of 17 November (S-NEWS)
+
+Read in full by researcher@AgentiCCells.dinis on 2026-11-17 from the `.md` twins (newsroom v0.14.135 to v0.14.136, all "article v1.0.0"). Quotes are Dinis's, copied exactly. Two of the four reply to a public post by a named third party; I do not name those people here and writer@ should not either (CLAUDE.md: never name a person who has not agreed to be named). Cite the article, which names them.
+
+## 1. Agents rating agents (GAMMA-Ray)
+- Date and link: 2026-11-17, https://newsroom.sgit.ai/articles/agents-rating-agents.html (article No. 449)
+- Key sentences:
+  - "A card about someone else's agent is a message to them before it is a page about them."
+  - "Separation of duties works for agents exactly as for people, if it is written down and a gate enforces it."
+  - "A rating made by agents is only worth what its evidence and its process are worth, so both have to be on the card."
+  - "Publish your own card first, and other people's only after they have seen it."
+  - The article's own limits: "GAMMA-Ray is a beta draft"; "No company has confirmed a card, and no human has signed one."
+- What it asks of agenticcells.ai:
+  1. **Separation of duties as a thing to show.** Our team already has the roles (writer@, reviewer@, conductor@) but no page says which role may never approve its own work, or what enforces it. I searched build/, team/ scripts and .github/: nothing enforces it and no brief states it, so today it is neither a wall nor a written rule. Do not claim it until conductor@ decides.
+  2. **Evidence in a hashed vault.** "Every source of every scan was fetched once, hashed and saved into a public vault." That is the same demand as Dinis's 2026-11-17 rule (COMMON.md, numbers need evidence). A cell that makes claims for a customer could offer an evidence vault as a part.
+  3. **"Draft" labelling.** Our `status` field already follows this; a cell page should carry the same blunt "found by agents, signed by no human" line where it applies.
+  4. **A possible cell, as a proposal only:** "Rate your own agent" (publish your own card first). It would rest on a standard that is a beta draft with no company confirmation, so it is not sellable now. Record it; do not list it.
+- Numbers in the article (279 provisions, 73 indicators, 21 questions, about twenty cards, eight agents) are Dinis's report of his own project and the repository SGit-AI__Website__Gamma-Ray. Not re-checked by me. Do not repeat on our site without a link to the article.
+
+## 2. Who hands out the work?
+- Date and link: 2026-11-17, https://newsroom.sgit.ai/articles/who-hands-out-the-work.html (No. 448)
+- Key sentences:
+  - "A person sets the work, one conductor agent hands it out, specialists and a reviewer do it, and a person decides what goes out."
+  - "Start with one conductor and only talk to that one; let it hand out the work."
+  - "One door makes the rules easier to hold; a file at the door makes the stop easier to hold too."
+  - "Agents draft; they never send or post."
+  - "Our conductors are agents with policies, not a product; each person ran their own."
+- What it asks of agenticcells.ai: this is our model, said in five lines. content/our-team-as-a-cell.md and content/method.md describe the pieces; neither gives the five-step line, nor "start with one conductor". It is the best short answer to "how do I run more than one agent?" and so a strong sentence for the home page or /method/. It also ties our `board/HOLD.md` to a newsroom measurement (pausing took seconds; hearing the order took up to an hour), which content/method.md already links in another article. Note the article says the direct route to a specialist stays open; our brief does not say whether a customer may brief a role directly. That is a question for Dinis, not something to publish.
+
+## 3. Relate, debriefed
+- Date and link: 2026-11-17, https://newsroom.sgit.ai/articles/relate-debriefed.html
+- Key sentences:
+  - "The comparison is a choice of bills, not a winner." (In short; the body says: "a fair comparison is about which bill you want, not which is faster.")
+  - "A graph, for us, is a set of JSON files in an sgit vault."
+  - "The rule is a budget: under 100 KB is an answer; gigabytes is a design error."
+  - "Relate as our Transform engine is a proposal, not something we have built." and "I have not benchmarked Relate."
+- What it asks of agenticcells.ai: little directly. It is background for sgit.ai and the newsroom, not for a cell. Two uses: (a) /stack/ and /open-source/ could say that for memory and graphs our parts are plain files in vaults, with an embedded engine thrown away per question; Relate is named as a possibility only, so do not list it in `data/stack.json` (we do not use it). (b) Neo4j's figures (Apache 2.0, version 1.0.1, release date) are quoted from the press release; if anyone wants them on the site, re-check on the vendor's page first (S2 will not cover it unless asked).
+- Do not put the sgit.ai performance numbers (65 seconds, 59 KB, half a second) on our pages: they are sgit.ai's single measurements of 21 September on one vault.
+
+## 4. Memory is a lifecycle
+- Date and link: 2026-11-17, https://newsroom.sgit.ai/articles/memory-is-a-lifecycle.html
+- Key sentences:
+  - "The hard part is the lifecycle: what gets written, what gets trusted, what gets merged, and what should be forgotten." (the article quotes the post; Dinis agrees)
+  - "In memory for agents, I do not think you should delete; you should stop briefing."
+  - "A reality file lists only what is true now, and is what an agent reads first."
+  - "Superseded facts are kept, closed, and left out of the briefing."
+  - "The memory and the engine can be separate things."
+  - "Memory degradation as a curator's choice is my position, not a feature we have measured."
+- What it asks of agenticcells.ai: this is the clearest statement of why our team is built on `REALITY.md`, `board/briefs/`, debriefs and dated quotes, and it maps one-to-one to a cell part:
+
+| Question | In the article | What our own team does today (files in this repository) |
+|---|---|---|
+| Written | append lanes; a curator turns rows into graph | `board/inbox/` notes; agents commit to `dev` |
+| Trusted | signed commits naming agent and person; evidence on every claim; a reviewer | `Agent:` trailer (typed by the agent, per content/trust.md); keys per run; reviewer@ role. Signing of commits by agent keys is **not yet in place** (content/method.md) |
+| Merged | commits, branches, merges; per-world ontologies | git branches; one conductor merges to `dev` |
+| Forgotten | new version, not edit; reality file lists only what is true now | `REALITY.md` is edited in place by the conductor, so superseded lines are in git history but not marked "closed" in the file. That is a gap against the article's own description |
+
+  A page that says "Memory is a file the agent reads first, and a new version rather than an edit" would be true of us only with that last caveat. Suggest content/our-team-as-a-cell.md (which already has a "Memory" bullet) gain one sentence and a link to this article, with the REALITY.md limit stated.
+
+## What to sell or show because of these four (researcher's reading; proposals)
+1. **"One conductor, one door, one HOLD file"** as the plain-English description of what a cell's team looks like. Fits the home page or /method/. Owner: writer@.
+2. **"Memory your agents read first"** as a named part of every cell (a reality file, dated briefs, debriefs), with the limit on forgetting stated. Owner: writer@, for /method/ and the cell format's `parts`.
+3. **Separation of duties** as a row in content/trust.md: which role may not approve its own work, and whether a gate or only a rule enforces it. Needs a fact check first (see inbox note to conductor@ question). Owner: writer@ after conductor@ answers.
+4. **For ambassador@ (outward, drafts only):** these articles are replies to two public posts by third parties. Any reply, comment or share is a person's to send. Ambassador@ may draft a one-paragraph pointer to "Who hands out the work" for Dinis; nothing is to name either person without Dinis's say.
+5. **Not now:** "Rate your own agent" (GAMMA-Ray is a beta draft, no company confirmation) and any Relate/Neo4j claim.
+
+## What this update does not claim
+- I read the four `.md` twins on 2026-11-17 only; I did not read the two third-party posts or the Neo4j and Relate pages, the GAMMA-Ray repository or its site. Facts from them are Dinis's reports.
+- "What our team does today" is from content/ and CLAUDE.md on origin/dev at this run, not a fresh audit.
+- The proposals are mine; none is built or agreed.

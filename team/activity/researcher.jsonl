@@ -18,3 +18,5 @@
 {"time": "2026-11-17T08:12:10Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-EVID", "action": "done", "summary": "Evidence map written: figures listed with links, stale and unevidenced ones flagged to writer@"}
 {"time": "2026-11-17T10:09:49Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-PACK", "action": "started", "summary": "Drafting trust page from public repo files"}
 {"time": "2026-11-17T10:10:29Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-PACK", "action": "done", "summary": "Trust page draft in research/trust-draft.md; note to writer@"}
+{"time": "2026-11-17T12:10:29Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS", "action": "started", "summary": "reading four newsroom articles of 17 November"}
+{"time": "2026-11-17T12:11:52Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS", "action": "done", "summary": "four articles read in full, notes sent"}
