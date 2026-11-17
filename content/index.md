@@ -1,15 +1,35 @@
 ---
 title: AgentiCCells
-description: Small teams of AI agents, set in your own environment, for people who want to see and stop what their agents do. Week one and how to start.
+description: A website like these, for you, built by an agent team. Send photos, videos and a description; get a finished site in your own GitHub, live. One-off price, first proposal.
 nav: 1
 ---
-# AgentiCCells
+# A website like these, for you
 
-A cell is a small team of AI agents that does one job for you, in your own accounts, with a page where you can watch it and stop it.
+An agent team builds your website. You give us photos, videos and a short description, and some of it can already be public. You get a finished site in your own GitHub, live on an address, with a Claude session that keeps changing it for you. It is static, so you can run it anywhere.
 
-Our first offer is a public website, built by a cell and handed over to you, for £500 ([first proposal](https://newsroom.sgit.ai/articles/the-intersection.html); not yet sold).
+{{offer}}
 
-Not sure where to begin? **[Start here: four steps from one very simple workflow to a network of cells](/start-here/)**, with the prices, examples and a contact at each step.
+**[Get one: see how it works and what to send](/website-cell/)**
+
+**What you give.** A set of photos and videos and a description of you or your work. Some can already be public, for example an existing profile. Nothing else to start.
+
+**What you get.** A finished site in a GitHub repository you own, live on an address. A Claude session that you can ask for changes. Because the site is static and in GitHub, you can run it anywhere that serves a repository as a static site,, and we are writing guidance for each host.
+
+**What we do not do.** No subscription and no support from us. Our job ends at hand-over. Nothing is sold yet; this is a first proposal.
+
+## Examples
+
+Each is a demo made by the same agent team. The people named agreed to be named. The [hub](https://hub.agenticcells.site/) lists them all, from [the cells registry](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/cells-registry.json).
+
+- **Demo: [Gabriel DaCruz](https://gabriel-dacruz.agenticcells.site/).** A musician's personal site.
+- **Demo: [Silvio Switha](https://silvio-switha.agenticcells.site/).** An AI entrepreneur, musician and producer: a portfolio.
+- **Demo: [José Bota](https://jose-bota.agenticcells.site/).** An AI automation expert: a portfolio.
+- **Demo: [Yiheng Wang](https://yiheng-wang.agenticcells.site/).** A project and operations manager: a personal site and presentation.
+- **Demo: [the orange grower](https://algarve-orange-grower.agenticcells.site/) (made up).** A zone map and an order flow, with invented prices and nothing sent.
+
+## About AgentiCCells
+
+AgentiCCells builds small teams of AI agents, called cells, that do one job for you in your own accounts, with a page where you can watch them and stop them. The website cell is the first one we offer. The rest of this page is about the agent team behind it.
 
 **Words we use**
 
@@ -22,11 +42,9 @@ Not sure where to begin? **[Start here: four steps from one very simple workflow
 
 **After you email** (a proposal of the steps, not a record): a person replies and asks what you want done and where it should run. We agree which size of cell fits and what it costs. Then we set it up in your environment, and it stays yours.
 
-## Start here: the website cell
+## Other sizes of cell
 
-Our first offering is a public website, built by an agentic team, that you steer from your browser with a key and then own. One-off, £500, first proposal. You need only a browser. The flow is being built now, and nothing has been sold yet.
-
-**[See the website cell: how it works as planned, what you get and what you own](/website-cell/)**
+Not sure where to begin? **[Start here: four steps from one very simple workflow to a network of cells](/start-here/)**, with the prices, examples and a contact at each step.
 
 Already run agents and need to control them? **[riskmandate.ai](https://riskmandate.ai)** writes the behaviour policy. It is our sister venture, and it sells on the same ladder.
 
@@ -42,13 +60,7 @@ Dinis Cruz's draft book, [One Human, Nine Agents, Nineteen Hours](/the-book/), i
 
 ## See what we have made
 
-[The hub](https://hub.agenticcells.site/) lists every cell we have made, one page each. Three examples, each a demo, as the hub marks them:
-
-- **Demo: [RiskMandate at Web Summit](https://hub.agenticcells.site/cells/riskmandate-at-websummit/).** The first site made by the site factory from a request file.
-- **Demo: [the orange grower](https://hub.agenticcells.site/cells/algarve-orange-grower/) (made up).** A made-up orange grower's site with a zone map and an order flow, with invented prices and nothing sent.
-- **Demo: [Gabriel DaCruz's site](https://hub.agenticcells.site/cells/gabriel-dacruz/).** A personal site made with sites@.
-
-None is a customer's site, and none has been sold.
+[The hub](https://hub.agenticcells.site/) lists every cell we have made, one page each, including [RiskMandate at Web Summit](https://hub.agenticcells.site/cells/riskmandate-at-websummit/), the first site made by the site factory from a request file. None is a customer's site, and none has been sold.
 
 ## Who it is for
 

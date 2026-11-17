@@ -53,6 +53,7 @@ function markdown(body) {
   for (const line of lines) {
     let m;
     if ((m = line.trim().match(/^\{\{photo:(stand)\}\}$/))) { flush(); html.push(photo()); }
+    else if (line.trim() === '{{offer}}') { flush(); html.push(offer()); }
     else if (line.trim() === '{{ladder}}') { flush(); html.push(ladder()); }
     else if ((m = line.trim().match(/^\{\{stack(?::(components|runtimes))?\}\}$/))) { flush(); html.push(stack(m[1] || 'components')); }
     else if ((m = line.match(/^(#{1,4})\s+(.*)$/))) { flush(); html.push(`<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`); }
@@ -64,6 +65,16 @@ function markdown(body) {
   }
   flush();
   return html.join('\n');
+}
+
+// {{offer}}: the website cell's price from data/offer.json, the one source (W-SELL1).
+function offer() {
+  const o = JSON.parse(readFileSync(join(root, 'data/offer.json'), 'utf8'));
+  const gbp = (n) => `£${Number(n).toLocaleString('en-GB')}`;
+  const price = o.launch_gbp == null
+    ? `<strong>${gbp(o.anchor_gbp)}</strong>, one-off`
+    : `<s>${gbp(o.anchor_gbp)}</s> <strong>${gbp(o.launch_gbp)}</strong> launch price, one-off`;
+  return `<p class="offer">${price} (first proposal, ${esc(o.note)}; ${esc(o.offer_label)}). No subscription.</p>`;
 }
 
 function ladder() {
