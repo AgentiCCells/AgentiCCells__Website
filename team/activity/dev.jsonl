@@ -54,3 +54,5 @@
 {"time": "2026-11-17T12:11:29Z", "agent": "dev@AgentiCCells.dinis", "item": "V-ARCH3", "action": "done", "summary": "archived two pages, released bb1a370"}
 {"time": "2026-11-17T13:09:55Z", "agent": "dev@AgentiCCells.dinis", "item": "V-A11Y", "action": "started", "summary": "accessibility pass on selling pages"}
 {"time": "2026-11-17T13:11:17Z", "agent": "dev@AgentiCCells.dinis", "item": "V-A11Y", "action": "done", "summary": "0 failures on 10 pages; added a11y-check.mjs"}
+{"time": "2026-11-17T14:10:34Z", "agent": "dev@AgentiCCells.dinis", "item": "V-PERF", "action": "started", "summary": "measuring selling pages at 390 px on Fast 3G"}
+{"time": "2026-11-17T14:11:31Z", "agent": "dev@AgentiCCells.dinis", "item": "V-PERF", "action": "checked", "summary": "all 7 pages FCP under 700 ms, under 410 KB on Fast 3G at 390 px; added build/perf-check.mjs; fetchpriority on gallery banner"}
