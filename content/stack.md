@@ -33,8 +33,13 @@ Three newsroom articles of 17 November show pieces a cell could be made from. No
 - [Shipping an iOS app with agents](https://newsroom.sgit.ai/articles/shipping-an-ios-app-with-agents.html): agents without a Mac build, test and send a native app to testers.
 - [Build on VoiceDebrief](https://newsroom.sgit.ai/articles/build-on-voicedebrief.html): the techniques of an open-source voice app, with the code to read.
 
+## How the work is handed out
+
+One person sets the work and owns the outcome. One conductor agent hands it out and collects the reports. Specialists, each with a role and a behaviour policy, do it. A reviewer checks every claim. A person decides what goes out; agents never send or post. Dinis Cruz sets this out, with one addition (a file every agent reads first, so the door can close), in [Who hands out the work](https://newsroom.sgit.ai/articles/who-hands-out-the-work.html).
+
 ## Read next
 
+- [Your own agentic cell, end to end](https://newsroom.sgit.ai/articles/your-own-agentic-cell.html): the plan for the website cell as a workflow, with three human gates. A plan: none of it exists end to end yet, as the article says.
 - [The intersection](https://newsroom.sgit.ai/articles/the-intersection.html): the map.
 - [The site factory works](https://newsroom.sgit.ai/articles/the-site-factory-works.html)
 - [Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html)

@@ -17,3 +17,8 @@
 - Did not add to the case studies: none shows a sold cell. Candidate cells (own-environment sgit deploy, agent-built iOS pipeline) are proposals only.
 - Facts for REALITY.md: the sgit AWS templates are beta and the article's job is an unvalidated sketch; the App Store wait is one submission (author's account).
 - Dinis to decide: whether either pipeline should become a named cell on the ladder.
+
+## Run B3 (ambassador@, 2026-11-17)
+- Did: read the researcher's routing and both newsroom articles in full. Added a "How the work is handed out" paragraph and a link to "Your own agentic cell" on /stack/ (marked as a plan). Added both to the proof pack with do-not-name notes. Marked the seen list read: full.
+- Not done, on purpose: no author, company or rated party named; no ratings offered; the article's "free for the first ten cells" is not repeated on the site; no figures added.
+- For REALITY.md: /stack/ now points at the two articles. Nothing was sent or posted.

@@ -43,6 +43,11 @@ Draft by ambassador@AgentiCCells.dinis, 2026-11-17, for Dinis to use. A person s
 - Data in your own cloud: deploy-sgit-from-ci is the answer to "where does the data live and who runs the server" for a team with sensitive data. Proof it works end to end is not in yet: the article says Dinis is deploying it in his own account first.
 - Agents shipping a native app: shipping-an-ios-app-with-agents and build-on-voicedebrief, with a public repository to inspect. Do not quote the article's figures without linking the article.
 
+## Added 2026-11-17 (B3, ambassador@, read in full)
+- your-own-agentic-cell.html: the plan for the website cell as a workflow (a key in the browser, a signed request, a vault the person fills, the factory, five designs, a hand-over, three human gates). It is a plan, not a running product: the article says none of it exists end to end. "Free for the first ten cells" is the article's statement, not an offer on our site. Do not name the two people whose sites the article mentions unless they have agreed.
+- who-hands-out-the-work.html: our model in five lines (person, conductor, specialists and reviewer, person decides). It replies to a third party's public post: do not name that author or their company, and do not tag them. Pointer now on /stack/.
+- Do not mention agents-rating-agents.html or any rated company, and do not offer ratings: the standard is a beta draft no company has confirmed.
+
 ## Gaps (not proof yet)
 - No sold cell and no customer reference we may name. Say so if asked.
 - SHarness has no showcase team yet (The intersection says so).
