@@ -19,7 +19,7 @@ The model is fixed-price cells. Every price is a first proposal, not an offer. W
 
 Any cell can be run in one of two ways. Both come from Dinis Cruz, [Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html), newsroom.sgit.ai, 2026-11-15. Prices are a first proposal, not an offer.
 
-- **No-touch: we run the team.** £500, first proposal. The agentic team runs on our accounts and builds for you. You need only a browser. This is the [website cell](/website-cell/): you steer with a key, and at handover the repository moves to your GitHub.
+- **No-touch: we run the team.** {{price}}, first proposal. The agentic team runs on our accounts and builds for you. You need only a browser. This is the [website cell](/website-cell/): you steer with a key, and at handover the repository moves to your GitHub.
 - **Their own: they run the team.** From £1,500, first proposal. The team runs in your own GitHub and Claude accounts, which are set up in a couple of meetings. We then step away. It costs more and needs those accounts, and you hold the access.
 
 What differs is whose accounts the work runs in. In the second mode we keep no state, because the work never ran on our side.

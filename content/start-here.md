@@ -30,7 +30,7 @@ Want a second opinion before you write? The [trust and security page](/trust/) s
 
 Pick one piece of work that repeats. Give it to one Claude agent on a loop, with a written instruction, a place to put its results and a person who checks them. That is the smallest cell. It is a proposal for where to begin, not a product.
 
-If you would rather not set it up, the [website cell](/website-cell/) is the simplest thing we run for you: £500, one-off, first proposal, not an offer. There are no meetings and little of your time. A team of agents builds a public website that you steer from your browser. Nothing has been sold yet, and the end-to-end flow is being built now.
+If you would rather not set it up, the [website cell](/website-cell/) is the simplest thing we run for you: {{price}}, one-off, first proposal, not an offer. There are no meetings and little of your time. A team of agents builds a public website that you steer from your browser. Nothing has been sold yet, and the end-to-end flow is being built now.
 
 Three very simple workflows to pick from. Each is one agent, one instruction, one place for results and one person who checks:
 

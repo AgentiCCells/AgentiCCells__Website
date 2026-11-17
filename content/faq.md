@@ -16,7 +16,7 @@ You can do all of this without us. We think that is right.
 
 No. We keep no state on our side for customer work: it runs in the customer's environment, and customer data does not come into our accounts. That is a rule our agents work under, written in the [repository's CLAUDE.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/CLAUDE.md).
 
-One limit applies to the website cell (£500, first proposal). During the build, the team runs on our accounts, because the customer needs only a browser. The site is public by design, and it moves to the customer at handover. The newsroom article says the promise of no state on our side "holds after the handover" ([Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html)). The flow is still being built, so this has not yet been run for a customer.
+One limit applies to the website cell ({{price}}, first proposal). During the build, the team runs on our accounts, because the customer needs only a browser. The site is public by design, and it moves to the customer at handover. The newsroom article says the promise of no state on our side "holds after the handover" ([Atomic cells, end to end](https://newsroom.sgit.ai/articles/atomic-cells-end-to-end.html)). The flow is still being built, so this has not yet been run for a customer.
 
 ## What happens when I leave?
 

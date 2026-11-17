@@ -175,6 +175,33 @@ for (const f of walk(join(root, 'site', 'console'), ['.html'])) {
 // V-EVID2: figures on published pages with no evidence link in their sentence fail the build, unless listed in build/evidence-exceptions.json.
 const ev = spawnSync(process.execPath, [join(root, 'build/check-evidence.mjs')], { stdio: 'inherit' });
 if (ev.status !== 0) errors.push('evidence: figures with no evidence link (see above)');
+// V-OFFER: data/offer.json is the single source of the website cell's price. No page may state another price
+// for the website cell, or show a launch price while launch_gbp is null.
+{
+  const op = join(root, 'data/offer.json');
+  if (!existsSync(op)) fail('data/offer.json missing');
+  else {
+    const offer = JSON.parse(readFileSync(op, 'utf8'));
+    if (!Number.isInteger(offer.anchor_gbp) || offer.anchor_gbp <= 0) fail('data/offer.json: anchor_gbp must be a positive integer');
+    if (!(offer.launch_gbp === null || (Number.isInteger(offer.launch_gbp) && offer.launch_gbp > 0 && offer.launch_gbp < offer.anchor_gbp))) fail('data/offer.json: launch_gbp must be null or a whole number below anchor_gbp');
+    for (const k of ['offer_label', 'note']) if (typeof offer[k] !== 'string' || !offer[k].trim()) fail(`data/offer.json: ${k} missing`);
+    if (/countdown|ends in|hurry|last chance/i.test(JSON.stringify([offer.offer_label, offer.note]))) fail('data/offer.json: no countdowns or pressure wording');
+    const ladder = JSON.parse(readFileSync(join(root, 'data/cells.json'), 'utf8')).cells.map((c) => Number(String(c.price).replace(/[^\d]/g, '')));
+    const allowed = new Set([offer.anchor_gbp, ...ladder, ...(offer.launch_gbp == null ? [] : [offer.launch_gbp])]);
+    for (const f of walk(join(root, 'site'), ['.html'])) {
+      const t = readFileSync(f, 'utf8');
+      if (offer.launch_gbp == null && (/launch price/i.test(t))) fail(`${rel(f)}: shows a launch price while launch_gbp is null`);
+      t.replace(/<[^>]+>/g, ' ').split('\n').forEach((line, i) => {
+        if (!/website cell/i.test(line)) return;
+        for (const m of line.matchAll(/£\s?(\d+(?:,\d{3})*)/g)) {
+          const n = Number(m[1].replace(/,/g, ''));
+          if (!allowed.has(n)) fail(`${rel(f)}:${i + 1}: states £${m[1]} near "website cell"; data/offer.json says £${offer.anchor_gbp}`);
+        }
+      });
+    }
+  }
+}
+
 // V-ARCH2: every internal link, src and srcset in site/ must resolve.
 const il = spawnSync(process.execPath, [join(root, 'build/check-internal-links.mjs')], { stdio: 'inherit' });
 if (il.status !== 0) errors.push('internal links: broken links (see above)');

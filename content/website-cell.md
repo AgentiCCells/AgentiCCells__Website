@@ -8,7 +8,7 @@ nav: 1.5
 A public website, built by a small team of AI agents, that you steer from your browser and then own. It is our first offering.
 
 - **Want one?** [Five short steps from "I want one" to a person reading your request](/start-here/#i-want-a-website-the-first-workflow): what to send, how, and what happens next.
-- **Price:** £500, one-off, first proposal, not an offer. No subscription.
+- **Price:** {{price}}, one-off, first proposal, not an offer. No subscription.
 - **What you need:** a browser. No accounts of your own.
 - **What you own at the end:** the site's git repository, moved to your GitHub.
 - **Where it sits:** the first step of one ladder, the £500 agentic flow we run ourselves, with no meetings and low touch (Dinis Cruz, 2026-11-16, board/briefs/two-sites-2026-11-16.md). The steps above it are £1,500, £5,000 and £20,000, all first proposals, on the [cells page](/cells/). [riskmandate.ai](https://riskmandate.ai) sells behaviour policies on the same ladder, so a website cell with its policies is a possible dual sale.

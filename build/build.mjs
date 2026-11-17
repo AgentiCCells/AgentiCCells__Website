@@ -39,7 +39,17 @@ function photo() {
   const d = '/assets/media/websummit-2026/';
   return `<figure class="team-photo"><video autoplay muted loop playsinline preload="none" poster="${d}team-riskmandate-stand-poster-640.webp" width="800" height="600" aria-label="The team at the RiskMandate stand at Web Summit, Lisbon, November 2026, in a short loop"><source src="${d}team-riskmandate-stand-live-800.mp4" type="video/mp4"><a href="${d}team-riskmandate-stand-portrait-1200.webp">Photo of the team at the RiskMandate stand (a still of the loop)</a></video><figcaption>The team at the RiskMandate stand (A1-30, Alpha), Web Summit, Lisbon, November 2026. Photo shared by Dinis Cruz, CC BY 4.0. People are named here only once they have agreed to it. See the <a href="https://riskmandate-at-websummit.agenticcells.site">Web Summit site</a>.</figcaption></figure>`;
 }
+// V-OFFER: data/offer.json is the single source of the website cell's price. {{price}} in content/ becomes the
+// anchor price, or the launch price with the usual price beside it once launch_gbp is set. No countdowns.
+const offerData = JSON.parse(readFileSync(join(root, 'data/offer.json'), 'utf8'));
+const gbp = (n) => '£' + Number(n).toLocaleString('en-GB');
+const OFFER_URL = 'https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/offer.json';
+// A launch price links to the file that sets it (numbers need evidence); the anchor price is a ladder price.
+const priceWith = (link) => offerData.launch_gbp == null ? gbp(offerData.anchor_gbp) : `${link(gbp(offerData.launch_gbp))} (launch price, usually ${gbp(offerData.anchor_gbp)})`;
+const PRICE_MD = priceWith((t) => `[${t}](${OFFER_URL})`);
+const PRICE = priceWith((t) => `<a href="${OFFER_URL}">${t}</a>`);
 function markdown(body) {
+  body = body.replaceAll('{{price}}', PRICE_MD);
   const lines = body.split('\n');
   const html = [];
   let para = [], list = [], olist = [];
@@ -73,7 +83,7 @@ function offer() {
   const gbp = (n) => `£${Number(n).toLocaleString('en-GB')}`;
   const price = o.launch_gbp == null
     ? `<strong>${gbp(o.anchor_gbp)}</strong>, one-off`
-    : `<s>${gbp(o.anchor_gbp)}</s> <strong>${gbp(o.launch_gbp)}</strong> launch price, one-off`;
+    : `<s>${gbp(o.anchor_gbp)}</s> <strong><a href="${OFFER_URL}">${gbp(o.launch_gbp)}</a></strong> launch price, one-off`;
   return `<p class="offer">${price} (first proposal, ${esc(o.note)}; ${esc(o.offer_label)}). No subscription.</p>`;
 }
 
@@ -239,7 +249,7 @@ for (const p of pages) if (p.path === '/') p.html = hero(p.html);
 // D-RV13: a one-line strip of the offer under the hero, and a row of example cards (the hub's own screenshots,
 // self-hosted in assets/) before "How to start". Words come from the registry's "what" field (W-RV9); the personal
 // site is not named, so no person is named without their say-so.
-const OFFER = '<p class="offer-strip"><strong>The website cell</strong> <span>£500, first proposal</span> <span>not yet sold</span> <a href="/website-cell/">See the seven steps</a></p>';
+const OFFER = `<p class="offer-strip"><strong>The website cell</strong> <span>${PRICE}, first proposal</span> <span>not yet sold</span> <a href="/website-cell/">See the seven steps</a></p>`;
 const EXAMPLES = [
   ['example-riskmandate-at-websummit.webp', 'RiskMandate at Web Summit', 'The first site made by the site factory from a request file.', 'riskmandate-at-websummit'],
   ['example-algarve-orange-grower.webp', 'An orange grower (made up)', 'A made-up orange grower\'s site with a zone map and an order flow. Invented prices, nothing sent.', 'algarve-orange-grower'],

@@ -31,7 +31,7 @@ Dinis Cruz reports that the AgentiCCells site factory created a site from a comm
 
 ## What it would cost
 
-The [website cell](/website-cell/) is the first proposal: £500, one-off, no subscription. It is a first proposal, not an offer.
+The [website cell](/website-cell/) is the first proposal: {{price}}, one-off, no subscription. It is a first proposal, not an offer.
 
 ## What is not running yet
 
