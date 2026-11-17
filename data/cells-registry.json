@@ -8,7 +8,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
    "live": "https://agenticcells.ai",
-   "version_seen": "v0.1.219",
+   "version_seen": "v0.1.220",
    "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
    "status": "live",
    "listed": true
@@ -151,7 +151,7 @@
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Agent-Behaviour-Policies",
    "live": "https://specialist-abp.agenticcells.site",
-   "version_seen": "v0.1.6",
+   "version_seen": "v0.1.7",
    "what": "Specialist agent for agent behaviour policies (newsroom, \"Specialist agents for every team\").",
    "status": "demo",
    "listed": true
@@ -161,7 +161,7 @@
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Design",
    "live": "https://specialist-design.agenticcells.site",
-   "version_seen": "v0.1.7",
+   "version_seen": "v0.1.8",
    "what": "Specialist agent for design (newsroom, \"Specialist agents for every team\").",
    "status": "demo",
    "listed": true
@@ -171,7 +171,7 @@
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Writing",
    "live": "https://specialist-writing.agenticcells.site",
-   "version_seen": "v0.1.8",
+   "version_seen": "v0.1.9",
    "what": "Specialist agent for writing (newsroom, \"Specialist agents for every team\").",
    "status": "demo",
    "listed": true
@@ -191,7 +191,7 @@
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Code",
    "live": "https://specialist-code.agenticcells.site",
-   "version_seen": "v0.1.7",
+   "version_seen": "v0.1.8",
    "what": "Specialist agent for code (newsroom, \"Specialist agents for every team\").",
    "status": "demo",
    "listed": true
@@ -201,7 +201,7 @@
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__UX",
    "live": "https://specialist-ux.agenticcells.site",
-   "version_seen": "v0.1.5",
+   "version_seen": "v0.1.6",
    "what": "Specialist agent for ux (newsroom, \"Specialist agents for every team\").",
    "status": "demo",
    "listed": true
@@ -213,5 +213,5 @@
   "proposed": "described (often in a newsroom article) or with a repository started; not built yet",
   "test": "a factory pipeline test run, kept as a record"
  },
- "version_checked": "2026-11-17 18:25 UTC"
+ "version_checked": "2026-11-17 18:28 UTC"
 }
