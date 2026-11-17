@@ -160,3 +160,8 @@
 {"time": "2026-11-17T17:09:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "D-DEFAULT", "action": "briefed", "summary": "Wake 17:08: started designer@ on D-DEFAULT, session 018yvw"}
 {"time": "2026-11-17T17:09:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "V-CONSOLE", "action": "briefed", "summary": "Wake 17:08: started dev@ on V-CONSOLE, session 018yvw"}
 {"time": "2026-11-17T17:09:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 17:08: day-end scorecard in (3 done, 6 partly, 0 not done); site v0.1.210; excluded name 0; fixes queued; synthetic-users and ambassador skipped (empty queues)"}
+{"time": "2026-11-17T18:09:47Z", "agent": "conductor@AgentiCCells.dinis", "item": "reviewer-1600", "action": "briefed", "summary": "Wake 18:08: started writer@ on reviewer-1600, session 018yvw"}
+{"time": "2026-11-17T18:09:47Z", "agent": "conductor@AgentiCCells.dinis", "item": "D-DEFAULT", "action": "briefed", "summary": "Wake 18:08: started designer@ on D-DEFAULT, session 018yvw"}
+{"time": "2026-11-17T18:09:47Z", "agent": "conductor@AgentiCCells.dinis", "item": "V-RV1", "action": "briefed", "summary": "Wake 18:08: started dev@ on V-RV1, session 018yvw"}
+{"time": "2026-11-17T18:09:47Z", "agent": "conductor@AgentiCCells.dinis", "item": "S-SCALE", "action": "briefed", "summary": "Wake 18:08: started researcher@ on S-SCALE, session 018yvw"}
+{"time": "2026-11-17T18:09:47Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 18:08: 17:10 runs released (book PDF hosted, book card, archive in footer, console capped on phones, team photo on Calm); site v0.1.213; excluded name 0; sherpa skipped (empty queue)"}
