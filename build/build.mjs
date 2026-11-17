@@ -33,6 +33,12 @@ function inline(s) {
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, t, u) => /^(source|link|code)$/i.test(t) ? `<a class="cite" href="${u}">${t}</a>` : `<a href="${u}">${t}</a>`);
 }
 
+// W-PHOTOS: the Web Summit team photo, its 3 s motion as a muted looping video with the photo as poster.
+// Captions name only people recorded as agreeing to be named (assets/media/websummit-2026/README.md); none is named here.
+function photo() {
+  const d = '/assets/media/websummit-2026/';
+  return `<figure class="team-photo"><video autoplay muted loop playsinline preload="metadata" poster="${d}team-riskmandate-stand.jpg" width="900" height="1200" aria-label="The team at the RiskMandate stand at Web Summit, Lisbon, November 2026, in a three-second loop"><source src="${d}team-riskmandate-stand-live.mp4" type="video/mp4"><img src="${d}team-riskmandate-stand.jpg" width="1200" height="1600" alt="Six members of the team standing and sitting together at the RiskMandate stand, A1-30, at Web Summit in Lisbon"></video><figcaption>The team at the RiskMandate stand (A1-30, Alpha), Web Summit, Lisbon, November 2026. Photo shared by Dinis Cruz, CC BY 4.0. People are named here only once they have agreed to it. See the <a href="https://riskmandate-at-websummit.agenticcells.site">Web Summit site</a>.</figcaption></figure>`;
+}
 function markdown(body) {
   const lines = body.split('\n');
   const html = [];
@@ -46,7 +52,8 @@ function markdown(body) {
   };
   for (const line of lines) {
     let m;
-    if (line.trim() === '{{ladder}}') { flush(); html.push(ladder()); }
+    if ((m = line.trim().match(/^\{\{photo:(stand)\}\}$/))) { flush(); html.push(photo()); }
+    else if (line.trim() === '{{ladder}}') { flush(); html.push(ladder()); }
     else if ((m = line.trim().match(/^\{\{stack(?::(components|runtimes))?\}\}$/))) { flush(); html.push(stack(m[1] || 'components')); }
     else if ((m = line.match(/^(#{1,4})\s+(.*)$/))) { flush(); html.push(`<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`); }
     else if ((m = line.match(/^[-*]\s+(.*)$/))) { if (para.length || olist.length) flush(); list.push(m[1]); }

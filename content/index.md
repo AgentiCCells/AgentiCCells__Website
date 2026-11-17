@@ -13,6 +13,12 @@ Our first offering is a public website, built by an agentic team, that you steer
 
 **[See the website cell: the seven steps, what you get and what you own](/website-cell/)**
 
+## The team at Web Summit
+
+{{photo:stand}}
+
+The team was at the RiskMandate stand, our sister venture's, at Web Summit in Lisbon. The site made for the stand has a page on the [hub](https://hub.agenticcells.site/cells/riskmandate-at-websummit/).
+
 ## See what we have made
 
 [The hub](https://hub.agenticcells.site/) lists every cell we have made, one page each. Three examples, each a demo, as the hub marks them:

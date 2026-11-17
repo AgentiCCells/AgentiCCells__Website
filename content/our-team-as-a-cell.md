@@ -11,6 +11,8 @@ In [The cell is the unit](https://newsroom.sgit.ai/articles/the-cell-is-the-unit
 
 You can buy the same thing. Our own team is the evidence for the cell described on [the website cell page](/website-cell/): what you would buy, and what has not been sold yet. How to get a team like this one is [further down](#how-a-customer-gets-the-same), in the same order as before.
 
+{{photo:stand}}
+
 ## The objective, the deliverable and the policy
 
 - **Objective.** Build and keep the AgentiCCells website, and show every step while doing it. Dinis, 15 November 2026: "even the creation of this website is something that we want to sell." Source: [REALITY.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/REALITY.md).
