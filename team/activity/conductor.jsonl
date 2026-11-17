@@ -190,3 +190,6 @@
 {"time": "2026-11-17T22:09:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 22:07: v0.1.236; dev@ and sherpa@ skipped (empty queues)"}
 {"time": "2026-11-17T22:41:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "released", "summary": "Dinis 22:30: launch price 250 live in data/offer.json with free-evaluation line; validator accepts launch price status; partner terms to writer@ as terms, no draft"}
 {"time": "2026-11-17T22:56:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Dinis 22:50: D-VIZ, D-VARIETY (sci-fi designs) for designer@; V-I18N (ten locales, seven languages) for dev@; W-I18N for writer@"}
+{"time": "2026-11-17T22:36:14Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Extra run on Dinis's 22:50 ask: started designer@, session 018yvw"}
+{"time": "2026-11-17T22:36:14Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Extra run on Dinis's 22:50 ask: started dev@, session 018yvw"}
+{"time": "2026-11-17T22:36:14Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Extra run on Dinis's 22:50 ask: started writer@, session 018yvw"}
