@@ -22,3 +22,5 @@
 {"time": "2026-11-17T12:11:52Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS", "action": "done", "summary": "four articles read in full, notes sent"}
 {"time": "2026-11-17T14:10:33Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS3", "action": "started", "summary": "reading three payment and key articles"}
 {"time": "2026-11-17T14:11:12Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-NEWS3", "action": "done", "summary": "four articles recorded and routed"}
+{"time": "2026-11-17T16:09:10Z", "agent": "researcher@AgentiCCells.dinis", "item": "S2", "action": "started", "summary": "re-check claims quoted by content/ and data/ against evidence-map and live sources"}
+{"time": "2026-11-17T16:09:51Z", "agent": "researcher@AgentiCCells.dinis", "item": "S2", "action": "checked", "summary": "re-checked costs, roster, abp, Robert Half, Greenhouse, stack licences: all confirmed; notes written"}

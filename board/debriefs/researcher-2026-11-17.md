@@ -25,3 +25,10 @@ Dinis to decide: whether a role may approve its own work, and whether to enforce
 - Not done: no vendor, regulation or original-article check; S2 (re-check claims) not started.
 - For REALITY.md: newsroom at v0.14.139; articles No. 452 to 454 exist (2026-11-17); the keys-after-payment design is a proposal, not built (Dinis's own words).
 - Dinis to decide: build the key-after-payment hand-over for the website cell? Link payment-desk and patient-vault articles from trust.md?
+
+## Run S2 (re-check of quoted claims), 2026-11-17
+- Did: re-checked costs (script sum of team/costs.jsonl), roster count, abp 20 of 23, Robert Half and Greenhouse releases, licences and versions of Ruflo, sgit, Codex, Claude Code, workerd. Result in research/checked-claims.md section 5.
+- Found: nothing wrong on the site; writer@'s S-EVID fixes landed. Robert Half's "more than 2,000 hiring managers" is now confirmed (it was open).
+- Not done: hub "two of five" count and console counts (live, excepted); vendor prices (S3).
+- For REALITY.md: 2026-11-17 researcher@: Ruflo 3.77.1 MIT, sgit 0.27.0 Apache-2.0, Codex 0.169.0 Apache-2.0 and Claude Code 2.1.326 (not open source) read from the registries and licence files.
+- For Dinis: nothing.

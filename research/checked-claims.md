@@ -74,3 +74,26 @@ Licence files were read at `raw.githubusercontent.com/<repo>/<default branch>/LI
 - Fast Company's view on "agentic" naming: an article, not a vendor fact; not needed by any page.
 - Microsoft Agent Factory white paper (a PDF), Together, Fireworks, Modal and RunPod pages, the STACKIT and SiliconANGLE pages: not used by the home or open-source page; left for a later pass.
 - Star and download counts: GitHub's API refused this session, and the Ruflo README's download counter says it is "illustrative".
+
+## 5. Re-check of the claims the site quotes (S2, 2026-11-17)
+
+**Checked by:** researcher@AgentiCCells.dinis, 2026-11-17, against dev at 4a57c6c and the live sources (public pages and raw files, read only). This follows research/evidence-map.md (S-EVID); the rows there marked FIX or RELINK were re-read in `content/` to see whether writer@ has acted.
+
+| Claim (page) | Source checked | Status | Note |
+|---|---|---|---|
+| 17 recorded runs, 11.62 US dollars; 12 finished 10.48; 5 failed 1.14; 12 of 17 on Opus (our-team-as-a-cell) | [team/costs.jsonl](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/team/costs.jsonl), summed by script | confirmed | The costs paragraph was corrected after S-EVID and now matches the file. Count is of the file's lines on 17 November. |
+| "Nothing recorded between 19:09 on 15 November and 15:50 on 16 November" | same file | confirmed | |
+| 17 roles (our-team-as-a-cell) | [team/ROSTER.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/team/ROSTER.md): 17 rows | confirmed | |
+| 20 of 23 capabilities (faq, our-team-as-a-cell) | [board/abp/README.md](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/board/abp/README.md): "20 of 23 primitives" | confirmed, with a caveat | The measurement says "all nine agents", taken on 15 November; the roster now has 17 roles. The pages dated it ("measured on 15 November"), which is right. Do not write it in the present tense. |
+| Robert Half, March 2026: 65% skills harder to verify; 67% slowed hiring; "more than 2,000 hiring managers" | [press release](https://press.roberthalf.com/2026-03-10-Robert-Half-survey-67-of-HR-leaders-report-AI-generated-applications-are-slowing-hiring), fetched 2026-11-17 | confirmed | The release says the survey was done by an independent research firm in November 2025 with "more than 2,000 hiring managers in the United States". The 67% (HR leaders, slowed the hiring process) and 65% (hiring managers) come from two different groups: the page words them separately, which is correct. This closes the open point in the evidence map. |
+| Greenhouse: 91% of recruiters spotted candidate deception (job-seeker-cell) | [Greenhouse release](https://www.greenhouse.com/newsroom/an-ai-trust-crisis-70-of-hiring-managers-trust-ai-to-make-faster-and-better-hiring-decisions-only-8-of-job-seekers-call-it-fair), 2026-11-17 | confirmed | "Over nine in every ten (91%) recruiters have spotted candidate deception". The page now states the check date. |
+| Prices £500, £1,500, £5,000, £20,000 (index, start-here, cells, job-seeker-cell) | Dinis, [The intersection](https://newsroom.sgit.ai/articles/the-intersection.html) | confirmed | index and start-here now link the article; all are marked first proposal. |
+| Ruflo: MIT, 3.77.1 (open-source, data/stack.json) | [LICENSE](https://raw.githubusercontent.com/ruvnet/ruflo/main/LICENSE) 200; npm `ruflo` latest: 3.77.1, MIT | confirmed | Same as 15 November. |
+| sgit: Apache-2.0, 0.27.0 | [LICENSE](https://raw.githubusercontent.com/SGit-AI/SGit-AI__CLI/main/LICENSE) 200; PyPI `sgit-ai`: 0.27.0, Apache-2.0 | confirmed | Same as 15 November. |
+| Codex CLI: Apache-2.0, 0.169.0 | [LICENSE](https://raw.githubusercontent.com/openai/codex/main/LICENSE); npm `@openai/codex` | confirmed | |
+| Claude Code: not open source; 2.1.325 | [LICENSE.md](https://raw.githubusercontent.com/anthropics/claude-code/main/LICENSE.md): "All rights reserved"; npm `@anthropic-ai/claude-code` latest is 2.1.326 | confirmed; version changed | The licence claim holds. The version in data/stack.json is one patch behind. Pages do not show versions, so nothing to fix on the site; refresh the data field when next touched. |
+| Cloudflare workerd: Apache-2.0 | [LICENSE](https://raw.githubusercontent.com/cloudflare/workerd/main/LICENSE) | confirmed | |
+
+**Not re-checked this run:** the hub "two of five" count (it comes from live hub pages, which are excepted); the console's counts; vendor prices in sections 1 and 2 above (no page quotes them; S3 refreshes them); the "licences checked on 15 November" date on open-source.md, which is now two days old although every licence was re-read today and is unchanged: writer@ may update the date to 17 November.
+
+**Pages to flag to writer@:** open-source (date), data/stack.json (Claude Code version, optional). No claim was found wrong.
