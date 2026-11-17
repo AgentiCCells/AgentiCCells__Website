@@ -150,3 +150,9 @@
 {"time": "2026-11-17T15:09:02Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-LIMITS", "action": "briefed", "summary": "Wake 15:08: started writer@ on W-LIMITS, session 018yvw"}
 {"time": "2026-11-17T15:09:02Z", "agent": "conductor@AgentiCCells.dinis", "item": "D-FIVE-lift", "action": "briefed", "summary": "Wake 15:08: started designer@ on D-FIVE-lift, session 018yvw"}
 {"time": "2026-11-17T15:09:02Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 15:08: 14:10 runs released (Console design lifted, Start here plain, linked counts, perf check, S-NEWS2/3); site v0.1.201; excluded name 0; dev, synthetic-users and ambassador skipped (empty queues, to save usage)"}
+{"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "next", "action": "briefed", "summary": "Wake 16:08: started writer@ on next, session 018yvw"}
+{"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "next", "action": "briefed", "summary": "Wake 16:08: started designer@ on next, session 018yvw"}
+{"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "P-RV3", "action": "briefed", "summary": "Wake 16:08: started sherpa@ on P-RV3, session 018yvw"}
+{"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "S2", "action": "briefed", "summary": "Wake 16:08: started researcher@ on S2, session 018yvw"}
+{"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "day-scorecard", "action": "briefed", "summary": "Wake 16:08: started reviewer@ on day-scorecard, session 018yvw"}
+{"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 16:08: 15:10 runs released (limits on /trust/, Editorial design lifted); site v0.1.206; excluded name 0; dev skipped (empty queue)"}
