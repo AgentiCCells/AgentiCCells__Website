@@ -1,3 +1,5 @@
 {"time": "2026-11-17T09:10:33Z", "agent": "ambassador@AgentiCCells.dinis", "item": "B1", "action": "started", "summary": "cross-links, stack block, proof pack"}
 {"time": "2026-11-17T09:11:52Z", "agent": "ambassador@AgentiCCells.dinis", "item": "B1", "action": "done", "summary": "released 3f04537"}
 {"time": "2026-11-17T11:09:34Z", "agent": "ambassador@AgentiCCells.dinis", "item": "B2", "action": "done", "summary": "read three 17 November articles in full; added to proof pack and /stack/"}
+{"time": "2026-11-17T21:09:32Z", "agent": "ambassador@AgentiCCells.dinis", "item": "B-SELL", "action": "started", "summary": "drafting one sales message per market"}
+{"time": "2026-11-17T21:10:23Z", "agent": "ambassador@AgentiCCells.dinis", "item": "B-SELL", "action": "done", "summary": "six drafts and a README in board/drafts/outreach/website-cell/"}
