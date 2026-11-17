@@ -180,3 +180,38 @@ const il = spawnSync(process.execPath, [join(root, 'build/check-internal-links.m
 if (il.status !== 0) errors.push('internal links: broken links (see above)');
 if (errors.length) { console.error(errors.join('\n')); console.error(`FAILED (${errors.length})`); process.exit(1); }
 console.log('OK');
+
+// Link previews (V-OG): every indexed page carries absolute https share tags, a 110 to 150 character description, and the card exists at 1200x630 under 300 KB.
+{
+  const cname = readFileSync(join(root, 'CNAME'), 'utf8').trim();
+  const card = join(root, 'site/assets/share/card.jpg');
+  if (!existsSync(card)) fail('share card site/assets/share/card.jpg missing');
+  else {
+    const b = readFileSync(card);
+    if (b.length > 300 * 1024) fail(`share card is ${b.length} bytes, over 300 KB`);
+    let w = 0, h = 0;
+    for (let i = 2; i + 9 < b.length;) {
+      if (b[i] !== 0xff) { i++; continue; }
+      const m = b[i + 1];
+      if (m >= 0xc0 && m <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(m)) { h = b.readUInt16BE(i + 5); w = b.readUInt16BE(i + 7); break; }
+      i += 2 + b.readUInt16BE(i + 2);
+    }
+    if (w !== 1200 || h !== 630) fail(`share card is ${w}x${h}, want 1200x630`);
+  }
+  const unesc = (s) => s.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+  for (const f of walk(join(root, 'site'), ['.html'])) {
+    const t = readFileSync(f, 'utf8');
+    if (/<meta name="robots" content="noindex">/.test(t)) continue;
+    const get = (re) => (t.match(re) || [])[1];
+    const tags = {
+      'og:image': get(/property="og:image" content="([^"]*)"/), 'og:url': get(/property="og:url" content="([^"]*)"/),
+      'canonical': get(/rel="canonical" href="([^"]*)"/), 'twitter:image': get(/name="twitter:image" content="([^"]*)"/),
+    };
+    for (const k of ['og:locale', 'og:image:type', 'og:image:width', 'og:image:height', 'og:image:alt', 'og:image', 'og:url']) if (!t.includes(`property="${k}" content="`)) fail(`${rel(f)}: no ${k}`);
+    if (!t.includes('name="twitter:card" content="summary_large_image"')) fail(`${rel(f)}: twitter:card must be summary_large_image`);
+    if (!t.includes('property="og:locale" content="en_GB"')) fail(`${rel(f)}: og:locale must be en_GB`);
+    for (const [k, v] of Object.entries(tags)) if (v && !v.startsWith(`https://${cname}/`)) fail(`${rel(f)}: ${k} is not an absolute https URL on ${cname}: ${v}`);
+    const d = unesc(get(/<meta name="description" content="([^"]*)"/) || '');
+    if (d.length < 110 || d.length > 150) fail(`${rel(f)}: description is ${d.length} characters, want 110 to 150`);
+  }
+}

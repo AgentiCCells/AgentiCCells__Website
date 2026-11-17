@@ -1,6 +1,6 @@
 ---
 title: Trust and security
-description: What our agents can reach and cannot, where customer data goes, how releases are gated, how keys work and how to stop everything. Each claim links to the file that shows it.
+description: What our agents can reach and cannot, where customer data goes, how releases are gated, how keys work and how to stop all. Each claim links to proof.
 ---
 # Trust and security
 

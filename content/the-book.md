@@ -1,6 +1,6 @@
 ---
 title: The book, and why it is a cell
-description: One Human, Nine Agents, Nineteen Hours, by Dinis Cruz: how a team of agents built a talk in a day, and why the book is itself an example of an agentic cell.
+description: One Human, Nine Agents, Nineteen Hours, by Dinis Cruz: how a team of agents built a talk in a day, and why the book is itself an agentic cell.
 nav: 6.8
 ---
 # The book: One Human, Nine Agents, Nineteen Hours

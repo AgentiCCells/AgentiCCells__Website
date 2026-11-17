@@ -10,7 +10,7 @@ export default async function archive(ctx) {
   return [{
     path: '/archive/',
     title: 'Archive',
-    description: 'Older pages of this site, kept at their addresses with a dated note on top saying why they were archived.',
+    description: 'Older pages of this site, kept at their addresses with a dated note on top saying why they were archived, and where to find the new ones.',
     noindex: items.length === 0,
     html: `<h1>Archive</h1>\n<p>Pages listed here are older. Each keeps its address and its words, with a dated note on top saying why it was archived. Nothing is deleted.</p>\n${list}`,
   }];

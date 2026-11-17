@@ -60,3 +60,4 @@
 {"time": "2026-11-17T17:10:17Z", "agent": "dev@AgentiCCells.dinis", "item": "V-CONSOLE", "action": "started", "summary": "capping /console/ height on phones"}
 {"time": "2026-11-17T18:10:04Z", "agent": "dev@AgentiCCells.dinis", "item": "V-RV1", "action": "started", "summary": "checking footer archive link"}
 {"time": "2026-11-17T18:10:12Z", "agent": "dev@AgentiCCells.dinis", "item": "V-RV1", "action": "done", "summary": "already satisfied; ticked"}
+{"time": "2026-11-17T19:09:15Z", "agent": "dev@AgentiCCells.dinis", "item": "V-OG", "action": "started", "summary": "link previews on every built page"}

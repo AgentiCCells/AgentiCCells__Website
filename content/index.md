@@ -1,6 +1,6 @@
 ---
 title: AgentiCCells
-description: Small teams of AI agents, set up in your own environment, for teams that want to see and stop what their agents do. What you get in week one and how to start.
+description: Small teams of AI agents, set in your own environment, for people who want to see and stop what their agents do. Week one and how to start.
 nav: 1
 ---
 # AgentiCCells

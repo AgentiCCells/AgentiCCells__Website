@@ -1,6 +1,6 @@
 ---
 title: Our own team, run as a cell
-description: The AgentiCCells team described as a cell: its objective, deliverable and behaviour policy, its parts, how a day runs, what it cost where measured, what failed, and how a customer gets the same.
+description: The AgentiCCells team described as a cell: objective, deliverable, behaviour policy, parts, a day, what failed, and how a customer gets the same.
 nav: 6.7
 ---
 # Our own team, run as a cell

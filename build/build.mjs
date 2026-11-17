@@ -110,6 +110,8 @@ function moreHtml(nav, current) {
   return `<nav class="more" aria-label="More"><ul>${navList(rest, current)}</ul></nav>`;
 }
 
+const SHARE_CARD = '/assets/share/card.jpg';
+const SHARE_ALT = 'AgentiCCells: small teams of AI agents you can see and stop';
 function page(meta, content, nav = [], current = '') {
   return `<!doctype html>
 <html lang="en-GB">
@@ -122,9 +124,17 @@ function page(meta, content, nav = [], current = '') {
 ${meta.design ? '<link rel="stylesheet" href="/assets/designs.css">\n' : ''}<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 ${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !meta.noindex ? `<link rel="canonical" href="${esc(origin + current)}">\n` : ''}<meta property="og:type" content="website">
 <meta property="og:site_name" content="AgentiCCells">
+<meta property="og:locale" content="en_GB">
 <meta property="og:title" content="${esc(meta.title || '')}">
 <meta property="og:description" content="${esc(meta.description || '')}">
-${origin ? `<meta property="og:url" content="${esc(origin + current)}">\n` : ''}<meta name="twitter:card" content="summary">
+${origin ? `<meta property="og:url" content="${esc(origin + current)}">
+<meta property="og:image" content="${esc(origin + SHARE_CARD)}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(SHARE_ALT)}">
+<meta name="twitter:image" content="${esc(origin + SHARE_CARD)}">
+` : ''}<meta name="twitter:card" content="summary_large_image">
 </head>
 <body${current === '/' || meta.design ? ` class="home wide${meta.design ? ' design-' + meta.design : ''}"` : meta.wide ? ' class="wide"' : ''}>
 <a class="skip" href="#main">Skip to the content</a>

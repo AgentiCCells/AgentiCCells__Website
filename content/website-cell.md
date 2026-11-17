@@ -1,6 +1,6 @@
 ---
 title: The website cell
-description: Our first offering, a first proposal: a public website built by an agentic team, steered from your browser with a key, then handed over to you. One-off price, no subscription.
+description: Our first offering, a first proposal: a public website built by an agentic team, steered from your browser with a key, then handed over. One price.
 nav: 1.5
 ---
 # The website cell

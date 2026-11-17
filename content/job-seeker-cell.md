@@ -1,6 +1,6 @@
 ---
 title: The job-seeker cell
-description: A proposal, not a sold offer: a website for someone looking for a job that shows evidence instead of a list, built by a small agentic team that the person approves.
+description: A proposal, not a sold offer: a job-seeker website that shows evidence instead of a list, built by a small agentic team the person approves.
 nav: 3.5
 ---
 # The job-seeker cell

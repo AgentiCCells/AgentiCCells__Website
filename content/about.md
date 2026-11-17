@@ -1,6 +1,6 @@
 ---
 title: About
-description: Who is behind AgentiCCells, and the history so far, from the first agentic team on a loop to this website.
+description: Who is behind AgentiCCells, and the history so far, from the first agentic team on a loop to this website, with dates and links.
 nav: 7
 ---
 # About

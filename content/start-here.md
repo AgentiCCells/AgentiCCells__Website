@@ -1,6 +1,6 @@
 ---
 title: Start here
-description: You want an agentic team. Begin with one very simple workflow, then grow through the sizes of cell. Where to start, what each step costs as a first proposal, and where to see examples.
+description: You want an agentic team. Begin with one simple workflow, then grow through the sizes of cell. Where to start, first-proposal costs, and examples.
 nav: 1.2
 ---
 # Start here
