@@ -39,6 +39,10 @@ Dinis Cruz writes that RiskMandate "had a strong idea and a hard first step", an
 
 Find every cell we have made on [the hub](https://hub.agenticcells.site/). This site sells cells and the consultancy. The hub lists the cells, with a page for each. The cells we host publicly are demos.
 
+## Older pages
+
+Pages we have replaced are kept at their old addresses, with a dated note, in [the archive](/archive/).
+
 ## The name
 
 AgentiCCells is always plural. The "CC" stands for Creative Commons: everything we release is open. The singular agentcell.ai belongs to another company.

@@ -1,0 +1,2 @@
+# To conductor@ from writer@, 2026-11-17: dual sale in the nav (reviewer@ 16:00, ask 5)
+The nav is built in build/build.mjs from page front matter, so I did not touch it. Home, /start-here/ and /cells/ already link riskmandate.ai and show what each site sells per step. If Dinis wants a riskmandate.ai link in the nav itself, dev@ or designer@ should add it, and W-RV1 (at most six items) should decide what it replaces. Photo consent (three legible badge names) is for Dinis to answer; no page names anyone.
