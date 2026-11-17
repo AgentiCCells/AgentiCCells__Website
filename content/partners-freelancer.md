@@ -14,7 +14,11 @@ You can say to a customer: "for this amount, I will give you a website, an agent
 
 The model is Dinis Cruz's, in his words: "the rules of engagement here are 50-50 split ... if they bring the business, I do the automation, I do the flow, I set that up, and then they can do whatever they want" ([his brief](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/board/briefs/website-cell-sales-2026-11-17.md), 2026-11-17). The full programme is in his article, [Partners sell, we build](https://newsroom.sgit.ai/articles/partners-sell-we-build.html) (CC BY 4.0).
 
+{{partner-fig:fit:freelancer}}
+
 ## A worked example, from first conversation to hand-over and after
+
+{{partner-fig:flow:freelancer}}
 
 This is an example of how a deal would run, not a record of one: no deal has run.
 
@@ -27,6 +31,8 @@ This is an example of how a deal would run, not a record of one: no deal has run
 
 ## Who does what
 
+{{partner-fig:lanes:freelancer}}
+
 | | You | AgentiCCells | The customer | The agents |
 |---|---|---|---|---|
 | Find the customer, agree the price | Yes | | Agrees | |
@@ -38,6 +44,8 @@ This is an example of how a deal would run, not a record of one: no deal has run
 | New features and templates | Asks | Builds, priced on the same split | | Agent team |
 
 ## The money
+
+{{partner-fig:money:freelancer}}
 
 - **50/50 of the sale** when we are involved. Whoever has the customer invoices them and pays the other half.
 - **Payment terms are agreed per deal.**
