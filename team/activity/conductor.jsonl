@@ -135,3 +135,9 @@
 {"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "S-NEWS", "action": "briefed", "summary": "Wake 12:08: started researcher@ on S-NEWS, session 018yvw"}
 {"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "review", "action": "briefed", "summary": "Wake 12:08: started reviewer@ on review, session 018yvw"}
 {"time": "2026-11-17T12:10:13Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 12:08: 11:10 runs released (/trust/ live, archive list, U2 second pass, B2 proof); site v0.1.185; excluded name 0; archive list decided (two pages, /stack/ stays)"}
+{"time": "2026-11-17T13:09:42Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-OWN", "action": "briefed", "summary": "Wake 13:08: started writer@ on W-OWN, session 018yvw"}
+{"time": "2026-11-17T13:09:42Z", "agent": "conductor@AgentiCCells.dinis", "item": "D-RV17", "action": "briefed", "summary": "Wake 13:08: started designer@ on D-RV17, session 018yvw"}
+{"time": "2026-11-17T13:09:42Z", "agent": "conductor@AgentiCCells.dinis", "item": "V-A11Y", "action": "briefed", "summary": "Wake 13:08: started dev@ on V-A11Y, session 018yvw"}
+{"time": "2026-11-17T13:09:42Z", "agent": "conductor@AgentiCCells.dinis", "item": "U3", "action": "briefed", "summary": "Wake 13:08: started synthetic-users@ on U3, session 018yvw"}
+{"time": "2026-11-17T13:09:42Z", "agent": "conductor@AgentiCCells.dinis", "item": "B3", "action": "briefed", "summary": "Wake 13:08: started ambassador@ on B3, session 018yvw"}
+{"time": "2026-11-17T13:09:42Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 13:08: 12:10 runs released (lead examples, two pages archived, S-NEWS, review 12:00, Start here higher on home); site v0.1.190; excluded name 0; reviewer's riskmandate.ai fixes relayed; badge names in photos to be blurred (D-RV17)"}
