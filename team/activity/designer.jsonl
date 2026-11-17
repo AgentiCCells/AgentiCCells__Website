@@ -44,3 +44,5 @@
 {"time": "2026-11-17T18:10:39Z", "agent": "designer@AgentiCCells.dinis", "item": "D-DEFAULT", "action": "done", "summary": "Gallery default, Calm at /d/calm/"}
 {"time": "2026-11-17T19:09:57Z", "agent": "designer@AgentiCCells.dinis", "item": "D7", "action": "done", "summary": "logo mark without two-C glyph"}
 {"time": "2026-11-17T20:11:36Z", "agent": "designer@AgentiCCells.dinis", "item": "D-SELL", "action": "started", "summary": "example wall and price block"}
+{"time": "2026-11-17T21:09:32Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV10", "action": "started", "summary": "checking whether Jump-to disclosure and band sizing already exist, then fix what remains"}
+{"time": "2026-11-17T21:09:53Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV10", "action": "done", "summary": "verified existing Jump-to disclosure at 390 and 1280 px, ticked"}
