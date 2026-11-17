@@ -47,3 +47,4 @@
 {"time": "2026-11-17T08:13:05Z", "agent": "dev@AgentiCCells.dinis", "item": "V-EVID", "action": "done", "summary": "Evidence check added (warning only); archive section built, nothing moved"}
 {"time": "2026-11-17T09:10:27Z", "agent": "dev@AgentiCCells.dinis", "item": "V-IMG", "action": "started", "summary": "measuring home page transfer at 390 px, then responsive WebP, posters, lazy loading"}
 {"time": "2026-11-17T09:12:26Z", "agent": "dev@AgentiCCells.dinis", "item": "V-IMG", "action": "done", "summary": "home page 942 KB to 296 KB at 390 px"}
+{"time": "2026-11-17T10:09:38Z", "agent": "dev@AgentiCCells.dinis", "item": "V-EVID2", "action": "started", "summary": "make the unlinked-figure check fail the build, with reviewed exceptions file"}

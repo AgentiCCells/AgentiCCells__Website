@@ -172,7 +172,8 @@ for (const f of walk(join(root, 'site', 'console'), ['.html'])) {
   const kb = Math.round(statSync(f).size / 1024);
   if (kb > 120) console.warn(`WARNING ${rel(f)}: ${kb} KB of HTML, over the 120 KB budget (about 30,000 px tall at 390 px)`);
 }
-// Warning only (V-EVID): figures on published pages with no evidence link in their sentence. Never fails the build.
-spawnSync(process.execPath, [join(root, 'build/check-evidence.mjs')], { stdio: 'inherit' });
+// V-EVID2: figures on published pages with no evidence link in their sentence fail the build, unless listed in build/evidence-exceptions.json.
+const ev = spawnSync(process.execPath, [join(root, 'build/check-evidence.mjs')], { stdio: 'inherit' });
+if (ev.status !== 0) errors.push('evidence: figures with no evidence link (see above)');
 if (errors.length) { console.error(errors.join('\n')); console.error(`FAILED (${errors.length})`); process.exit(1); }
 console.log('OK');

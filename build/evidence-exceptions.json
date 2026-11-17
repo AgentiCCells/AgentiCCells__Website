@@ -1,0 +1,4 @@
+{
+  "_note": "Reviewed exceptions to the unlinked-figure check (build/check-evidence.mjs). Each entry: page (as in site/, e.g. site/about/index.html), figure (as the check prints it), optional sentence (a fragment of it), and a reason. conductor@ reviews additions. None needed at 2026-11-17.",
+  "exceptions": []
+}
