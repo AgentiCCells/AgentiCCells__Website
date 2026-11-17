@@ -184,3 +184,7 @@
 {"time": "2026-11-17T21:09:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 21:08: started synthetic-users@, session 018yvw"}
 {"time": "2026-11-17T21:09:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 21:08: started ambassador@, session 018yvw"}
 {"time": "2026-11-17T21:58:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-PARTNERS", "action": "briefed", "summary": "newsroom writer-09 relayed partner-page content (Dinis ~21:50); inbox note for writer@, B-PARTNERS for ambassador@; 14-day payment marked proposal; articles not yet live"}
+{"time": "2026-11-17T22:09:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 22:07: started writer@, session 018yvw"}
+{"time": "2026-11-17T22:09:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 22:07: started designer@, session 018yvw"}
+{"time": "2026-11-17T22:09:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 22:07: started researcher@, session 018yvw"}
+{"time": "2026-11-17T22:09:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 22:07: v0.1.236; dev@ and sherpa@ skipped (empty queues)"}
