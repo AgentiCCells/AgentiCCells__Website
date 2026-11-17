@@ -1,2 +1,3 @@
 {"time": "2026-11-17T08:10:18Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P1", "action": "started", "summary": "Walking the start-here path from the home page at 390 and 1366 px"}
 {"time": "2026-11-17T08:11:02Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P1", "action": "done", "summary": "Home links to start-here; simple workflows listed", "commit": "306047f"}
+{"time": "2026-11-17T10:09:38Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P2", "action": "started", "summary": "walk the control-your-agents path to riskmandate.ai"}
