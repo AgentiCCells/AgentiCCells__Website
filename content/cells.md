@@ -116,6 +116,8 @@ The first four are meant to be free. That is the article's plan, not something w
 
 We do not list every cell we have made on this page. [The hub](https://hub.agenticcells.site/) does that, with one page per cell, so you can find one, open it and copy it. This site sells; the hub lists. Every cell we host publicly is a demo, made to show how the work goes, and it says so. None is a customer's site, and none has been sold.
 
+The lead examples are two personal websites made by the site factory, with the people's agreement to be named: [Yiheng Wang's site](https://yiheng-wang.agenticcells.site/) ([hub page](https://hub.agenticcells.site/cells/yiheng-wang/); the newsroom article [A website that is her](https://newsroom.sgit.ai/articles/a-website-that-is-her.html), 2026-11-16) and [Silvio Switha's portfolio](https://silvio-switha.agenticcells.site/) ([hub page](https://hub.agenticcells.site/cells/silvio-switha/); [A portfolio with a film first](https://newsroom.sgit.ai/articles/a-portfolio-with-a-film-first.html), 2026-11-16). Both are demos. The articles give the factory's measured times; read them there, we do not restate them as a promise.
+
 Examples by kind: [the site factory](https://hub.agenticcells.site/cells/site-factory/), [the site template](https://hub.agenticcells.site/cells/site-template/), [an email cell](https://hub.agenticcells.site/cells/cell-email/) and [a specialist agent](https://hub.agenticcells.site/cells/specialist-design/). A proposed example, not yet built, is the [job-seeker cell](/job-seeker-cell/). Each page on the hub has a fork link; the five ways to make a cell yours are [below](#five-ways-to-make-a-cell-yours).
 
 ## What this page does not claim
