@@ -307,10 +307,21 @@ const PROOF_SHOTS = [
 const proofItem = ([f, t, c, u], i) => `<li><a href="${u}"><img src="/assets/media/proof/${f}-half.webp" srcset="/assets/media/proof/${f}-half.webp 450w, /assets/media/proof/${f}.webp 900w" sizes="(max-width: 40rem) 100vw, 20rem" width="900" height="563" loading="lazy" decoding="async" alt="Screenshot of ${esc(t)}"><span class="p-cap"><span class="p-n">${String(i + 1).padStart(2, '0')}</span><strong>${esc(t)}</strong><span>${esc(c)}</span></span></a></li>`;
 // First row open; the rest sit behind a details element (no script), so the Proof design stays near the other designs in height (D-RV18).
 const PROOF_WALL = `<section class="p-wall" aria-labelledby="p-wall-h"><h2 id="p-wall-h">The evidence wall</h2><p class="p-note">Screenshots of live pages we or our newsroom made, taken on 2026-11-16 (research/proof/shots/). Each links to the live page, which may have changed since.</p><ul>${PROOF_SHOTS.slice(0, 3).map((x, i) => proofItem(x, i)).join('')}</ul><details class="p-more"><summary>See all ${PROOF_SHOTS.length} screenshots</summary><ul>${PROOF_SHOTS.slice(3).map((x, i) => proofItem(x, i + 3)).join('')}</ul></details></section>`;
+// Editorial lift (designer@, 2026-11-17): a printed front page. A dateline, one halftone-style plate beside the opening, and a
+// row of three numbered figures (screenshots of live pages, each linked). Same words; images and captions only. Captions name no one.
+const ED_DATELINE = `<p class="ed-dateline"><span>Lisbon</span><span>November 2026</span><span>Open source, Apache-2.0 and CC BY 4.0</span></p>`;
+const ED_PLATE = `<figure class="ed-plate"><img src="${WS}team-riskmandate-stand.webp" srcset="${WS}team-riskmandate-stand-half.webp 450w, ${WS}team-riskmandate-stand.webp 900w" sizes="(max-width: 48rem) 100vw, 26rem" width="900" height="638" fetchpriority="high" decoding="async" alt="Six people in coloured shirts at an exhibition stand, with the RiskMandate stand sign above them"><figcaption><b>Plate 1.</b> The team at the RiskMandate stand, Web Summit, Lisbon.</figcaption></figure>`;
+const ED_FIGS = [
+  ['riskmandate-home', 'The sister site, where behaviour policies for agents are written.', 'https://riskmandate.ai/'],
+  ['web-summit-xray', 'What each agent did, drawn from the commits.', 'https://web-summit.sgit.ai/'],
+  ['newsroom-ten-days', 'The map article, with the counts and how they were made.', 'https://newsroom.sgit.ai/articles/ten-days-at-web-summit.html'],
+];
+const ED_FIGROW = `<section class="ed-figs" aria-label="Three live pages, as figures"><ol>${ED_FIGS.map(([f, c, u], i) => `<li><a href="${u}"><img src="/assets/media/proof/${f}-half.webp" srcset="/assets/media/proof/${f}-half.webp 450w, /assets/media/proof/${f}.webp 900w" sizes="(max-width: 40rem) 100vw, 20rem" width="900" height="563" loading="lazy" decoding="async" alt="Screenshot of a live page: ${esc(c)}"><span><b>Fig. ${i + 1}.</b> ${esc(c)}</span></a></li>`).join('')}</ol><p class="ed-note">Screenshots taken 2026-11-16 (research/proof/shots/); each links to the live page, which may have changed.</p></section>`;
 function designHtml(id, home) {
   const h = sectioned(home);
   const strip = /<p class="offer-strip">[\s\S]*?<\/p>/;
   if (id === 'gallery') return GALLERY_BANNER + '\n' + h.replace(strip, (m) => m + '\n' + GALLERY_STRIP);
+  if (id === 'editorial') return h.replace('<section class="hero">', ED_DATELINE + '\n<section class="hero">').replace('</section>\n', (m) => ED_PLATE + m).replace(strip, (m) => m + '\n' + ED_FIGROW);
   if (id === 'proof') return h.replace(strip, (m) => m + '\n' + PROOF_WALL);
   return h;
 }
