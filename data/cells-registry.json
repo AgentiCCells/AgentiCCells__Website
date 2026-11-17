@@ -8,7 +8,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
    "live": "https://agenticcells.ai",
-   "version_seen": "v0.1.220",
+   "version_seen": "v0.1.221",
    "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
    "status": "live",
    "listed": true
@@ -171,7 +171,7 @@
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Writing",
    "live": "https://specialist-writing.agenticcells.site",
-   "version_seen": "v0.1.9",
+   "version_seen": "v0.1.10",
    "what": "Specialist agent for writing (newsroom, \"Specialist agents for every team\").",
    "status": "demo",
    "listed": true
@@ -181,7 +181,7 @@
    "kind": "specialist",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Specialist__Security",
    "live": "https://specialist-security.agenticcells.site",
-   "version_seen": "v0.1.2",
+   "version_seen": "v0.1.3",
    "what": "Specialist agent for security (newsroom, \"Specialist agents for every team\").",
    "status": "demo",
    "listed": true
@@ -213,5 +213,5 @@
   "proposed": "described (often in a newsroom article) or with a repository started; not built yet",
   "test": "a factory pipeline test run, kept as a record"
  },
- "version_checked": "2026-11-17 18:28 UTC"
+ "version_checked": "2026-11-17 19:08 UTC"
 }
