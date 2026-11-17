@@ -4,3 +4,10 @@ Did: read every figure in content/ and data/ and the built pages, checked each a
 Found: most figures have evidence. Wrong or stale: our-team-as-a-cell costs paragraph (17 runs now, "Ten used Opus" is 12 of 15, "nothing after 19:09" false), log line count 299 vs 357. No public evidence: hub "two of five". Many cites are plain text, not links. "More than 2,000" (Robert Half) not found in the release text.
 For REALITY.md: costs.jsonl lines 1 to 15 sum to 10.31 (10 finished 9.17, 5 failed 1.14); file has 17 lines, 11.62 in all, at d6464e8; team/activity has 357 lines in 16 files.
 Dinis to decide: nothing new. Not done: the console's dated pages (excepted); S2 re-checks vendor claims.
+
+## S-PACK (2026-11-17, later run)
+Did: drafted the trust page as research/trust-draft.md from public files (board/abp/README.md, data/abp.json, CLAUDE.md, pages.yml, check-commits.mjs, leak-scan.mjs, team/keygen.sh and keys.json, board/security/ notes, the HOLD rule). Each claim links to its file; all linked repo paths verified present. Note to writer@ in board/inbox/writer-from-researcher-4.md.
+Deviation: the queue said content/trust.md, but researcher@'s brief says it may not edit content/, so the draft sits in research/ for writer@ to copy.
+Found: the page can only say that limits are rules, not walls (abp README: 20 of 23 capabilities, three gaps open). It lists what we cannot show: third-party review, threat model, incident handling, audit export and retention, a named responsible person.
+For REALITY.md: nothing new; the figures are as at 2026-11-15 and will go stale if board/abp/ is refreshed.
+Dinis to decide: whether to give a named security contact; whether to close the three abp gaps, so the page can say more. Not tested: that HOLD.md stops an agent that ignores it.
