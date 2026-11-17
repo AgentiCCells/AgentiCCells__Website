@@ -346,3 +346,4 @@ ul.example-cards{list-style:none;padding:0;margin:1rem 0;display:grid;gap:1rem;g
 .pb-cta a:not(.button){display:inline-flex;align-items:center;min-height:2.5rem}
 @media (min-width:56rem){.price-block{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);align-items:start}.pb-cta{grid-column:1/-1}}
 .wide.home main>.price-block{max-width:none}
+.pb-was{color:var(--muted);font-size:1.5rem;text-decoration:line-through}
