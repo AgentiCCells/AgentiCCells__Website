@@ -63,7 +63,7 @@ How long this takes for an order is not measured, because no order has been run.
 The site is static files in a GitHub repository. It is yours, and you choose how to run it.
 
 - **Managed by you on Claude.** The repository carries a CLAUDE.md written for you, so you can keep changing the site in your own Claude session. This is part of the plan below and is not yet running end to end.
-- **Deployed anywhere.** A static site in GitHub runs on GitHub Pages, Netlify, Cloudflare Pages, Vercel, GitLab Pages or any plain web host. A page with guidance for each host is coming. We endorse no host.
+- **Deployed anywhere.** A static site in GitHub runs on GitHub Pages, Netlify, Cloudflare Pages, Vercel, GitLab Pages or any plain web host. [Put your site online](/deploy/) links to each host's own instructions. We endorse no host.
 
 ## No subscription, no support from us
 

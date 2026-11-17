@@ -52,3 +52,5 @@
 {"time": "2026-11-17T20:10:03Z", "agent": "writer@AgentiCCells.dinis", "item": "W-SELL1", "action": "done", "summary": "Home opening rewritten; offer token added"}
 {"time": "2026-11-17T22:08:51Z", "agent": "writer@AgentiCCells.dinis", "item": "W-PARTNERS", "action": "started", "summary": "building /partners/ from Dinis's terms"}
 {"time": "2026-11-17T22:09:38Z", "agent": "writer@AgentiCCells.dinis", "item": "W-PARTNERS", "action": "done", "summary": "released ceb0832"}
+{"time": "2026-11-17T22:36:34Z", "agent": "writer@AgentiCCells.dinis", "item": "W-DEPLOY", "action": "started", "summary": "Writing /deploy/: static site on any host; checking each host's own docs"}
+{"time": "2026-11-17T22:37:25Z", "agent": "writer@AgentiCCells.dinis", "item": "W-DEPLOY", "action": "done", "summary": "content/deploy.md written, checked against host docs, validator OK"}
