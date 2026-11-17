@@ -83,3 +83,65 @@ body.design-console{
 }
 @media (prefers-reduced-motion:no-preference){.design-console .example-cards a,.design-editorial .example-cards a{transition:box-shadow .15s,border-color .15s}}
 body.design-editorial.home ul.points,body.design-editorial.home ul.points:has(li:nth-child(4):last-child){grid-template-columns:1fr}
+
+/* ---------- Gallery: photos first (designer@, 2026-11-17). Web Summit 2026 photos from assets/media/websummit-2026/ ---------- */
+body.design-gallery{
+  --bg:#f8f5f1;--surface:#ffffff;--fg:#17141a;--muted:#554d5a;--accent:#a8205a;--on-accent:#ffffff;--line:#ddd3d8;--radius:.25rem;
+}
+@media (prefers-color-scheme:dark){body.design-gallery{--bg:#0c0b12;--surface:#16141f;--fg:#f3eff6;--muted:#b9b0c2;--accent:#ff93bb;--on-accent:#1a0612;--line:#2c2838}}
+.design-gallery h1,.design-gallery h2{letter-spacing:-.03em}
+.g-banner{margin:0 0 1.5rem;position:relative;border-radius:calc(var(--radius)*2);overflow:hidden;background:var(--surface)}
+.g-banner img{display:block;width:100%;height:auto;max-height:70vh;object-fit:cover;object-position:50% 35%}
+.g-banner figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.5rem 1.1rem .9rem;color:#fff;font-size:.9375rem;background:linear-gradient(transparent,rgba(5,3,10,.85))}
+.design-gallery .hero{background:none;border:0;padding:1rem 0 0;border-radius:0}
+.design-gallery .hero h1{font-size:clamp(2.4rem,9vw,4.75rem);font-weight:800;line-height:1.02}
+.design-gallery .hero p{font-size:clamp(1.1rem,2.2vw,1.4rem);max-width:40rem}
+.design-gallery .cell-fig .c-mem{fill:var(--surface)}
+.design-gallery .button{border-radius:999px}
+.design-gallery .offer-strip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.6rem 1.1rem}
+.g-strip{display:grid;gap:.75rem;grid-template-columns:1fr;margin:1.5rem 0 2rem}
+.g-strip figure{margin:0;display:flex;flex-direction:column;background:var(--surface);border-radius:calc(var(--radius)*2);overflow:hidden}
+.g-strip img,.g-strip video{display:block;width:100%;height:16rem;object-fit:cover;background:#000}
+.g-strip figure:first-child img{object-position:50% 25%}
+.g-strip figcaption{padding:.6rem .85rem .75rem;font-size:.875rem;color:var(--muted)}
+@media (min-width:48rem){.g-strip{grid-template-columns:1.3fr 1fr 1fr}.g-strip img,.g-strip video{height:21rem}}
+.design-gallery .blk{padding:2.75rem 0 1.25rem;border-top:1px solid var(--line)}
+.design-gallery .blk>h2{font-size:clamp(1.7rem,4.5vw,2.5rem);line-height:1.1;margin:0 0 1rem}
+.design-gallery .blk>h2::before{content:attr(data-n);display:inline-block;margin-right:.75rem;font:700 .8125rem/1 var(--mono);letter-spacing:.1em;color:var(--accent);vertical-align:.35em}
+.design-gallery ul.points li{background:var(--surface);border-radius:calc(var(--radius)*2)}
+.design-gallery .example-cards a{background:var(--surface);border-radius:calc(var(--radius)*2)}
+.design-gallery ol.steps li::before{background:var(--accent);color:var(--on-accent)}
+@media (min-width:56rem){body.design-gallery.wide.home main>.blk{max-width:none}.design-gallery .blk>*:not(.example-cards):not(.table-wrap):not(ul.points):not(figure){max-width:46rem}}
+
+/* ---------- Proof: a wall of screenshots, then the words as a numbered record (designer@, 2026-11-17) ---------- */
+body.design-proof{
+  --bg:#f5f6f3;--surface:#ffffff;--fg:#11161c;--muted:#4a545f;--accent:#1b45c4;--on-accent:#ffffff;--line:#cfd5db;--radius:.375rem;
+}
+@media (prefers-color-scheme:dark){body.design-proof{--bg:#0d1015;--surface:#151a21;--fg:#e8ecf0;--muted:#a9b4bf;--accent:#8fb2ff;--on-accent:#0a1226;--line:#272f39}}
+.design-proof h1{font-size:clamp(2.2rem,8vw,3.8rem);font-weight:800;letter-spacing:-.03em}
+.design-proof .hero{background:none;border:0;border-bottom:2px solid var(--fg);border-radius:0;padding:1.25rem 0 1.75rem}
+.design-proof .button{border-radius:var(--radius)}
+.design-proof .cell-fig .c-mem{fill:var(--surface)}
+.design-proof .offer-strip{border:1px dashed var(--accent);background:none;border-radius:var(--radius);font-family:var(--mono);font-size:.875rem}
+.p-wall{margin:2rem 0 1.5rem}
+.p-wall>h2{margin:0 0 .4rem;font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:-.02em}
+.p-note{margin:0 0 1.25rem;color:var(--muted);font-size:.9375rem;max-width:44rem}
+.p-wall ul{list-style:none;margin:0;padding:0;display:grid;gap:.9rem;grid-template-columns:1fr}
+@media (min-width:36rem){.p-wall ul{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:60rem){.p-wall ul{grid-template-columns:repeat(3,1fr)}}
+.p-wall li{margin:0}
+.p-wall a{display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.p-wall a:hover{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.p-wall img{display:block;width:100%;height:auto;aspect-ratio:900/563;object-fit:cover;border-bottom:1px solid var(--line);background:var(--bg)}
+.p-cap{display:grid;grid-template-columns:auto 1fr;column-gap:.6rem;padding:.7rem .85rem .85rem;font-size:.875rem;color:var(--muted)}
+.p-cap strong{color:var(--fg);font-size:1rem}
+.p-cap .p-n{grid-row:1/span 2;font:700 .8125rem/1.6 var(--mono);color:var(--accent)}
+.design-proof .blk{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);padding:1.5rem 0 1rem}
+.design-proof .blk>h2{margin:0 0 .75rem;font:700 1.25rem/1.25 var(--mono);letter-spacing:-.01em}
+.design-proof .blk>h2::before{content:"§" attr(data-n);color:var(--accent);margin-right:.6rem}
+.design-proof ul.points li{background:var(--surface);border-radius:var(--radius)}
+.design-proof .example-cards a{background:var(--surface);border-radius:var(--radius)}
+.design-proof ol.steps li::before{border-radius:var(--radius);font-family:var(--mono)}
+@media (min-width:56rem){body.design-proof.wide.home main>.blk{max-width:none}.design-proof .blk>*:not(.example-cards):not(.table-wrap):not(ul.points):not(figure){max-width:46rem}}
+.design-gallery .g-banner figcaption{font-size:.875rem}
+body.wide.home main>:is(.g-strip,.g-banner,.p-wall):not(.hero):not(.page-head):not(.closing){max-width:none}

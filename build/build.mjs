@@ -271,10 +271,38 @@ const DESIGNS = [
   ['calm', 'Calm', '/', 'Plain and quiet. The default.'],
   ['editorial', 'Editorial', '/d/editorial/', 'Paper, serif headings, numbered sections.'],
   ['console', 'Console', '/d/console/', 'Dark and technical, in cards.'],
+  ['gallery', 'Gallery', '/d/gallery/', 'Photos first: the team at Web Summit, large.'],
+  ['proof', 'Proof', '/d/proof/', 'A wall of screenshots, each linked to the live page.'],
 ];
+const WS = '/assets/media/websummit-2026/';
+// Third and fourth designs (designer@, 2026-11-17). Photos: Dinis's Web Summit 2026 set (assets/media/websummit-2026/README.md).
+// Alt text and captions name no one: only people recorded as agreeing to be named may be named (data/cells-registry.json).
+const GALLERY_BANNER = `<figure class="g-banner"><img src="${WS}team-meo-arena.webp" width="1400" height="1050" alt="Six people in a row inside a large indoor arena, smiling, with conference badges; one T-shirt reads Ask me how I control my agents"><figcaption>Web Summit, Lisbon, November 2026. Our team inside the MEO Arena.</figcaption></figure>`;
+const GALLERY_STRIP = `<section class="g-strip" aria-label="More from Web Summit 2026"><figure><img src="${WS}team-riskmandate-stand.webp" width="900" height="638" loading="lazy" alt="Six people in red, green, purple and yellow shirts at an exhibition stand, with the RiskMandate stand sign above them"><figcaption>At the RiskMandate stand, A1-30.</figcaption></figure><figure><img src="${WS}team-backstage.webp" width="1000" height="750" loading="lazy" alt="Five people in coloured hoodies in a concrete corridor backstage at the arena"><figcaption>Backstage at the arena.</figcaption></figure><figure class="g-video"><video controls muted playsinline preload="none" poster="${WS}team-meo-arena.webp" width="1400" height="1050"><source src="${WS}team-meo-arena-live.mp4" type="video/mp4"></video><figcaption>The same moment in the arena, 1.8 seconds, no sound.</figcaption></figure></section>`;
+const PROOF_SHOTS = [
+  ['web-summit-home', 'The team site', 'The operating system of the Web Summit team: board, briefs, keys.', 'https://web-summit.sgit.ai/'],
+  ['universe-dinis-universo', 'The universe view', 'Every agent as a moon of its owner, with its policy or the lack of one.', 'https://web-summit.sgit.ai/lib/gravity/'],
+  ['web-summit-xray', 'The X-ray', 'What each agent did, drawn from the commits.', 'https://web-summit.sgit.ai/'],
+  ['web-summit-pulse', 'The pulse', 'Activity across the team as it happened.', 'https://web-summit.sgit.ai/'],
+  ['web-summit-companies', 'The company map', 'The companies at the event, mapped by agents.', 'https://web-summit.sgit.ai/'],
+  ['newsroom-ten-days', 'The map article', 'Ten days at Web Summit, with the counts and how they were made.', 'https://newsroom.sgit.ai/articles/ten-days-at-web-summit.html'],
+  ['riskmandate-home', 'RiskMandate', 'The sister site: behaviour policies for agents.', 'https://riskmandate.ai/'],
+  ['promptugal-home', 'PrompTugal.news', 'A newsroom run by agents.', 'https://promptugal.news/'],
+  ['storm-charles-home', 'The Storm site', 'A newsroom built in a night.', 'https://storm-charles.promptugal.news/'],
+  ['lisbon-tech-fringe-home', 'Lisbon Tech Fringe', 'The fringe guide.', 'https://lisbontechfringe.com/'],
+  ['ios-app-promptugal', 'A native app', 'An iOS app made by agents.', 'https://ios.app.promptugal.news/'],
+];
+const PROOF_WALL = `<section class="p-wall" aria-labelledby="p-wall-h"><h2 id="p-wall-h">The evidence wall</h2><p class="p-note">Screenshots of live pages we or our newsroom made, taken on 2026-11-16 (research/proof/shots/). Each links to the live page, which may have changed since.</p><ul>${PROOF_SHOTS.map(([f, t, c, u], i) => `<li><a href="${u}"><img src="/assets/media/proof/${f}.webp" width="900" height="563" loading="lazy" alt="Screenshot of ${esc(t)}"><span class="p-cap"><span class="p-n">${String(i + 1).padStart(2, '0')}</span><strong>${esc(t)}</strong><span>${esc(c)}</span></span></a></li>`).join('')}</ul></section>`;
+function designHtml(id, home) {
+  const h = sectioned(home);
+  const strip = /<p class="offer-strip">[\s\S]*?<\/p>/;
+  if (id === 'gallery') return GALLERY_BANNER + '\n' + h.replace(strip, (m) => m + '\n' + GALLERY_STRIP);
+  if (id === 'proof') return h.replace(strip, (m) => m + '\n' + PROOF_WALL);
+  return h;
+}
 function designBar(now) {
   const items = DESIGNS.map(([id, name, path, tip]) => `<li><a href="${path}"${id === now ? ' aria-current="true"' : ''} title="${esc(tip)}">${name}</a></li>`).join('');
-  return `<div class="design-bar"><nav aria-label="Design of this page"><span class="db-label">Design</span><ul>${items}</ul><span class="db-note">Same words, three designs</span></nav></div>`;
+  return `<div class="design-bar"><nav aria-label="Design of this page"><span class="db-label">Design</span><ul>${items}</ul><span class="db-note">Same words, five designs</span></nav></div>`;
 }
 // Wrap each h2 and what follows it in a section, so a design can lay sections out as it likes (CSS only).
 function sectioned(html) {
@@ -293,7 +321,7 @@ function sectioned(html) {
   const home = pages.find((p) => p.path === '/');
   for (const [id, name, path] of DESIGNS.slice(1)) pages.push({
     path, title: `AgentiCCells (${name} design)`, description: home.description, noindex: true, design: id,
-    html: sectioned(home.html), source: 'build/build.mjs', file: fileFor(path),
+    html: designHtml(id, home.html), source: 'build/build.mjs', file: fileFor(path),
   });
 }
 
