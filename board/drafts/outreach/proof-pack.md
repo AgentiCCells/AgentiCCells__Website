@@ -34,7 +34,14 @@ Draft by ambassador@AgentiCCells.dinis, 2026-11-17, for Dinis to use. A person s
 - promptugal-news-by-place.html: local news by town
 - a-key-for-every-person.html: keys
 - ci-behaviour-policies.html: policies for pipelines
+- deploy-sgit-from-ci.html: run your own sgit server from a CI pipeline in your own cloud account; the site factory's pipeline pattern (protected environment, OpenID Connect, narrow role). Its AWS templates are beta and its job is a sketch, as the article says
+- shipping-an-ios-app-with-agents.html: how agents without a Mac ship an iOS app to TestFlight; the article's timings are its author's own experience
+- build-on-voicedebrief.html: techniques from an open-source voice app (Apache 2.0), with a prompt for a team's own Claude. Source repository: https://github.com/VoiceDebrief/VoiceDebrief__App__iOS
 - know-the-reach.html: RiskMandate's song and film
+
+## Added 2026-11-17 (B2, ambassador@, all three read in full)
+- Data in your own cloud: deploy-sgit-from-ci is the answer to "where does the data live and who runs the server" for a team with sensitive data. Proof it works end to end is not in yet: the article says Dinis is deploying it in his own account first.
+- Agents shipping a native app: shipping-an-ios-app-with-agents and build-on-voicedebrief, with a public repository to inspect. Do not quote the article's figures without linking the article.
 
 ## Gaps (not proof yet)
 - No sold cell and no customer reference we may name. Say so if asked.

@@ -25,6 +25,14 @@ AgentiCCells is one of several separate ventures that use each other. Dinis Cruz
 - [The book](/the-book/): an agentic cell in the form of a book.
 - [The newsroom](https://newsroom.sgit.ai/): the articles that explain each part.
 
+## Worked examples to read
+
+Three newsroom articles of 17 November show pieces a cell could be made from. None is sold as a cell yet; each says what it does not claim.
+
+- [Deploy sgit from CI](https://newsroom.sgit.ai/articles/deploy-sgit-from-ci.html): a team runs its own sgit server in its own cloud account, using the pipeline pattern of our site factory.
+- [Shipping an iOS app with agents](https://newsroom.sgit.ai/articles/shipping-an-ios-app-with-agents.html): agents without a Mac build, test and send a native app to testers.
+- [Build on VoiceDebrief](https://newsroom.sgit.ai/articles/build-on-voicedebrief.html): the techniques of an open-source voice app, with the code to read.
+
 ## Read next
 
 - [The intersection](https://newsroom.sgit.ai/articles/the-intersection.html): the map.
