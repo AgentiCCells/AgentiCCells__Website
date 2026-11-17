@@ -214,7 +214,7 @@ function boardCapped(items) {
 }
 function boardTable(items) {
   if (!items.length) return '<p>No board items.</p>';
-  const rows = items.map((i) => `<tr><td><code>${esc(i.id)}</code></td><td>${esc(i.title)}<br><small>${esc(i.owner)}</small></td><td><span class="st st-${statusClass(i.status)}">${esc(i.status)}</span></td></tr>`).join('\n');
+  const rows = items.map((i) => `<tr><td><code>${esc(i.id)}</code></td><td class="b-what"><span class="b-title">${esc(i.title)}</span><br><small>${esc(i.owner)}</small></td><td class="b-st"><span class="st st-${statusClass(i.status)}">${esc(i.status)}</span></td></tr>`).join('\n');
   return `<div class="table-wrap"><table class="console-board">\n<thead><tr><th>Item</th><th>What and who</th><th>Status</th></tr></thead>\n<tbody>\n${rows}\n</tbody></table></div>`;
 }
 
