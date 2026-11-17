@@ -173,3 +173,8 @@
 {"time": "2026-11-17T19:09:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "wake", "action": "briefed", "summary": "Wake 19:07: started synthetic-users@, session 018yvw"}
 {"time": "2026-11-17T19:09:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 19:07: 18:10 runs released (D-DEFAULT, S-SCALE, W-RV19/20, V-RV1); site v0.1.221; excluded name 0; ambassador skipped (empty queue)"}
 {"time": "2026-11-17T19:38:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Dinis brief: sell the website cell; strategy written; W-SELL1, W-SELL2, W-PARTNERS, W-DEPLOY, D-SELL, V-OFFER, P-SELL, U-MARKETS, B-SELL, R-SELL queued at top"}
+{"time": "2026-11-17T20:09:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 20:07: started writer@, session 018yvw"}
+{"time": "2026-11-17T20:09:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 20:07: started designer@, session 018yvw"}
+{"time": "2026-11-17T20:09:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 20:07: started dev@, session 018yvw"}
+{"time": "2026-11-17T20:09:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 20:07: started sherpa@, session 018yvw"}
+{"time": "2026-11-17T20:09:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "SELL", "action": "briefed", "summary": "Wake 20:07: started reviewer@, session 018yvw"}
