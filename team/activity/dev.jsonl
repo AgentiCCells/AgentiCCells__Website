@@ -43,3 +43,5 @@
 {"time": "2026-11-16T20:10:16Z", "agent": "dev@AgentiCCells.dinis", "item": "V-RV7", "action": "started", "summary": "adding link-size and first-h2 warning check"}
 {"time": "2026-11-16T20:10:44Z", "agent": "dev@AgentiCCells.dinis", "item": "V-RV7", "action": "done", "summary": "mobile-check.mjs added, releasing"}
 {"time": "2026-11-16T22:10:59Z", "agent": "dev@AgentiCCells.dinis", "item": "V-REG", "action": "started", "summary": "writing build/refresh-registry.mjs"}
+{"time": "2026-11-17T08:10:15Z", "agent": "dev@AgentiCCells.dinis", "item": "V-EVID", "action": "started", "summary": "Adding a warning-only check for numbers on published pages that carry no evidence link"}
+{"time": "2026-11-17T08:13:05Z", "agent": "dev@AgentiCCells.dinis", "item": "V-EVID", "action": "done", "summary": "Evidence check added (warning only); archive section built, nothing moved"}

@@ -160,7 +160,14 @@ const pages = [];
 for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md')).sort()) {
   const { meta, body } = frontMatter(readFileSync(join(root, 'content', f), 'utf8'));
   const path = f === 'index.md' ? '/' : `/${f.replace(/\.md$/, '')}/`;
-  pages.push({ path, title: meta.title, description: meta.description, nav: meta.nav, html: markdown(body), source: `content/${f}` });
+  // V-ARCHIVE: `archive: YYYY-MM-DD` and `archive_why: ...` in the front matter archive a page. It keeps its address and its
+  // words, gets a dated note on top, leaves the nav and is listed at /archive/ (build/pages/archive.mjs).
+  const archived = meta.archive ? { date: meta.archive, why: meta.archive_why } : null;
+  if (archived && (!/^\d{4}-\d{2}-\d{2}$/.test(archived.date) || Number.isNaN(Date.parse(archived.date)) || !archived.why)) {
+    throw new Error(`content/${f}: archive needs a date (YYYY-MM-DD) and an archive_why line`);
+  }
+  const note = archived ? `<p class="note archive-note"><strong>Archived on ${esc(archived.date)}.</strong> ${esc(archived.why)} This page keeps its address and its words as they were. See the <a href="/archive/">archive</a>.</p>\n` : '';
+  pages.push({ path, title: meta.title, description: meta.description, nav: archived ? undefined : meta.nav, archived, html: note + markdown(body), source: `content/${f}` });
 }
 
 // Page hooks: build/pages/*.mjs, each `export default async function (ctx)` returning
@@ -168,7 +175,7 @@ for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md
 // `html` is the inside of <main>. Each page gets the same template, nav and footer.
 // ctx.out is site/, already cleared; a hook may also return extra files through ctx.files.
 const hookDir = join(root, 'build', 'pages');
-const ctx = { root, out, version, contact, esc, inline, markdown, frontMatter, pages: pages.map(({ path, title }) => ({ path, title })), files: [] };
+const ctx = { root, out, version, contact, esc, inline, markdown, frontMatter, pages: pages.map(({ path, title, archived }) => ({ path, title, archived })), files: [] };
 if (existsSync(hookDir)) {
   for (const f of readdirSync(hookDir).filter((f) => f.endsWith('.mjs')).sort()) {
     const mod = await import(pathToFileURL(join(hookDir, f)).href);
@@ -312,9 +319,12 @@ for (const { path, content } of ctx.files) {
   writeFileSync(join(out, file), content);
 }
 // robots.txt and sitemap.xml (every indexable page; no dates, since the build holds none that are true).
-const indexable = pages.filter((p) => !p.noindex).map((p) => urlFor(p.file)).sort();
+const indexable = pages.filter((p) => !p.noindex && !p.archived).map((p) => urlFor(p.file)).sort();
+// Archived pages stay in the sitemap, listed after the others under an Archive comment (V-ARCHIVE).
+const archivedUrls = pages.filter((p) => !p.noindex && p.archived).map((p) => urlFor(p.file)).sort();
+const loc = (u) => `<url><loc>${esc(origin + u)}</loc></url>`;
 if (origin) {
-  writeFileSync(join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexable.map((u) => `<url><loc>${esc(origin + u)}</loc></url>`).join('\n')}\n</urlset>\n`);
+  writeFileSync(join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexable.map(loc).join('\n')}${archivedUrls.length ? `\n<!-- Archive -->\n${archivedUrls.map(loc).join('\n')}` : ''}\n</urlset>\n`);
   writeFileSync(join(out, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
 }
 writeFileSync(join(out, 'version.json'), JSON.stringify({ version }) + '\n');

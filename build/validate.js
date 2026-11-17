@@ -2,6 +2,7 @@
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const errors = [];
@@ -56,6 +57,12 @@ for (const f of walk(join(root, 'content'), ['.md'])) {
   const fm = m ? m[1] : '';
   if (!/^title:\s*\S/m.test(fm)) fail(`${rel(f)}: no title`);
   if (!/^description:\s*\S/m.test(fm)) fail(`${rel(f)}: no description`);
+  // Archive (V-ARCHIVE): an archived page needs a real date and a reason, and must not still ask for a nav place.
+  if (/^archive:/m.test(fm)) {
+    const d = (fm.match(/^archive:\s*(\S+)/m) || [])[1] || '';
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d) || Number.isNaN(Date.parse(d))) fail(`${rel(f)}: archive must be a date (YYYY-MM-DD)`);
+    if (!/^archive_why:\s*\S/m.test(fm)) fail(`${rel(f)}: archived page has no archive_why`);
+  }
 }
 // Every built page has title and description.
 for (const f of walk(join(root, 'site'), ['.html'])) {
@@ -165,5 +172,7 @@ for (const f of walk(join(root, 'site', 'console'), ['.html'])) {
   const kb = Math.round(statSync(f).size / 1024);
   if (kb > 120) console.warn(`WARNING ${rel(f)}: ${kb} KB of HTML, over the 120 KB budget (about 30,000 px tall at 390 px)`);
 }
+// Warning only (V-EVID): figures on published pages with no evidence link in their sentence. Never fails the build.
+spawnSync(process.execPath, [join(root, 'build/check-evidence.mjs')], { stdio: 'inherit' });
 if (errors.length) { console.error(errors.join('\n')); console.error(`FAILED (${errors.length})`); process.exit(1); }
 console.log('OK');
