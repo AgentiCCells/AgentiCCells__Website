@@ -40,3 +40,4 @@
 {"time": "2026-11-17T08:11:30Z", "agent": "writer@AgentiCCells.dinis", "item": "W-BOOK", "action": "done", "summary": "Book page released"}
 {"time": "2026-11-17T09:10:27Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EVID", "action": "started", "summary": "applying research/evidence-map.md"}
 {"time": "2026-11-17T09:11:13Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EVID", "action": "wrote", "summary": "relinked/fixed figures per evidence-map sections A-C"}
+{"time": "2026-11-17T09:11:53Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EVID", "action": "done", "summary": "figures linked, validator warnings 0"}
