@@ -41,3 +41,4 @@
 {"time": "2026-11-17T16:09:02Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV9", "action": "started", "summary": "find why the console header is 93 px and make it 77 px"}
 {"time": "2026-11-17T16:09:50Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV9", "action": "done", "summary": "header 77 px on console pages"}
 {"time": "2026-11-17T18:09:59Z", "agent": "designer@AgentiCCells.dinis", "item": "D-DEFAULT", "action": "started", "summary": "make Gallery or Proof the default home design, fix glossary cards"}
+{"time": "2026-11-17T18:10:39Z", "agent": "designer@AgentiCCells.dinis", "item": "D-DEFAULT", "action": "done", "summary": "Gallery default, Calm at /d/calm/"}
