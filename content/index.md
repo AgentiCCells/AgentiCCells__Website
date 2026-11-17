@@ -5,7 +5,15 @@ nav: 1
 ---
 # AgentiCCells
 
-AgentiCCells sets up small teams of AI agents, called cells, inside your own environment, with a console where you can see what they do.
+A cell is a small team of AI agents that does one job for you, in your own accounts, with a page where you can watch it and stop it.
+
+Our first offer is a public website, built by a cell and handed over to you, for £500 ([first proposal](https://newsroom.sgit.ai/articles/the-intersection.html); not yet sold).
+
+**Words we use.** *Cell*: a small team of agents with one job. *Environment*: your own accounts and repositories, where it runs. *Conductor*: the agent that hands out the work and keeps the record. *Key*: a secret you hold, which lets you steer the work and take it over.
+
+**Who we are, next to RiskMandate.** AgentiCCells builds and runs the cells; [RiskMandate](https://riskmandate.ai) is our sister venture, which writes the rules the agents must follow.
+
+**After you email** (a proposal of the steps, not a record): a person replies and asks what you want done and where it should run. We agree which size of cell fits and what it costs. Then we set it up in your environment, and it stays yours.
 
 ## Start here: the website cell
 

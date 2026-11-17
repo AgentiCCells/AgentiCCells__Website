@@ -25,6 +25,8 @@ Three very simple workflows to pick from. Each is one agent, one instruction, on
 
 These are suggestions for where to begin, not products we have sold.
 
+Whatever you run, an agent that sleeps and wakes needs five things: an inbox, timers, memory, permissions and an outbox. [We run all five in our own team](/our-team-as-a-cell/), as files in one repository.
+
 ## Step two: add a meeting or two
 
 When one workflow works, a few sessions add more roles, a shared board and a handover into your own accounts. We would prepare, meet you twice, do the work, present it and hand it over. From £1,500, first proposal (prices: [The intersection](https://newsroom.sgit.ai/articles/the-intersection.html), 2026-11-16).

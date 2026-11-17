@@ -41,3 +41,4 @@
 {"time": "2026-11-17T09:10:27Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EVID", "action": "started", "summary": "applying research/evidence-map.md"}
 {"time": "2026-11-17T09:11:13Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EVID", "action": "wrote", "summary": "relinked/fixed figures per evidence-map sections A-C"}
 {"time": "2026-11-17T09:11:53Z", "agent": "writer@AgentiCCells.dinis", "item": "W-EVID", "action": "done", "summary": "figures linked, validator warnings 0"}
+{"time": "2026-11-17T10:09:32Z", "agent": "writer@AgentiCCells.dinis", "item": "SU1", "action": "started", "summary": "hero in two plain lines, glossary, RiskMandate sentence, after-email steps"}
