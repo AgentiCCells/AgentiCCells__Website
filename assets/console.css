@@ -50,5 +50,5 @@ small{color:var(--muted)}
 .console-queues td{overflow-wrap:anywhere}
 .queue{list-style:none;padding-left:0}
 .queue li{margin:.4rem 0;overflow-wrap:anywhere}
-details{margin:.5rem 0}
+main details{margin:.5rem 0}
 summary{cursor:pointer;min-height:2.75rem;display:list-item}
