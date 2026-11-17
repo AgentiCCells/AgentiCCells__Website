@@ -32,3 +32,7 @@ Before building ours, the method's author made a simulated console with made-up 
 
 - The simulated console uses made-up data. Our own console uses real files but has no controls.
 - A stop is only as fast as the agents' wake-up timers.
+
+## Part of a stack
+
+Already running agents and need to control them? [RiskMandate](https://riskmandate.ai) writes the behaviour policy, from one agent to hundreds. We sit on [SGit](https://sgit.ai/), [SHarness](https://sharness.ai/) and [Agent Behaviour Policies](https://abp.sgit.ai/); see [where we fit](/stack/).

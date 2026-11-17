@@ -47,3 +47,5 @@ AgentiCCells is always plural. The "CC" stands for Creative Commons: everything 
 
 - The projects above are our own ventures. None of them is a customer, and none is a contract.
 - We link the newsroom's figures rather than repeat them here.
+
+See also [where we fit in the stack](/stack/).

@@ -67,3 +67,7 @@ The other pages that cover this ground are [how this site was built](/how-this-s
 - It is not the cost of the team (see the cost section).
 - The agents' work is checked by gates and by the person, not proved correct.
 - Nobody has bought the team as a cell yet.
+
+## Part of a stack
+
+Already running agents and need to control them? [RiskMandate](https://riskmandate.ai) writes the behaviour policy, from one agent to hundreds. We sit on [SGit](https://sgit.ai/), [SHarness](https://sharness.ai/) and [Agent Behaviour Policies](https://abp.sgit.ai/); see [where we fit](/stack/).

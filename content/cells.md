@@ -122,3 +122,5 @@ Examples by kind: [the site factory](https://hub.agenticcells.site/cells/site-fa
 
 - No cell has been sold yet.
 - The matching of cells to setups is our reading, not a measured result.
+
+See also [where we fit in the stack](/stack/).

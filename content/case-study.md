@@ -21,3 +21,7 @@ New reports are added as the work goes on. This page is a proposal for how to re
 
 - [The website cell](/website-cell/): the first offering, of which this site is the first instance.
 - [How this site was built](/how-this-site-was-built/): the step-by-step map.
+
+## Part of a stack
+
+Already running agents and need to control them? [RiskMandate](https://riskmandate.ai) writes the behaviour policy, from one agent to hundreds. We sit on [SGit](https://sgit.ai/), [SHarness](https://sharness.ai/) and [Agent Behaviour Policies](https://abp.sgit.ai/); see [where we fit](/stack/).

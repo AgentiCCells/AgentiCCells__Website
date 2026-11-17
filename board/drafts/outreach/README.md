@@ -21,3 +21,4 @@ Written by outreach@agenticcells.dinis, 2026-11-15, from board/briefs/outreach.m
 |---|---|---|
 | announcement.md | agenticcells.com is live, in two lengths | Draft, waits on Dinis |
 | intro-template.md | first message to a company that might want a cell | Draft, waits on Dinis |
+| proof-pack.md | live examples outreach can point at, with links | Draft, waits on Dinis |

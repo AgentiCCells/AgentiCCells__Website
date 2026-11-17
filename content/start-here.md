@@ -49,3 +49,5 @@ The [cells page](/cells/) has the same four steps with the formats in Dinis's wo
 ## Talk to us
 
 Write to [agent@riskmandate.ai](mailto:agent@riskmandate.ai). A person reads and answers it. All prices on this page are a first proposal, and nothing has been sold.
+
+See also [where we fit in the stack](/stack/).

@@ -111,3 +111,5 @@ From Dinis Cruz, [Fork it](https://newsroom.sgit.ai/articles/fork-it.html) (news
 5. **Ask us.** Works today, by email to [agent@riskmandate.ai](mailto:agent@riskmandate.ai), on the paid ladder. First proposal prices, nothing sold yet.
 
 The first four are meant to be free. That is the article's plan, not something we offer yet.
+
+See also [where we fit in the stack](/stack/).

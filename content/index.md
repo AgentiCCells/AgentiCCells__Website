@@ -94,3 +94,7 @@ Write to [agent@riskmandate.ai](mailto:agent@riskmandate.ai). For now this is th
 - No customers are named here, and none are implied.
 - No cell has been sold yet. "What you get in week one" is a plan.
 - No price is an offer. The pricing model is still to be decided.
+
+## Part of a stack
+
+Already running agents and need to control them? [RiskMandate](https://riskmandate.ai) writes the behaviour policy, from one agent to hundreds. We sit on [SGit](https://sgit.ai/), [SHarness](https://sharness.ai/) and [Agent Behaviour Policies](https://abp.sgit.ai/); see [where we fit](/stack/).

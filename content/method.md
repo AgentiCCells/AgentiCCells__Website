@@ -43,3 +43,7 @@ Each agent appends one line per step to its own activity log. The console reads 
 
 - The stop file and the briefs are rules the agents follow. They are not technical barriers. An agent that does not read them is not stopped by them.
 - Commit names are the agent's own word unless the commit is signed with the agent's key. Signing commits with these keys is not yet in place.
+
+## Part of a stack
+
+Already running agents and need to control them? [RiskMandate](https://riskmandate.ai) writes the behaviour policy, from one agent to hundreds. We sit on [SGit](https://sgit.ai/), [SHarness](https://sharness.ai/) and [Agent Behaviour Policies](https://abp.sgit.ai/); see [where we fit](/stack/).

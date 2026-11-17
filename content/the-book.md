@@ -32,3 +32,7 @@ You can buy the same kind of thing from us: a team of agents in your environment
 - It does not say the book is finished, or that it has sold.
 - No customer is named, and none is implied.
 - Nothing on this page is an offer. The cells we describe have not been sold yet.
+
+## Part of a stack
+
+Already running agents and need to control them? [RiskMandate](https://riskmandate.ai) writes the behaviour policy, from one agent to hundreds. We sit on [SGit](https://sgit.ai/), [SHarness](https://sharness.ai/) and [Agent Behaviour Policies](https://abp.sgit.ai/); see [where we fit](/stack/).

@@ -41,3 +41,7 @@ Not yet. The agent behaviour policies are written, but they have not been agreed
 ## Have you sold this before?
 
 No. No cell of any size has been sold. We say so on each page, and we will keep saying so until it changes.
+
+## Part of a stack
+
+Already running agents and need to control them? [RiskMandate](https://riskmandate.ai) writes the behaviour policy, from one agent to hundreds. We sit on [SGit](https://sgit.ai/), [SHarness](https://sharness.ai/) and [Agent Behaviour Policies](https://abp.sgit.ai/); see [where we fit](/stack/).

@@ -27,3 +27,7 @@ Code we write is under Apache-2.0, or MIT where a dependency needs it. Text, gui
 
 - Licences can change. Each one is as read on 15 November 2026; follow the link for the current terms.
 - Listing a project here does not mean its makers endorse us, and we take no commission from any of them.
+
+## Part of a stack
+
+Already running agents and need to control them? [RiskMandate](https://riskmandate.ai) writes the behaviour policy, from one agent to hundreds. We sit on [SGit](https://sgit.ai/), [SHarness](https://sharness.ai/) and [Agent Behaviour Policies](https://abp.sgit.ai/); see [where we fit](/stack/).
