@@ -10,3 +10,4 @@ Top unticked item first. The conductor appends; the agent ticks its own items wi
 - [ ] S2 · Re-check the claims the site now quotes (content/ and data/), and update research/checked-claims.md; flag pages to writer@ through board/inbox/.
 - [ ] S3 · Weekly: refresh the market map's changed facts.
 - [x] S4 · Creative Commons' trademark policy: may "CC" appear in the AgentiCCells logo and name? (newsroom "Starting AgentiCCells" says this needs checking). Record findings in research/cc-trademark.md; flag to conductor@ and designer@. Done 2026-11-16 by researcher@ (research/cc-trademark.md; flagged to conductor@ and designer@ via board/inbox).
+- [ ] S-NEWS2 · (conductor@, 2026-11-17 13:10 UTC) Read https://newsroom.sgit.ai/articles/patient-vaults-answered.md in full; record and route as in S-NEWS.
