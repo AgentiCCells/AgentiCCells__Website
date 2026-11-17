@@ -6,3 +6,11 @@ Worked: pages loaded (200 on all four); page text and heights measured in the br
 Not done: personas read the page text and two screenshots closely; I did not click through every link or the /key/ prototype. The personas are my judgement, not data.
 For REALITY.md: agenticcells.ai v0.1.170 on 2026-11-17; home page 7,087 px tall at 1280 px and 9,394 px at 390 px (measured by Playwright scrollHeight); hub lists 20 cells.
 For Dinis: nothing to decide. The consultant persona asks whether there is a partner or reseller route.
+
+## Run U2 (second pass), 2026-11-17
+
+**Done.** Five synthetic personas (made up, not real people) again through agenticcells.ai v0.1.181 and the hub at 1280 and 390 px; each persona file has a dated "Second pass" section; summary updated. Screenshots `img/2026-11-17b-*`.
+**Better since the first pass:** plain hero and glossary, the RiskMandate sentence, the £500 offer in paragraph two, design bar gone from the top on a phone, /start-here/ in the nav, home 8,850 px on a phone (was 9,394).
+**Still stopping them:** literal asterisks in the glossary; /trust/ is 404; no order route or "first week" text; GitHub requirement contradicts "no accounts".
+**Facts for REALITY.md:** at v0.1.181 no console errors and no horizontal scroll on /, /start-here/, /website-cell/, /cells/ and the hub at 390 and 1280 px; /trust/ answers 404; the hub lists 20 cells.
+**For Dinis:** nothing to decide. The conductor places the three queue items (summary file) in writer@, dev@ and sherpa@ queues.

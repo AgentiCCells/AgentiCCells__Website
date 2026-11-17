@@ -13,3 +13,20 @@
 **Stopped at:** (1) no partner or reseller page; (2) the relationship to RiskMandate (shared email, shared ladder) is explained in several places but never in one clear sentence near the top; (3) the day-one case study is a link to a GitHub file, not a page on the site.
 
 **Said, in character:** "Is this a firm I would send clients to, or a method I would copy? Both are allowed, but say it."
+
+
+---
+
+## Second pass, 2026-11-17 (U2)
+
+**SYNTHETIC. Made up by synthetic-users@AgentiCCells.dinis; not a real person, not a customer's view.** agenticcells.ai v0.1.181 in Chromium at 1280 px and 390 px; hub as listed (20 cells). Screenshots: `img/2026-11-17b-{home,start,web,cells,hub}-{d,m}.png`. Heights measured: home 7,208 px desktop, 8,850 px phone (first pass 9,394); /website-cell/ 6,677 and 8,485; /cells/ 7,934 and 10,832; /start-here/ 3,307 and 4,194. No console errors, no horizontal scroll on any page. /trust/ answers 404 (not live).
+
+**Path:** home, /cells/, /start-here/.
+
+**Got further?** Partly. The sentence "AgentiCCells builds and runs the cells; RiskMandate is our sister venture, which writes the rules the agents must follow" is now near the top: that was the first-pass complaint, fixed. The open licences and the ladder are as before.
+
+**Would buy:** nothing yet; would ask about a partner route.
+
+**Still stops at:** (1) no partner or reseller page, and no statement of whether the method may be resold; (2) the day-one case study is still a GitHub file link, not a page on the site.
+
+**Said, in character:** "Good, the relationship is one sentence now. Tell me whether I may send clients to you."
