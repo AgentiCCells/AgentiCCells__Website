@@ -47,3 +47,12 @@
 **Still stops at:** glossary asterisks; "environment", "conductor", "key" still appear in the first screen even with the glossary; no example from a business like theirs on the home page (examples sit three screens down on /website-cell/); phone page 8,960 px.
 
 **Said, in character:** "Show me a shop like mine, near the top, and the date it would be ready."
+
+
+---
+
+## Fourth pass, 2026-11-17 (U-GAL): Gallery default home
+
+**SYNTHETIC. A made-up buyer, not a real person.** agenticcells.ai v0.1.222, Chromium at 1366 and 390 px, home (Gallery), /start-here/, /website-cell/. Screenshots `img/2026-11-17d-*`.
+
+**One sentence:** "They make me a website for £500, and I own it." Yes, on a phone in the first screen. **First step cost:** £500 plus an email. **Stopped at:** the photo of five people at a stadium tells me nothing about a bakery; no small-business example near the top; the website page says "GitHub account" at handover, which I do not have. Phone home is 11,746 px: I would not scroll it.

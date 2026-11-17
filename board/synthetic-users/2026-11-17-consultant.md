@@ -47,3 +47,12 @@
 **Still stops at:** no partner or referral terms on agenticcells.ai; riskmandate.ai says "first proposal" wording differently (store link "Buy at the store" next to "from £500", while agenticcells.ai says "not yet sold"). A consultant would ask which is true.
 
 **Said, in character:** "Your two sites disagree on whether I can buy today."
+
+
+---
+
+## Fourth pass, 2026-11-17 (U-GAL): Gallery default home
+
+**SYNTHETIC. A made-up buyer, not a real person.** agenticcells.ai v0.1.222, Chromium at 1366 and 390 px, home (Gallery), /start-here/, /website-cell/. Screenshots `img/2026-11-17d-*`.
+
+**One sentence:** "A £500 entry product with steps up to £20,000, run by a team that also has a sister firm for policy." Clear from /website-cell/ "Where it sits" and /start-here/. **Stopped at:** still no partner or reseller terms; the "possible dual sale" wording on /website-cell/ is internal and reads oddly to a buyer. The five-design bar above the logo is clutter on desktop.
