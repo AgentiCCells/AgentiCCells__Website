@@ -1,0 +1,93 @@
+{
+ "_about": "Interface words for each locale (V-I18N). Drafted by dev@ for the page frame only (menu, footer, price status words); writer@ owns the page text and should have a native reader check these. A missing key falls back to en-GB. The price status words are what the validator accepts beside a price in that locale.",
+ "en-GB": {
+  "skip": "Skip to the content", "home": "Home", "menu": "Menu", "navSite": "Site", "navMenu": "Site (menu)", "navMore": "More",
+  "contact": "Contact", "licence": "Code under Apache-2.0. Text and images under CC BY 4.0.", "older": "Older pages:", "archive": "the archive", "version": "Version",
+  "onThisPage": "On this page", "jumpTo": "Jump to", "closing": "Want a website built this way?", "closingBtn": "See the website cell",
+  "fallback": "This page is not translated yet. You are reading the English original.",
+  "langLabel": "Language", "askLang": "Your language is not here? Ask us", "askSubject": "Which language would you like this site in?",
+  "oneOff": "one-off", "launchPrice": "launch price", "launchUsually": "launch price, usually", "firstProposal": "first proposal", "mayChange": "may change",
+  "noSub": "No subscription.", "freeEval": "We also build a limited number of sites each day free of charge, for evaluation. Apply by email."
+ },
+ "pt-PT": {
+  "skip": "Saltar para o conteúdo", "home": "Início", "menu": "Menu", "navSite": "Site", "navMenu": "Site (menu)", "navMore": "Mais",
+  "contact": "Contacto", "licence": "Código sob Apache-2.0. Texto e imagens sob CC BY 4.0.", "older": "Páginas antigas:", "archive": "o arquivo", "version": "Versão",
+  "onThisPage": "Nesta página", "jumpTo": "Ir para", "closing": "Quer um site feito assim?", "closingBtn": "Ver a célula de site",
+  "fallback": "Esta página ainda não está traduzida. Está a ler o original em inglês.",
+  "langLabel": "Idioma", "askLang": "O seu idioma não está aqui? Peça-nos", "askSubject": "Which language would you like this site in?",
+  "oneOff": "pagamento único", "launchPrice": "preço de lançamento", "launchUsually": "preço de lançamento, normalmente", "firstProposal": "primeira proposta", "mayChange": "pode mudar",
+  "noSub": "Sem subscrição.", "freeEval": "Também fazemos, todos os dias, um número limitado de sites gratuitos para avaliação. Candidate-se por email."
+ },
+ "pt-BR": {
+  "skip": "Pular para o conteúdo", "home": "Início", "menu": "Menu", "navSite": "Site", "navMenu": "Site (menu)", "navMore": "Mais",
+  "contact": "Contato", "licence": "Código sob Apache-2.0. Texto e imagens sob CC BY 4.0.", "older": "Páginas antigas:", "archive": "o arquivo", "version": "Versão",
+  "onThisPage": "Nesta página", "jumpTo": "Ir para", "closing": "Quer um site feito assim?", "closingBtn": "Ver a célula de site",
+  "fallback": "Esta página ainda não foi traduzida. Você está lendo o original em inglês.",
+  "langLabel": "Idioma", "askLang": "Seu idioma não está aqui? Peça para nós", "askSubject": "Which language would you like this site in?",
+  "oneOff": "pagamento único", "launchPrice": "preço de lançamento", "launchUsually": "preço de lançamento, normalmente", "firstProposal": "primeira proposta", "mayChange": "pode mudar",
+  "noSub": "Sem assinatura.", "freeEval": "Também fazemos, todos os dias, um número limitado de sites gratuitos para avaliação. Candidate-se por e-mail."
+ },
+ "fr-FR": {
+  "skip": "Aller au contenu", "home": "Accueil", "menu": "Menu", "navSite": "Site", "navMenu": "Site (menu)", "navMore": "Plus",
+  "contact": "Contact", "licence": "Code sous Apache-2.0. Texte et images sous CC BY 4.0.", "older": "Pages anciennes :", "archive": "les archives", "version": "Version",
+  "onThisPage": "Sur cette page", "jumpTo": "Aller à", "closing": "Vous voulez un site fait ainsi ?", "closingBtn": "Voir la cellule de site",
+  "fallback": "Cette page n'est pas encore traduite. Vous lisez l'original en anglais.",
+  "langLabel": "Langue", "askLang": "Votre langue n'est pas là ? Demandez-nous", "askSubject": "Which language would you like this site in?",
+  "oneOff": "paiement unique", "launchPrice": "prix de lancement", "launchUsually": "prix de lancement, habituellement", "firstProposal": "première proposition", "mayChange": "peut changer",
+  "noSub": "Sans abonnement.", "freeEval": "Nous construisons aussi chaque jour un nombre limité de sites gratuits, pour évaluation. Candidatez par e-mail."
+ },
+ "fr-CA": {
+  "skip": "Passer au contenu", "home": "Accueil", "menu": "Menu", "navSite": "Site", "navMenu": "Site (menu)", "navMore": "Plus",
+  "contact": "Contact", "licence": "Code sous Apache-2.0. Texte et images sous CC BY 4.0.", "older": "Pages plus anciennes :", "archive": "les archives", "version": "Version",
+  "onThisPage": "Sur cette page", "jumpTo": "Aller à", "closing": "Vous voulez un site fait de cette façon ?", "closingBtn": "Voir la cellule de site",
+  "fallback": "Cette page n'est pas encore traduite. Vous lisez l'original en anglais.",
+  "langLabel": "Langue", "askLang": "Votre langue n'est pas là ? Écrivez-nous", "askSubject": "Which language would you like this site in?",
+  "oneOff": "paiement unique", "launchPrice": "prix de lancement", "launchUsually": "prix de lancement, habituellement", "firstProposal": "première proposition", "mayChange": "peut changer",
+  "noSub": "Sans abonnement.", "freeEval": "Nous réalisons aussi chaque jour un nombre limité de sites gratuits, à titre d'évaluation. Postulez par courriel."
+ },
+ "es-ES": {
+  "skip": "Saltar al contenido", "home": "Inicio", "menu": "Menú", "navSite": "Sitio", "navMenu": "Sitio (menú)", "navMore": "Más",
+  "contact": "Contacto", "licence": "Código bajo Apache-2.0. Texto e imágenes bajo CC BY 4.0.", "older": "Páginas antiguas:", "archive": "el archivo", "version": "Versión",
+  "onThisPage": "En esta página", "jumpTo": "Ir a", "closing": "¿Quiere un sitio web hecho así?", "closingBtn": "Ver la célula de sitio web",
+  "fallback": "Esta página aún no está traducida. Está leyendo el original en inglés.",
+  "langLabel": "Idioma", "askLang": "¿Su idioma no está aquí? Pídanoslo", "askSubject": "Which language would you like this site in?",
+  "oneOff": "pago único", "launchPrice": "precio de lanzamiento", "launchUsually": "precio de lanzamiento, normalmente", "firstProposal": "primera propuesta", "mayChange": "puede cambiar",
+  "noSub": "Sin suscripción.", "freeEval": "Además hacemos cada día un número limitado de sitios gratis, para evaluación. Solicítelo por correo electrónico."
+ },
+ "es-MX": {
+  "skip": "Saltar al contenido", "home": "Inicio", "menu": "Menú", "navSite": "Sitio", "navMenu": "Sitio (menú)", "navMore": "Más",
+  "contact": "Contacto", "licence": "Código bajo Apache-2.0. Texto e imágenes bajo CC BY 4.0.", "older": "Páginas anteriores:", "archive": "el archivo", "version": "Versión",
+  "onThisPage": "En esta página", "jumpTo": "Ir a", "closing": "¿Quieres un sitio web hecho así?", "closingBtn": "Ver la célula de sitio web",
+  "fallback": "Esta página todavía no está traducida. Estás leyendo el original en inglés.",
+  "langLabel": "Idioma", "askLang": "¿Tu idioma no está aquí? Pídenoslo", "askSubject": "Which language would you like this site in?",
+  "oneOff": "pago único", "launchPrice": "precio de lanzamiento", "launchUsually": "precio de lanzamiento, normalmente", "firstProposal": "primera propuesta", "mayChange": "puede cambiar",
+  "noSub": "Sin suscripción.", "freeEval": "También hacemos cada día un número limitado de sitios gratis, para evaluación. Solicítalo por correo electrónico."
+ },
+ "de-DE": {
+  "skip": "Zum Inhalt springen", "home": "Start", "menu": "Menü", "navSite": "Website", "navMenu": "Website (Menü)", "navMore": "Mehr",
+  "contact": "Kontakt", "licence": "Code unter Apache-2.0. Text und Bilder unter CC BY 4.0.", "older": "Ältere Seiten:", "archive": "das Archiv", "version": "Version",
+  "onThisPage": "Auf dieser Seite", "jumpTo": "Springen zu", "closing": "Möchten Sie eine Website, die so gebaut wird?", "closingBtn": "Die Website-Zelle ansehen",
+  "fallback": "Diese Seite ist noch nicht übersetzt. Sie lesen das englische Original.",
+  "langLabel": "Sprache", "askLang": "Ihre Sprache fehlt? Fragen Sie uns", "askSubject": "Which language would you like this site in?",
+  "oneOff": "einmalig", "launchPrice": "Einführungspreis", "launchUsually": "Einführungspreis, üblicherweise", "firstProposal": "erster Vorschlag", "mayChange": "kann sich ändern",
+  "noSub": "Kein Abonnement.", "freeEval": "Wir bauen außerdem jeden Tag eine begrenzte Zahl von Websites kostenlos, zur Evaluierung. Bewerben Sie sich per E-Mail."
+ },
+ "zh-CN": {
+  "skip": "跳到正文", "home": "首页", "menu": "菜单", "navSite": "站点", "navMenu": "站点（菜单）", "navMore": "更多",
+  "contact": "联系", "licence": "代码采用 Apache-2.0，文字与图片采用 CC BY 4.0。", "older": "旧页面：", "archive": "归档", "version": "版本",
+  "onThisPage": "本页内容", "jumpTo": "跳转到", "closing": "想要一个这样制作的网站吗？", "closingBtn": "查看网站单元",
+  "fallback": "此页面尚未翻译，您看到的是英文原文。",
+  "langLabel": "语言", "askLang": "没有您的语言？请告诉我们", "askSubject": "Which language would you like this site in?",
+  "oneOff": "一次性", "launchPrice": "上线价", "launchUsually": "上线价，通常", "firstProposal": "初步提案", "mayChange": "可能调整",
+  "noSub": "无需订阅。", "freeEval": "我们每天还会免费制作少量网站供评估。请通过电子邮件申请。"
+ },
+ "ja-JP": {
+  "skip": "本文へ移動", "home": "ホーム", "menu": "メニュー", "navSite": "サイト", "navMenu": "サイト（メニュー）", "navMore": "その他",
+  "contact": "連絡先", "licence": "コードは Apache-2.0、文章と画像は CC BY 4.0 です。", "older": "過去のページ：", "archive": "アーカイブ", "version": "バージョン",
+  "onThisPage": "このページの内容", "jumpTo": "移動", "closing": "このように作るウェブサイトをご希望ですか？", "closingBtn": "ウェブサイトセルを見る",
+  "fallback": "このページはまだ翻訳されていません。英語の原文をご覧ください。",
+  "langLabel": "言語", "askLang": "お使いの言語がありませんか？お知らせください", "askSubject": "Which language would you like this site in?",
+  "oneOff": "買い切り", "launchPrice": "ローンチ価格", "launchUsually": "ローンチ価格、通常", "firstProposal": "最初の提案", "mayChange": "変更の可能性あり",
+  "noSub": "サブスクリプションなし。", "freeEval": "評価用に、毎日限られた数のサイトを無料で制作します。メールでお申し込みください。"
+ }
+}

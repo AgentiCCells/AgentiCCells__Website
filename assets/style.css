@@ -359,3 +359,18 @@ ul.example-cards{list-style:none;padding:0;margin:1rem 0;display:grid;gap:1rem;g
 @media (min-width:56rem){.price-block{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);align-items:start}.pb-cta{grid-column:1/-1}}
 .wide.home main>.price-block{max-width:none}
 .pb-was{color:var(--muted);font-size:1.5rem;text-decoration:line-through}
+
+/* V-I18N: language switcher (plain details element, no script), fallback note, system CJK fonts (no font files). */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+details.lang{position:relative}
+details.lang summary{list-style:none;cursor:pointer;min-height:2.75rem;display:inline-flex;align-items:center;padding:0 .9rem;border:1px solid var(--line);border-radius:var(--radius);color:var(--fg);font-size:.9375rem}
+details.lang summary::-webkit-details-marker{display:none}
+details.lang ul{position:absolute;left:0;top:100%;z-index:6;margin:.25rem 0 0;padding:.25rem;list-style:none;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);min-width:15rem;max-width:90vw}
+details.lang li a{display:flex;align-items:center;min-height:2.75rem;padding:0 .75rem;text-decoration:none}
+details.lang li a[aria-current]{font-weight:700}
+details.lang .lang-ask{border-top:1px solid var(--line)}
+.fallback-en{display:contents}
+.fallback-note{border-left:4px solid var(--line);padding:.5rem .75rem}
+:lang(zh-CN){--font:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Noto Sans SC","Source Han Sans SC",sans-serif}
+:lang(ja){--font:system-ui,-apple-system,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo","Noto Sans CJK JP","Noto Sans JP",sans-serif}
+@media (min-width:44rem){details.lang ul{left:auto;right:0}}

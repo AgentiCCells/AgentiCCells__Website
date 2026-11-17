@@ -13,6 +13,12 @@ const contact = 'agent@riskmandate.ai';
 // The site's address comes from CNAME, so a domain change needs no edit here.
 const origin = existsSync(join(root, 'CNAME')) ? `https://${readFileSync(join(root, 'CNAME'), 'utf8').trim()}` : '';
 
+// V-I18N: ten locales (data/locales.json) and their interface words (data/i18n.json). en-GB is the source, at /.
+const LOC = JSON.parse(readFileSync(join(root, 'data/locales.json'), 'utf8'));
+const I18N = JSON.parse(readFileSync(join(root, 'data/i18n.json'), 'utf8'));
+const LOCALES = LOC.locales.map((l) => ({ ...l, prefix: l.dir ? `/${l.dir}` : '' }));
+const EN = LOCALES[0];
+const ui = (L) => ({ ...I18N['en-GB'], ...(I18N[L.code] || {}) });
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 function frontMatter(src) {
@@ -45,11 +51,12 @@ const offerData = JSON.parse(readFileSync(join(root, 'data/offer.json'), 'utf8')
 const gbp = (n) => '£' + Number(n).toLocaleString('en-GB');
 const OFFER_URL = 'https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/offer.json';
 // A launch price links to the file that sets it (numbers need evidence); the anchor price is a ladder price.
-const priceWith = (link) => offerData.launch_gbp == null ? gbp(offerData.anchor_gbp) : `${link(gbp(offerData.launch_gbp))} (launch price, usually ${gbp(offerData.anchor_gbp)})`;
-const PRICE_MD = priceWith((t) => `[${t}](${OFFER_URL})`);
-const PRICE = priceWith((t) => `<a href="${OFFER_URL}">${t}</a>`);
-function markdown(body) {
-  body = body.replaceAll('{{price}}', PRICE_MD);
+const priceWith = (link, U) => offerData.launch_gbp == null ? gbp(offerData.anchor_gbp) : `${link(gbp(offerData.launch_gbp))} (${U.launchUsually} ${gbp(offerData.anchor_gbp)})`;
+const PRICE_MD = priceWith((t) => `[${t}](${OFFER_URL})`, ui(EN));
+const PRICE = priceWith((t) => `<a href="${OFFER_URL}">${t}</a>`, ui(EN));
+// Same £ price in every locale: only the words around it change.
+function markdown(body, L = EN) {
+  body = body.replaceAll('{{price}}', priceWith((t) => `[${t}](${OFFER_URL})`, ui(L)));
   const lines = body.split('\n');
   const html = [];
   let para = [], list = [], olist = [];
@@ -63,7 +70,7 @@ function markdown(body) {
   for (const line of lines) {
     let m;
     if ((m = line.trim().match(/^\{\{photo:(stand)\}\}$/))) { flush(); html.push(photo()); }
-    else if (line.trim() === '{{offer}}') { flush(); html.push(offer()); }
+    else if (line.trim() === '{{offer}}') { flush(); html.push(offer(L)); }
     else if (line.trim() === '{{ladder}}') { flush(); html.push(ladder()); }
     else if ((m = line.trim().match(/^\{\{stack(?::(components|runtimes))?\}\}$/))) { flush(); html.push(stack(m[1] || 'components')); }
     else if ((m = line.match(/^(#{1,4})\s+(.*)$/))) { flush(); html.push(`<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`); }
@@ -78,14 +85,15 @@ function markdown(body) {
 }
 
 // {{offer}}: the website cell's price from data/offer.json, the one source (W-SELL1).
-function offer() {
+function offer(L = EN) {
+  const U = ui(L);
   const o = JSON.parse(readFileSync(join(root, 'data/offer.json'), 'utf8'));
   const gbp = (n) => `£${Number(n).toLocaleString('en-GB')}`;
   const price = o.launch_gbp == null
-    ? `<strong>${gbp(o.anchor_gbp)}</strong>, one-off`
-    : `<s>${gbp(o.anchor_gbp)}</s> <strong><a href="${OFFER_URL}">${gbp(o.launch_gbp)}</a></strong> launch price, one-off`;
-  return `<p class="offer">${price} (${o.launch_gbp == null ? 'first proposal, ' : ''}${esc(o.note)}; ${esc(o.offer_label)}). No subscription.`+
-    `${o.free_eval ? ` <a href="mailto:${contact}?subject=Free%20evaluation%20site">${esc(o.free_eval)}</a>` : ''}</p>`;
+    ? `<strong>${gbp(o.anchor_gbp)}</strong>, ${U.oneOff}`
+    : `<s>${gbp(o.anchor_gbp)}</s> <strong><a href="${OFFER_URL}">${gbp(o.launch_gbp)}</a></strong> ${U.launchPrice}, ${U.oneOff}`;
+  return `<p class="offer">${price} (${o.launch_gbp == null ? U.firstProposal + ', ' : ''}${esc(L === EN ? o.note : U.mayChange)}; ${esc(L === EN ? o.offer_label : U.launchPrice)}). ${U.noSub}`+
+    `${o.free_eval ? ` <a href="mailto:${contact}?subject=Free%20evaluation%20site">${esc(L === EN ? o.free_eval : U.freeEval)}</a>` : ''}</p>`;
 }
 
 function ladder() {
@@ -114,29 +122,53 @@ function stack(which) {
 const PRIMARY = ['/', '/start-here/', '/website-cell/', '/cells/', '/method/'];
 const MARK = '<svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><rect x="4" y="4" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="3" opacity=".45"/><rect x="11" y="11" width="10" height="10" rx="3" fill="currentColor"/></svg>';
 function primaryNav(nav) {
-  return PRIMARY.map((u) => nav.find((n) => n.url === u)).filter(Boolean);
+  return PRIMARY.map((u) => nav.find((n) => n.base === u)).filter(Boolean);
 }
-function navList(items, current) {
+function navList(items, current, U) {
   return items.map((n) => n.url === current
-    ? `<li><a href="${esc(n.url)}" aria-current="page">${esc(n.url==='/'?'Home':n.title)}</a></li>`
-    : `<li><a href="${esc(n.url)}">${esc(n.url==='/'?'Home':n.title)}</a></li>`).join('');
+    ? `<li><a href="${esc(n.url)}" aria-current="page">${esc(n.base==='/'?U.home:n.title)}</a></li>`
+    : `<li><a href="${esc(n.url)}">${esc(n.base==='/'?U.home:n.title)}</a></li>`).join('');
 }
-function navHtml(nav, current) {
+function navHtml(nav, current, U) {
   if (!nav.length) return '';
-  const items = navList(primaryNav(nav), current);
-  return `<nav class="wide" aria-label="Site"><ul>${items}</ul></nav><details class="menu"><summary>Menu</summary><nav aria-label="Site (menu)"><ul>${items}</ul></nav></details>`;
+  const items = navList(primaryNav(nav), current, U);
+  return `<nav class="wide" aria-label="${esc(U.navSite)}"><ul>${items}</ul></nav><details class="menu"><summary>${esc(U.menu)}</summary><nav aria-label="${esc(U.navMenu)}"><ul>${items}</ul></nav></details>`;
 }
-function moreHtml(nav, current) {
-  const rest = nav.filter((n) => !PRIMARY.includes(n.url));
+function moreHtml(nav, current, U) {
+  const rest = nav.filter((n) => !PRIMARY.includes(n.base));
   if (!rest.length) return '';
-  return `<nav class="more" aria-label="More"><ul>${navList(rest, current)}</ul></nav>`;
+  return `<nav class="more" aria-label="${esc(U.navMore)}"><ul>${navList(rest, current, U)}</ul></nav>`;
 }
+
+// V-I18N: the nav for a locale is the English nav, each item pointed at that locale's page (translated, or the English fallback)
+// where one exists, else at the English page. The switcher lists every locale in its own language, pointing at this page's
+// version in that locale, or that locale's home page when this page has none. Then the "ask us" link.
+function navFor(L) {
+  if (L === EN) return nav.map((n) => ({ ...n, base: n.url }));
+  return nav.map((n) => { const q = pageByPath.get(L.prefix + n.url); return { url: q ? q.path : n.url, base: n.url, title: q ? q.title : n.title }; });
+}
+function switcher(meta, L, U) {
+  const base = meta.base || meta.path;
+  const items = LOCALES.map((l) => {
+    const q = pageByPath.get(l.prefix + base);
+    const href = q ? q.path : (l.prefix + '/');
+    return `<li><a href="${esc(href)}" lang="${l.code}" hreflang="${l.code}"${l === L ? ' aria-current="true"' : ''}>${esc(l.name)}</a></li>`;
+  }).join('');
+  const ask = `mailto:${contact}?subject=${encodeURIComponent(I18N['en-GB'].askSubject)}`;
+  return `<details class="lang"><summary><span class="sr-only">${esc(U.langLabel)}: </span>${esc(L.name)}</summary><ul>${items}<li class="lang-ask"><a href="${esc(ask)}">${esc(U.askLang)}</a></li></ul></details>`;
+}
+const pageByPath = new Map();
 
 const SHARE_CARD = '/assets/share/card.jpg';
 const SHARE_ALT = 'AgentiCCells: small teams of AI agents you can see and stop';
 function page(meta, content, nav = [], current = '') {
+  const L = meta.loc || EN, U = ui(L);
+  const base = meta.base || current;
+  // hreflang: every locale with a real translation of this page, self included, plus x-default (English). Not on noindex pages.
+  const alts = LOCALES.filter((l) => { const q = pageByPath.get(l.prefix + base); return q && !q.fallback; });
+  const hreflang = origin && !meta.noindex ? alts.map((l) => `<link rel="alternate" hreflang="${l.code}" href="${esc(origin + l.prefix + base)}">\n`).join('') + `<link rel="alternate" hreflang="x-default" href="${esc(origin + base)}">\n` : '';
   return `<!doctype html>
-<html lang="en-GB">
+<html lang="${L.code}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -144,9 +176,9 @@ function page(meta, content, nav = [], current = '') {
 <meta name="description" content="${esc(meta.description || '')}">
 <link rel="stylesheet" href="/assets/style.css">
 ${meta.design ? '<link rel="stylesheet" href="/assets/designs.css">\n' : ''}<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !meta.noindex ? `<link rel="canonical" href="${esc(origin + current)}">\n` : ''}<meta property="og:type" content="website">
+${meta.noindex ? '<meta name="robots" content="noindex">\n' : ''}${origin && !meta.noindex ? `<link rel="canonical" href="${esc(origin + current)}">\n` : (origin && meta.fallback ? `<link rel="canonical" href="${esc(origin + base)}">\n` : '')}${hreflang}<meta property="og:type" content="website">
 <meta property="og:site_name" content="AgentiCCells">
-<meta property="og:locale" content="en_GB">
+<meta property="og:locale" content="${L.og}">
 <meta property="og:title" content="${esc(meta.title || '')}">
 <meta property="og:description" content="${esc(meta.description || '')}">
 ${origin ? `<meta property="og:url" content="${esc(origin + current)}">
@@ -158,14 +190,14 @@ ${origin ? `<meta property="og:url" content="${esc(origin + current)}">
 <meta name="twitter:image" content="${esc(origin + SHARE_CARD)}">
 ` : ''}<meta name="twitter:card" content="summary_large_image">
 </head>
-<body${current === '/' || meta.design ? ` class="home wide${meta.design ? ' design-' + meta.design : ''}"` : meta.wide ? ' class="wide"' : ''}>
-<a class="skip" href="#main">Skip to the content</a>
-${current === '/' || meta.design ? designBar(meta.design || 'calm') : ''}
-<header><a class="brand" href="/">${MARK}<span>AgentiCCells</span></a>${navHtml(nav, current)}</header>
+<body${base === '/' || meta.design ? ` class="home wide${meta.design ? ' design-' + meta.design : ''}"` : meta.wide ? ' class="wide"' : ''}>
+<a class="skip" href="#main">${esc(U.skip)}</a>
+${(current === '/' || meta.design) && L === EN ? designBar(meta.design || 'calm') : ''}
+<header><a class="brand" href="${L.prefix || ''}/">${MARK}<span>AgentiCCells</span></a>${navHtml(nav, current, U)}${switcher(meta, L, U)}</header>
 <main id="main" tabindex="-1">
 ${content}
 </main>
-<footer>${moreHtml(nav, current)}<p>Contact: <a href="mailto:${contact}">${contact}</a></p><p>Code under Apache-2.0. Text and images under CC BY 4.0. Older pages: <a href="/archive/">the archive</a>.</p><p class="version">Version ${esc(version)}</p></footer>
+<footer>${moreHtml(nav, current, U)}<p>${esc(U.contact)}: <a href="mailto:${contact}">${contact}</a></p><p>${esc(U.licence)} ${esc(U.older)} <a href="/archive/">${esc(U.archive)}</a>.</p><p class="version">${esc(U.version)} ${esc(version)}</p></footer>
 </body>
 </html>
 `;
@@ -199,7 +231,19 @@ for (const f of readdirSync(join(root, 'content')).filter((f) => f.endsWith('.md
     throw new Error(`content/${f}: archive needs a date (YYYY-MM-DD) and an archive_why line`);
   }
   const note = archived ? `<p class="note archive-note"><strong>Archived on ${esc(archived.date)}.</strong> ${esc(archived.why)} This page keeps its address and its words as they were. See the <a href="/archive/">archive</a>.</p>\n` : '';
-  pages.push({ path, title: meta.title, description: meta.description, nav: archived ? undefined : meta.nav, archived, html: note + markdown(body), source: `content/${f}` });
+  pages.push({ path, base: path, loc: EN, title: meta.title, description: meta.description, nav: archived ? undefined : meta.nav, archived, html: note + markdown(body), source: `content/${f}` });
+}
+
+// V-I18N: content/<dir>/*.md mirrors content/ for each other locale. Same front matter, same tokens; the page lives at /<dir>/<name>/.
+// Only the five selling pages are required by the validator; the rest fall back to English (below, once the English pages are final).
+for (const L of LOCALES.slice(1)) {
+  const dir = join(root, 'content', L.dir);
+  if (!existsSync(dir)) continue;
+  for (const f of readdirSync(dir).filter((f) => f.endsWith('.md')).sort()) {
+    const { meta, body } = frontMatter(readFileSync(join(dir, f), 'utf8'));
+    const base = f === 'index.md' ? '/' : `/${f.replace(/\.md$/, '')}/`;
+    pages.push({ path: L.prefix + base, base, loc: L, title: meta.title, description: meta.description, nav: meta.nav, html: markdown(body, L), source: `content/${L.dir}/${f}` });
+  }
 }
 
 // Page hooks: build/pages/*.mjs, each `export default async function (ctx)` returning
@@ -218,7 +262,7 @@ if (existsSync(hookDir)) {
       for (const k of ['path', 'title', 'description', 'html']) {
         if (typeof p?.[k] !== 'string') throw new Error(`build/pages/${f}: page ${p?.path ?? '?'} has no ${k}`);
       }
-      pages.push({ ...p, source: `build/pages/${f}` });
+      pages.push({ ...p, loc: EN, base: p.path, source: `build/pages/${f}` });
     }
   }
 }
@@ -230,6 +274,7 @@ for (const p of pages) {
   seen.set(p.file, p.source);
 }
 const nav = pages
+  .filter((p) => p.loc === EN)
   .filter((p) => p.nav !== undefined && p.nav !== '' && Number.isFinite(Number(p.nav)))
   .sort((a, b) => Number(a.nav) - Number(b.nav) || String(a.title).localeCompare(String(b.title)))
   .map((p) => ({ url: urlFor(p.file), title: p.title }));
@@ -273,14 +318,17 @@ for (const p of pages) if (p.path === '/') {
 // Inner pages (D-RV5, D-RV6): the same soft band as the hero around the title and the lede, a wider grid,
 // and a one-line call to action at the end (not on the offer page itself).
 const slug = (t) => t.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+// Locales keep letters of any script in anchors (accents folded, CJK kept).
+const slugU = (t) => t.replace(/<[^>]+>/g, '').toLowerCase().replace(/&[a-z]+;/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-|-$/g, '');
 for (const p of pages) {
-  if (p.path === '/' || !(p.source.startsWith('content/') || p.path === '/key/')) continue;
+  if (p.base === '/' || !(p.source.startsWith('content/') || p.path === '/key/')) continue;
   p.wide = true;
+  const U = ui(p.loc);
   // D-RV7: the band uses its width: title and lede on the left, "On this page" (the h2 headings) on the right.
   const used = new Set();
   const heads = [];
   p.html = p.html.replace(/<h2>([\s\S]*?)<\/h2>/g, (all, t) => {
-    let id = slug(t) || 'section'; while (used.has(id)) id += '-2'; used.add(id);
+    let id = (p.loc === EN ? slug(t) : slugU(t)) || 'section'; while (used.has(id)) id += '-2'; used.add(id);
     heads.push({ id, t });
     return `<h2 id="${id}">${t}</h2>`;
   });
@@ -288,10 +336,10 @@ for (const p of pages) {
   // On a page with a "Four ways to start" side panel it stays in the band; elsewhere it is a sticky side column.
   const items = heads.map((h) => `<li><a href="#${h.id}">${h.t}</a></li>`).join('');
   const inBand = heads.some((h) => h.id === 'four-ways-to-start');
-  const toc = heads.length >= 3 ? `<div class="toc${inBand ? '' : ' side'}"><nav class="toc-wide" aria-label="On this page"><p>On this page</p><ol>${items}</ol></nav><details class="toc-narrow"><summary>Jump to</summary><nav aria-label="On this page (menu)"><ol>${items}</ol></nav></details></div>\n` : '';
+  const toc = heads.length >= 3 ? `<div class="toc${inBand ? '' : ' side'}"><nav class="toc-wide" aria-label="${esc(U.onThisPage)}"><p>${esc(U.onThisPage)}</p><ol>${items}</ol></nav><details class="toc-narrow"><summary>${esc(U.jumpTo)}</summary><nav aria-label="${esc(U.onThisPage)} (menu)"><ol>${items}</ol></nav></details></div>\n` : '';
   const m = /^(<h1[^>]*>[\s\S]*?<\/h1>)\s*(<p(?: class="note")?>[\s\S]*?<\/p>)?/.exec(p.html);
   if (m) p.html = `<section class="page-head${toc && inBand ? ' has-toc' : ''}">\n<div class="head-main">\n${m[1]}\n${m[2] ? m[2].replace(/^<p( class="note")?>/, (x, n) => `<p class="lede${n ? ' note' : ''}">`) + '\n' : ''}</div>\n${inBand ? toc : ''}</section>` + (inBand ? '' : toc) + p.html.slice(m[0].length);
-  if (p.path !== '/website-cell/') p.html += `\n<aside class="closing"><p>Want a website built this way? <a class="button" href="/website-cell/">See the website cell</a></p></aside>`;
+  if (p.base !== '/website-cell/') p.html += `\n<aside class="closing"><p>${esc(U.closing)} <a class="button" href="/website-cell/">${esc(U.closingBtn)}</a></p></aside>`;
 }
 
 // Seven-step diagram on the website cell page (D9): inline SVG, no external files.
@@ -397,6 +445,18 @@ function sectioned(html) {
   calm.html = calm.html.slice(0, m) + CALM_PHOTO + calm.html.slice(m);
 }
 
+// V-I18N fallback: an English page with no translation in a locale appears at that locale's address as the English page with a
+// note in the locale's language. It is noindex, its canonical is the English page, and it is not in hreflang or a sitemap,
+// so a search engine never sees it as a duplicate. Archived pages and page hooks (console, articles, key) are not mirrored.
+for (const L of LOCALES.slice(1)) {
+  const U = ui(L);
+  for (const p of pages.filter((p) => p.loc === EN && /^content\/[^/]+\.md$/.test(p.source || '') && !p.archived)) {
+    if (pages.some((q) => q.path === L.prefix + p.path)) continue;
+    pages.push({ ...p, path: L.prefix + p.path, file: fileFor(L.prefix + p.path), base: p.path, loc: L, noindex: true, fallback: true, design: p.design,
+      html: `<p class="note fallback-note">${esc(U.fallback)}</p>\n<div class="fallback-en" lang="en-GB">\n${p.html}\n</div>`, source: 'build/build.mjs (fallback)', nav: undefined });
+  }
+}
+
 // 404 page (GitHub Pages serves site/404.html for unknown paths). Not indexed, not in the nav.
 if (!seen.has('404.html')) pages.push({
   path: '/404.html', file: '404.html', title: 'Page not found', noindex: true,
@@ -404,9 +464,14 @@ if (!seen.has('404.html')) pages.push({
   html: '<h1>Page not found</h1>\n<p>There is nothing at this address. Try the menu above, or go to the <a href="/">home page</a>.</p>',
 });
 
+for (const p of pages) { p.file ||= fileFor(p.path); p.loc ||= EN; p.base ||= p.path; pageByPath.set(p.path, p); }
+const navs = new Map(LOCALES.map((L) => [L, navFor(L)]));
 for (const p of pages) {
+  let html = p.html;
+  // In a locale, an internal link to a page that exists in that locale stays in that locale.
+  if (p.loc !== EN) html = html.replace(/href="(\/[^"#?]*)([^"]*)"/g, (m, path, rest) => pageByPath.has(p.loc.prefix + path) ? `href="${p.loc.prefix}${path}${rest}"` : m);
   mkdirSync(dirname(join(out, p.file)), { recursive: true });
-  writeFileSync(join(out, p.file), page(p, p.html, nav, urlFor(p.file)));
+  writeFileSync(join(out, p.file), page(p, html, navs.get(p.loc || EN), urlFor(p.file)));
 }
 // Recursive, so assets may hold folders (assets/media/websummit-2026/, conductor@ 2026-11-16).
 cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true });
@@ -418,14 +483,24 @@ for (const { path, content } of ctx.files) {
   mkdirSync(dirname(join(out, file)), { recursive: true });
   writeFileSync(join(out, file), content);
 }
-// robots.txt and sitemap.xml (every indexable page; no dates, since the build holds none that are true).
-const indexable = pages.filter((p) => !p.noindex && !p.archived).map((p) => urlFor(p.file)).sort();
-// Archived pages stay in the sitemap, listed after the others under an Archive comment (V-ARCHIVE).
-const archivedUrls = pages.filter((p) => !p.noindex && p.archived).map((p) => urlFor(p.file)).sort();
+// robots.txt and sitemaps (every indexable page; no dates, since the build holds none that are true). One sitemap per locale:
+// sitemap.xml is English, sitemap-<dir>.xml the others (only for a locale with a translated page), sitemap-index.xml lists them.
 const loc = (u) => `<url><loc>${esc(origin + u)}</loc></url>`;
+const urlset = (body) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+const sitemaps = [];
 if (origin) {
-  writeFileSync(join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexable.map(loc).join('\n')}${archivedUrls.length ? `\n<!-- Archive -->\n${archivedUrls.map(loc).join('\n')}` : ''}\n</urlset>\n`);
-  writeFileSync(join(out, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
+  for (const L of LOCALES) {
+    const mine = pages.filter((p) => p.loc === L);
+    const indexable = mine.filter((p) => !p.noindex && !p.archived).map((p) => urlFor(p.file)).sort();
+    // Archived pages stay in the sitemap, listed after the others under an Archive comment (V-ARCHIVE).
+    const archivedUrls = mine.filter((p) => !p.noindex && p.archived).map((p) => urlFor(p.file)).sort();
+    if (!indexable.length && !archivedUrls.length) continue;
+    const name = L === EN ? 'sitemap.xml' : `sitemap-${L.dir}.xml`;
+    sitemaps.push(name);
+    writeFileSync(join(out, name), urlset(`${indexable.map(loc).join('\n')}${archivedUrls.length ? `\n<!-- Archive -->\n${archivedUrls.map(loc).join('\n')}` : ''}`));
+  }
+  writeFileSync(join(out, 'sitemap-index.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemaps.map((n) => `<sitemap><loc>${esc(origin + '/' + n)}</loc></sitemap>`).join('\n')}\n</sitemapindex>\n`);
+  writeFileSync(join(out, 'robots.txt'), `User-agent: *\nAllow: /\n\n${sitemaps.map((n) => `Sitemap: ${origin}/${n}`).join('\n')}\nSitemap: ${origin}/sitemap-index.xml\n`);
 }
 writeFileSync(join(out, 'version.json'), JSON.stringify({ version }) + '\n');
 console.log(`built site/ (${version}, ${pages.length} pages)`);
