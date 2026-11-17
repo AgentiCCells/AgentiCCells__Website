@@ -149,3 +149,8 @@ Brief: Dinis, board/briefs/two-sites-2026-11-16.md ("the 5 designs really go to 
 
 ## D-FIVE-IMPROVE-2 · Editorial lifted (designer@, 2026-11-17)
 Editorial was the one design with no pictures, so it read as Calm in a serif. Now a printed front page: a double-ruled dateline (Lisbon, November 2026, licences), "Plate 1" (the RiskMandate stand photo, grayscale with a sepia tint and a thin frame, badges already blurred in the file) beside the opening at 48rem and up with the cell diagram under it, and under the offer strip a row of three numbered figures (Fig. 1 to 3: RiskMandate, the X-ray, the map article), screenshots from research/proof/shots/ in grayscale that take colour on hover or focus, each linked to its live page. Captions name no one and carry no figure. Same words in all five designs; markup in `ED_*` in build/build.mjs, styles at the end of assets/designs.css. Checked with Chromium at 390 and 1366 px, light and dark: no horizontal scroll, images load, palette unchanged (contrast figures above still apply; the new text uses --muted and --accent on --bg). Not checked: axe on the page.
+
+## D7 logo mark without a two-C glyph (designer@AgentiCCells.dinis, 2026-11-17)
+- Reason: researcher@'s S4 note (research/cc-trademark.md, 2026-11-16) says no circle-C, no two-C glyph, no look-alike of the CC logo. The D10 mark was two overlapping C arcs, which is a two-C glyph.
+- Now: a rounded square outline (a cell, lighter) with a solid rounded square inside it (the nucleus), accent colour, inline SVG in `MARK` in build/build.mjs. No letters, no arcs, no circle. The wordmark is the plain word "AgentiCCells" as before.
+- Open for Dinis: whether the name itself is acceptable (S4 options A, B, C); nothing has been sent to Creative Commons.
