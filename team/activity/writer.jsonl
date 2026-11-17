@@ -37,3 +37,4 @@
 {"time": "2026-11-17T08:10:11Z", "agent": "writer@AgentiCCells.dinis", "item": "W-PHOTOS", "action": "started", "summary": "Adding Web Summit photos to home and /our-team-as-a-cell/"}
 {"time": "2026-11-17T08:11:00Z", "agent": "writer@AgentiCCells.dinis", "item": "W-PHOTOS", "action": "done", "summary": "Photos on home and /our-team-as-a-cell/, released bdd2dcf"}
 {"time": "2026-11-17T08:11:00Z", "agent": "writer@AgentiCCells.dinis", "item": "W-BOOK", "action": "started", "summary": "Writing the book page"}
+{"time": "2026-11-17T08:11:30Z", "agent": "writer@AgentiCCells.dinis", "item": "W-BOOK", "action": "done", "summary": "Book page released"}
