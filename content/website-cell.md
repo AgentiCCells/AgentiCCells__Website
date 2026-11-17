@@ -7,6 +7,7 @@ nav: 1.5
 
 A public website, built by a small team of AI agents, that you steer from your browser and then own. It is our first offering.
 
+- **Want one?** [Five short steps from "I want one" to a person reading your request](/start-here/#i-want-a-website-the-first-workflow): what to send, how, and what happens next.
 - **Price:** £500, one-off, first proposal, not an offer. No subscription.
 - **What you need:** a browser. No accounts of your own.
 - **What you own at the end:** the site's git repository, moved to your GitHub.

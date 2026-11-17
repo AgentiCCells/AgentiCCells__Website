@@ -6,3 +6,5 @@
 {"time": "2026-11-17T14:10:57Z", "agent": "sherpa@AgentiCCells.dinis", "item": "SU1", "action": "wrote", "summary": "proposal drafted: security-review section and hub route"}
 {"time": "2026-11-17T16:09:19Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P-RV3", "action": "started", "summary": "walk / to /trust/ to email at 390 px"}
 {"time": "2026-11-17T16:09:48Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P-RV3", "action": "done", "summary": "proposal written, path mapped"}
+{"time": "2026-11-17T20:09:40Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P-SELL", "action": "started", "summary": "Writing the buying path: home to I want one in two clicks"}
+{"time": "2026-11-17T20:10:49Z", "agent": "sherpa@AgentiCCells.dinis", "item": "P-SELL", "action": "done", "summary": "Buying path on /start-here/, linked from home and website cell"}

@@ -7,9 +7,24 @@ nav: 1.2
 
 You want an agentic team. Many people talk about doing this. We do it, and this page says where to start. You do not need the big version first.
 
+If you just want a website, [go straight to the buying steps](#i-want-a-website-the-first-workflow).
+
 Begin with a very simple workflow and grow only when it earns it. Everything we write here is open source, with no lock-in.
 
 **Already run agents and need to control them?** Go to [riskmandate.ai](https://riskmandate.ai), which writes the behaviour policy and sells on the same ladder. Come back here when you want a team set up with its policies.
+
+## I want a website: the first workflow
+
+This is the shortest route from "I want one" to a person reading your request. It is a proposal of the steps; the end-to-end flow is being built now, the first orders will be run by hand, and nothing has been sold yet. The price is £500, one-off, first proposal, not an offer; Dinis has not yet confirmed a launch price.
+
+1. **Look at the examples.** [The hub](https://hub.agenticcells.site/) has a page for each site we have made, all demos.
+2. **Gather what we ask for.** A short description of you or your project, in your own words; photos; and videos if you have them. Some of it can be public already, such as an existing profile; send the link. Nothing else is needed to start.
+3. **Email it.** [Open an email to agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=I%20want%20a%20website%20cell&body=Who%20I%20am%20and%20what%20the%20site%20is%20for%3A%0A%0ALinks%20to%20photos%20and%20videos%20%28or%20I%20will%20attach%20them%29%3A%0A%0AAn%20existing%20profile%20or%20site%2C%20if%20any%3A) with the subject and three prompts already filled in. Attach files or send links. There is no form: the site stores nothing of yours, and neither do we keep your files after handover.
+4. **A person replies.** The email goes to a person, who reads it and answers. We have not set a reply time, so none is promised. The reply says whether your material is enough, which price applies, and what happens next.
+5. **We build it.** A team of agents builds the site from your material and shows you a preview. You say what to change.
+6. **It is handed over.** The site is a static site in a GitHub repository that you own, and you can change it on your own Claude or host it anywhere that serves a GitHub repository. Our part ends there: no subscription and no support from us.
+
+Want a second opinion before you write? The [trust and security page](/trust/) says what our agents can reach and how to stop them. More on the offer is on the [website cell page](/website-cell/).
 
 ## Step one: one very simple workflow
 

@@ -11,6 +11,8 @@ An agent team builds your website. You give us photos, videos and a short descri
 
 **[Get one: see how it works and what to send](/website-cell/)**
 
+**[I want one: what to send, how, and what happens next](/start-here/#i-want-a-website-the-first-workflow)**
+
 **What you give.** A set of photos and videos and a description of you or your work. Some can already be public, for example an existing profile. Nothing else to start.
 
 **What you get.** A finished site in a GitHub repository you own, live on an address. A Claude session that you can ask for changes. Because the site is static and in GitHub, you can run it anywhere that serves a repository as a static site,, and we are writing guidance for each host.
