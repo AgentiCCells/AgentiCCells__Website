@@ -89,7 +89,7 @@ function stack(which) {
 // The site nav: every page with a `nav:` number in its front matter (or returned
 // by a page hook), in that number's order. Pages without one stay out of the nav.
 // Primary links (in this order); every other nav page goes to the footer "More" group.
-const PRIMARY = ['/', '/website-cell/', '/cells/', '/method/', '/about/'];
+const PRIMARY = ['/', '/start-here/', '/website-cell/', '/cells/', '/method/'];
 const MARK = '<svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><path d="M17 6.5A10.5 10.5 0 1 0 17 25.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" opacity=".45"/><path d="M25 9.5A10.5 10.5 0 1 0 25 22.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg>';
 function primaryNav(nav) {
   return PRIMARY.map((u) => nav.find((n) => n.url === u)).filter(Boolean);
