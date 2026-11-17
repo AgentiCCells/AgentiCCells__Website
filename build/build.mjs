@@ -84,7 +84,8 @@ function offer() {
   const price = o.launch_gbp == null
     ? `<strong>${gbp(o.anchor_gbp)}</strong>, one-off`
     : `<s>${gbp(o.anchor_gbp)}</s> <strong><a href="${OFFER_URL}">${gbp(o.launch_gbp)}</a></strong> launch price, one-off`;
-  return `<p class="offer">${price} (first proposal, ${esc(o.note)}; ${esc(o.offer_label)}). No subscription.</p>`;
+  return `<p class="offer">${price} (${o.launch_gbp == null ? 'first proposal, ' : ''}${esc(o.note)}; ${esc(o.offer_label)}). No subscription.`+
+    `${o.free_eval ? ` <a href="mailto:${contact}?subject=Free%20evaluation%20site">${esc(o.free_eval)}</a>` : ''}</p>`;
 }
 
 function ladder() {
@@ -264,7 +265,7 @@ const EXAMPLE_ROW = '<section class="examples" aria-labelledby="see-what-we-have
   '\n</ul>\n<p><a href="https://hub.agenticcells.site/">All cells on the hub</a>. The hub lists; it does not sell. Screenshots are the first screen of each live site, taken on 17 November 2026.</p>\n</section>\n';
 // D-SELL: the selling first screen. After the offer strip: the example wall, then the price block with one call to action.
 // The launch price is shown struck-through only once data/offer.json carries one (V-OFFER); the block strikes the anchor and shows the launch price, linked to that file.
-const PRICE_BLOCK = `<aside class="price-block" aria-label="Price"><div class="pb-price"><p class="pb-label">The website cell</p><p class="pb-amount">${offerData.launch_gbp == null ? `<strong>${gbp(offerData.anchor_gbp)}</strong>` : `<s class="pb-was">${gbp(offerData.anchor_gbp)}</s> <strong><a href="${OFFER_URL}">${gbp(offerData.launch_gbp)}</a></strong>`} <span>one-off, first proposal${offerData.launch_gbp == null ? '' : ', launch price'}</span></p><p class="pb-note">Not yet sold. No subscription, and no support contract, from us.</p></div><div class="pb-give"><p><strong>You give us</strong> photos, videos and a description. Some can already be public.</p><p><strong>You get</strong> a finished static site in a GitHub repository you own, which you can keep changing with Claude or deploy anywhere that serves static sites.</p></div><p class="pb-cta"><a class="button" href="mailto:${contact}?subject=I%20would%20like%20a%20website%20cell">Ask for a site like these</a> <a href="/website-cell/">How it works, in seven steps</a></p></aside>\n`;
+const PRICE_BLOCK = `<aside class="price-block" aria-label="Price"><div class="pb-price"><p class="pb-label">The website cell</p><p class="pb-amount">${offerData.launch_gbp == null ? `<strong>${gbp(offerData.anchor_gbp)}</strong>` : `<s class="pb-was">${gbp(offerData.anchor_gbp)}</s> <strong><a href="${OFFER_URL}">${gbp(offerData.launch_gbp)}</a></strong>`} <span>one-off${offerData.launch_gbp == null ? ', first proposal' : ', launch price, may change'}</span></p><p class="pb-note">No subscription, and no support contract, from us.${offerData.free_eval ? ` <a href="mailto:${contact}?subject=Free%20evaluation%20site">${esc(offerData.free_eval)}</a>` : ''}</p></div><div class="pb-give"><p><strong>You give us</strong> photos, videos and a description. Some can already be public.</p><p><strong>You get</strong> a finished static site in a GitHub repository you own, which you can keep changing with Claude or deploy anywhere that serves static sites.</p></div><p class="pb-cta"><a class="button" href="mailto:${contact}?subject=I%20would%20like%20a%20website%20cell">Ask for a site like these</a> <a href="/website-cell/">How it works, in seven steps</a></p></aside>\n`;
 for (const p of pages) if (p.path === '/') {
   p.html = p.html.replace('</section>\n', '</section>\n' + OFFER + '\n' + EXAMPLE_ROW + PRICE_BLOCK);
 }

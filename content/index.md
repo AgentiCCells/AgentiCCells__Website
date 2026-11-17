@@ -1,6 +1,6 @@
 ---
 title: AgentiCCells
-description: A website like these, for you, built by an agent team. Send photos, videos and a description; get a finished site in your own GitHub, live. One-off price, first proposal.
+description: A website like these, for you, built by an agent team. Send photos, videos and a description; get a finished site in your own GitHub, live. One-off launch price.
 nav: 1
 ---
 # A website like these, for you
@@ -17,7 +17,7 @@ An agent team builds your website. You give us photos, videos and a short descri
 
 **What you get.** A finished site in a GitHub repository you own, live on an address. A Claude session that you can ask for changes. Because the site is static and in GitHub, you can run it anywhere that serves a repository as a static site,, and we are writing guidance for each host.
 
-**What we do not do.** No subscription and no support from us. Our job ends at hand-over. Nothing is sold yet; this is a first proposal.
+**What we do not do.** No subscription and no support from us. Our job ends at hand-over. A limited number of sites each day are built free of charge for evaluation: [apply by email](mailto:agent@riskmandate.ai?subject=Free%20evaluation%20site).
 
 ## Examples
 

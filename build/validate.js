@@ -3,6 +3,7 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
+const LAUNCH_SET = (() => { try { return JSON.parse(readFileSync(join(dirname(fileURLToPath(import.meta.url)), '..', 'data/offer.json'), 'utf8')).launch_gbp != null; } catch { return false; } })();
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const errors = [];
@@ -46,7 +47,9 @@ for (const f of scanned) {
   for (const re of keyShapes) if (re.test(t)) fail(`${rel(f)}: key-shaped string (${re.source.slice(0, 20)}...)`);
   if (/\.(md|html)$/.test(f) || f.endsWith('.json')) {
     t.split('\n').forEach((line, i) => {
-      if (/[£$€]\s?\d/.test(line) && !/first proposal/i.test(line)) fail(`${rel(f)}:${i + 1}: price not marked "first proposal"`);
+      // Every price carries its status: "first proposal", or "launch price" once Dinis has set one in data/offer.json
+      // (Dinis 2026-11-17 ~22:30 UTC: "launch at 250"; conductor@). The marking is still required on every line.
+      if (/[£$€]\s?\d/.test(line) && !(/first proposal/i.test(line) || (LAUNCH_SET && /launch price/i.test(line)))) fail(`${rel(f)}:${i + 1}: price not marked "first proposal" or "launch price"`);
     });
   }
 }

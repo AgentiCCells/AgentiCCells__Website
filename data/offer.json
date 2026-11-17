@@ -1,8 +1,9 @@
 {
  "_about": "The one source of the website cell's price and offer. Pages use the {{offer}} token; never write the price into a page by hand. First written by writer@AgentiCCells.dinis for W-SELL1 because V-OFFER (dev@) was not yet done; dev@ owns this file and may extend it (validator, more tokens).",
- "_source": "Dinis Cruz, 2026-11-17 ~19:30 UTC, board/briefs/website-cell-sales-2026-11-17.md: anchor around 500 pounds; launch price undecided (50, 20% off or 50% off).",
+ "_source": "Dinis Cruz, 2026-11-17 ~19:30 UTC (anchor around 500 pounds) and ~22:30 UTC: \"Why don't we launch at 250 promotional value... add a note to say ping us if you want to for an evaluation... a limited number of sort of like daily ones that we'll do for free... can you apply for that\" (board/BRIEF.md).",
  "anchor_gbp": 500,
- "launch_gbp": null,
- "offer_label": "launch offer coming",
- "note": "may change"
+ "launch_gbp": 250,
+ "offer_label": "launch price",
+ "note": "may change",
+ "free_eval": "We also build a limited number of sites each day free of charge, for evaluation. Apply by email."
 }

@@ -9,7 +9,7 @@ A public website, built by a small team of AI agents from your photos, videos an
 
 {{offer}}
 
-- **Price:** {{price}}, one-off, first proposal, not yet an offer. No subscription. The launch price is not decided; the number comes from one data file, [data/offer.json](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/offer.json).
+- **Price:** {{price}}, one-off; the launch price may change. No subscription. A limited number of sites each day are built free of charge for evaluation: [apply by email](mailto:agent@riskmandate.ai?subject=Free%20evaluation%20site). The number comes from one data file, [data/offer.json](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/offer.json).
 - **Want one?** [Email agent@riskmandate.ai](mailto:agent@riskmandate.ai?subject=I%20would%20like%20a%20website%20cell) with a line about the site you want. A person reads it. Or see the [five short steps](/start-here/#i-want-a-website-the-first-workflow).
 - **Status:** nothing has been sold yet. Every example below is a demo we host to show the work, and none is a customer's. The first orders will be run by hand, and we will say so.
 
@@ -109,7 +109,7 @@ The article's security notes: keys travel only sealed to a public key; the facto
 ## Limits
 
 - Public websites only, for now. This keeps publishing simple.
-- The price and the flow are a first proposal, not an offer.
+- The launch price may change. The first orders are run with a person checking each step.
 - The end-to-end flow is being built now. The pieces exist: the agentic team that built this site, person keys and vault lanes. The steps of the plan above are not yet joined up.
 - No website cell has been sold yet.
 
@@ -120,7 +120,7 @@ More answers, including what happens when you leave, are on the [questions and a
 1. **Free: the recipe.** The brief, the policy and the steps to run it yourself, with your own Claude. Proposal: the recipe for this cell is not yet published. The nearest pieces today are [how this site was built](/how-this-site-was-built/).
 2. **Our agent helps you.** A specialist agent reviews your setup and tells you what to fix. Proposal: not yet running.
 3. **We help you: £1,500.** Two sessions with a person, then you run the team in your own GitHub and Claude accounts. First proposal, not an offer. See [the cells page](/cells/).
-4. **We set it up for you: {{price}}.** The steps above, on our accounts, handed over to you. First proposal, not an offer. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. The first orders will be run by hand, and we will say so.
+4. **We set it up for you: {{price}}.** The steps above, on our accounts, handed over to you. Email [agent@riskmandate.ai](mailto:agent@riskmandate.ai) with a line about the site you want. The first orders will be run by hand, and we will say so.
 
 ## Five ways to make a cell yours
 
