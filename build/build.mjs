@@ -133,7 +133,7 @@ ${current === '/' || meta.design ? designBar(meta.design || 'calm') : ''}
 <main id="main" tabindex="-1">
 ${content}
 </main>
-<footer>${moreHtml(nav, current)}<p>Contact: <a href="mailto:${contact}">${contact}</a></p><p>Code under Apache-2.0. Text and images under CC BY 4.0.</p><p class="version">Version ${esc(version)}</p></footer>
+<footer>${moreHtml(nav, current)}<p>Contact: <a href="mailto:${contact}">${contact}</a></p><p>Code under Apache-2.0. Text and images under CC BY 4.0. Older pages: <a href="/archive/">the archive</a>.</p><p class="version">Version ${esc(version)}</p></footer>
 </body>
 </html>
 `;
@@ -226,7 +226,7 @@ const EXAMPLES = [
 ];
 const EXAMPLE_ROW = '<section class="examples" aria-labelledby="see-what-we-have-made">\n<h2 id="see-what-we-have-made">See what we have made</h2>\n<ul class="example-cards">\n' + EXAMPLES.map(([img, name, what, slug]) =>
   `<li><a href="https://hub.agenticcells.site/cells/${slug}/"><img src="/assets/${img}" srcset="/assets/${img.replace('.webp', '-half.webp')} 550w, /assets/${img} 1100w" sizes="(max-width: 40rem) 100vw, 22rem" width="1100" height="480" loading="lazy" decoding="async" alt="Top of the ${name} site, as the hub shows it"><span class="ex-body"><span class="ex-tag">Demo</span><strong>${name}</strong><span>${what}</span></span></a></li>`).join('\n') +
-  '\n</ul>\n<p><a href="https://hub.agenticcells.site/">All cells on the hub</a>. The hub lists; it does not sell. Screenshots are the hub\'s own.</p>\n</section>\n';
+  '\n<li><a href="/the-book/"><span class="ex-body"><span class="ex-tag">Draft</span><strong>The book: One Human, Nine Agents, Nineteen Hours</strong><span>By Dinis Cruz. Read the PDF draft here, the <a href="https://leanpub.com/one-human-nine-agents-nineteen-hours">Leanpub page</a> or <a href="https://the-ultimate-insider.book.sgit.ai/">the book\'s site</a>.</span></span></a></li>\n</ul>\n<p><a href="https://hub.agenticcells.site/">All cells on the hub</a>. The hub lists; it does not sell. Screenshots are the hub\'s own.</p>\n</section>\n';
 for (const p of pages) if (p.path === '/') {
   p.html = p.html.replace('</section>\n', '</section>\n' + OFFER + '\n');
   const k = p.html.indexOf('<h2>How to start</h2>');

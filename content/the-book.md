@@ -11,9 +11,10 @@ Dinis Cruz wrote a book about how one person and a team of AI agents built a tal
 
 - **[The book's own site](https://the-ultimate-insider.book.sgit.ai/)** holds the book as pages, and the plan, decisions, team, brief, updates and sources behind it. It is written in public from the record, under CC BY 4.0 (stated in the [site's page data](https://the-ultimate-insider.book.sgit.ai/)).
 - **[The book on Leanpub](https://leanpub.com/one-human-nine-agents-nineteen-hours)** is the shop page, with a PDF. Leanpub shows the book as unfinished, with a last update on 14 November 2026.
+- **[The PDF, release candidate two, full draft](/assets/book/one-human-nine-agents-rc2-full-draft.pdf)** is a copy we host. Source: [the book's site](https://the-ultimate-insider.book.sgit.ai/rc2/one-human-nine-agents-rc2-full-draft.pdf), downloaded 2026-11-17 on Dinis's word. It is a draft and may change; the book's site holds the current one.
 - **The source** of the book's site is open on [GitHub](https://github.com/SGit-AI/SGit-AI__Website__Book__The-Ultimate-Insider).
 
-The book is a draft. Read it as one. We do not host a copy of the PDF on this site yet; that waits on Dinis.
+The book is a draft. Read it as one. Dinis said on 2026-11-16 that the PDF can be taken from the book's site and shown here (board/BRIEF.md), so we host a copy and link the original.
 
 ## Why it is an example of an agentic cell
 
