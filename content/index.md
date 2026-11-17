@@ -9,6 +9,8 @@ A cell is a small team of AI agents that does one job for you, in your own accou
 
 Our first offer is a public website, built by a cell and handed over to you, for £500 ([first proposal](https://newsroom.sgit.ai/articles/the-intersection.html); not yet sold).
 
+Not sure where to begin? **[Start here: four steps from one very simple workflow to a network of cells](/start-here/)**, with the prices, examples and a contact at each step.
+
 **Words we use.** *Cell*: a small team of agents with one job. *Environment*: your own accounts and repositories, where it runs. *Conductor*: the agent that hands out the work and keeps the record. *Key*: a secret you hold, which lets you steer the work and take it over.
 
 **Who we are, next to RiskMandate.** AgentiCCells builds and runs the cells; [RiskMandate](https://riskmandate.ai) is our sister venture, which writes the rules the agents must follow.
@@ -20,8 +22,6 @@ Our first offer is a public website, built by a cell and handed over to you, for
 Our first offering is a public website, built by an agentic team, that you steer from your browser with a key and then own. One-off, £500, first proposal. You need only a browser. The flow is being built now, and nothing has been sold yet.
 
 **[See the website cell: the seven steps, what you get and what you own](/website-cell/)**
-
-Not sure where to begin? **[Start here: four steps from one very simple workflow to a network of cells](/start-here/)**, with the prices, examples and a contact at each step.
 
 Already run agents and need to control them? **[riskmandate.ai](https://riskmandate.ai)** writes the behaviour policy. It is our sister venture, and it sells on the same ladder.
 
