@@ -8,7 +8,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
    "live": "https://agenticcells.ai",
-   "version_seen": "v0.1.161",
+   "version_seen": "v0.1.162",
    "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
    "status": "live",
    "listed": true
@@ -68,7 +68,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Jose-Bota",
    "live": "https://jose-bota.agenticcells.site",
-   "version_seen": "v0.1.8",
+   "version_seen": "v0.1.15",
    "what": "José Bota, AI automation expert: a portfolio, made by the site factory.",
    "status": "demo",
    "listed": true,
@@ -213,5 +213,5 @@
   "proposed": "described (often in a newsroom article) or with a repository started; not built yet",
   "test": "a factory pipeline test run, kept as a record"
  },
- "version_checked": "2026-11-17 00:00 UTC"
+ "version_checked": "2026-11-17 07:10 UTC"
 }
