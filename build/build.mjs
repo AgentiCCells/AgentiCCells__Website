@@ -1,4 +1,5 @@
 // Turns content/ and data/ into site/. Node only, no dependencies.
+import { partnerFig, PARTNER_FIG_RE } from './partner-figs.mjs';
 import { cpSync, readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, copyFileSync, existsSync } from 'node:fs';
 import { join, dirname, normalize } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -79,6 +80,7 @@ function markdown(body, L = EN) {
   for (const line of lines) {
     let m;
     if ((m = line.trim().match(/^\{\{photo:(stand)\}\}$/))) { flush(); html.push(photo()); }
+    else if ((m = line.trim().match(PARTNER_FIG_RE))) { flush(); html.push(partnerFig(m[1], m[2])); }
     else if (line.trim() === '{{offer}}') { flush(); html.push(offer(L)); }
     else if (line.trim() === '{{ladder}}') { flush(); html.push(ladder()); }
     else if ((m = line.trim().match(/^\{\{stack(?::(components|runtimes))?\}\}$/))) { flush(); html.push(stack(m[1] || 'components')); }
