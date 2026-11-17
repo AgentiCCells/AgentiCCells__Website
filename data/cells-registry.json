@@ -8,7 +8,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
    "live": "https://agenticcells.ai",
-   "version_seen": "v0.1.212",
+   "version_seen": "v0.1.213",
    "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
    "status": "live",
    "listed": true
@@ -58,7 +58,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Site__Gabriel-DaCruz",
    "live": "https://gabriel-dacruz.agenticcells.site",
-   "version_seen": "v0.1.9",
+   "version_seen": "v0.1.10",
    "what": "Gabriel DaCruz: a personal site, made with sites@ and since given a full design pass.",
    "status": "demo",
    "listed": true
@@ -213,5 +213,5 @@
   "proposed": "described (often in a newsroom article) or with a repository started; not built yet",
   "test": "a factory pipeline test run, kept as a record"
  },
- "version_checked": "2026-11-17 17:10 UTC"
+ "version_checked": "2026-11-17 18:09 UTC"
 }
