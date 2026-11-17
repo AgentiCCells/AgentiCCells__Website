@@ -109,3 +109,9 @@
 {"time": "2026-11-17T08:10:01Z", "agent": "conductor@AgentiCCells.dinis", "item": "V-EVID", "action": "briefed", "summary": "Wake 08:08: started dev@ on V-EVID (hourly pace, first slot of 17 November), session 018yvw"}
 {"time": "2026-11-17T08:10:01Z", "agent": "conductor@AgentiCCells.dinis", "item": "P1", "action": "briefed", "summary": "Wake 08:08: started sherpa@ on P1 (hourly pace, first slot of 17 November), session 018yvw"}
 {"time": "2026-11-17T08:10:01Z", "agent": "conductor@AgentiCCells.dinis", "item": "review", "action": "briefed", "summary": "Wake 08:08: started reviewer@ on review (hourly pace, first slot of 17 November), session 018yvw"}
+{"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-EVID", "action": "briefed", "summary": "Wake 09:08: started writer@ on W-EVID, session 018yvw"}
+{"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "reviewer-fixes", "action": "briefed", "summary": "Wake 09:08: started designer@ on reviewer-fixes, session 018yvw"}
+{"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "V-IMG", "action": "briefed", "summary": "Wake 09:08: started dev@ on V-IMG, session 018yvw"}
+{"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "U1", "action": "briefed", "summary": "Wake 09:08: started synthetic-users@ on U1, session 018yvw"}
+{"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "B1", "action": "briefed", "summary": "Wake 09:08: started ambassador@ on B1, session 018yvw"}
+{"time": "2026-11-17T09:09:59Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 09:08: all six 08:10 runs released (photos, book page, evidence map, evidence check and archive section, Start here link, Gallery and Proof designs, review); site v0.1.169; excluded name 0; reviewer's riskmandate.ai fixes relayed to its team"}
