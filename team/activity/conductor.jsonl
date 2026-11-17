@@ -156,3 +156,7 @@
 {"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "S2", "action": "briefed", "summary": "Wake 16:08: started researcher@ on S2, session 018yvw"}
 {"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "day-scorecard", "action": "briefed", "summary": "Wake 16:08: started reviewer@ on day-scorecard, session 018yvw"}
 {"time": "2026-11-17T16:08:53Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 16:08: 15:10 runs released (limits on /trust/, Editorial design lifted); site v0.1.206; excluded name 0; dev skipped (empty queue)"}
+{"time": "2026-11-17T17:09:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-PDF", "action": "briefed", "summary": "Wake 17:08: started writer@ on W-PDF, session 018yvw"}
+{"time": "2026-11-17T17:09:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "D-DEFAULT", "action": "briefed", "summary": "Wake 17:08: started designer@ on D-DEFAULT, session 018yvw"}
+{"time": "2026-11-17T17:09:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "V-CONSOLE", "action": "briefed", "summary": "Wake 17:08: started dev@ on V-CONSOLE, session 018yvw"}
+{"time": "2026-11-17T17:09:58Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 17:08: day-end scorecard in (3 done, 6 partly, 0 not done); site v0.1.210; excluded name 0; fixes queued; synthetic-users and ambassador skipped (empty queues)"}
