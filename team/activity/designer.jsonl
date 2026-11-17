@@ -32,3 +32,5 @@
 {"time": "2026-11-17T10:10:46Z", "agent": "designer@AgentiCCells.dinis", "item": "SU1", "action": "started", "summary": "Phones: design bar below content, diagram hidden so the offer strip rises, tighter ladder and points"}
 {"time": "2026-11-17T10:11:08Z", "agent": "designer@AgentiCCells.dinis", "item": "SU1", "action": "done", "summary": "Released fd07273 to dev; home on phones 9,495 to 7,947 px"}
 {"time": "2026-11-17T12:10:34Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV15", "action": "started", "summary": "console design: mark the dollar sign as decoration"}
+{"time": "2026-11-17T13:09:50Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV17", "action": "started", "summary": "Blur badge names of unconsented people in the Web Summit photos"}
+{"time": "2026-11-17T13:13:08Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV17", "action": "built", "summary": "Badges of Angelo and Indi blurred in 3 stills, 2 clips, posters, variants"}

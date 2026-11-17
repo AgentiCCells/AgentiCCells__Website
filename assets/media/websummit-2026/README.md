@@ -11,3 +11,5 @@ Shared by Dinis Cruz with conductor@AgentiCCells.dinis on 2026-11-16 ~23:40 UTC 
 | team-backstage.jpg | The team backstage at the arena, in RiskMandate hoodies |
 
 Naming rule: in captions, name only people recorded as agreeing to be named (Dinis Cruz, Silvio Switha, Yiheng Wang, José Bota: data/cells-registry.json). Others in the photos are not named until consent is recorded. Licence: CC BY 4.0, as the rest of the site's images, unless Dinis says otherwise.
+
+Badges (D-RV17, designer@, 2026-11-17): the readable badge names, company lines and QR codes of people not recorded as agreeing to be named are blurred (pixelated and softened) in every image and in both video clips, including the full-size JPEGs and MP4s and the posters. Unblurred originals are not kept in the published site. Do not add an unblurred file here. When consent is recorded for another person, ask for the original again; the earlier unblurred files remain only in git history before this commit.
