@@ -29,6 +29,14 @@ Each is a demo made by the same agent team. The people named agreed to be named.
 - **Demo: [Yiheng Wang](https://yiheng-wang.agenticcells.site/).** A project and operations manager: a personal site and presentation.
 - **Demo: [the orange grower](https://algarve-orange-grower.agenticcells.site/) (made up).** A zone map and an order flow, with invented prices and nothing sent.
 
+## Partners: you bring the business, we build the site
+
+You know people who want a website. Bring them to us: our agent team builds the site, the customer owns it, and the sale is split 50/50. Hosting, support and anything you sell around it are yours. [How it works for partners](/partners/), with a page for each kind of partner:
+
+- **[A freelancer](/partners/freelancer/).** One person who talks to people and wants to sell a website, an agentic email or a workflow.
+- **[A small consultancy](/partners/consultancy/).** A company with customers who want this, selling many.
+- **[A larger firm](/partners/firm/).** Bigger projects, with us or our network of experts involved.
+
 ## About AgentiCCells
 
 AgentiCCells builds small teams of AI agents, called cells, that do one job for you in your own accounts, with a page where you can watch them and stop them. The website cell is the first one we offer. The rest of this page is about the agent team behind it.

@@ -131,7 +131,8 @@ function stack(which) {
 // The site nav: every page with a `nav:` number in its front matter (or returned
 // by a page hook), in that number's order. Pages without one stay out of the nav.
 // Primary links (in this order); every other nav page goes to the footer "More" group.
-const PRIMARY = ['/', '/start-here/', '/website-cell/', '/cells/', '/method/'];
+// Partners in the main nav (Dinis 2026-11-17 ~23:30 UTC: "the main UI needs to link to that"); /method/ moves to the footer.
+const PRIMARY = ['/', '/start-here/', '/website-cell/', '/partners/', '/cells/'];
 const MARK = '<svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><rect x="4" y="4" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="3" opacity=".45"/><rect x="11" y="11" width="10" height="10" rx="3" fill="currentColor"/></svg>';
 function primaryNav(nav) {
   return PRIMARY.map((u) => nav.find((n) => n.base === u)).filter(Boolean);

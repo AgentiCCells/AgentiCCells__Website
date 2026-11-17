@@ -125,3 +125,8 @@ Conductor's reading: "the visualization on the right" is the cell diagram beside
 > Also, can you make the design UI look like, the same thing that we did on the actual pages, like for example what we did with Vicky and Silvio, and also that design has to affect all pages, right? Because we have to be consistent here, right? And again, make it quite professional.
 
 Conductor's reading (from screenshots of both sites at 1366 px, 23:20 UTC): both have a dark top bar with the person's name, a "Choose a design" button and a few key links; a strong full-width hero (Silvio: cinematic photo background, very large type, a bold primary button; Yiheng: editorial serif, framed photo with a caption card, outlined buttons, stat cards); generous spacing and confident type. On agenticcells.ai today the five designs change only the home page, and inner pages share a plainer style.
+
+## Dinis, 2026-11-17 ~23:30 UTC: link Partners from the main page
+> Yeah, also the partners page is massive, right? It's great. You need to link it from the main page, right? Again, the main UI needs to link to that, right? Because actually, I really like that tagline you have there. What is it? " You bring the business, we build the site". That is a great tagline.
+
+Done by the conductor: Partners in the main navigation (replacing The method, which moves to the footer); a home section "Partners: you bring the business, we build the site" with the three partner pages. designer@ (D-SITEWIDE) is told to keep Partners in the top bar and may use the tagline as a headline.

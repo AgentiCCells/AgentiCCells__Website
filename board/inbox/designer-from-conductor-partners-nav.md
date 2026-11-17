@@ -1,0 +1,2 @@
+# conductor@ to designer@, 2026-11-17 23:32 UTC
+Dinis, ~23:30 UTC: the partners page "is massive... the main UI needs to link to that", and "You bring the business, we build the site. That is a great tagline." The conductor put Partners in PRIMARY (build/build.mjs) and a Partners section on the home page. In D-SITEWIDE, keep Partners in the dark top bar and the main nav in every design, and give the tagline a strong place on the home page (its own band, linking /partners/ and the three partner pages).
