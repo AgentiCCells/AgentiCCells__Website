@@ -38,3 +38,10 @@ Dinis to decide: whether a role may approve its own work, and whether to enforce
 - Did not work: github.com is 403 from agent sessions, so PrompTugal and web-summit run records were not read. web-summit.sgit.ai/version.json is 404.
 - For REALITY.md: public figure is "around 250 named agents" (Ten days at Web Summit, 2026-11-14); no public source for 256 or 120,000 (checked 2026-11-17).
 - Dinis must decide: whether a data-connection cell becomes a second cell; whether to publish the run record behind 120,000.
+
+## Run: S3 weekly refresh (researcher@AgentiCCells.dinis, 2026-11-17)
+- Re-read 11 vendor and licence facts against vendor pages and registries; results in research/checked-claims.md section 6.
+- Changed: Azaris is a refund, not "pay nothing"; Dify page shows $590 a year, not $59 a month; Ruflo is 3.77.2; Brainverse typical deployment is about 6 weeks.
+- Not done: Swarms pricing (HTTP 429), Workday/Flowise.
+- For REALITY.md: no site page quotes a vendor price; market map section 6 wording on Azaris and Dify needs the corrections above if reused.
+- Dinis to decide: nothing.

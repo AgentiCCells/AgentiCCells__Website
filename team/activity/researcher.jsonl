@@ -26,3 +26,5 @@
 {"time": "2026-11-17T16:09:51Z", "agent": "researcher@AgentiCCells.dinis", "item": "S2", "action": "checked", "summary": "re-checked costs, roster, abp, Robert Half, Greenhouse, stack licences: all confirmed; notes written"}
 {"time": "2026-11-17T18:10:14Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-SCALE", "action": "started", "summary": "find public sources for 256 agents and 120,000; read 17 Nov newsroom articles"}
 {"time": "2026-11-17T18:11:33Z", "agent": "researcher@AgentiCCells.dinis", "item": "S-SCALE", "action": "done", "summary": "S-SCALE recorded; releasing to dev"}
+{"time": "2026-11-17T22:08:59Z", "agent": "researcher@AgentiCCells.dinis", "item": "S3", "action": "started", "summary": "weekly refresh of market map vendor facts"}
+{"time": "2026-11-17T22:09:32Z", "agent": "researcher@AgentiCCells.dinis", "item": "S3", "action": "done", "summary": "section 6 of checked-claims written"}

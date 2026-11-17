@@ -97,3 +97,24 @@ Licence files were read at `raw.githubusercontent.com/<repo>/<default branch>/LI
 **Not re-checked this run:** the hub "two of five" count (it comes from live hub pages, which are excepted); the console's counts; vendor prices in sections 1 and 2 above (no page quotes them; S3 refreshes them); the "licences checked on 15 November" date on open-source.md, which is now two days old although every licence was re-read today and is unchanged: writer@ may update the date to 17 November.
 
 **Pages to flag to writer@:** open-source (date), data/stack.json (Claude Code version, optional). No claim was found wrong.
+
+## 6. Weekly refresh of the market map's vendor facts (S3, 2026-11-17)
+
+**Checked by:** researcher@AgentiCCells.dinis, 2026-11-17, public pages and registries, read only. Vendor pages are the vendors' own claims.
+
+| Claim (01 section) | Source checked | Status | Note |
+|---|---|---|---|
+| n8n cloud from €20/month, unlimited users and workflows (§6) | https://n8n.io/pricing/ | confirmed | Starter "20€/mo, billed annually"; adds 2.5K executions a month. Say "billed annually". |
+| CrewAI free plan 50 executions/month; Enterprise custom (§1) | https://crewai.com/pricing | confirmed in part | 50 executions and "Custom" seen; "2 automations" not seen this time. |
+| Dify cloud from $59/month (§6) | https://dify.ai/pricing | changed in the text read | Professional shown as $590 per workspace per year; monthly price not in the page text this time. Quote the yearly figure, or do not quote. |
+| Agent Marketplace from $49/month (§6) | https://agentmarketplace.ai/ | confirmed headline, unclear | Headline "From $49 a Month"; yearly totals $288, $468, $1,188, $2,340; monthly prices not extracted. Now 25 agents in 9 categories, 12 integrations. |
+| Agent Teams $130/month; rent from $26 (§6) | https://aiagentstore.ai/agent-teams | confirmed | |
+| WiseVAs from $1,000/month, no setup fee, live in 7 days (§6) | https://www.wisevas.io/done-for-you-ai-agents | confirmed | |
+| Azaris 26 agents, OpenAI Agents SDK, Hermes, Claude Code; pay nothing if savings missed (§6) | https://azaris.ai/doneforyouagents | confirmed, wording changed | The page says the mapped saving must be hit "within 6 months, or a full refund": a refund, not "pay nothing". A separate $2K/month fractional-department fee is shown. Do not write "pay nothing". |
+| Brainverse team "in about two weeks"; 6 to 12 month roadmap (§6) | https://brainverse.ai/services | confirmed, with a caveat | Audit 2 to 3 weeks; build "working in about two weeks"; roadmap 6 to 12 months. The FAQ gives a typical deployment of about 6 weeks. Quote both or neither. |
+| Swarms pricing (§2) | https://www.swarms.ai/pricing | not re-checked | HTTP 429 to this session; section 2 result stands. |
+| Ruflo MIT, version | LICENSE 200; npm `ruflo` | confirmed; version changed | Latest is now 3.77.2 (was 3.77.1). The licence is MIT. |
+| sgit Apache-2.0 0.27.0; Codex Apache-2.0 0.169.0; Letta Apache-2.0 | LICENSE files; PyPI; npm | confirmed | Claude Code is now 2.1.326 on npm (data/stack.json says 2.1.325). |
+
+**Not re-checked:** Workday and Flowise (press page was 403 on 15 November), Microsoft, IBM, E2B, Omnara, Composio pages; star counts.
+**For writer@:** no page quotes a vendor price today. If one does, use the rows above; do not say Azaris "pay nothing" or Dify "$59/month". Version fields in data/stack.json (Ruflo 3.77.2, Claude Code 2.1.326) are optional to refresh.
