@@ -202,6 +202,28 @@ if (ev.status !== 0) errors.push('evidence: figures with no evidence link (see a
   }
 }
 
+// V-RV8: one form for the website cell's price, and no "no accounts" claim that the handover step contradicts.
+{
+  const offer = JSON.parse(readFileSync(join(root, 'data/offer.json'), 'utf8'));
+  const prices = [offer.anchor_gbp, ...(offer.launch_gbp == null ? [] : [offer.launch_gbp])];
+  const pages = walk(join(root, 'site'), ['.html']).filter((f) => !/site\/(console|d)\//.test(f.replace(/\\/g, '/')));
+  let githubAtHandover = false;
+  const noAcc = [];
+  for (const f of pages) {
+    const lines = readFileSync(f, 'utf8').replace(/<[^>]+>/g, ' ').split('\n');
+    const isCell = /site\/website-cell\/index\.html$/.test(f.replace(/\\/g, '/'));
+    lines.forEach((line, i) => {
+      for (const sentence of line.split(/(?<=[.!?])\s+/)) {
+        if (/GitHub account/i.test(sentence) && /handover|hand over|handed over/i.test(sentence) && /need|needs|required|must/i.test(sentence)) githubAtHandover = true;
+        if (/\bno accounts\b/i.test(sentence) && !/GitHub|handover/i.test(sentence)) noAcc.push(`${rel(f)}:${i + 1}`);
+      }
+      if (isCell || /website cell/i.test(line))
+        for (const p of prices) if (new RegExp(`\\bfrom\\s+£\\s?${p}\\b`, 'i').test(line)) fail(`${rel(f)}:${i + 1}: states the website cell's price as "from £${p}"; use the form from data/offer.json ({{price}}, one-off, first proposal)`);
+    });
+  }
+  if (githubAtHandover) for (const w of noAcc) fail(`${w}: says "no accounts" while the handover step needs a GitHub account`);
+}
+
 // V-ARCH2: every internal link, src and srcset in site/ must resolve.
 const il = spawnSync(process.execPath, [join(root, 'build/check-internal-links.mjs')], { stdio: 'inherit' });
 if (il.status !== 0) errors.push('internal links: broken links (see above)');
