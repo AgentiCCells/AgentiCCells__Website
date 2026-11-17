@@ -13,6 +13,8 @@ Our first offering is a public website, built by an agentic team, that you steer
 
 **[See the website cell: the seven steps, what you get and what you own](/website-cell/)**
 
+Not sure where to begin? **[Start here: four steps from one very simple workflow to a network of cells](/start-here/)**, with the prices, examples and a contact at each step.
+
 ## The team at Web Summit
 
 {{photo:stand}}

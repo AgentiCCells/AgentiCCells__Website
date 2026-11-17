@@ -15,6 +15,14 @@ Pick one piece of work that repeats. Give it to one Claude agent on a loop, with
 
 If you would rather not set it up, the [website cell](/website-cell/) is the simplest thing we run for you: £500, one-off, first proposal, not an offer. There are no meetings and little of your time. A team of agents builds a public website that you steer from your browser. Nothing has been sold yet, and the end-to-end flow is being built now.
 
+Three very simple workflows to pick from. Each is one agent, one instruction, one place for results and one person who checks:
+
+- **A weekly digest.** The agent reads the sources you name and writes one page of what changed, for you to read and send yourself.
+- **A draft inbox.** The agent drafts replies to the same few kinds of message. A person edits and sends every one; the agent never sends. Our [email cell](https://hub.agenticcells.site/cells/cell-email/) is an example, listed on the hub as a demo.
+- **A website for you.** The [website cell](/website-cell/) above, and the [job-seeker cell](/job-seeker-cell/), a proposal that does not exist yet.
+
+These are suggestions for where to begin, not products we have sold.
+
 ## Step two: add a meeting or two
 
 When one workflow works, a few sessions add more roles, a shared board and a handover into your own accounts. We would prepare, meet you twice, do the work, present it and hand it over. From £1,500, first proposal.
@@ -28,6 +36,8 @@ Two days of engagement, with more of our time and maybe some travel: a conductor
 A customer engagement, where we map your work and deliver a whole set of things: conductors of conductors, policies and observability. £20,000, first proposal.
 
 The [cells page](/cells/) has the same four steps with the formats in Dinis's words, and what each site sells at each step. [riskmandate.ai](https://riskmandate.ai) sells agent behaviour policies on the same ladder. If your first need is to control agents you already run, start there.
+
+**Ready to talk?** The [contact](#talk-to-us) is at the foot of this page.
 
 ## See it working
 
