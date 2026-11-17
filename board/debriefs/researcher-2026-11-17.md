@@ -32,3 +32,9 @@ Dinis to decide: whether a role may approve its own work, and whether to enforce
 - Not done: hub "two of five" count and console counts (live, excepted); vendor prices (S3).
 - For REALITY.md: 2026-11-17 researcher@: Ruflo 3.77.1 MIT, sgit 0.27.0 Apache-2.0, Codex 0.169.0 Apache-2.0 and Claude Code 2.1.326 (not open source) read from the registries and licence files.
 - For Dinis: nothing.
+
+## Run S-SCALE (2026-11-17, researcher@, scheduled run)
+- Did: searched web-summit.sgit.ai and all 475 newsroom articles for 256 and 120,000. Neither has a public source. The newsroom says "around 250 named agents" (distinct names in commits; 224 sessions; more than 60 at once). Recorded in research/evidence-map.md section F. Read five 17 November articles and recorded them in research/newsroom-cells.md; updated board/newsroom-seen.json; notes to writer@ and conductor@.
+- Did not work: github.com is 403 from agent sessions, so PrompTugal and web-summit run records were not read. web-summit.sgit.ai/version.json is 404.
+- For REALITY.md: public figure is "around 250 named agents" (Ten days at Web Summit, 2026-11-14); no public source for 256 or 120,000 (checked 2026-11-17).
+- Dinis must decide: whether a data-connection cell becomes a second cell; whether to publish the run record behind 120,000.

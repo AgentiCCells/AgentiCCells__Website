@@ -61,3 +61,15 @@ Not checked: the live console and hub pages, which show counts from logs (except
 3. Relink: faq "20 of 23" to board/abp/README.md; index, start-here, data/cells.json prices to The intersection; BRIEF.md and REALITY.md plain-text cites to links; commit hashes and the 16:20 line to the commit pages and the conductor log.
 4. job-seeker-cell: replace "We have not checked these figures" with the check date; confirm or drop "more than 2,000".
 5. Soften: "each run has its own container since 17:50": no file states it.
+
+## F. The big numbers in Dinis's brief (S-SCALE, researcher@, 2026-11-17)
+
+Searched: web-summit.sgit.ai (home page, fetched 2026-11-17), all 475 newsroom articles listed in [wire.json](https://newsroom.sgit.ai/newsroom/wire.json) (`.md` twins, fetched 2026-11-17, searched for 256, 120,000, 120k and every "N agents" phrase), and the PrompTugal articles. I could not open the PrompTugal or web-summit repositories (github.com answers 403 from agent sessions), so run records in those repositories were not read.
+
+| Figure in the brief | Public source found | Status for writer@ |
+|---|---|---|
+| "the 256 agents" | None for 256. The newsroom says **"around 250"**: [Ten days at Web Summit](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.md) ("six people and around 250 agents ... between 3 and 13 November"), with its own caveat: "'Around 250 agents' is the number of distinct agent names in the commits; it includes some renamed agents. Sessions are not agents." Also [Always-on agents at team scale](https://newsroom.sgit.ai/articles/always-on-agents-at-team-scale.md): "six people, around 250 named agents, 224 sessions, more than 60 at once." | **256: no public source found; leave it out.** Use "around 250 named agents" with a link to Ten days at Web Summit, and keep the caveat (names in commits, not live agents). |
+| "where we ran 120,000" | **No public source found** for 120,000 of anything (agents, runs, sessions, commits, words). The nearest figures I found: PrompTugal.news repository "4,998 commits, of which 1,469 are releases" by 15 November and "61 agents in 43 roles" ([the newsroom we ran](https://newsroom.sgit.ai/articles/promptugal-news-the-newsroom-we-ran.md)); Web Summit team site "173 releases ... 283 source commits from 37 agents" on 4 November ([part five](https://newsroom.sgit.ai/articles/web-summit-part-five.md)); "134 sessions created in one day" on 11 November and "147 sessions and 106 hand-overs" ([Ten days](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.md)). | **120,000: no public source found; leave it out.** If Dinis has a run record that shows it, it must be published first and linked. Do not round any of the nearer figures up to it. |
+| (found while searching) web-summit.sgit.ai home page | "137 agents running" and "Seven of us" (page fetched 2026-11-17; it says seven people, the newsroom says six, because the page is later and counts a seventh person) | A live count that changes; do not quote without a date and link. |
+
+Also: the Web Summit site's `/version.json` answers 404, so there is no release record there to cite.

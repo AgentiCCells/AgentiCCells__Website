@@ -452,3 +452,42 @@ Read in full by researcher@ on 2026-11-17 from the `.md` twins at newsroom.sgit.
 - I read the four `.md` twins only; I did not open the vendor pages, the regulation, the promptugal.news originals, or the pki.sgit.ai module.
 - All figures in these articles are Dinis's reports of single events or vendor documentation read on 17 November.
 - The proposals are mine; none is built or agreed.
+
+## Update 2026-11-17 (S-SCALE): five more articles of 17 November
+
+Read in full as `.md` twins by researcher@ on 2026-11-17. Third parties named in these articles are named there by Dinis as people he met or organisations he read about; none is a customer or prospect of ours, and none should be named on our pages.
+
+### 5. Our companies and UTH
+- Link: https://newsroom.sgit.ai/articles/our-companies-and-uth.html
+- Key sentences: "UTH wants a HeritageTech sector, and a sector is made of companies." "The open parts are free to adopt; the companies sell setup, policies and teams." "All of them run for real in our own work, with live websites."
+- What it asks of agenticcells.ai: it describes us in one line: sets up small teams of AI agents as fixed-price cells, each agent with a key and a policy, and the site factory (agenticcells.site). Our pages should stay consistent with that line and link [the cell is the unit](https://newsroom.sgit.ai/articles/the-cell-is-the-unit.md) and [the site factory works](https://newsroom.sgit.ai/articles/the-site-factory-works.md). Nothing to sell new.
+
+### 6. HeritageTech, together
+- Link: https://newsroom.sgit.ai/articles/heritage-tech-together.html
+- Key sentences: "An AI-first heritage platform needs proof: evidence, signatures, provenance, agents with limits." "A team that builds with around 250 agents and has shipped this way all year." "The first step is theirs to invite and ours to take."
+- What it asks of us: a proposal for a 12-week pilot (keys and vault in weeks 1 to 3, signed records in 4 to 6, a graph in 7 to 9, a public page in 10 to 12). Not an offer we have. The only figure we could reuse is "around 250 agents", which is Dinis's count of distinct names in commits (see evidence-map section F): do not use it without that caveat.
+
+### 7. Working with WizPress
+- Link: https://newsroom.sgit.ai/articles/working-with-wizpress.html
+- Key sentences: "This is a proposal, written on the day we met; nothing is agreed." "WizPress's figures and claims are its own, from its website." Our side is the layer underneath: "who wrote it, who checked it, who signs it."
+- What it asks of us: nothing. Do not mention WizPress on agenticcells.ai (not agreed to be named on our pages; CLAUDE.md). The "30-day pilot with one regional newsroom" is a proposal only.
+
+### 8. Any data, with any data
+- Link: https://newsroom.sgit.ai/articles/any-data-with-any-data.html
+- Key sentences: "We can connect any data with any data." Nine steps: access, parse, transform, put in a vault, move the vault, share the key with the other side's public key, open, parse and map, produce the output. "Nobody moves to a shared platform." "Keys are per version: stop sharing the next version, and the connection stops." "It should be a product: connect two datasets, five, fifty, a hundred."
+- What it asks of us: this is a candidate second cell after the website cell ("a data-connection cell", priced by number of sources). It is Dinis's intention ("should be"), not a thing we sell. For the cell format in research/newsroom-cells.md, the nine steps are the recipe and "each owner keeps control" is the behaviour policy. Proposal only; no price exists.
+
+### 9. Who wrote it, who steered it, who signs it
+- Link: https://newsroom.sgit.ai/articles/who-steered-this.html
+- Key sentences: "The prompt is provenance, as much as the sources." The model: a type label, five axes (origin, research, claims, review, external) and a ladder P0 draft, P1 published by an agent, P2 sourced, P3 verified by several models, P4 signed by a person, P5 on the record. The seven articles rated are "mostly P1 and P2".
+- What it asks of us: our own pages could carry the same label (who wrote, who steered, who checked, who signs). Today they are P1 at best: agent-written, checked by CI, not signed by a person. Say so rather than claim more. This matches the "numbers need evidence" rule.
+
+### What to show or sell because of these five (researcher's reading; proposals)
+1. A provenance line on each of our pages in the P-ladder's words, honestly P1, until Dinis signs. Owner: writer@ after Dinis agrees.
+2. A "data-connection cell" as a possible second cell, in the cell format above. Owner: conductor@ to decide; nothing to publish yet.
+3. Do not name UTH or WizPress, and do not offer pilots: both are proposals from one day.
+4. Do not use "around 250 agents" or any scale figure without the caveat and link in evidence-map section F.
+
+### What this update does not claim
+- I read the `.md` twins only, not the vendors' own pages, not UTH's or WizPress's sites, and not the PrompTugal repositories.
+- The proposals are mine; none is built or agreed.
