@@ -280,17 +280,17 @@ for (const p of pages) {
 // The home page exists in several designs with the same words: / (Calm), /d/editorial/ and /d/console/. The bar is plain
 // links, so it needs no script; the choice is the address. Other designs are noindex and are not in the sitemap.
 const DESIGNS = [
-  ['calm', 'Calm', '/', 'Plain and quiet. The default.'],
+  ['gallery', 'Gallery', '/', 'Photos first: the team at Web Summit, large. The default.'],
+  ['calm', 'Calm', '/d/calm/', 'Plain and quiet, with definitions first.'],
   ['editorial', 'Editorial', '/d/editorial/', 'Paper, serif headings, numbered sections.'],
   ['console', 'Console', '/d/console/', 'Dark and technical, in cards.'],
-  ['gallery', 'Gallery', '/d/gallery/', 'Photos first: the team at Web Summit, large.'],
   ['proof', 'Proof', '/d/proof/', 'A wall of screenshots, each linked to the live page.'],
 ];
 const WS = '/assets/media/websummit-2026/';
 // Third and fourth designs (designer@, 2026-11-17). Photos: Dinis's Web Summit 2026 set (assets/media/websummit-2026/README.md).
 // Alt text and captions name no one: only people recorded as agreeing to be named may be named (data/cells-registry.json).
 const GALLERY_BANNER = `<figure class="g-banner"><img src="${WS}team-meo-arena.webp" srcset="${WS}team-meo-arena-half.webp 700w, ${WS}team-meo-arena.webp 1400w" sizes="(max-width: 62rem) 100vw, 62rem" width="1400" height="1050" fetchpriority="high" decoding="async" alt="Six people in a row inside a large indoor arena, smiling, with conference badges; one T-shirt reads Ask me how I control my agents"><figcaption>Web Summit, Lisbon, November 2026. Our team inside the MEO Arena.</figcaption></figure>`;
-const GALLERY_STRIP = `<section class="g-strip" aria-label="More from Web Summit 2026"><figure><img src="${WS}team-riskmandate-stand.webp" srcset="${WS}team-riskmandate-stand-half.webp 450w, ${WS}team-riskmandate-stand.webp 900w" sizes="(max-width: 40rem) 100vw, 20rem" width="900" height="638" loading="lazy" alt="Six people in red, green, purple and yellow shirts at an exhibition stand, with the RiskMandate stand sign above them"><figcaption>At the RiskMandate stand, A1-30.</figcaption></figure><figure><img src="${WS}team-backstage.webp" srcset="${WS}team-backstage-half.webp 500w, ${WS}team-backstage.webp 1000w" sizes="(max-width: 40rem) 100vw, 20rem" width="1000" height="750" loading="lazy" alt="Five people in coloured hoodies in a concrete corridor backstage at the arena"><figcaption>Backstage at the arena.</figcaption></figure><figure class="g-video"><video controls muted playsinline preload="none" poster="${WS}team-meo-arena-poster-640.webp" width="800" height="600"><source src="${WS}team-meo-arena-live-800.mp4" type="video/mp4"></video><figcaption>The same moment in the arena, 1.8 seconds, no sound.</figcaption></figure></section>`;
+const GALLERY_STRIP = `<section class="g-strip" aria-label="More from Web Summit 2026"><figure><img src="${WS}team-riskmandate-stand.webp" srcset="${WS}team-riskmandate-stand-half.webp 450w, ${WS}team-riskmandate-stand.webp 900w" sizes="(max-width: 40rem) 100vw, 20rem" width="900" height="638" loading="lazy" alt="Six people in red, green, purple and yellow shirts at an exhibition stand, with the RiskMandate stand sign above them"><figcaption>At the RiskMandate stand, A1-30.</figcaption></figure><figure><img src="${WS}team-backstage.webp" srcset="${WS}team-backstage-half.webp 500w, ${WS}team-backstage.webp 1000w" sizes="(max-width: 40rem) 100vw, 20rem" width="1000" height="750" loading="lazy" alt="Five people in coloured hoodies in a concrete corridor backstage at the arena"><figcaption>Backstage at the arena.</figcaption></figure><figure class="g-video"><video controls muted playsinline preload="none" poster="${WS}team-meo-arena-poster-640.webp" width="800" height="600"><source src="${WS}team-meo-arena-live-800.mp4" type="video/mp4"></video><figcaption>The same moment in the arena, a short clip with no sound.</figcaption></figure></section>`;
 const PROOF_SHOTS = [
   ['web-summit-home', 'The team site', 'The operating system of the Web Summit team: board, briefs, keys.', 'https://web-summit.sgit.ai/'],
   ['universe-dinis-universo', 'The universe view', 'Every agent as a moon of its owner, with its policy or the lack of one.', 'https://web-summit.sgit.ai/lib/gravity/'],
@@ -344,20 +344,20 @@ function sectioned(html) {
 }
 {
   const home = pages.find((p) => p.path === '/');
-  for (const [id, name, path] of DESIGNS.slice(1)) pages.push({
+  const plain = home.html;
+  // D-DEFAULT (designer@, 2026-11-17): Gallery is the default home (photos first); Calm moved to /d/calm/.
+  for (const [id, name, path] of DESIGNS.filter((d) => d[0] !== 'gallery')) pages.push({
     path, title: `AgentiCCells (${name} design)`, description: home.description, noindex: true, design: id,
-    html: designHtml(id, home.html), source: 'build/build.mjs', file: fileFor(path),
+    html: designHtml(id, plain), source: 'build/build.mjs', file: fileFor(path),
   });
-}
-
-// D-RV20 (designer@, 2026-11-17): the default design opened on definitions with no photo. Calm now puts one team photo
-// above "Words we use", inside the hero text column. Added after the other designs are made, so only / gets it.
-{
-  const home = pages.find((p) => p.path === '/');
+  home.html = designHtml('gallery', plain);
+  home.design = 'gallery';
+  // D-RV20: Calm keeps one team photo above "Words we use".
+  const calm = pages.find((p) => p.path === '/d/calm/');
   const CALM_PHOTO = `<figure class="calm-photo"><img src="${WS}team-riskmandate-stand.webp" srcset="${WS}team-riskmandate-stand-half.webp 450w, ${WS}team-riskmandate-stand.webp 900w" sizes="(max-width: 48rem) 100vw, 34rem" width="900" height="638" fetchpriority="high" decoding="async" alt="Six people in coloured shirts at an exhibition stand, with the RiskMandate stand sign above them"><figcaption>The team at the RiskMandate stand, Web Summit, Lisbon, November 2026.</figcaption></figure>\n`;
-  const m = home.html.indexOf('<p><strong>Words we use</strong></p>');
+  const m = calm.html.indexOf('<p><strong>Words we use</strong></p>');
   if (m < 0) throw new Error('home: "Words we use" marker not found (D-RV20)');
-  home.html = home.html.slice(0, m) + CALM_PHOTO + home.html.slice(m);
+  calm.html = calm.html.slice(0, m) + CALM_PHOTO + calm.html.slice(m);
 }
 
 // 404 page (GitHub Pages serves site/404.html for unknown paths). Not indexed, not in the nav.
