@@ -9,6 +9,8 @@ You want an agentic team. Many people talk about doing this. We do it, and this 
 
 Dinis Cruz's brief of 2026-11-16 (board/briefs/two-sites-2026-11-16.md) asks for exactly this: "very simple workflows", then "very complex ones". Everything we write here is open source, with no lock-in.
 
+**Already run agents and need to control them?** Go to [riskmandate.ai](https://riskmandate.ai), which writes the behaviour policy and sells on the same ladder. Come back here when you want a team set up with its policies.
+
 ## Step one: one very simple workflow
 
 Pick one piece of work that repeats. Give it to one Claude agent on a loop, with a written instruction, a place to put its results and a person who checks them. That is the smallest cell. It is a proposal for where to begin, not a product.

@@ -15,6 +15,8 @@ Our first offering is a public website, built by an agentic team, that you steer
 
 Not sure where to begin? **[Start here: four steps from one very simple workflow to a network of cells](/start-here/)**, with the prices, examples and a contact at each step.
 
+Already run agents and need to control them? **[riskmandate.ai](https://riskmandate.ai)** writes the behaviour policy. It is our sister venture, and it sells on the same ladder.
+
 ## The team at Web Summit
 
 {{photo:stand}}
