@@ -264,6 +264,18 @@ for (const p of pages) if (p.path === '/website-cell/') {
   if (i >= 0) p.html = p.html.slice(0, i) + FLOW + '\n' + p.html.slice(i);
 }
 
+// D-RV19 (designer@, 2026-11-17): one diagram each on /trust/ and /start-here/. Inline SVG, no script, no external file.
+// Trust: the five reaches from data/abp.json (reach_names), widest at the bottom; each box links to the file it comes from. No counts, so no figure needs its own evidence.
+const GH = 'https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/';
+const REACH_ROWS = [['Self', 'its own session', 190], ['Project', 'its worktree of this repository', 230], ['Host', 'the one shared container', 270], ['Tenant', 'accounts its keys and connectors reach', 310], ['World', 'any host on the internet, and the live site', 350]];
+const REACH = `<figure class="flow reach"><svg viewBox="0 0 360 290" role="img" aria-labelledby="reach-t reach-d"><title id="reach-t">What a cell's agents can reach</title><desc id="reach-d">Five reaches, from narrow to wide: self, project, host, tenant, world. Each box links to the policy file that lists what was measured at that reach.</desc>${REACH_ROWS.map(([n, d, w], i) => { const x = (360 - w) / 2, y = 6 + i * 56; return `<a href="${GH}data/abp.json"><rect class="r-box r-${i}" x="${x}" y="${y}" width="${w}" height="48" rx="8"/><text class="r-n" x="180" y="${y + 20}" text-anchor="middle">${n}</text><text class="r-d" x="180" y="${y + 38}" text-anchor="middle">${esc(d)}</text></a>`; }).join('')}</svg><figcaption>What our own agents could reach on 15 November 2026, narrow at the top, wide at the bottom. It is the measurement of this team in one shared container, from <a href="${GH}data/abp.json">data/abp.json</a>; the text below says where it has changed. Today the limits are mostly rules, not walls.</figcaption></figure>`;
+const LADDER_STEPS = [['One', 'workflow', '#step-one-one-very-simple-workflow'], ['Add a', 'meeting', '#step-two-add-a-meeting-or-two'], ['A', 'team', '#step-three-a-team'], ['A', 'network', '#step-four-a-network']];
+const LADDER = `<figure class="flow ladder-fig"><svg viewBox="0 0 360 230" role="img" aria-labelledby="lad-t lad-d"><title id="lad-t">The four steps of the ladder</title><desc id="lad-d">Four steps rising from left to right: one very simple workflow, a meeting or two, a team, a network. Each step links to its section below.</desc>${LADDER_STEPS.map(([a, b, h], i) => { const ht = 70 + i * 46, x = i * 90, y = 224 - ht; return `<a href="${h}"><rect class="l-box l-${i}" x="${x}" y="${y}" width="84" height="${ht}" rx="8"/><text class="l-num" x="${x + 42}" y="${y + 26}" text-anchor="middle">${i + 1}</text><text class="l-t" x="${x + 42}" y="${y + 46}" text-anchor="middle">${a}</text><text class="l-t" x="${x + 42}" y="${y + 62}" text-anchor="middle">${b}</text></a>`; }).join('')}</svg><figcaption>Start at the left and stop wherever it is enough. Each step has its own section below.</figcaption></figure>`;
+for (const p of pages) {
+  if (p.path === '/trust/') p.html = p.html.replace(/(<h2 id="what-our-agents-can-reach-and-cannot">[^<]*<\/h2>)/, (m) => m + '\n' + REACH);
+  if (p.path === '/start-here/') p.html = p.html.replace(/(<h2 id="step-one-)/, (m) => LADDER + '\n' + m);
+}
+
 // D-FIVE · Design switcher (designer@, 2026-11-16, after Dinis's liking for the five designs of one site's data).
 // The home page exists in several designs with the same words: / (Calm), /d/editorial/ and /d/console/. The bar is plain
 // links, so it needs no script; the choice is the address. Other designs are noindex and are not in the sitemap.
@@ -292,7 +304,9 @@ const PROOF_SHOTS = [
   ['lisbon-tech-fringe-home', 'Lisbon Tech Fringe', 'The fringe guide.', 'https://lisbontechfringe.com/'],
   ['ios-app-promptugal', 'A native app', 'An iOS app made by agents.', 'https://ios.app.promptugal.news/'],
 ];
-const PROOF_WALL = `<section class="p-wall" aria-labelledby="p-wall-h"><h2 id="p-wall-h">The evidence wall</h2><p class="p-note">Screenshots of live pages we or our newsroom made, taken on 2026-11-16 (research/proof/shots/). Each links to the live page, which may have changed since.</p><ul>${PROOF_SHOTS.map(([f, t, c, u], i) => `<li><a href="${u}"><img src="/assets/media/proof/${f}-half.webp" srcset="/assets/media/proof/${f}-half.webp 450w, /assets/media/proof/${f}.webp 900w" sizes="(max-width: 40rem) 100vw, 20rem" width="900" height="563" loading="lazy" decoding="async" alt="Screenshot of ${esc(t)}"><span class="p-cap"><span class="p-n">${String(i + 1).padStart(2, '0')}</span><strong>${esc(t)}</strong><span>${esc(c)}</span></span></a></li>`).join('')}</ul></section>`;
+const proofItem = ([f, t, c, u], i) => `<li><a href="${u}"><img src="/assets/media/proof/${f}-half.webp" srcset="/assets/media/proof/${f}-half.webp 450w, /assets/media/proof/${f}.webp 900w" sizes="(max-width: 40rem) 100vw, 20rem" width="900" height="563" loading="lazy" decoding="async" alt="Screenshot of ${esc(t)}"><span class="p-cap"><span class="p-n">${String(i + 1).padStart(2, '0')}</span><strong>${esc(t)}</strong><span>${esc(c)}</span></span></a></li>`;
+// First row open; the rest sit behind a details element (no script), so the Proof design stays near the other designs in height (D-RV18).
+const PROOF_WALL = `<section class="p-wall" aria-labelledby="p-wall-h"><h2 id="p-wall-h">The evidence wall</h2><p class="p-note">Screenshots of live pages we or our newsroom made, taken on 2026-11-16 (research/proof/shots/). Each links to the live page, which may have changed since.</p><ul>${PROOF_SHOTS.slice(0, 3).map((x, i) => proofItem(x, i)).join('')}</ul><details class="p-more"><summary>See all ${PROOF_SHOTS.length} screenshots</summary><ul>${PROOF_SHOTS.slice(3).map((x, i) => proofItem(x, i + 3)).join('')}</ul></details></section>`;
 function designHtml(id, home) {
   const h = sectioned(home);
   const strip = /<p class="offer-strip">[\s\S]*?<\/p>/;

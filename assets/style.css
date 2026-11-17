@@ -309,3 +309,17 @@ ul.example-cards{list-style:none;padding:0;margin:1rem 0;display:grid;gap:1rem;g
   .home ul.points:has(li:nth-child(6)) li{scroll-snap-align:start}
   .ladder tr{margin-bottom:.5rem;padding:.4rem .8rem}
 }
+
+/* D-RV19 · trust and start-here diagrams (designer@, 2026-11-17) */
+.reach svg,.ladder-fig svg{max-width:30rem}
+.reach a,.ladder-fig a{text-decoration:none}
+.reach .r-box{fill:var(--surface);stroke:var(--accent);stroke-width:1.5}
+.reach a:hover .r-box,.reach a:focus-visible .r-box,.ladder-fig a:hover .l-box,.ladder-fig a:focus-visible .l-box{stroke-width:3}
+.reach .r-n{fill:var(--fg);font:700 15px var(--font)}
+.reach .r-d{fill:var(--muted);font:12.5px var(--font)}
+.ladder-fig .l-box{fill:var(--surface);stroke:var(--accent);stroke-width:1.5}
+.ladder-fig .l-3{fill:var(--accent)}
+.ladder-fig .l-num{fill:var(--accent);font:700 18px var(--font)}
+.ladder-fig .l-t{fill:var(--fg);font:600 13px var(--font)}
+.ladder-fig .l-3~*{}
+.ladder-fig .l-3+.l-num,.ladder-fig .l-3+.l-num+.l-t,.ladder-fig .l-3+.l-num+.l-t+.l-t{fill:var(--on-accent)}
