@@ -144,12 +144,12 @@ section+section{margin-top:3rem}
 .hero h1{font-size:clamp(2.1rem,8vw,3.25rem);line-height:1.1}
 .cta{display:flex;flex-wrap:wrap;gap:.75rem}
 .button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-.cell-fig{margin:0;max-width:24rem;justify-self:center;width:100%}
+.cell-fig{margin:0;max-width:22rem;justify-self:center;width:100%}
 .cell-fig svg{display:block;width:100%;height:auto}
 .cell-fig figcaption{font-size:.875rem;color:var(--muted);text-align:center;margin-top:.5rem}
 .cell-fig .c-mem{fill:color-mix(in srgb,var(--accent) 8%,var(--bg));stroke:var(--accent);stroke-width:3}
 .cell-fig .c-nuc{fill:var(--surface);stroke:var(--line);stroke-width:1.5;stroke-dasharray:4 5}
-.cell-fig .c-link line{stroke:var(--accent);stroke-width:2;opacity:.7}
+.cell-fig .c-link line{stroke:var(--accent);stroke-width:2;opacity:.7;stroke-linecap:round}
 .cell-fig .c-node{fill:var(--bg);stroke:var(--accent);stroke-width:3}
 .cell-fig .c-lead{fill:var(--accent)}
 .cell-fig .c-box{fill:var(--bg);stroke:var(--accent);stroke-width:2}
@@ -157,7 +157,19 @@ section+section{margin-top:3rem}
 .cell-fig .c-on{fill:var(--on-accent);font-weight:700}
 .cell-fig .c-lbl{fill:var(--muted);font:14px var(--font)}
 .cell-fig .c-out{fill:var(--fg)}
-.cell-fig .c-you circle{fill:var(--accent)}
+.cell-fig .c-bar{fill:var(--surface);stroke:var(--accent);stroke-width:1.5}
+.cell-fig .c-env{stroke:var(--line);stroke-width:1.5}
+.cell-fig .c-quiet{stroke:var(--line);stroke-width:1.5}
+.cell-fig .c-tile{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.cell-fig .c-fill{fill:color-mix(in srgb,var(--accent) 25%,var(--bg));stroke:none}
+.cell-fig .c-ico{fill:none;stroke:var(--accent);stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.cell-fig .c-dot{fill:var(--accent)}
+.cell-fig .c-stop{fill:var(--accent)}
+.cell-fig .c-watch{fill:none;stroke:var(--accent);stroke-width:1.75;stroke-dasharray:5 5;stroke-linecap:round}
+.cell-fig .c-solid{stroke-dasharray:none}
+.cell-fig .c-arrow{fill:none;stroke:var(--accent);stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.cell-fig .c-sm{font-size:13px}
+.cell-fig .c-cap{font-size:12px;font-weight:600;letter-spacing:.08em}
 @media (min-width:48rem){
   .wide header,.wide main,.wide footer{max-width:62rem}
   .wide main>*:not(.hero):not(.page-head):not(.closing){max-width:42rem}

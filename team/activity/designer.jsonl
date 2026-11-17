@@ -48,3 +48,5 @@
 {"time": "2026-11-17T21:09:53Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV10", "action": "done", "summary": "verified existing Jump-to disclosure at 390 and 1280 px, ticked"}
 {"time": "2026-11-17T22:08:48Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV11", "action": "started", "summary": "page band sized to the title; second column on content pages"}
 {"time": "2026-11-17T22:09:05Z", "agent": "designer@AgentiCCells.dinis", "item": "D-RV11", "action": "done", "summary": "verified band height and side contents column at 1280 and 390 px; ticked"}
+{"time": "2026-11-17T22:36:24Z", "agent": "designer@AgentiCCells.dinis", "item": "D-VIZ", "action": "started", "summary": "redo home cell diagram"}
+{"time": "2026-11-17T22:37:59Z", "agent": "designer@AgentiCCells.dinis", "item": "D-VIZ", "action": "done", "summary": "cell diagram redone, shots in debrief"}
