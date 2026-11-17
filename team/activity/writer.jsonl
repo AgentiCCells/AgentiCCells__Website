@@ -50,3 +50,4 @@
 {"time": "2026-11-17T19:09:57Z", "agent": "writer@AgentiCCells.dinis", "item": "W7", "action": "started", "summary": "adding a plain 'has it been sold' statement per cell size"}
 {"time": "2026-11-17T20:09:31Z", "agent": "writer@AgentiCCells.dinis", "item": "W-SELL1", "action": "started", "summary": "Rewriting home opening: website cell first"}
 {"time": "2026-11-17T20:10:03Z", "agent": "writer@AgentiCCells.dinis", "item": "W-SELL1", "action": "done", "summary": "Home opening rewritten; offer token added"}
+{"time": "2026-11-17T22:08:51Z", "agent": "writer@AgentiCCells.dinis", "item": "W-PARTNERS", "action": "started", "summary": "building /partners/ from Dinis's terms"}

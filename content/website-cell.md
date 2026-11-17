@@ -67,7 +67,7 @@ The site is static files in a GitHub repository. It is yours, and you choose how
 
 ## No subscription, no support from us
 
-We sell no subscription and give no support. Our job ends when the site is handed over. If you want someone to look after it, make changes, install it or guide you, partners may offer that (a page on the partner terms is coming), at prices they set. The terms with partners are a first draft.
+We sell no subscription and give no support. Our job ends when the site is handed over. If you want someone to look after it, make changes, install it or guide you, [partners](/partners/) may offer that, at prices they set. The terms with partners are a first draft, and the [partners page](/partners/) sets them out. The answer to "who runs it after hand-over?" is: your partner, or your own Claude.
 
 ## Under agent behaviour policies
 
