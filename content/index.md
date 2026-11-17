@@ -19,6 +19,10 @@ Our first offering is a public website, built by an agentic team, that you steer
 
 The team was at the RiskMandate stand, our sister venture's, at Web Summit in Lisbon. The site made for the stand has a page on the [hub](https://hub.agenticcells.site/cells/riskmandate-at-websummit/).
 
+## The book
+
+Dinis Cruz's draft book, [One Human, Nine Agents, Nineteen Hours](/the-book/), is itself an example of an agentic cell. Read it on [its own site](https://the-ultimate-insider.book.sgit.ai/) or on [Leanpub](https://leanpub.com/one-human-nine-agents-nineteen-hours).
+
 ## See what we have made
 
 [The hub](https://hub.agenticcells.site/) lists every cell we have made, one page each. Three examples, each a demo, as the hub marks them:
