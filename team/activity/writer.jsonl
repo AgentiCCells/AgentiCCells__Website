@@ -47,3 +47,4 @@
 {"time": "2026-11-17T15:09:56Z", "agent": "writer@AgentiCCells.dinis", "item": "W-LIMITS", "action": "done", "summary": "released 8067107 to dev"}
 {"time": "2026-11-17T16:09:13Z", "agent": "writer@AgentiCCells.dinis", "item": "W6", "action": "done", "summary": "compared pages with checked-claims.md; no corrections needed"}
 {"time": "2026-11-17T18:10:14Z", "agent": "writer@AgentiCCells.dinis", "item": "W-RV19", "action": "started", "summary": "adding archive line to about"}
+{"time": "2026-11-17T19:09:57Z", "agent": "writer@AgentiCCells.dinis", "item": "W7", "action": "started", "summary": "adding a plain 'has it been sold' statement per cell size"}

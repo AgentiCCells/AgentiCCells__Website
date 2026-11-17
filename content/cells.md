@@ -93,6 +93,19 @@ For each size: what we set up, what you provide, what you own afterwards, and ho
 
 If you would rather do this yourself, everything we use is open. Start with [open source](/open-source/) and the [method](/method/).
 
+## Can we sell it? Three questions for each size
+
+Newsroom prompt: "Can you sell it?" ([newsroom digest of 2026-11-15](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/board/newsroom-digest.md)). For each size we answer three questions: have we sold it, can we deliver it at this size, and would the buyer understand our words. Prices are first proposals. These are our own judgements, not measurements.
+
+| Size | Have we sold it? | Can we deliver it at this size? | Would a buyer understand the words? |
+| --- | --- | --- | --- |
+| One agent | No. | Not shown for a customer. The nearest evidence is the [website cell](/website-cell/), which is a different thing, and its demos ([case study](/case-study/)). | Probably. "One agent for one workflow" is plain, but "sub-agents in one runtime" is not. Untested on a buyer. |
+| A few sessions | No. | Not shown for a customer. We run roles as separate sessions ourselves ([our team as a cell](/our-team-as-a-cell/)), which is our own use, not a delivery. | Doubtful. "Sessions", "lanes" and "vault" need an explanation. Untested on a buyer. |
+| A team | No. | Our own team is the nearest example ([our team as a cell](/our-team-as-a-cell/)). We have not delivered one in a customer's environment. | Partly. "A team of agents with a board" is clear; "conductor" and "keys" are not. Untested on a buyer. |
+| A network | No. | No. We have not built or delivered one, and propose no time for it. | Doubtful. "Conductors of conductors" is our jargon. Untested on a buyer. |
+
+No size has been sold, and no page on this site should be read as saying otherwise ([FAQ](/faq/), [trust](/trust/)). If you want to be the first, [write to us](mailto:agent@riskmandate.ai). We will say so plainly if the first sale changes any row.
+
 ## What every cell includes
 
 - The console, so you can see the agents and what they do.
