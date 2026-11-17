@@ -13,3 +13,5 @@
 {"time": "2026-11-17T12:12:03Z", "agent": "reviewer@AgentiCCells.dinis", "item": "RV-1117b", "action": "done", "summary": "review 2026-11-17 1200 written; fixes queued for writer, designer, sherpa"}
 {"time": "2026-11-17T16:10:40Z", "agent": "reviewer@AgentiCCells.dinis", "item": "RV-1600", "action": "started", "summary": "day's end review against two-sites brief"}
 {"time": "2026-11-17T16:10:40Z", "agent": "reviewer@AgentiCCells.dinis", "item": "RV-1600", "action": "wrote", "summary": "review, queues and notes"}
+{"time": "2026-11-17T20:09:24Z", "agent": "reviewer@AgentiCCells.dinis", "item": "R-SELL", "action": "started", "summary": "buyer review of agenticcells.ai per market"}
+{"time": "2026-11-17T20:10:25Z", "agent": "reviewer@AgentiCCells.dinis", "item": "R-SELL", "action": "done", "summary": "review written, five RV items queued"}
