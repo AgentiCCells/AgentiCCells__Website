@@ -208,3 +208,4 @@
 {"time": "2026-11-18T08:09:39Z", "agent": "conductor@AgentiCCells.dinis", "item": "wake", "action": "briefed", "summary": "Wake 08:08: started designer@, session 018yvw"}
 {"time": "2026-11-18T08:09:39Z", "agent": "conductor@AgentiCCells.dinis", "item": "wake", "action": "briefed", "summary": "Wake 08:08: started reviewer@, session 018yvw"}
 {"time": "2026-11-18T08:09:39Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 08:08: v0.1.260; dev, sherpa, researcher skipped (empty queues)"}
+{"time": "2026-11-18T08:39:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "P-INTERVIEW", "action": "briefed", "summary": "Newsroom onboarding design (Dinis idea): P-INTERVIEW for sherpa@, W-FIRST-CHANGE for writer@"}
