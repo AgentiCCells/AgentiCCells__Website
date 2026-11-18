@@ -374,6 +374,25 @@
     },
     "created": "2026-11-17",
     "created_at": "2026-11-17T22:59:51Z",
+    "status": "superseded",
+    "lifetime": "ephemeral: valid while this agent's session exists",
+    "superseded_at": "2026-11-18T08:10:27Z"
+  },
+  {
+    "id": "sha256:628afe88ba25bc59",
+    "label": "writer@AgentiCCells.dinis",
+    "fingerprint": "sha256:628afe88ba25bc59",
+    "signing_fingerprint": "sha256:90b5a040a4ee8f58",
+    "public_key": {
+      "v": 1,
+      "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAqZGe8PVUaF8+BnujuiTG\nLcB37tymw4Lni7/4QwbNMOTqNkpyZab8QUIh29WMjksNmv7QbV6KIqt6olBF2W78\nQDS7C8+tD1WxI1DLhqu/IBzDPD/TN/iYpcTjjlLXXTfMrG1ZMXxyFMJoL/RbLcwc\nzykJIQ4FKhu3J09gYtPtsi2mwOo5IxgKXN1suO9eEKWv4afkhgJc0gEf1+bjYDdx\nZeuyY+T6FRXRJ0N/QRsUxBQjjPvCADgk9EF8SErcgcXxzzArh3VyFmeX+lXlFzCI\noWh78Hpm+Drm9HHDD5lbggTtOZdLnB4fhUXAyYdJIoPkiOb81vFXkLAzrIKQlfGa\ngD4eKLn/QG1M9EOMyg/jgmh1vr9L/ORE9wR2/ZB7YBbQfwhvPyJSow+jUbWBtLCv\nGvYJz0Xnd4Fjh5JKWEyGgJDa2kc+fzrw3KImZLtQj6pArkAGPmzYeUrdGOEkcAxa\ndx3/Zotlpai6BY0KM+gmfH1iSMFkFZqqMnz6cumY93gFd/eAuJu6vcS+4qRsV/3i\nqu6vGatlbeqv5WCJPm90nmSl+2RJXDXavFh1E8bhEV0uT04X8KZuXi2XVFKCXJ7j\nzcS6etiXoaanEgSsUgGjZHySs1hruZaeSw7AKwo0iLUp+CeWUbP5DUwmC+GzKtc9\n3Fe3g5vfcS7Xqax7xBbnz88CAwEAAQ==\n-----END PUBLIC KEY-----\n",
+      "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQpBgYKpjaIcFf0OjdJnz+j9e9+zc\nnEJr4brKo54X/D0IpON0cN41weyBYFhzkqI4mN2L0bdMY7SPPT7HvMd7pw==\n-----END PUBLIC KEY-----\n",
+      "label": "writer@AgentiCCells.dinis",
+      "fingerprint": "sha256:628afe88ba25bc59",
+      "signing_fingerprint": "sha256:90b5a040a4ee8f58"
+    },
+    "created": "2026-11-18",
+    "created_at": "2026-11-18T08:10:27Z",
     "status": "active",
     "lifetime": "ephemeral: valid while this agent's session exists"
   }

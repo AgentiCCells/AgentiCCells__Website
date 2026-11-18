@@ -6,7 +6,7 @@ path: /partners/consultancy/
 ---
 # For consultancies: one cell for each client, the same team every time
 
-You run a small company with customers, and some of them would want this. This page is for you, and you can read it without any other. Nothing has been sold yet, through a partner or otherwise, and no partner has signed. [Email us as a consultancy](mailto:agent@riskmandate.ai?subject=I%20might%20be%20a%20consultancy%20partner) when you want to talk.
+You run a small company with customers, and some of them would want this. This page is for you, and you can read it without any other. [Email us as a consultancy](mailto:agent@riskmandate.ai?subject=I%20might%20be%20a%20consultancy%20partner) when you want to talk.
 
 ## What you sell
 
@@ -20,18 +20,13 @@ The model is Dinis Cruz's, in his words: "the rules of engagement here are 50-50
 
 {{partner-fig:flow:consultancy}}
 
-This is an example of how a deal would run, not a record of one: no deal has run.
-
-1. **First conversation.** One of your clients asks for a site, or you offer one. You agree scope and price. Use the {{price}} website cell, our ladder, or your own prices.
-2. **Material.** You collect each client's photos, videos and words, and which parts may be public. Private material can go into a vault. You keep your own client records; we keep none.
-3. **Set up.** You send us the material. The factory sets up the cell for that client.
-4. **Choose.** The agent team makes five designs. You and the client choose and ask for changes.
-5. **Hand-over.** The repository goes to the client's GitHub with its history. You get admin access. You may keep your own repositories and clients' work private.
-6. **After, and the next client.** You run hosting, support and retainers at your prices. The second client repeats steps one to five with the same team.
+One of your clients asks for a site, or you offer one. You collect their photos, videos and words, and which parts may be public, and send them to us. The factory sets up the cell, the agent team makes five designs, and you and the client choose. The repository goes to the client's GitHub with its history and you get admin access. You run hosting, support and retainers at your prices, and the second client repeats the same steps with the same team. This is an example of how a deal would run, not a record of one: no deal has run.
 
 ## Who does what
 
 {{partner-fig:lanes:consultancy}}
+
+The same, as a table for screen readers and search:
 
 | | You | AgentiCCells | The customer | The agents |
 |---|---|---|---|---|
@@ -61,7 +56,7 @@ A client list or a way to reach it; one person at your company who sends us mate
 
 ## Partner terms
 
-The terms are common sense and few. The customer owns the site, the repository and the material. You own the relationship. Our code and policies are [open](/open-source/), and you may keep your own repositories and your customers' work private. Nobody is named publicly, customer or partner, without agreement. It works in any country and any language, and you invoice in your own currency under your own law. The same terms are on the [partners page](/partners/#partner-terms).
+Nothing has been sold yet, through a partner or otherwise, and no partner has signed. The terms are common sense and few. The customer owns the site, the repository and the material. You own the relationship. Our code and policies are [open](/open-source/), and you may keep your own repositories and your customers' work private. Nobody is named publicly, customer or partner, without agreement. It works in any country and any language, and you invoice in your own currency under your own law. The same terms are on the [partners page](/partners/#partner-terms).
 
 ## Talk to us
 

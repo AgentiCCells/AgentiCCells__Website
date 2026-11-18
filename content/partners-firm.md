@@ -6,7 +6,7 @@ path: /partners/firm/
 ---
 # For firms: bigger projects, with our orchestration and a network of experts
 
-You run a larger company with bigger projects, and you want us, or Dinis Cruz's network of experts, involved. This page is for you, and you can read it without any other. Nothing has been sold yet, through a partner or otherwise, and no partner has signed. [Email us as a firm](mailto:agent@riskmandate.ai?subject=I%20might%20be%20a%20firm%20partner) when you want to talk.
+You run a larger company with bigger projects, and you want us, or Dinis Cruz's network of experts, involved. This page is for you, and you can read it without any other. [Email us as a firm](mailto:agent@riskmandate.ai?subject=I%20might%20be%20a%20firm%20partner) when you want to talk.
 
 ## What you sell
 
@@ -20,18 +20,13 @@ The model is Dinis Cruz's, in his words: "the rules of engagement here are 50-50
 
 {{partner-fig:flow:firm}}
 
-This is an example of how a deal would run, not a record of one: no deal has run.
-
-1. **First conversation.** You and a customer describe a larger project: several cells, a workflow around the site, or a cell run in the customer's own accounts. We talk before any price is set.
-2. **Scope.** We agree what we build, who from our network of experts is involved, and the split. Larger projects are agreed case by case, in writing, before work starts.
-3. **Set up.** The cell runs in the customer's environment where the work needs it. We keep no customer data.
-4. **Build and review.** The agent team does the work, with a person reviewing and deciding what goes out.
-5. **Hand-over.** The customer owns the repository and material. You hold the relationship.
-6. **After.** You run support and retainers at your prices. We return for new features, templates, workflows and policies, priced on the same 50/50 unless we agree otherwise.
+You and a customer describe a larger project: several cells, a workflow around the site, or a cell run in the customer's own accounts. We talk before any price is set, then agree in writing what we build, who from our network of experts is involved and the split. The agent team does the work in the customer's environment where it needs to, and a person reviews and decides what goes out. The customer owns the repository and material and you hold the relationship. You run support and retainers; we return for new features and policies on the same 50/50 unless we agree otherwise. This is an example of how a deal would run, not a record of one: no deal has run.
 
 ## Who does what
 
 {{partner-fig:lanes:firm}}
+
+The same, as a table for screen readers and search:
 
 | | You | AgentiCCells | The customer | The agents |
 |---|---|---|---|---|
@@ -61,7 +56,7 @@ A project in mind, or a customer with one; a person on your side who owns it; a 
 
 ## Partner terms
 
-The terms are common sense and few. The customer owns the site, the repository and the material. You own the relationship. Our code and policies are [open](/open-source/), and you may keep your own repositories and your customers' work private. Nobody is named publicly, customer or partner, without agreement. It works in any country and any language, and you invoice in your own currency under your own law. The same terms are on the [partners page](/partners/#partner-terms).
+Nothing has been sold yet, through a partner or otherwise, and no partner has signed. The terms are common sense and few. The customer owns the site, the repository and the material. You own the relationship. Our code and policies are [open](/open-source/), and you may keep your own repositories and your customers' work private. Nobody is named publicly, customer or partner, without agreement. It works in any country and any language, and you invoice in your own currency under your own law. The same terms are on the [partners page](/partners/#partner-terms).
 
 ## Talk to us
 

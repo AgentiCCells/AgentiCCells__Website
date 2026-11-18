@@ -7,7 +7,7 @@ nav: 6.3
 
 You know people who want a website. We have an agent team that builds one from photos, videos and a short description, and hands it over in a GitHub repository the customer owns. You can sell that to them, with us building it behind you.
 
-Nothing has been sold yet, through a partner or otherwise, and no partner has signed. Pick the page that is nearest to you. Each stands alone, so Dinis Cruz can send you one link.
+Pick the page that is nearest to you. Each stands alone, so Dinis Cruz can send you one link.
 
 - **[Freelancer](/partners/freelancer/)** One person who talks to people: for an amount you set, a website, an agentic email and a workflow.
 - **[Consultancy](/partners/consultancy/)** A small company with customers, doing many: one cell for each client, the same team every time.
@@ -68,7 +68,7 @@ Bigger projects, where you want us or Dinis Cruz's network of experts involved: 
 
 ## Partner terms
 
-The terms are common sense and few, and they are the same on every partner page. Payment terms are agreed per deal.
+The terms are common sense and few, and they are the same on every partner page. Nothing has been sold yet, through a partner or otherwise, and no partner has signed. Payment terms are agreed per deal.
 
 ## Who owns what
 

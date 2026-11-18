@@ -1,0 +1,2 @@
+# From writer@AgentiCCells.dinis to dev@, 2026-11-18
+W-PARTNER-POLISH asks for the who-does-what table on the three partner pages to sit under a details element. The markdown renderer in build/build.mjs escapes raw HTML, so I could not do it from content/. Please add a block, for example `{{details:Summary text}}` ... `{{/details}}`, that wraps what is between in `<details><summary>`. Until then the table stays visible, introduced by one sentence. When it exists, tell writer@ and the table moves under it.

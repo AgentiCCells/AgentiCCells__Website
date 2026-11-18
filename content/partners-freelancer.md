@@ -6,7 +6,7 @@ path: /partners/freelancer/
 ---
 # For freelancers: sell a website, an agentic email and a workflow
 
-You are one person who talks to people, and you would like to sell more of what they ask you for. This page is for you, and you can read it without any other. Nothing has been sold yet, through a partner or otherwise, and no partner has signed. [Email us as a freelancer](mailto:agent@riskmandate.ai?subject=I%20might%20be%20a%20freelancer%20partner) when you want to talk.
+You are one person who talks to people, and you would like to sell more of what they ask you for. This page is for you, and you can read it without any other. [Email us as a freelancer](mailto:agent@riskmandate.ai?subject=I%20might%20be%20a%20freelancer%20partner) when you want to talk.
 
 ## What you sell
 
@@ -20,18 +20,13 @@ The model is Dinis Cruz's, in his words: "the rules of engagement here are 50-50
 
 {{partner-fig:flow:freelancer}}
 
-This is an example of how a deal would run, not a record of one: no deal has run.
-
-1. **First conversation.** A customer tells you they need a site and have no time for it. You agree what they want and a price. The website cell is {{price}} from us, or you set your own.
-2. **Material.** They send you photos, videos and a few paragraphs, and say what may be public. You send it to us at agent@riskmandate.ai.
-3. **Set up.** The factory makes the repository, the address, the CLAUDE.md and the behaviour policy. The agent team makes five designs.
-4. **Choose.** You show the customer the previews. They choose and say what to change.
-5. **Hand-over.** The repository moves to the customer's GitHub with its full history, and you are given admin access if they agree.
-6. **After.** You host it, support it, change it and charge for it as you like. You may also sell them an agentic email or a workflow, and we come back for new features and templates when you ask.
+A customer tells you they need a site and have no time for it. You agree a price, collect their photos, videos and words, and send them to us. We set up the cell and the agent team makes five designs. You show the customer the previews, they choose, and the repository moves to their GitHub with you given admin access if they agree. After that you host, support and change the site at your own prices, and may sell an agentic email or a workflow too. This is an example of how a deal would run, not a record of one: no deal has run.
 
 ## Who does what
 
 {{partner-fig:lanes:freelancer}}
+
+The same, as a table for screen readers and search:
 
 | | You | AgentiCCells | The customer | The agents |
 |---|---|---|---|---|
@@ -61,7 +56,7 @@ A customer, or the wish to find one; an email address; a GitHub account for the 
 
 ## Partner terms
 
-The terms are common sense and few. The customer owns the site, the repository and the material. You own the relationship. Our code and policies are [open](/open-source/), and you may keep your own repositories and your customers' work private. Nobody is named publicly, customer or partner, without agreement. It works in any country and any language, and you invoice in your own currency under your own law. The same terms are on the [partners page](/partners/#partner-terms).
+Nothing has been sold yet, through a partner or otherwise, and no partner has signed. The terms are common sense and few. The customer owns the site, the repository and the material. You own the relationship. Our code and policies are [open](/open-source/), and you may keep your own repositories and your customers' work private. Nobody is named publicly, customer or partner, without agreement. It works in any country and any language, and you invoice in your own currency under your own law. The same terms are on the [partners page](/partners/#partner-terms).
 
 ## Talk to us
 
