@@ -3209,5 +3209,15 @@
   "seen": "2026-11-17T22:46Z",
   "by": "Dinis Cruz",
   "action": "W-NEWS-SELL"
+ },
+ {
+  "url": "https://newsroom.sgit.ai/articles/you-bring-the-business.html",
+  "seen": "2026-11-18T04:00Z",
+  "action": "W-MOVE (link from /partners/)"
+ },
+ {
+  "url": "https://newsroom.sgit.ai/articles/static-against-the-platforms.html",
+  "seen": "2026-11-18T04:00Z",
+  "action": "W-MOVE"
  }
 ]
