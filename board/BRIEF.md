@@ -135,3 +135,6 @@ Done by the conductor: Partners in the main navigation (replacing The method, wh
 > Yes, we should add that thing to agentic cells. I think for now it's like a soft requirement, but eventually we might enforce it because a lot of these are just, we are in MVP stage.
 
 "That thing" is the ownership promise in https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html: every site we build moves into its owner's ownership (repository transferred to their GitHub, address pointed where they choose) within three months at the latest, sooner if asked; until then we hold it only to finish the work; afterwards we hold nothing. Soft for now: stated as an expectation, not enforced.
+
+## Dinis, 2026-11-18 ~23:00 UTC (relayed by newsroom writer-09): no lock-in as the headline
+As relayed: write about the non-lock-in model "and then brief our ACC website to also focus on this... it's a massive differentiator". Queued as W-NOLOCKIN (writer@).

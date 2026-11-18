@@ -211,3 +211,4 @@
 {"time": "2026-11-18T08:39:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "P-INTERVIEW", "action": "briefed", "summary": "Newsroom onboarding design (Dinis idea): P-INTERVIEW for sherpa@, W-FIRST-CHANGE for writer@"}
 {"time": "2026-11-18T08:55:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "PROPOSAL", "action": "recorded", "summary": "Newsroom proposal: three source sites on PrompTugal data; recorded, to WAITING for Dinis (names, domains, build)"}
 {"time": "2026-11-18T22:51:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-OWNERSHIP", "action": "queued", "summary": "Dinis decision (relayed): ownership within three months, soft requirement; queued only, no runs: hourly wake disabled since 08:42"}
+{"time": "2026-11-18T22:59:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-NOLOCKIN", "action": "queued", "summary": "Dinis (relayed): no lock-in as the headline; queued only, team paused"}
