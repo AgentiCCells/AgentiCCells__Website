@@ -440,7 +440,7 @@ function designChooser(meta, current, L) {
   const home = current === '/' || !!meta.design;
   const now = meta.design || 'gallery';
   const items = DESIGNS.map(([id, name, path, tip]) => `<li><a data-design="${id}" href="${home ? path : current}?design=${id}"${id === now ? ' aria-current="true"' : ''}><strong>${name}</strong><span>${esc(tip)}</span></a></li>`).join('');
-  return `<details class="designs"><summary><span class="tb-long">${esc(ui(L).chooseDesign || 'Choose a design')}</span><span class="tb-short">Design</span></summary><div class="design-list"><p>Same words and data in every design. Your choice is kept on this device.</p><ul>${items}</ul></div></details>`;
+  return `<details class="designs"><summary><span class="tb-long">${esc(ui(L).chooseDesign || 'Choose a design')}</span><span class="tb-short">Design</span></summary><div class="design-list"><p>Same words and data in every design. Your choice is kept on this device.</p><ul>${items}</ul>${home ? '' : '<noscript><p class="nojs">Without a script, inner pages show the default design. See each design on its home page: ' + DESIGNS.map(([id, name, path]) => `<a href="${path}">${name}</a>`).join(' ') + '</p></noscript>'}</div></details>`;
 }
 // Wrap each h2 and what follows it in a section, so a design can lay sections out as it likes (CSS only).
 function sectioned(html) {
