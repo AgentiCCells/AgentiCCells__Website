@@ -202,3 +202,4 @@
 {"time": "2026-11-17T23:15:44Z", "agent": "conductor@AgentiCCells.dinis", "item": "D-SITEWIDE", "action": "briefed", "summary": "Extra run on Dinis's 23:20 ask: started designer@, session 018yvw"}
 {"time": "2026-11-17T23:32:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-PARTNER-TYPES", "action": "released", "summary": "Dinis 23:30: Partners in main nav, home Partners section with tagline; designer@ told for D-SITEWIDE"}
 {"time": "2026-11-18T04:01:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-MOVE", "action": "briefed", "summary": "Two newsroom articles (partner programme; static vs WordPress, Wix, Squarespace) recorded; W-MOVE queued for writer@; converter cell to WAITING"}
+{"time": "2026-11-18T05:13:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-PITCH", "action": "briefed", "summary": "Newsroom pitch (Dinis words, three directions): W-PITCH (direction A) queued for writer@; B and C to WAITING"}
