@@ -130,3 +130,8 @@ Conductor's reading (from screenshots of both sites at 1366 px, 23:20 UTC): both
 > Yeah, also the partners page is massive, right? It's great. You need to link it from the main page, right? Again, the main UI needs to link to that, right? Because actually, I really like that tagline you have there. What is it? " You bring the business, we build the site". That is a great tagline.
 
 Done by the conductor: Partners in the main navigation (replacing The method, which moves to the footer); a home section "Partners: you bring the business, we build the site" with the three partner pages. designer@ (D-SITEWIDE) is told to keep Partners in the top bar and may use the tagline as a headline.
+
+## Dinis, 2026-11-18 ~20:40 UTC (relayed by newsroom writer-09): ownership within three months, a soft requirement
+> Yes, we should add that thing to agentic cells. I think for now it's like a soft requirement, but eventually we might enforce it because a lot of these are just, we are in MVP stage.
+
+"That thing" is the ownership promise in https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html: every site we build moves into its owner's ownership (repository transferred to their GitHub, address pointed where they choose) within three months at the latest, sooner if asked; until then we hold it only to finish the work; afterwards we hold nothing. Soft for now: stated as an expectation, not enforced.
