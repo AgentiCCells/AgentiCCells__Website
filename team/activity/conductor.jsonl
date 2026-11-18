@@ -204,3 +204,7 @@
 {"time": "2026-11-18T04:01:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-MOVE", "action": "briefed", "summary": "Two newsroom articles (partner programme; static vs WordPress, Wix, Squarespace) recorded; W-MOVE queued for writer@; converter cell to WAITING"}
 {"time": "2026-11-18T05:13:00Z", "agent": "conductor@AgentiCCells.dinis", "item": "W-PITCH", "action": "briefed", "summary": "Newsroom pitch (Dinis words, three directions): W-PITCH (direction A) queued for writer@; B and C to WAITING"}
 {"time": "2026-11-18T07:09:30Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 07:08: v0.1.259, D-SITEWIDE part 1 live; sites-dev idle-loop proposal to WAITING; no runs due"}
+{"time": "2026-11-18T08:09:39Z", "agent": "conductor@AgentiCCells.dinis", "item": "wake", "action": "briefed", "summary": "Wake 08:08: started writer@, session 018yvw"}
+{"time": "2026-11-18T08:09:39Z", "agent": "conductor@AgentiCCells.dinis", "item": "wake", "action": "briefed", "summary": "Wake 08:08: started designer@, session 018yvw"}
+{"time": "2026-11-18T08:09:39Z", "agent": "conductor@AgentiCCells.dinis", "item": "wake", "action": "briefed", "summary": "Wake 08:08: started reviewer@, session 018yvw"}
+{"time": "2026-11-18T08:09:39Z", "agent": "conductor@AgentiCCells.dinis", "item": "ACC-020", "action": "checked", "summary": "Wake 08:08: v0.1.260; dev, sherpa, researcher skipped (empty queues)"}
