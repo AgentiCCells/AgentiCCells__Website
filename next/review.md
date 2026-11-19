@@ -28,7 +28,7 @@ The chooser with all five is at [/next/](/next/).
 
 - Every preview page at phone and laptop size in Chromium: no errors, no sideways scroll, nothing loaded from other sites, no cookies.
 - An accessibility scan (axe-core, WCAG A and AA) found nothing to fix on the pages it scanned.
-- A buyer's review and a security review are in the repository: board/reviews/2026-11-19-next-preview-r3.md and board/security/2026-11-19-next-preview.md. Their fixes went into rounds 4 and 5.
+- A buyer's review and a security review are in the repository: board/reviews/2026-11-19-next-preview-r3.md and board/security/2026-11-19-next-preview.md. Their fixes went into the [later rounds](https://github.com/AgentiCCells/AgentiCCells__Website/tree/dev/team/rounds).
 - Competitor facts come from the competitors' own pages, each with its link and the date read. They are in US dollars as published, because the pages were read from a US address.
 
 ## Your decisions
