@@ -148,6 +148,7 @@ function explainPage({ root, data, figs }, slug, label, defaults) {
     figure: (id) => (id === 'deliverables' && /\{\{deliverables\}\}/.test(body) ? '' : once(id, () => P.figure(figs, id))),
     'table:compare': () => P.compareTable(data, { note: !/not converted/i.test(body) }),
     'table:features': () => P.featuresTable(data),
+    'table:glance': () => P.glanceTable(data),
     'table:pricing': () => P.pricingLadder(data),
     examples: () => P.examples(data, root),
     offer: () => P.offerBlock(data),
@@ -198,8 +199,9 @@ export async function render({ root }) {
   });
   for (const [slug, label, defaults] of EXPLAIN) files.push(explainPage(h, slug, label, defaults));
   files.push(reviewPage(h));
-  // The honest notes once per page (the pricing ladder and the table notes repeat the offer block's).
-  return files.map((f) => ({ ...f, content: P.onceHonest(f.content) }));
+  // The honest notes once per page (the pricing ladder and the table notes repeat the offer block's), and no secondary
+  // button that links to the page it is on (the offer card's "See the price" on /next/pricing/).
+  return files.map((f) => ({ ...f, content: P.noSelfButtons(P.onceHonest(f.content), '/' + f.path.replace(/index\.html$/, '')) }));
 }
 
 export default async function next(ctx) {

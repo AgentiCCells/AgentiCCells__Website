@@ -95,13 +95,13 @@ ${rows.map((r) => `<li style="--w:${Math.max(6, Math.round((r.threeN.n / max) * 
 export function compareTeaser(data, { ids = ['wix', 'squarespace', 'wordpress-com'], cls = 'kt' } = {}) {
   const rows = ids.map((id) => platform(data, id)).filter(Boolean);
   const o = data.offer || {};
-  const cell = (f, lead) => (f && /^https?:/.test(f.url) ? `<td>${lead ? `<a href="${esc(f.url)}">${esc(lead.text)}</a> ${rest(f.value, lead.text)}` : `${esc(f.value)} <a class="kt-src" href="${esc(f.url)}">their page</a>`}</td>` : '<td><span class="tbw">To be written</span></td>');
-  return `<div class="tw kt-wrap" tabindex="0" role="region" aria-label="Rent or own, in short"><table class="t ${cls}">
-<caption class="vh">Rent or own, in short: our launch price against three platforms' own pages</caption>
+  const cell = (f, lead, l) => (f && /^https?:/.test(f.url) ? `<td data-l="${l}">${lead ? `<a href="${esc(f.url)}">${esc(lead.text)}</a> ${rest(f.value, lead.text)}` : `${esc(f.value)} <a class="kt-src" href="${esc(f.url)}">their page</a>`}</td>` : `<td data-l="${l}"><span class="tbw">To be written</span></td>`);
+  return `<div class="tw kt-wrap" tabindex="0" role="region" aria-label="Rent or own: three platforms"><table class="t ${cls}">
+<caption class="vh">Rent or own: our launch price against three platforms' own pages</caption>
 <thead><tr><th scope="col"></th><th scope="col">A month</th><th scope="col">Three years</th><th scope="col">Can you leave with the site?</th></tr></thead>
 <tbody>
-<tr class="kt-us"><th scope="row">${esc(offerTitle(data.copy))}</th><td>Nothing to us</td><td><strong><a href="${OFFER_URL}">£${esc(o.launch_gbp)}</a></strong> once, launch price</td><td>Yes: the files are yours, copy them to any host</td></tr>
-${rows.map((p) => `<tr><th scope="row">${esc(p.name)}</th>${cell(p.month, p.monthN)}${cell(p.three, p.threeN)}${cell(p.leave)}</tr>`).join('\n')}
+<tr class="kt-us"><th scope="row">${esc(offerTitle(data.copy))}</th><td data-l="A month">Nothing to us</td><td data-l="Three years"><strong><a href="${OFFER_URL}">£${esc(o.launch_gbp)}</a></strong> once, launch price</td><td data-l="Can you leave">Yes: the files are yours, copy them to any host</td></tr>
+${rows.map((p) => `<tr><th scope="row">${esc(p.name)}</th>${cell(p.month, p.monthN, 'A month')}${cell(p.three, p.threeN, 'Three years')}${cell(p.leave, null, 'Can you leave')}</tr>`).join('\n')}
 </tbody></table></div>`;
 }
 // The leaving answers in the platforms' own words: quote, platform, link.

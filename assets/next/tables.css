@@ -19,3 +19,27 @@
   .tc .src { display: block; font-size: .85rem; margin-top: .2rem; }
   .tc .basis { display: block; font-size: .8rem; color: var(--muted); font-style: italic; }
 }
+
+/* {{table:glance}} on /next/compare/ (round 5): short values, a small "source" link after each. */
+.glance { margin: 1.2rem 0 2rem; }
+.glance-more { font-size: .92rem; color: var(--muted); }
+.t.glance td, .t.glance th { font-size: .9rem; vertical-align: top; }
+.t.glance .src, .t-cards-glance .src { font-size: .78rem; white-space: nowrap; }
+@media (max-width: 639.98px) {
+  .t-cards-glance .tc-row { padding: .35rem 0; display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: .6rem; align-items: baseline; }
+  .t-cards-glance dd { margin: 0; }
+  .t-cards-glance dt { font-size: .74rem; }
+  .t-cards-glance .src { display: inline; margin: 0 0 0 .3rem; }
+}
+
+/* Round 5 (developer): the short rent-or-own table (design-kit compareTeaser, d3 and others) as one card per row on a
+   phone, each value under its column's name, instead of a table that scrolls sideways. */
+@media (max-width: 639.98px) {
+  .kt-wrap { overflow: visible; border: 0 !important; }
+  .kt, .kt tbody, .kt tr, .kt th, .kt td { display: block; width: auto; }
+  .kt thead { display: none; }
+  .kt tr { border: 1px solid var(--line); border-radius: var(--radius); padding: .6rem .8rem; margin: 0 0 .8rem; }
+  .kt th[scope="row"] { font-size: 1.05rem; padding: 0 0 .3rem; border: 0; }
+  .kt td { min-width: 0; padding: .3rem 0; border: 0; border-top: 1px solid var(--line); }
+  .kt td::before { content: attr(data-l); display: block; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+}

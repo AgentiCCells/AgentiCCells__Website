@@ -6,6 +6,8 @@ description: Renting a site from Wix, Squarespace, WordPress hosts, AI builders 
 
 Each competitor's figures and words come from its own pages, linked with the date they were read; negotiated contracts may differ.
 
+{{table:glance}}
+
 {{figure:year-of-platform}}
 
 ## The price over time

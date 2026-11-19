@@ -1,7 +1,8 @@
 // /next/d/3/ Stop renting your website: a ledger. The first screen sets three years of the platforms' published
 // prices against one payment; then the chart, rent or own, can you leave and the compare teaser, before anything else.
 // Written by designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19 (round 2). Code under Apache-2.0.
-import { homeBlocks, lead, oneIdea, prose, inline, esc, cta, figure, get, sectionOf } from './parts.mjs';
+// Round 5 (developer): "Rent or own" and its short table are one section, under one heading (review R3 item 18).
+import { homeBlocks, lead, oneIdea, prose, inline, esc, cta, figure, get, sectionOf, section } from './parts.mjs';
 import { bigPrice, threeYearBars, compareTeaser, exGrid, whatYouGet, OWNERS } from './design-kit.mjs';
 
 export const name = 'Stop renting your website';
@@ -39,13 +40,10 @@ ${cta(c, { primary: l.primary, secondary: l.secondary })}
 <h2 class="vh" id="d3-three-h">Three years of a platform</h2>
 ${figure(figs, 'year-of-platform')}
 </section>
-${b.rentOrOwn}
-${b.canYouLeave}
-<section class="sec d3-teaser" id="compare">
-<h2>Rent or own, in short</h2>
+${section(c, ['rent_or_own'], { id: 'compare', fallbackTitle: 'Rent or own', cls: 'with-fig d3-teaser', extra: `${figure(figs, 'rent-or-own')}
 ${compareTeaser(data)}
-<p class="more"><a href="/next/compare/">${esc(get(get(c, 'cta') || {}, 'compare') || 'Compare renting and owning')}</a>: every platform, every row, each with its source.</p>
-</section>
+<p class="more"><a href="/next/compare/">${esc(get(get(c, 'cta') || {}, 'compare') || 'Compare renting and owning')}</a>: every platform, every row, each with its source.</p>` })}
+${b.canYouLeave}
 ${whatYouGet(h)}
 ${b.briefToClaude}
 <section class="sec d3-ex" id="examples">

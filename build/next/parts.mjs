@@ -208,7 +208,9 @@ export function bigger(data) {
   return asArray(data.offer && data.offer.bigger).map((x) => {
     const w = words.find((y) => norm(get(y, 'name') || '') === norm(x.name || ''));
     const line = w && get(w, 'line', 'text');
-    return { name: x.name || 'Offer', price: x.price_gbp, line: line ? line.replace(/\{price\}/g, Number.isFinite(x.price_gbp) ? `[${gbp(x.price_gbp)}](${OFFER_URL})` : '[price to be written]') : `${x.what || ''} ${Number.isFinite(x.price_gbp) ? `[${gbp(x.price_gbp)}](${OFFER_URL}), first proposal.` : ''}`.trim() };
+    // short: the words without the "{price}, first proposal." sentence part, for the ladder, which prints the price itself.
+    const short = line ? String(line).replace(/,?\s*\{price\}[^.]*\.?/g, '.').replace(/\.\s*\./g, '.').replace(/\s+\./g, '.').trim() : (x.what || '');
+    return { name: x.name || 'Offer', price: x.price_gbp, short, line: line ? line.replace(/\{price\}/g, Number.isFinite(x.price_gbp) ? `[${gbp(x.price_gbp)}](${OFFER_URL})` : '[price to be written]') : `${x.what || ''} ${Number.isFinite(x.price_gbp) ? `[${gbp(x.price_gbp)}](${OFFER_URL}), first proposal.` : ''}`.trim() };
   });
 }
 export function biggerOffers(data) {
@@ -272,7 +274,7 @@ ${honestNotes(data)}
 ${big.length ? big.map((x) => `<div class="rung">
 <h3>${esc(x.name)}</h3>
 <p class="price">${Number.isFinite(x.price) ? `<strong>${offerLink(gbp(x.price))}</strong> first proposal.` : 'Price to be written, first proposal.'}</p>
-<p>${inline(x.line)}</p>
+${x.short ? `<p>${inline(x.short)}</p>` : ''}
 </div>`).join('\n') : tbw('the bigger offers (data/next/offer.json)')}
 </div>`;
 }
@@ -284,6 +286,12 @@ export function onceHonest(html) {
   let seen = false;
   const out = html.replace(re, (m) => { if (!seen) { seen = true; return m; } return ''; });
   return out.replace(/<div class="table-notes"><\/div>\n?/g, '');
+}
+
+// A ghost button ("See the price") that points at the page it sits on is dropped; the main button stays.
+export function noSelfButtons(html, path) {
+  const re = new RegExp(` ?<a class="btn ghost" href="${path.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}">[^<]*</a>`, 'g');
+  return html.replace(re, '');
 }
 
 // ---------- competitors (data/next/competitors.json) ----------
@@ -361,13 +369,58 @@ export function compareTable(data, { note = true } = {}) {
   const rows = [
     ['Price per month', ['price_month', 'price_per_month', 'monthly', 'per_month'], hasPrices(o) ? 'None from us: the price is one-off' : '<span class="tbw">To be written</span>'],
     ['First year', ['first_year_cost', 'first_year', 'year_one', 'price_first_year'], ours],
-    ['Three years', ['three_year_cost', 'three_years', 'three_year', 'price_three_years'], ours],
+    ['Three years', ['three_year_cost', 'three_years', 'three_year', 'price_three_years'], ours + claudeNote(data)],
   ].map(([label, keys, us]) => ({ label, cells: [us, ...comps.map((c) => factInner(c, keys, date))] }));
   const cols = [{ name: offerTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
   return `${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
 ${note && comps.length ? currencyNote(data) : ''}
 ${tableAndCards('compare', `What a site costs: our launch price against their published prices, read ${date}`, cols, rows)}
 <div class="table-notes">${honestNotes(data)}</div>`;
+}
+// Our three-year cell's note: the owner's own Claude plan, linked to its source (website_cell.facts.optional_editing_cost).
+function claudeNote(data) {
+  const us = get(data.competitors, 'website_cell');
+  const f = us ? fact(us, ['optional_editing_cost']) : undefined;
+  const url = f && typeof f === 'object' ? safeHref(get(f, 'source_url', 'source', 'url')) : null;
+  return url && /^https?:/.test(url) ? `, plus <a href="${esc(url)}">Claude Pro</a> if you edit it yourself` : '';
+}
+// The first clause of a value: up to the first ";", ":", " (" or sentence end; a comma does not end it, so a "but"
+// stays with what it qualifies. Markdown links are kept whole.
+export function firstClause(v) {
+  const s = String(v ?? '').trim();
+  const m = s.match(/^(?:\[[^\]]*\]\([^)]*\)|[^;:(.]|\.(?=\S))+/);
+  return (m ? m[0] : s).replace(/[\s,]+$/, '');
+}
+// {{table:glance}}: four rows, one short value per cell, our column first, each value with a small "source" link.
+// Rendered as the wide table and, on a phone, as cards (tableAndCards), like the other tables.
+export const GLANCE_ROWS = [
+  ['Who owns the files', ['who_owns_the_files', 'owns_files', 'ownership']],
+  ['Can you leave', ['can_you_leave', 'leave', 'exit']],
+  ['Subscription', ['subscription']],
+  ['Three-year cost', ['three_year_cost', 'three_years', 'three_year']],
+];
+function glanceCell(comp, keys, extra = '') {
+  const f = comp ? fact(comp, keys) : undefined;
+  if (f === undefined) return '<span class="tbw">To be written</span>';
+  const o = typeof f === 'object' ? f : { value: f };
+  const v = get(o, 'value', 'text', 'answer', 'summary');
+  if (v === undefined) return '<span class="tbw">To be written</span>';
+  const url = safeHref(get(o, 'source_url', 'source', 'url') || get(comp, 'source_url', 'url'));
+  const one = firstClause(v);
+  return `<span class="v">${inline(one.charAt(0).toUpperCase() + one.slice(1))}${extra}</span>${url && /^https?:/.test(url) ? ` <a class="src" href="${esc(url)}">source</a>` : ' <span class="tbw">source to be recorded</span>'}`;
+}
+export function glanceTable(data) {
+  const comps = competitorList(data.competitors);
+  const us = get(data.competitors, 'website_cell');
+  const date = longDate(readDate(data.competitors)) || '19 November 2026';
+  const rows = GLANCE_ROWS.map(([label, keys]) => ({ label, cells: [glanceCell(us, keys, label === 'Three-year cost' ? claudeNote(data) : ''), ...comps.map((c) => glanceCell(c, keys))] }));
+  const cols = [{ name: offerTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
+  return `<section class="glance" aria-labelledby="at-a-glance">
+<h2 id="at-a-glance">At a glance</h2>
+${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
+${tableAndCards('glance', `The first words of each answer, from their own pages, read ${date}`, cols, rows)}
+<p class="glance-more">The full answers, with each source's date, are in the tables below.</p>
+</section>`;
 }
 export const FEATURE_ROWS = [
   ['Who owns the files', ['who_owns_the_files', 'owns_files', 'who_owns_files', 'ownership']],

@@ -33,3 +33,6 @@
 .d2-body .with-fig .fig { background: #fff; border-radius: 16px; padding: 1.2rem; border: 1px solid #f1dcc4; }
 .d2-hero .d2-promises { display: block; }
 @media (min-width: 64rem) { .d2-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Round 5 (developer): in the full-width (even) sections the lead under a hidden figure heading kept base.css's
+   left margin of 0 and sat at the window's edge; centre it in the column like the rest. */
+.home.d2 .d2-body .sec:nth-child(even) > h2 + p { margin-left: auto; margin-right: auto; max-width: calc(var(--max) - 2 * var(--gutter)); }
