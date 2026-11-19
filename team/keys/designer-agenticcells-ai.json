@@ -1,0 +1,13 @@
+[
+  {
+    "id": "ssh:designer",
+    "label": "designer.agenticcells-ai@AgentiCCells.dinis",
+    "created": "2026-11-19",
+    "created_at": "2026-11-19T03:48:58Z",
+    "status": "active",
+    "session": "https://claude.ai/code/session_01Kw9UwBFAEwyPc1Pt1idWxz",
+    "lifetime": "ephemeral: valid while the conductor.agenticcells-ai session exists; a sub-agent of that session",
+    "git_ssh_signing_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHsTrYO+QshC0vn3RzlOhO0fwm4Do\nYtyB3Z2MGPI55yGmg5vOl172HlB4bfUa7/G9StLtcCU1jg3hkrncInr2rQ==\n-----END PUBLIC KEY-----\n",
+    "git_ssh_signing_key_type": "ecdsa-sha2-nistp256"
+  }
+]

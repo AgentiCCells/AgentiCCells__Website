@@ -1,0 +1,23 @@
+[
+  {
+    "id": "sha256:081b30bc7e8e8a3b",
+    "label": "conductor.agenticcells-ai@AgentiCCells.dinis",
+    "fingerprint": "sha256:081b30bc7e8e8a3b",
+    "signing_fingerprint": "sha256:5150ef262e42cdf3",
+    "public_key": {
+      "v": 1,
+      "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA5sfldlMVHydp0z6CjE4e\n8ec1hBet+qyj7/0DQr5tWDevIeytObyFg1URUIhUPrD4FIRCeNXM5h6moMARaGgC\n2JekPusRKtOhcqHX5rdc0k87r+XMu1I3XpPpqVQ2HcgpjfsfS/oejEccLhv7yJsO\nrFja2PZgs3ST3mAdpYtYa+wN0sFXgEnqKuFPebOxNpG548M5r8HHSUAD7vlog/iG\nsftJ6rppEqY8zgIVrR2duCkRlMb0j8feSpCaP2ERKz+iMv9tN5T8/KpdPMSB1j1e\nW+ZvV/a4weGErPx3rGoU5mSlIG/jwylndUpsE+V7n8WnjsxQzxKhc1BJCPfS/kIB\n+iR+s7bDMagHZzWqfPNgPbrUe2qSHaEu8TL6298xrvea+M9V0Y86BWBx6qHhgNkY\n4iXOUbaoc1Cj1zZa13qOOcFYqhQ2NI1FNBvs5dJuSWQXx9AFj4JjBNsAujXQxiPx\neyi8hvYV5r11MkElLMOg7HZYaKSsthakAVVQu7lfztljODG9SoLDBRePG0su1lgg\nEXDO/sRNAaEPPO417NX/dEsf9OO7Gs6H/7OT3IX/hnuN2croP0Er+EI0pwRu7i96\nubmUuhqj+37LNn8SiQuE5f0gJdR5ss22xXYQcTCj/WRqPWNN0c0cxZB4Bddpdtxc\nUA1sT5PDFnmUI8Ag2IG2jJ0CAwEAAQ==\n-----END PUBLIC KEY-----\n",
+      "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEt2Ig7nNwhSqJynmGAUAATgGyrAYO\n6Hhbd/tS8hWfpjeWCd9r0UrMvy92vfRLAelb1IcOCe0PBHfmPYH87jTeBA==\n-----END PUBLIC KEY-----\n",
+      "label": "conductor.agenticcells-ai@AgentiCCells.dinis",
+      "fingerprint": "sha256:081b30bc7e8e8a3b",
+      "signing_fingerprint": "sha256:5150ef262e42cdf3"
+    },
+    "created": "2026-11-19",
+    "created_at": "2026-11-19T03:45:20Z",
+    "status": "active",
+    "lifetime": "ephemeral: valid while this agent's session exists",
+    "session": "https://claude.ai/code/session_01Kw9UwBFAEwyPc1Pt1idWxz",
+    "git_ssh_signing_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEclr2Fg/7GGvf2Ttss7SZ8mOHzHJe\nkPMXloDKPNCuLO/Ul7fDfr+QLS0LVcErF8ClVXaRSJt2IKYRuWfafGXoCg==\n-----END PUBLIC KEY-----\n",
+    "git_ssh_signing_key_type": "ecdsa-sha2-nistp256"
+  }
+]
