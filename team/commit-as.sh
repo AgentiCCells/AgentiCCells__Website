@@ -5,7 +5,9 @@
 # loaded into the conductor's ssh-agent; nothing secret is read or printed here.
 set -euo pipefail
 role="${1:?role}"; subj="${2:?subject}"; body="${3:-}"
-agent="$role.agenticcells-ai@AgentiCCells.dinis"
+# The CI Agent: check (build/check-commits.mjs) allows no dot before the @, so the trailer uses a hyphen:
+# role-agenticcells-ai@AgentiCCells.dinis stands for role.agenticcells-ai@AgentiCCells.dinis (question for Dinis, 2026-11-19).
+agent="$role-agenticcells-ai@AgentiCCells.dinis"
 key="$HOME/.agents/$role.agenticcells-ai/id_sign.pub"
 [ -f "$key" ] || { echo "no signing key for $agent" >&2; exit 1; }
 export SSH_AUTH_SOCK="${SSH_AUTH_SOCK:-$HOME/.agents/conductor.agenticcells-ai/agent.sock}"
