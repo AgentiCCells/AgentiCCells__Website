@@ -143,3 +143,53 @@ span.tbw { display: inline-block; padding: 0 .4rem; }
 .why { display: block; color: var(--muted); font-size: .92rem; }
 .proof { font-size: .9rem; margin-top: .5rem !important; }
 .tag.own { background: #ede9fe; color: #5b21b6; }
+
+/* ---------- designer round 2 (designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19) ----------
+   Neutral defaults for build/next/design-kit.mjs: example tiles (.kx), platform bars (.kb), the compare teaser (.kt),
+   the large price (.kp) and the leaving quotes (.kq). Each design dresses them in its own sheet. */
+.kx-grid { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+.kx { margin: 0; min-width: 0; }
+.kx-shot { display: block; color: inherit; text-decoration: none; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: var(--bg); box-shadow: 0 8px 24px rgba(15, 23, 42, .08); }
+.kx-shot:hover { box-shadow: 0 10px 30px rgba(15, 23, 42, .16); }
+.kx-bar { display: flex; align-items: center; gap: 5px; padding: 6px 8px; background: var(--soft); border-bottom: 1px solid var(--line); }
+.kx-bar i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); flex: none; }
+.kx-url { margin-left: 6px; flex: 1; min-width: 0; font-size: .72rem; line-height: 1.5; color: var(--muted); background: var(--bg); border-radius: 999px; padding: 0 .6rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kx-img { position: relative; display: block; }
+.kx-img img { display: block; width: 100%; height: auto; aspect-ratio: 1100 / 688; object-fit: cover; object-position: top; }
+.kx-noimg { display: grid; place-items: center; aspect-ratio: 1100 / 688; color: var(--muted); font-style: italic; }
+.kx-tag { position: absolute; left: 8px; top: 8px; font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: .15rem .5rem; border-radius: 999px; background: #ffffff; color: #1f2937; box-shadow: 0 1px 4px rgba(0, 0, 0, .25); }
+.kx-tag.kx-owner { background: #14532d; color: #ffffff; }
+.kx-tag.kx-demo { background: #fef3c7; color: #713f12; }
+.kx-tag.kx-own { background: #ede9fe; color: #4c1d95; }
+.kx-cap { margin: .55rem 0 0; font-size: .9rem; color: var(--muted); }
+.kx-cap a { font-weight: 700; color: var(--fg); margin-right: .25rem; }
+.kx-cap span { display: block; }
+
+.kb { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; }
+.kb li { display: grid; grid-template-columns: 7.5rem 1fr; grid-template-areas: "n b" "n v"; column-gap: .7rem; align-items: center; }
+.kb-name { grid-area: n; font-weight: 700; font-size: .92rem; }
+.kb-bar { grid-area: b; display: block; height: 12px; width: var(--w); border-radius: 0 3px 3px 0; background: var(--rent, #b91c1c); }
+.kb-v { grid-area: v; font-size: .82rem; color: var(--muted); }
+.kb-v a { font-weight: 700; color: var(--fg); font-variant-numeric: tabular-nums; }
+.kb-note { font-size: .8rem; color: var(--muted); margin: .6rem 0 0; }
+
+.kt { font-size: .92rem; }
+.kt td, .kt thead th { min-width: 9rem; }
+.kt .kt-us th, .kt .kt-us td { background: var(--accent-soft); font-weight: 600; }
+.kt-src { font-size: .8rem; }
+
+.kp { margin: .3rem 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .6rem; }
+.kp strong { font-size: 3rem; line-height: 1; letter-spacing: -.02em; }
+.kp strong a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.kp-w { font-weight: 700; }
+.kp-was { color: var(--muted); font-size: .92rem; }
+
+.kq { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+.kq blockquote { margin: 0; padding: 0; font-size: 1.05rem; }
+.kq blockquote p { margin: 0; }
+.kq-who { margin: .4rem 0 0; font-size: .85rem; color: var(--muted); }
+.picks-large .pick .thumb-img { aspect-ratio: 1366 / 768; object-fit: contain; }
+/* designer round 2: a home section whose figure carries its own heading keeps its h2 for screen readers only,
+   so the page does not show the same heading twice; the section's words stay visible above the figure. */
+.home .with-fig:has(> .fig > .nfig) > h2 { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.home .with-fig:has(> .fig > .nfig) > h2 + p { margin: 0 0 .4rem; color: var(--muted); max-width: 46rem; }

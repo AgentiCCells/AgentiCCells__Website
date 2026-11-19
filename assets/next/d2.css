@@ -17,3 +17,19 @@
 .d2-body .final { background: #c2410c; color: #fff; max-width: none; text-align: center; }
 .d2-body .final .btn { background: #fff; color: #c2410c; }
 .d2-body .final .btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 2px #fff; }
+
+/* Round 2 (designer.agenticcells-ai@AgentiCCells.dinis): the sites themselves straight after the promises, in browser frames. */
+.d2-sites { max-width: none; background: #17222b; color: #ffffff; }
+.d2-sites > * { max-width: calc(var(--max) - 2 * var(--gutter)); margin-left: auto; margin-right: auto; }
+.d2-sites h2 { font-weight: 800; color: #ffffff; }
+.d2-sites p { color: #d5dde3; }
+.d2-sites .more a { color: #fdba74; }
+.d2-ex { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 1.2rem; }
+.d2-ex .kx-shot { border: 0; box-shadow: 0 18px 40px rgba(0, 0, 0, .45); }
+.d2-ex .kx-bar { background: #e9edf0; }
+.d2-ex .kx-cap, .d2-ex .kx-cap a { color: #e6ecf0; }
+.d2-ex .kx-cap span { color: #b9c4cc; }
+.d2 .kx-tag.kx-owner { background: #c2410c; }
+.d2-body .with-fig .fig { background: #fff; border-radius: 16px; padding: 1.2rem; border: 1px solid #f1dcc4; }
+.d2-hero .d2-promises { display: block; }
+@media (min-width: 64rem) { .d2-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

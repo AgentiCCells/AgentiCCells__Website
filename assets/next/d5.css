@@ -1,3 +1,77 @@
-/* /next/d/5/: a minimal stub for round 1; the designer replaces it in round 2. Over base.css. Code under Apache-2.0. */
-.d5 { --accent: #1d4ed8; --accent-soft: #dbeafe; }
-.d5-body .examples-sec { background: #f1f5f9; max-width: none; }
+/* /next/d/5/ Proof: a gallery. One line and the offer, then a wall of real sites in colour on a neutral wall,
+   each labelled on the image. Over base.css. Written by designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19.
+   Code under Apache-2.0. */
+.d5 {
+  --bg: #ffffff; --fg: #0b0c0e; --muted: #5b6168; --line: #dfe3e8; --soft: #f1f3f5;
+  --accent: #1d4ed8; --accent-fg: #ffffff; --accent-soft: #dbeafe;
+  --head: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --fig-accent: #1d4ed8; --fig-ink: #0b0c0e; --fig-muted: #5b6168; --fig-bg: #ffffff;
+  --fig-line: #dfe3e8; --fig-good: #15803d; --fig-warn: #b45309;
+  --max: 88rem; --radius: 6px;
+}
+.d5 h1, .d5 h2 { font-weight: 700; letter-spacing: -.03em; }
+.d5 .btn { border-radius: 6px; }
+
+/* The first strip: the line on the left, the price and the button on the right. */
+.d5-top { padding: 1.1rem 0 1rem; }
+.d5-top .in { display: grid; gap: .8rem 2.4rem; align-items: center; }
+@media (min-width: 60rem) { .d5-top .in { grid-template-columns: 1fr auto; } }
+.d5-say h1 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); margin: 0 0 .25rem; line-height: 1.05; }
+.d5-say p { margin: 0; color: var(--muted); max-width: 52rem; font-size: .98rem; }
+.d5-buy { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1.2rem; }
+.d5-price { margin: 0; }
+.d5-price strong { font-size: 2.6rem; }
+.d5-price .kp-was { flex-basis: 100%; font-size: .85rem; }
+.d5-buy .cta { margin: 0; }
+
+/* The wall. */
+.d5-wall { background: var(--soft); padding: 1rem 0 2.4rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.d5-in { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.d5-legend { margin: 0 0 .8rem; font-size: .88rem; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .5rem; }
+.d5-legend .kx-tag { position: static; box-shadow: none; }
+.d5-grid { margin: 0; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: dense; }
+@media (max-width: 34rem) { .d5-grid { grid-template-columns: 1fr; } }
+@media (min-width: 48rem) { .d5-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 72rem) { .d5-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 48rem) { .d5-grid .d5-big { grid-column: span 2; grid-row: span 2; } }
+.d5-grid .kx-shot { border-radius: 4px; border: 0; box-shadow: 0 1px 2px rgba(0, 0, 0, .12), 0 6px 18px rgba(0, 0, 0, .06); }
+.d5-grid .kx-shot:hover { box-shadow: 0 0 0 3px var(--accent); }
+.d5-grid .kx-cap { margin: .4rem .1rem 0; font-size: .84rem; }
+.d5-grid .kx-cap span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.d5-grid .d5-big .kx-tag { font-size: .85rem; left: 12px; top: 12px; padding: .25rem .7rem; }
+.d5-grid .d5-big .kx-cap { font-size: .95rem; }
+
+/* After the wall: figures in pairs on the wall colour, then one per row. */
+.d5-body .sec { max-width: var(--max); }
+.d5-body h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.d5-pair { max-width: var(--max); margin: 0 auto; display: grid; gap: 0 1.6rem; }
+@media (min-width: 80rem) { .d5-pair { grid-template-columns: 1fr 1fr; } .d5-pair .sec + .sec { border-top: 0; } }
+.d5-pair .sec { max-width: none; min-width: 0; }
+.d5-pair .fig { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 1rem; }
+.d5-full .fig, .d5-body .with-fig .fig { border: 1px solid var(--line); border-radius: 8px; padding: 1rem; }
+.d5-body .final { background: var(--fg); color: #ffffff; max-width: none; text-align: center; }
+.d5-body .final .btn { background: #ffffff; color: var(--fg); }
+.d5-body .final .btn.ghost { background: transparent; color: #ffffff; box-shadow: inset 0 0 0 2px #ffffff; }
+.d5 .offer { border-radius: 8px; }
+
+/* On a phone the price stays in reach: a bar at the foot of the screen, inside the page flow. */
+.d5-sticky { display: none; }
+@media (max-width: 47.99rem) {
+  .d5-sticky { position: sticky; bottom: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .5rem var(--gutter); background: rgba(255, 255, 255, .97); border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(0, 0, 0, .08); }
+  .d5-sticky .kp { margin: 0; gap: 0 .4rem; }
+  .d5-sticky .kp strong { font-size: 1.6rem; }
+  .d5-sticky .kp-w { font-size: .8rem; }
+  .d5-sticky .kp-was { display: none; }
+  .d5-sticky .btn { margin: 0; padding: .55rem .9rem; font-size: .92rem; }
+}
+
+/* The last tile of the wall: the next site is yours. It fills the rest of the last row. */
+.d5-next { display: flex; flex-direction: column; justify-content: center; gap: .3rem; padding: 1.2rem 1.4rem; border-radius: 4px; background: var(--accent); color: #ffffff; }
+.d5-next-h { margin: 0; font: 700 clamp(1.4rem, 2.4vw, 2rem)/1.1 var(--head); letter-spacing: -.02em; }
+.d5-next .kp { margin: 0; }
+.d5-next .kp strong { font-size: 2.6rem; }
+.d5-next .kp-was { color: #dbeafe; }
+.d5-next .cta { margin: .3rem 0 0; }
+.d5-next .btn { background: #ffffff; color: var(--accent); }
+@media (max-width: 47.99rem) { .d5-grid .d5-next { grid-column: 1 / -1; } }
+@media (min-width: 72rem) { .d5-grid .d5-next { grid-column: span 3; } }

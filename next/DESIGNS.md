@@ -70,7 +70,7 @@ Dinis's words, 19 November 2026 ~03:35 UTC (board/briefs/2026-11-19-sovereign-pr
         --fig-line: #d6d3cc; --fig-good: #166534; --fig-warn: #b91c1c;
         --fig-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   ```
-- **First screen:** a split hero. Left half "Renting" on a pale red ledger: rows "Month 1, Month 2, Month 3 ..." fading out, the competitor's published monthly price from data/next/competitors.json with its ISO code, source link and read date. Right half "Owning" on pale green: one row, our price with "launch price", and the line "then nothing". The headline across both: "Stop renting your website." On a phone the two halves stack, renting first.
+- **First screen (as built in round 2):** the headline with the lede beside it, then a two-column ledger: "Renting" holds bars of three years of each platform's entry plan (Wix, Squarespace, WordPress.com, Framer, Durable, Fliplet), each amount linked to the platform's own price page, in USD as published; "Owning" holds the launch price set large, the offer note and the two buttons. On a phone, owning comes first so the price is near the top. The round 1 sketch was: a split hero. Left half "Renting" on a pale red ledger: rows "Month 1, Month 2, Month 3 ..." fading out, the competitor's published monthly price from data/next/competitors.json with its ISO code, source link and read date. Right half "Owning" on pale green: one row, our price with "launch price", and the line "then nothing". The headline across both: "Stop renting your website." On a phone the two halves stack, renting first.
 - **Sections:** three years of a platform (the chart, first and full width), rent or own (the table figure), can you leave, what you get, how it works, examples, honest notes (moved up, because the Claude plan is a running cost the reader should see), offer, partners, questions, final call.
 - **Infographics:** in ruled "statement" panels with a header row (date read, source); the chart and the rent-or-own figure use the red and green tokens; the other figures use green only.
 - **Examples:** a compact table of real sites: name, what it is, "moved in", link; one screenshot per row on desktop.
@@ -78,23 +78,25 @@ Dinis's words, 19 November 2026 ~03:35 UTC (board/briefs/2026-11-19-sovereign-pr
 
 ## 4. Just say it (/next/d/4/)
 
-**For:** technologists and people who hate page builders. **The story:** you change your site by talking to your own Claude, with checks before anything goes live.
+**For:** people who want the offer in plain words. **The story:** big plain statements, one short sentence at a time, one figure per screen.
 
-- **Mood:** dark, technical, quiet. A terminal and a chat, not neon.
-- **Type:** sans headings; the conversation, file names and checks in the mono stack.
+Round 2 change (conductor's brief to the designer, 19 November 2026: "plain, bold, typographic, very short sections, big statements, one figure per screen"). The earlier chat-panel direction is dropped.
+
+- **Mood:** plain and bold. A poster, not a dashboard. Near-black page, warm white type, one yellow accent.
+- **Type:** Helvetica Neue first, weight 800, tight tracking; statements up to about 6rem; a mono counter ("01 / 06") drawn by CSS, so no bare number sits in the text.
 - **Palette (tokens):**
   ```css
-  .d4 { --bg: #0b1220; --fg: #e6edf7; --muted: #9aa8bd; --line: #243149; --soft: #111a2e;
-        --accent: #5eead4; --accent-fg: #0b1220; --accent-soft: #12303a;
-        --fig-accent: #5eead4; --fig-ink: #e6edf7; --fig-muted: #9aa8bd; --fig-bg: #111a2e;
-        --fig-line: #243149; --fig-good: #4ade80; --fig-warn: #fbbf24; }
+  .d4 { --bg: #0c0c0c; --fg: #f4f1ea; --muted: #a8a49b; --line: #2b2a27; --soft: #161616;
+        --accent: #ffd23f; --accent-fg: #0c0c0c; --accent-soft: #2a2410;
+        --fig-accent: #ffd23f; --fig-ink: #f4f1ea; --fig-muted: #a8a49b; --fig-bg: #161616;
+        --fig-line: #3a3833; --fig-good: #4ade80; --fig-warn: #fb923c; }
   ```
-  (Measured: the teal on the background is 12.7:1, the muted text 7.8:1.)
-- **First screen:** "Just say it. Your site changes." Under it a chat panel: the owner says "Here is my CV, add my latest job"; Claude replies with what it found and the checks it ran (build, validation, leak scan: each with a tick); the owner says "publish"; a before and after of the site, side by side (stacked on a phone). The offer is a slim bar under the chat with the price and "launch price". The exchange is labelled as an illustration of a real change, with a link to where it happened.
-- **Sections:** how it works (the seven steps), what you get (CLAUDE.md and the policy and checks highlighted), from brief to your own Claude, the team, can you leave, rent or own, three years of a platform, examples, offer, honest notes, partners, questions, final call.
-- **Infographics:** on dark surface panels; the `--fig-*` tokens above make them dark. Each figure has a small mono caption in the form of a file path, for example `next/figures/team.mjs`, linking to its source on GitHub.
-- **Examples:** a grid of sites, each with its repository link beside the site link, so the reader sees the files are real.
-- **Clearly different because:** it is the only dark design, the only one whose hero is a conversation, and it shows the repository and checks more than the page.
+  (Estimated: the warm white on the background about 17:1, the muted text about 7.9:1, the yellow about 13:1.)
+- **First screen:** "Just say it." in white and "Your site changes." in yellow, each on its own line; the one idea; the lede; a yellow rule, then the price large with "launch price" and the two buttons.
+- **Sections:** the six promises, word for word from next/copy.json, one per screen, each with its line, its proof link and one picture: you own it (what you get), nobody can lock you in (can you leave), you change it by talking to Claude (brief to your own Claude), you can run it anywhere (the tenets), it looks better (six screenshots), almost nothing to attack and it costs once (three years of a platform). Then rent or own, how it works, the team, the price, questions, and a yellow final band.
+- **Infographics:** dark through the `--fig-*` tokens.
+- **Examples:** six bare screenshots, labelled on the image.
+- **Clearly different because:** it is the only design built of whole-screen statements, the only near-black page, and it has the largest type.
 
 ## 5. Proof, a wall of real sites (/next/d/5/)
 
@@ -118,4 +120,6 @@ Dinis's words, 19 November 2026 ~03:35 UTC (board/briefs/2026-11-19-sovereign-pr
 
 ## Round 2
 
-The developer builds designs 1 and 2 from this now (their sheets already follow these directions). The designer builds 3, 4 and 5 in round 2, replacing the stubs in assets/next/d3.css, d4.css and d5.css.
+All five are built (designer, round 2). Shared helpers for the designs are in build/next/design-kit.mjs: example tiles labelled by kind ("Made for <name>" only where consent to be named is recorded, "Demo", "Our own"), platform bars, a compare teaser, a large price line. Design 5 ends its wall with a tile that says "Then ask for yours." with the price and the button.
+
+Round 1 note: The developer builds designs 1 and 2 from this now (their sheets already follow these directions). The designer builds 3, 4 and 5 in round 2, replacing the stubs in assets/next/d3.css, d4.css and d5.css.

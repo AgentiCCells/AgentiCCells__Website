@@ -1,3 +1,81 @@
-/* /next/d/3/: a minimal stub for round 1; the designer replaces it in round 2. Over base.css. Code under Apache-2.0. */
-.d3 { --accent: #15803d; --accent-soft: #dcfce7; }
-.d3-hero { background: linear-gradient(90deg, #fdf2f2 0%, #f0fdf4 100%); }
+/* /next/d/3/ Stop renting your website: an account statement. Ruled lines, mono figures, red for renting and green
+   for owning. Over base.css. Written by designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19. Code under Apache-2.0. */
+.d3 {
+  --bg: #fbfaf7; --fg: #1c1917; --muted: #57534e; --line: #d6d3cc; --soft: #f3f1ec;
+  --accent: #166534; --accent-fg: #ffffff; --accent-soft: #dcfce7; --rent: #b91c1c; --rent-soft: #fef2f2;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  --fig-accent: #166534; --fig-ink: #1c1917; --fig-muted: #57534e; --fig-bg: #ffffff;
+  --fig-line: #d6d3cc; --fig-good: #166534; --fig-warn: #b91c1c;
+  --radius: 4px;
+}
+.d3 h1, .d3 h2 { font-weight: 800; letter-spacing: -.025em; }
+.d3 .btn { border-radius: 4px; }
+
+/* The first screen: headline, then two columns of a ledger. */
+.d3-hero { background: var(--bg); padding: 1.4rem 0 1.6rem; border-bottom: 3px double var(--fg); }
+.d3-head { display: grid; gap: .2rem 2.4rem; align-items: center; }
+.d3-hero h1 { font-size: clamp(2.2rem, 5.4vw, 4rem); margin: 0; line-height: 1; }
+.d3-head .kicker, .d3-head p { margin: .3rem 0 0; color: var(--muted); max-width: 40rem; }
+.d3-head p:first-of-type { color: var(--fg); font-weight: 600; }
+@media (min-width: 60rem) { .d3-head { grid-template-columns: auto 1fr; } .d3-head h1 { grid-row: 1 / span 2; } }
+
+.d3-ledger { display: grid; gap: 0; margin-top: 1.1rem; border: 1px solid var(--fg); background: #ffffff;
+  background-image: repeating-linear-gradient(180deg, transparent 0 27px, #efede7 27px 28px); }
+@media (min-width: 56rem) { .d3-ledger { grid-template-columns: 1.45fr 1fr; } }
+.d3-col { padding: .9rem 1.1rem 1rem; min-width: 0; }
+.d3-rent { background-color: rgba(254, 242, 242, .85); }
+.d3-own { background-color: rgba(220, 252, 231, .7); border-top: 1px solid var(--fg); display: flex; flex-direction: column; }
+@media (min-width: 56rem) { .d3-own { border-top: 0; border-left: 1px solid var(--fg); } }
+.d3-col-h { margin: 0 0 .6rem; padding-bottom: .4rem; border-bottom: 2px solid currentColor; display: flex; flex-wrap: wrap; gap: .2rem .8rem; align-items: baseline; }
+.d3-col-h > span:first-child { font-family: var(--mono); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; }
+.d3-rent .d3-col-h { color: var(--rent); }
+.d3-own .d3-col-h { color: var(--accent); }
+.d3-col-sub { color: var(--fg); font-size: .92rem; }
+.d3 .kb { gap: .3rem; }
+.d3 .kb li { grid-template-columns: 7rem 1fr; }
+.d3 .kb-name { font-family: var(--mono); font-size: .82rem; }
+.d3 .kb-bar { height: 14px; border-radius: 0; background: repeating-linear-gradient(90deg, var(--rent) 0 7px, #fca5a5 7px 8px); }
+.d3 .kb-v { font-family: var(--mono); font-size: .74rem; }
+.d3 .kb-v a { color: var(--rent); font-size: .85rem; }
+.d3 .kb-note { font-size: .74rem; }
+.d3-price { margin: .4rem 0 .2rem; }
+.d3-price strong { font-family: var(--mono); font-size: clamp(3rem, 6vw, 4.4rem); color: var(--accent); letter-spacing: -.04em; }
+.d3-price .kp-w { font-family: var(--mono); font-size: .95rem; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
+.d3-price .kp-was { flex-basis: 100%; font-family: var(--mono); }
+.d3-note { margin: .2rem 0 .6rem; font-size: .88rem; color: var(--muted); }
+.d3-own .cta { margin: auto 0 0; }
+.d3-own .btn.ghost { background: #ffffff; }
+
+/* The rest: statement panels with a header rule. */
+.d3-body .sec { max-width: var(--max); }
+.d3-body .sec + .sec { border-top: 1px solid var(--fg); }
+.d3-body h2 { font-size: clamp(1.6rem, 3.4vw, 2.4rem); }
+.d3-body h2::before { content: "Statement"; display: block; font-family: var(--mono); font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
+.d3-stmt { padding-top: 1.6rem; }
+.d3-stmt .fig, .d3-body .with-fig .fig { background: #ffffff; border: 1px solid var(--fg); padding: 1rem; margin-top: 1rem; }
+.d3-stmt .fig { border-top: 6px solid var(--fg); }
+.d3-teaser .kt { font-family: var(--mono); font-size: .82rem; }
+.d3-teaser .kt th[scope="row"] { font-family: var(--font); font-size: .9rem; }
+.d3-teaser .tw { border-color: var(--fg); border-radius: 0; }
+.d3-teaser .kt thead th { background: var(--fg); color: #ffffff; }
+.d3-teaser .kt thead th:first-child { background: var(--fg); }
+.d3-teaser .kt td a { color: var(--rent); font-weight: 700; }
+.d3-teaser .kt .kt-us td a { color: var(--accent); }
+.d3-rows { grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: 0; border-top: 1px solid var(--fg); }
+.d3-rows .kx { display: grid; grid-template-columns: 9rem 1fr; gap: .9rem; align-items: start; padding: .8rem 0; border-bottom: 1px solid var(--line); }
+.d3-rows .kx-shot { border-radius: 2px; box-shadow: none; border-color: var(--fg); }
+.d3-rows .kx-tag { font-size: .6rem; left: 4px; top: 4px; padding: .05rem .35rem; }
+.d3-rows .kx-cap { margin: 0; }
+@media (min-width: 40rem) { .d3-rows .kx:nth-child(odd) { padding-right: 1.2rem; } }
+.d3-body .final { background: var(--fg); color: #ffffff; max-width: none; text-align: center; }
+.d3-body .final h2::before { color: #a8a29e; }
+.d3-body .final .btn { background: #4ade80; color: #052e16; }
+.d3-body .final .btn.ghost { background: transparent; color: #ffffff; box-shadow: inset 0 0 0 2px #ffffff; }
+.d3 .offer { border-radius: 4px; border-color: var(--fg); box-shadow: none; }
+.d3 .price strong { font-family: var(--mono); }
+.d3-body .with-fig:has(> .fig > .nfig)::before { content: "Statement"; display: block; font-family: var(--mono); font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
+@media (max-width: 40rem) {
+  .d3 .kb li { grid-template-columns: 1fr; grid-template-areas: "n" "b" "v"; row-gap: .15rem; }
+  .d3-ledger { display: flex; flex-direction: column-reverse; }
+  .d3-own { border-top: 0; border-bottom: 1px solid var(--fg); }
+}

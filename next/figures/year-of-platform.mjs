@@ -173,7 +173,7 @@ export default function (data = {}) {
     });
     y = cy + ch + (wide ? 40 : 30);
     const honest = get(data, 'offer.honest_notes.0', 'Editing the site after hand-over needs your own Claude plan, or a partner who edits it for you.');
-    const hn = para(0, y, `Hosting on GitHub Pages is free. ${honest}`, W, s.xs, 'z-xs t-m', wide ? 24 : 19);
+    const hn = para(0, y, `Free on GitHub Pages for a public repository that is not an online shop or business transaction site (GitHub\'s terms), or any static host. ${honest}`, W, s.xs, 'z-xs t-m', wide ? 24 : 19);
     out += hn.svg;
     return { svg: out, h: y + hn.height };
   };
@@ -197,7 +197,7 @@ export default function (data = {}) {
     ...li,
     cellLi,
     '</ul>',
-    `<p>Hosting on GitHub Pages is free. ${esc(get(data, 'offer.honest_notes.0', 'Editing the site after hand-over needs your own Claude plan, or a partner who edits it for you.'))}</p>`,
+    `<p>Free on GitHub Pages for a public repository that is not an online shop or business transaction site (<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">GitHub&#39;s terms</a>), or any static host. ${esc(get(data, 'offer.honest_notes.0', 'Editing the site after hand-over needs your own Claude plan, or a partner who edits it for you.'))}</p>`,
   ].join('\n');
 
   return { svg: wrapFigure(ID, wide, narrow), text: textHtml };

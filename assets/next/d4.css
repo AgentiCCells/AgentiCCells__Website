@@ -1,3 +1,71 @@
-/* /next/d/4/: a minimal stub for round 1; the designer replaces it in round 2. Over base.css. Code under Apache-2.0. */
-.d4 { --accent: #111111; --accent-soft: #eeeeee; --soft: #ffffff; }
-.d4-hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 800; }
+/* /next/d/4/ Just say it: plain, bold, typographic. Near-black page, warm white type, one yellow accent.
+   One statement per screen, one line under it, one figure. Over base.css.
+   Written by designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19. Code under Apache-2.0.
+   Contrast: #f4f1ea on #0c0c0c about 17:1; #a8a49b on #0c0c0c about 7.9:1; #ffd23f on #0c0c0c about 13:1. */
+.d4 {
+  --bg: #0c0c0c; --fg: #f4f1ea; --muted: #a8a49b; --line: #2b2a27; --soft: #161616;
+  --accent: #ffd23f; --accent-fg: #0c0c0c; --accent-soft: #2a2410;
+  --fig-accent: #ffd23f; --fig-ink: #f4f1ea; --fig-muted: #a8a49b; --fig-bg: #161616;
+  --fig-line: #3a3833; --fig-good: #4ade80; --fig-warn: #fb923c;
+  --head: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --max: 76rem;
+}
+.d4 .nx-head { background: var(--bg); border-color: var(--line); }
+.d4 .nx-head nav a { color: var(--fg); }
+.d4 .nx-head nav a:hover, .d4 .nx-head nav a[aria-current] { background: var(--accent); color: var(--accent-fg); }
+.d4 .brand { color: var(--fg); }
+.d4 a { color: var(--accent); }
+.d4 h1, .d4 h2 { font-weight: 800; letter-spacing: -.035em; line-height: .98; }
+.d4 .btn { border-radius: 0; font-weight: 800; padding: .85rem 1.4rem; }
+.d4 .btn { color: var(--accent-fg); }
+.d4 .btn.ghost { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 2px var(--fg); }
+
+/* The first screen: two short sentences, very large. */
+.d4-hero { padding: clamp(1.6rem, 4vh, 2.6rem) 0 2.2rem; border-bottom: 1px solid var(--line); }
+.d4-hero h1 { font-size: clamp(2.9rem, 8.6vw, 7.4rem); margin: 0 0 .25em; }
+.d4-hero h1 span { display: block; }
+.d4-hero .d4-h1 { color: var(--accent); }
+.d4-hero .kicker { font-size: clamp(1.15rem, 1.9vw, 1.5rem); font-weight: 700; color: var(--fg); margin: 0 0 .3rem; }
+.d4-lede p { font-size: clamp(1.05rem, 1.6vw, 1.3rem); max-width: 46rem; margin: 0; color: var(--muted); }
+.d4-buy { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 2rem; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 4px solid var(--accent); }
+.d4-price { margin: 0; }
+.d4-price strong { font-size: clamp(2.8rem, 5vw, 4rem); }
+.d4-price .kp-w { color: var(--accent); }
+.d4-buy .cta { margin: 0; }
+
+/* One statement per screen. A counter numbers them, so no bare number sits in the text. */
+.d4-body { counter-reset: say; }
+.d4-say { counter-increment: say; min-height: 92vh; padding: 3.2rem 0 3rem; border-bottom: 1px solid var(--line); display: flex; align-items: center; }
+.d4-say .in { width: 100%; }
+.d4-say h2 { font-size: clamp(2.4rem, 7vw, 6rem); margin: 0 0 .3em; max-width: 16ch; }
+.d4-say h2::before { content: counter(say, decimal-leading-zero) " / 06"; display: block; font: 700 .85rem/1 ui-monospace, Menlo, Consolas, monospace; letter-spacing: .16em; color: var(--accent); margin-bottom: 1.2rem; }
+.d4-say > .in > p { font-size: clamp(1.1rem, 1.8vw, 1.45rem); max-width: 44rem; margin: 0 0 .6rem; }
+.d4-say .d4-proof { font-size: .98rem; color: var(--muted); max-width: 44rem; }
+.d4-say:nth-child(even) h2 { color: var(--accent); }
+.d4-say .fig { margin-top: 2rem; }
+.d4 .fig summary { color: var(--accent); }
+.d4-ex { grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 1.2rem; margin-top: 2rem; }
+.d4 .kx-shot { border: 0; border-radius: 0; box-shadow: 0 0 0 1px var(--line); background: #ffffff; }
+.d4 .kx-shot:hover { box-shadow: 0 0 0 3px var(--accent); }
+.d4 .kx-tag { border-radius: 0; }
+
+/* The rest: the same, quieter. */
+.d4-rest .sec { max-width: var(--max); padding-top: 3rem; padding-bottom: 3rem; }
+.d4-rest .sec + .sec { border-color: var(--line); }
+.d4-rest h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+.d4-rest .sec > p { font-size: 1.15rem; max-width: 44rem; }
+.d4 .offer { background: var(--soft); border-color: var(--line); box-shadow: none; border-radius: 0; }
+.d4 .offer-label, .d4 .price-eur, .d4 .offer-note, .d4 .price s { color: var(--muted); }
+.d4 .faq details { border-color: var(--line); }
+.d4 .tw { border-color: var(--line); }
+.d4 .t thead th, .d4 .t th[scope="row"], .d4 .t thead th:first-child { background: var(--soft); }
+.d4 .t td.us, .d4 .t thead th:nth-child(2) { background: var(--accent-soft); }
+.d4 .tbw { color: #5c4400; }
+.d4-rest .final { max-width: none; text-align: left; padding: 4rem var(--gutter); background: var(--accent); color: var(--accent-fg); }
+.d4-rest .final > * { max-width: calc(var(--max) - 2 * var(--gutter)); margin-left: auto; margin-right: auto; }
+.d4-rest .final h2 { font-size: clamp(2.2rem, 6vw, 5rem); }
+.d4-rest .final .btn { background: var(--accent-fg); color: var(--accent); }
+.d4-rest .final .btn.ghost { background: transparent; color: var(--accent-fg); box-shadow: inset 0 0 0 2px var(--accent-fg); }
+.d4-rest .final a { color: var(--accent-fg); }
+.d4 .nx-foot { background: #000000; border-top: 1px solid var(--line); }
+.d4 .preview-band a { color: #4a3600; }

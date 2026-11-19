@@ -8,7 +8,7 @@ const PITCH = 'https://newsroom.sgit.ai/articles/the-pitch.html';
 
 const ROWS = [
   { label: 'Where it lives', rent: 'In their account, in their format.', own: 'In your own GitHub repository, as plain files.' },
-  { label: 'What you pay', rent: 'Every month, for as long as the site is online.', own: 'Once. Hosting on GitHub Pages is free.' },
+  { label: 'What you pay', rent: 'Every month, for as long as the site is online.', own: 'Once. Free on GitHub Pages for a public repository that is not an online shop or business transaction site (GitHub\'s terms), or any static host.' },
   { label: 'Leaving', rent: 'As far as their export tools and terms allow.', own: 'Copy the repository to any host, any day.' },
   { label: 'Changing it', rent: 'In their editor, within their limits.', own: 'Ask your own Claude, with checks before it goes live.' },
   { label: 'Prices and terms', rent: 'They can change them, and you follow.', own: 'No terms but yours.' },
@@ -19,7 +19,9 @@ export default function (data = {}) {
   const copy = data.copy || {};
   const title = fromCopy(copy, ID, 'title', 'Rent a platform, or own your site');
   const lead = fromCopy(copy, ID, 'lead', 'The same website, two ways to have it.');
-  const intro = get(copy, 'sections.rent_or_own', '');
+  const introRaw = get(copy, 'sections.rent_or_own', '');
+  // copy.sections.<key> may be a string or { title, text }.
+  const intro = typeof introRaw === 'object' ? get(introRaw, 'text', '') : introRaw;
   const rentH = fromCopy(copy, ID, 'rent', 'Renting a platform');
   const ownH = fromCopy(copy, ID, 'own', 'Owning your site');
   // Words from next/copy.json (rent_or_own[]: { topic, rent, own }) when the writer has them.
@@ -74,7 +76,7 @@ export default function (data = {}) {
     '<table>',
     `<thead><tr><th scope="col"></th><th scope="col">${esc(rentH)}</th><th scope="col">${esc(ownH)}</th></tr></thead>`,
     '<tbody>',
-    ...rows.map((r) => `<tr><th scope="row">${esc(r.label)}</th><td>${esc(r.rent)}</td><td>${esc(r.own)}</td></tr>`),
+    ...rows.map((r) => `<tr><th scope="row">${esc(r.label)}</th><td>${esc(r.rent)}</td><td>${esc(r.own).replace("GitHub&#39;s terms", '<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">GitHub&#39;s terms</a>').replace("GitHub's terms", '<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">GitHub\'s terms</a>')}</td></tr>`),
     '</tbody>',
     '</table>',
   ].join('\n');

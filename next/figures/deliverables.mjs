@@ -17,7 +17,7 @@ const ITEMS = [
 export default function (data = {}) {
   const copy = data.copy || {};
   const title = fromCopy(copy, ID, 'title', 'What you get');
-  const lead = fromCopy(copy, ID, 'lead', get(copy, 'sections.deliverables', 'What arrives, where it lives, and what you can do with it.'));
+  const lead = fromCopy(copy, ID, 'lead', (() => { const v = get(copy, 'sections.deliverables', 'What arrives, where it lives, and what you can do with it.'); return typeof v === 'object' ? get(v, 'text', 'What arrives, where it lives, and what you can do with it.') : v; })());
   const cl = copyList(copy, 'deliverables') || [];
   const items = ITEMS.map((d, i) => {
     const c = cl[i];
