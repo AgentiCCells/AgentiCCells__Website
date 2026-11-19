@@ -5,7 +5,7 @@
 // Written by designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19. Code under Apache-2.0.
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { esc, inline, get, section, figure, OFFER_URL, longDate } from './parts.mjs';
+import { esc, inline, get, section, figure, OFFER_URL, longDate, gbp, safeHref } from './parts.mjs';
 import { exLabel, offerTitle } from './labels.mjs';
 
 // ---------- examples (next/examples.json) ----------
@@ -29,10 +29,11 @@ function img(x, root, eager) {
 export function exTile(x, root, { eager = false, variant = 'frame', caption = true, cls = '' } = {}) {
   const l = exLabel(x);
   const host = exHost(x);
+  const href = safeHref(x.url); // http(s), "/" or "#" only (round 4); anything else is shown without a link
   const chrome = variant === 'frame' ? `<span class="kx-bar" aria-hidden="true"><i></i><i></i><i></i><span class="kx-url">${esc(host)}</span></span>` : '';
   return `<li class="kx kx-${variant} ${cls}">
-<a class="kx-shot" href="${esc(x.url)}">${chrome}<span class="kx-img">${img(x, root, eager)}<span class="kx-tag kx-${l.cls}">${esc(l.text)}</span></span></a>
-${caption ? `<p class="kx-cap"><a href="${esc(x.url)}">${esc(exTitle(x))}</a> <span>${inline(x.what || '')}</span></p>` : ''}
+${href ? `<a class="kx-shot" href="${esc(href)}">` : '<span class="kx-shot">'}${chrome}<span class="kx-img">${img(x, root, eager)}<span class="kx-tag kx-${l.cls}">${esc(l.text)}</span></span>${href ? '</a>' : '</span>'}
+${caption ? `<p class="kx-cap">${href ? `<a href="${esc(href)}">${esc(exTitle(x))}</a>` : esc(exTitle(x))} <span>${inline(x.what || '')}</span></p>` : ''}
 </li>`;
 }
 // A list of examples. slugs: the order to show first; limit: how many; eager: how many load at once.
@@ -114,7 +115,9 @@ export function leaveQuotes(data, { ids = ['wix', 'squarespace', 'fliplet'], cls
 export function bigPrice(data, { cls = 'kp', once = 'once' } = {}) {
   const o = data.offer || {};
   if (!Number.isFinite(o.launch_gbp)) return '<p class="tbw">To be written: the launch price (data/next/offer.json).</p>';
-  return `<p class="${cls}"><strong><a href="${OFFER_URL}">£${o.launch_gbp}</a></strong> <span class="kp-w">${esc(once)}, launch price</span> <span class="kp-was">usually <s>£${o.usual_gbp}</s></span></p>`;
+  // The usual and the earlier launch price, both struck, as d1, d2 and /next/pricing/ show them (round 4).
+  const was = [Number.isFinite(o.usual_gbp) ? `usually <s>${gbp(o.usual_gbp)}</s>` : '', Number.isFinite(o.earlier_launch_gbp) ? `earlier launch price <s>${gbp(o.earlier_launch_gbp)}</s>` : ''].filter(Boolean).join(', ');
+  return `<p class="${cls}"><strong><a href="${OFFER_URL}">${gbp(o.launch_gbp)}</a></strong> <span class="kp-w">${esc(once)}, launch price</span>${was ? ` <span class="kp-was">${was}</span>` : ''}</p>`;
 }
 
 // ---------- what you get: the figure and the section words, without the doubled list ----------

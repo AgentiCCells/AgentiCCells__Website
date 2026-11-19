@@ -1,7 +1,7 @@
 // /next/: the sovereign website preview (board/briefs/2026-11-19-sovereign-preview.md and -preview-contract.md).
 // A page hook for build.mjs. It returns no pages through the main template; it writes complete HTML documents,
 // with their own shell and styles (assets/next/), into ctx.files. Every page is noindex, carries the Preview band,
-// is in no sitemap and is linked from no page outside /next/. No email address: asking goes to /start-here/.
+// is in no sitemap and is linked from no page outside /next/. No email address: asking goes to /next/start/.
 // render() is pure apart from reading the repository, so build/next-local.mjs can call it without the full build.
 // Written by developer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19. Code under Apache-2.0.
 import { readFileSync, existsSync, openSync, readSync, closeSync } from 'node:fs';
@@ -140,16 +140,18 @@ function explainPage({ root, data, figs }, slug, label, defaults) {
   const f = join(root, 'next/pages', `${slug}.md`);
   const src = existsSync(f) ? readFileSync(f, 'utf8') : null;
   const { meta, body } = src ? P.frontMatter(src) : { meta: {}, body: '' };
+  // Each figure once per page: a second token for the same figure renders nothing. {{deliverables}} draws the
+  // deliverables figure with the list as its text version, so a page that has both shows it where the list belongs.
+  const shown = new Set();
+  const once = (id, html) => { if (shown.has(id)) return ''; shown.add(id); return html(); };
   const tokens = {
-    // {{deliverables}} draws the deliverables figure with the list as its text version; a page that has both tokens
-    // shows the figure once, where the list belongs.
-    figure: (id) => (id === 'deliverables' && /\{\{deliverables\}\}/.test(body) ? '' : P.figure(figs, id)),
+    figure: (id) => (id === 'deliverables' && /\{\{deliverables\}\}/.test(body) ? '' : once(id, () => P.figure(figs, id))),
     'table:compare': () => P.compareTable(data, { note: !/not converted/i.test(body) }),
     'table:features': () => P.featuresTable(data),
     'table:pricing': () => P.pricingLadder(data),
     examples: () => P.examples(data, root),
     offer: () => P.offerBlock(data),
-    deliverables: () => P.deliverables(data, figs),
+    deliverables: () => once('deliverables', () => P.deliverables(data, figs)),
     faq: () => P.faq(data),
     contact: () => `<p class="cta"><a class="btn" href="${P.ASK}">Ask for your site</a></p>`,
   };
@@ -162,10 +164,16 @@ function explainPage({ root, data, figs }, slug, label, defaults) {
     else if (note && html.includes('<div class="ladder">')) html = html.replace('<div class="ladder">', `${note}\n<div class="ladder">`);
     else html += `\n${note}`;
   }
+  // /next/start/: its own "Ask for a site" links point at its how-to-ask section, not at the page itself.
+  if (slug === 'start') {
+    const ids = [...html.matchAll(/<h[2-4] id="([^"]+)"/g)].map((m) => m[1]);
+    const to = ids.find((x) => /^how-to-ask/.test(x)) || ids.find((x) => /^ask/.test(x));
+    if (to) html = html.split(`href="${P.ASK}"`).join(`href="#${to}"`);
+  }
   const title = meta.title || label;
   if (!/<h1[\s>]/.test(html)) html = `<h1>${P.esc(title)}</h1>\n${html}`;
   const description = meta.description || `${label}, in the preview of the sovereign website: to be written.`;
-  return { path: `next/${slug}/index.html`, content: P.shell({ path: `/next/${slug}/`, title, description, body: `<article class="page page-${slug}"><div class="in">\n${html}\n</div></article>`, bodyClass: `explain ${slug}` }) };
+  return { path: `next/${slug}/index.html`, content: P.shell({ path: `/next/${slug}/`, title, description, body: `<article class="page page-${slug}"><div class="in">\n${html}\n</div></article>`, bodyClass: `explain x-${slug}` }) };
 }
 
 // The list of files for /next/: [{ path, content }], paths under site/. Contact is not used (no address in the preview).

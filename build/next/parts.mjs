@@ -3,8 +3,8 @@
 // Written by developer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19. Code under Apache-2.0.
 //
 // Every reader is tolerant: a missing file or field renders a visible "To be written" placeholder, never
-// invented content. The preview carries no email address: every way to ask goes to the live /start-here/
-// (conductor.agenticcells-ai@, 2026-11-19).
+// invented content. The preview carries no email address: every way to ask goes to the preview's own /next/start/,
+// which says how to ask (round 4: the live /start-here/ shows other prices).
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -13,7 +13,7 @@ import { exLabel, offerTitle } from './labels.mjs';
 export { offerTitle };
 
 export const OFFER_URL = 'https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/next/offer.json';
-export const ASK = '/start-here/';
+export const ASK = '/next/start/';
 export const FIGURE_IDS = ['tenets', 'rent-or-own', 'can-you-leave', 'brief-to-claude', 'team', 'year-of-platform', 'deliverables', 'how-it-works'];
 
 export const DESIGNS = [
@@ -33,6 +33,9 @@ export const NAV = [
 export const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 export const gbp = (n) => '£' + Number(n).toLocaleString('en-GB');
 export const eur = (n) => '€' + Number(n).toLocaleString('en-GB');
+// Only these link targets become links: http(s) addresses, site paths ("/..." but not "//host") and "#" anchors.
+// Anything else (javascript:, data:, mailto:, a relative path) returns null and the caller shows plain text.
+export const safeHref = (u) => { const s = String(u ?? '').trim(); return /^(https?:\/\/[^\s/]|\/(?!\/)|#)/i.test(s) ? s : null; };
 export const tbw = (what, tag = 'p') => `<${tag} class="tbw">To be written: ${esc(what)}.</${tag}>`;
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 export const longDate = (d) => {
@@ -97,7 +100,7 @@ export function inline(s) {
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[\s(])\*([^*\s][^*]*)\*(?=[\s).,;:!?]|$)/g, '$1<em>$2</em>')
-    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, t, u) => `<a href="${u}">${t}</a>`);
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, t, u) => { const h = safeHref(u); return h ? `<a href="${h}">${t}</a>` : t; });
 }
 // Plain text or markdown-ish text (string, or an array of paragraphs) as paragraphs.
 export function prose(v) {
@@ -123,6 +126,7 @@ export function markdown(body, tokens) {
   const lines = body.replace(/\r\n/g, '\n').split('\n');
   const html = [];
   let para = [], list = [], olist = [], quote = [], rows = [];
+  let fence = null; // { label, lines } while inside a ``` block
   const flush = () => {
     if (rows.length) {
       const cells = (r) => r.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
@@ -140,6 +144,11 @@ export function markdown(body, tokens) {
   for (const line of lines) {
     const t = line.trim();
     let m;
+    if (fence) {
+      if (/^```\s*$/.test(t)) { html.push(codeBox(fence)); fence = null; } else fence.lines.push(line);
+      continue;
+    }
+    if ((m = t.match(/^```\s*([^`]*)$/))) { flush(); fence = { label: m[1].trim(), lines: [] }; continue; }
     if ((m = t.match(/^\{\{([a-z]+(?::[a-z0-9-]+)?)\}\}$/i))) {
       flush();
       const name = m[1].toLowerCase();
@@ -154,7 +163,16 @@ export function markdown(body, tokens) {
     else { if (list.length || olist.length || quote.length) flush(); para.push(t); }
   }
   flush();
+  if (fence) html.push(codeBox(fence)); // an unclosed block still shows as a block
   return html.join('\n');
+}
+// A fenced block: a framed box with the text, escaped, line breaks kept. The text is selectable as it is; the shell adds
+// a small script that puts a Copy button on each box (progressive enhancement: the page works without it).
+// The fence's info string ("``` Interview prompt") names the box for a screen reader; a language word alone does not.
+function codeBox({ label, lines }) {
+  const name = label && !/^[a-z0-9+#-]+$/.test(label) ? label : 'Text to copy';
+  while (lines.length && !lines[lines.length - 1].trim()) lines.pop();
+  return `<div class="code-box" role="group" aria-label="${esc(name)}"><pre tabindex="0"><code>${esc(lines.join('\n'))}</code></pre></div>`;
 }
 
 // ---------- the offer (data/next/offer.json) ----------
@@ -199,7 +217,7 @@ export function biggerOffers(data) {
   const intro = sectionOf(data.copy, 'bigger');
   return `${typeof intro === 'string' ? `<p>${inline(intro)}</p>\n` : ''}<ul class="bigger">\n${b.map((x) => `<li><strong>${esc(x.name)}</strong>: ${inline(x.line)}</li>`).join('\n')}\n</ul>`;
 }
-// Where a call to action goes, by its key in copy.cta. Every way to ask goes to the live /start-here/ (no address in the preview).
+// Where a call to action goes, by its key in copy.cta. Every way to ask goes to /next/start/ (no address in the preview).
 const CTA_HREF = { interview: ASK, ask: ASK, free_evaluation: ASK, pricing: '/next/pricing/', what_you_get: '/next/what-you-get/', how_it_works: '/next/how-it-works/', compare: '/next/compare/', examples: '/next/examples/', partners: '/next/partners/', faq: '/next/faq/', choose_design: '/next/' };
 export function ctaHref(copy, label) {
   const c = get(copy, 'cta') || {};
@@ -304,7 +322,7 @@ function ourInner(data, keys) {
   const f = us ? fact(us, keys) : undefined;
   if (f === undefined) return '<span class="tbw">To be written</span>';
   const o = typeof f === 'object' ? f : { value: f };
-  const url = get(o, 'source_url', 'source', 'url');
+  const url = /^https?:\/\//.test(String(get(o, 'source_url', 'source', 'url') || '')) ? get(o, 'source_url', 'source', 'url') : undefined;
   return `<span class="v">${withSources(String(get(o, 'value', 'text') ?? ''), url)}</span>${url ? ` <a class="src" href="${esc(url)}">source${get(o, 'date_read', 'read') ? `, read ${esc(longDate(get(o, 'date_read', 'read')))}` : ''}</a>` : ''}`;
 }
 const compName = (c) => esc(get(c, 'name', 'title', 'platform') || 'Platform');
@@ -434,7 +452,7 @@ export function examples(data, root, { limit = Infinity, cls = 'examples' } = {}
     return `<li class="ex">
 ${imgOk ? `<img src="${esc(img)}" alt="${esc(alt)}" loading="lazy" decoding="async" width="900" height="563">` : '<div class="ex-noimg tbw">Screenshot to be added</div>'}
 <p class="tag ${l.cls}">${esc(l.text)}</p>
-<h3>${url ? `<a href="${esc(url)}">${esc(title)}</a>` : esc(title)}</h3>
+<h3>${safeHref(url) ? `<a href="${esc(safeHref(url))}">${esc(title)}</a>` : esc(title)}</h3>
 <p>${inline(get(x, 'what', 'description', 'summary') || '')}</p>
 </li>`;
   }).join('\n')}\n</ul>`;
@@ -475,7 +493,7 @@ export const oneIdea = (copy) => {
 // A promise's proof link, named by its subject so six links read differently to a screen reader:
 // the link text from copy (proof_link_text) when set, else "Proof: <promise title>".
 export function proofLink(x, { before = ' ', after = '.' } = {}) {
-  const href = get(x, 'proof_link');
+  const href = safeHref(get(x, 'proof_link'));
   if (!href) return '';
   const label = get(x, 'proof_link_text', 'proof_label') || `Proof: ${String(get(x, 'title', 'name', 'promise') || 'this promise').replace(/[.\s]+$/, '')}`;
   return `${before}<a href="${esc(href)}">${inline(label)}</a>${after}`;
@@ -503,9 +521,34 @@ ${extra}
 }
 
 // ---------- the shell ----------
+// A fenced block's frame, kept minimal and placed before the stylesheets so assets/next/ (the designer's) can restyle it.
+const CODE_STYLE = '<style>.code-box{position:relative;margin:1.2rem 0;padding:.8rem 1rem;border:1px solid currentColor;border-radius:8px}.code-box pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.code-copy{float:right;margin:0 0 .4rem .6rem}</style>\n';
+// Copy buttons, only on a page that has a fenced block. Without script the text is selectable as it is.
+const CODE_SCRIPT = `<script>
+document.querySelectorAll('.code-box').forEach(function (box) {
+  var code = box.querySelector('code'), b = document.createElement('button'), s = document.createElement('span');
+  b.type = 'button'; b.className = 'code-copy'; b.textContent = 'Copy';
+  s.className = 'vh'; s.setAttribute('role', 'status');
+  function select() { var r = document.createRange(); r.selectNodeContents(code); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+  function done(t) { s.textContent = t; b.textContent = t === 'Copied' ? 'Copied' : 'Copy'; setTimeout(function () { b.textContent = 'Copy'; s.textContent = ''; }, 2500); }
+  b.addEventListener('click', function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code.textContent).then(function () { done('Copied'); }, function () { select(); done('Selected: press Ctrl+C or Cmd+C to copy'); });
+    else { select(); done('Selected: press Ctrl+C or Cmd+C to copy'); }
+  });
+  box.insertBefore(b, box.firstChild); box.appendChild(s);
+});
+</script>
+`;
 const MARK = '<svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><rect x="4" y="4" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="3" opacity=".45"/><rect x="11" y="11" width="10" height="10" rx="3" fill="currentColor"/></svg>';
 export function shell({ path, title, description, css = [], body, bodyClass = '' }) {
-  const nav = NAV.map(([t, h]) => `<li><a href="${h}"${h === path || (h === '/next/' && path.startsWith('/next/d/')) ? ' aria-current="page"' : ''}>${t}</a></li>`).join('');
+  // The current page's item carries scroll-initial-target, so where the nav scrolls sideways (narrow screens) the browser
+  // shows the current link on load without script. The order stays the same on every page.
+  const nav = NAV.map(([t, h]) => { const cur = h === path || (h === '/next/' && path.startsWith('/next/d/')); return `<li${cur ? ' style="scroll-initial-target: nearest"' : ''}><a href="${h}"${cur ? ' aria-current="page"' : ''}>${t}</a></li>`; }).join('');
+  const navPaths = new Set(NAV.map(([, h]) => h));
+  // Every explain page, in the footer: the pages the top nav has no room for (No lock-in, Security, Partners) are here too.
+  const allPages = [['What you get', '/next/what-you-get/'], ['How it works', '/next/how-it-works/'], ['Sovereignty', '/next/sovereignty/'], ['No lock-in', '/next/no-lock-in/'], ['Security', '/next/security/'], ['Examples', '/next/examples/'], ['Partners', '/next/partners/'], ['Questions and answers', '/next/faq/'], ['Pricing', '/next/pricing/'], ['Compare', '/next/compare/'], ['Start: how to ask', '/next/start/'], ['Morning review', '/next/review/']]
+    .map(([t, h]) => `<li><a href="${h}"${h === path ? ' aria-current="page"' : ''}>${t}</a></li>`).join('');
+  const hasCode = body.includes('class="code-box"');
   return `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -518,7 +561,7 @@ export function shell({ path, title, description, css = [], body, bodyClass = ''
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/next/base.css">
+${hasCode ? CODE_STYLE : ''}<link rel="stylesheet" href="/assets/next/base.css">
 <link rel="stylesheet" href="/assets/next/tables.css">
 <link rel="stylesheet" href="/assets/next/shell.css">
 ${css.map((c) => `<link rel="stylesheet" href="${c}">`).join('\n')}
@@ -529,7 +572,7 @@ ${css.map((c) => `<link rel="stylesheet" href="${c}">`).join('\n')}
 <div class="preview-band" role="note" aria-label="Preview"><p><strong>Preview</strong> for review, not the live site. Prices and words may change. <a href="/next/">All five designs</a> <a href="/">The live site</a></p></div>
 <div class="nx-head"><div class="in">
 <a class="brand" href="/next/">${MARK}<span>AgentiCCells</span><span class="vh"> preview: the five designs</span></a>
-<nav aria-label="Preview pages"><ul>${nav}</ul></nav>
+<nav aria-label="Preview pages" aria-describedby="nav-hint"><p class="vh" id="nav-hint">${NAV.length} links. On a narrow screen the list scrolls sideways. Every page is also listed at the foot of the page.</p><ul>${nav}</ul></nav>
 </div></div>
 </header>
 <main id="main" tabindex="-1">
@@ -537,10 +580,11 @@ ${body}
 </main>
 <footer class="nx-foot"><div class="in">
 <p>Code under Apache-2.0. Text and images under CC BY 4.0.</p>
-<p><a href="${ASK}">How to ask us</a>: the live Start here page has the way to reach the team.</p>
+<nav aria-label="All preview pages"><ul class="foot-pages">${allPages}</ul></nav>
+<p><a href="${ASK}">How to ask for a site</a>: the Start page of this preview says how.</p>
 <p>This is a preview for review. It is not indexed, and the live site at <a href="/">agenticcells.ai</a> is unchanged.</p>
 </div></footer>
-</body>
+${hasCode ? CODE_SCRIPT : ''}</body>
 </html>
 `;
 }
