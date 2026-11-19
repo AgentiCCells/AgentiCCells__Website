@@ -18,7 +18,7 @@ Dinis Cruz set out this list in [the sovereign website](https://newsroom.sgit.ai
 
 Everything else follows from one fact: the site is a set of files in a GitHub repository, and the repository is in your name. It holds the pages, the pictures, the five designs, the instructions for your Claude and the rules for any agent, with every change since the first. Whoever holds the repository holds the site.
 
-That is why we can promise the rest. You can host it anywhere because it is files. You can change it with your own Claude because the instructions are in the repository. You keep it if we disappear because there is nothing of yours left with us.
+That is why we can promise the rest. You can host it anywhere because it is plain files. You can change it with your own Claude because the instructions are in the repository. You keep it if we disappear because there is nothing of yours left with us.
 
 ## What the five designs are for
 
@@ -35,7 +35,7 @@ A person who knows what they are doing can override them. Most owners will never
 
 ## Ownership within three months
 
-We expect every site we build to move into its owner's ownership within three months: the repository transferred to your GitHub account and the address pointed where you choose. We hold it only to finish the work, and sooner if you ask. Today this is an expectation, not yet a rule we enforce ([the reasoning, in Dinis Cruz's words](https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html)).
+We expect to transfer every site we build to its owner within three months, sooner if you ask: the repository moves to your GitHub account and the address points where you choose. We hold it only to finish the work. This is an expectation we set ourselves, not yet a rule in the terms ([the reasoning, in Dinis Cruz's words](https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html)).
 
 ## What you do not get from us
 

@@ -14,17 +14,17 @@ Everyone has AI now. The designs and the price can be matched. What a platform c
 
 ## What the platforms say
 
-The table below quotes Wix, Squarespace, Fliplet and others from their own pages and standard terms, each linked with the date it was read. Negotiated contracts may differ.
+The table below sets out who owns the files, whether you can leave and what you can export, for Wix, Squarespace, Fliplet and others, from their own pages and standard terms, each linked with the date it was read. Negotiated contracts may differ.
 
-{{table:compare}}
+{{table:features}}
 
 ## What we do instead
 
 - **Your repository.** The site is files in your own GitHub repository, with every change since the first.
-- **Any host.** Static files run on GitHub Pages for free, or on any web host. [Put your site online](https://agenticcells.ai/deploy/) links to each host's own instructions.
+- **Any host.** The site is plain files, so any web host can run it. GitHub Pages hosts it free when the repository is public and the site is not an online shop or a site for business transactions ([GitHub's terms](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits), read 19 November 2026); otherwise any static host will do, and many have a free tier, such as [Cloudflare Pages](https://developers.cloudflare.com/pages/platform/limits/) (its Free plan, read 19 November 2026). [Put your site online](https://agenticcells.ai/deploy/) links to each host's own instructions.
 - **Your Claude.** You change it by talking to your own Claude, not to our platform. We have no platform.
 - **Paid once.** No subscription from us, so nothing to stop paying for.
-- **Yours within three months.** We expect every site we build to move into its owner's ownership within three months: the repository transferred to your GitHub account and the address pointed where you choose. We hold it only to finish the work. It is an expectation today, not yet a rule we enforce.
+- **Yours within three months.** We expect to transfer every site we build to its owner within three months: the repository moves to your GitHub account and the address points where you choose. We hold it only to finish the work. This is an expectation we set ourselves, not yet a rule in the terms.
 - **Open.** The code and the policies are open source, so even we cannot lock anyone in.
 
 ## Renting against owning

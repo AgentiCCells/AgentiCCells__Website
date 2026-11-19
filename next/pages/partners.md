@@ -22,15 +22,15 @@ From Dinis Cruz's [partners sell, we build](https://newsroom.sgit.ai/articles/pa
 
 ## What you sell: a team, not a template
 
-Even the smallest site is a team of agents: a conductor, a researcher, a designer, a developer and a security reviewer, each with a written job description and a behaviour policy, each signing its work. That team is what you resell.
+Even the smallest site is made by seven roles, each played by an AI agent: a conductor, a designer, a developer, a writer, a researcher, a reviewer and a security reviewer, each with a written job description and a behaviour policy, each signing its work. That team is what you resell. [How it works](/next/how-it-works/) says what each one does.
 
-## A deal in six steps
+## A deal, from first call to after care
 
 1. **Find.** You find the customer and agree what they want, and the price.
 2. **Material.** Their photos, videos and words come in, starting with the interview.
 3. **Set up.** We set up the repository, the address and the site.
 4. **Designs.** The agents make five designs; the customer chooses, with you.
-5. **Hand-over.** The repository moves to the customer's GitHub. You get admin access if the customer agrees.
+5. **Hand-over.** The repository moves to the customer's GitHub, within three months at the latest (an expectation we set ourselves, not yet a rule in the terms). You get admin access if the customer agrees.
 6. **After.** You host, support, change and charge for it as you choose.
 
 ## The terms, in short

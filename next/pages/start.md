@@ -8,7 +8,7 @@ A website you own, control and can take anywhere starts with a conversation. Mos
 
 {{figure:brief-to-claude}}
 
-## Step one: the interview, in your own Claude
+## The interview, in your own Claude
 
 Paste this into your own Claude. It asks you one question at a time and writes a one-page brief, in your words. Nothing is sent anywhere by the prompt itself: the brief stays with you until you choose to send it.
 
@@ -26,11 +26,11 @@ The first five lines are Dinis Cruz's, from [start with an interview](https://ne
 
 The question that matters most is the sites you like. "I like this site's photographs, that one's calm, and the way this one tells a story" is a better design brief than most designers get. The five designs take the qualities you name; they never copy someone else's site.
 
-## Step two: send the brief and your material
+## Ask for a site: send the brief and your material
 
 [Ask for a site]({{contact}}) and send the brief with your material, in whichever way suits you:
 
-- attached to the email: photos, videos, documents, a CV;
+- as attachments: photos, videos, documents, a CV;
 - as a zip;
 - as links to what is already public: a profile, a portfolio, an existing site.
 
@@ -44,13 +44,17 @@ Then you have already answered most of the questions. Send a link to it: its wor
 
 We build a limited number of sites each day free of charge, for evaluation. It is the way to see before you pay. [Ask for a site]({{contact}}) and say you would like a free evaluation.
 
-## What happens next
+## The seven steps
 
-1. **Five designs**, from your material and the sites you like.
-2. **You choose**, and say what to change.
-3. **Live**, at its address with HTTPS, once the checks pass.
-4. **Your first change, made together:** you ask your own Claude for a change and we both see it go live.
-5. **Hand-over:** the repository moves to your GitHub account, within three months at the latest.
+This page covers the first two. Today the quickest way is to run the interview first, in your own Claude, and send the brief when you ask.
+
+1. **Ask for a site**, at the launch price or as a free evaluation.
+2. **The interview**, in your own Claude, which writes your one-page brief.
+3. **Five designs**, from your material and the sites you like.
+4. **You choose**, and say what to change.
+5. **Live**, at its address with HTTPS, once the checks pass.
+6. **Your first change, made together:** you ask your own Claude for a change and we both see it go live.
+7. **Hand-over:** the repository moves to your GitHub account, within three months at the latest (an expectation we set ourselves, not yet a rule in the terms).
 
 You will need a GitHub account to receive the site, and a Claude plan if you want to edit it yourself. [How it works](/next/how-it-works/) has every step in full, and [pricing](/next/pricing/) has the price.
 

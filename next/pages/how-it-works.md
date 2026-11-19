@@ -1,16 +1,18 @@
 ---
 title: How it works
-description: From a first conversation to changing your own site with Claude: the interview, five designs, your choice, live, your first change, hand-over.
+description: Seven steps from asking for a site to changing it yourself with Claude: interview, five designs, your choice, live, first change, hand-over.
 ---
 # How it works
 
-From "I want to try it" to changing your own site by talking to Claude. Six steps, and the last one that matters is the first change you make yourself.
+From asking for a site to changing it yourself by talking to Claude, the AI assistant. There are seven steps, and the one that matters most is the first change you make yourself.
 
 {{figure:how-it-works}}
 
 ## The steps
 
-{{figure:brief-to-claude}}
+### Ask for a site
+
+[Ask for a site]({{contact}}) at the launch price, or apply for a free evaluation site. A person reads every request and replies.
 
 ### The interview
 
@@ -36,23 +38,17 @@ The site goes live at its address, with HTTPS, once the checks pass: a build, a 
 
 ### Your first change, made together
 
-This is the milestone. You ask your own Claude for a change, a sentence, a photo, a new job from your CV, and it goes live while we both watch. Until then you have a website; from then on you have what we sell.
+This is the milestone. You ask your own Claude for a change (a sentence, a photo, a new job from your CV) and it goes live while we both watch. Until then you have a website; from then on you have what we sell.
 
 ### Hand-over
 
-The repository moves to your GitHub account, with its full history, and the address points where you choose. We expect this within three months at the latest, sooner if you ask. After that we hold nothing.
+The repository moves to your GitHub account, with its full history, and the address points where you choose. We expect this within three months at the latest, sooner if you ask: an expectation we set ourselves, not yet a rule in the terms. After that we hold nothing.
 
 ## Who does the work
 
 {{figure:team}}
 
-Even the smallest site is made by a team of agents, each with a written job description and a behaviour policy, each signing its work:
-
-- **Conductor:** takes the brief and hands out the work.
-- **Researcher:** reads what you gave us and what is public about you, and keeps the sources.
-- **Designer:** makes the five designs.
-- **Developer:** builds and releases the site, with its checks.
-- **Security reviewer:** checks the policy, the leak scan and what the site exposes.
+Even the smallest site is made by seven roles, each played by an AI agent with a written job description and a behaviour policy, each signing its work. For a small site, the figure above says what each one does.
 
 A person approves what matters. The agents draft; they never send email, post, or pay for anything on anyone's behalf.
 
@@ -60,6 +56,6 @@ A person approves what matters. The agents draft; they never send email, post, o
 
 - No site has been sold yet, so no order has been timed. We give an honest estimate when we reply.
 - The interview on this site is planned; today it runs in your own Claude.
-- The ownership expectation is a soft requirement for now.
+- The three-month hand-over is an expectation we set ourselves, not yet a rule in the terms.
 
 [Start with an interview](/next/start/)

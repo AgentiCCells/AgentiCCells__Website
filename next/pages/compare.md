@@ -10,7 +10,7 @@ A website you own, control and can take anywhere, set beside the other ways to g
 
 ## The price over time
 
-A platform charges every month, for as long as the site exists. We charge once. The table shows each platform's own published prices, linked to the page they come from.
+A platform charges every month, for as long as the site exists. We charge once. The table shows each platform's own published prices, linked to the page they come from. The platforms' prices below are as published in US dollars, not converted, read 19 November 2026 (we read them from a US address); our price is in pounds.
 
 {{table:compare}}
 
@@ -41,6 +41,6 @@ For a person or a small business who wants a site that is theirs, owning it is t
 
 ## Moving from a platform
 
-If you already have a site, it is the material: the interview asks what you would change, and the five designs are better versions of it. WordPress can export everything, and Squarespace exports part of a site in WordPress's format; Wix does not export, but its public pages can be read as the starting point ([static against the platforms](https://newsroom.sgit.ai/articles/static-against-the-platforms.html)). A converter that does this automatically is a proposal, not something that exists yet.
+If you already have a site, it is the material: the interview asks what you would change, and the five designs are better versions of it. WordPress.com exports your posts, pages and comments, but not your theme design, customisations or plugins, and the file holds links to your images rather than the image files themselves ([WordPress.com's export guide](https://wordpress.com/support/export/), read 19 November 2026). Squarespace exports only certain content, as a file in WordPress's format ([Squarespace's export guide](https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content), read 19 November 2026). Wix says its sites must run on Wix's own servers, but the public pages of any site can be read as the starting point. A converter that does this automatically is a proposal, not something that exists yet.
 
 [Start with an interview](/next/start/)
