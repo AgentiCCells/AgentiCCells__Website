@@ -1,0 +1,1087 @@
+{
+ "_about": "Every competitor fact for the /next/ pricing and feature comparison, each with the page it was read from and the date. Gathered by researcher.agenticcells-ai@AgentiCCells.dinis on 2026-11-19 for conductor.agenticcells-ai@AgentiCCells.dinis.",
+ "_read_by": "researcher.agenticcells-ai@AgentiCCells.dinis, 2026-11-19, with curl and Chromium (Playwright, locale en-GB). Our network address was in the United States, so every competitor showed US dollar prices; no UK (GBP) prices could be read.",
+ "_rules": "Competitor prices use ISO currency codes (USD), never symbols. basis is 'their own page', 'calculated from their published price' (our arithmetic from their figure, before tax, assuming the price does not change) or 'not stated on their pages'. Lock-in summaries are our reading of their terms and quote the line they rest on. Promotions on the day are recorded separately and not used in the sums. Our own prices come from data/next/offer.json and use £ with the words launch price.",
+ "rows": [
+  "entry_plan_with_custom_domain",
+  "price_per_month",
+  "price_per_year",
+  "billing_and_tax",
+  "first_year_cost",
+  "three_year_cost",
+  "who_owns_the_files",
+  "can_you_leave",
+  "export",
+  "hosting_choice",
+  "editing",
+  "designs",
+  "security_surface",
+  "subscription",
+  "lock_in_summary"
+ ],
+ "competitors": [
+  {
+   "id": "wix",
+   "name": "Wix",
+   "kind": "website builder platform (hosted)",
+   "homepage": "https://www.wix.com/",
+   "facts": {
+    "currency_note": {
+     "value": "USD only: the plans page showed US dollars to our reader (a US network address). We could not get the UK (GBP) prices.",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "entry_plan_with_custom_domain": {
+     "value": "Light",
+     "quote": "To connect a domain to your Wix site, you must upgrade your site with a plan.",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "their own page",
+     "note": "Quote from https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere"
+    },
+    "price_per_month": {
+     "value": "USD 17 a month, billed yearly, plan Light",
+     "quote": "Displayed prices are for yearly subscriptions, paid in full at the time of purchase.",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_year": {
+     "value": "USD 204 a year, plan Light (17 x 12)",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "billing_and_tax": {
+     "value": "Billed yearly in full; a monthly price is not shown on the plans page; taxes extra",
+     "quote": "Prices do not include applicable taxes, which are determined according to your billing address.",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "promotion_on_the_day": {
+     "value": "A banner offered 50% off select plans (Core, Business, Business Elite); the Light plan showed no discount",
+     "quote": "Only valid for the initial term of yearly / multi-year subscriptions.",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "first_year_cost": {
+     "value": "USD 204, plan Light, before tax",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "three_year_cost": {
+     "value": "USD 612, plan Light, before tax, if the price stays the same",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "who_owns_the_files": {
+     "value": "You own your content; Wix owns the platform, its templates and its code (including html)",
+     "quote": "As between Wix and you, you shall own all intellectual property pertaining to your User Content",
+     "source_url": "https://www.wix.com/about/terms-of-use",
+     "date_read": "2026-11-19",
+     "basis": "their own page",
+     "note": "The same terms list 'website templates' and 'computer code (including html)' among Wix's Intellectual Property."
+    },
+    "can_you_leave": {
+     "value": "You can leave and keep your domain, but the site itself cannot move to another host",
+     "quote": "In order for your site to work properly, it needs to be hosted and operated on Wix's servers.",
+     "source_url": "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "export": {
+     "value": "No export of the site to another host; Wix says its SaaS architecture does not support external hosting",
+     "quote": "The reason you can't use another host for your Wix site is that the SaaS architecture does not support external hosting since it uses Wix's proprietary technology and relies on Wix's services to operate.",
+     "source_url": "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "hosting_choice": {
+     "value": "Only Wix's servers",
+     "quote": "Since Wix is a SaaS solution, your site must run on Wix's servers.",
+     "source_url": "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "editing": {
+     "value": "You edit in Wix's drag and drop editor, or with its AI tools, in your Wix account",
+     "quote": "Customize everything from the site layout to visuals and content using the drag and drop editor.",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "designs": {
+     "value": "Templates: Wix says 2,000+",
+     "quote": "Choose a template that fits your industry and then customize every detail with the drag-and-drop editor.",
+     "source_url": "https://www.wix.com/plans",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "security_surface": {
+     "value": "A hosted platform with account logins; Wix says it runs security monitoring for you",
+     "quote": "With 24/7 security monitoring, HTTPS and SSL protection, your website is always safe and secure.",
+     "source_url": "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "subscription": {
+     "value": "Yes. When you cancel, the site stays but moves to a free Wix address with Wix ads",
+     "quote": "After canceling, your site address reverts to the free Wix URL (siteprefix.wixsite.com/siteaddress) and Wix ads appear on your site.",
+     "source_url": "https://support.wix.com/en/article/canceling-a-wix-premium-or-studio-plan",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "lock_in_summary": {
+     "value": "Our reading of their terms: you own your words and pictures, but the site only runs on Wix, so leaving means rebuilding it elsewhere.",
+     "quote": "it needs to be hosted and operated on Wix's servers",
+     "source_url": "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    }
+   }
+  },
+  {
+   "id": "squarespace",
+   "name": "Squarespace",
+   "kind": "website builder platform (hosted)",
+   "homepage": "https://www.squarespace.com/",
+   "facts": {
+    "currency_note": {
+     "value": "USD only: the pricing page showed US dollars to our reader. We could not get the UK (GBP) prices.",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "entry_plan_with_custom_domain": {
+     "value": "Basic",
+     "quote": "Free custom domain*",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_month": {
+     "value": "USD 19 a month billed yearly, or USD 25 a month billed monthly, plan Basic",
+     "quote": "Free for 14 days. Pay annually to save up to 36%.",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_year": {
+     "value": "USD 228 a year billed yearly (19 x 12), or USD 300 a year paying monthly (25 x 12), plan Basic",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "billing_and_tax": {
+     "value": "Yearly or monthly; the pricing page does not say whether tax is included, except that domains renew 'plus applicable taxes'",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "promotion_on_the_day": {
+     "value": "A banner offered 30% off all plans, ending 23 November; the plan prices shown were USD 19 and USD 25 for Basic",
+     "quote": "Limited time offer 30% off all plans Ends Nov 23",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page",
+     "note": "It was not clear from the page whether the 30% comes off the prices shown."
+    },
+    "first_year_cost": {
+     "value": "USD 228 billed yearly, plan Basic, before any tax and without the promotion",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "three_year_cost": {
+     "value": "USD 684 billed yearly, plan Basic, if the price stays the same",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "who_owns_the_files": {
+     "value": "You own your content; Squarespace owns the service",
+     "quote": "Your User Content stays yours, except for the limited rights that enable us to provide, improve, promote and protect the Services as described in this Agreement.",
+     "source_url": "https://www.squarespace.com/terms-of-service",
+     "date_read": "2026-11-19",
+     "basis": "their own page",
+     "note": "Section 5.1 of the same terms: 'The Services are, as between you and Squarespace, owned by Squarespace'."
+    },
+    "can_you_leave": {
+     "value": "Partly: you can export some content as a WordPress-format .xml file, then cancel",
+     "quote": "You can export certain content from your Squarespace site into an .xml file. Many features rely on our platform's JavaScript and CSS, so some content doesn't export.",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "export": {
+     "value": "Exports: layout pages, one blog with its posts, text and image blocks, gallery pages (7.0). Does not export: other page types including store pages, headers and footers, more than one blog, audio, product and video blocks, drafts, style settings, custom CSS",
+     "quote": "The exported file can only be in a WordPress format, but you don't have to import it into WordPress.",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "hosting_choice": {
+     "value": "Only Squarespace for the site itself; exported content can go to a WordPress site",
+     "quote": "You can't export content from one Squarespace site and import it into another.",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "editing": {
+     "value": "You edit in your Squarespace account, with built-in AI tools; Basic allows 2 contributors",
+     "quote": "2 contributors",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "designs": {
+     "value": "Templates",
+     "quote": "Squarespace offers beautiful templates designed to solve your business or personal goals.",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "security_surface": {
+     "value": "A hosted platform with account logins; the pricing page lists 'Secure hosting' and says nothing more on our row",
+     "quote": "Secure hosting",
+     "source_url": "https://www.squarespace.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "subscription": {
+     "value": "Yes. After a site expires, its content may be deleted",
+     "quote": "Depending on how long the site has been expired, your content may already be deleted.",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "lock_in_summary": {
+     "value": "Our reading of their terms: your content is yours, but only part of it leaves, in WordPress's format, and the design stays behind.",
+     "quote": "Many features rely on our platform's JavaScript and CSS, so some content doesn't export.",
+     "source_url": "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    }
+   }
+  },
+  {
+   "id": "wordpress-com",
+   "name": "WordPress.com",
+   "kind": "WordPress with a host (WordPress.com plans)",
+   "homepage": "https://wordpress.com/",
+   "facts": {
+    "currency_note": {
+     "value": "USD only: the pricing page showed US dollars to our reader. We could not get the UK (GBP) prices. Their help pages asked our browser to prove it was human; a plain download of the same pages worked.",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "entry_plan_with_custom_domain": {
+     "value": "Personal",
+     "quote": "The free plan uses a WordPress.com subdomain (yoursite.wordpress.com) and does not include a custom domain.",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_month": {
+     "value": "USD 9 a month billed monthly; USD 4 a month billed yearly; USD 2.75 a month on a three-year term, plan Personal",
+     "quote": "Billed every 12 months, excl. taxes.",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_year": {
+     "value": "USD 48 a year billed yearly (4 x 12), plan Personal",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "billing_and_tax": {
+     "value": "Monthly, yearly, two-year or three-year terms; taxes extra. The page says each plan auto-renews, but the renewal price did not show in the text we could read",
+     "quote": "Monthly plans do not include a free domain.",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "first_year_cost": {
+     "value": "USD 48 billed yearly, plan Personal, before tax",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "three_year_cost": {
+     "value": "USD 99 on the three-year term (2.75 x 36), plan Personal, before tax",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price",
+     "note": "Paying yearly for three years would be USD 144 if the renewal price stayed at USD 4 a month; the renewal price is not shown."
+    },
+    "who_owns_the_files": {
+     "value": "You own your content; WordPress (the software) is open source",
+     "quote": "We don't own your content, and you retain all ownership rights you have in the content you post to your website.",
+     "source_url": "https://wordpress.com/tos/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "can_you_leave": {
+     "value": "Yes: export your content and move to another WordPress host",
+     "quote": "Export your site's content to transfer it to another WordPress site or platform.",
+     "source_url": "https://wordpress.com/support/export/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "export": {
+     "value": "An XML file of posts, pages and comments, with links to images; no theme, design or plugins unless you use a migration plugin; full backups on Business and Commerce plans",
+     "quote": "Your export file will include your posts, pages, and comments but will not include your theme design, customizations, or plugins.",
+     "source_url": "https://wordpress.com/support/export/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "hosting_choice": {
+     "value": "WordPress.com, or any WordPress host after export",
+     "quote": "If you're moving away from WordPress.com to another host and no longer plan to use your WordPress.com website",
+     "source_url": "https://wordpress.com/support/export/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "editing": {
+     "value": "You edit in the WordPress editor in your account; a guided builder lets you start by chatting with AI",
+     "quote": "Skip the blank screen",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "designs": {
+     "value": "Themes and plugins from the WordPress marketplace; plugin installation on every paid plan",
+     "quote": "Plugin installation is available on every paid WordPress.com plan",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "security_surface": {
+     "value": "A hosted WordPress with logins, themes and plugins; WordPress.com says it patches and protects it",
+     "quote": "All plans include a global CDN, SSL, DDoS protection, brute-force attack protection, and managed WordPress updates.",
+     "source_url": "https://wordpress.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "subscription": {
+     "value": "Yes. When a plan ends, the site keeps working as a free site, with ads and a .wordpress.com address",
+     "quote": "Your site will continue to work after your plan is removed or expires. Your posts, pages, and media files stay on your site. Your site reverts to a free site",
+     "source_url": "https://wordpress.com/support/manage-purchases/cancel-a-purchase/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "lock_in_summary": {
+     "value": "Our reading of their terms: the most open of the platforms; your content leaves in a standard format, though the design and plugins need a migration plugin or a rebuild.",
+     "quote": "will not include your theme design, customizations, or plugins",
+     "source_url": "https://wordpress.com/support/export/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    }
+   }
+  },
+  {
+   "id": "fliplet",
+   "name": "Fliplet",
+   "kind": "AI software builder platform (hosted)",
+   "homepage": "https://fliplet.com/",
+   "facts": {
+    "currency_note": {
+     "value": "USD only, as the pricing page showed it to our reader.",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "entry_plan_with_custom_domain": {
+     "value": "Plus",
+     "quote": "Plus is for one published project with custom domains and native builds.",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_month": {
+     "value": "USD 25 a month, plan Plus (2,500 credits)",
+     "quote": "Credits cover building and running projects, including AI usage, publishing actions, hosted projects, traffic, authentication events, and data activity.",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_year": {
+     "value": "USD 300 a year (25 x 12), plan Plus",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "billing_and_tax": {
+     "value": "not stated on their pages: the pricing page says 'per month' and does not say whether it is billed yearly or monthly, or whether tax is included",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "first_year_cost": {
+     "value": "USD 300, plan Plus, before any tax or credit top-ups",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "three_year_cost": {
+     "value": "USD 900, plan Plus, if the price stays the same",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "who_owns_the_files": {
+     "value": "Fliplet owns the service, including the structure and code of what you build; your content (text, images, video, audio) is excluded",
+     "quote": "Fliplet and/or its licensor(s) are the sole owners of the Service, which includes any software, domains, and content (excluding the Content) (including without limitation the structural architecture, coding and functional amendments used by any User in creating an Application) made available through the Service.",
+     "source_url": "https://fliplet.com/terms/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "can_you_leave": {
+     "value": "You can stop, but the terms offer no way to take the application with you",
+     "quote": "For the avoidance of doubt, Fliplet does not offer a facility for You to transfer or copy any Content or Applications from Your Account to a third party service provider.",
+     "source_url": "https://fliplet.com/terms/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "export": {
+     "value": "No export of the application or its code in the standard terms",
+     "quote": "In the event of termination, You shall have no right to receive a copy of any Application (or any part thereof).",
+     "source_url": "https://fliplet.com/terms/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "hosting_choice": {
+     "value": "Only Fliplet, in its Dublin or California data centre",
+     "quote": "Your account will be hosted in our Europe (Dublin) data center.",
+     "source_url": "https://fliplet.com/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "editing": {
+     "value": "You describe what you want and Fliplet's AI builds and changes it, in Fliplet Studio",
+     "quote": "Describe what you want Fliplet to build",
+     "source_url": "https://fliplet.com/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "designs": {
+     "value": "not stated on their pages",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "security_surface": {
+     "value": "A hosted platform with logins; Plus includes authentication systems and audit logs",
+     "quote": "Authentication systems",
+     "source_url": "https://fliplet.com/pricing/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "subscription": {
+     "value": "Yes, paid in monthly credits; on termination you must stop using it",
+     "quote": "In the event of any termination, You will immediately cease use of the Services.",
+     "source_url": "https://fliplet.com/terms/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "lock_in_summary": {
+     "value": "Our reading of their terms: you rent the application; the terms say you cannot transfer it, take its code, or keep a copy when you leave.",
+     "quote": "Fliplet does not offer a facility for You to transfer or copy any Content or Applications from Your Account to a third party service provider.",
+     "source_url": "https://fliplet.com/terms/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    }
+   }
+  },
+  {
+   "id": "framer",
+   "name": "Framer",
+   "kind": "AI website builder (hosted)",
+   "homepage": "https://www.framer.com/",
+   "facts": {
+    "currency_note": {
+     "value": "USD only, as the pricing page showed it to our reader.",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "entry_plan_with_custom_domain": {
+     "value": "Basic",
+     "quote": "To connect a custom domain, you'll need to upgrade to a paid plan.",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_month": {
+     "value": "USD 10 a month billed yearly, or USD 15 a month billed monthly, plan Basic",
+     "quote": "All prices are monthly and billed according to the billing cycle selected at checkout.",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_year": {
+     "value": "USD 120 a year billed yearly (10 x 12), plan Basic",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "billing_and_tax": {
+     "value": "Yearly or monthly; sales tax added at checkout",
+     "quote": "Any applicable sales tax will be added at checkout based on your location.",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "first_year_cost": {
+     "value": "USD 120 billed yearly, plan Basic, before tax",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "three_year_cost": {
+     "value": "USD 360 billed yearly, plan Basic, if the price stays the same",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "who_owns_the_files": {
+     "value": "not stated on their pages (we did not read Framer's terms of service in this round)",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "can_you_leave": {
+     "value": "Framer's help centre says two different things: one article says you can download the site and host it anywhere; another says there is no HTML export for self-hosting",
+     "quote": "Framer does not offer HTML export for self-hosting.",
+     "source_url": "https://www.framer.com/help/articles/can-i-export-my-website-to-html-and-self-host-it/",
+     "date_read": "2026-11-19",
+     "basis": "their own page",
+     "note": "The other article, https://www.framer.com/help/articles/porting-your-data-from-framer/, says: 'You can download these files at any time and move them to any hosting provider.'"
+    },
+    "export": {
+     "value": "CMS content as CSV or JSON through plugins; the site itself: see the contradiction above",
+     "quote": "Framer CMS content can be exported using plugins into structured formats such as CSV or JSON.",
+     "source_url": "https://www.framer.com/help/articles/porting-your-data-from-framer/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "hosting_choice": {
+     "value": "Framer's hosting (the self-hosting article says sites depend on it)",
+     "quote": "published sites are not fully static and cannot be exported as standalone HTML files for self-hosting.",
+     "source_url": "https://www.framer.com/help/articles/can-i-export-my-website-to-html-and-self-host-it/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "editing": {
+     "value": "You edit in Framer's design tool, with AI agents paid in credits; extra editors cost extra",
+     "quote": "Every paid plan includes monthly credits that power Agents, Localization, and other AI features.",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "designs": {
+     "value": "Templates in Framer's marketplace",
+     "quote": "Marketplace Templates",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "security_surface": {
+     "value": "not stated on their pages for the Basic plan; 'Enterprise-grade security' is listed for Enterprise only",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "subscription": {
+     "value": "Yes",
+     "quote": "Start free, then scale your site",
+     "source_url": "https://www.framer.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "lock_in_summary": {
+     "value": "Our reading of their pages: unclear, because Framer's own help centre contradicts itself on whether a site can leave; ask Framer before relying on either.",
+     "quote": "Framer does not offer HTML export for self-hosting.",
+     "source_url": "https://www.framer.com/help/articles/can-i-export-my-website-to-html-and-self-host-it/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    }
+   }
+  },
+  {
+   "id": "durable",
+   "name": "Durable",
+   "kind": "AI website builder (hosted)",
+   "homepage": "https://durable.com/",
+   "facts": {
+    "currency_note": {
+     "value": "USD only, as the pricing page showed it to our reader.",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "entry_plan_with_custom_domain": {
+     "value": "Launch",
+     "quote": "Use your own domain or get one free",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_month": {
+     "value": "USD 22 a month billed yearly, or USD 25 a month billed monthly, plan Launch",
+     "quote": "Save 15%",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_year": {
+     "value": "USD 264 a year billed yearly (22 x 12), plan Launch",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "billing_and_tax": {
+     "value": "Yearly or monthly; not stated on their pages whether tax is included",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "first_year_cost": {
+     "value": "USD 264 billed yearly, plan Launch",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "three_year_cost": {
+     "value": "USD 792 billed yearly, plan Launch, if the price stays the same",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "who_owns_the_files": {
+     "value": "Durable's terms of service page rendered for us but we did not find the ownership clause in this round; not stated on their pages on the pages we read",
+     "source_url": "https://durable.com/terms-of-service",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "can_you_leave": {
+     "value": "not stated on their pages",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "export": {
+     "value": "not stated on their pages",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "hosting_choice": {
+     "value": "Durable's hosting",
+     "quote": "Secure hosting, unlimited traffic, custom forms, analytics, conversion optimization, custom code",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "editing": {
+     "value": "You edit with Durable's AI, paid in AI credits (1000 a month on Launch)",
+     "quote": "Write blog posts, make website changes, research keywords for SEO, generate social posts and more",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "designs": {
+     "value": "AI-generated pages",
+     "quote": "AI-generated pages",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "security_surface": {
+     "value": "A hosted platform with logins; the page lists 'SSL / secure hosting'",
+     "quote": "SSL / secure hosting",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "subscription": {
+     "value": "Yes",
+     "quote": "Everything you need to get found, booked, and paid.",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "lock_in_summary": {
+     "value": "Our reading: not enough on their pages to say; their pricing page does not mention export or leaving.",
+     "source_url": "https://durable.com/pricing",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    }
+   }
+  },
+  {
+   "id": "freelancer",
+   "name": "A freelancer (Upwork's published guide)",
+   "kind": "a person you hire",
+   "homepage": "https://www.upwork.com/hire/web-designers/cost/",
+   "facts": {
+    "currency_note": {
+     "value": "USD; their published guide gives hourly rates, not prices for a whole site.",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "entry_plan_with_custom_domain": {
+     "value": "Not a plan: a contract with a person; hosting and domain are extra and not stated on their pages",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "price_per_month": {
+     "value": "USD 15 to 30 an hour (their published guide: median hourly rates of web designers on Upwork)",
+     "quote": "This data represents typical hourly rate ranges of certain historical contracts worldwide. What clients will pay is subject to negotiations with talent.",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "price_per_year": {
+     "value": "Their published guide: USD 15 to 40+ an hour for a basic one-page site; USD 45 to 75+ an hour for a full custom design",
+     "quote": "Basic One-Page Site",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "billing_and_tax": {
+     "value": "Hourly or fixed price, agreed with the freelancer; not stated on their pages whether tax is included",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "first_year_cost": {
+     "value": "About USD 150 to 300 for design time alone (10 hours x USD 15 to 30, the smallest project their guide describes); build, hosting, domain and later changes are extra",
+     "quote": "You should expect anywhere from 10 hours for a very small design project to several dozen hours for a large-scale, custom design",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "calculated from their published price"
+    },
+    "three_year_cost": {
+     "value": "not stated on their pages: depends on hosting and on paying for changes",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "who_owns_the_files": {
+     "value": "The client, once paid in full, under Upwork's optional contract terms (unless the two agree otherwise)",
+     "quote": "Upon Freelancer's receipt of full payment from Client, the Work Product (except for any Background Technology), including without limitation all Intellectual Property Rights in the Work Product (except for any Background Technology), will be the sole and exclusive property of Client",
+     "source_url": "https://www.upwork.com/legal#optional-service-contract-terms",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "can_you_leave": {
+     "value": "Yes: the work is yours once paid; where it is hosted depends on what you agree",
+     "quote": "will be the sole and exclusive property of Client",
+     "source_url": "https://www.upwork.com/legal#optional-service-contract-terms",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    },
+    "export": {
+     "value": "Whatever the freelancer delivers; not stated on their pages",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "hosting_choice": {
+     "value": "Anywhere you choose; not stated on their pages",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "editing": {
+     "value": "The freelancer, paid again for each change, or you if they hand over a tool you can use; not stated on their pages",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "designs": {
+     "value": "Made for you; the number of designs is agreed per project",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "security_surface": {
+     "value": "not stated on their pages",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "subscription": {
+     "value": "No subscription to the freelancer unless you agree one; hosting is a separate cost",
+     "source_url": "https://www.upwork.com/hire/web-designers/cost/",
+     "date_read": "2026-11-19",
+     "basis": "not stated on their pages"
+    },
+    "lock_in_summary": {
+     "value": "Our reading of their terms: low lock-in, since the client owns the work once paid; the cost of later changes is the open question.",
+     "quote": "will be the sole and exclusive property of Client",
+     "source_url": "https://www.upwork.com/legal#optional-service-contract-terms",
+     "date_read": "2026-11-19",
+     "basis": "their own page"
+    }
+   }
+  }
+ ],
+ "website_cell": {
+  "name": "A website cell from AgentiCCells",
+  "kind": "a static site in your own GitHub repository, built once by a team of agents",
+  "homepage": "https://agenticcells.ai/",
+  "facts": {
+   "entry_plan_with_custom_domain": {
+    "value": "One website cell, with your own domain if you have one",
+    "source_url": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "A live site on its address, with HTTPS, on the owner's domain if they have one."
+   },
+   "price": {
+    "value": "£50 one-off at the launch price; usually £500 (launch price offer, may change)",
+    "source_url": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
+    "date_read": "2026-11-19",
+    "basis": "data/next/offer.json, from Dinis's article",
+    "quote": "£250, at a promotional launch price of £50, and €50 on the Portuguese and other European sites"
+   },
+   "price_per_month": {
+    "value": "None to us: no subscription",
+    "source_url": "https://newsroom.sgit.ai/articles/the-website-cell.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "No subscription from us, ever"
+   },
+   "first_year_cost": {
+    "value": "£50 one-off at the launch price, plus nothing to us",
+    "source_url": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
+    "date_read": "2026-11-19",
+    "basis": "data/next/offer.json"
+   },
+   "three_year_cost": {
+    "value": "£50 one-off at the launch price, plus nothing to us",
+    "source_url": "https://newsroom.sgit.ai/articles/no-lock-in.html",
+    "date_read": "2026-11-19",
+    "basis": "data/next/offer.json",
+    "quote": "Paid once: no subscription from us."
+   },
+   "hosting_cost": {
+    "value": "GitHub Pages: no charge for a public repository on GitHub Free (a private repository needs a paid GitHub plan)",
+    "source_url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+    "date_read": "2026-11-19",
+    "basis": "GitHub's own docs",
+    "quote": "GitHub Pages is available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server.",
+    "note": "GitHub's same page says Pages is not for running an online business or e-commerce site: 'GitHub Pages is not intended for or allowed to be used as a free web-hosting service to run your online business, e-commerce site, or any other website that is primarily directed at either facilitating commercial transactions or providing commercial software as a service (SaaS).' Soft limits: 1 GB site, 100 GB bandwidth a month."
+   },
+   "optional_editing_cost": {
+    "value": "Optional, the owner's choice: a Claude plan of their own to edit it themselves. Claude Pro: USD 17 a month billed yearly, or USD 20 billed monthly, tax extra (Anthropic's own page). Or a partner edits it for them.",
+    "source_url": "https://claude.com/pricing",
+    "date_read": "2026-11-19",
+    "basis": "Anthropic's own page",
+    "quote": "Prices shown don't include applicable tax."
+   },
+   "who_owns_the_files": {
+    "value": "The owner: the site is files in their own GitHub repository, with its history; moved into their ownership within three months at the latest",
+    "source_url": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "Ownership: the repository transferred to the owner within three months, sooner if they ask.",
+    "note": "The three-month promise is a soft requirement for now, per Dinis's articles."
+   },
+   "can_you_leave": {
+    "value": "Yes, at any time, with the whole site",
+    "source_url": "https://newsroom.sgit.ai/articles/no-lock-in.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "the customer can leave, with their site, whenever they want, and owes nobody anything."
+   },
+   "export": {
+    "value": "Everything: the files, the content, the structure and the history are already in the owner's repository",
+    "source_url": "https://newsroom.sgit.ai/articles/sovereignty-you-can-move.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "the structure of the site and its content are files in your repository, in open formats, changed by your own Claude."
+   },
+   "hosting_choice": {
+    "value": "Anywhere: GitHub Pages, Netlify, Cloudflare Pages, any web host",
+    "source_url": "https://newsroom.sgit.ai/articles/the-pitch.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "It is static files, so it moves to any host: GitHub Pages, Netlify, Cloudflare Pages, any web host."
+   },
+   "editing": {
+    "value": "The owner, by talking to their own Claude, with a CLAUDE.md, a behaviour policy and checks before anything goes live; or a partner",
+    "source_url": "https://newsroom.sgit.ai/articles/the-pitch.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "With guard rails: a behaviour policy, checks before anything goes live, and every change undoable."
+   },
+   "designs": {
+    "value": "Five designs made for you by a team of agents; you choose one, the others are kept",
+    "source_url": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "Five designs, the chosen one live and the others kept."
+   },
+   "security_surface": {
+    "value": "Static files: no server code, no database, no plugins, no cookies unless you add them",
+    "source_url": "https://newsroom.sgit.ai/articles/the-pitch.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "No server code, no database, no plugins, no cookies unless you add them."
+   },
+   "subscription": {
+    "value": "No. There is nothing to stop paying for",
+    "source_url": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "No platform, no lock-in, no question about what happens if they stop paying, because there is nothing to stop paying for."
+   },
+   "lock_in_summary": {
+    "value": "None: the owner holds the repository and can host it anywhere.",
+    "source_url": "https://newsroom.sgit.ai/articles/sovereignty-you-can-move.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "Nothing changes for you: you already hold everything"
+   },
+   "honest_notes": {
+    "value": "Editing it yourself needs your own Claude plan (or a partner); the platforms bundle their editor. Our job ends at hand-over: no support is included.",
+    "source_url": "https://newsroom.sgit.ai/articles/the-website-cell.html",
+    "date_read": "2026-11-19",
+    "basis": "Dinis's article",
+    "quote": "No subscription from us, ever, and no support: our job ends at the hand-over."
+   }
+  }
+ },
+ "quote_checks": [
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "an AI-powered platform for web and mobile software without sacrificing control, security, or reliability",
+   "source_url": "https://fliplet.com/",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "AI usage, publishing, hosting, traffic, authentication events, and data activity",
+   "source_url": "https://fliplet.com/pricing/",
+   "result": "not word for word: the page now says 'AI usage, publishing actions, hosted projects, traffic, authentication events, and data activity'. Same meaning; the article should quote the page as it is."
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "Fliplet and/or its licensor(s) are the sole owners of the Service (9.2)",
+   "source_url": "https://fliplet.com/terms/",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "a worldwide, royalty-free, non-exclusive, terminable and limited licence (9.1)",
+   "source_url": "https://fliplet.com/terms/",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "Fliplet does not offer a facility for You to transfer or copy any Content or Applications (8.2)",
+   "source_url": "https://fliplet.com/terms/",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "attempt to derive the source code (6.4.1)",
+   "source_url": "https://fliplet.com/terms/",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "immediately cease use of the Services (15.2), with no right to a copy of any application",
+   "source_url": "https://fliplet.com/terms/",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "34,000 organisations and 326,000 software users in the past year",
+   "source_url": "https://fliplet.com/",
+   "result": "confirmed as rounded figures: the home page says '34K+' and '326K+'"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html",
+   "quote": "Plans free, Plus 25, Max 50, 100 or 200 a month (USD); custom domains from Plus; none on Free; Dublin by default or California",
+   "source_url": "https://fliplet.com/pricing/",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/no-lock-in.html",
+   "quote": "need to be hosted and operated on Wix's servers",
+   "source_url": "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/no-lock-in.html",
+   "quote": "Squarespace: the only export is a WordPress-format file with pages, one blog and their text and images, leaving out the store, products, audio and video blocks, other page types and the styles",
+   "source_url": "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
+   "result": "confirmed (article last updated by Squarespace on 9 October 2026)"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/static-against-the-platforms.html",
+   "quote": "Wix's own help page says its sites need to be hosted and operated on Wix's servers and cannot be moved to another host",
+   "source_url": "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+   "result": "confirmed"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/static-against-the-platforms.html",
+   "quote": "WordPress can export everything, as an XML file or through its REST API",
+   "source_url": "https://wordpress.com/support/export/",
+   "result": "not confirmed for WordPress.com: its export page says the XML file 'will not include your theme design, customizations, or plugins' and holds links to images rather than the image files. Content exports; 'everything' overstates it."
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/static-against-the-platforms.html",
+   "quote": "Price rises: Squarespace 18 to 26% on three of four plans; Wix on new subscriptions and renewals",
+   "source_url": null,
+   "result": "not re-checked in this round: the article's sources are TechRadar and a Wix page, not the pricing pages read here"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/static-against-the-platforms.html",
+   "quote": "Market figures (W3Techs shares, Wix 6.11 million premium subscriptions, Squarespace 5.2 million)",
+   "source_url": null,
+   "result": "not re-checked in this round: market figures, not the competitors' terms"
+  },
+  {
+   "article": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
+   "quote": "A year of Wix costs about GBP 108 to 300 on its main plans (the article writes it with the pound sign)",
+   "source_url": "https://www.wix.com/plans",
+   "result": "could not confirm in GBP: Wix showed us USD only; the Light plan is USD 17 a month billed yearly (USD 204 a year)"
+  }
+ ],
+ "could_not_read": [
+  {
+   "page": "https://wordpress.com/support/export/ (and other wordpress.com help pages) in a browser",
+   "reason": "could not read in Chromium: a 'Confirm you are human' check. Read instead with a plain download (curl), which worked."
+  },
+  {
+   "page": "https://www.upwork.com/legal (plain load)",
+   "reason": "could not read: Cloudflare block page. The same page with #optional-service-contract-terms rendered and was read."
+  },
+  {
+   "page": "https://durable.com/terms",
+   "reason": "could not read: 404. Durable's terms are at https://durable.com/terms-of-service; we did not find an ownership or export clause in this round."
+  },
+  {
+   "page": "PeoplePerHour cost guide",
+   "reason": "no such guide found on peopleperhour.com (https://www.peopleperhour.com/discover/web-design-cost answered 404); Upwork's guide used instead."
+  },
+  {
+   "page": "UK (GBP) prices for every competitor",
+   "reason": "could not read: the pages chose the currency from our network address (United States)."
+  }
+ ]
+}

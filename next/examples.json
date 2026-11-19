@@ -1,0 +1,221 @@
+{
+ "_about": "Real sites for the /next/ examples page and the Proof design. Gathered by researcher.agenticcells-ai@AgentiCCells.dinis on 2026-11-19 from data/cells-registry.json, https://hub.agenticcells.site/ and the factory's public requests (AgentiCCells__Site__Factory, branch dev, requests/). Every url answered 200 over https on 2026-11-19 (curl). Screenshots: Playwright Chromium, 1280x800 first screen, resized to 1100 px wide, JPEG quality 70.",
+ "_rules": "The client site in build/private-names.json is never included, named or linked. A person is named only where data/cells-registry.json records their consent. Demos and made-up businesses say Demo. 'our own' means a site AgentiCCells cells made for AgentiCCells or for Dinis's own projects.",
+ "checked": "2026-11-19",
+ "examples": [
+  {
+   "slug": "agenticcells-ai",
+   "title": "AgentiCCells",
+   "what": "The company site: sells website cells and the consultancy, run by its own team of agents.",
+   "url": "https://agenticcells.ai/",
+   "kind": "our own",
+   "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public)",
+   "screenshot": "assets/next/examples/agenticcells-ai.jpg"
+  },
+  {
+   "slug": "agenticcells-site",
+   "title": "agenticcells.site",
+   "what": "The home of the sites our cells make, and how a site gets there.",
+   "url": "https://agenticcells.site/",
+   "kind": "our own",
+   "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public)",
+   "screenshot": "assets/next/examples/agenticcells-site.jpg"
+  },
+  {
+   "slug": "jose-bota",
+   "title": "José Bota",
+   "what": "A portfolio for an AI automation expert, made by the site factory.",
+   "url": "https://jose-bota.agenticcells.site/",
+   "kind": "made for an owner who agreed to be named",
+   "consent_basis": "data/cells-registry.json \"consent\": agreed to be named, confirmed by Dinis to conductor@ 2026-11-16 ~22:55 UTC (\"Yes they have agreed\"); request 2026-11-16__jose-bota",
+   "screenshot": "assets/next/examples/jose-bota.jpg"
+  },
+  {
+   "slug": "silvio-switha",
+   "title": "Silvio Switha",
+   "what": "A portfolio for an AI entrepreneur, musician and producer, with his film and how to hire him.",
+   "url": "https://silvio-switha.agenticcells.site/",
+   "kind": "made for an owner who agreed to be named",
+   "consent_basis": "data/cells-registry.json \"consent\": agreed to be named, confirmed by Dinis to conductor@ 2026-11-16 ~22:55 UTC (\"Yes they have agreed\"); request 2026-11-16__silvio-switha",
+   "screenshot": "assets/next/examples/silvio-switha.jpg"
+  },
+  {
+   "slug": "yiheng-wang",
+   "title": "Yiheng Wang",
+   "what": "A personal site and CV for a project and operations manager, made by the site factory.",
+   "url": "https://yiheng-wang.agenticcells.site/",
+   "kind": "made for an owner who agreed to be named",
+   "consent_basis": "data/cells-registry.json \"consent\": agreed to be named, confirmed by Dinis to conductor@ 2026-11-16 ~22:55 UTC (\"Yes they have agreed\"); request 2026-11-16__yiheng-wang",
+   "screenshot": "assets/next/examples/yiheng-wang.jpg"
+  },
+  {
+   "slug": "riskmandate-at-websummit",
+   "title": "RiskMandate at Web Summit",
+   "what": "An event site: what was shown at Web Summit Lisbon, with the film and the week. The first site the factory made from a request file.",
+   "url": "https://riskmandate-at-websummit.agenticcells.site/",
+   "kind": "demo",
+   "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public); registry status \"demo\"",
+   "screenshot": "assets/next/examples/riskmandate-at-websummit.jpg"
+  },
+  {
+   "slug": "algarve-orange-grower",
+   "title": "Algarve orange grower (Demo)",
+   "what": "A made-up orange grower: a zone map and an order flow. Invented prices; nothing is sent.",
+   "url": "https://algarve-orange-grower.agenticcells.site/",
+   "kind": "demo",
+   "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public); registry status \"demo\", a made-up business",
+   "screenshot": "assets/next/examples/algarve-orange-grower.jpg"
+  },
+  {
+   "slug": "algarve-holiday-homes",
+   "title": "Algarve holiday homes (Demo)",
+   "what": "A made-up company with five holiday homes: availability, a simulated booking and a scripted agent, with live weather and events.",
+   "url": "https://algarve-holiday-homes.agenticcells.site/",
+   "kind": "demo",
+   "consent_basis": "made-up business, labelled on the site; public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-18__algarve-holiday-homes",
+   "screenshot": "assets/next/examples/algarve-holiday-homes.jpg"
+  },
+  {
+   "slug": "weather-demo",
+   "title": "Weather, from our data (Demo)",
+   "what": "A demonstration site: Portugal's weather from public data, how it was built, and how to use the raw data.",
+   "url": "https://weather-demo.agenticcells.site/",
+   "kind": "demo",
+   "consent_basis": "demonstration site, labelled on the site; public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-18__weather-demo",
+   "screenshot": "assets/next/examples/weather-demo.jpg"
+  },
+  {
+   "slug": "london-billboard",
+   "title": "A London billboard, live from the Algarve (Demo)",
+   "what": "A simulated weather-driven billboard that shows the Algarve live; nothing is screened or booked.",
+   "url": "https://london-billboard.agenticcells.site/",
+   "kind": "demo",
+   "consent_basis": "simulation, labelled on the site; public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-18__london-billboard",
+   "screenshot": "assets/next/examples/london-billboard.jpg"
+  },
+  {
+   "slug": "ipma-data",
+   "title": "IPMA data, drawn (Demo)",
+   "what": "Portugal's public weather warnings and forecasts drawn live in the browser. Not a warning service.",
+   "url": "https://ipma-data.agenticcells.site/",
+   "kind": "demo",
+   "consent_basis": "demonstration site; public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-18__ipma-data",
+   "screenshot": "assets/next/examples/ipma-data.jpg"
+  },
+  {
+   "slug": "civic-promptugal-news",
+   "title": "PrompTugal.news Civic",
+   "what": "Public money and public services in Portugal, explained and cross-mapped, each figure linked to its source.",
+   "url": "https://civic.promptugal.news/",
+   "kind": "our own",
+   "consent_basis": "made by AgentiCCells cells at Dinis's request (17 Nov 2026), public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-17__civic-promptugal-news",
+   "screenshot": "assets/next/examples/civic-promptugal-news.jpg"
+  },
+  {
+   "slug": "data-promptugal-news",
+   "title": "PrompTugal.news Data",
+   "what": "The raw public data behind PrompTugal.news, with the time each file was read.",
+   "url": "https://data.promptugal.news/",
+   "kind": "our own",
+   "consent_basis": "made at Dinis's request, public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-17__data-promptugal-news",
+   "screenshot": "assets/next/examples/data-promptugal-news.jpg"
+  },
+  {
+   "slug": "startups-promptugal-news",
+   "title": "PrompTugal.news Startups",
+   "what": "Portugal's startups and their funding, place by place.",
+   "url": "https://startups.promptugal.news/",
+   "kind": "our own",
+   "consent_basis": "made at Dinis's request (17 Nov 2026), public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-17__startups-promptugal-news",
+   "screenshot": "assets/next/examples/startups-promptugal-news.jpg"
+  },
+  {
+   "slug": "travel-promptugal-news",
+   "title": "PrompTugal.news Travel",
+   "what": "Travel in Portugal now: flights, transport, strikes and weather for visitors.",
+   "url": "https://travel.promptugal.news/",
+   "kind": "our own",
+   "consent_basis": "made at Dinis's request (17 Nov 2026), public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-17__travel-promptugal-news",
+   "screenshot": "assets/next/examples/travel-promptugal-news.jpg"
+  },
+  {
+   "slug": "weather-promptugal-news",
+   "title": "PrompTugal.news Weather",
+   "what": "Weather and civil protection for Portugal, place by place, from IPMA's public data.",
+   "url": "https://weather.promptugal.news/",
+   "kind": "our own",
+   "consent_basis": "made at Dinis's request (17 Nov 2026), public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-17__weather-promptugal-news",
+   "screenshot": "assets/next/examples/weather-promptugal-news.jpg"
+  },
+  {
+   "slug": "events-promptugal-news",
+   "title": "PrompTugal.news Events",
+   "what": "Events across the Algarve and Lisbon, read from official agendas, each with its source.",
+   "url": "https://events.promptugal.news/",
+   "kind": "our own",
+   "consent_basis": "made at Dinis's request (18 Nov 2026), public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-18__events-promptugal-news",
+   "screenshot": "assets/next/examples/events-promptugal-news.jpg"
+  },
+  {
+   "slug": "evals",
+   "title": "Evals",
+   "what": "Playgrounds that test AI models under a written behaviour policy, run in your own browser.",
+   "url": "https://evals.agenticcells.site/",
+   "kind": "our own",
+   "consent_basis": "public factory request https://github.com/AgentiCCells/AgentiCCells__Site__Factory/tree/dev/requests/2026-11-18__evals",
+   "screenshot": "assets/next/examples/evals.jpg"
+  },
+  {
+   "slug": "specialist-design",
+   "title": "Specialist: Design",
+   "what": "A specialist agent's site: the design guidance and review service every team starts from.",
+   "url": "https://specialist-design.agenticcells.site/",
+   "kind": "our own",
+   "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public); registry status \"demo\"",
+   "screenshot": "assets/next/examples/specialist-design.jpg"
+  },
+  {
+   "slug": "specialist-writing",
+   "title": "Specialist: Writing",
+   "what": "A specialist agent's site: the house rules for writing, and the review service.",
+   "url": "https://specialist-writing.agenticcells.site/",
+   "kind": "our own",
+   "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public); registry status \"demo\"",
+   "screenshot": "assets/next/examples/specialist-writing.jpg"
+  }
+ ],
+ "_held_back": [
+  {
+   "slug": "gabriel-dacruz",
+   "reason": "Personal site of a named person; no consent recorded in data/cells-registry.json or in the factory request (2026-11-18__gabriel-dacruz). The live site already shows it (assets/example-gabriel-dacruz.webp). Ask Dinis."
+  },
+  {
+   "slug": "vicky-wang",
+   "reason": "Did not answer on 2026-11-19 (proxy: host unreachable, no DNS). The same person's site is yiheng-wang, which is included."
+  },
+  {
+   "slug": "marc-noah",
+   "reason": "Consent recorded only in the factory brief (Dinis, 17 Nov ~21:28 UTC: \"Yes, he agreed\"), not in data/cells-registry.json. Add to the registry to include."
+  },
+  {
+   "slug": "indi-gupte",
+   "reason": "Consent recorded only in the factory brief (Dinis, 18 Nov ~09:35 UTC: \"Yes, he agreed\"), not in data/cells-registry.json."
+  },
+  {
+   "slug": "mondweep-chakravorty",
+   "reason": "Consent recorded only in the factory brief (Dinis, 18 Nov ~09:58 UTC: \"Yes, he agreed\"), not in data/cells-registry.json."
+  },
+  {
+   "slug": "sustain-nobility",
+   "reason": "A company's redesign proposal; agreement recorded only in the factory brief (Dinis, 18 Nov ~02:27 UTC: \"Yes, they agreed\"), not in data/cells-registry.json."
+  },
+  {
+   "slug": "hub",
+   "reason": "Answers 200, but its first screen shows a name with no recorded consent (the gabriel-dacruz card). Include once that is settled."
+  },
+  {
+   "slug": "cyber-demo, events-demo, openrouter-evals, and the PrompTugal.news placeholders (bulletins, cyber, library, live, signals, videos)",
+   "reason": "Placeholder pages only ('first version coming' or a one-line page) on 2026-11-19."
+  }
+ ]
+}
