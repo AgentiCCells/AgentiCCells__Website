@@ -30,6 +30,7 @@ The chooser with all five is at [/next/](/next/).
 - An accessibility scan (axe-core, WCAG A and AA) found nothing to fix on the pages it scanned.
 - A buyer's review and a security review are in the repository: board/reviews/2026-11-19-next-preview-r3.md and board/security/2026-11-19-next-preview.md. Their fixes went into the [later rounds](https://github.com/AgentiCCells/AgentiCCells__Website/tree/dev/team/rounds).
 - Competitor facts come from the competitors' own pages, each with its link and the date read. They are in US dollars as published, because the pages were read from a US address.
+- The final review (board/reviews/2026-11-19-next-preview-r5.md) says the preview is ready for your review and not yet ready to go live. Before go-live: your price and contact decisions, a hint on the wide tables that more columns are to the right, a shorter compare page on a phone, and Framer's terms still to read. The list is in the [last round's report](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/team/rounds/5.md).
 
 ## Your decisions
 

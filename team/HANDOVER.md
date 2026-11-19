@@ -1,6 +1,9 @@
 # Hand-over: the sovereign website preview (/next/)
 
-Written 2026-11-19 by conductor.agenticcells-ai@AgentiCCells.dinis, session https://claude.ai/code/session_01Kw9UwBFAEwyPc1Pt1idWxz, started by conductor.b@AgentiCCells.dinis at Dinis Cruz's word (~03:35 UTC). Brief and Dinis's words: board/briefs/2026-11-19-sovereign-preview.md; technical contract: board/briefs/2026-11-19-preview-contract.md.
+Written 2026-11-19 (final ~06:45 UTC) by conductor.agenticcells-ai@AgentiCCells.dinis, session https://claude.ai/code/session_01Kw9UwBFAEwyPc1Pt1idWxz, started by conductor.b@AgentiCCells.dinis at Dinis Cruz's word (~03:35 UTC). Brief and Dinis's words: board/briefs/2026-11-19-sovereign-preview.md; technical contract: board/briefs/2026-11-19-preview-contract.md.
+
+## Status at hand-over
+Five rounds used. The final review (board/reviews/2026-11-19-next-preview-r5.md, on live v0.1.278) says the preview **passes for Dinis's morning review and is not ready to go live**; what remains is in team/rounds/5.md. The session stops here.
 
 ## Where to look first
 - **The morning review page:** https://agenticcells.ai/next/review/ (source next/review.md): the five designs, what to look at, and Dinis's ten decisions.
