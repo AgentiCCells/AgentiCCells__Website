@@ -1,0 +1,27 @@
+/* /next/d/1/ Sovereign: deep ink, warm paper, a serif voice. Over base.css. Code under Apache-2.0. */
+.d1 { --head: Georgia, "Iowan Old Style", "Times New Roman", serif; --accent: #8a5a00; --accent-soft: #f6efe0; --soft: #faf6ee; }
+.d1-hero { background: radial-gradient(120% 140% at 0% 0%, #1c3644 0%, #10202b 60%); color: #f3ead6; padding: 2rem 0 2.2rem; }
+.d1-hero h1 { font-size: clamp(2rem, 4.6vw, 3.4rem); letter-spacing: -.01em; color: #fff; }
+.d1-hero .kicker { color: #e9d8a6; font-family: var(--head); font-style: italic; font-size: 1.25rem; }
+.d1-hero .hero-text p { color: #d9e0e3; }
+.d1-hero .offer p, .d1-hero .offer .offer-label { color: #3d3420; }
+.d1-hero .offer .price { color: #1a1408; }
+.d1-hero .tbw { color: var(--warn-fg); }
+.d1-hero .offer { background: #f6efe0; color: #1a1408; border: 0; box-shadow: 0 12px 40px rgba(0,0,0,.35); }
+.d1-hero .offer .price strong a { color: #6b4500; }
+.d1-hero .btn { background: #e9d8a6; color: #10202b; }
+.d1 .btn { background: #10202b; color: #fff; }
+.d1-hero .offer .btn { background: #10202b; color: #fff; }
+.d1-body .sec h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
+.d1-body .sec h2::after { content: ""; display: block; width: 3rem; height: 3px; background: #c9a24a; margin-top: .5rem; }
+.d1 .promises li { background: #fff; border: 1px solid #eadfc8; }
+.d1 .promises li::before { background: #10202b; color: #e9d8a6; font-family: var(--head); }
+@media (min-width: 60rem) {
+  .d1-body .with-fig { display: grid; grid-template-columns: 1fr 1.2fr; gap: 0 2.4rem; align-items: start; }
+  .d1-body .with-fig > h2 { grid-column: 1 / -1; }
+  .d1-body .with-fig > .fig, .d1-body .with-fig > .deliverables { grid-column: 2; grid-row: 2 / span 4; margin-top: 0; }
+}
+.d1-body .final { background: #10202b; color: #f3ead6; max-width: none; text-align: center; }
+.d1-body .final h2::after { margin: .5rem auto 0; }
+.d1-body .final .btn { background: #e9d8a6; color: #10202b; }
+.d1-body .final .btn.ghost { background: transparent; color: #e9d8a6; box-shadow: inset 0 0 0 2px #e9d8a6; }

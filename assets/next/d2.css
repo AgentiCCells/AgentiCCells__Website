@@ -1,0 +1,19 @@
+/* /next/d/2/ Six promises: light, bright, numbered cards first. Over base.css. Code under Apache-2.0. */
+.d2 { --accent: #c2410c; --accent-soft: #ffedd5; --soft: #fff7ec; --head: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.d2-hero { background: linear-gradient(180deg, #fff7ec 0%, #ffffff 100%); padding: 1.6rem 0 1.4rem; }
+.d2-hero h1 { font-weight: 800; letter-spacing: -.02em; font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin-top: 0; }
+.d2-hero .kicker { color: #9a3412; font-weight: 600; }
+.d2-hero .offer { border: 2px solid #c2410c; box-shadow: none; }
+.d2-promises { margin-top: 1.4rem; }
+.d2-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.d2-grid li { background: #fff; border: 1px solid #fed7aa; border-top: 5px solid; }
+.d2-grid li:nth-child(6n+1) { border-top-color: #c2410c; } .d2-grid li:nth-child(6n+2) { border-top-color: #0e7490; }
+.d2-grid li:nth-child(6n+3) { border-top-color: #4d7c0f; } .d2-grid li:nth-child(6n+4) { border-top-color: #7c3aed; }
+.d2-grid li:nth-child(6n+5) { border-top-color: #b91c1c; } .d2-grid li:nth-child(6n+6) { border-top-color: #1d4ed8; }
+.d2-grid li::before { background: #17222b; }
+.d2-body .sec:nth-child(even) { background: #fffaf3; max-width: none; }
+.d2-body .sec:nth-child(even) > * { max-width: calc(var(--max) - 2 * var(--gutter)); margin-left: auto; margin-right: auto; }
+.d2-body h2 { font-weight: 800; }
+.d2-body .final { background: #c2410c; color: #fff; max-width: none; text-align: center; }
+.d2-body .final .btn { background: #fff; color: #c2410c; }
+.d2-body .final .btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 2px #fff; }

@@ -202,17 +202,62 @@ if (ev.status !== 0) errors.push('evidence: figures with no evidence link (see a
     if (/countdown|ends in|hurry|last chance/i.test(JSON.stringify([offer.offer_label, offer.note]))) fail('data/offer.json: no countdowns or pressure wording');
     const ladder = JSON.parse(readFileSync(join(root, 'data/cells.json'), 'utf8')).cells.map((c) => Number(String(c.price).replace(/[^\d]/g, '')));
     const allowed = new Set([offer.anchor_gbp, ...ladder, ...(offer.launch_gbp == null ? [] : [offer.launch_gbp])]);
+    // V-NEXT (scoped extension, not a widening): pages under site/next/ (the preview) take their prices from
+    // data/next/offer.json instead, plus the same ladder. Every other page keeps the set above.
+    const nextOffer = (() => { try { return JSON.parse(readFileSync(join(root, 'data/next/offer.json'), 'utf8')); } catch { return null; } })();
+    const allowedNext = new Set([...ladder, ...(nextOffer ? [nextOffer.launch_gbp, nextOffer.usual_gbp, nextOffer.earlier_launch_gbp, ...(nextOffer.bigger || []).map((b) => b.price_gbp)].filter(Number.isInteger) : [])]);
+    const isNext = (f) => /^site\/next\//.test(rel(f).replace(/\\/g, '/'));
     for (const f of walk(join(root, 'site'), ['.html'])) {
       const t = readFileSync(f, 'utf8');
+      const allowedHere = isNext(f) ? allowedNext : allowed;
+      const source = isNext(f) ? 'data/next/offer.json' : 'data/offer.json';
       if (offer.launch_gbp == null && (/£\s?\d[\d,]*\s*\(?launch price/i.test(t.replace(/<[^>]+>/g, '')))) fail(`${rel(f)}: shows a launch price while launch_gbp is null`);
       t.replace(/<[^>]+>/g, ' ').split('\n').forEach((line, i) => {
         if (!/website cell/i.test(line)) return;
         for (const m of line.matchAll(/£\s?(\d+(?:,\d{3})*)/g)) {
           const n = Number(m[1].replace(/,/g, ''));
-          if (!allowed.has(n)) fail(`${rel(f)}:${i + 1}: states £${m[1]} near "website cell"; data/offer.json says £${offer.anchor_gbp}`);
+          if (!allowedHere.has(n)) fail(`${rel(f)}:${i + 1}: states £${m[1]} near "website cell"; ${source} says £${isNext(f) ? nextOffer && nextOffer.launch_gbp : offer.anchor_gbp}`);
         }
       });
     }
+  }
+}
+
+// V-NEXT: the /next/ preview (board/briefs/2026-11-19-preview-contract.md). Its prices come from data/next/offer.json;
+// every page is noindex and carries the Preview band; nothing outside /next/ links to it; no sitemap lists it; and,
+// until Dinis chooses the new address, no preview page carries an email address (conductor.agenticcells-ai@, 2026-11-19).
+{
+  const np = join(root, 'data/next/offer.json');
+  const nextPages = walk(join(root, 'site', 'next'), ['.html']);
+  if (!existsSync(np)) { if (nextPages.length) fail('data/next/offer.json missing while site/next/ exists'); }
+  else {
+    let o = null;
+    try { o = JSON.parse(readFileSync(np, 'utf8')); } catch (e) { fail(`data/next/offer.json: ${e.message}`); }
+    if (o) {
+      for (const k of ['launch_gbp', 'launch_eur', 'usual_gbp', 'earlier_launch_gbp']) if (!Number.isInteger(o[k]) || o[k] <= 0) fail(`data/next/offer.json: ${k} must be a positive whole number`);
+      for (const k of ['offer_label', 'note']) if (typeof o[k] !== 'string' || !o[k].trim()) fail(`data/next/offer.json: ${k} missing`);
+      if (!(o.launch_gbp < o.earlier_launch_gbp && o.earlier_launch_gbp < o.usual_gbp)) fail('data/next/offer.json: want launch_gbp < earlier_launch_gbp < usual_gbp');
+      if (!Array.isArray(o.bigger) || !o.bigger.length) fail('data/next/offer.json: bigger must list the bigger offers');
+      for (const b of o.bigger || []) {
+        if (typeof b.name !== 'string' || !b.name.trim() || !Number.isInteger(b.price_gbp) || b.price_gbp <= 0) fail(`data/next/offer.json: bigger offer ${JSON.stringify(b.name)} needs a name and a whole-number price_gbp`);
+        if (b.status !== 'first proposal') fail(`data/next/offer.json: bigger offer ${JSON.stringify(b.name)} must be marked "first proposal"`);
+      }
+      if (/countdown|ends in|hurry|last chance/i.test(JSON.stringify([o.offer_label, o.note]))) fail('data/next/offer.json: no countdowns or pressure wording');
+    }
+  }
+  for (const f of nextPages) {
+    const t = readFileSync(f, 'utf8');
+    if (!t.includes('<meta name="robots" content="noindex">')) fail(`${rel(f)}: a /next/ page must be noindex`);
+    if (!t.includes('class="preview-band"')) fail(`${rel(f)}: a /next/ page must carry the Preview band (class="preview-band")`);
+    if (!t.includes('<html lang="en-GB">')) fail(`${rel(f)}: a /next/ page must say <html lang="en-GB">`);
+    if (/mailto:|[\w.+-]+@[\w-]+\.[\w.-]*[a-z]/i.test(t)) fail(`${rel(f)}: a /next/ page must not carry an email address or mailto link`);
+  }
+  for (const f of walk(join(root, 'site'), ['.html'])) {
+    if (/^site\/next\//.test(rel(f).replace(/\\/g, '/'))) continue;
+    if (/\bhref="(?:https?:\/\/(?:www\.)?agenticcells\.(?:ai|com))?\/next(?:\/|"|#|\?)/i.test(readFileSync(f, 'utf8'))) fail(`${rel(f)}: links to the /next/ preview; nothing outside /next/ may link to it`);
+  }
+  for (const n of existsSync(join(root, 'site')) ? readdirSync(join(root, 'site')).filter((n) => /\.xml$/.test(n)) : []) {
+    if (/<loc>[^<]*\/next\//.test(readFileSync(join(root, 'site', n), 'utf8'))) fail(`site/${n}: lists a /next/ URL; the preview stays out of every sitemap`);
   }
 }
 
