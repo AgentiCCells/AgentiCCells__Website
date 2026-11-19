@@ -4,7 +4,7 @@ description: What arrives when your site is made: a repository in your name, a l
 ---
 # What you get
 
-This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+This page is about the Sovereign Agentic Website, one of our two [case studies](/next/case-studies/). A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
 
 A website you own, control and can take anywhere. This page shows what that means in practice: what arrives, where it lives, and what you can do with it.
 

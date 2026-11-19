@@ -1,12 +1,12 @@
 ---
 title: The sovereign website
-description: The smallest agentic cell: a website built by a team of agents and owned by you, the files, the history and the address, in a repository you control.
+description: Case study: the Sovereign Agentic Website, our website cell grown into its own product. Built by agents, owned by you. Opening soon.
 ---
-# The sovereign website: the smallest cell
+# Case study: the Sovereign Agentic Website
 
-Built by agents, owned by you. An agentic cell is a small team of AI agents, each with a role, a brief and a behaviour policy, working in your own accounts ([what a cell is](/next/cells/)). The smallest cell we sell, and the clearest example of what a cell does, is the Sovereign Agentic Website (Sovereign Website for short): a website built by a team of agents and owned by you, the files, the history and the address, in a repository you control.
+Built by agents, owned by you. An agentic cell is a small team of AI agents, each with a role, a brief and a behaviour policy, working in your own accounts ([what a cell is](/next/cells/)). The Sovereign Agentic Website (Sovereign Website for short) is our website cell, grown into its own product: a website built by a team of agents and owned by you, the files, the history and the address, in a repository you control. It is one of our two [case studies](/next/case-studies/), and the clearest example of what a cell does.
 
-Its own site is [sovereignwebsite.ai](https://sovereignwebsite.ai/) (opening soon).
+Its own site is [sovereignwebsite.ai](https://sovereignwebsite.ai/) (opening soon). What we sell on this site is the [four sizes of cell](/next/pricing/); the Sovereign Website has its own launch offer, below.
 
 ## What it is
 
@@ -32,16 +32,18 @@ This team inside the site is the next step, not yet built. The sites we hand ove
 
 ## On a device you hold (a plan)
 
-Some of these agents could run on a Raspberry Pi or an Android tablet. The appliance is a plan: a configured Android tablet, or a set of Raspberry Pis that serve the site from home, to be offered through a Kickstarter campaign. Nothing has been submitted to Kickstarter, and the appliance's software is a plan ([launching the appliance](https://newsroom.sgit.ai/articles/launching-the-sovereign-website-appliance.html)). The site on its own, without a device, is what we sell now.
+Some of these agents could run on a Raspberry Pi or an Android tablet. The appliance is a plan: a configured Android tablet, or a set of Raspberry Pis that serve the site from home, to be offered through a Kickstarter campaign. Nothing has been submitted to Kickstarter, and the appliance's software is a plan ([launching the appliance](https://newsroom.sgit.ai/articles/launching-the-sovereign-website-appliance.html)). The site on its own, without a device, is the offer now.
 
-## The price
+## Its own launch offer
+
+The Sovereign Website's own launch offer, on sovereignwebsite.ai: {launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html), a proposal, with no subscription. It may change.
 
 {{offer}}
 
 ## The honest notes
 
 - Editing the site yourself needs your own Claude plan, or a partner who edits it for you; or you leave it as it is, and it keeps running. The [pricing page](/next/pricing/) gives the cost.
-- Partners set their own price for the build and for the care around it. The launch price is what we charge.
+- Partners set their own price for the build and for the care around it. The launch price is the Sovereign Website's own.
 - The team inside the repository is the next step, not yet built, and the appliance is a plan.
 - Nothing has been sold yet, and the hosted service under the new name is not running yet.
 - "Sovereign" here means owning and being able to move; it is not a legal or certification claim.
@@ -53,4 +55,5 @@ Some of these agents could run on a Raspberry Pi or an Android tablet. The appli
 - [Sovereignty](/next/sovereignty/): why being able to move is what counts.
 - [No lock-in](/next/no-lock-in/): you can leave, with your site, whenever you want.
 - [Security](/next/security/): almost nothing to attack, and what that does not protect against.
-- [Pricing](/next/pricing/): the launch price, and the bigger cells as first proposals.
+- [Pricing](/next/pricing/): the four sizes of cell, and the Sovereign Website's own launch price.
+- [Case studies](/next/case-studies/): this website and PrompTugal.news, side by side.

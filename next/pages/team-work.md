@@ -4,7 +4,7 @@ description: Bigger agentic cells: a person who helps you, a team with a conduct
 ---
 # Bigger cells: our own team at work
 
-An agentic cell is a small team of AI agents, each with a role, a brief and a behaviour policy, working in your own accounts, where you can see the work and stop it ([what a cell is](/next/cells/)). The smallest cell is a website. Bigger cells do more: they run a newsroom, a team's working site or an event. This page shows the kind of work a bigger cell does, from our own team's work. It names no customer: this was our own work.
+An agentic cell is a small team of AI agents, each with a role, a brief and a behaviour policy, working in your own accounts, where you can see the work and stop it ([what a cell is](/next/cells/)). A website is one of the simplest jobs a cell can do. Bigger cells do more: they run a newsroom, a team's working site or an event, the work our [team and network sizes](/next/pricing/) are for. This page shows that kind of work, from our own team's work; [PrompTugal.news](/next/case-studies/), one of our case studies, came out of it. It names no customer: this was our own work.
 
 ## Ten days around Web Summit
 

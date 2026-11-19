@@ -4,7 +4,7 @@ description: You bring the business, we build the site. What a partner sells, wh
 ---
 # Partners: you bring the business, we build the site
 
-This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+This page is about the Sovereign Agentic Website, one of our two [case studies](/next/case-studies/). A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
 
 You know people who want a website. You sell it to them; we build it behind you and hand it over in a GitHub repository your customer owns. Then you sell the care around it, at your own prices.
 
@@ -17,7 +17,7 @@ You know people who want a website. You sell it to them; we build it behind you 
 
 ## A worked example (simulation)
 
-A simulation, not a sale: you sell one site to a customer at our £50 launch price, and under the [partner terms](https://agenticcells.ai/partners/#partner-terms) the sale is split 50/50, so £25 is yours and £25 is ours at the launch price. You invoice the customer, because you have them, and pay us our half. What you then charge for care and changes is yours alone.
+A simulation, not a sale: you sell one Sovereign Website to a customer at its £50 launch price, and under the [partner terms](https://agenticcells.ai/partners/#partner-terms) the sale is split 50/50, so £25 is yours and £25 is ours at the launch price. You invoice the customer, because you have them, and pay us our half. What you then charge for care and changes is yours alone.
 
 At the launch price a partner's share of the build is small, so most of a partner's income is meant to come from the care around the site. How a sale above the launch price is split is not yet written down: agree it with us before the sale.
 

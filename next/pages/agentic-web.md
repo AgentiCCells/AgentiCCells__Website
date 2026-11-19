@@ -32,5 +32,6 @@ Dinis describes the stack in four layers ([designing sovereignwebsite.ai](https:
 ## Read next
 
 - [Agentic cells](/next/cells/): what a cell is, its sizes, and how one runs.
-- [The sovereign website](/next/sovereign-website/): the smallest cell.
+- [Case studies](/next/case-studies/): a newsroom and a website, both run by cells.
+- [The sovereign website](/next/sovereign-website/): the website case, in detail.
 - [Our own team's work](/next/team-work/): a bigger cell at Web Summit.

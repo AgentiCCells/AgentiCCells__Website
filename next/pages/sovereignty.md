@@ -4,7 +4,7 @@ description: Where a site is hosted is not sovereignty. Being able to move the s
 ---
 # Sovereignty is being able to move
 
-This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+This page is about the Sovereign Agentic Website, one of our two [case studies](/next/case-studies/). A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
 
 A website you own, control and can take anywhere. Most talk about digital sovereignty is about location: a data centre in the EU, a supplier incorporated at home. That matters, and it is not enough.
 

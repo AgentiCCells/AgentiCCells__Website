@@ -4,7 +4,7 @@ description: Renting a site from Wix, Squarespace, WordPress hosts, AI builders 
 ---
 # Renting a website, or owning one
 
-This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+This page is about the Sovereign Agentic Website, one of our two [case studies](/next/case-studies/). A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
 
 Each competitor's figures and words come from its own pages, linked with the date they were read; negotiated contracts may differ.
 

@@ -4,7 +4,7 @@ description: You can leave, with your site, whenever you want. What the platform
 ---
 # You can leave, with your site, whenever you want
 
-This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+This page is about the Sovereign Agentic Website, one of our two [case studies](/next/case-studies/). A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
 
 A website you own, control and can take anywhere. Of everything we offer, this is the difference that matters most, and we put it first rather than in the small print.
 

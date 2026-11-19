@@ -1,10 +1,18 @@
 ---
 title: Start here
-description: How to ask for a site: run the interview in your own Claude first, then send the brief and your material, or ask for a free evaluation site.
+description: How to ask for a cell in any of the four sizes, and how to ask for a Sovereign Website: run the interview in your own Claude first.
 ---
 # Start with an interview
 
-This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)). Whatever the size, it starts the same way: say what the work is, in your own words.
+
+## Asking for a cell
+
+Write down the one job you want done, who does it today, and what must stay private. Say which of the [four sizes](/next/pricing/) you think fits, from one agent for one workflow to a network; if you are not sure, say so, and a person will suggest one. Every price is a first proposal, and nothing has been sold yet.
+
+## Asking for a Sovereign Website
+
+The rest of this page is about the Sovereign Agentic Website, one of our two [case studies](/next/case-studies/), which has its own launch offer on [sovereignwebsite.ai](https://sovereignwebsite.ai/) (opening soon).
 
 A website you own, control and can take anywhere starts with a conversation. Most people do not know what they want from a website until someone asks them the right questions, so the first step is an interview, by Claude.
 
@@ -16,7 +24,7 @@ Three steps:
 
 1. **Run the interview** in your own Claude, with the prompt below. It writes a one-page brief, in your words.
 2. **Gather your material:** photos, videos, documents, a CV, or links to what is already public, such as a profile or an existing site. Note which of it may be public.
-3. **Ask for a site**, at the launch price or as a free evaluation, and send the brief and the material.
+3. **Ask for a site**, at the Sovereign Website's launch price or as a free evaluation, and send the brief and the material.
 
 To ask now, use the contact at the foot of any page of the [live site](https://agenticcells.ai/). This preview has no address of its own yet. A person reads every request and replies.
 
