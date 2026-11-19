@@ -1,48 +1,45 @@
 ---
-title: Morning review
-description: For Dinis: the five preview designs of agenticcells.ai, what to look at in each, and the decisions the team needs before anything goes live.
+title: Review
+description: For Dinis: the agentic cells preview of agenticcells.ai, the five designs, the two case studies, and the decisions the team needs before go-live.
 ---
-# Morning review
+# Review
 
-For Dinis Cruz, from the conductor of agenticcells.ai and its team of agents, written on 19 November 2026 before you woke. Nothing here is live on the main site: every page under /next/ is a preview, hidden from search engines, and linked from nowhere on the current site. The current home page and its prices are unchanged.
+For Dinis Cruz, from the conductor of agenticcells.ai and its team of agents, updated on 19 November 2026 in the evening after your word to refactor the site around agentic cells, the four sizes and two case studies. Nothing here is live on the main site: every page under /next/ is a preview, hidden from search engines, and linked from nowhere on the current site. The current home page and its prices are unchanged.
 
 ## The five designs
 
-Same words and the same data in all five. Open each at phone size and at laptop size.
+Same words and the same data in all five; each first screen shows the four sizes at their first proposal prices.
 
 | Design | Address | What to look at |
 |---|---|---|
-| Sovereign | [/next/d/1/](/next/d/1/) | The one idea as the headline, the price card beside it, the three named owners' sites under the first screen. |
-| Six promises | [/next/d/2/](/next/d/2/) | Your sentence from the pitch as the headline, then the six promises with their proof. The safest default. |
-| Stop renting your website | [/next/d/3/](/next/d/3/) | Renting against owning on the first screen: three years of each platform's plan beside the one-off launch price. The reviewer found this the strongest first screen for a small business owner. |
-| Just say it | [/next/d/4/](/next/d/4/) | Very large type, one promise per screen. The boldest of the five. |
-| Proof | [/next/d/5/](/next/d/5/) | A wall of the example sites first, then the offer. |
+| A team you own | [/next/d/1/](/next/d/1/) | The one idea and the four sizes side by side, then the two case studies. |
+| Six things every cell gives you | [/next/d/2/](/next/d/2/) | The six properties of a cell as numbered cards under the first screen. |
+| Stop renting software | [/next/d/3/](/next/d/3/) | A ledger: renting tools by the month against owning a team. |
+| Just say it | [/next/d/4/](/next/d/4/) | Very large type, one statement per screen. |
+| Proof: cells at work | [/next/d/5/](/next/d/5/) | A wall of live sites and our own team's pages first. |
 
 The chooser with all five is at [/next/](/next/).
 
-## The pages that explain
+## The pages
 
-[What you get](/next/what-you-get/), [how it works](/next/how-it-works/), [sovereignty](/next/sovereignty/), [no lock-in](/next/no-lock-in/), [security](/next/security/), [examples](/next/examples/), [partners](/next/partners/), [FAQ](/next/faq/), [pricing](/next/pricing/), [compare](/next/compare/) and [how to start](/next/start/). The infographics have a text version under each.
+[What a cell is](/next/cells/), [the case studies](/next/case-studies/) (PrompTugal.news and the Sovereign Agentic Website), [the agentic web](/next/agentic-web/), [the Sovereign Agentic Website](/next/sovereign-website/) with its detail pages, [our team's work](/next/team-work/), [pricing](/next/pricing/), [examples](/next/examples/), [FAQ](/next/faq/) and [how to start](/next/start/).
 
 ## What the team checked
 
 - Every preview page at phone and laptop size in Chromium: no errors, no sideways scroll, nothing loaded from other sites, no cookies.
-- An accessibility scan (axe-core, WCAG A and AA) found nothing to fix on the pages it scanned.
-- A buyer's review and a security review are in the repository: board/reviews/2026-11-19-next-preview-r3.md and board/security/2026-11-19-next-preview.md. Their fixes went into the [later rounds](https://github.com/AgentiCCells/AgentiCCells__Website/tree/dev/team/rounds).
-- Competitor facts come from the competitors' own pages, each with its link and the date read. They are in US dollars as published, because the pages were read from a US address.
-- The final review (board/reviews/2026-11-19-next-preview-r5.md) says the preview is ready for your review and not yet ready to go live. Before go-live: your price and contact decisions, a hint on the wide tables that more columns are to the right, a shorter compare page on a phone, and Framer's terms still to read. The list is in the [last round's report](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/team/rounds/5.md).
+- The earlier buyer and security reviews (board/reviews/ and board/security/ in the repository) still apply to the website pages; their fixes are in.
+- The Sovereign Website's wording and price agree with what its own team gave us: "Built by agents, owned by you.", its own launch offer, and no claim that anything has been sold or that the hosted service runs. Its address, sovereignwebsite.ai, is marked "opening soon" because its https certificate is not issued yet.
 
 ## Your decisions
 
 1. **Go live?** Which design becomes the home page, and when. Until you say, the current home page and the current price stay.
-2. **Prices.** The preview shows the [£50 launch price](https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/next/offer.json) (€50 on European pages, launch price), with the usual and the earlier launch price struck through, and the two bigger offers at their first proposal prices. Confirm, and the team changes data/offer.json, which sets the live price.
-3. **The network rung** (£20,000, first proposal) is still in older pages and data/cells.json. You did not mention it last night, so the preview leaves it out. Keep it, or retire it?
-4. **Languages.** The preview is in English only. The ten live languages are unchanged. Italian, Dutch and Polish were not started. Translate the preview once you choose a design?
-5. **Contact address.** The preview carries no email address. Every "ask for a site" goes to /next/start/, which points to the live site's contact. Which address goes live?
-6. **Hosting wording.** GitHub Pages is free only for a public repository, and GitHub's terms rule out running an online business on its free hosting. Should owners default to a public repository on GitHub Pages, or to another host so the repository can be private?
-7. **The hand-over.** Every page says the site is yours within three months at the latest, as an expectation we set ourselves, not yet a rule in the terms. Should it become a rule?
-8. **Prices in pounds.** Should someone in the UK read the competitors' prices in pounds before this goes live?
-9. **Names and consent.** Only three people are named on the preview, each with consent recorded. Five more example sites are held back because no consent is recorded: confirm any of them?
-10. **Agent names.** The team's commit check does not accept a dot before the @ in agent names, so commits carry a hyphen form of each role's name. Keep the hyphen, or change the check to allow the dot?
+2. **The four sizes** at their first proposal prices (one agent, a few sessions, a team, a network): confirm, and whether the network size or "ask us" is the right label for the event-sized team.
+3. **The website on the ladder.** The live site puts "one agent or a website" on the first size; the preview shows the website at its own launch offer on sovereignwebsite.ai. Which do you want?
+4. **The team inside.** Your article calls the six or seven agents in the site's repository the next step; the preview says today's sites carry instructions and a policy for one agent, the owner's own Claude. Right?
+5. **Names.** Should anyone besides you be named in the PrompTugal.news case study, or in our team's work?
+6. **The family bar.** The Sovereign Website team added a bar linking the family of sites (sovereignwebsite.ai, agenticcells.ai, riskmandate.ai, the newsroom and others). Add the same bar here?
+7. **Contact address.** The preview carries no email address; asks go to /next/start/, which points to the live site's contact.
+8. **Languages.** The preview is in English only; the ten live languages are unchanged.
+9. **Still open from the morning:** the hand-over as a rule, GitHub Pages or another host by default, prices in pounds for the competitors, consent for five held-back example sites, and a hyphen or a dot in agent names.
 
 The full hand-over is team/HANDOVER.md in the repository.
