@@ -7,6 +7,7 @@
 import { readFileSync, existsSync, openSync, readSync, closeSync } from 'node:fs';
 import { join } from 'node:path';
 import * as P from '../next/parts.mjs';
+import * as C from '../next/cells.mjs';
 import * as d1 from '../next/d1.mjs';
 import * as d2 from '../next/d2.mjs';
 import * as d3 from '../next/d3.mjs';
@@ -18,6 +19,11 @@ const HOMES = [d1, d2, d3, d4, d5];
 // The explain pages. Title and description come from next/pages/<slug>.md front matter; these are only the labels
 // used while the page is not written yet, with the data-driven blocks that page is for.
 export const EXPLAIN = [
+  ['cells', 'Agentic cells', ['{{figure:cell}}', '{{cells}}']],
+  ['case-studies', 'Case studies', ['{{case_studies}}']],
+  ['agentic-web', 'The agentic web', []],
+  ['sovereign-website', 'The sovereign website', ['{{offer}}']],
+  ['team-work', 'Team work', ['{{proof}}']],
   ['what-you-get', 'What you get', ['{{deliverables}}']],
   ['how-it-works', 'How it works', ['{{figure:how-it-works}}']],
   ['sovereignty', 'Sovereignty', []],
@@ -89,9 +95,9 @@ ${img}
   }).join('\n');
   const idea = P.oneIdea(data.copy);
   return `<section class="hero chooser-hero"><div class="in">
-<h1>Five designs for the sovereign website</h1>
+<h1>Five designs for agenticcells.ai</h1>
 ${idea ? `<p class="kicker">${P.inline(idea)}</p>` : P.tbw('the one idea (next/copy.json one_idea)')}
-<p>The same words and the same data in five styles. Pick one to see its home page; the explain pages below are shared by all five.</p>
+<p>Agentic cells, with the sovereign website as the smallest cell: the same words and the same data in five styles. Pick one to see its home page; the explain pages below are shared by all five.</p>
 </div></section>
 <section class="sec" aria-labelledby="h-designs"><h2 id="h-designs">The five designs</h2>
 <ol class="picks picks-large">
@@ -107,7 +113,7 @@ ${EXPLAIN.map(([s, t]) => {
 <p class="more"><a href="/next/review/">Morning review</a>: what was made overnight and what is waiting for a decision.</p>
 </section>
 <section class="sec" aria-labelledby="h-offer"><h2 id="h-offer">The offer</h2>
-${P.offerCard(data, { compact: true })}
+${C.cellList(data).length ? C.miniLadder({ data, root }, { cls: 'ml chooser-ml' }) : P.offerCard(data, { compact: true })}
 </section>`;
 }
 
@@ -149,16 +155,21 @@ function explainPage({ root, data, figs }, slug, label, defaults) {
     'table:compare': () => P.compareTable(data, { note: !/not converted/i.test(body) }),
     'table:features': () => P.featuresTable(data),
     'table:glance': () => P.glanceTable(data),
-    'table:pricing': () => P.pricingLadder(data),
+    'table:pricing': () => (C.cellList(data).length ? C.pricingCells({ data, figs, root }) : P.pricingLadder(data)),
     examples: () => P.examples(data, root),
-    offer: () => P.offerBlock(data),
+    // The four-rung ladder is the offer (Dinis, ~17:55 UTC); the £50 launch offer is the sovereign website's own.
+    offer: () => (slug !== 'sovereign-website' && C.cellList(data).length ? C.pricingCells({ data, figs, root }) : P.offerBlock(data)),
     deliverables: () => once('deliverables', () => P.deliverables(data, figs)),
     faq: () => P.faq(data),
     contact: () => `<p class="cta"><a class="btn" href="${P.ASK}">Ask for your site</a></p>`,
+    cells: () => C.ladderList({ data, figs, root }),
+    proof: () => C.proofGrid(),
+    case_studies: () => C.caseList({ data, figs, root }),
+    'case-studies': () => C.caseList({ data, figs, root }),
   };
   let html = src ? P.markdown(body, tokens) : `${P.tbw(`the words of this page (next/pages/${slug}.md)`)}\n${P.markdown(defaults.join('\n\n'), tokens)}`;
   // /next/pricing/: the euro note, after the offer block (else before the ladder, else at the end).
-  if (slug === 'pricing') {
+  if (slug === 'pricing' && !C.cellList(data).length) {
     const note = P.euroNote(data);
     const at = html.indexOf('</section>', html.indexOf('class="offer-block"'));
     if (note && html.includes('class="offer-block"') && at > 0) html = html.slice(0, at + 10) + '\n' + note + html.slice(at + 10);
@@ -171,9 +182,17 @@ function explainPage({ root, data, figs }, slug, label, defaults) {
     const to = ids.find((x) => /^how-to-ask/.test(x)) || ids.find((x) => /^ask/.test(x));
     if (to) html = html.split(`href="${P.ASK}"`).join(`href="#${to}"`);
   }
+  // /next/sovereign-website/: the explain pages about the website itself are listed at its foot (round R1: the top nav
+  // holds the cells; these pages stay in the footer and here).
+  if (slug === 'sovereign-website') {
+    html += `\n<nav class="saw-pages" aria-labelledby="saw-pages-h"><h2 id="saw-pages-h">More about the sovereign website</h2>\n<ul class="explain-row">\n${C.SAW_PAGES.map(([s2, t]) => {
+      const m = pageMeta(root, s2);
+      return `<li><a href="/next/${s2}/">${P.esc(m.title || t)}</a>${m.description ? `<span class="explain-line">${P.esc(firstSentence(m.description))}</span>` : ''}</li>`;
+    }).join('\n')}\n</ul></nav>`;
+  }
   const title = meta.title || label;
   if (!/<h1[\s>]/.test(html)) html = `<h1>${P.esc(title)}</h1>\n${html}`;
-  const description = meta.description || `${label}, in the preview of the sovereign website: to be written.`;
+  const description = meta.description || `${label}, in the preview of agenticcells.ai: to be written.`;
   return { path: `next/${slug}/index.html`, content: P.shell({ path: `/next/${slug}/`, title, description, body: `<article class="page page-${slug}"><div class="in">\n${html}\n</div></article>`, bodyClass: `explain x-${slug}` }) };
 }
 
@@ -185,15 +204,15 @@ export async function render({ root }) {
   const files = [];
   const idea = P.oneIdea(data.copy);
   files.push({ path: 'next/index.html', content: P.shell({
-    path: '/next/', title: 'Five designs for the sovereign website',
-    description: 'Preview for review: five designs of the AgentiCCells home page for the sovereign website, with the pages that explain it.',
+    path: '/next/', title: 'Five designs for agenticcells.ai',
+    description: 'Preview for review: five designs of the AgentiCCells home page about agentic cells, with the pages that explain them.',
     body: chooser(data, root), bodyClass: 'chooser',
   }) });
   HOMES.forEach((mod, i) => {
     const n = i + 1;
     files.push({ path: `next/d/${n}/index.html`, content: P.shell({
       path: `/next/d/${n}/`, title: `${mod.name}: design ${['one', 'two', 'three', 'four', 'five'][i]}`,
-      description: idea ? String(idea) : `The ${mod.name} design of the AgentiCCells home page, in the preview of the sovereign website.`,
+      description: idea ? String(idea) : `The ${mod.name} design of the AgentiCCells home page about agentic cells, in the preview.`,
       css: mod.css, body: mod.home(h), bodyClass: `home d${n}`,
     }) });
   });

@@ -36,3 +36,20 @@
 /* Round 5 (developer): in the full-width (even) sections the lead under a hidden figure heading kept base.css's
    left margin of 0 and sat at the window's edge; centre it in the column like the rest. */
 .home.d2 .d2-body .sec:nth-child(even) > h2 + p { margin-left: auto; margin-right: auto; max-width: calc(var(--max) - 2 * var(--gutter)); }
+
+/* Round R1 (designer): agentic cells. Bright cards for the case studies and the ladder; the sovereign website's sites
+   on the dark band (d2-sites). */
+.d2-hero .ml { border: 2px solid #c2410c; box-shadow: none; }
+.d2-hero .ml-list li:first-child .ml-p strong { color: #c2410c; }
+.d2-body .cs { border: 1px solid #fed7aa; border-top: 5px solid #c2410c; border-radius: 16px; }
+.d2-body .cs:nth-child(2) { border-top-color: #0e7490; }
+.d2-body .cl-rung { border-radius: 16px; border-color: #fed7aa; }
+.d2-body .cl-rung:first-child { border: 2px solid #c2410c; background: #fff7ec; }
+.d2-body .cl-size { color: #9a3412; }
+.d2-sites .cx-words { max-width: 52rem; margin-left: 0; }
+.d2-sites .pts li { color: #e6ecf0; }
+.d2-sites a { color: #fdba74; }
+.d2-sites .btn { color: #ffffff; }
+.d2-body .aweb { border-left-color: #c2410c; background: #fff7ec; }
+.d2 .d2-promises .promises { margin-top: 0; }
+@media (min-width: 60rem) { .d2-sites .cx-words { margin-left: auto; } }

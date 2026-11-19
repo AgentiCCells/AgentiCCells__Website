@@ -69,3 +69,30 @@
 .d4-rest .final a { color: var(--accent-fg); }
 .d4 .nx-foot { background: #000000; border-top: 1px solid var(--line); }
 .d4 .preview-band a { color: #4a3600; }
+
+/* Round R1 (designer): big statements about cells. The numbered statements are the properties; the counter's total
+   is written by the page in data-n on each heading, so it is right whatever the count. */
+.d4-says .d4-say h2::before { content: attr(data-n); }
+.d4-big .sec { max-width: var(--max); padding-top: 4rem; padding-bottom: 4rem; }
+.d4-big .sec + .sec { border-color: var(--line); }
+.d4-big h2 { font-size: clamp(2.2rem, 6vw, 4.6rem); max-width: 18ch; }
+.d4-big .cx-words > p, .d4-big .sec > p { font-size: clamp(1.05rem, 1.6vw, 1.3rem); max-width: 46rem; }
+.d4-big .pts { font-size: 1.05rem; max-width: 46rem; }
+.d4-big .cl-rung, .d4-big .cs { background: var(--soft); border-color: var(--line); border-radius: 0; }
+.d4-big .cl-rung:first-child { border: 2px solid var(--accent); }
+.d4-big .cl-name, .d4-big .cs-body h3 { font-size: 1.5rem; letter-spacing: -.02em; }
+.d4-big .cl-size { color: var(--accent); }
+.d4-big .cl-what, .d4-big .cs-body > p { color: var(--muted); }
+.d4-big .cs-offer { background: var(--accent-soft); }
+.d4-big .px-shot { border-radius: 0; border-color: var(--line); }
+.d4-big .px-cap a, .d4-big .kx-cap a { color: var(--fg); }
+.d4 .aweb { background: var(--soft); border-left-color: var(--accent); border-radius: 0; }
+.d4 .btn.ghost { color: var(--fg); }
+.d4 .plan-tag { color: var(--accent); }
+.d4-says { border-top: 1px solid var(--line); }
+.d4-says-h { max-width: calc(var(--max) - 2 * var(--gutter)); margin: 0 auto; padding: 3rem var(--gutter) 0; font-size: clamp(1rem, 1.4vw, 1.1rem); font-family: ui-monospace, Menlo, Consolas, monospace; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.d4-says .d4-say { min-height: 70vh; }
+.d4-says .d4-say:last-child { border-bottom: 0; }
+.d4-price .fp-name { font-weight: 700; font-size: 1.1rem; color: var(--fg); }
+.d4-price .cp-w { color: var(--accent); font-weight: 700; }
+.d4-price strong { font-size: clamp(2.8rem, 5vw, 4rem); }

@@ -6,7 +6,7 @@
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { esc, inline, get, section, figure, OFFER_URL, longDate, gbp, safeHref } from './parts.mjs';
-import { exLabel, offerTitle } from './labels.mjs';
+import { exLabel, offerTitle, websiteTitle } from './labels.mjs';
 
 // ---------- examples (next/examples.json) ----------
 export function exampleList(data) {
@@ -91,7 +91,7 @@ ${rows.map((r) => `<li style="--w:${Math.max(6, Math.round((r.threeN.n / max) * 
 </ol>
 <p class="kb-note">Three years of one entry plan each, calculated from the platforms' own price pages, read ${esc(read)}, in US dollars as published and not converted.</p>`;
 }
-// A small table: price, three years and "can you leave?" for three platforms and our offer (labelled copy.offer_title).
+// A small table: price, three years and "can you leave?" for three platforms and the website (labelled copy.website_title).
 export function compareTeaser(data, { ids = ['wix', 'squarespace', 'wordpress-com'], cls = 'kt' } = {}) {
   const rows = ids.map((id) => platform(data, id)).filter(Boolean);
   const o = data.offer || {};
@@ -100,7 +100,7 @@ export function compareTeaser(data, { ids = ['wix', 'squarespace', 'wordpress-co
 <caption class="vh">Rent or own: our launch price against three platforms' own pages</caption>
 <thead><tr><th scope="col"></th><th scope="col">A month</th><th scope="col">Three years</th><th scope="col">Can you leave with the site?</th></tr></thead>
 <tbody>
-<tr class="kt-us"><th scope="row">${esc(offerTitle(data.copy))}</th><td data-l="A month">Nothing to us</td><td data-l="Three years"><strong><a href="${OFFER_URL}">£${esc(o.launch_gbp)}</a></strong> once, launch price</td><td data-l="Can you leave">Yes: the files are yours, copy them to any host</td></tr>
+<tr class="kt-us"><th scope="row">${esc(websiteTitle(data.copy))}</th><td data-l="A month">Nothing to us</td><td data-l="Three years"><strong><a href="${OFFER_URL}">£${esc(o.launch_gbp)}</a></strong> once, launch price</td><td data-l="Can you leave">Yes: the files are yours, copy them to any host</td></tr>
 ${rows.map((p) => `<tr><th scope="row">${esc(p.name)}</th>${cell(p.month, p.monthN, 'A month')}${cell(p.three, p.threeN, 'Three years')}${cell(p.leave, null, 'Can you leave')}</tr>`).join('\n')}
 </tbody></table></div>`;
 }

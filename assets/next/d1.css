@@ -33,3 +33,30 @@
 .d1-ex { grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: 1.4rem; }
 .d1-body .fig .nfig { margin: 0 auto; }
 .d1-body .with-fig .fig { background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 1.2rem; }
+
+/* Round R1 (designer): agentic cells. The compact ladder is the paper card of the first screen; the case studies and
+   the sovereign website's sites in paper frames; the cells at work as plates. */
+.d1-hero .ml { background: #f6efe0; color: #1a1408; border: 0; box-shadow: 0 12px 40px rgba(0,0,0,.35); }
+.d1-hero .ml-h { color: #6b5a33; }
+.d1-hero .ml-list li { border-color: #e0d2b0; }
+.d1-hero .ml-p strong a { color: #6b4500; }
+.d1-hero .ml-p .cp-w { color: #5a4a2a; }
+.d1-hero .ml-name { font-family: var(--head); font-size: 1.05rem; }
+.d1-body .cs { border: 8px solid #fffdf8; outline: 1px solid #d8c9a6; border-radius: 2px; box-shadow: 0 14px 34px rgba(16, 32, 43, .18); }
+.d1-body .cs-body h3, .d1-body .cl-name { font-family: var(--head); }
+.d1-body .cs-offer { background: #f6efe0; }
+.d1-body .cl-rung { background: #fff; border-color: #eadfc8; border-radius: 2px; }
+.d1-body .cl-rung:first-child { border: 2px solid #10202b; }
+.d1-body .cl-size { color: #8a5a00; }
+.d1-body .px-shot { border: 6px solid #fffdf8; outline: 1px solid #d8c9a6; border-radius: 2px; }
+.d1-body .aweb { background: #faf6ee; border-left-color: #c9a24a; }
+.d1-saw { max-width: none; background: #10202b; color: #f3ead6; }
+.d1-saw > * { max-width: calc(var(--max) - 2 * var(--gutter)); margin-left: auto; margin-right: auto; }
+.d1-saw h2 { color: #ffffff; }
+.d1-saw a { color: #e9d8a6; }
+.d1-saw .btn { background: #e9d8a6; color: #10202b; }
+.d1-saw .d1-deeds { margin-top: 1.4rem; }
+.d1-saw .kx-cap, .d1-saw .kx-cap span { color: #d9e0e3; }
+.d1-saw .kx-cap a { color: #ffffff; }
+.d1-body .d1-saw + .sec { border-top: 0; }
+.d1 .plan-tag { color: #8a5a00; }

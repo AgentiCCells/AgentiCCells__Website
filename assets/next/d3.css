@@ -79,3 +79,30 @@
   .d3-ledger { display: flex; flex-direction: column-reverse; }
   .d3-own { border-top: 0; border-bottom: 1px solid var(--fg); }
 }
+
+/* Round R1 (designer): the first screen is a statement: the lead on the left, the cells by size and price on the right. */
+.d3-first { margin-top: 0; }
+@media (min-width: 56rem) { .d3-first { grid-template-columns: 1.25fr 1fr; } }
+.d3-say { background-color: rgba(255, 255, 255, .9); }
+.d3-say .d3-col-h { color: var(--muted); }
+.d3-say h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin: .2rem 0 .5rem; line-height: 1.02; }
+.d3-say p { max-width: 40rem; }
+.d3-say .kicker { color: var(--fg); font-weight: 700; }
+.d3-ml { background: transparent; border: 0; box-shadow: none; padding: 0; border-radius: 0; }
+.d3-ml .ml-h { font-family: var(--mono); color: var(--accent); letter-spacing: .12em; font-size: .85rem; padding-bottom: .4rem; border-bottom: 2px solid var(--accent); }
+.d3-ml .ml-list li { border-top: 1px dashed var(--fg); padding: .55rem 0; }
+.d3-ml .ml-list li:first-child { border-top: 0; }
+.d3-ml .ml-p { font-family: var(--mono); }
+.d3-ml .ml-p strong { color: var(--accent); }
+.d3-ml .ml-list li:first-child .ml-p strong { font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.03em; }
+.d3-ml .cta { margin-top: .8rem; }
+.d3-own { justify-content: flex-start; }
+.d3-body .cs, .d3-body .cl-rung { border-radius: 0; border-color: var(--fg); background: #ffffff; }
+.d3-body .cl-rung:first-child { border-width: 2px; border-color: var(--accent); }
+.d3-body .cl-price, .d3-body .cs-offer { font-family: var(--mono); }
+.d3-body .cl-size { color: var(--accent); font-family: var(--mono); font-size: .82rem; }
+.d3-body .px-shot, .d3-body .cs-img img { border-radius: 0; }
+.d3-rent { margin-top: 1.4rem; padding: 1rem 1.1rem; border: 1px solid var(--fg); background-color: rgba(254, 242, 242, .85); }
+.d3-rent .d3-col-h { color: var(--rent); }
+.d3-body .aweb { border-radius: 0; border-left-color: var(--fg); }
+@media (max-width: 40rem) { .d3-first { flex-direction: column; } .d3-own { border-top: 1px solid var(--fg); border-bottom: 0; } }

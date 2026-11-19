@@ -3,7 +3,7 @@
 // and, as a separate optional series on the same axis, the owner's own Claude Pro plan if they edit the site themselves.
 // Data: competitors.competitors[].facts.price_per_month (or another price row; value such as "USD 17 a month, billed yearly,
 // plan Light", source_url, date_read), facts.currency_note (optional), competitors.website_cell.facts.optional_editing_cost
-// (or any website_cell fact whose value names "Claude Pro: USD .. a month"), offer.launch_gbp, copy.offer_title.
+// (or any website_cell fact whose value names "Claude Pro: USD .. a month"), offer.launch_gbp, copy.website_title.
 // Rules: never a guess and never a converted number. Each currency gets its own panel and its own axis, labelled
 // "as published, not converted". A competitor with no parseable price is a hatched "not yet confirmed" bar.
 // Our launch price is in GBP, so it is a note beside the chart, never a bar on another currency's axis.
@@ -104,7 +104,7 @@ export default function (data = {}) {
   const readDates = [...new Set(rows.map((r) => r.read).filter(Boolean))];
   const readOn = readDates.length === 1 ? readDates[0] : DEFAULT_READ;
   const label = `Calculated from their published prices, read ${readOn}. One plan each, before tax, if the price stays the same.`;
-  const ours = String(get(copy, 'offer_title', 'Your own website'));
+  const ours = String(get(copy, 'website_title', get(copy, 'offer_title', 'The Sovereign Agentic Website')));
   const launchLine = lp ? `£${money(lp.gbp)} once, launch price` : `Launch price ${TBC}`;
   const optName = cp ? `Optional: if you edit it yourself with ${cp.plan}` : '';
   const optPrice = cp ? `${cp.shown} (Anthropic's own price)` : '';

@@ -1,4 +1,4 @@
-// Figure: can you leave? Wix, Squarespace and Fliplet in their own words, against your own website (copy.offer_title).
+// Figure: can you leave? Wix, Squarespace and Fliplet in their own words, against your own website (copy.website_title).
 // Data: competitors.competitors[] (id, name, kind, facts.can_you_leave or facts.export: value, quote, source_url, date_read),
 // competitors.website_cell.facts.can_you_leave (optional). Never invents a quote: a missing one says "to be confirmed".
 import { esc, get, fromCopy, para, text, rect, icon, svgOpen, wrapFigure, SIZE, host, longDate, TBC, DEFAULT_READ } from './_shared.mjs';
@@ -47,7 +47,7 @@ function linkedQuote(q, url) {
 export default function (data = {}) {
   const copy = data.copy || {};
   const title = fromCopy(copy, ID, 'title', 'Can you leave?');
-  const ours = String(get(copy, 'offer_title', 'Your own website'));
+  const ours = String(get(copy, 'website_title', get(copy, 'offer_title', 'The Sovereign Agentic Website')));
   const lead = fromCopy(copy, ID, 'lead', `Three platforms in their own words, and ${ours.charAt(0).toLowerCase()}${ours.slice(1)}.`);
   const rows = rowsFrom(data);
   const wc = get(data, 'competitors.website_cell.facts.can_you_leave', {}) || {};

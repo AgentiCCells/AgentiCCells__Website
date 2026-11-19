@@ -19,7 +19,7 @@ Dinis's words, 19 November 2026 ~03:35 UTC (board/briefs/2026-11-19-sovereign-pr
 
 ## 1. Sovereign (/next/d/1/)
 
-**For:** anyone. **The story:** ownership is the product.
+**For:** anyone. **The story:** a cell is yours: a small team of agents, set out like a deed, in ink and paper.
 
 - **Mood:** calm, settled, a little formal. A deed, not an advert. Deep ink and warm paper.
 - **Type:** serif headings (Georgia stack), sans body. Headline large and tight; a short italic kicker above it.
@@ -38,7 +38,7 @@ Dinis's words, 19 November 2026 ~03:35 UTC (board/briefs/2026-11-19-sovereign-pr
 
 ## 2. Six promises (/next/d/2/), the safest default
 
-**For:** first-time site owners and small businesses. **The story:** the pitch sentence is the whole offer, and each promise has a proof you can open.
+**For:** first-time buyers and small businesses. **The story:** six things every cell gives you, each with a proof you can open.
 
 - **Mood:** light, bright, confident, friendly. Numbered cards, lots of white.
 - **Type:** sans throughout, headings weight 800 with slight negative letter-spacing; numbers in the cards large and tabular.
@@ -58,7 +58,7 @@ Dinis's words, 19 November 2026 ~03:35 UTC (board/briefs/2026-11-19-sovereign-pr
 
 ## 3. Stop renting your website (/next/d/3/)
 
-**For:** people paying a platform every month. **The story:** a ledger: paying every month forever against paying once and keeping it.
+**For:** people paying a platform every month. **The story:** a ledger: the cells we sell by size and price, against renting software by the month.
 
 - **Mood:** an account statement. Ruled lines, columns, figures that add up. Honest arithmetic, not alarm.
 - **Type:** sans headings weight 800, condensed feel through tight tracking; numbers and the ledger in the mono stack with tabular figures.
@@ -78,7 +78,7 @@ Dinis's words, 19 November 2026 ~03:35 UTC (board/briefs/2026-11-19-sovereign-pr
 
 ## 4. Just say it (/next/d/4/)
 
-**For:** people who want the offer in plain words. **The story:** big plain statements, one short sentence at a time, one figure per screen.
+**For:** people who want the offer in plain words. **The story:** big plain statements about cells, one per screen: you say it, your team does it.
 
 Round 2 change (conductor's brief to the designer, 19 November 2026: "plain, bold, typographic, very short sections, big statements, one figure per screen"). The earlier chat-panel direction is dropped.
 
@@ -100,7 +100,7 @@ Round 2 change (conductor's brief to the designer, 19 November 2026: "plain, bol
 
 ## 5. Proof, a wall of real sites (/next/d/5/)
 
-**For:** people who believe what they can see. **The story:** look at the sites first; the promises come after.
+**For:** people who believe what they can see. **The story:** a wall of live sites and cells at work first; the words come after.
 
 - **Mood:** a gallery. Neutral walls, the work in colour, little decoration.
 - **Type:** sans throughout, headings tight (Helvetica Neue first in the stack); captions small and plain.
@@ -123,3 +123,16 @@ Round 2 change (conductor's brief to the designer, 19 November 2026: "plain, bol
 All five are built (designer, round 2). Shared helpers for the designs are in build/next/design-kit.mjs: example tiles labelled by kind ("Made for <name>" only where consent to be named is recorded, "Demo", "Our own"), platform bars, a compare teaser, a large price line. Design 5 ends its wall with a tile that says "Then ask for yours." with the price and the button.
 
 Round 1 note: The developer builds designs 1 and 2 from this now (their sheets already follow these directions). The designer builds 3, 4 and 5 in round 2, replacing the stubs in assets/next/d3.css, d4.css and d5.css.
+
+## Round R1: agentic cells (19 November 2026)
+
+Dinis's words, relayed at 17:33 UTC and his own at about 17:55 UTC, are in board/briefs/2026-11-19-refactor-agentic-cells.md. agenticcells.ai is now about agentic cells: small teams of AI agents, each with a role, a brief and a behaviour policy, working in one session in the customer's own accounts. The offer is the four-rung ladder of data/cells.json, each price a first proposal. The two main case studies are PrompTugal.news and the Sovereign Agentic Website; the sovereign website's own launch price is shown only in its case study, linked to sovereignwebsite.ai. This is a proposal for review, not a decision.
+
+- **What changed for all five.** The first screen shows the lead and the ladder: a compact four-rung list (designs one to three) or the entry price, "first proposal", set large (designs four and five). Then, in order: the case studies, what a cell is (with the cell figure), the cells we sell (the ladder figure and cards), the sovereign website as the example, a bigger cell at work (our own team's pages from Web Summit), what every cell has, the devices (marked as a plan), the team, examples, questions and a final call to action. The sections are built in build/next/cells.mjs; each design dresses them in its own sheet.
+- **The first-screen rule is reversed.** Round 1 kept "cell" off the first screen; the refactor makes the cell the subject, so it is there now.
+- **1. Sovereign:** the compact ladder is the paper card of the ink hero; the case studies sit in paper frames; the sovereign website is an ink band with the named owners' sites as deeds.
+- **2. Six promises:** the six properties of a cell are the numbered cards under the first screen, as the promises were (the headline says "six things every cell gives you"); the sovereign website's sites in browser frames on the dark band.
+- **3. Stop renting your website:** the first screen is a statement in two columns: the lead, and the cells by size and price in mono figures. The platforms' three-year prices now sit with the sovereign website, as its argument against renting.
+- **4. Just say it:** each section is a big statement; what every cell has is six numbered screens, the count written by the page.
+- **5. Proof:** the wall mixes the live sites with screenshots of our own team's work at Web Summit, labelled "Cells at work", the team's working site first and large.
+- **New figures:** next/figures/cell.mjs (one session, a conductor and six agents, the owner outside; a laptop or a cloud session today, a Raspberry Pi and an Android tablet planned) and next/figures/ladder.mjs (the cells we sell as a staircase, prices from the data files).

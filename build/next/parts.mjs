@@ -8,26 +8,26 @@
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { exLabel, offerTitle } from './labels.mjs';
+import { exLabel, offerTitle, websiteTitle } from './labels.mjs';
 
-export { offerTitle };
+export { offerTitle, websiteTitle };
 
 export const OFFER_URL = 'https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/next/offer.json';
 export const ASK = '/next/start/';
-export const FIGURE_IDS = ['tenets', 'rent-or-own', 'can-you-leave', 'brief-to-claude', 'team', 'year-of-platform', 'deliverables', 'how-it-works'];
+export const FIGURE_IDS = ['cell', 'ladder', 'tenets', 'rent-or-own', 'can-you-leave', 'brief-to-claude', 'team', 'year-of-platform', 'deliverables', 'how-it-works'];
 
 export const DESIGNS = [
-  { n: 1, slug: 'sovereign', name: 'Sovereign', blurb: 'Deep ink and a serif voice: the one idea first, the price beside it.' },
-  { n: 2, slug: 'six-promises', name: 'Six promises', blurb: 'Light and bright: the six promises are the first thing you see.' },
-  { n: 3, slug: 'stop-renting', name: 'Stop renting your website', blurb: 'Rent against own, side by side, from the first screen.' },
-  { n: 4, slug: 'just-say-it', name: 'Just say it', blurb: 'Big plain words, one short sentence at a time.' },
-  { n: 5, slug: 'proof', name: 'Proof', blurb: 'A wall of real sites, each one labelled.' },
+  { n: 1, slug: 'sovereign', name: 'Sovereign', blurb: 'Deep ink and a serif voice: a cell is yours, set out like a deed.' },
+  { n: 2, slug: 'six-promises', name: 'Six promises', blurb: 'Light and bright: what every cell gives you, in numbered cards.' },
+  { n: 3, slug: 'stop-renting', name: 'Stop renting your website', blurb: 'A ledger: the cells by size and price, the website as the first line.' },
+  { n: 4, slug: 'just-say-it', name: 'Just say it', blurb: 'Big plain words: one statement about cells per screen.' },
+  { n: 5, slug: 'proof', name: 'Proof', blurb: 'A wall of live sites and cells at work, then the words.' },
 ];
 
 export const NAV = [
-  ['Designs', '/next/'], ['What you get', '/next/what-you-get/'], ['How it works', '/next/how-it-works/'],
-  ['Sovereignty', '/next/sovereignty/'], ['Pricing', '/next/pricing/'], ['Compare', '/next/compare/'],
-  ['Examples', '/next/examples/'], ['FAQ', '/next/faq/'], ['Start', '/next/start/'], ['Review', '/next/review/'],
+  ['Designs', '/next/'], ['Cells', '/next/cells/'], ['Case studies', '/next/case-studies/'], ['Agentic web', '/next/agentic-web/'], ['Sovereign website', '/next/sovereign-website/'],
+  ['Team work', '/next/team-work/'], ['Pricing', '/next/pricing/'], ['Examples', '/next/examples/'], ['FAQ', '/next/faq/'],
+  ['Start', '/next/start/'], ['Review', '/next/review/'],
 ];
 
 export const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -60,6 +60,8 @@ export function loadData(root) {
     competitors: json(root, 'data/next/competitors.json'),
     copy: json(root, 'next/copy.json'),
     examples: json(root, 'next/examples.json'),
+    // The four-rung ladder (Dinis, 2026-11-19 ~17:55 UTC: £500, £1,500, £5,000, £20,000, each a first proposal).
+    cells: json(root, 'data/cells.json'),
   };
   return DATA;
 }
@@ -149,7 +151,7 @@ export function markdown(body, tokens) {
       continue;
     }
     if ((m = t.match(/^```\s*([^`]*)$/))) { flush(); fence = { label: m[1].trim(), lines: [] }; continue; }
-    if ((m = t.match(/^\{\{([a-z]+(?::[a-z0-9-]+)?)\}\}$/i))) {
+    if ((m = t.match(/^\{\{([a-z][a-z_-]*(?::[a-z0-9-]+)?)\}\}$/i))) {
       flush();
       const name = m[1].toLowerCase();
       const fn = tokens[name] || (name.startsWith('figure:') ? () => tokens.figure(name.slice(7)) : null);
@@ -220,11 +222,15 @@ export function biggerOffers(data) {
   return `${typeof intro === 'string' ? `<p>${inline(intro)}</p>\n` : ''}<ul class="bigger">\n${b.map((x) => `<li><strong>${esc(x.name)}</strong>: ${inline(x.line)}</li>`).join('\n')}\n</ul>`;
 }
 // Where a call to action goes, by its key in copy.cta. Every way to ask goes to /next/start/ (no address in the preview).
-const CTA_HREF = { interview: ASK, ask: ASK, free_evaluation: ASK, pricing: '/next/pricing/', what_you_get: '/next/what-you-get/', how_it_works: '/next/how-it-works/', compare: '/next/compare/', examples: '/next/examples/', partners: '/next/partners/', faq: '/next/faq/', choose_design: '/next/' };
+const CTA_HREF = { ladder: '/next/pricing/', ask_cell: ASK, cells: '/next/cells/', case_studies: '/next/case-studies/', sovereign_website: '/next/sovereign-website/', team_work: '/next/team-work/', interview: ASK, ask: ASK, free_evaluation: ASK, pricing: '/next/pricing/', what_you_get: '/next/what-you-get/', how_it_works: '/next/how-it-works/', compare: '/next/compare/', examples: '/next/examples/', partners: '/next/partners/', faq: '/next/faq/', choose_design: '/next/' };
 export function ctaHref(copy, label) {
   const c = get(copy, 'cta') || {};
   const key = Object.keys(c).find((k) => c[k] === label);
   if (key && CTA_HREF[key]) return CTA_HREF[key];
+  if (/case stud/i.test(label)) return '/next/case-studies/';
+  if (/what a cell|cells? (?:is|work|run)/i.test(label)) return '/next/cells/';
+  if (/sovereign website/i.test(label)) return '/next/sovereign-website/';
+  if (/team'?s work|team work/i.test(label)) return '/next/team-work/';
   if (/promise/i.test(label)) return '#promises';
   if (/compare/i.test(label)) return '/next/compare/';
   if (/example/i.test(label)) return '/next/examples/';
@@ -240,7 +246,7 @@ export function cta(copy, { primary, secondary, noSecondary = false } = {}) {
 }
 export function offerCard(data, { compact = false, title, primary, secondary } = {}) {
   const o = data.offer;
-  title = title || offerTitle(data.copy);
+  title = title || websiteTitle(data.copy);
   return `<aside class="offer${compact ? ' compact' : ''}" aria-label="Price">
 <p class="offer-label">${esc(title)}</p>
 ${priceLine(o)}
@@ -265,7 +271,7 @@ export function pricingLadder(data) {
   const big = bigger(data);
   return `<div class="ladder">
 <div class="rung main">
-<h3>${esc(offerTitle(data.copy))}</h3>
+<h3>${esc(websiteTitle(data.copy))}</h3>
 ${priceLine(o)}
 ${euroLine(o)}
 ${honestNotes(data)}
@@ -371,7 +377,7 @@ export function compareTable(data, { note = true } = {}) {
     ['First year', ['first_year_cost', 'first_year', 'year_one', 'price_first_year'], ours],
     ['Three years', ['three_year_cost', 'three_years', 'three_year', 'price_three_years'], ours + claudeNote(data)],
   ].map(([label, keys, us]) => ({ label, cells: [us, ...comps.map((c) => factInner(c, keys, date))] }));
-  const cols = [{ name: offerTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
+  const cols = [{ name: websiteTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
   return `${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
 ${note && comps.length ? currencyNote(data) : ''}
 ${tableAndCards('compare', `What a site costs: our launch price against their published prices, read ${date}`, cols, rows)}
@@ -414,7 +420,7 @@ export function glanceTable(data) {
   const us = get(data.competitors, 'website_cell');
   const date = longDate(readDate(data.competitors)) || '19 November 2026';
   const rows = GLANCE_ROWS.map(([label, keys]) => ({ label, cells: [glanceCell(us, keys, label === 'Three-year cost' ? claudeNote(data) : ''), ...comps.map((c) => glanceCell(c, keys))] }));
-  const cols = [{ name: offerTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
+  const cols = [{ name: websiteTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
   return `<section class="glance" aria-labelledby="at-a-glance">
 <h2 id="at-a-glance">At a glance</h2>
 ${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
@@ -437,7 +443,7 @@ export function featuresTable(data) {
   const comps = competitorList(data.competitors);
   const date = longDate(readDate(data.competitors)) || '19 November 2026';
   const rows = FEATURE_ROWS.map(([label, keys]) => ({ label, cells: [ourInner(data, keys), ...comps.map((c) => factInner(c, keys, date))] }));
-  const cols = [{ name: offerTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
+  const cols = [{ name: websiteTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
   return `${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
 ${tableAndCards('features', `From their own pages, read ${date}`, cols, rows)}`;
 }
@@ -596,10 +602,11 @@ const MARK = '<svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-
 export function shell({ path, title, description, css = [], body, bodyClass = '' }) {
   // The current page's item carries scroll-initial-target, so where the nav scrolls sideways (narrow screens) the browser
   // shows the current link on load without script. The order stays the same on every page.
-  const nav = NAV.map(([t, h]) => { const cur = h === path || (h === '/next/' && path.startsWith('/next/d/')); return `<li${cur ? ' style="scroll-initial-target: nearest"' : ''}><a href="${h}"${cur ? ' aria-current="page"' : ''}>${t}</a></li>`; }).join('');
+  const nav = NAV.map(([t, h]) => { const cur = h === path || (h === '/next/' && path.startsWith('/next/d/')); return `<li${cur ? ' class="cur"' : ''}><a href="${h}"${cur ? ' aria-current="page"' : ''}>${t}</a></li>`; }).join('');
   const navPaths = new Set(NAV.map(([, h]) => h));
-  // Every explain page, in the footer: the pages the top nav has no room for (No lock-in, Security, Partners) are here too.
-  const allPages = [['What you get', '/next/what-you-get/'], ['How it works', '/next/how-it-works/'], ['Sovereignty', '/next/sovereignty/'], ['No lock-in', '/next/no-lock-in/'], ['Security', '/next/security/'], ['Examples', '/next/examples/'], ['Partners', '/next/partners/'], ['Questions and answers', '/next/faq/'], ['Pricing', '/next/pricing/'], ['Compare', '/next/compare/'], ['Start: how to ask', '/next/start/'], ['Morning review', '/next/review/']]
+  // Every explain page, in the footer: the pages the top nav has no room for (What you get, How it works, Sovereignty,
+  // No lock-in, Security, Compare, Partners) are here too (round R1).
+  const allPages = [['Cells', '/next/cells/'], ['Case studies', '/next/case-studies/'], ['Agentic web', '/next/agentic-web/'], ['Sovereign website', '/next/sovereign-website/'], ['Team work', '/next/team-work/'], ['What you get', '/next/what-you-get/'], ['How it works', '/next/how-it-works/'], ['Sovereignty', '/next/sovereignty/'], ['No lock-in', '/next/no-lock-in/'], ['Security', '/next/security/'], ['Compare', '/next/compare/'], ['Partners', '/next/partners/'], ['Examples', '/next/examples/'], ['Questions and answers', '/next/faq/'], ['Pricing', '/next/pricing/'], ['Start: how to ask', '/next/start/'], ['Morning review', '/next/review/']]
     .map(([t, h]) => `<li><a href="${h}"${h === path ? ' aria-current="page"' : ''}>${t}</a></li>`).join('');
   const hasCode = body.includes('class="code-box"');
   return `<!doctype html>

@@ -1,7 +1,7 @@
 // Figure: what there is to attack. A platform site (server code, database, logins, plugins, admin panel, payment pages,
 // all reachable from the internet) against your static site (files only), then what is still yours to protect.
 // For /next/security/ ({{figure:attack-surface}}).
-// Data: copy.offer_title, copy.figures.attack-surface.{title, lead, platform, own, own_line, still, note} (all optional).
+// Data: copy.website_title, copy.figures.attack-surface.{title, lead, platform, own, own_line, still, note} (all optional).
 // Sources of the words: https://newsroom.sgit.ai/articles/the-pitch.html ("No server code, no database, no plugins, no cookies
 // unless you add them") and https://newsroom.sgit.ai/articles/static-against-the-platforms.html. No numbers: we claim none.
 // Owner: designer.agenticcells-ai@AgentiCCells.dinis. Licence: Apache-2.0 (code), CC BY 4.0 (words).
@@ -28,7 +28,7 @@ const STILL = [
 
 export default function (data = {}) {
   const copy = data.copy || {};
-  const ours = String(get(copy, 'offer_title', 'Your own website'));
+  const ours = String(get(copy, 'website_title', get(copy, 'offer_title', 'The Sovereign Agentic Website')));
   const title = fromCopy(copy, ID, 'title', 'What there is to attack');
   const lead = fromCopy(copy, ID, 'lead', 'A platform site runs software for every visitor. Your static site is files.');
   const platH = fromCopy(copy, ID, 'platform', 'A platform site');

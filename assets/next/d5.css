@@ -77,3 +77,19 @@
 .d5-next .btn { background: #ffffff; color: var(--accent); }
 @media (max-width: 47.99rem) { .d5-grid .d5-next { grid-column: 1 / -1; } }
 @media (min-width: 72rem) { .d5-grid .d5-next { grid-column: span 3; } }
+
+/* Round R1 (designer): the wall holds live sites and cells at work (our own team's pages), each labelled on the image. */
+.d5-grid .d5-work .kx-shot { box-shadow: 0 0 0 2px #0f2f3a, 0 6px 18px rgba(0, 0, 0, .06); }
+.d5-grid .d5-big.d5-work .kx-tag { font-size: .85rem; left: 12px; top: 12px; padding: .25rem .7rem; }
+.d5-legend .kx-tag.kx-work { position: static; box-shadow: none; }
+.d5-in .px-note { margin-top: .8rem; }
+.d5-price .fp-name { display: block; font-size: .9rem; color: var(--muted); font-weight: 600; }
+.d5-price strong { font-size: 2.6rem; }
+.d5-next .fp-name { color: #dbeafe; }
+.d5-next .cp-w { color: #ffffff; }
+.d5-next .kp strong a { color: #ffffff; }
+.d5-body .cs, .d5-body .cl-rung { border-radius: 6px; }
+.d5-body .cs-img img { aspect-ratio: 16 / 8; }
+.d5-props li { background: var(--soft); }
+.d5-sticky .cp strong { font-size: 1.5rem; }
+.d5-sticky .cp-w { font-size: .8rem; }

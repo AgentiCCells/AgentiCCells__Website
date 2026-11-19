@@ -1,58 +1,53 @@
-// /next/d/3/ Stop renting your website: a ledger. The first screen sets three years of the platforms' published
-// prices against one payment; then the chart, rent or own, can you leave and the compare teaser, before anything else.
-// Written by designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19 (round 2). Code under Apache-2.0.
-// Round 5 (developer): "Rent or own" and its short table are one section, under one heading (review R3 item 18).
-import { homeBlocks, lead, oneIdea, prose, inline, esc, cta, figure, get, sectionOf, section } from './parts.mjs';
-import { bigPrice, threeYearBars, compareTeaser, exGrid, whatYouGet, OWNERS } from './design-kit.mjs';
+// /next/d/3/ Stop renting your website: a ledger. Round R1: the first screen is a statement of the cells we sell, by
+// size and price (data/cells.json, first proposals), beside the lead; then the case studies, what a cell is, the ladder,
+// the sovereign website with three years of the platforms' published prices as its argument, the bigger cells at work,
+// what every cell gives you, the devices (a plan), the team, the sites as rows, and questions.
+// Written by designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19 (round 2, rebuilt in round R1). Code under Apache-2.0.
+import { homeBlocks, lead, oneIdea, prose, inline, esc, get, sectionOf } from './parts.mjs';
+import { threeYearBars, exGrid, OWNERS } from './design-kit.mjs';
+import { miniLadder, caseStudies, cellSection, cellsWeSell, sovereignExample, eventTeam, properties, devices } from './cells.mjs';
 
 export const name = 'Stop renting your website';
 export const css = ['/assets/next/d3.css'];
 export function home(h) {
-  const { data, figs, root } = h;
+  const { data, root } = h;
   const c = data.copy;
   const b = homeBlocks(h);
   const l = lead(c, 3);
   const idea = oneIdea(c) || '';
-  const sub = l.sub ? prose(l.sub) : '';
   const kicker = idea && !String(l.sub || '').includes(idea) ? `<p class="kicker">${inline(idea)}</p>` : '';
-  const pay = (get(c, 'rent_or_own') || []).find((r) => /pay/i.test(r.topic || '')) || {};
   const ex = sectionOf(c, 'examples') || {};
+  const pay = (get(c, 'rent_or_own') || []).find((r) => /pay/i.test(r.topic || '')) || {};
   return `<section class="d3-hero"><div class="in">
-<div class="d3-head">
+<div class="d3-ledger d3-first">
+<div class="d3-col d3-say">
+<p class="d3-col-h"><span>Statement</span></p>
 <h1>${l.headline ? inline(l.headline) : esc(name)}</h1>
-${kicker}${sub}
-</div>
-<div class="d3-ledger">
-<div class="d3-col d3-rent">
-<p class="d3-col-h"><span>Renting</span> <span class="d3-col-sub">${inline(pay.rent || '')}</span></p>
-${threeYearBars(data)}
+${kicker}${l.sub ? prose(l.sub) : ''}
 </div>
 <div class="d3-col d3-own">
-<p class="d3-col-h"><span>Owning</span> <span class="d3-col-sub">${inline(pay.own || '')}</span></p>
-${bigPrice(data, { cls: 'kp d3-price' })}
-${get(c, 'offer_note') ? `<p class="d3-note">${inline(get(c, 'offer_note'))}</p>` : ''}
-${cta(c, { primary: l.primary, secondary: l.secondary })}
+${miniLadder(h, { cls: 'ml d3-ml', primary: l.primary, secondary: l.secondary })}
 </div>
 </div>
 </div></section>
 <div class="d3-body">
-<section class="sec d3-stmt" id="three-years" aria-labelledby="d3-three-h">
-<h2 class="vh" id="d3-three-h">Three years of a platform</h2>
-${figure(figs, 'year-of-platform')}
-</section>
-${section(c, ['rent_or_own'], { id: 'compare', fallbackTitle: 'Rent or own', cls: 'with-fig d3-teaser', extra: `${figure(figs, 'rent-or-own')}
-${compareTeaser(data)}
-<p class="more"><a href="/next/compare/">${esc(get(get(c, 'cta') || {}, 'compare') || 'Compare renting and owning')}</a>: every platform, every row, each with its source.</p>` })}
-${b.canYouLeave}
-${whatYouGet(h)}
-${b.briefToClaude}
+${caseStudies(h, { cls: 'd3-cases' })}
+${cellSection(h)}
+${cellsWeSell(h)}
+${sovereignExample(h, { extra: `<div class="d3-rent"><p class="d3-col-h"><span>Renting a website</span> <span class="d3-col-sub">${inline(pay.rent || '')}</span></p>
+${threeYearBars(data)}
+<p class="more"><a href="/next/compare/">Compare renting and owning</a></p>
+</div>` })}
+${eventTeam(h, { limit: 4 })}
+${properties(h)}
+${devices(h)}
+${b.team}
 <section class="sec d3-ex" id="examples">
 <h2>${inline(get(ex, 'title') || 'Examples')}</h2>
 ${prose(get(ex, 'text'))}
 ${exGrid(data, root, { slugs: [...OWNERS(data), 'algarve-holiday-homes', 'agenticcells-ai', 'riskmandate-at-websummit'], limit: 6, variant: 'plain', cls: 'kx-grid d3-rows' })}
 <p class="more"><a href="/next/examples/">All the examples</a></p>
 </section>
-${b.price}
 ${b.faq}
 ${b.final}
 </div>`;

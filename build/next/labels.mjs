@@ -15,3 +15,10 @@ export const offerTitle = (copy) => {
   const v = copy && copy.offer_title;
   return typeof v === 'string' && v.trim() ? v.trim() : 'Your own website';
 };
+
+// The label wherever a table, figure or the £50 offer card speaks of the website (round R1, writer's R2): copy.website_title
+// ("The Sovereign Agentic Website"). offer_title is now the ladder's entry, so it never labels the website.
+export const websiteTitle = (copy) => {
+  const v = copy && copy.website_title;
+  return typeof v === 'string' && v.trim() ? v.trim() : 'The Sovereign Agentic Website';
+};

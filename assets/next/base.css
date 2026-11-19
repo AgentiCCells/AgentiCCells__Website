@@ -218,3 +218,97 @@ span.tbw { display: inline-block; padding: 0 .4rem; }
 @media (min-width: 60rem) { .promises { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .offer-block > h3 { margin: .6rem 0 0; }
 .offer-block > p, .offer-block > .bigger { margin: 0; }
+
+/* ---------- round R1 (designer.agenticcells-ai@AgentiCCells.dinis): the agentic-cells sections, build/next/cells.mjs.
+   Neutral defaults; each design dresses them in its own sheet. ---------- */
+.pts { padding-left: 1.2rem; margin: .6rem 0; }
+.pts li { margin: .3rem 0; }
+.go { margin: .9rem 0 .4rem; }
+.cx-words > p:first-child { margin-top: 0; }
+@media (min-width: 60rem) {
+  .cx-cell .cx-words { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 2.4rem; align-items: start; }
+  .cx-cell .cx-words > .more { grid-column: 1 / -1; }
+  .cx-cell .cx-pts { margin-top: 0; }
+}
+.aweb { margin-top: 1.4rem; padding: 1rem 1.2rem; border-left: 4px solid var(--accent); background: var(--soft); border-radius: 0 var(--radius) var(--radius) 0; }
+.aweb-h { margin: 0 0 .3rem; font-weight: 700; }
+.aweb p { max-width: 52rem; }
+
+/* The price of a cell: the figure, then its mark, on one line. */
+.cp strong { font-size: 1.5rem; line-height: 1; letter-spacing: -.01em; }
+.cp strong a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.cp-w { font-weight: 600; }
+.cp-was { display: block; color: var(--muted); font-size: .88rem; }
+.cp-ask .cp-ask, .cp-ask strong { font-size: 1.05rem; }
+
+/* The ladder as cards, smallest first; each rung a step taller on a wide screen. */
+.cl { list-style: none; padding: 0; margin: 1.2rem 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); align-items: end; }
+.cl-rung { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; background: var(--bg); }
+.cl-rung:first-child { border: 2px solid var(--accent); }
+.cl-name { margin: 0; font-size: 1.15rem; }
+.cl-size { margin: .2rem 0 0; color: var(--accent); font-weight: 600; font-size: .92rem; }
+.cl-what { margin: .5rem 0; color: var(--muted); font-size: .95rem; }
+.cl-price { margin: auto 0 .2rem; padding-top: .5rem; }
+.cl-go { margin: .4rem 0 0; font-size: .92rem; }
+@media (min-width: 64rem) {
+  .cx-sell .cl-rung:nth-child(1) { min-height: 15rem; } .cx-sell .cl-rung:nth-child(2) { min-height: 17rem; }
+  .cx-sell .cl-rung:nth-child(3) { min-height: 19rem; } .cx-sell .cl-rung:nth-child(4) { min-height: 21rem; }
+}
+.cx-sell .fig { margin-bottom: .4rem; }
+
+/* The compact ladder on the first screen. */
+.ml { background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; box-shadow: 0 6px 24px rgba(10, 40, 50, .08); }
+.ml-h { margin: 0 0 .5rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: .78rem; color: var(--muted); }
+.ml-list { list-style: none; padding: 0; margin: 0 0 .6rem; }
+.ml-list li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .1rem .8rem; padding: .45rem 0; border-top: 1px solid var(--line); }
+.ml-list li:first-child { border-top: 0; }
+.ml-name { font-weight: 600; }
+.ml-p strong { font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+.ml-p .cp-w { font-size: .85rem; color: var(--muted); font-weight: 500; }
+.ml-list li:first-child .ml-p strong { font-size: 1.7rem; }
+.ml .cta { margin: .4rem 0 0; }
+.fp-name { font-weight: 700; margin-right: .3rem; }
+
+/* The case studies: two large cards, image above the words. */
+.cs-list { list-style: none; padding: 0; margin: 1.2rem 0; display: grid; gap: 1.4rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+.cs { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--bg); }
+.cs-shot, .cs-img { display: block; }
+.cs-img img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
+.cs-body { padding: 1rem 1.2rem 1.2rem; }
+.cs-body h3 { margin: 0 0 .4rem; font-size: 1.35rem; }
+.cs-body > p { margin: .4rem 0; }
+.cs-offer { padding: .5rem .7rem; background: var(--soft); border-radius: 8px; font-size: .95rem; }
+.cs-offer strong { font-size: 1.2rem; }
+
+/* Cells at work: the screenshots of our own team's pages. */
+.px-grid { list-style: none; padding: 0; margin: 1.2rem 0 .4rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+.px { margin: 0; min-width: 0; }
+.px-shot { position: relative; display: block; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(15, 23, 42, .08); }
+.px-shot img { display: block; width: 100%; height: auto; aspect-ratio: 900 / 563; object-fit: cover; object-position: top; }
+.px-tag, .kx-tag.kx-work { position: absolute; left: 8px; top: 8px; font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: .15rem .5rem; border-radius: 999px; background: #0f2f3a; color: #ffffff; box-shadow: 0 1px 4px rgba(0, 0, 0, .25); }
+.px-cap { margin: .5rem 0 0; font-size: .9rem; color: var(--muted); }
+.px-cap a { font-weight: 700; color: var(--fg); }
+.px-cap span { display: block; }
+.px-note { font-size: .85rem; color: var(--muted); margin: .4rem 0 0; }
+@media (min-width: 60rem) {
+  .cx-event { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 0 2.4rem; align-items: start; }
+  .cx-event > h2 { grid-column: 1 / -1; }
+  .cx-event > .px-grid { margin-top: 0; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); }
+  .cx-event > .cx-words { grid-row: span 2; }
+  .cx-event > .px-note { grid-column: 2; }
+}
+
+/* The devices: marked as a plan. */
+.plan-tag { display: inline-block; margin: 0 0 .5rem; padding: .15rem .6rem; border: 1.5px dashed currentColor; border-radius: 999px; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.cx-dev > p:not(.plan-tag) { max-width: 52rem; }
+
+/* What every cell gives you, when a design does not use the promise cards. */
+.props { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+.props li { border-top: 3px solid var(--accent); padding: .8rem 0 0; }
+.props h3 { margin: 0 0 .3rem; }
+.props p { margin: 0 0 .4rem; color: var(--muted); }
+.saw-pages { margin-top: 2rem; }
+.chooser-ml { max-width: 36rem; }
+/* The large entry price: one run of text, so the comma stays against the figure. */
+.kp.cp { display: block; }
+.kp.cp .fp-name { margin-right: .5rem; }
