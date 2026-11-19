@@ -231,7 +231,7 @@
   },
   {
    "role": "Reviewer",
-   "does": "Reads every page before it goes live and sends back anything wrong."
+   "does": "Reads the pages as a buyer would and sends back anything wrong."
   },
   {
    "role": "Security reviewer",
@@ -286,7 +286,7 @@
   },
   "team": {
    "title": "The team",
-   "text": "Even the smallest site is made by seven roles, each played by an AI agent with a written job and rules it works under."
+   "text": "The work is split into seven roles, each played by an AI agent with a written job and rules it works under (a description of how we work, not a guarantee for every site)."
   },
   "partners": "You bring the business, we build the site. The customer owns it; the partner keeps the relationship.",
   "faq": {

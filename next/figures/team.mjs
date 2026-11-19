@@ -7,12 +7,12 @@ import { esc, get, fromCopy, para, text, rect, icon, line, svgOpen, wrapFigure, 
 const ID = 'team';
 const SRC = 'https://newsroom.sgit.ai/articles/partners-sell-we-build.html';
 const ROLES = [
-  { key: 'conductor', role: 'Conductor', plain: 'The project lead', text: 'Takes your brief, plans the work and hands it out.' },
+  { key: 'conductor', role: 'Lead', plain: 'The project lead', text: 'Takes your brief, plans the work and hands it out.' },
   { key: 'design', role: 'Designer', plain: 'Makes the look', text: 'Makes the five designs and the figures.' },
   { key: 'code', role: 'Developer', plain: 'Builds the site', text: 'Builds the site and the checks it must pass.' },
   { key: 'write', role: 'Writer', plain: 'Writes the words', text: 'Writes every word, in plain English.' },
   { key: 'research', role: 'Researcher', plain: 'Checks the facts', text: 'Finds the facts, each with its source.' },
-  { key: 'review', role: 'Reviewer', plain: 'A second reader', text: 'Reads the work before anything goes live.' },
+  { key: 'review', role: 'Reviewer', plain: 'A second reader', text: 'Reads the pages as a buyer would.' },
   { key: 'shield', role: 'Security', plain: 'Looks for risks', text: 'Looks for leaks and weak points.' },
 ];
 
@@ -20,7 +20,7 @@ export default function (data = {}) {
   const copy = data.copy || {};
   const title = fromCopy(copy, ID, 'title', 'The team behind your site');
   const lead = fromCopy(copy, ID, 'lead', 'Seven agents, each with its own policy and key. You decide.');
-  const you = fromCopy(copy, ID, 'you', 'You choose the design and approve every change.');
+  const you = fromCopy(copy, ID, 'you', 'You choose the design and say what to change.');
   const note = fromCopy(copy, ID, 'note', 'Each agent works under a written behaviour policy and signs its work with its own key.');
   // Words from next/copy.json (team[]: { role, does }), matched by the role's first word; the rest keep this figure's words.
   const ct = copyList(copy, 'team') || [];
