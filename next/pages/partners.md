@@ -4,6 +4,8 @@ description: You bring the business, we build the site. What a partner sells, wh
 ---
 # Partners: you bring the business, we build the site
 
+This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+
 You know people who want a website. You sell it to them; we build it behind you and hand it over in a GitHub repository your customer owns. Then you sell the care around it, at your own prices.
 
 ## The deal

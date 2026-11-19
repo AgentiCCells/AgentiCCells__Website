@@ -1,42 +1,42 @@
 {
- "_about": "Every word of the /next/ home page, the same in all five designs. Written by writer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19 (rounds 2 to 4 the same day), from Dinis Cruz's newsroom articles (linked in each item). Strings may hold inline markdown links [text](url): render them as links, because a figure's evidence link must sit in the same sentence. Placeholders, filled from data/next/offer.json: {launch} (launch_gbp as £), {launch_eur} (launch_eur as €), {usual} (usual_gbp), {earlier} (earlier_launch_gbp), {price} (a bigger offer's price_gbp). {{contact}} is the contact token. No figure is typed here: prices come from the data file.",
- "one_idea": "A website you own, control and can take anywhere.",
+ "_about": "Every word of the /next/ home page, the same in all five designs. Written by writer.agenticcells-ai (AgentiCCells), 2026-11-19 (rounds 2 to 4, and the refactor round R1 around agentic cells, board/briefs/2026-11-19-refactor-agentic-cells.md), from Dinis Cruz's newsroom articles (linked in each item). Strings may hold inline markdown links [text](url): render them as links, because a figure's evidence link must sit in the same sentence. Placeholders, filled from data/next/offer.json: {launch} (launch_gbp as £), {launch_eur} (launch_eur as €), {usual} (usual_gbp), {earlier} (earlier_launch_gbp), {price} (a bigger offer's price_gbp). cells_we_sell[].price is a key, not a price: launch (launch_gbp), 1500 and 5000 (the bigger offers in data/next/offer.json), ask (no price yet). {{contact}} is the contact token. No price is typed here: prices come from the data file.",
+ "one_idea": "Agentic cells: teams of AI agents that you own, can see and can stop.",
  "leads": {
   "sovereign": {
-   "headline": "A website you own, control and can take anywhere.",
-   "lede": "Your site is a set of files that become yours: we build them, then move them to your own account. Any web host can run them, and you change them by asking Claude, the AI assistant, in plain words. You pay us once, and nobody can lock you in, including us.",
+   "headline": "A team of AI agents, in one session, that you own.",
+   "lede": "An agentic cell is a small team of AI agents, each with a role, a brief and written rules, working together in your own accounts, where you can see what it does and stop it. The smallest cell is your own website, built by agents and owned by you: {launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html).",
    "cta_primary": "Start with an interview",
-   "cta_secondary": "See what you get"
+   "cta_secondary": "See what a cell is"
   },
   "six-promises": {
-   "headline": "Six promises: a website you own, control and can take anywhere.",
-   "lede": "Five designs made for you to choose from; files you own; no lock-in; almost nothing to attack; one payment instead of a monthly bill; and changes by asking Claude, the AI assistant, in plain words.",
+   "headline": "Six things every cell gives you.",
+   "lede": "An agentic cell is a small team of AI agents with written roles and rules. Every cell is yours, visible, stoppable, bounded by its policies, movable and open source. The smallest cell, your own website, is {launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html).",
    "cta_primary": "Ask for a site",
-   "cta_secondary": "Read the six promises"
+   "cta_secondary": "See what a cell is"
   },
   "stop-renting": {
-   "headline": "Stop renting your website.",
-   "lede": "Pay once, keep the files, and move them whenever you like. Your website should not be a subscription.",
+   "headline": "Stop renting software. Own a team.",
+   "lede": "Platforms rent you tools by the month. An agentic cell is a team of AI agents that does the work for you, in your own accounts, under rules you can read. Start with the smallest cell, your own website: {launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html), with no subscription from us.",
    "cta_primary": "Own your site",
    "cta_secondary": "Compare renting and owning"
   },
   "just-say-it": {
-   "headline": "Just say it. Your site changes.",
-   "lede": "You ask Claude, the AI assistant, for a change in plain words. Checks run before anything goes live, and every change can be undone.",
+   "headline": "Just say it. Your team does it.",
+   "lede": "An agentic cell is a team of AI agents you talk to in plain words: the agents plan the change and make it, checks run before anything goes live, and every change can be undone. The smallest cell is your own website: {launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html).",
    "cta_primary": "Try the interview",
    "cta_secondary": "See how a change works"
   },
   "proof": {
-   "headline": "Look at the sites first. Then ask for yours.",
-   "lede": "Each site below was made by the same team of AI agents, and each is labelled: a person who agreed to be named, or a demo.",
+   "headline": "Proof: cells at work.",
+   "lede": "An agentic cell is a small team of AI agents with written roles and rules. Below are sites our cells have made, each labelled as a named person's site or a demo, and the work our own team did at Web Summit. The smallest cell, your own website, is {launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html).",
    "cta_primary": "Ask for a site",
    "cta_secondary": "See every example"
   }
  },
- "offer_line": "{launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html), usually {usual} (the earlier launch price was {earlier}), with no subscription from us. We also build a limited number of sites each day free of charge, for evaluation.",
- "offer_line_eur": "{launch_eur} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html) on our European pages, with no subscription from us. We also build a limited number of sites each day free of charge, for evaluation.",
+ "offer_line": "The smallest cell, your own website: {launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html), usually {usual} (the earlier launch price was {earlier}), with no subscription from us. We also build a limited number of sites each day free of charge, for evaluation.",
+ "offer_line_eur": "The smallest cell, your own website: {launch_eur} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html) on our European pages, with no subscription from us. We also build a limited number of sites each day free of charge, for evaluation.",
  "offer_note": "The launch price may change. Nothing has been sold yet.",
- "offer_title": "Your own website",
+ "offer_title": "The smallest cell: your own website",
  "promises": [
   {
    "title": "You own it",
@@ -210,57 +210,58 @@
  ],
  "team": [
   {
-   "role": "Lead",
-   "does": "Takes your brief, plans the work and hands it to the others."
+   "role": "Conductor",
+   "does": "The one you talk to. Turns your request into a plan, hands out the work, reports back, and asks before anything goes live."
   },
   {
    "role": "Designer",
-   "does": "Makes the five designs from your material and the sites you like."
-  },
-  {
-   "role": "Developer",
-   "does": "Builds the site, runs the checks and puts it live."
+   "does": "Layouts and images: the five designs at the start, then every new page in the style you chose."
   },
   {
    "role": "Writer",
-   "does": "Writes the words in plain language, from what you gave us."
+   "does": "The words, in your voice, from what you say and send: a CV, a menu, a price list."
   },
   {
-   "role": "Researcher",
-   "does": "Reads what you gave us and what is public about you, and keeps the sources."
+   "role": "Developer",
+   "does": "Builds the change, keeps the checks passing, and publishes once you approve."
   },
   {
    "role": "Reviewer",
-   "does": "Reads the pages as a buyer would and sends back anything wrong."
+   "does": "Reads every change before you see it: prices, claims, privacy, and anyone named without consent."
   },
   {
-   "role": "Security reviewer",
-   "does": "Checks that nothing private or unsafe is published, and what the site exposes."
+   "role": "Translator",
+   "does": "Keeps every page in each of the site's languages."
+  },
+  {
+   "role": "Keeper",
+   "does": "The weekly care: broken links, speed, accessibility, the certificate and the domain's renewal date."
   }
  ],
- "team_note": "Each is a role, played by an AI agent with a written job description and rules it works under, and each signs its work. A person approves what matters.",
+ "team_note": "Each is a role, played by an AI agent with a brief and a behaviour policy in the site's repository. This team inside the site is the next step, not yet built: the sites we hand over today carry a CLAUDE.md and a behaviour policy for one agent, your own Claude ([a website with a team inside](https://newsroom.sgit.ai/articles/a-website-with-a-team-inside.html)). A person approves what matters.",
  "honest_notes": [
   "You change the site by talking to your own Claude, so editing it yourself needs a Claude plan: Claude Pro is USD 17 a month billed yearly ([Anthropic's page](https://claude.com/pricing), read 19 November 2026). If you would rather not, a partner can edit it for you, or you can leave it as it is: the site keeps running without edits. The platforms bundle their editor; we do not.",
-  "Partners set their own price for the build and for the care around it. The launch price is what we charge."
+  "Partners set their own price for the build and for the care around it. The launch price is what we charge.",
+  "The team of six or seven agents inside your site's repository is the next step, not yet built; today the site comes with instructions and a behaviour policy for one agent, your own Claude ([a website with a team inside](https://newsroom.sgit.ai/articles/a-website-with-a-team-inside.html))."
  ],
  "bigger": [
   {
    "name": "A few sessions",
-   "line": "We help you: two sessions with a person, then you run the team in your own GitHub and Claude accounts. {price}, first proposal."
+   "line": "A bigger cell: two sessions with a person, then you run the team in your own GitHub and Claude accounts. {price}, first proposal."
   },
   {
    "name": "A team",
-   "line": "A team of AI agents set up in your own accounts, each with its own rules and signature, over about two days of engagement. {price}, first proposal."
+   "line": "A bigger cell: a conductor and its agents set up in your own accounts, each with its own rules and signature, over about two days of engagement. {price}, first proposal."
   }
  ],
  "sections": {
   "promises": {
    "title": "Six promises",
-   "text": "One sentence is the whole offer, and it is six promises. Each one has a proof you can open."
+   "text": "The smallest cell, your own website, makes six promises. Each one has a proof you can open."
   },
   "tenets": {
    "title": "What owning a website means",
-   "text": "Owning a website comes down to five things. A platform gives you some of them. This gives you all five."
+   "text": "Owning a website comes down to five things. A platform gives you some of them. The smallest cell gives you all five."
   },
   "deliverables": {
    "title": "What you get",
@@ -273,33 +274,78 @@
   },
   "steps": {
    "title": "Seven steps to your own site",
-   "text": "From asking for a site to changing it yourself. After you ask, it starts with an interview."
+   "text": "From asking for a site to changing it yourself: how the smallest cell works. After you ask, it starts with an interview."
   },
   "offer": {
    "title": "The price",
-   "text": "One payment, a site you keep, and free evaluation sites for anyone who wants to see before they pay."
+   "text": "The smallest cell is one payment, a site you keep, and free evaluation sites for anyone who wants to see before they pay."
   },
-  "bigger": "When you want more than a website: the same team, set up in your own accounts.",
+  "bigger": "When you want more than a website: bigger cells, set up in your own accounts.",
   "examples": {
    "title": "Examples",
-   "text": "Sites made by the same team. Each is labelled: a person who agreed to be named, or a demo."
+   "text": "Sites made by our cells. Each is labelled: a person who agreed to be named, or a demo."
   },
   "team": {
-   "title": "The team",
-   "text": "The work is split into seven roles, each played by an AI agent with a written job and rules it works under (a description of how we work, not a guarantee for every site)."
+   "title": "The team inside",
+   "text": "A sovereign website is meant to come with a team inside it: seven roles, each played by an AI agent with a brief and a behaviour policy. This is the next step, not yet built."
   },
   "partners": "You bring the business, we build the site. The customer owns it; the partner keeps the relationship.",
   "faq": {
    "title": "Questions",
    "text": "The questions buyers ask most, with plain answers."
   },
-  "honest_notes": "Two things you should know before you buy.",
+  "honest_notes": "Three things you should know before you buy.",
   "cta": {
-   "title": "A website you own, control and can take anywhere.",
-   "text": "Start with an interview, or apply for a free evaluation site."
+   "title": "Agentic cells: teams of AI agents that you own, can see and can stop.",
+   "text": "Start with the smallest cell, your own website: an interview, or a free evaluation site."
+  },
+  "cell": {
+   "title": "What an agentic cell is"
+  },
+  "agentic_web": {
+   "title": "The agentic web"
+  },
+  "cells_we_sell": {
+   "title": "The cells we sell, smallest first"
+  },
+  "sovereign_example": {
+   "title": "The smallest cell, and the clearest example"
+  },
+  "event_team": {
+   "title": "A bigger cell at work"
+  },
+  "properties": {
+   "title": "What every cell has"
+  },
+  "devices": {
+   "title": "On a device you hold (a plan)"
   }
  },
  "faq": [
+  {
+   "q": "What is an agentic cell?",
+   "a": "A small team of AI agents doing one focused job for you. Each agent has a role, a brief and a behaviour policy that says what it may and may not touch, and the agents work together in your own accounts, where you can see the work and stop it ([the cell is the unit](https://newsroom.sgit.ai/articles/the-cell-is-the-unit.html)). [What a cell is](/next/cells/) says more."
+  },
+  {
+   "q": "How big is a cell?",
+   "a": "As big as the job. The smallest is your own website: a team of agents builds it in one session, and a team of six or seven agents inside the site is the next step, not yet built. Bigger cells add a person who helps you, a conductor with its own agents, or a team of people each with their own agents, like ours at Web Summit ([our own team's work](/next/team-work/))."
+  },
+  {
+   "q": "Where does a cell run?",
+   "a": "In your own accounts: your GitHub, your Claude plan, your host and your domain. The smallest cell is built in our GitHub organisation and moved to your account within three months at the latest, sooner if you ask; that is an expectation we set ourselves, not yet a rule in the terms. Running some agents on a Raspberry Pi or an Android tablet is a plan (see the appliance, below)."
+  },
+  {
+   "q": "Can I see what a cell does, and stop it?",
+   "a": "Yes. The work is kept as files and every change is a commit, so you can read who changed what and undo it; in our own cells each commit is also signed by the agent that made it. A person can stop a cell: when we stopped about a hundred of our own agents at once, pausing took seconds, but some agents heard the order late and a few things got through ([stopping a hundred agents](https://newsroom.sgit.ai/articles/stopping-a-hundred-agents.html)). We say that plainly because a stop has to be tested, not assumed."
+  },
+  {
+   "q": "What does a bigger cell cost?",
+   "a": "Two bigger cells are priced as first proposals: a few sessions with a person, then you run the team yourself; or a team with a conductor, set up in your own accounts. A team for an event, like ours at Web Summit, is priced for each engagement. Nothing at these sizes has been sold. The [pricing page](/next/pricing/) has the first proposals."
+  },
+  {
+   "q": "What is the sovereign website appliance?",
+   "a": "A plan, not a product yet: a sovereign website on a device you hold, a configured Android tablet or a set of Raspberry Pis that serve the site from home, to be offered through a Kickstarter campaign. Nothing has been submitted to Kickstarter, and the appliance's software is a plan ([launching the appliance](https://newsroom.sgit.ai/articles/launching-the-sovereign-website-appliance.html))."
+  },
   {
    "q": "What does it cost?",
    "a": "{launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html), usually {usual}, with no subscription from us. After that it depends on you. If you edit the site yourself, you need your own Claude plan: Claude Pro is USD 17 a month billed yearly ([Anthropic's page](https://claude.com/pricing), read 19 November 2026). Or a partner edits it, at their price, or you leave it as it is: the site keeps running without edits. Hosting can cost nothing on a host whose free plan fits your site; for a business site, check the host's terms (\"Can I move it to another host?\" below says more). A domain of your own is paid to the registrar you choose."
@@ -361,10 +407,6 @@
    "a": "By then the repository should be in your GitHub account and the address pointed where you choose, and we hold nothing. If you asked sooner, it happened sooner. This is an expectation we set ourselves, not yet a rule in the terms."
   },
   {
-   "q": "What if I want more than a website?",
-   "a": "There are two bigger offers, both first proposals: a few sessions with a person, then you run the team in your own accounts; or a team of agents set up in your accounts. The [pricing page](/next/pricing/) has both."
-  },
-  {
    "q": "Has anyone bought one yet?",
    "a": "No. Nothing has been sold yet, and we will say so until it changes. The examples are sites made by the same team, each labelled as a named person's site or a demo."
   }
@@ -381,20 +423,143 @@
   "partners": "Become a partner",
   "faq": "Read the questions",
   "choose_design": "Choose a design",
-  "preview_band": "Preview for review, not the live site. Prices and words may change."
+  "preview_band": "Preview for review, not the live site. Prices and words may change.",
+  "cells": "See what a cell is",
+  "sovereign_website": "See the sovereign website",
+  "team_work": "See our team's work"
  },
  "figures": {
   "how-it-works": {
    "first": false
   },
   "team": {
-   "lead": "Seven roles, each an AI agent with its own rules and signature. You decide."
+   "lead": "Seven roles inside the site, each an AI agent with a brief and a behaviour policy: the next step, not yet built."
   },
   "deliverables": {
    "lead": "What arrives, where it lives, and what you can do with it."
   },
   "can-you-leave": {
    "lead": "Three platforms in their own words, and your own website."
+  },
+  "cell": {
+   "lead": "One cell: a small team of agents in one session, in your own accounts, that you can see and stop."
+  },
+  "ladder": {
+   "lead": "The cells we sell, from the smallest, your own website, to a team for an event."
   }
+ },
+ "cell": {
+  "title": "What an agentic cell is",
+  "text": "A cell is the unit of what we sell: one focused job, done by a small team of AI agents. Each agent has a role, a brief that says what it does, and a behaviour policy that says what it may and may not touch. The smallest cells run in one session; bigger ones span several sessions and people. A cell works in your own accounts, and you can see what it does and stop it ([the cell is the unit](https://newsroom.sgit.ai/articles/the-cell-is-the-unit.html)).",
+  "points": [
+   "An objective: the one job it exists for, in your words.",
+   "A deliverable: what you have at the end, such as a live site, drafted replies or a debrief.",
+   "A behaviour policy for every agent: what it may reach, and what it will never do.",
+   "Every change is a commit you can read and undo; in our own cells each commit is signed by the agent that made it.",
+   "It runs in your own accounts, and a person can stop it."
+  ]
+ },
+ "agentic_web": {
+  "title": "The agentic web",
+  "text": "The agentic web is sites and services run by teams of agents for the people who own them. In Dinis Cruz's words: \"In 2000 the open web gave you software to run yourself; WordPress made publishing free, but you or someone you paid still did the work. In 2026 a team of agents does the work\" ([Sovereign Agentic Website](https://newsroom.sgit.ai/articles/sovereign-agentic-website.html), 19 November 2026). The agents work inside a behaviour policy, so what they build stays yours."
+ },
+ "cells_we_sell": [
+  {
+   "id": "sovereign-website",
+   "name": "Sovereign Agentic Website",
+   "size": "The smallest cell",
+   "what": "A website built by a team of agents and owned by you: the files, the history and the address, in a repository you control. You change it by asking your own Claude.",
+   "price": "launch",
+   "link": "/next/sovereign-website/",
+   "link_text": "The sovereign website"
+  },
+  {
+   "id": "few-sessions",
+   "name": "A few sessions",
+   "size": "A cell you learn to run",
+   "what": "We help you: two sessions with a person, then you run the team in your own GitHub and Claude accounts.",
+   "price": "1500",
+   "link": "/next/cells/",
+   "link_text": "How a cell runs"
+  },
+  {
+   "id": "team",
+   "name": "A team",
+   "size": "A team with a conductor",
+   "what": "A conductor and its agents set up in your own accounts, each agent with its own rules and signature, over about two days of engagement.",
+   "price": "5000",
+   "link": "/next/cells/",
+   "link_text": "How a cell runs"
+  },
+  {
+   "id": "event-team",
+   "name": "A team for an event",
+   "size": "Several people, each with their own agents",
+   "what": "The kind of work our own team did around Web Summit: a working site for the team, a newsroom, guides and apps, run by people and their agents together. Priced for each engagement: ask us.",
+   "price": "ask",
+   "link": "/next/team-work/",
+   "link_text": "Our own team's work"
+  }
+ ],
+ "sovereign_example": {
+  "title": "The smallest cell: the Sovereign Agentic Website",
+  "text": "Built by agents, owned by you. The Sovereign Agentic Website (Sovereign Website for short) is the smallest cell we sell, and the clearest example of what a cell does: a team of agents interviews you, makes five designs, puts the site live and hands it over, and your own AI changes it when you ask ([Sovereign Agentic Website](https://newsroom.sgit.ai/articles/sovereign-agentic-website.html)). It is also an open pattern: anyone can use it without paying us.",
+  "points": [
+   "The files, the history and the address, in a repository you control.",
+   "Five designs to choose from, made from your material.",
+   "Changed by asking your own Claude, with checks before anything goes live.",
+   "A team of six or seven agents inside the repository is the next step, not yet built ([a website with a team inside](https://newsroom.sgit.ai/articles/a-website-with-a-team-inside.html)).",
+   "Movable to any host, with no lock-in, including to us."
+  ],
+  "link": "https://sovereignwebsite.ai/",
+  "link_text": "sovereignwebsite.ai (opening soon)"
+ },
+ "event_team": {
+  "title": "A bigger cell: our own team at Web Summit",
+  "text": "Between 3 and 13 November 2026, six people and around 250 named agents built a working site for the team, a newsroom, a site about a storm, a guide to the summit's fringe and native apps ([ten days at Web Summit](https://newsroom.sgit.ai/articles/ten-days-at-web-summit.html)). That is our own team's work, not a customer's, and it is the kind of team a bigger cell sets up.",
+  "link": "https://web-summit.sgit.ai/",
+  "link_text": "The team's working site, web-summit.sgit.ai"
+ },
+ "properties": [
+  {
+   "title": "Yours",
+   "line": "The files, keys and board are in your accounts, not in ours, once the work is handed over.",
+   "proof": "Sovereignty is being able to move the work, its data and its structure, not where it is hosted.",
+   "proof_link": "https://newsroom.sgit.ai/articles/sovereignty-you-can-move.html"
+  },
+  {
+   "title": "Visible",
+   "line": "The work is kept as files and every change is a commit, so you can see who did what, and when.",
+   "proof": "Our own team runs as a cell, in the open.",
+   "proof_link": "https://agenticcells.ai/our-team-as-a-cell/"
+  },
+  {
+   "title": "Stoppable",
+   "line": "A person can stop the cell: a stop is a file every agent reads first, and a switch you can reach in every account.",
+   "proof": "What happened when we stopped about a hundred agents at once, including what got through.",
+   "proof_link": "https://newsroom.sgit.ai/articles/stopping-a-hundred-agents.html"
+  },
+  {
+   "title": "Bounded by policies",
+   "line": "Each agent has a written behaviour policy: what it may reach, what it was asked to do, and what it will never touch.",
+   "proof": "Behaviour policies down to every feature.",
+   "proof_link": "https://newsroom.sgit.ai/articles/feature-behaviour-policies.html"
+  },
+  {
+   "title": "Movable",
+   "line": "Nothing in a cell depends on a platform of ours, so you can move it, or leave, whenever you want.",
+   "proof": "What the platforms' own terms say about leaving, and why it matters.",
+   "proof_link": "https://newsroom.sgit.ai/articles/no-lock-in.html"
+  },
+  {
+   "title": "Open source",
+   "line": "The code is open source, so nobody can withdraw it, us included.",
+   "proof": "This site's own repository, open on GitHub.",
+   "proof_link": "https://github.com/AgentiCCells/AgentiCCells__Website"
+  }
+ ],
+ "devices": {
+  "title": "On a device you hold (a plan)",
+  "text": "Some of a cell's agents could run on a Raspberry Pi or an Android tablet. For the sovereign website this is a plan: an appliance, a configured Android tablet or a set of Raspberry Pis serving the site from home, to be offered through a Kickstarter campaign that has not been submitted yet ([launching the appliance](https://newsroom.sgit.ai/articles/launching-the-sovereign-website-appliance.html)). Today the sites run on ordinary web hosts."
  }
 }

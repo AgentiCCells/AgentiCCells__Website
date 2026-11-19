@@ -4,6 +4,8 @@ description: How to ask for a site: run the interview in your own Claude first, 
 ---
 # Start with an interview
 
+This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+
 A website you own, control and can take anywhere starts with a conversation. Most people do not know what they want from a website until someone asks them the right questions, so the first step is an interview, by Claude.
 
 {{figure:brief-to-claude}}

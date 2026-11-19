@@ -4,6 +4,8 @@ description: Seven steps from asking for a site to changing it yourself with Cla
 ---
 # How it works
 
+This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
+
 From asking for a site to changing it yourself by talking to Claude, the AI assistant. There are seven steps, and the one that matters most is the first change you make yourself.
 
 {{figure:how-it-works}}

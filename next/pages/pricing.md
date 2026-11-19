@@ -1,14 +1,16 @@
 ---
 title: Pricing
-description: One payment to us for a site you keep, and no subscription from us. The launch price, two bigger offers as first proposals, and free evaluations.
+description: One payment to us for a site you keep, and no subscription from us. The launch price, two bigger cells as first proposals, and free evaluations.
 ---
 # One payment, and the site is yours
+
+This page is about the smallest cell, the sovereign website, with the bigger cells beside it. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)).
 
 A website you own, control and can take anywhere, paid for once. There is no subscription from us, so there is nothing to stop paying for.
 
 {{table:pricing}}
 
-The launch price may change, and when it does, this page changes with it. Nothing has been sold yet. The two bigger offers are first proposals: nothing at those sizes has been sold, and the details may change.
+The launch price may change, and when it does, this page changes with it. Nothing has been sold yet. The two bigger cells are first proposals: nothing at those sizes has been sold, and the details may change. A team for an event, like [our own team's work](/next/team-work/) at Web Summit, is priced for each engagement: ask us.
 
 What the launch price buys is on [what you get](/next/what-you-get/): the repository, the live site with HTTPS, five designs, a CLAUDE.md for you, a behaviour policy and checks, and the move of the repository to your own account within three months (an expectation we set ourselves, not yet a rule in the terms).
 

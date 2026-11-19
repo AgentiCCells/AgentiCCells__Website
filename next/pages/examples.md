@@ -4,6 +4,8 @@ description: Sites made by the same team of agents. Each is labelled: a person w
 ---
 # Look at the sites first
 
+This page is about the smallest cell, the sovereign website. A cell is a small team of AI agents, each with a role, a brief and written rules, working in your own accounts ([what a cell is](/next/cells/)); for a bigger cell at work, see [our own team's work](/next/team-work/).
+
 A website you own, control and can take anywhere starts as a site you would want. These are sites made by the same team of agents, so you can judge the work before you ask for anything.
 
 {{examples}}
