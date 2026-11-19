@@ -1,18 +1,19 @@
 // Figure: the agents behind it, with you at the centre deciding.
-// Data: copy.team[] {role,does}, copy.figures.team.{title,lead,you,note} (all optional).
+// Data: copy.team[] {role,does,plain}, copy.figures.team.{title,lead,you,note} (all optional).
+// Each role keeps its name and gets a short plain-words line under it (copy.team[].plain wins when the writer sets one).
 // Source of the roles: https://newsroom.sgit.ai/articles/partners-sell-we-build.html and the team's own role files.
 import { esc, get, fromCopy, para, text, rect, icon, line, svgOpen, wrapFigure, SIZE, mdPlain, copyList } from './_shared.mjs';
 
 const ID = 'team';
 const SRC = 'https://newsroom.sgit.ai/articles/partners-sell-we-build.html';
 const ROLES = [
-  { key: 'conductor', role: 'Conductor', text: 'Runs the team, keeps the board, hands out the work.' },
-  { key: 'design', role: 'Designer', text: 'Makes the five designs and the figures.' },
-  { key: 'code', role: 'Developer', text: 'Builds the site and the checks it must pass.' },
-  { key: 'write', role: 'Writer', text: 'Writes every word, in plain English.' },
-  { key: 'research', role: 'Researcher', text: 'Finds the facts, each with its source.' },
-  { key: 'review', role: 'Reviewer', text: 'Reads the work before anything goes live.' },
-  { key: 'shield', role: 'Security', text: 'Looks for leaks and weak points.' },
+  { key: 'conductor', role: 'Conductor', plain: 'The project lead', text: 'Takes your brief, plans the work and hands it out.' },
+  { key: 'design', role: 'Designer', plain: 'Makes the look', text: 'Makes the five designs and the figures.' },
+  { key: 'code', role: 'Developer', plain: 'Builds the site', text: 'Builds the site and the checks it must pass.' },
+  { key: 'write', role: 'Writer', plain: 'Writes the words', text: 'Writes every word, in plain English.' },
+  { key: 'research', role: 'Researcher', plain: 'Checks the facts', text: 'Finds the facts, each with its source.' },
+  { key: 'review', role: 'Reviewer', plain: 'A second reader', text: 'Reads the work before anything goes live.' },
+  { key: 'shield', role: 'Security', plain: 'Looks for risks', text: 'Looks for leaks and weak points.' },
 ];
 
 export default function (data = {}) {
@@ -25,16 +26,16 @@ export default function (data = {}) {
   const ct = copyList(copy, 'team') || [];
   const roles = ROLES.map((d) => {
     const c = ct.find((x) => String(x.role || '').toLowerCase().split(' ')[0] === d.role.toLowerCase());
-    return c ? { ...d, role: mdPlain(c.role), text: mdPlain(c.does || d.text) } : d;
+    return c ? { ...d, role: mdPlain(c.role), plain: mdPlain(c.plain || d.plain), text: mdPlain(c.does || d.text) } : d;
   });
-  const desc = `${title}. ${lead} At the centre, you: ${you} Around you: ${roles.map((r) => `${r.role}, ${r.text}`).join(' ')} ${note}`;
+  const desc = `${title}. ${lead} At the centre, you: ${you} Around you: ${roles.map((r) => `${r.role} (${r.plain.toLowerCase()}): ${r.text}`).join(' ')} ${note}`;
 
   // Wide: you in the middle, the conductor above, three agents each side.
   const s = SIZE.w, W = 960, bw = 280, top = 104;
   const box = (x, y, r) => {
-    const nm = text(x + 72, y + 40, r.role, 'b z-m', 0);
-    const bd = para(x + 72, y + 70, r.text, bw - 88, s.xs, 'z-xs t-m', 24);
-    const h = Math.max(70 + bd.height, 96);
+    const nm = text(x + 72, y + 38, r.role, 'b z-m', 0) + text(x + 72, y + 64, r.plain, 'sb z-xs t-a', 0);
+    const bd = para(x + 72, y + 94, r.text, bw - 88, s.xs, 'z-xs t-m', 24);
+    const h = Math.max(94 + bd.height - 6, 110);
     return { h, svg: rect(x, y, bw, h, 'f-bg', 14) + rect(x, y, bw, h, 's-line', 14) + icon(r.key, x + 18, y + 20, 0.9, 's-acc') + nm + bd.svg, cx: x + bw / 2, cy: y + h / 2 };
   };
   const placed = [];
@@ -77,10 +78,10 @@ export default function (data = {}) {
   const y0 = y;
   let rows = '';
   roles.forEach((r) => {
-    const bd = para(80, y + 50, r.text, N - 96, n.m, 'z-m t-m', 21);
-    const h = 50 + bd.height + 4;
+    const bd = para(80, y + 72, r.text, N - 96, n.m, 'z-m t-m', 21);
+    const h = 72 + bd.height - 21 + 14;
     rows += rect(44, y, N - 44, h, 'f-bg', 10) + rect(44, y, N - 44, h, 's-line', 10);
-    rows += icon(r.key, 56, y + 12, 0.55, 's-acc') + text(88, y + 30, r.role, 'b z-l', 0) + bd.svg;
+    rows += icon(r.key, 56, y + 12, 0.55, 's-acc') + text(88, y + 30, r.role, 'b z-l', 0) + text(88, y + 51, r.plain, 'sb z-s t-a', 0) + bd.svg;
     rows += line(20, y + 24, 44, y + 24, 's-line', 2);
     y += h + 10;
   });
@@ -93,7 +94,7 @@ export default function (data = {}) {
     `<p>${esc(title)}: the roles, as in <a href="${SRC}">partners sell, we build</a>. ${esc(lead)}</p>`,
     '<ul>',
     `<li><strong>You</strong>, at the centre: ${esc(you)}</li>`,
-    ...roles.map((r) => `<li><strong>${esc(r.role)}</strong>: ${esc(r.text)}</li>`),
+    ...roles.map((r) => `<li><strong>${esc(r.role)}</strong> (${esc(r.plain.toLowerCase())}): ${esc(r.text)}</li>`),
     '</ul>',
     `<p>${esc(note)}</p>`,
   ].join('\n');

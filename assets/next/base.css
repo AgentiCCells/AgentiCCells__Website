@@ -35,6 +35,10 @@ h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin: 0 0 .6em; }
   .nx-head .in { flex-wrap: wrap; gap: .3rem; }
   .nx-head nav { flex-basis: 100%; }
   .nx-head nav ul { justify-content: flex-start; }
+  /* Phone: the nav scrolls sideways; a fade at the right edge shows there is more. The list ends in a blank
+     the width of the fade, so the last link is fully visible once scrolled to the end. */
+  .nx-head nav { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.75rem), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 2.75rem), transparent); }
+  .nx-head nav ul { padding-right: 2.75rem; }
 }
 
 main { display: block; }
@@ -138,6 +142,19 @@ span.tbw { display: inline-block; padding: 0 .4rem; }
 
 .nx-foot { background: #10202b; color: #d8e1e6; margin-top: 2rem; padding: 1.6rem 0; font-size: .92rem; }
 .nx-foot a { color: #fff; }
+/* The footer's list of every preview page: a wrapping row of links, readable on a phone. */
+.nx-foot nav { margin: .8rem 0; }
+.foot-pages { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; }
+.foot-pages a { display: inline-block; padding: 4px 0; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255, 255, 255, .45); }
+.foot-pages a:hover { text-decoration-color: #fff; }
+.foot-pages a[aria-current] { font-weight: 700; text-decoration-color: #fff; }
+
+/* A fenced block (/next/start/'s interview prompt): a framed box, line breaks kept, wraps on a phone, Copy button top right. */
+.code-box { position: relative; margin: 1rem 0 1.4rem; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; background: var(--soft); }
+.code-box pre { margin: 0; padding: 2.8rem 1rem 1rem; white-space: pre-wrap; overflow-wrap: anywhere; overflow-x: auto; font: .92rem/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--fg); }
+.code-box code { font: inherit; background: none; padding: 0; }
+.code-copy { position: absolute; top: .5rem; right: .5rem; min-height: 36px; padding: .35rem .9rem; border: 1px solid var(--accent); border-radius: 8px; background: var(--accent); color: var(--accent-fg); font: 600 .9rem var(--font); cursor: pointer; }
+.code-copy:hover { background: var(--bg); color: var(--accent); }
 .t-cap { font-weight: 600; margin: 1.2rem 0 -.4rem; }
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .why { display: block; color: var(--muted); font-size: .92rem; }
