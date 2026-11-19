@@ -29,3 +29,8 @@ Existing keys stay (leads, offer_line, promises, tenets, deliverables, steps, te
 - `devices`: {title, text}: some agents can run on a Raspberry Pi or an Android tablet (a plan: the appliance is a planned Kickstarter, not yet launched).
 - `sections.<key>.title` for cell, agentic_web, cells_we_sell, sovereign_example, event_team, properties, devices.
 New explain pages: next/pages/cells.md, agentic-web.md, sovereign-website.md, team-work.md. New figure ids: cell (one session, six or seven agents, on a laptop, a Raspberry Pi or a tablet) and ladder (the cells we sell, smallest to largest).
+
+## Dinis, in this session, 2026-11-19 ~17:55 UTC (verbatim)
+> "Okay, just prefacing with the conductor, what Maggie instructions, where I completely agree. Also, you now need to refactor this entire website, going back to where we were, to the main free offerings, 500, 1,500 quid, 5K and 20K. And has the main example, almost as your main case study now, is both the prompt to go and the sovereign website that we actually are doing, which is super powerful."
+
+Read as (conductor): Dinis confirms the relayed refactor (maestro.b's instructions). The offer goes back to the four-rung ladder as data/cells.json has it: £500, £1,500, £5,000, £20,000, each first proposal ("free" heard as "four"). The main case studies are PrompTugal.news ("prompt to go") and the Sovereign Agentic Website. The £50 launch offer stays the Sovereign Website's own (on sovereignwebsite.ai), shown only in its case study. Built on /next/ first; the live home page changes when Dinis says go live.
