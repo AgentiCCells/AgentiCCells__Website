@@ -1,0 +1,121 @@
+# The five home designs: design directions
+
+Written by designer.agenticcells-ai@AgentiCCells.dinis, 19 November 2026, for the /next/ preview. This is a design proposal for review, not a decision. Text: CC BY 4.0.
+
+Dinis's words, 19 November 2026 ~03:35 UTC (board/briefs/2026-11-19-sovereign-preview.md): "very product driven", "very visual, lots of examples, lots of infographics, lots of pages to explain stuff", "very professional, but again, different styles".
+
+## What all five share
+
+- **The same words and data.** Every word comes from next/copy.json, every price from data/next/offer.json, every competitor fact from data/next/competitors.json, every example from next/examples.json. A design changes order, voice and look, never the claims.
+- **The first screen** says the one idea in plain words, shows the offer and its price with the words "launch price", and has one main button. No internal terms ("cell", "vault", "conductor") on the first screen.
+- **Product first.** Each design shows the product within the first two screens: a real site from next/examples.json, or a figure of what arrives (the deliverables).
+- **The infographics** are the eight figures in next/figures/ (see next/figures/README.md). A design places them and recolours them with the `--fig-*` properties; it never redraws them. Each sits in a `<figure>` with its text version in a `<details>` below.
+- **Type: system font stacks only.** No web fonts and nothing loaded from another host. The stacks used below:
+  - Sans: `system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`
+  - Serif: `Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif`
+  - Mono: `ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace`
+- **Standards.** Works from 360 px with no horizontal scroll and a 16 px gutter; text contrast at least WCAG AA (the accent pairs below were measured: all 5.2:1 or more against their background); images under 200 KB; the Preview band on every page; examples labelled as a named person's site or a demo.
+- **Sections, in some order:** the tenets or promises, what you get, rent or own, can you leave, three years of a platform, how it works, the team, examples, the offer and the bigger offers, partners, honest notes, questions, a final call to action. Each design picks the order that tells its story.
+
+## 1. Sovereign (/next/d/1/)
+
+**For:** anyone. **The story:** ownership is the product.
+
+- **Mood:** calm, settled, a little formal. A deed, not an advert. Deep ink and warm paper.
+- **Type:** serif headings (Georgia stack), sans body. Headline large and tight; a short italic kicker above it.
+- **Palette (tokens):**
+  ```css
+  .d1 { --bg: #faf6ee; --fg: #10202b; --muted: #4a5761; --line: #e3d9c4; --soft: #f6efe0;
+        --accent: #8a5a00; --accent-soft: #f6efe0; --band: #10202b; --band-fg: #f3ead6; --gold: #e9d8a6;
+        --fig-accent: #8a5a00; --fig-ink: #10202b; --fig-muted: #4a5761; --fig-bg: #ffffff;
+        --fig-line: #e3d9c4; --fig-good: #2f6b3a; --fig-warn: #9a4a12; }
+  ```
+- **First screen:** a deep ink band. Left: kicker "A website you own", the headline from `copy.leads.sovereign.headline`, the lede, two buttons. Right (stacked under it on a phone): the offer card on paper, the price set large with "launch price" beside it, "usually" price, the free evaluation line. Under the band, a thin strip of five small icons, one per tenet, each linking to its section.
+- **Sections:** tenets (the figure full width, the first section), what you get (deliverables figure beside the list), rent or own, can you leave, three years of a platform, how it works, examples (three large cards), team, offer and bigger offers, partners, honest notes, questions, final band in ink.
+- **Infographics:** set in a two-column section from 60rem: words on the left, figure on the right; on a phone, words then figure. Thin gold rule under each section heading.
+- **Examples:** three large screenshot cards with a paper frame and a caption line "whose site, what it is, labelled".
+- **Clearly different because:** it is the only serif, ink-and-paper design, and the only one that opens with the tenets as a strip under the hero.
+
+## 2. Six promises (/next/d/2/), the safest default
+
+**For:** first-time site owners and small businesses. **The story:** the pitch sentence is the whole offer, and each promise has a proof you can open.
+
+- **Mood:** light, bright, confident, friendly. Numbered cards, lots of white.
+- **Type:** sans throughout, headings weight 800 with slight negative letter-spacing; numbers in the cards large and tabular.
+- **Palette (tokens):**
+  ```css
+  .d2 { --bg: #ffffff; --fg: #17222b; --muted: #55636e; --line: #f1dcc4; --soft: #fff7ec;
+        --accent: #c2410c; --accent-soft: #ffedd5;
+        --fig-accent: #c2410c; --fig-ink: #17222b; --fig-muted: #55636e; --fig-bg: #ffffff;
+        --fig-line: #f1dcc4; --fig-good: #15803d; --fig-warn: #475569; }
+  ```
+  (`--fig-warn` is a neutral slate here, so "renting" does not compete with the orange accent.)
+- **First screen:** the pitch sentence from `copy.leads.six-promises.headline`, one clause per line, the first clause in the accent. Beside it on desktop (below on a phone): the offer card and the button "Apply for a free evaluation site". A row of six small numbered chips under the headline jumps to each promise.
+- **Sections:** six promise cards in a three by two grid (one column on a phone), each with its line, its proof and the proof link; then what you get; examples; rent or own; three years of a platform; how it works; can you leave; team; offer; partners; honest notes; questions; final call.
+- **Infographics:** full width inside soft cream panels with rounded corners; each panel heading is a question ("What arrives?", "What does a year cost?").
+- **Examples:** a horizontal row of four screenshot cards that wraps to two by two, then one column.
+- **Clearly different because:** it is built on the six numbered cards and the sentence itself; it is the brightest and least formal, and it shows the proof links more than any other design.
+
+## 3. Stop renting your website (/next/d/3/)
+
+**For:** people paying a platform every month. **The story:** a ledger: paying every month forever against paying once and keeping it.
+
+- **Mood:** an account statement. Ruled lines, columns, figures that add up. Honest arithmetic, not alarm.
+- **Type:** sans headings weight 800, condensed feel through tight tracking; numbers and the ledger in the mono stack with tabular figures.
+- **Palette (tokens):**
+  ```css
+  .d3 { --bg: #fbfaf7; --fg: #1c1917; --muted: #57534e; --line: #d6d3cc; --soft: #f3f1ec;
+        --accent: #166534; --accent-soft: #dcfce7; --rent: #b91c1c; --rent-soft: #fef2f2;
+        --fig-accent: #166534; --fig-ink: #1c1917; --fig-muted: #57534e; --fig-bg: #ffffff;
+        --fig-line: #d6d3cc; --fig-good: #166534; --fig-warn: #b91c1c;
+        --fig-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  ```
+- **First screen:** a split hero. Left half "Renting" on a pale red ledger: rows "Month 1, Month 2, Month 3 ..." fading out, the competitor's published monthly price from data/next/competitors.json with its ISO code, source link and read date. Right half "Owning" on pale green: one row, our price with "launch price", and the line "then nothing". The headline across both: "Stop renting your website." On a phone the two halves stack, renting first.
+- **Sections:** three years of a platform (the chart, first and full width), rent or own (the table figure), can you leave, what you get, how it works, examples, honest notes (moved up, because the Claude plan is a running cost the reader should see), offer, partners, questions, final call.
+- **Infographics:** in ruled "statement" panels with a header row (date read, source); the chart and the rent-or-own figure use the red and green tokens; the other figures use green only.
+- **Examples:** a compact table of real sites: name, what it is, "moved in", link; one screenshot per row on desktop.
+- **Clearly different because:** it is the only design that leads with money and a chart, uses a ledger layout and mono figures, and shows two colours for two choices.
+
+## 4. Just say it (/next/d/4/)
+
+**For:** technologists and people who hate page builders. **The story:** you change your site by talking to your own Claude, with checks before anything goes live.
+
+- **Mood:** dark, technical, quiet. A terminal and a chat, not neon.
+- **Type:** sans headings; the conversation, file names and checks in the mono stack.
+- **Palette (tokens):**
+  ```css
+  .d4 { --bg: #0b1220; --fg: #e6edf7; --muted: #9aa8bd; --line: #243149; --soft: #111a2e;
+        --accent: #5eead4; --accent-fg: #0b1220; --accent-soft: #12303a;
+        --fig-accent: #5eead4; --fig-ink: #e6edf7; --fig-muted: #9aa8bd; --fig-bg: #111a2e;
+        --fig-line: #243149; --fig-good: #4ade80; --fig-warn: #fbbf24; }
+  ```
+  (Measured: the teal on the background is 12.7:1, the muted text 7.8:1.)
+- **First screen:** "Just say it. Your site changes." Under it a chat panel: the owner says "Here is my CV, add my latest job"; Claude replies with what it found and the checks it ran (build, validation, leak scan: each with a tick); the owner says "publish"; a before and after of the site, side by side (stacked on a phone). The offer is a slim bar under the chat with the price and "launch price". The exchange is labelled as an illustration of a real change, with a link to where it happened.
+- **Sections:** how it works (the seven steps), what you get (CLAUDE.md and the policy and checks highlighted), from brief to your own Claude, the team, can you leave, rent or own, three years of a platform, examples, offer, honest notes, partners, questions, final call.
+- **Infographics:** on dark surface panels; the `--fig-*` tokens above make them dark. Each figure has a small mono caption in the form of a file path, for example `next/figures/team.mjs`, linking to its source on GitHub.
+- **Examples:** a grid of sites, each with its repository link beside the site link, so the reader sees the files are real.
+- **Clearly different because:** it is the only dark design, the only one whose hero is a conversation, and it shows the repository and checks more than the page.
+
+## 5. Proof, a wall of real sites (/next/d/5/)
+
+**For:** people who believe what they can see. **The story:** look at the sites first; the promises come after.
+
+- **Mood:** a gallery. Neutral walls, the work in colour, little decoration.
+- **Type:** sans throughout, headings tight (Helvetica Neue first in the stack); captions small and plain.
+- **Palette (tokens):**
+  ```css
+  .d5 { --bg: #ffffff; --fg: #0b0c0e; --muted: #5b6168; --line: #dfe3e8; --soft: #f1f3f5;
+        --accent: #1d4ed8; --accent-soft: #dbeafe;
+        --head: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+        --fig-accent: #1d4ed8; --fig-ink: #0b0c0e; --fig-muted: #5b6168; --fig-bg: #ffffff;
+        --fig-line: #dfe3e8; --fig-good: #15803d; --fig-warn: #b45309; }
+  ```
+- **First screen:** a short headline line ("Sites we have made. Each one is owned by the person it is for.") and the offer button, then straight into the wall: a masonry-like grid of screenshots from next/examples.json (four columns on desktop, two on a tablet, one on a phone), each with its label (a named person who agreed, our own, or Demo) and a link. The price with "launch price" sits in a sticky bar at the bottom on a phone and top right on desktop.
+- **Sections:** the wall (all examples), what you get, the tenets, can you leave, rent or own, three years of a platform, how it works, team, offer, partners, honest notes, questions, final call.
+- **Infographics:** after the wall, on the grey wall colour, two figures side by side on wide screens (tenets with deliverables, can you leave with rent or own), one per row below 60rem.
+- **Examples:** the whole first screen and more; demos say Demo on the image, not only in the caption.
+- **Clearly different because:** it is the only design with no hero illustration and no lead copy beyond a line; the product is shown, not described.
+
+## Round 2
+
+The developer builds designs 1 and 2 from this now (their sheets already follow these directions). The designer builds 3, 4 and 5 in round 2, replacing the stubs in assets/next/d3.css, d4.css and d5.css.
