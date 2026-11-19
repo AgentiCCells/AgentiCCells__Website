@@ -1,0 +1,51 @@
+---
+title: Sovereignty you can move
+description: Where a site is hosted is not sovereignty. Being able to move the site, its data and its structure is. Five tenets, and four tests to apply.
+---
+# Sovereignty is being able to move
+
+A website you own, control and can take anywhere. Most talk about digital sovereignty is about location: a data centre in the EU, a supplier incorporated at home. That matters, and it is not enough.
+
+{{figure:tenets}}
+
+## The five tenets of owning a website
+
+- **Hold it.** The files and their history are in your own repository.
+- **Control it.** No platform decides what you may do with it.
+- **Change it.** By talking to your own Claude, with checks before anything goes live.
+- **Run it anywhere.** Any host, any region, your own address.
+- **Keep it.** If we stop, are sold or disappear, nothing changes for you.
+
+## Where it is hosted is not sovereignty
+
+A site hosted in Dublin on a platform whose terms say you cannot take it with you is not yours, wherever the servers are. Dinis Cruz puts it plainly in [sovereignty you can move](https://newsroom.sgit.ai/articles/sovereignty-you-can-move.html): "You do not have sovereignty if you cannot move your data, your site and the shape of it, the schema, to somewhere else."
+
+Company nationality is not sovereignty either. A company that is British or European today can have owners, investors and a jurisdiction elsewhere tomorrow, and its terms change with them. In the same article he quotes his own earlier words: "A European company gets acquired by a US company and the sovereignty moves, you lose it."
+
+## Four tests, and the answers
+
+Ask them of any website service, including ours.
+
+| The test | A rented platform | A site you own |
+|---|---|---|
+| Can you move it? | Often not, or only part of it | Yes: static files, with their history, to any host |
+| Do you own the structure? | It lives in the platform's own format | Yes: open formats, in your repository |
+| Who sets the terms? | The platform, and it can change them | You: no platform, no subscription, open code |
+| What if the company is bought? | Its terms may move with it | Nothing changes: you already hold everything |
+
+What each platform says about leaving, in its own words, is on [no lock-in](/next/no-lock-in/).
+
+## Privacy-first, European-aligned, multilingual
+
+The same design gives you the rest:
+
+- **No cookies unless you add them**, and no tracking by us, so there is nothing to put behind a banner.
+- **Any region you choose.** Static files can be served from wherever you decide.
+- **Your language.** The agents write in your language, and a site can carry more than one.
+- **Open source.** The code and the policies are open, so nobody can withdraw them, us included.
+
+## What sovereignty does not mean
+
+Owning the files means you can move; it does not move them for you. Sovereignty is a set of possibilities, not a guarantee. It also means the responsibility is yours: your GitHub account and your domain are the keys to the site, and the [security page](/next/security/) says how to look after them.
+
+[Start with an interview](/next/start/)

@@ -1,0 +1,337 @@
+{
+ "_about": "Every word of the /next/ home page, the same in all five designs. Written by writer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19, from Dinis Cruz's newsroom articles (linked in each item). Strings may hold inline markdown links [text](url): render them as links, because a figure's evidence link must sit in the same sentence. Placeholders, filled from data/next/offer.json: {launch} (launch_gbp as £), {launch_eur} (launch_eur as €), {usual} (usual_gbp), {earlier} (earlier_launch_gbp), {price} (a bigger offer's price_gbp). {{contact}} is the contact token. No figure is typed here: prices come from the data file.",
+ "one_idea": "A website you own, control and can take anywhere.",
+ "leads": {
+  "sovereign": {
+   "headline": "A website you own, control and can take anywhere.",
+   "lede": "Your site lives in your own GitHub repository, runs on any host, and changes when you ask your own Claude. You pay once. Nobody can lock you in, including us.",
+   "cta_primary": "Start with an interview",
+   "cta_secondary": "See what you get"
+  },
+  "six-promises": {
+   "headline": "A site that looks better, that you own, that nobody can lock you into, that has almost nothing to attack, that costs once instead of every month, and that you change by talking to Claude.",
+   "lede": "A website you own, control and can take anywhere. Six promises, and the proof behind each one.",
+   "cta_primary": "Apply for a free evaluation site",
+   "cta_secondary": "Read the six promises"
+  },
+  "stop-renting": {
+   "headline": "Stop renting your website.",
+   "lede": "A website you own, control and can take anywhere. Pay once, keep the files, and move them whenever you like. Your website should not be a subscription.",
+   "cta_primary": "Own your site",
+   "cta_secondary": "Compare renting and owning"
+  },
+  "just-say-it": {
+   "headline": "Just say it. Your site changes.",
+   "lede": "A website you own, control and can take anywhere, changed by talking to your own Claude, with checks before anything goes live and every change undoable.",
+   "cta_primary": "Try the interview",
+   "cta_secondary": "See how a change works"
+  },
+  "proof": {
+   "headline": "Look at the sites first. Then ask for yours.",
+   "lede": "A website you own, control and can take anywhere. Each site below was made by the same team of agents, and each is labelled: a person who agreed to be named, or a demo.",
+   "cta_primary": "Ask for a site",
+   "cta_secondary": "See every example"
+  }
+ },
+ "offer_line": "{launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html), usually {usual} (the earlier launch price was {earlier}), with no subscription from us. We also build a limited number of sites each day free of charge, for evaluation.",
+ "offer_line_eur": "{launch_eur} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html) on our European pages, with no subscription from us. We also build a limited number of sites each day free of charge, for evaluation.",
+ "offer_note": "The launch price may change. Nothing has been sold yet.",
+ "promises": [
+  {
+   "title": "You own it",
+   "line": "Your site is a GitHub repository in your name, with its full history. Nothing of yours stays with us.",
+   "proof": "We expect every site we build to move into its owner's ownership within three months: the repository transferred to your GitHub account and the address pointed where you choose. It is an expectation today, not yet a rule we enforce.",
+   "proof_link": "https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html"
+  },
+  {
+   "title": "Nobody can lock you in",
+   "line": "No platform, no subscription, no terms but yours. The code is open source, so nobody can withdraw it, us included.",
+   "proof": "Sovereignty is not where a site is hosted. It is whether you can move the site, its data and its structure somewhere else, and you can.",
+   "proof_link": "https://newsroom.sgit.ai/articles/sovereignty-you-can-move.html"
+  },
+  {
+   "title": "You change it by talking to Claude",
+   "line": "Ask your own Claude for a change in plain words. A behaviour policy and checks run before anything goes live, and every change can be undone.",
+   "proof": "Yiheng Wang gave Claude her CV as a PDF; Claude read it and added her latest experience to her site.",
+   "proof_link": "https://newsroom.sgit.ai/articles/the-website-cell.html"
+  },
+  {
+   "title": "You can run it anywhere",
+   "line": "The site is static files. They run on GitHub Pages for free, or on any web host, in any region you choose.",
+   "proof": "Each host's own instructions for putting the site online, linked from one page.",
+   "proof_link": "https://agenticcells.ai/deploy/"
+  },
+  {
+   "title": "It looks better",
+   "line": "A team of agents makes five designs from your material and the sites you like. You choose one, and the others are kept.",
+   "proof": "The sites we have already made, each labelled as a named person's site or a demo.",
+   "proof_link": "https://hub.agenticcells.site/"
+  },
+  {
+   "title": "Almost nothing to attack, and it costs once",
+   "line": "No server code, no database, no plugins, no cookies unless you add them. One payment instead of a monthly bill.",
+   "proof": "Why a static site in your own repository is an alternative to WordPress, Wix and Squarespace, with the vendors' own security figures labelled as theirs.",
+   "proof_link": "https://newsroom.sgit.ai/articles/static-against-the-platforms.html"
+  }
+ ],
+ "tenets": [
+  {
+   "word": "Hold",
+   "line": "You hold it: the files and their history are in your own repository, not in our account."
+  },
+  {
+   "word": "Control",
+   "line": "You control it: no platform decides what you may do, and no terms but yours apply."
+  },
+  {
+   "word": "Change",
+   "line": "You change it: by talking to your own Claude, with checks before anything goes live."
+  },
+  {
+   "word": "Run anywhere",
+   "line": "You can run it anywhere: any host, any region, your own address."
+  },
+  {
+   "word": "Keep",
+   "line": "You keep it: if we stop, are sold or disappear, nothing changes for you, because you already have everything."
+  }
+ ],
+ "rent_or_own": [
+  {
+   "topic": "Paying",
+   "rent": "Every month, for as long as the site exists.",
+   "own": "Once. No subscription from us."
+  },
+  {
+   "topic": "Where it lives",
+   "rent": "Inside the platform's account.",
+   "own": "In your own GitHub repository, with every change since the first."
+  },
+  {
+   "topic": "Leaving",
+   "rent": "Often a rebuild, or a partial export in someone else's format.",
+   "own": "Copy the files to any host. Nothing to ask for."
+  },
+  {
+   "topic": "Editing",
+   "rent": "The platform's editor, within the platform's limits.",
+   "own": "Your own Claude, which can add a page, read a CV or build a feature."
+  },
+  {
+   "topic": "Price changes",
+   "rent": "Whatever the platform decides at renewal.",
+   "own": "Nothing to renew with us."
+  },
+  {
+   "topic": "The terms",
+   "rent": "The platform's terms, which it can change or end.",
+   "own": "Open-source code that nobody can withdraw."
+  },
+  {
+   "topic": "If the company is sold",
+   "rent": "Its terms and its jurisdiction can move with it.",
+   "own": "Nothing changes for you: you already hold everything."
+  },
+  {
+   "topic": "What can be attacked",
+   "rent": "A server, a database and plugins that someone must keep patched.",
+   "own": "Static files: no server code, no database, no login page on the site."
+  }
+ ],
+ "deliverables": [
+  {
+   "name": "A GitHub repository in your name",
+   "what": "The site's files and every change since the first, as a full history.",
+   "why_it_matters": "It is the site. Whoever holds the repository holds the site, and that is you."
+  },
+  {
+   "name": "A live site, with HTTPS",
+   "what": "Your site online at its address, on your own domain if you have one.",
+   "why_it_matters": "It works from the first day, and the address is yours to point wherever you choose."
+  },
+  {
+   "name": "Five designs to choose from",
+   "what": "Five different designs of the same words and pictures. The one you choose goes live; the others are kept.",
+   "why_it_matters": "It is easier to point at a design you like than to describe one. You can switch later."
+  },
+  {
+   "name": "A CLAUDE.md written for you",
+   "what": "A plain file that tells your Claude what the site is, how to change words and photos, and what not to touch.",
+   "why_it_matters": "Your own Claude can change the site safely from the first conversation."
+  },
+  {
+   "name": "A behaviour policy and checks",
+   "what": "Written rules for any agent that works on the site, and checks (a build, a validation and a leak scan) that run before anything goes live.",
+   "why_it_matters": "A change that would break the site or publish something private is stopped before it is public."
+  },
+  {
+   "name": "Ownership within three months",
+   "what": "The repository transferred to your GitHub account and the address pointed where you choose, within three months at the latest, sooner if you ask.",
+   "why_it_matters": "We hold the site only to finish the work. After that we hold nothing, so there is nothing to stop paying for."
+  }
+ ],
+ "steps": [
+  {
+   "title": "The interview",
+   "line": "Claude interviews you: what the site is for, the sections you want, the material you have, three sites you like and why, and what must stay private. The answers become a one-page brief, in your words.",
+   "who": "You and Claude"
+  },
+  {
+   "title": "Five designs",
+   "line": "A team of agents makes five designs from your material, inspired by the qualities you named in the sites you like, never copies of them.",
+   "who": "The agent team"
+  },
+  {
+   "title": "You choose",
+   "line": "You pick one design, or ask for parts of two. You say what to change.",
+   "who": "You"
+  },
+  {
+   "title": "Live",
+   "line": "The site goes live at its address, with HTTPS, after the checks pass.",
+   "who": "The agent team"
+  },
+  {
+   "title": "Your first change, made together",
+   "line": "You ask your own Claude for a change, it goes live, and we both see it. This is the moment you have what we sell.",
+   "who": "You, your Claude, and us"
+  },
+  {
+   "title": "Hand-over",
+   "line": "The repository moves to your GitHub account, within three months at the latest. From then on we hold nothing.",
+   "who": "Us, to you"
+  }
+ ],
+ "team": [
+  {
+   "role": "Conductor",
+   "does": "Takes your brief and hands out the work."
+  },
+  {
+   "role": "Researcher",
+   "does": "Reads what you gave us and what is public about you, and keeps the sources."
+  },
+  {
+   "role": "Designer",
+   "does": "Makes the five designs."
+  },
+  {
+   "role": "Developer",
+   "does": "Builds and releases the site, with its checks."
+  },
+  {
+   "role": "Security reviewer",
+   "does": "Checks the behaviour policy, the leak scan and what the site exposes."
+  }
+ ],
+ "team_note": "Each agent has a written job description and a behaviour policy, and signs its work. On a bigger job the team grows: a writer, a reviewer, a data agent.",
+ "honest_notes": [
+  "You change the site by talking to your own Claude, so editing it yourself needs a Claude plan. If you would rather not, a partner can edit it for you. The platforms bundle their editor; we do not.",
+  "Partners set their own price for the build and for the care around it. The launch price is what we charge."
+ ],
+ "bigger": [
+  {
+   "name": "A few sessions",
+   "line": "We help you: two sessions with a person, then you run the team in your own GitHub and Claude accounts. {price}, first proposal."
+  },
+  {
+   "name": "A team",
+   "line": "A conductor and its agents, a key for each, and a board as files, set up in your accounts over about two days of engagement. {price}, first proposal."
+  }
+ ],
+ "sections": {
+  "tenets": "Owning a website comes down to five things. A platform gives you some of them. This gives you all five.",
+  "promises": "One sentence is the whole offer, and it is six promises. Each one has a proof you can open.",
+  "rent_or_own": "Renting a site and owning one look alike on the first day. They differ on every day after.",
+  "can_you_leave": "Ask any website service one question: can I leave, with my site? Here are the answers, in the platforms' own words.",
+  "deliverables": "What arrives, where it lives, and what you can do with it.",
+  "steps": "From a first conversation to changing the site yourself, in six steps.",
+  "team": "Even the smallest site is made by a team of agents, each with a written job and rules it works under.",
+  "examples": "Sites made by the same team. Each is labelled: a person who agreed to be named, or a demo.",
+  "offer": "One payment, a site you keep, and free evaluation sites for anyone who wants to see before they pay.",
+  "bigger": "When you want more than a website: the same team, set up in your own accounts.",
+  "partners": "You bring the business, we build the site. The customer owns it; the partner keeps the relationship.",
+  "faq": "The questions buyers ask most, with plain answers.",
+  "honest_notes": "Two things you should know before you buy."
+ },
+ "faq": [
+  {
+   "q": "What does it cost?",
+   "a": "{launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html), usually {usual}. There is no subscription from us. Hosting on GitHub Pages is free, and editing needs your own Claude plan or a partner."
+  },
+  {
+   "q": "Can I see one before I pay?",
+   "a": "Yes. We build a limited number of sites each day free of charge, for evaluation. [Ask for a site]({{contact}}) and say you would like a free evaluation."
+  },
+  {
+   "q": "Who owns the site?",
+   "a": "You do. It is a GitHub repository in your name, with its full history. We expect every site to move into its owner's ownership within three months at the latest; that is an expectation today, not yet a rule we enforce ([the reasoning](https://newsroom.sgit.ai/articles/fliplet-and-the-website-cell.html))."
+  },
+  {
+   "q": "Can I move it to another host?",
+   "a": "Yes, whenever you like. The site is static files, so it runs on GitHub Pages, Netlify, Cloudflare Pages, Vercel or any web host. [Put your site online](https://agenticcells.ai/deploy/) links to each host's own instructions."
+  },
+  {
+   "q": "What if you disappear, or are bought?",
+   "a": "Nothing changes for you. You already hold the files, their history and the instructions for your Claude, and the code is open source, so nobody can withdraw it ([sovereignty you can move](https://newsroom.sgit.ai/articles/sovereignty-you-can-move.html))."
+  },
+  {
+   "q": "Do I need a GitHub account?",
+   "a": "Yes, to receive the repository at hand-over. Making one is free, and we point you to the guidance. Until then the site runs on our account so we can finish the work."
+  },
+  {
+   "q": "How do I change the site later?",
+   "a": "Tell your own Claude what you want, in plain words: a new page, a new photo, your latest job from a CV. The site's CLAUDE.md and behaviour policy tell Claude how to do it safely, the checks run before anything goes live, and any change can be undone. You need a Claude plan for this, or a partner who edits it for you."
+  },
+  {
+   "q": "What if I break it?",
+   "a": "Every change is a commit, so any version can be restored. The checks stop most broken or private changes before they go live. A static site is not automatically safe, though: if you want a person to watch over it, a partner can sell you that."
+  },
+  {
+   "q": "Who runs it after hand-over?",
+   "a": "You, with your own Claude, or a partner you choose. We sell no subscription and no support: our part ends when the site is yours."
+  },
+  {
+   "q": "Can I use my own domain?",
+   "a": "Yes. The site can run on your own domain with HTTPS. Until you have one, it runs on an address of ours. The domain stays registered in your name, with the registrar you choose."
+  },
+  {
+   "q": "Which languages?",
+   "a": "The agents write in your language, and a site can carry more than one. This site's own pages are written in several languages; the translations are made by agents and say so until a native speaker checks them."
+  },
+  {
+   "q": "Is it secure?",
+   "a": "There is very little to attack: no server code, no database, no plugins, no login page on the site, and no cookies unless you add them. What it does not protect is your GitHub account and your domain registrar: keep both behind two-factor sign-in. The [security page](/next/security/) says more."
+  },
+  {
+   "q": "What are partners?",
+   "a": "Freelancers, consultancies and firms who sell the site to their customers while we build it. The customer still owns the site; the partner keeps the relationship and may sell hosting, care and changes at their own prices. [The partner terms](https://agenticcells.ai/partners/) are published."
+  },
+  {
+   "q": "What happens after three months?",
+   "a": "By then the repository should be in your GitHub account and the address pointed where you choose, and we hold nothing. If you asked sooner, it happened sooner. It is an expectation today, not yet a rule we enforce."
+  },
+  {
+   "q": "What if I want more than a website?",
+   "a": "There are two bigger offers, both first proposals: a few sessions with a person, then you run the team in your own accounts; or a team of agents set up in your accounts. The [pricing page](/next/pricing/) has both."
+  },
+  {
+   "q": "Has anyone bought one yet?",
+   "a": "No. Nothing has been sold yet, and we will say so until it changes. The examples are sites made by the same team, each labelled as a named person's site or a demo."
+  }
+ ],
+ "cta": {
+  "interview": "Start with an interview",
+  "ask": "Ask for a site",
+  "free_evaluation": "Apply for a free evaluation site",
+  "pricing": "See the price",
+  "what_you_get": "See what you get",
+  "how_it_works": "How it works",
+  "compare": "Compare renting and owning",
+  "examples": "See every example",
+  "partners": "Become a partner",
+  "faq": "Read the questions",
+  "choose_design": "Choose a design",
+  "preview_band": "Preview for review, not the live site. Prices and words may change."
+ }
+}
