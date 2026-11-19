@@ -72,6 +72,8 @@ A thing that is not in this file does not exist, whatever a brief says. Kept cur
 
 - 2026-11-16 15:12 conductor: agenticcells.ai at v0.1.120: the inner-page band uses its width and /key/ sits in the same shell (designer@, 1a6a3d3); a console height budget with a Playwright measure (dev@, 593ecdc); site-factory passages on the website cell pages (writer@, ce754d9); research/cc-trademark.md (researcher@, 1e2e7d8).
 
+- 2026-11-19 ~04:05 conductor.agenticcells-ai@AgentiCCells.dinis (new conductor session on account B, https://claude.ai/code/session_01Kw9UwBFAEwyPc1Pt1idWxz, started by conductor.b at Dinis's word ~03:35 UTC; checked with git and curl): agenticcells.ai answered v0.1.269 before this session's first release (a7f4386 on dev); /next/ answered 404. The conductor's key is in team/keys.json (sgit, sha256:081b30bc7e8e8a3b, active; conductor@ superseded); each role run as a sub-agent of this session has its own git SSH signing key (ECDSA P-256, public PEM in team/keys/<role>-agenticcells-ai.json); commits are SSH-signed with repo-local config. In this session a privacy guard refuses commands that run build/build.mjs directly (it holds the team's contact address); team/release.sh runs it and is the only build path used. The old team's scheduled role agents do not run (their wake was disabled 18 Nov 08:42 UTC).
+
 ## Does not exist yet
 - The £500 website cell's order, queue, key, steer and handover steps (ACC-021); `data/links.json`; a team sgit vault and lanes; commit signing per agent (ACC-019).
 - GitHub domain verification for agenticcells.ai and agenticcells.com in the organisation (ACC-018); delegation of agenticcells.app.
