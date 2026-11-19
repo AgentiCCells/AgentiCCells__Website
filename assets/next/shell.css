@@ -1,0 +1,40 @@
+/* /next/ preview: the shell's accessibility rules, the chooser's large cards, and the notes the build adds.
+   Written by developer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19. Code under Apache-2.0. */
+
+/* Visible focus on everything that takes it, on light and dark backgrounds (two rings: dark inside, light outside). */
+:where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid #0b3d91; outline-offset: 2px; box-shadow: 0 0 0 5px #ffffff; border-radius: 4px; }
+main:focus { outline: none; }
+.skip { position: absolute; left: -999px; top: 8px; z-index: 20; }
+.skip:focus { left: var(--gutter); background: #ffffff; color: #0b3d91; padding: 8px 12px; font-weight: 700; }
+summary { cursor: pointer; }
+summary:focus-visible { outline-offset: 1px; }
+
+/* The Preview band: dark brown on pale yellow (#5c4400 on #fff4d6, about 8.5:1). Links underlined. */
+.preview-band { background: #fff4d6; color: #5c4400; }
+.preview-band a { color: #4a3600; text-decoration: underline; }
+
+/* The chooser: five large cards; the whole card is the link (the heading's link stretches over it). */
+.picks-large { grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: 1.2rem; }
+.picks-large .pick { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+.picks-large .pick:hover, .picks-large .pick:focus-within { border-color: var(--accent); box-shadow: 0 6px 24px rgba(10, 40, 50, .1); }
+.picks-large .thumb, .picks-large .thumb-img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border-radius: 8px; border: 1px solid var(--line); }
+.pick-name { margin: .2rem 0 0; font-size: 1.3rem; }
+.pick-name a { color: var(--fg); text-decoration: none; }
+.pick-name a::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.pick-name a:focus-visible { outline: none; box-shadow: none; }
+.pick-name a:focus-visible::after { outline: 3px solid #0b3d91; outline-offset: 2px; }
+.pick-line { margin: 0; color: var(--muted); }
+.pick-go { margin: auto 0 0; font-weight: 600; color: var(--accent); }
+
+.explain-row { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem 1.4rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+.explain-row li { padding: .5rem 0; border-top: 1px solid var(--line); }
+.explain-row a { font-weight: 700; }
+.explain-line { display: block; color: var(--muted); font-size: .92rem; }
+
+/* Text fallbacks for figures, and the build's small notes. */
+.fig-list { padding-left: 1.4rem; }
+.fig-list li { margin: .4rem 0; }
+.fig-list .who, .team-note { color: var(--muted); }
+.eur-note { margin: 1rem 0; padding: .5rem .8rem; border: 1px solid var(--line); border-radius: 8px; background: var(--soft); font-size: .92rem; }
+.eur-note p { margin: 0; }
+.picks-large .pick a { display: inline; height: auto; padding: 0; border: 0; border-radius: 0; flex-direction: initial; }

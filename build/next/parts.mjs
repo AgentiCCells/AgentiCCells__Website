@@ -24,7 +24,7 @@ export const DESIGNS = [
 export const NAV = [
   ['Designs', '/next/'], ['What you get', '/next/what-you-get/'], ['How it works', '/next/how-it-works/'],
   ['Sovereignty', '/next/sovereignty/'], ['Pricing', '/next/pricing/'], ['Compare', '/next/compare/'],
-  ['Examples', '/next/examples/'], ['FAQ', '/next/faq/'], ['Start', '/next/start/'],
+  ['Examples', '/next/examples/'], ['FAQ', '/next/faq/'], ['Start', '/next/start/'], ['Review', '/next/review/'],
 ];
 
 export const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -44,15 +44,18 @@ function json(root, p) {
   if (!existsSync(f)) return null;
   try { return JSON.parse(readFileSync(f, 'utf8')); } catch (e) { warn(`${p} does not parse (${e.message}); shown as "to be written"`); return null; }
 }
+// The data of the current render, kept so figure() can show a text fallback when a figure module is missing.
+let DATA = null;
 export function loadData(root) {
   const offer = json(root, 'data/next/offer.json');
   setOffer(offer);
-  return {
+  DATA = {
     offer,
     competitors: json(root, 'data/next/competitors.json'),
     copy: json(root, 'next/copy.json'),
     examples: json(root, 'next/examples.json'),
   };
+  return DATA;
 }
 // Key lookup that forgives case, dashes and spaces: get(obj, 'rent_or_own', 'rentOrOwn').
 const norm = (k) => String(k).toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -66,7 +69,11 @@ export function get(obj, ...keys) {
   return undefined;
 }
 // A home section from copy.json: copy.sections.<key> or copy.<key>.
-export const sectionOf = (copy, ...keys) => get(get(copy, 'sections', 'home') || {}, ...keys) ?? get(copy, ...keys);
+// copy.sections.<key> wins; a top-level copy.<key> list (steps, team, promises) is content, not the section's words.
+export const sectionOf = (copy, ...keys) => {
+  const v = get(get(copy, 'sections', 'home') || {}, ...keys) ?? get(copy, ...keys);
+  return Array.isArray(v) ? undefined : v;
+};
 export const asArray = (v) => (Array.isArray(v) ? v : v == null ? [] : get(v, 'items', 'list', 'points') ?? []);
 
 // ---------- inline markdown and the small renderer ----------
@@ -158,6 +165,13 @@ export function priceLine(o) {
 export function euroLine(o) {
   if (!o || !Number.isFinite(o.launch_eur)) return '';
   return `<p class="price-eur">In the euro area: <strong>${offerLink(eur(o.launch_eur))}</strong> launch price, one-off.</p>`;
+}
+// /next/pricing/: a small note on the euro price, with the offer file's link in its sentence. One line, so the
+// validator sees "launch price" beside the euro figure.
+export function euroNote(data) {
+  const o = data.offer;
+  if (!o || !Number.isFinite(o.launch_eur)) return '';
+  return `<aside class="eur-note" aria-label="Prices in euros"><p><strong>Prices in euros.</strong> The launch price is ${offerLink(eur(o.launch_eur))} on our European pages (launch price), paid once.</p></aside>`;
 }
 export function honestNotes(data) {
   const intro = sectionOf(data.copy, 'honest_notes');
@@ -259,37 +273,56 @@ function withSources(v, url) {
   if (!url || !/^https?:\/\//.test(url)) return inline(v);
   return parts.map((p, i) => (i < parts.length - 1 && /\d/.test(p) ? inline(p.replace(/[.!?]$/, '')) + ` <a class="src-in" href="${esc(url)}">(source)</a>${p.match(/[.!?]$/) ? p.slice(-1) : ''}` : inline(p))).join(' ');
 }
-function factCell(comp, keys, fallbackDate) {
+// A cell's inner html: value, basis and "source, read <date>" link. Shared by the wide table and the phone cards.
+function factInner(comp, keys, fallbackDate) {
   const f = fact(comp, keys);
-  if (f === undefined) return '<td><span class="tbw">To be written</span></td>';
+  if (f === undefined) return '<span class="tbw">To be written</span>';
   const o = typeof f === 'object' ? f : { value: f };
   let v = get(o, 'value', 'text', 'answer', 'summary');
   if (v === undefined && get(o, 'amount') !== undefined) v = `${get(o, 'currency') || ''} ${get(o, 'amount')}${get(o, 'period') ? ` a ${get(o, 'period')}` : ''}`.trim();
   const url = get(o, 'source_url', 'source', 'url') || get(comp, 'source_url', 'url');
   const date = longDate(get(o, 'read', 'date_read', 'read_on', 'date') || get(comp, 'read', 'date_read', 'read_on') || fallbackDate);
   const basis = get(o, 'basis');
-  return `<td><span class="v">${v === undefined ? '<span class="tbw">To be written</span>' : withSources(String(v), url)}</span>${basis ? ` <span class="basis">${esc(basis)}</span>` : ''}${url && /^https?:\/\//.test(url) ? ` <a class="src" href="${esc(url)}">source, read ${esc(date)}</a>` : ' <span class="tbw">source to be recorded</span>'}</td>`;
+  return `<span class="v">${v === undefined ? '<span class="tbw">To be written</span>' : withSources(String(v), url)}</span>${basis ? ` <span class="basis">${esc(basis)}</span>` : ''}${url && /^https?:\/\//.test(url) ? ` <a class="src" href="${esc(url)}">source, read ${esc(date)}</a>` : ' <span class="tbw">source to be recorded</span>'}`;
 }
-function ourFeature(data, keys) {
+function ourInner(data, keys) {
   const c = data.competitors;
   const us = get(c, 'us', 'ours', 'website_cell', 'agenticcells') || get(get(data.copy, 'compare', 'features') || {}, 'us', 'ours', 'website_cell');
   const f = us ? fact(us, keys) : undefined;
-  if (f === undefined) return '<td class="us"><span class="tbw">To be written</span></td>';
+  if (f === undefined) return '<span class="tbw">To be written</span>';
   const o = typeof f === 'object' ? f : { value: f };
   const url = get(o, 'source_url', 'source', 'url');
-  return `<td class="us"><span class="v">${withSources(String(get(o, 'value', 'text') ?? ''), url)}</span>${url ? ` <a class="src" href="${esc(url)}">source${get(o, 'date_read', 'read') ? `, read ${esc(longDate(get(o, 'date_read', 'read')))}` : ''}</a>` : ''}</td>`;
+  return `<span class="v">${withSources(String(get(o, 'value', 'text') ?? ''), url)}</span>${url ? ` <a class="src" href="${esc(url)}">source${get(o, 'date_read', 'read') ? `, read ${esc(longDate(get(o, 'date_read', 'read')))}` : ''}</a>` : ''}`;
 }
 const compName = (c) => esc(get(c, 'name', 'title', 'platform') || 'Platform');
-function tableShell(cls, caption, head, rows) {
-  return `<p class="t-cap" aria-hidden="true">${esc(caption)}</p>
-<div class="tw" tabindex="0" role="region" aria-label="${esc(caption)}"><table class="t ${cls}">
+// Both markups are written: the wide table (shown from 640 px) and one card per column (shown under 640 px).
+// assets/next/tables.css hides one of the two with display:none, so a screen reader meets only the visible one.
+// cols: [{ name, us }]; rows: [{ label, cells: [html per column] }].
+function tableAndCards(cls, caption, cols, rows) {
+  const table = `<div class="tw tw-wide" tabindex="0" role="region" aria-label="${esc(caption)}"><table class="t ${cls}">
 <caption class="vh">${esc(caption)}</caption>
-<thead><tr><th scope="col">${esc(head[0])}</th>${head.slice(1).map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
+<thead><tr><th scope="col"></th>${cols.map((c) => `<th scope="col">${c.name}</th>`).join('')}</tr></thead>
 <tbody>
-${rows.join('\n')}
+${rows.map((r) => `<tr><th scope="row">${r.label}</th>${r.cells.map((x, i) => `<td${cols[i].us ? ' class="us"' : ''}>${x}</td>`).join('')}</tr>`).join('\n')}
 </tbody></table></div>`;
+  const cards = `<div class="t-cards t-cards-${cls}" role="region" aria-label="${esc(caption)}">
+<ul class="tc-list">
+${cols.map((c, i) => `<li class="tc${c.us ? ' us' : ''}">
+<h3 class="tc-name">${c.name}</h3>
+<dl>
+${rows.map((r) => `<div class="tc-row"><dt>${r.label}</dt>\n<dd>${r.cells[i]}</dd></div>`).join('\n')}
+</dl>
+</li>`).join('\n')}
+</ul>
+</div>`;
+  return `<p class="t-cap" aria-hidden="true">${esc(caption)}</p>\n${table}\n${cards}`;
 }
-export function compareTable(data) {
+// The currency note, above the price table. Said once: left out when the page's own words already say "not converted".
+export function currencyNote(data) {
+  const date = longDate(readDate(data.competitors)) || '19 November 2026';
+  return `<p class="currency-note">Their prices as published in US dollars, not converted, read ${esc(date)}. Ours is in pounds.</p>`;
+}
+export function compareTable(data, { note = true } = {}) {
   const comps = competitorList(data.competitors);
   const o = data.offer;
   const date = longDate(readDate(data.competitors)) || '19 November 2026';
@@ -298,9 +331,11 @@ export function compareTable(data) {
     ['Price per month', ['price_month', 'price_per_month', 'monthly', 'per_month'], hasPrices(o) ? 'None from us: the price is one-off' : '<span class="tbw">To be written</span>'],
     ['First year', ['first_year_cost', 'first_year', 'year_one', 'price_first_year'], ours],
     ['Three years', ['three_year_cost', 'three_years', 'three_year', 'price_three_years'], ours],
-  ].map(([label, keys, us]) => `<tr><th scope="row">${label}</th><td class="us">${us}</td>${comps.map((c) => factCell(c, keys, date)).join('')}</tr>`);
+  ].map(([label, keys, us]) => ({ label, cells: [us, ...comps.map((c) => factInner(c, keys, date))] }));
+  const cols = [{ name: 'Website cell', us: true }, ...comps.map((c) => ({ name: compName(c) }))];
   return `${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
-${tableShell('compare', `What a site costs: our launch price against their published prices, read ${date}`, ['', 'Website cell', ...comps.map(compName)], rows)}
+${note && comps.length ? currencyNote(data) : ''}
+${tableAndCards('compare', `What a site costs: our launch price against their published prices, read ${date}`, cols, rows)}
 <div class="table-notes">${honestNotes(data)}</div>`;
 }
 export const FEATURE_ROWS = [
@@ -317,9 +352,10 @@ export const FEATURE_ROWS = [
 export function featuresTable(data) {
   const comps = competitorList(data.competitors);
   const date = longDate(readDate(data.competitors)) || '19 November 2026';
-  const rows = FEATURE_ROWS.map(([label, keys]) => `<tr><th scope="row">${label}</th>${ourFeature(data, keys)}${comps.map((c) => factCell(c, keys, date)).join('')}</tr>`);
+  const rows = FEATURE_ROWS.map(([label, keys]) => ({ label, cells: [ourInner(data, keys), ...comps.map((c) => factInner(c, keys, date))] }));
+  const cols = [{ name: 'Website cell', us: true }, ...comps.map((c) => ({ name: compName(c) }))];
   return `${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
-${tableShell('features', `From their own pages, read ${date}`, ['', 'Website cell', ...comps.map(compName)], rows)}`;
+${tableAndCards('features', `From their own pages, read ${date}`, cols, rows)}`;
 }
 
 // ---------- figures (next/figures/<id>.mjs) ----------
@@ -339,9 +375,27 @@ export async function loadFigures(root, data) {
   }
   return out;
 }
+// Text fallbacks for figures whose module is missing: the same information as a plain list from next/copy.json.
+const FIG_FALLBACK = { 'brief-to-claude': 'steps', 'how-it-works': 'steps', team: 'team' };
+export function figureFallback(copy, id) {
+  const key = FIG_FALLBACK[id];
+  const list = key ? asArray(get(copy, key)) : [];
+  if (!list.length) return '';
+  if (key === 'steps') return `<ol class="fig-list steps-list">\n${list.map((x) => typeof x === 'object'
+    ? `<li><strong>${inline(get(x, 'title', 'name') || '')}</strong>${get(x, 'line', 'text') ? `: ${inline(get(x, 'line', 'text'))}` : ''}${get(x, 'who') ? ` <span class="who">(${inline(get(x, 'who'))})</span>` : ''}</li>`
+    : `<li>${inline(x)}</li>`).join('\n')}\n</ol>`;
+  const note = get(copy, 'team_note');
+  return `<ul class="fig-list team-list">\n${list.map((x) => typeof x === 'object'
+    ? `<li><strong>${inline(get(x, 'role', 'title', 'name') || '')}</strong>${get(x, 'does', 'line', 'text') ? `: ${inline(get(x, 'does', 'line', 'text'))}` : ''}</li>`
+    : `<li>${inline(x)}</li>`).join('\n')}\n</ul>${typeof note === 'string' ? `\n<p class="team-note">${inline(note)}</p>` : ''}`;
+}
 export function figure(figs, id, caption) {
   const r = figs[id];
-  if (!r) return `<figure class="fig fig-${esc(id)} fig-missing"><div class="tbw">To be written: the ${esc(id)} figure.</div></figure>`;
+  if (!r) {
+    const text = figureFallback(DATA && DATA.copy, id);
+    if (text) return `<div class="fig fig-${esc(id)} fig-text">\n${text}\n</div>`;
+    return `<figure class="fig fig-${esc(id)} fig-missing"><div class="tbw">To be written: the ${esc(id)} figure.</div></figure>`;
+  }
   const cap = caption || r.caption || r.title || '';
   return `<figure class="fig fig-${esc(id)}">
 ${r.svg}
@@ -443,16 +497,20 @@ export function shell({ path, title, description, css = [], body, bodyClass = ''
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/next/base.css">
+<link rel="stylesheet" href="/assets/next/tables.css">
+<link rel="stylesheet" href="/assets/next/shell.css">
 ${css.map((c) => `<link rel="stylesheet" href="${c}">`).join('\n')}
 </head>
 <body class="nx ${esc(bodyClass)}">
 <a class="skip" href="#main">Skip to the content</a>
-<div class="preview-band" role="note"><p><strong>Preview</strong> for review, not the live site. Prices and words may change. <a href="/next/">All five designs</a> <a href="/">The live site</a></p></div>
-<header class="nx-head"><div class="in">
-<a class="brand" href="/next/">${MARK}<span>AgentiCCells</span></a>
-<nav aria-label="Preview"><ul>${nav}</ul></nav>
-</div></header>
-<main id="main">
+<header class="nx-top">
+<div class="preview-band" role="note" aria-label="Preview"><p><strong>Preview</strong> for review, not the live site. Prices and words may change. <a href="/next/">All five designs</a> <a href="/">The live site</a></p></div>
+<div class="nx-head"><div class="in">
+<a class="brand" href="/next/">${MARK}<span>AgentiCCells</span><span class="vh"> preview: the five designs</span></a>
+<nav aria-label="Preview pages"><ul>${nav}</ul></nav>
+</div></div>
+</header>
+<main id="main" tabindex="-1">
 ${body}
 </main>
 <footer class="nx-foot"><div class="in">
@@ -472,8 +530,8 @@ export function homeBlocks({ data, figs, root }) {
   const sec = (keys, title, extra, cls) => section(c, keys, { fallbackTitle: title, extra, cls });
   return {
     promises: `<section class="sec promises-sec" id="promises">
-<h2>${inline(get(sectionOf(c, 'promises_section') || {}, 'title') || 'Six promises')}</h2>
-${typeof sectionOf(c, 'promises') === 'string' ? `<p>${inline(sectionOf(c, 'promises'))}</p>` : ''}
+<h2>${inline(get(sectionOf(c, 'promises_section') || {}, 'title') || get(sectionOf(c, 'promises') || {}, 'title') || 'Six promises')}</h2>
+${typeof sectionOf(c, 'promises') === 'string' ? `<p>${inline(sectionOf(c, 'promises'))}</p>` : prose(get(sectionOf(c, 'promises') || {}, 'text', 'body', 'intro'))}
 ${promises(c)}
 </section>`,
     tenets: sec(['tenets'], 'What we hold to', figure(figs, 'tenets'), 'with-fig'),
