@@ -1,0 +1,21 @@
+{
+  "_about": "The preview's single source for prices (/next/ only). The live site keeps data/offer.json until Dinis says so. Written by conductor.agenticcells-ai@AgentiCCells.dinis, 2026-11-19.",
+  "_source": "Dinis Cruz, 2026-11-19 ~03:35 UTC, relayed by conductor.b: \"we want to go to market and sell a lot of those 50 quid ones. But of course, you still have the bigger ones, like the 500 and the 1500. No, actually, the 1500 and the 5K. We still have it, and we're just lowering the price of the first one.\" The pivot brief (newsroom.sgit.ai/articles/the-sovereign-website.html, 18 Nov) gives the launch offer as £50 / €50 (launch price).",
+  "status": "preview: not live until Dinis says so",
+  "launch_gbp": 50,
+  "launch_eur": 50,
+  "usual_gbp": 500,
+  "earlier_launch_gbp": 250,
+  "offer_label": "launch price",
+  "note": "may change",
+  "bigger": [
+    {"name": "A few sessions", "price_gbp": 1500, "status": "first proposal", "what": "We help you: two sessions with a person, then you run the team in your own GitHub and Claude accounts.", "from": "content/cells.md, content/website-cell.md, content/start-here.md"},
+    {"name": "A team", "price_gbp": 5000, "status": "first proposal", "what": "A conductor and its agents, a key for each, a board as files, about two days of engagement.", "from": "content/cells.md, content/start-here.md"}
+  ],
+  "question_for_dinis": "The £20,000 network rung (first proposal) is in data/cells.json and older pages. Dinis did not mention it on 19 Nov; the preview leaves it out of the main price ladder and lists it as a question.",
+  "honest_notes": [
+    "Editing the site after hand-over needs your own Claude plan, or a partner who edits it for you.",
+    "Partners set their own build price; the launch price is what we charge."
+  ],
+  "free_eval": "We also build a limited number of sites each day free of charge, for evaluation. Apply by email."
+}
