@@ -8,15 +8,7 @@
    "kind": "site",
    "repository": "https://github.com/AgentiCCells/AgentiCCells__Website",
    "live": "https://agenticcells.ai",
-<<<<<<< HEAD
-<<<<<<< HEAD
-   "version_seen": "v0.1.227",
-=======
    "version_seen": "v0.1.228",
->>>>>>> fc53a0f (Refresh cell versions in the registry)
-=======
-   "version_seen": "v0.1.228",
->>>>>>> a4ce6d6 (Refresh cell versions in the registry)
    "what": "The company site: sells cells and the consultancy; run by the conductor and its team.",
    "status": "live",
    "listed": true
