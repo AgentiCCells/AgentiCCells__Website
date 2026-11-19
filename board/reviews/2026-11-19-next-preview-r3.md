@@ -1,0 +1,57 @@
+# Review R3: the /next/ preview as two buyers (2026-11-19, about 04:30 UTC)
+By reviewer.agenticcells-ai@AgentiCCells.dinis. Live site v0.1.272 (curl /version.json). Chromium (Playwright) at 390x844 and 1366x768, deviceScaleFactor 1: /next/, /next/d/1/ to /next/d/5/, the eleven explain pages and /next/review/. Screenshots (first screen and full page, 72 files): /tmp/claude-0/review/s/. Read as (a) a UK small business owner on Wix or Squarespace, tired of paying monthly; (b) a freelancer who might become a partner.
+
+**Verdict: PASSES for Dinis's morning review.** It is a real preview, not a draft: five clearly different designs, the one idea and the £50 launch price on every first screen at both widths, sourced comparisons, honest notes, no accessibility violations found. It is **not ready to go live**: fixes 1 to 7 below are trust or conversion faults a buyer would hit. If there is time for one short round before Dinis wakes, do 1 to 7 only.
+
+## Checks run
+- All 18 pages: status 200, `noindex` on every page, one h1, no console errors, no horizontal scroll, every image has alt text (lazy images load on scroll).
+- axe-core 4.10.2 (WCAG 2 A and AA) on 17 pages at both widths: **no violations**. First Tab reaches "Skip to the content"; Enter moves focus to `main`.
+- Links: 106 unique internal and external URLs (links and images) fetched: 104 answer 200. The two Upwork pages (www.upwork.com/hire/web-designers/cost/, www.upwork.com/legal) answer 403 with a Cloudflare challenge, also in a real browser: bot blocking, not a dead link; check once by hand.
+- Outside /next/: the home page, /website-cell/, /start-here/, /sitemap.xml and /sitemap-index.xml contain no "/next" link. robots.txt does not list /next/ (fine: noindex does the work).
+- No em dashes; no hype words found (list scan).
+
+## Scores (1 to 5, one line of reason)
+| What | Score | Reason |
+|---|---|---|
+| First screen | 4 | Idea and £50 visible at 390 and 1366 on all five; d1 and d2 label the offer "THE WEBSITE CELL"; d3 to d5 strike £500 only, not £250. |
+| Visual quality, d1 Sovereign | 4 | Calm, professional, real screenshots of owners' sites above the fold; long (15,263 px at 390). |
+| Visual quality, d2 Six promises | 3 | Clean, but the 39-word headline is a paragraph set in 40 px type, and the main button sells the free site, not the £50 one. |
+| Visual quality, d3 Stop renting | 5 | The ledger of three-year costs against £50 is the strongest first screen for buyer (a). |
+| Visual quality, d4 Just say it | 4 | Bold and distinct; dark theme holds up; the longest page (15,847 px at 1366). |
+| Visual quality, d5 Proof | 4 | Wall of real sites, sticky price bar on phone; header is full width, unlike the others. |
+| Five designs clearly different | 5 | Five distinct looks and five different stories; contact sheet confirms it. |
+| Very visual, examples, infographics | 4 | 20 example screenshots, about a dozen figures; but the same figures repeat page to page, and examples are mostly our own news sites. |
+| Pricing clear | 4 | £50 launch price, £500 and £250 struck, £1,500 and £5,000 first proposal, both honest notes all present; /next/pricing/ repeats the whole block twice. |
+| Price and feature comparison | 3 | Six rivals plus a freelancer, each value linked and dated; readable on a phone as cards, but 19,793 px long, USD only, and the chart says "Nothing more" for years two and three while editing needs a paid Claude plan. |
+| Explain pages | 3 | Sovereignty, FAQ, no lock-in and how it works explain one thing well; what-you-get shows its figure twice; security leads with a rent-or-own figure, not a security one; start has broken code formatting. |
+| Trust | 3 | Consent recorded for the three named owners; demos labelled; nothing sold said plainly; but CTAs send buyers to a live page with other prices, and two free-hosting and cost claims leave out words that matter (fixes 2, 3). |
+| Accessibility basics | 5 | axe clean, skip link, landmarks, focus rings, SVGs with title and text versions. |
+| Broken links | 5 | None, apart from the Upwork bot block. |
+| Wording | 3 | Plain and careful, but internal words ("website cell", "site factory", "request file", "hub", "conductor", "a board as files") and research notes ("in this round") reach buyers. |
+
+## Fixes, most important first
+1. [developer] Every page, both widths: every "Ask for a site", "Start with an interview", "Own your site", "Try the interview", "Apply for a free evaluation site", "How to ask" and the footer link go to the live /start-here/, which says "£250 (launch price, usually £500)" and "£500, one-off, first proposal ... Dinis has not yet confirmed a launch price". A buyer who clicks £50 lands on three other prices. Smallest fix: point preview CTAs at /next/start/, and give /next/start/ its own "How to ask" line (a mailto draft link with a subject, as /start-here/ has).
+2. [writer] /next/pricing/, /next/compare/, d3, d4, both widths: the three-year chart shows "Year two: Nothing more, Year three: Nothing more" for us, while editing needs the owner's Claude plan. data/next/competitors.json already holds "Claude Pro: USD 17 a month billed yearly, or USD 20 billed monthly" (claude.com/pricing). Over three years that is about USD 612, the same as Wix Light. Smallest fix: add a row or note "If you edit it yourself: a Claude plan, USD 17 a month billed yearly (Anthropic's page, read 19 November 2026)", and change "Nothing more" to "Nothing more to us".
+3. [writer] FAQ "What does it cost?", "Can I move it?", /next/pricing/ "Running it can cost nothing", figure note: GitHub Pages is described as free for "a site that is not an online shop or a site for business transactions". GitHub's words (in competitors.json) also exclude using it "to run your online business". Buyer (a) runs a business. Smallest fix: quote GitHub's sentence, and for a business site name Cloudflare Pages' Free plan as the free option.
+4. [developer] /next/what-you-get/, both widths: the "What you get" figure renders twice (above and under "Six things, all yours"), so the heading "What you get" appears three times. Remove the second copy.
+5. [developer] /next/start/, both widths: the interview prompt shows as monospace text wrapped in stray double backticks (`` `` ... `` ``), with no box and no copy button; the next line says "The first five lines are Dinis Cruz's" but it renders as one paragraph. Render it as a fenced block with line breaks and a Copy button.
+6. [writer] d1, d2, /next/pricing/, /next/start/, /next/what-you-get/: the offer card is headed "THE WEBSITE CELL" (first screen on d1 and d2). Also "Website cell" heads the comparison columns, "A website cell from AgentiCCells" ends the leave figure, and examples say "made by the site factory", "from a request file", "sites our cells make", "on the hub". Smallest fix: "Your website" (or "A website you own") everywhere a buyer reads it.
+7. [developer] d3, d4, d5, both widths: the price shows "usually £500" struck but not the earlier £250, unlike d1, d2 and /next/pricing/. Add the struck £250 so all five match the brief.
+8. [designer] /next/no-lock-in/, /next/faq/, d1, d4 at 1366: in the "Can you leave?" figure the green "Yes" badge overlaps "AgentiCCells" in our row (fine at 390). Move the badge above or right of the name.
+9. [designer] /next/security/: the only figure is "Rent a platform, or own your site" (the same one as on the designs); one row of eight is about attack. Smallest fix: a small "what can be attacked" figure (platform: server, database, plugins, admin login; owned site: files only; then the two real risks, GitHub account and domain registrar).
+10. [writer] /next/compare/ and /next/no-lock-in/: research notes reach buyers: "we did not read Framer's terms of service in this round", "Durable's terms of service page rendered for us but we did not find the ownership clause in this round; not stated on their pages on the pages we read". Smallest fix: "Not stated on the pages we read (19 November 2026)". The table caption also shows twice ("What a site costs ..." and "From their own pages ...").
+11. [developer] /next/compare/ at 390: 19,793 px; each cell has two links ("their own page" and "source, read 19 November 2026") to the same place, and each rival appears twice (price cards, then feature cards). Smallest fix: one link per value, and a five-row "at a glance" table (price, three years, can you leave, who owns the files, editor) above the cards.
+12. [writer] /next/compare/, /next/pricing/: buyer (a) is in the UK and reads only USD prices "read from a US address". Add GBP prices from the UK pages of Wix and Squarespace (each linked and dated), or say why not.
+13. [writer] /next/pricing/, both widths: the price block, the two honest notes and both bigger offers appear twice (top, then under "When you want more than a website"), "£1,500, first proposal" appears twice inside one card, "See the price" links to the page it is on, and the euro note repeats the euro line. Keep the top block and the three cards; drop the rest.
+14. [writer] d2 hero and d4 "It looks better.": "A site that looks better" has no comparison or source. Say "five designs made for you, and you choose" instead. Shorten d2's headline to the one idea; keep the list in the sub-line.
+15. [writer] /next/partners/ for buyer (b): the page opens with the agent-team figure (conductor, keys) before the deal; the 50/50 split of a £50 launch price is never worked through; "Talk to us about partnering" goes to /start-here/, the buyer page. Smallest fix: put "A deal, from first call to after care" first, add one worked example marked "simulation", link the CTA to /next/start/ with a partner subject line (or the live /partners/).
+16. [writer] "A team" offer (pricing, start, all designs): "A conductor and its agents, a key for each, and a board as files" means nothing to a buyer. Say "a team of AI agents set up in your own accounts, each with its own rules and signature, over about two days".
+17. [designer] Repetition across pages: the team figure is on how-it-works and partners; "Can you leave?" on no-lock-in, faq and four designs; rent-or-own on security and the designs; the seven steps figure and the seven-step list both on /next/start/. Keep each figure on its own explain page and on the designs only.
+18. [writer] d3: two headings in a row, "Rent or own" and "Rent or own, in short". Merge.
+19. [designer] /next/examples/ and d5: of 20 examples, 11 are our own sites (news, evals, specialists) and two are business demos. Buyer (a) wants to see a business like theirs. Lead with the three owners and the two business demos; move our own sites under a "Ours" heading lower down.
+20. [writer] /next/review/ (in the nav on every page) says only "To be written." Write next/review.md for Dinis or remove the nav link.
+21. [developer] Nav at 390: it scrolls sideways with "Sovere" cut off and no sign there is more; No lock-in, Security and Partners are not in the nav at either width. Add a fade or "More" at the right edge.
+
+## Not faults
+- The free-evaluation line, "Nothing has been sold yet" and the hand-over "expectation, not yet a rule in the terms" are present and consistent everywhere.
+- Named people: José Bota, Silvio Switha and Yiheng Wang have consent recorded in data/cells-registry.json (Dinis, 2026-11-16 ~22:55 UTC). Algarve Evolution does not appear; "Algarve holiday homes" is a labelled made-up demo.
