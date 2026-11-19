@@ -36,6 +36,7 @@
  "offer_line": "{launch} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html), usually {usual} (the earlier launch price was {earlier}), with no subscription from us. We also build a limited number of sites each day free of charge, for evaluation.",
  "offer_line_eur": "{launch_eur} once, at the [launch price](https://newsroom.sgit.ai/articles/the-sovereign-website.html) on our European pages, with no subscription from us. We also build a limited number of sites each day free of charge, for evaluation.",
  "offer_note": "The launch price may change. Nothing has been sold yet.",
+ "offer_title": "Your own website",
  "promises": [
   {
    "title": "You own it",

@@ -6,6 +6,7 @@
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { esc, inline, get, section, figure, OFFER_URL, longDate } from './parts.mjs';
+import { exLabel, offerTitle } from './labels.mjs';
 
 // ---------- examples (next/examples.json) ----------
 export function exampleList(data) {
@@ -13,14 +14,8 @@ export function exampleList(data) {
   const list = Array.isArray(e) ? e : (e && Array.isArray(e.examples) ? e.examples : []);
   return list.filter((x) => !/algarve[\s_-]*evolution/i.test(JSON.stringify(x)));
 }
-// The label, exactly by kind: "Made for <name>" only where consent to be named is recorded; "Demo"; "Our own".
-export function exLabel(x) {
-  const kind = String(x.kind || '');
-  if (/demo/i.test(kind)) return { cls: 'demo', text: 'Demo' };
-  if (/our own/i.test(kind)) return { cls: 'own', text: 'Our own' };
-  if (/agreed to be named/i.test(kind) && /consent/i.test(String(x.consent_basis || ''))) return { cls: 'owner', text: `Made for ${x.title}` };
-  return { cls: 'demo', text: 'Example' };
-}
+// The label, exactly by kind, now lives in labels.mjs (shared with parts.mjs without a circular import).
+export { exLabel };
 // The title without a trailing "(Demo)": the label already says it.
 export const exTitle = (x) => String(x.title || 'Example').replace(/\s*\(Demo\)\s*$/i, '');
 export const exHost = (x) => { try { return new URL(x.url).hostname.replace(/^www\./, ''); } catch { return ''; } };
@@ -95,7 +90,7 @@ ${rows.map((r) => `<li style="--w:${Math.max(6, Math.round((r.threeN.n / max) * 
 </ol>
 <p class="kb-note">Three years of one entry plan each, calculated from the platforms' own price pages, read ${esc(read)}, in US dollars as published and not converted.</p>`;
 }
-// A small table: price, three years and "can you leave?" for three platforms and the website cell.
+// A small table: price, three years and "can you leave?" for three platforms and our offer (labelled copy.offer_title).
 export function compareTeaser(data, { ids = ['wix', 'squarespace', 'wordpress-com'], cls = 'kt' } = {}) {
   const rows = ids.map((id) => platform(data, id)).filter(Boolean);
   const o = data.offer || {};
@@ -104,7 +99,7 @@ export function compareTeaser(data, { ids = ['wix', 'squarespace', 'wordpress-co
 <caption class="vh">Rent or own, in short: our launch price against three platforms' own pages</caption>
 <thead><tr><th scope="col"></th><th scope="col">A month</th><th scope="col">Three years</th><th scope="col">Can you leave with the site?</th></tr></thead>
 <tbody>
-<tr class="kt-us"><th scope="row">The website cell</th><td>Nothing to us</td><td><strong><a href="${OFFER_URL}">£${esc(o.launch_gbp)}</a></strong> once, launch price</td><td>Yes: the files are yours, copy them to any host</td></tr>
+<tr class="kt-us"><th scope="row">${esc(offerTitle(data.copy))}</th><td>Nothing to us</td><td><strong><a href="${OFFER_URL}">£${esc(o.launch_gbp)}</a></strong> once, launch price</td><td>Yes: the files are yours, copy them to any host</td></tr>
 ${rows.map((p) => `<tr><th scope="row">${esc(p.name)}</th>${cell(p.month, p.monthN)}${cell(p.three, p.threeN)}${cell(p.leave)}</tr>`).join('\n')}
 </tbody></table></div>`;
 }

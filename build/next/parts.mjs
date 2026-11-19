@@ -8,6 +8,9 @@
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { exLabel, offerTitle } from './labels.mjs';
+
+export { offerTitle };
 
 export const OFFER_URL = 'https://github.com/AgentiCCells/AgentiCCells__Website/blob/dev/data/next/offer.json';
 export const ASK = '/start-here/';
@@ -215,8 +218,9 @@ export function cta(copy, { primary, secondary, noSecondary = false } = {}) {
   const s2 = secondary || get(c, 'pricing') || 'See the price';
   return `<p class="cta"><a class="btn" href="${ctaHref(copy, p)}">${esc(p)}</a>${noSecondary ? '' : ` <a class="btn ghost" href="${ctaHref(copy, s2)}">${esc(s2)}</a>`}</p>`;
 }
-export function offerCard(data, { compact = false, title = 'The website cell', primary, secondary } = {}) {
+export function offerCard(data, { compact = false, title, primary, secondary } = {}) {
   const o = data.offer;
+  title = title || offerTitle(data.copy);
   return `<aside class="offer${compact ? ' compact' : ''}" aria-label="Price">
 <p class="offer-label">${esc(title)}</p>
 ${priceLine(o)}
@@ -241,7 +245,7 @@ export function pricingLadder(data) {
   const big = bigger(data);
   return `<div class="ladder">
 <div class="rung main">
-<h3>The website cell</h3>
+<h3>${esc(offerTitle(data.copy))}</h3>
 ${priceLine(o)}
 ${euroLine(o)}
 ${honestNotes(data)}
@@ -253,6 +257,15 @@ ${big.length ? big.map((x) => `<div class="rung">
 <p>${inline(x.line)}</p>
 </div>`).join('\n') : tbw('the bigger offers (data/next/offer.json)')}
 </div>`;
+}
+
+// The honest notes said once per page: every later copy of the same list (the ladder's, the table notes') is dropped,
+// and a notes wrapper left empty goes with it. Applied to every finished /next/ page by build/pages/next.mjs.
+export function onceHonest(html) {
+  const re = /<div class="honest-wrap">[\s\S]*?<\/ul><\/div>|<ul class="honest">[\s\S]*?<\/ul>/g;
+  let seen = false;
+  const out = html.replace(re, (m) => { if (!seen) { seen = true; return m; } return ''; });
+  return out.replace(/<div class="table-notes"><\/div>\n?/g, '');
 }
 
 // ---------- competitors (data/next/competitors.json) ----------
@@ -332,7 +345,7 @@ export function compareTable(data, { note = true } = {}) {
     ['First year', ['first_year_cost', 'first_year', 'year_one', 'price_first_year'], ours],
     ['Three years', ['three_year_cost', 'three_years', 'three_year', 'price_three_years'], ours],
   ].map(([label, keys, us]) => ({ label, cells: [us, ...comps.map((c) => factInner(c, keys, date))] }));
-  const cols = [{ name: 'Website cell', us: true }, ...comps.map((c) => ({ name: compName(c) }))];
+  const cols = [{ name: offerTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
   return `${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
 ${note && comps.length ? currencyNote(data) : ''}
 ${tableAndCards('compare', `What a site costs: our launch price against their published prices, read ${date}`, cols, rows)}
@@ -353,7 +366,7 @@ export function featuresTable(data) {
   const comps = competitorList(data.competitors);
   const date = longDate(readDate(data.competitors)) || '19 November 2026';
   const rows = FEATURE_ROWS.map(([label, keys]) => ({ label, cells: [ourInner(data, keys), ...comps.map((c) => factInner(c, keys, date))] }));
-  const cols = [{ name: 'Website cell', us: true }, ...comps.map((c) => ({ name: compName(c) }))];
+  const cols = [{ name: offerTitle(data.copy), us: true }, ...comps.map((c) => ({ name: compName(c) }))];
   return `${comps.length ? '' : tbw('the competitors (data/next/competitors.json)')}
 ${tableAndCards('features', `From their own pages, read ${date}`, cols, rows)}`;
 }
@@ -412,9 +425,7 @@ export function examples(data, root, { limit = Infinity, cls = 'examples' } = {}
   return `<ul class="${cls}">\n${list.map((x) => {
     const title = get(x, 'title', 'name') || 'Example';
     const url = get(x, 'url', 'link', 'href');
-    const kind = String(get(x, 'tag', 'kind', 'type', 'label') || '');
-    const demo = /demo/i.test(kind) || x.demo === true;
-    const own = !demo && /our own/i.test(kind);
+    const l = exLabel(x);
     let img = get(x, 'screenshot', 'image', 'img', 'shot');
     if (img && typeof img === 'object') img = get(img, 'src', 'path');
     if (img && !/^https?:/.test(img)) img = '/' + String(img).replace(/^\/+/, '');
@@ -422,7 +433,7 @@ export function examples(data, root, { limit = Infinity, cls = 'examples' } = {}
     const alt = get(x, 'alt', 'screenshot_alt') || `Screenshot of ${title}`;
     return `<li class="ex">
 ${imgOk ? `<img src="${esc(img)}" alt="${esc(alt)}" loading="lazy" decoding="async" width="900" height="563">` : '<div class="ex-noimg tbw">Screenshot to be added</div>'}
-<p class="tag ${demo ? 'demo' : own ? 'own' : 'owner'}">${demo ? 'Demo' : own ? 'Our own' : 'Made for an owner'}</p>
+<p class="tag ${l.cls}">${esc(l.text)}</p>
 <h3>${url ? `<a href="${esc(url)}">${esc(title)}</a>` : esc(title)}</h3>
 <p>${inline(get(x, 'what', 'description', 'summary') || '')}</p>
 </li>`;
@@ -441,7 +452,10 @@ export function deliverables(data, figs) {
   const list = asArray(get(data.copy, 'deliverables') ?? get(sectionOf(data.copy, 'what_you_get') || {}, 'items', 'deliverables'));
   const items = list.length ? `<ul class="deliverables">\n${list.map((x) => typeof x === 'object' ? `<li><strong>${inline(get(x, 'title', 'name') || '')}</strong> ${inline(get(x, 'text', 'what', 'detail') || '')}${get(x, 'why_it_matters') ? ` <span class="why">${inline(get(x, 'why_it_matters'))}</span>` : ''}</li>` : `<li>${inline(x)}</li>`).join('\n')}\n</ul>` : '';
   if (!figs.deliverables && !items) return tbw('what you get (next/copy.json deliverables, next/figures/deliverables.mjs)');
-  return `${figs.deliverables ? figure(figs, 'deliverables') : ''}\n${items}`;
+  // With the figure, the list is its text version (the figure's own, which lists the same items); without it, the list.
+  if (!figs.deliverables) return items;
+  if (figs.deliverables.text || !items) return figure(figs, 'deliverables');
+  return figure({ deliverables: { ...figs.deliverables, text: items } }, 'deliverables');
 }
 
 // ---------- home sections from copy.json ----------
@@ -458,11 +472,19 @@ export const oneIdea = (copy) => {
   const v = get(copy, 'one_idea', 'idea', 'tagline');
   return typeof v === 'object' ? get(v, 'text', 'title') : v;
 };
+// A promise's proof link, named by its subject so six links read differently to a screen reader:
+// the link text from copy (proof_link_text) when set, else "Proof: <promise title>".
+export function proofLink(x, { before = ' ', after = '.' } = {}) {
+  const href = get(x, 'proof_link');
+  if (!href) return '';
+  const label = get(x, 'proof_link_text', 'proof_label') || `Proof: ${String(get(x, 'title', 'name', 'promise') || 'this promise').replace(/[.\s]+$/, '')}`;
+  return `${before}<a href="${esc(href)}">${inline(label)}</a>${after}`;
+}
 export function promises(copy, cls = 'promises') {
   const list = asArray(get(copy, 'promises', 'six_promises') ?? sectionOf(copy, 'promises'));
   if (!list.length) return tbw('the six promises (next/copy.json promises)');
   return `<ol class="${cls}">\n${list.map((x) => typeof x === 'object'
-    ? `<li><h3>${inline(get(x, 'title', 'name', 'promise') || '')}</h3>${prose(get(x, 'line', 'text', 'body', 'detail'))}${get(x, 'proof') ? `<p class="proof">${inline(get(x, 'proof'))}${get(x, 'proof_link') ? ` <a href="${esc(get(x, 'proof_link'))}">The proof</a>.` : ''}</p>` : ''}</li>`
+    ? `<li><h3>${inline(get(x, 'title', 'name', 'promise') || '')}</h3>${prose(get(x, 'line', 'text', 'body', 'detail'))}${get(x, 'proof') ? `<p class="proof">${inline(get(x, 'proof'))}${proofLink(x)}</p>` : ''}</li>`
     : `<li><h3>${inline(x)}</h3></li>`).join('\n')}\n</ol>`;
 }
 // A section: title and text from copy (copy.sections.<key> or copy.<key>), with optional extra html after the text.

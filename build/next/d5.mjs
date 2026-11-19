@@ -26,8 +26,9 @@ ${bigPrice(data, { cls: 'kp d5-price' })}
 ${cta(c, { primary: l.primary, secondary: l.secondary })}
 </div>
 </div></section>
-<section class="d5-wall" id="sites" aria-label="The sites">
+<section class="d5-wall" id="sites" aria-labelledby="d5-sites-h">
 <div class="d5-in">
+<h2 class="vh" id="d5-sites-h">The sites</h2>
 ${legend}
 ${exGrid(data, root, { slugs: wallOrder(data), eager: 8, variant: 'bare', cls: 'kx-grid d5-grid', tileCls: (x) => (exLabel(x).cls === 'owner' ? 'd5-big' : '') }).replace(/<\/ul>$/, `<li class="kx d5-next"><p class="d5-next-h">${inline(String(l.headline || '').split(/(?<=\.)\s+/).pop() || '')}</p>
 ${bigPrice(data, { cls: 'kp d5-nprice' })}

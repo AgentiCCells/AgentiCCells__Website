@@ -141,7 +141,9 @@ function explainPage({ root, data, figs }, slug, label, defaults) {
   const src = existsSync(f) ? readFileSync(f, 'utf8') : null;
   const { meta, body } = src ? P.frontMatter(src) : { meta: {}, body: '' };
   const tokens = {
-    figure: (id) => P.figure(figs, id),
+    // {{deliverables}} draws the deliverables figure with the list as its text version; a page that has both tokens
+    // shows the figure once, where the list belongs.
+    figure: (id) => (id === 'deliverables' && /\{\{deliverables\}\}/.test(body) ? '' : P.figure(figs, id)),
     'table:compare': () => P.compareTable(data, { note: !/not converted/i.test(body) }),
     'table:features': () => P.featuresTable(data),
     'table:pricing': () => P.pricingLadder(data),
@@ -188,7 +190,8 @@ export async function render({ root }) {
   });
   for (const [slug, label, defaults] of EXPLAIN) files.push(explainPage(h, slug, label, defaults));
   files.push(reviewPage(h));
-  return files;
+  // The honest notes once per page (the pricing ladder and the table notes repeat the offer block's).
+  return files.map((f) => ({ ...f, content: P.onceHonest(f.content) }));
 }
 
 export default async function next(ctx) {

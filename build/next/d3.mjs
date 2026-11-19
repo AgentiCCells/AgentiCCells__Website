@@ -35,7 +35,8 @@ ${cta(c, { primary: l.primary, secondary: l.secondary })}
 </div>
 </div></section>
 <div class="d3-body">
-<section class="sec d3-stmt" id="three-years" aria-label="Three years of a platform">
+<section class="sec d3-stmt" id="three-years" aria-labelledby="d3-three-h">
+<h2 class="vh" id="d3-three-h">Three years of a platform</h2>
 ${figure(figs, 'year-of-platform')}
 </section>
 ${b.rentOrOwn}

@@ -1,7 +1,7 @@
 // /next/d/4/ Just say it: plain, bold, typographic. One big statement per screen, one line under it, one figure.
 // The statements are the six promises from next/copy.json, word for word.
 // Written by designer.agenticcells-ai@AgentiCCells.dinis, 2026-11-19 (round 2). Code under Apache-2.0.
-import { homeBlocks, lead, oneIdea, prose, inline, esc, cta, figure, get, asArray } from './parts.mjs';
+import { homeBlocks, lead, oneIdea, prose, inline, esc, cta, figure, get, asArray, proofLink } from './parts.mjs';
 import { bigPrice, exGrid, OWNERS, figSection } from './design-kit.mjs';
 
 export const name = 'Just say it';
@@ -24,7 +24,7 @@ export function home(h) {
     return `<section class="d4-say" id="say-${i + 1}"><div class="in">
 <h2>${inline(p.title || '')}.</h2>
 ${prose(p.line)}
-${p.proof ? `<p class="d4-proof">${inline(p.proof)}${p.proof_link ? ` <a href="${esc(p.proof_link)}">The proof</a>.` : ''}</p>` : ''}
+${p.proof ? `<p class="d4-proof">${inline(p.proof)}${proofLink(p)}</p>` : ''}
 ${pic}
 </div></section>`;
   }).join('\n');
