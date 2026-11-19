@@ -10,11 +10,11 @@ A website you own, control and can take anywhere. Most talk about digital sovere
 
 ## The five tenets of owning a website
 
-- **Hold it.** The files and their history are in your own repository.
+- **Hold it.** Once handed over, the files and their history are in your own repository.
 - **Control it.** No platform decides what you may do with it.
 - **Change it.** By talking to your own Claude, with checks before anything goes live.
 - **Run it anywhere.** Any host, any region, your own address.
-- **Keep it.** If we stop, are sold or disappear, nothing changes for you.
+- **Keep it.** Once the site is in your account, nothing changes for you if we stop, are sold or disappear.
 
 ## Where it is hosted is not sovereignty
 
@@ -30,16 +30,17 @@ Ask them of any website service, including ours.
 |---|---|---|
 | Can you move it? | Often not, or only part of it | Yes: static files, with their history, to any host |
 | Do you own the structure? | It lives in the platform's own format | Yes: open formats, in your repository |
-| Who sets the terms? | The platform, and it can change them | You: no platform, no subscription, open code |
-| What if the company is bought? | Its terms may move with it | Nothing changes: you already hold everything |
+| Who sets the terms? | The platform, and it can change them | No platform terms of ours: only those of the host, registrar and Claude plan you choose |
+| What if the company is bought? | Its terms may move with it | After hand-over, nothing changes: you already hold everything |
 
 What each platform says about leaving, in its own words, is on [no lock-in](/next/no-lock-in/).
 
-## Privacy-first, European-aligned, multilingual
+## Privacy, region and language
 
 The same design gives you the rest:
 
-- **No cookies unless you add them**, and no tracking by us, so there is nothing to put behind a banner.
+- **No cookies by default.** The site itself sets none and has no tracking of ours, unless you add something that does.
+- **The host keeps its own logs.** GitHub, for example, says that when a GitHub Pages site is visited, "the visitor's IP address is logged and stored for security purposes" ([GitHub's page](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection), read 19 November 2026), under its own [privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). GitHub is a US company; if that matters to you, choose a host in the region you prefer.
 - **Any region you choose.** Static files can be served from wherever you decide.
 - **Your language.** The agents write in your language, and a site can carry more than one.
 - **Open source.** The code and the policies are open, so nobody can withdraw them, us included.

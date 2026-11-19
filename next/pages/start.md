@@ -1,6 +1,6 @@
 ---
 title: Start here
-description: How to ask for a site: start with an interview in your own Claude, send the brief and your material, or apply for a free evaluation site.
+description: How to ask for a site: run the interview in your own Claude first, then send the brief and your material, or ask for a free evaluation site.
 ---
 # Start with an interview
 
@@ -8,9 +8,19 @@ A website you own, control and can take anywhere starts with a conversation. Mos
 
 {{figure:brief-to-claude}}
 
+## How to ask
+
+Three steps:
+
+1. **Run the interview** in your own Claude, with the prompt below. It writes a one-page brief, in your words.
+2. **Gather your material:** photos, videos, documents, a CV, or links to what is already public, such as a profile or an existing site. Note which of it may be public.
+3. **Ask for a site**, at the launch price or as a free evaluation, and send the brief and the material.
+
+To ask now, use the contact at the foot of any page of the [live site](https://agenticcells.ai/). This preview has no address of its own yet. A person reads every request and replies.
+
 ## The interview, in your own Claude
 
-Paste this into your own Claude. It asks you one question at a time and writes a one-page brief, in your words. Nothing is sent anywhere by the prompt itself: the brief stays with you until you choose to send it.
+Paste this into your own Claude. It asks you one question at a time and writes a one-page brief, in your words. The prompt itself sends nothing anywhere: the brief stays with you until you choose to send it.
 
 ```
 Interview me, one question at a time, to write the brief for my website.
@@ -26,37 +36,17 @@ The first five lines are Dinis Cruz's, from [start with an interview](https://ne
 
 The question that matters most is the sites you like. "I like this site's photographs, that one's calm, and the way this one tells a story" is a better design brief than most designers get. The five designs take the qualities you name; they never copy someone else's site.
 
-## Ask for a site: send the brief and your material
-
-[Ask for a site]({{contact}}) and send the brief with your material, in whichever way suits you:
-
-- as attachments: photos, videos, documents, a CV;
-- as a zip;
-- as links to what is already public: a profile, a portfolio, an existing site.
-
-Say which material may be public. We publish only what you say may be public. A person reads every request and replies.
-
 ## Already have a site?
 
 Then you have already answered most of the questions. Send a link to it: its words, photos and structure are the material, the interview asks what you would change, and the five designs are better versions of what you have.
 
-## Or apply for a free evaluation site
+## The free evaluation
 
-We build a limited number of sites each day free of charge, for evaluation. It is the way to see before you pay. [Ask for a site]({{contact}}) and say you would like a free evaluation.
+We build a limited number of sites each day free of charge, for evaluation. It is the way to see before you pay: when you ask, say you would like a free evaluation. We publish only what you say may be public.
 
-## The seven steps
+## After you ask
 
-This page covers the first two. Today the quickest way is to run the interview first, in your own Claude, and send the brief when you ask.
-
-1. **Ask for a site**, at the launch price or as a free evaluation.
-2. **The interview**, in your own Claude, which writes your one-page brief.
-3. **Five designs**, from your material and the sites you like.
-4. **You choose**, and say what to change.
-5. **Live**, at its address with HTTPS, once the checks pass.
-6. **Your first change, made together:** you ask your own Claude for a change and we both see it go live.
-7. **Hand-over:** the repository moves to your GitHub account, within three months at the latest (an expectation we set ourselves, not yet a rule in the terms).
-
-You will need a GitHub account to receive the site, and a Claude plan if you want to edit it yourself. [How it works](/next/how-it-works/) has every step in full, and [pricing](/next/pricing/) has the price.
+[How it works](/next/how-it-works/) has every step, from the five designs to the hand-over of the repository to your own GitHub account. You will need a GitHub account to receive the site, and a Claude plan if you want to edit it yourself.
 
 {{offer}}
 

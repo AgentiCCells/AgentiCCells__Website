@@ -552,7 +552,7 @@
           "basis": "calculated from their published price"
         },
         "who_owns_the_files": {
-          "value": "not stated on their pages (we did not read Framer's terms of service in this round)",
+          "value": "not stated on the pages we read (19 November 2026; Framer's terms of service not yet read)",
           "source_url": "https://www.framer.com/pricing",
           "date_read": "2026-11-19",
           "basis": "not stated on their pages"
@@ -666,7 +666,7 @@
           "basis": "calculated from their published price"
         },
         "who_owns_the_files": {
-          "value": "Durable's terms of service page rendered for us but we did not find the ownership clause in this round; not stated on their pages on the pages we read",
+          "value": "not stated on the pages we read (19 November 2026): we found no ownership clause in Durable's terms of service",
           "source_url": "https://durable.com/terms-of-service",
           "date_read": "2026-11-19",
           "basis": "not stated on their pages"
@@ -838,12 +838,12 @@
     }
   ],
   "website_cell": {
-    "name": "A website cell from AgentiCCells",
+    "name": "Your own website, from AgentiCCells",
     "kind": "a static site in your own GitHub repository, built once by a team of agents",
     "homepage": "https://agenticcells.ai/",
     "facts": {
       "entry_plan_with_custom_domain": {
-        "value": "One website cell, with your own domain if you have one",
+        "value": "One website, with your own domain if you have one",
         "source_url": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
         "date_read": "2026-11-19",
         "basis": "Dinis's article",
@@ -864,13 +864,13 @@
         "quote": "No subscription from us, ever"
       },
       "first_year_cost": {
-        "value": "£50 one-off at the launch price, plus nothing to us",
+        "value": "£50 one-off at the launch price, plus nothing more to us",
         "source_url": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
         "date_read": "2026-11-19",
         "basis": "data/next/offer.json"
       },
       "three_year_cost": {
-        "value": "£50 one-off at the launch price, plus nothing to us",
+        "value": "£50 one-off at the launch price, plus nothing more to us. Editing it yourself needs your own Claude plan: Claude Pro is [USD 17 a month billed yearly](https://claude.com/pricing) (Anthropic's page, read 19 November 2026). Or a partner edits it, or it runs as it is without edits.",
         "source_url": "https://newsroom.sgit.ai/articles/no-lock-in.html",
         "date_read": "2026-11-19",
         "basis": "data/next/offer.json",
@@ -892,7 +892,7 @@
         "quote": "Prices shown don't include applicable tax."
       },
       "who_owns_the_files": {
-        "value": "The owner: the site is files in their own GitHub repository, with its history; moved into their ownership within three months at the latest (an expectation we set ourselves, not yet a rule in the terms)",
+        "value": "The owner, after hand-over: we build the site in our GitHub organisation and hold it for them, then move the repository, with its history, to their own GitHub account within three months at the latest, sooner if they ask (an expectation we set ourselves, not yet a rule in the terms)",
         "source_url": "https://newsroom.sgit.ai/articles/the-sovereign-website.html",
         "date_read": "2026-11-19",
         "basis": "Dinis's article",
@@ -935,7 +935,7 @@
         "quote": "Five designs, the chosen one live and the others kept."
       },
       "security_surface": {
-        "value": "Static files: no server code, no database, no plugins, no cookies unless you add them",
+        "value": "Static files: no server code of the owner's, no database, no plugins, no cookies unless you add them. The GitHub account, the email behind it and the domain registrar still need guarding",
         "source_url": "https://newsroom.sgit.ai/articles/the-pitch.html",
         "date_read": "2026-11-19",
         "basis": "Dinis's article",
@@ -949,7 +949,7 @@
         "quote": "No platform, no lock-in, no question about what happens if they stop paying, because there is nothing to stop paying for."
       },
       "lock_in_summary": {
-        "value": "None: the owner holds the repository and can host it anywhere.",
+        "value": "None after hand-over: the owner holds the repository and can host it anywhere.",
         "source_url": "https://newsroom.sgit.ai/articles/sovereignty-you-can-move.html",
         "date_read": "2026-11-19",
         "basis": "Dinis's article",

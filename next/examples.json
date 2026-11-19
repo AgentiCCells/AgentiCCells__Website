@@ -6,7 +6,7 @@
   {
    "slug": "agenticcells-ai",
    "title": "AgentiCCells",
-   "what": "The company site: sells website cells and the consultancy, run by its own team of agents.",
+   "what": "The company site: sells websites you own and the consultancy, run by its own team of AI agents.",
    "url": "https://agenticcells.ai/",
    "kind": "our own",
    "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public)",
@@ -15,7 +15,7 @@
   {
    "slug": "agenticcells-site",
    "title": "agenticcells.site",
-   "what": "The home of the sites our cells make, and how a site gets there.",
+   "what": "Our catalogue of the sites our agents make, and how a site gets there.",
    "url": "https://agenticcells.site/",
    "kind": "our own",
    "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public)",
@@ -24,7 +24,7 @@
   {
    "slug": "jose-bota",
    "title": "José Bota",
-   "what": "A portfolio for an AI automation expert, made by the site factory.",
+   "what": "A portfolio for an AI automation expert, made by our team of AI agents.",
    "url": "https://jose-bota.agenticcells.site/",
    "kind": "made for an owner who agreed to be named",
    "consent_basis": "data/cells-registry.json \"consent\": agreed to be named, confirmed by Dinis to conductor@ 2026-11-16 ~22:55 UTC (\"Yes they have agreed\"); request 2026-11-16__jose-bota",
@@ -42,7 +42,7 @@
   {
    "slug": "yiheng-wang",
    "title": "Yiheng Wang",
-   "what": "A personal site and CV for a project and operations manager, made by the site factory.",
+   "what": "A personal site and CV for a project and operations manager, made by our team of AI agents.",
    "url": "https://yiheng-wang.agenticcells.site/",
    "kind": "made for an owner who agreed to be named",
    "consent_basis": "data/cells-registry.json \"consent\": agreed to be named, confirmed by Dinis to conductor@ 2026-11-16 ~22:55 UTC (\"Yes they have agreed\"); request 2026-11-16__yiheng-wang",
@@ -51,7 +51,7 @@
   {
    "slug": "riskmandate-at-websummit",
    "title": "RiskMandate at Web Summit",
-   "what": "An event site: what was shown at Web Summit Lisbon, with the film and the week. The first site the factory made from a request file.",
+   "what": "An event site: what was shown at Web Summit Lisbon, with the film and the week. The first site our agents made from a written brief alone.",
    "url": "https://riskmandate-at-websummit.agenticcells.site/",
    "kind": "demo",
    "consent_basis": "data/cells-registry.json (Dinis, 16 Nov 2026: everything listed there may be public); registry status \"demo\"",

@@ -6,8 +6,6 @@ description: Plain answers to what buyers ask: the price, who owns the site, mov
 
 A website you own, control and can take anywhere raises the same questions every time. Here they are, with plain answers and the limits left in.
 
-{{figure:can-you-leave}}
-
 {{faq}}
 
 ## Still unsure?

@@ -21,7 +21,7 @@ Each person's site was made in five designs, and the person chose. Two of the st
 - [A website that is her](https://newsroom.sgit.ai/articles/a-website-that-is-her.html): Yiheng Wang's site, made in one evening, and changed afterwards by her own Claude from her CV.
 - [A portfolio with a film first](https://newsroom.sgit.ai/articles/a-portfolio-with-a-film-first.html): Silvio Switha's site, with his music video on the first screen.
 
-Every site we have made is also listed on [the hub](https://hub.agenticcells.site/), with its repository.
+Every site we have made is also listed in [our catalogue of sites](https://hub.agenticcells.site/), with its repository.
 
 ## Yours could be next
 

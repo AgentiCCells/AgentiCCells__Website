@@ -20,16 +20,13 @@ The table below sets out who owns the files, whether you can leave and what you 
 
 ## What we do instead
 
-- **Your repository.** The site is files in your own GitHub repository, with every change since the first.
-- **Any host.** The site is plain files, so any web host can run it. GitHub Pages hosts it free when the repository is public and the site is not an online shop or a site for business transactions ([GitHub's terms](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits), read 19 November 2026); otherwise any static host will do, and many have a free tier, such as [Cloudflare Pages](https://developers.cloudflare.com/pages/platform/limits/) (its Free plan, read 19 November 2026). [Put your site online](https://agenticcells.ai/deploy/) links to each host's own instructions.
+- **Your repository.** We build the site in our GitHub organisation, then move the repository, with every change since the first, to your own account. Until then we hold it for you.
+- **Any host.** The site is plain files, so any web host can run it. GitHub Pages is free for a public repository, but not, in [GitHub's own words](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) (read 19 November 2026), "to run your online business, e-commerce site, or any other website that is primarily directed at either facilitating commercial transactions or providing commercial software as a service (SaaS)"; whether a small business's site falls under that is GitHub's call. For a business site, use a host whose free plan has no such rule, such as Cloudflare Pages ([Free plan limits](https://developers.cloudflare.com/pages/platform/limits/) and [service terms](https://www.cloudflare.com/service-specific-terms-developer-platform/), read 19 November 2026), or any paid static host. [Put your site online](https://agenticcells.ai/deploy/) links to each host's own instructions.
 - **Your Claude.** You change it by talking to your own Claude, not to our platform. We have no platform.
 - **Paid once.** No subscription from us, so nothing to stop paying for.
 - **Yours within three months.** We expect to transfer every site we build to its owner within three months: the repository moves to your GitHub account and the address points where you choose. We hold it only to finish the work. This is an expectation we set ourselves, not yet a rule in the terms.
+- **No terms of ours.** We set no platform terms on how you use your site; only those of the host, registrar and Claude plan you choose apply.
 - **Open.** The code and the policies are open source, so even we cannot lock anyone in.
-
-## Renting against owning
-
-{{figure:rent-or-own}}
 
 ## Leaving us
 

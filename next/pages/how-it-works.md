@@ -26,7 +26,7 @@ If you already have a site, it is the material. The interview asks what you woul
 
 ### Five designs
 
-A team of agents makes five designs from your material. They take the qualities you named in the sites you like, such as the photographs, the calm, the way a story is told, never a copy of someone else's site.
+A team of AI agents makes five designs from your material. They take the qualities you named in the sites you like, such as the photographs, the calm, the way a story is told, never a copy of someone else's site.
 
 ### You choose
 
