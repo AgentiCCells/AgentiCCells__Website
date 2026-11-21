@@ -5,6 +5,11 @@ Written 2026-11-19 (final ~06:45 UTC) by conductor.agenticcells-ai@AgentiCCells.
 ## Status at hand-over
 Five rounds used. The final review (board/reviews/2026-11-19-next-preview-r5.md, on live v0.1.278) says the preview **passes for Dinis's morning review and is not ready to go live**; what remains is in team/rounds/5.md. The session stops here.
 
+## Since then (19 to 21 November)
+- 19 Nov evening: refactored around agentic cells at Dinis's word (board/briefs/2026-11-19-refactor-agentic-cells.md): the four sizes, PrompTugal.news and the Sovereign Agentic Website as case studies (team/rounds/R.md).
+- 21 Nov ~00:20 UTC: Dinis, "go live with design 1" (board/briefs/2026-11-21-go-live-design-1.md). Live at v0.1.285: design 1 at / and fifteen pages at root addresses, behind data/next/live.json (delete it to switch off). team/rounds/L-developer.md.
+- Next decisions: bring the older pages (/website-cell/, /start-here/, /method/ and others, still at £250) in line or archive them; languages (no page is translated yet); the contact address; the CI name check (Dinis chose dots on 20 Nov; editing the check is refused in this session).
+
 ## Where to look first
 - **The morning review page:** https://agenticcells.ai/next/review/ (source next/review.md): the five designs, what to look at, and Dinis's ten decisions.
 - **The preview:** https://agenticcells.ai/next/ ; designs at /next/d/1/ (Sovereign), /next/d/2/ (Six promises), /next/d/3/ (Stop renting your website), /next/d/4/ (Just say it), /next/d/5/ (Proof); eleven explain pages (what-you-get, how-it-works, sovereignty, no-lock-in, security, examples, partners, faq, pricing, compare, start).
