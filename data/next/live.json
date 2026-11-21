@@ -1,0 +1,4 @@
+{
+  "_about": "The switch for going live with design 1 (board/briefs/2026-11-21-go-live-design-1.md; Dinis Cruz, 2026-11-21 ~00:20 UTC: \"go live with design 1\"). With home 1, build/pages/next.mjs renders / and the root explain pages from the /next/ preview. Delete this file to return the old home, /cells/ and /faq/.",
+  "home": 1
+}

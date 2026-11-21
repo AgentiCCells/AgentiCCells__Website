@@ -89,11 +89,15 @@ export const asArray = (v) => (Array.isArray(v) ? v : v == null ? [] : get(v, 'i
 // filled from data/next/offer.json. render() sets the offer once; a missing value shows as "to be written".
 let OFFER = null;
 export const setOffer = (o) => { OFFER = o; };
+// Live pages (build/next/live.mjs): {launch} becomes a link to data/next/offer.json, the file that sets it (go-live brief,
+// 2026-11-21). The preview keeps the plain figure. Set by build/pages/next.mjs around the live render only.
+let LINK_LAUNCH = false;
+export const setLinkLaunch = (on) => { LINK_LAUNCH = !!on; };
 export function fillPrices(s, extra = {}) {
   const o = OFFER || {};
   const v = { launch: o.launch_gbp, usual: o.usual_gbp, earlier: o.earlier_launch_gbp, ...extra };
   return String(s ?? '')
-    .replace(/\{(launch|usual|earlier|price)\}/g, (m, k) => (Number.isFinite(v[k]) ? gbp(v[k]) : '[price to be written]'))
+    .replace(/\{(launch|usual|earlier|price)\}/g, (m, k) => (!Number.isFinite(v[k]) ? '[price to be written]' : k === 'launch' && LINK_LAUNCH && !extra.launch ? `[${gbp(v[k])}](${OFFER_URL})` : gbp(v[k])))
     .replace(/\{launch_eur\}/g, () => (Number.isFinite(o.launch_eur) ? eur(o.launch_eur) : '[price to be written]'));
 }
 export function inline(s) {
@@ -581,9 +585,9 @@ ${extra}
 
 // ---------- the shell ----------
 // A fenced block's frame, kept minimal and placed before the stylesheets so assets/next/ (the designer's) can restyle it.
-const CODE_STYLE = '<style>.code-box{position:relative;margin:1.2rem 0;padding:.8rem 1rem;border:1px solid currentColor;border-radius:8px}.code-box pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.code-copy{float:right;margin:0 0 .4rem .6rem}</style>\n';
+export const CODE_STYLE = '<style>.code-box{position:relative;margin:1.2rem 0;padding:.8rem 1rem;border:1px solid currentColor;border-radius:8px}.code-box pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.code-copy{float:right;margin:0 0 .4rem .6rem}</style>\n';
 // Copy buttons, only on a page that has a fenced block. Without script the text is selectable as it is.
-const CODE_SCRIPT = `<script>
+export const CODE_SCRIPT = `<script>
 document.querySelectorAll('.code-box').forEach(function (box) {
   var code = box.querySelector('code'), b = document.createElement('button'), s = document.createElement('span');
   b.type = 'button'; b.className = 'code-copy'; b.textContent = 'Copy';

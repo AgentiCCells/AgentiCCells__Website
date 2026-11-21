@@ -8,6 +8,7 @@ import { readFileSync, existsSync, openSync, readSync, closeSync } from 'node:fs
 import { join } from 'node:path';
 import * as P from '../next/parts.mjs';
 import * as C from '../next/cells.mjs';
+import * as L from '../next/live.mjs';
 import * as d1 from '../next/d1.mjs';
 import * as d2 from '../next/d2.mjs';
 import * as d3 from '../next/d3.mjs';
@@ -142,7 +143,9 @@ function reviewPage({ root, data, figs }) {
   }) };
 }
 
-function explainPage({ root, data, figs }, slug, label, defaults) {
+// The words of an explain page, without the shell: { title, description, body, bodyClass }. explainPage() puts them in the
+// preview's shell; the live render (go live with design 1) puts the same words in the live shell.
+function explainParts({ root, data, figs }, slug, label, defaults) {
   const f = join(root, 'next/pages', `${slug}.md`);
   const src = existsSync(f) ? readFileSync(f, 'utf8') : null;
   const { meta, body } = src ? P.frontMatter(src) : { meta: {}, body: '' };
@@ -193,7 +196,11 @@ function explainPage({ root, data, figs }, slug, label, defaults) {
   const title = meta.title || label;
   if (!/<h1[\s>]/.test(html)) html = `<h1>${P.esc(title)}</h1>\n${html}`;
   const description = meta.description || `${label}, in the preview of agenticcells.ai: to be written.`;
-  return { path: `next/${slug}/index.html`, content: P.shell({ path: `/next/${slug}/`, title, description, body: `<article class="page page-${slug}"><div class="in">\n${html}\n</div></article>`, bodyClass: `explain x-${slug}` }) };
+  return { title, description, body: `<article class="page page-${slug}"><div class="in">\n${html}\n</div></article>`, bodyClass: `explain x-${slug}` };
+}
+function explainPage(h, slug, label, defaults) {
+  const x = explainParts(h, slug, label, defaults);
+  return { path: `next/${slug}/index.html`, content: P.shell({ path: `/next/${slug}/`, ...x }) };
 }
 
 // The list of files for /next/: [{ path, content }], paths under site/. Contact is not used (no address in the preview).
@@ -223,7 +230,48 @@ export async function render({ root }) {
   return files.map((f) => ({ ...f, content: P.noSelfButtons(P.onceHonest(f.content), '/' + f.path.replace(/index\.html$/, '')) }));
 }
 
+// ---------- going live with design 1 (board/briefs/2026-11-21-go-live-design-1.md) ----------
+// Complete live documents for / (design 1's home) and the root explain pages (L.LIVE_SLUGS): the same words as the preview,
+// in the live shell, with /next/ links pointed at the live addresses. Returns [{ path, title, description, file, content }],
+// path a site path ("/cells/"), file under site/. contact and version come from the build (ctx); the local render has none.
+export async function renderLive({ root, contact = '', version = 'local' }) {
+  P.setLinkLaunch(true);
+  try {
+    const data = P.loadData(root);
+    const figs = await P.loadFigures(root, data);
+    const h = { data, figs, root };
+    const pages = [];
+    const lead = P.lead(data.copy, 1);
+    const headline = String(lead.headline || d1.name).replace(/[.\s]+$/, '');
+    const idea = P.oneIdea(data.copy);
+    // The home's description: the one idea and the four sizes, in the writer's words (110 to 150 characters, V-OG).
+    const sizes = (String(lead.sub || '').match(/Four sizes[^.]*\./) || [''])[0];
+    pages.push({ path: '/', title: `AgentiCCells: ${headline.charAt(0).toLowerCase()}${headline.slice(1)}`,
+      description: [idea, sizes].filter(Boolean).join(' ') || headline, css: d1.css, body: d1.home(h), bodyClass: 'home d1-live' });
+    for (const [slug, label, defaults] of EXPLAIN.filter(([s]) => L.LIVE_SLUGS.includes(s))) {
+      const x = explainParts(h, slug, label, defaults);
+      pages.push({ path: `/${slug}/`, ...x, title: x.title });
+    }
+    return pages.map((p) => {
+      const title = p.path === '/' ? p.title : `${p.title}: AgentiCCells`;
+      let html = L.liveShell({ root, path: p.path, title, description: p.description, css: p.css, body: p.body, bodyClass: p.bodyClass, contact, version });
+      html = L.liveLinks(L.liveWords(html));
+      html = P.noSelfButtons(P.onceHonest(html), p.path);
+      html = L.splitWebsiteCellLines(html);
+      L.assertLive(root, p.path, html);
+      return { path: p.path, title, description: p.description, file: p.path === '/' ? 'index.html' : `${p.path.slice(1)}index.html`, content: html };
+    });
+  } finally { P.setLinkLaunch(false); }
+}
+
 export default async function next(ctx) {
   ctx.files.push(...await render({ root: ctx.root }));
-  return [];
+  if (!L.isLive(ctx.root)) return [];
+  // Live (data/next/live.json): each live document goes into ctx.files, which the build writes after every page, so it
+  // replaces the page at the same file (the old /, /cells/ and /faq/). A live address with no content page gets a stub
+  // page here, only so the build lists it in the sitemap; its rendered stub is then replaced by the live document.
+  const live = await renderLive({ root: ctx.root, contact: ctx.contact, version: ctx.version });
+  ctx.files.push(...live.map((p) => ({ path: p.file, content: p.content })));
+  const have = new Set((ctx.pages || []).map((p) => p.path));
+  return live.filter((p) => !have.has(p.path)).map((p) => ({ path: p.path, title: p.title, description: p.description, html: '' }));
 }
